@@ -48,7 +48,7 @@ const {
   id="header"
 >
   <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-screen-xl">
-    <div class:list={[{"mr-auto": position === "right"}, "flex justify-between"]}>
+    <div class:list={[{ 'mr-auto': position === 'right' }, 'flex justify-between md:flex-1']}>
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
@@ -96,7 +96,12 @@ const {
         }
       </ul>
     </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+    <div
+      class:list={[
+        { 'ml-auto': position === 'left' },
+        'md:self-center flex items-center md:mb-0 md:flex-1 md:justify-end',
+      ]}
+    >
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
         {

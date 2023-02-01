@@ -9,90 +9,87 @@ import Container from '~/components/widgets/Container.astro';
 
 const meta = {
   title: SITE.title,
-  description: "About Us",
+  description: 'About Us',
   dontUseTitleTemplate: true,
 };
 
 const board = [
   {
-    "name": "Leon Bowie",
-    "position": "Chair",
-    "about": "",
+    name: 'Leon Bowie',
+    position: 'Chair',
+    about: '',
   },
   {
-    "name": "John Barrow",
-    "position": "Secretary",
-    "about": "",
+    name: 'John Barrow',
+    position: 'Secretary',
+    about: '',
   },
   {
-    "name": "Lillian Pak",
-    "position": "Treasurer",
-    "about": "",
+    name: 'Lillian Pak',
+    position: 'Treasurer',
+    about: '',
   },
   {
-    "name": "Justin Chua",
-    "position": "Board Member",
-    "about": "",
-  }
+    name: 'Justin Chua',
+    position: 'Board Member',
+    about: '',
+  },
 ];
 
 const team = [
   {
-    "name": "Sofie Claridge",
-    "position": "volunteer",
-  }
-]
+    name: 'Sofie Claridge',
+    position: 'volunteer',
+  },
+];
 ---
 
 <Layout {meta}>
   <Fragment slot="header">
-    <Header
-      {...headerData}
-      showRssFeed
-      showToggleTheme
-      position="left"
-    />
+    <Header {...headerData} showRssFeed showToggleTheme position="center" />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
   <Hero>
-    <Fragment slot="title">
-      About Us
-    </Fragment>
+    <Fragment slot="title">About Us</Fragment>
     <Fragment slot="subtitle">
       We are a group of volunteers who are passionate about technology and want to help our community.
     </Fragment>
   </Hero>
   <Container>
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <p class="text-lg leading-relaxed text-slate-500">
-        Tūhura Tech is a group of tech-savvy and education-focused individuals who saw a need for better technology education resources for students and schools in the Wellington area. Driven by a passion for technology and education, we founded Tūhura Tech to provide consistent and comprehensive support for those looking to learn about technology. Our team is dedicated to helping students and schools grow their technological knowledge and skills to prepare them for the future. With a focus on quality and accessibility, Tūhura Tech offers a range of resources, including educational programs and workshops, designed to meet the needs of students and schools. We believe that technology plays a critical role in shaping the future, and we are committed to empowering students and schools with the tools and knowledge they need to succeed.
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl">
+      <p class="text-lg leading-relaxed text-slate-500 mb-10 md:mb-20">
+        Tūhura Tech is a group of tech-savvy and education-focused individuals who saw a need for better technology
+        education resources for students and schools in the Wellington area. Driven by a passion for technology and
+        education, we founded Tūhura Tech to provide consistent and comprehensive support for those looking to learn
+        about technology. Our team is dedicated to helping students and schools grow their technological knowledge and
+        skills to prepare them for the future. <br /><br /> With a focus on quality and accessibility, Tūhura Tech offers
+        a range of resources, including educational programs and workshops, designed to meet the needs of students and schools.
+        We believe that technology plays a critical role in shaping the future, and we are committed to empowering students
+        and schools with the tools and knowledge they need to succeed.
       </p>
     </div>
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-        Our Board
-      </h1>
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Board</h1>
       <p class="text-lg mt-4 text-slate-600">
         Our Board set the direction of the Charity and provide stewardship over our actions.
       </p>
     </div>
-  <!-- Board -->
-  <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-    {
-      board.map((item) => (
-        <div class="group">
-
-          <div class="mt-4 text-center">
-            <h2 class="text-lg"> {item.name}</h2>
-            <h3 class="text-sm text-slate-500"> {item.position}</h3>
-            <p class="text-sm text-slate-500"> {item.about}</p>
+    <!-- Board -->
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        board.map((item) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              <h2 class="text-lg"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.position}</h3>
+              <p class="text-sm text-slate-500"> {item.about}</p>
+            </div>
           </div>
-        </div>
-      ))
-    }
-  </div>
-</Container>
-<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20"></div>
+        ))
+      }
+    </div>
+  </Container>
+  <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20"></div>
 </Layout>
