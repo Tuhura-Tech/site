@@ -1,3 +1,3 @@
 # Website
 
-The is the Website for Tūhura Tech and is originally based on the AstroWind template.
+This is the website for Tūhura Tech ([tuhuratech.org.nz](https://tuhuratech.org.nz)); originally based on the AstroWind template.
