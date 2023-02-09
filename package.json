@@ -27,7 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "astro": "^2.0.4",
-    "astro-compress": "1.1.31",
+    "astro-compress": "1.1.32",
     "astro-eslint-parser": "^0.11.0",
     "astro-icon": "^0.8.0",
     "eslint": "^8.33.0",
