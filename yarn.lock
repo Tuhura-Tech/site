@@ -74,17 +74,37 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
-"@astrojs/mdx@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.17.0.tgz#0f4ba5c84a6c96c2623ba5321420d7a90584cef5"
-  integrity sha512-vy4m/mwzdfDK4jC9wraFLMVwx13eXBPC8r7nkO5s8YlcFX6IDcl2LKPurP3+/ibpTei9IPQLIZOufXRDO96SYg==
+"@astrojs/markdown-remark@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-2.1.0.tgz#7c075ebbc06ebe4348274e89542dae5b9aa52285"
+  integrity sha512-w9T5o3UWQIfMcCkM2nLWrlfVQazh/7mw+2N/85QGcSUkZy6oNJoyy8Xz/ZkDhHLx8HPO0RT9fABR0B/H+aDaEw==
   dependencies:
-    "@astrojs/markdown-remark" "^2.0.1"
-    "@astrojs/prism" "^2.0.0"
+    "@astrojs/prism" "^2.1.0"
+    github-slugger "^1.4.0"
+    image-size "^1.0.2"
+    import-meta-resolve "^2.1.0"
+    rehype-raw "^6.1.1"
+    rehype-stringify "^9.0.3"
+    remark-gfm "^3.0.1"
+    remark-parse "^10.0.1"
+    remark-rehype "^10.1.0"
+    remark-smartypants "^2.0.0"
+    shiki "^0.11.1"
+    unified "^10.1.2"
+    unist-util-visit "^4.1.0"
+    vfile "^5.3.2"
+
+"@astrojs/mdx@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.18.0.tgz#3bb3207358f0bd3b13e53dcf0b04b9a004c4767e"
+  integrity sha512-mgICosefMpl67O7ER6Yi6ylT9Hk8ZAO6GhTlx4pYXIMOWFMQlP0NXQ9teZwPhOWzBcHWnsHEF+AzVZWbiC2EBg==
+  dependencies:
+    "@astrojs/markdown-remark" "^2.1.0"
+    "@astrojs/prism" "^2.1.0"
     "@mdx-js/mdx" "^2.3.0"
     "@mdx-js/rollup" "^2.3.0"
     acorn "^8.8.0"
-    es-module-lexer "^0.10.5"
+    es-module-lexer "^1.1.1"
     estree-util-visit "^1.2.0"
     github-slugger "^1.4.0"
     gray-matter "^4.0.3"
@@ -109,6 +129,13 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-2.0.0.tgz#e35c677b13c55b209e39db5d62424844b1b7c41b"
   integrity sha512-YgeoeEPqsxaEpg0rwe/bUq3653LqSQnMjrLlpYwrbQQMQQqz6Y5yXN+RX3SfLJ6ppNb4+Fu2+Z49EXjk48Ihjw==
+  dependencies:
+    prismjs "^1.28.0"
+
+"@astrojs/prism@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-2.1.0.tgz#3c32e66e3cfdaec304e1446d0d13786bac8c3f9f"
+  integrity sha512-+II6nfIFGZ7iH0FunhRGcj/J1mCxjcHl85cZRuFePKLoIhFHJT3nC3myQnUw386hUaIn2W20McxxtAVf4leeRQ==
   dependencies:
     prismjs "^1.28.0"
 
@@ -1383,19 +1410,6 @@ astro-compress@1.1.35:
     svgo "3.0.2"
     terser "5.16.5"
 
-astro-eslint-parser@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-0.11.0.tgz#91aea3ca3a8d6edc2d1997bb013d348cf6bd2afe"
-  integrity sha512-vcz8KBQ20WNOot6qK6w7DQtz2hwg+aLLqlUa6nAnitJLqbR12GxJN/+96U3O+VI4da5Up+FMWqNoL9mywSENtA==
-  dependencies:
-    "@astrojs/compiler" "^1.0.0"
-    "@typescript-eslint/scope-manager" "^5.48.2"
-    "@typescript-eslint/types" "^5.25.0"
-    astrojs-compiler-sync "^0.3.0"
-    debug "^4.3.4"
-    eslint-visitor-keys "^3.0.0"
-    espree "^9.0.0"
-
 astro-eslint-parser@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-0.12.0.tgz#3eac9ecf41eca12948f29190e1650e3966b67522"
@@ -2576,15 +2590,15 @@ es-get-iterator@^1.1.2:
     isarray "^2.0.5"
     stop-iteration-iterator "^1.0.0"
 
-es-module-lexer@^0.10.5:
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-0.10.5.tgz#06f76d51fa53b1f78e3bd8bb36dd275eda2fdd53"
-  integrity sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==
-
 es-module-lexer@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-1.1.0.tgz#bf56a09b5f1c6aea6ba231b0a636a0f60c410b70"
   integrity sha512-fJg+1tiyEeS8figV+fPcPpm8WqJEflG3yPU0NOm5xMvrNkuiy7HzX/Ljng4Y0hAoiw4/3hQTCFYw+ub8+a2pRA==
+
+es-module-lexer@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-1.2.0.tgz#812264973b613195ba214f69a84e05b0f4241a67"
+  integrity sha512-2BMfqBDeVCcOlLaL1ZAfp+D868SczNpKArrTM3dhpd7dK/OVlogzY15qpUngt+LMTq5UC/csb9vVQAgupucSbA==
 
 es-set-tostringtag@^2.0.1:
   version "2.0.1"
