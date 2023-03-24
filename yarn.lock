@@ -1409,9 +1409,9 @@ astro-compress@1.1.35:
     terser "5.16.5"
 
 astro-eslint-parser@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-0.13.0.tgz#18c722c3d96b262efec020b7a31b366d21dc8645"
-  integrity sha512-6dYYe7GOxZYSvLineTWQA1ienSVRrfuLJEtSeSqayp+yKXPe07gvfn0BNBMsJH822L+BRjbDIZBg1arFLadH4Q==
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/astro-eslint-parser/-/astro-eslint-parser-0.13.1.tgz#c47f075dea52b9ddc67ffa331772fe3086e01aa5"
+  integrity sha512-BZAV77XFIDGWm+DuxZBT2OJo+4W98f+LylF64xQ0pWYfIRJA5zVK3L/RM3Gr+4obBg91RnSibN3Ofc3nIwHYiw==
   dependencies:
     "@astrojs/compiler" "^1.0.0"
     "@typescript-eslint/scope-manager" "^5.48.2"
