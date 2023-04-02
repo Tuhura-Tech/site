@@ -13,11 +13,43 @@ const meta = {
   dontUseTitleTemplate: true,
 };
 
+const team = [
+  {
+    name: 'Leon Bowie',
+    position: 'Head of operations',
+    about:
+      'Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former robocup nz representative and NZ cyber security competition winner has a range of interests and passions across technology.',
+  },
+  {
+    name: 'Ai Winters',
+    position: 'Volunteer',
+    about:
+      'Ai is an engaged and dedicated helper for Tūhura Tech in love with making and playing video games. Helping out especially on the Discord server they like to help with the smaller problems. They love to learn from any shred of wisdom and strive to make virtual reality games in the future.',
+  },
+  {
+    name: 'Sofie Claridge',
+    position: 'Volunteer',
+    about: '',
+  },
+  {
+    name: 'Charlotte MacKenzie',
+    position: 'Volunteer',
+    about: '',
+  },
+  {
+    name: 'Krishna Priya Nimmagadda',
+    position: 'Volunteer',
+    about:
+      'Krishna is a cybersecurity enthusiast and has been interested in this field since they were in middle school. They were offered a place in Victoria University of Wellington where they are now a second year student doing Bachelor of Engineering with Cybersecurity major. They are also a huge anime nerd and a self taught artist.',
+  },
+];
+
 const board = [
   {
     name: 'Leon Bowie',
     position: 'Chair',
-    about: '',
+    about:
+      'Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former robocup nz representative and NZ cyber security competition winner has a range of interests and passions across technology.',
   },
   {
     name: 'John Barrow',
@@ -35,16 +67,9 @@ const board = [
     about: '',
   },
   {
-    name:'Thomas Jackson',
+    name: 'Thomas Jackson',
     position: 'Board Member',
     about: '',
-  }
-];
-
-const team = [
-  {
-    name: 'Sofie Claridge',
-    position: 'volunteer',
   },
 ];
 ---
@@ -75,13 +100,32 @@ const team = [
         and schools with the tools and knowledge they need to succeed.
       </p>
     </div>
+    <!-- Team -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Board</h1>
+      <p class="text-lg mt-4 text-slate-600">Our Team are the people who make Tūhura Tech happen.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        team.map((item) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              <h2 class="text-lg"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.position}</h3>
+              <p class="text-sm text-slate-500"> {item.about}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Board -->
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Board</h1>
       <p class="text-lg mt-4 text-slate-600">
         Our Board set the direction of the Charity and provide stewardship over our actions.
       </p>
     </div>
-    <!-- Board -->
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         board.map((item) => (
