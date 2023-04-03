@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.1"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.0.0"],\
-            ["mdast-util-to-string", "npm:3.1.1"],\
+            ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.7"],\
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
@@ -7499,6 +7499,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mdast", "npm:3.0.11"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/mdast-util-to-string-npm-3.2.0-4f9fa356be-dc40b544d5.zip/node_modules/mdast-util-to-string/",\
+          "packageDependencies": [\
+            ["mdast-util-to-string", "npm:3.2.0"],\
+            ["@types/mdast", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["mdn-data", [\
@@ -12624,7 +12632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.1"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.0.0"],\
-            ["mdast-util-to-string", "npm:3.1.1"],\
+            ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.7"],\
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
