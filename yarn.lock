@@ -1995,8 +1995,8 @@ __metadata:
   linkType: hard
 
 "astro-eslint-parser@npm:^0.13.0, astro-eslint-parser@npm:^0.13.1":
-  version: 0.13.2
-  resolution: "astro-eslint-parser@npm:0.13.2"
+  version: 0.13.3
+  resolution: "astro-eslint-parser@npm:0.13.3"
   dependencies:
     "@astrojs/compiler": ^1.0.0
     "@typescript-eslint/scope-manager": ^5.48.2
@@ -2006,7 +2006,7 @@ __metadata:
     eslint-visitor-keys: ^3.0.0
     espree: ^9.0.0
     semver: ^7.3.8
-  checksum: d52244f47e7ac1d331f4005f586fb1ac7b9a86e3ea14fecdf2de175990fa6852209b917726b8251b3bb5f8fcd63835493a448a3e03fe942479fe523ff5560997
+  checksum: 5400c86f1bda5ea942ad200bbb6ce084496115dcdceb2df77630c00166a5181f459bcd39ab78f8953825be6ad97d572dd4fe5cc79a69ddda6a74f224442e0e43
   languageName: node
   linkType: hard
 
