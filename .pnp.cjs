@@ -53,7 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.0"],\
-            ["subfont", "npm:7.0.0"],\
+            ["subfont", "npm:7.1.0"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.3.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
@@ -1525,10 +1525,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.0", {\
-          "packageLocation": "./.yarn/__virtual__/@puppeteer-browsers-virtual-037a9d0be9/0/cache/@puppeteer-browsers-npm-0.4.0-98110289b7-d21fce3daa.zip/node_modules/@puppeteer/browsers/",\
+        ["virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.0", {\
+          "packageLocation": "./.yarn/__virtual__/@puppeteer-browsers-virtual-69bcd6884e/0/cache/@puppeteer-browsers-npm-0.4.0-98110289b7-d21fce3daa.zip/node_modules/@puppeteer/browsers/",\
           "packageDependencies": [\
-            ["@puppeteer/browsers", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.0"],\
+            ["@puppeteer/browsers", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.0"],\
             ["@types/typescript", null],\
             ["debug", "virtual:2432407996ca91dedade2f1b21b4b672a675354625ae31cd0c772b48a6a337a8783f8b471a9a75972c24c26e8b166538f3c6f2d09693da7b54f1de5a27e3d40a#npm:4.3.4"],\
             ["extract-zip", "npm:2.0.1"],\
@@ -1568,16 +1568,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/rollup",\
             "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@swc/helpers", [\
-        ["npm:0.3.17", {\
-          "packageLocation": "./.yarn/cache/@swc-helpers-npm-0.3.17-994c9ae28e-ce3a5146d7.zip/node_modules/@swc/helpers/",\
-          "packageDependencies": [\
-            ["@swc/helpers", "npm:0.3.17"],\
-            ["tslib", "npm:2.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2917,16 +2907,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["brotli", [\
-        ["npm:1.3.3", {\
-          "packageLocation": "./.yarn/cache/brotli-npm-1.3.3-f0b047ff51-2c97329f4c.zip/node_modules/brotli/",\
-          "packageDependencies": [\
-            ["brotli", "npm:1.3.3"],\
-            ["base64-js", "npm:1.5.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["browser-process-hrtime", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/browser-process-hrtime-npm-1.0.0-db700805c2-e30f868cdb.zip/node_modules/browser-process-hrtime/",\
@@ -3257,10 +3237,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.6", {\
-          "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-23dbef59eb/0/cache/chromium-bidi-npm-0.4.6-f9125bcc2c-1d6365896b.zip/node_modules/chromium-bidi/",\
+        ["virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.6", {\
+          "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-3f7d68ec90/0/cache/chromium-bidi-npm-0.4.6-f9125bcc2c-1d6365896b.zip/node_modules/chromium-bidi/",\
           "packageDependencies": [\
-            ["chromium-bidi", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.6"],\
+            ["chromium-bidi", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.6"],\
             ["@types/devtools-protocol", null],\
             ["devtools-protocol", "npm:0.0.1107588"],\
             ["mitt", "npm:3.0.0"]\
@@ -3363,13 +3343,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/clone-npm-1.0.4-a610fcbcf9-d06418b733.zip/node_modules/clone/",\
           "packageDependencies": [\
             ["clone", "npm:1.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:2.1.2", {\
-          "packageLocation": "./.yarn/cache/clone-npm-2.1.2-1d491c6629-aaf106e9bc.zip/node_modules/clone/",\
-          "packageDependencies": [\
-            ["clone", "npm:2.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4166,15 +4139,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1107588-67fa037c5a-9064fd643f.zip/node_modules/devtools-protocol/",\
           "packageDependencies": [\
             ["devtools-protocol", "npm:0.0.1107588"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["dfa", [\
-        ["npm:1.2.0", {\
-          "packageLocation": "./.yarn/cache/dfa-npm-1.2.0-2b05ce5c5e-83b954b856.zip/node_modules/dfa/",\
-          "packageDependencies": [\
-            ["dfa", "npm:1.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5276,24 +5240,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["fontkit", [\
-        ["npm:1.9.0", {\
-          "packageLocation": "./.yarn/cache/fontkit-npm-1.9.0-966472c16f-0f491e7a87.zip/node_modules/fontkit/",\
-          "packageDependencies": [\
-            ["fontkit", "npm:1.9.0"],\
-            ["@swc/helpers", "npm:0.3.17"],\
-            ["brotli", "npm:1.3.3"],\
-            ["clone", "npm:2.1.2"],\
-            ["deep-equal", "npm:2.2.0"],\
-            ["dfa", "npm:1.2.0"],\
-            ["restructure", "npm:2.0.1"],\
-            ["tiny-inflate", "npm:1.0.3"],\
-            ["unicode-properties", "npm:1.4.1"],\
-            ["unicode-trie", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["fontverter", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/fontverter-npm-2.0.0-56728b2bcb-3dbfcc0023.zip/node_modules/fontverter/",\
@@ -5744,6 +5690,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/harfbuzzjs-npm-0.3.2-b2eedfc1da/node_modules/harfbuzzjs/",\
           "packageDependencies": [\
             ["harfbuzzjs", "npm:0.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.3.3", {\
+          "packageLocation": "./.yarn/unplugged/harfbuzzjs-npm-0.3.3-454422205d/node_modules/harfbuzzjs/",\
+          "packageDependencies": [\
+            ["harfbuzzjs", "npm:0.3.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8887,13 +8840,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["pako", [\
-        ["npm:0.2.9", {\
-          "packageLocation": "./.yarn/cache/pako-npm-0.2.9-c88ac0d326-055f9487cd.zip/node_modules/pako/",\
-          "packageDependencies": [\
-            ["pako", "npm:0.2.9"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.0.11", {\
           "packageLocation": "./.yarn/cache/pako-npm-1.0.11-b8f1b69d3e-1be2bfa1f8.zip/node_modules/pako/",\
           "packageDependencies": [\
@@ -10205,13 +10151,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:af41a6cb6731bb3093ec28389d88a52b17f6aa8658cdccb3e653b67dcea665934d36377ee61c8eb17b33c638927552b30bdaed1dcca62fae12744920c773fd0b#npm:19.8.5", {\
-          "packageLocation": "./.yarn/__virtual__/puppeteer-core-virtual-5b6f6f9f87/0/cache/puppeteer-core-npm-19.8.5-916ef63ee8-6bad7a7279.zip/node_modules/puppeteer-core/",\
+        ["virtual:00d8190a20cacdffdd3230e47e164a137202693665636255fcf30f2f679ae782db3e2468f07f87d95ed857e3ee7562d8637896bb378a9ed74adfbdcd818ac44a#npm:19.8.5", {\
+          "packageLocation": "./.yarn/__virtual__/puppeteer-core-virtual-dd3d2b0dfe/0/cache/puppeteer-core-npm-19.8.5-916ef63ee8-6bad7a7279.zip/node_modules/puppeteer-core/",\
           "packageDependencies": [\
-            ["puppeteer-core", "virtual:af41a6cb6731bb3093ec28389d88a52b17f6aa8658cdccb3e653b67dcea665934d36377ee61c8eb17b33c638927552b30bdaed1dcca62fae12744920c773fd0b#npm:19.8.5"],\
-            ["@puppeteer/browsers", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.0"],\
+            ["puppeteer-core", "virtual:00d8190a20cacdffdd3230e47e164a137202693665636255fcf30f2f679ae782db3e2468f07f87d95ed857e3ee7562d8637896bb378a9ed74adfbdcd818ac44a#npm:19.8.5"],\
+            ["@puppeteer/browsers", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.0"],\
             ["@types/typescript", null],\
-            ["chromium-bidi", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:0.4.6"],\
+            ["chromium-bidi", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:0.4.6"],\
             ["cross-fetch", "npm:3.1.5"],\
             ["debug", "virtual:2432407996ca91dedade2f1b21b4b672a675354625ae31cd0c772b48a6a337a8783f8b471a9a75972c24c26e8b166538f3c6f2d09693da7b54f1de5a27e3d40a#npm:4.3.4"],\
             ["devtools-protocol", "npm:0.0.1107588"],\
@@ -10221,7 +10167,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tar-fs", "npm:2.1.1"],\
             ["typescript", null],\
             ["unbzip2-stream", "npm:1.4.3"],\
-            ["ws", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:8.13.0"]\
+            ["ws", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:8.13.0"]\
           ],\
           "packagePeers": [\
             "@types/typescript",\
@@ -10629,15 +10575,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["restore-cursor", "npm:4.0.0"],\
             ["onetime", "npm:5.1.2"],\
             ["signal-exit", "npm:3.0.7"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["restructure", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/restructure-npm-2.0.1-1a28a539a4-46a1d17807.zip/node_modules/restructure/",\
-          "packageDependencies": [\
-            ["restructure", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11462,10 +11399,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["subfont", [\
-        ["npm:7.0.0", {\
-          "packageLocation": "./.yarn/cache/subfont-npm-7.0.0-af41a6cb67-fde18e2026.zip/node_modules/subfont/",\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/subfont-npm-7.1.0-00d8190a20-7f63e6a2e0.zip/node_modules/subfont/",\
           "packageDependencies": [\
-            ["subfont", "npm:7.0.0"],\
+            ["subfont", "npm:7.1.0"],\
             ["@gustavnikolaj/async-main-wrap", "npm:3.0.1"],\
             ["@hookun/parse-animation-shorthand", "npm:0.1.5"],\
             ["assetgraph", "npm:7.10.0"],\
@@ -11475,16 +11412,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css-list-helpers", "npm:2.0.0"],\
             ["font-snapper", "npm:1.2.0"],\
             ["font-tracer", "npm:3.6.0"],\
-            ["fontkit", "npm:1.9.0"],\
             ["fontverter", "npm:2.0.0"],\
             ["gettemporaryfilepath", "npm:1.0.1"],\
+            ["harfbuzzjs", "npm:0.3.3"],\
             ["lines-and-columns", "npm:1.2.4"],\
             ["lodash", "npm:4.17.21"],\
             ["memoizesync", "npm:1.1.1"],\
             ["postcss", "npm:8.4.21"],\
             ["postcss-value-parser", "npm:4.2.0"],\
             ["pretty-bytes", "npm:5.6.0"],\
-            ["puppeteer-core", "virtual:af41a6cb6731bb3093ec28389d88a52b17f6aa8658cdccb3e653b67dcea665934d36377ee61c8eb17b33c638927552b30bdaed1dcca62fae12744920c773fd0b#npm:19.8.5"],\
+            ["puppeteer-core", "virtual:00d8190a20cacdffdd3230e47e164a137202693665636255fcf30f2f679ae782db3e2468f07f87d95ed857e3ee7562d8637896bb378a9ed74adfbdcd818ac44a#npm:19.8.5"],\
             ["specificity", "npm:0.4.1"],\
             ["subset-font", "npm:2.1.0"],\
             ["urltools", "npm:0.4.2"],\
@@ -11809,15 +11746,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["tiny-inflate", [\
-        ["npm:1.0.3", {\
-          "packageLocation": "./.yarn/cache/tiny-inflate-npm-1.0.3-a7419a5c65-4086a1f893.zip/node_modules/tiny-inflate/",\
-          "packageDependencies": [\
-            ["tiny-inflate", "npm:1.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["to-fast-properties", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/to-fast-properties-npm-2.0.0-0dc60cc481-be2de62fe5.zip/node_modules/to-fast-properties/",\
@@ -12121,28 +12049,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/unherit-npm-3.0.1-a1c6b0c3cc-36e54f007b.zip/node_modules/unherit/",\
           "packageDependencies": [\
             ["unherit", "npm:3.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["unicode-properties", [\
-        ["npm:1.4.1", {\
-          "packageLocation": "./.yarn/cache/unicode-properties-npm-1.4.1-122054452f-337fba8a3c.zip/node_modules/unicode-properties/",\
-          "packageDependencies": [\
-            ["unicode-properties", "npm:1.4.1"],\
-            ["base64-js", "npm:1.5.1"],\
-            ["unicode-trie", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["unicode-trie", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/unicode-trie-npm-2.0.0-54e0a4dd52-19e637ce20.zip/node_modules/unicode-trie/",\
-          "packageDependencies": [\
-            ["unicode-trie", "npm:2.0.0"],\
-            ["pako", "npm:0.2.9"],\
-            ["tiny-inflate", "npm:1.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12739,7 +12645,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.0"],\
-            ["subfont", "npm:7.0.0"],\
+            ["subfont", "npm:7.1.0"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.3.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
@@ -13172,10 +13078,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:8.13.0", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-c67ecbbfeb/0/cache/ws-npm-8.13.0-26ffa3016a-53e991bbf9.zip/node_modules/ws/",\
+        ["virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:8.13.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-5c2807ccae/0/cache/ws-npm-8.13.0-26ffa3016a-53e991bbf9.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:5b6f6f9f87eacc8816932f1662ae66dc40cbf470cecd19a13a2a865053f0ff8b8f7dfe7361f54087593935fc04b33de554a8ddc3a41c2fb773bc13bd6ff560fc#npm:8.13.0"],\
+            ["ws", "virtual:dd3d2b0dfe2d051284613b901ac3b16b0b37d8b27dc1fb8cd6a0281cfde6ef280656be0c057734c52fdcdac4ae4e764eeb8077639f30df586373afc34017fb30#npm:8.13.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
