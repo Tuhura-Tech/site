@@ -17,7 +17,7 @@ export const headerData = {
     {
       text: 'Support Us',
       href: getPermalink('/support'),
-    }
+    },
     {
       text: 'Contact Us',
       href: getPermalink('/contact'),
