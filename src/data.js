@@ -15,6 +15,10 @@ export const headerData = {
       href: 'https://wiki.tuhuratech.org.nz',
     },
     {
+      text: 'Support Us',
+      href: getPermalink('/support'),
+    }
+    {
       text: 'Contact Us',
       href: getPermalink('/contact'),
 
