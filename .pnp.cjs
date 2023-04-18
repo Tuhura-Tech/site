@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.35"],\
+            ["astro-compress", "npm:1.1.36"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.38.0"],\
@@ -2594,19 +2594,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["astro-compress", [\
-        ["npm:1.1.35", {\
-          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.35-95584cd617-22a8059b86.zip/node_modules/astro-compress/",\
+        ["npm:1.1.36", {\
+          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.36-caa3e9e754-f5a4fb5f87.zip/node_modules/astro-compress/",\
           "packageDependencies": [\
-            ["astro-compress", "npm:1.1.35"],\
+            ["astro-compress", "npm:1.1.36"],\
             ["@types/csso", "npm:5.0.0"],\
             ["@types/html-minifier-terser", "npm:7.0.0"],\
             ["@types/sharp", "npm:0.31.1"],\
             ["csso", "npm:5.0.5"],\
-            ["files-pipe", "npm:0.0.1"],\
-            ["html-minifier-terser", "npm:7.1.0"],\
-            ["sharp", "npm:0.31.3"],\
+            ["files-pipe", "npm:0.0.2"],\
+            ["html-minifier-terser", "npm:7.2.0"],\
+            ["sharp", "npm:0.32.0"],\
             ["svgo", "npm:3.0.2"],\
-            ["terser", "npm:5.16.5"]\
+            ["terser", "npm:5.16.9"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3270,10 +3270,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.2.0", {\
-          "packageLocation": "./.yarn/cache/clean-css-npm-5.2.0-f846f6a97e-ccb63b244b.zip/node_modules/clean-css/",\
+        ["npm:5.3.2", {\
+          "packageLocation": "./.yarn/cache/clean-css-npm-5.3.2-8946cefff9-8787b281ac.zip/node_modules/clean-css/",\
           "packageDependencies": [\
-            ["clean-css", "npm:5.2.0"],\
+            ["clean-css", "npm:5.3.2"],\
             ["source-map", "npm:0.6.1"]\
           ],\
           "linkType": "HARD"\
@@ -3441,6 +3441,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["commander", [\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/cache/commander-npm-10.0.1-f17613b72b-436901d64a.zip/node_modules/commander/",\
+          "packageDependencies": [\
+            ["commander", "npm:10.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.20.3", {\
           "packageLocation": "./.yarn/cache/commander-npm-2.20.3-d8dcbaa39b-ab8c07884e.zip/node_modules/commander/",\
           "packageDependencies": [\
@@ -3459,13 +3466,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/commander-npm-7.2.0-19178180f8-53501cbeee.zip/node_modules/commander/",\
           "packageDependencies": [\
             ["commander", "npm:7.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:9.5.0", {\
-          "packageLocation": "./.yarn/cache/commander-npm-9.5.0-993b3f2434-c7a3e27aa5.zip/node_modules/commander/",\
-          "packageDependencies": [\
-            ["commander", "npm:9.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4037,6 +4037,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/deepmerge-ts-npm-4.3.0-27148d59e6-d5f8a96df9.zip/node_modules/deepmerge-ts/",\
           "packageDependencies": [\
             ["deepmerge-ts", "npm:4.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.1.0", {\
+          "packageLocation": "./.yarn/cache/deepmerge-ts-npm-5.1.0-f2ee394fd9-6b57db93c2.zip/node_modules/deepmerge-ts/",\
+          "packageDependencies": [\
+            ["deepmerge-ts", "npm:5.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5132,11 +5139,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["files-pipe", [\
-        ["npm:0.0.1", {\
-          "packageLocation": "./.yarn/cache/files-pipe-npm-0.0.1-3805feb3a8-e40cf793bf.zip/node_modules/files-pipe/",\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/files-pipe-npm-0.0.2-3e2860f7c0-2c45669ade.zip/node_modules/files-pipe/",\
           "packageDependencies": [\
-            ["files-pipe", "npm:0.0.1"],\
-            ["deepmerge-ts", "npm:4.3.0"],\
+            ["files-pipe", "npm:0.0.2"],\
+            ["deepmerge-ts", "npm:5.1.0"],\
             ["fast-glob", "npm:3.2.12"]\
           ],\
           "linkType": "HARD"\
@@ -5985,13 +5992,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["html-minifier-terser", [\
-        ["npm:7.1.0", {\
-          "packageLocation": "./.yarn/cache/html-minifier-terser-npm-7.1.0-77733ed4b6-351de28d85.zip/node_modules/html-minifier-terser/",\
+        ["npm:7.2.0", {\
+          "packageLocation": "./.yarn/cache/html-minifier-terser-npm-7.2.0-b9eba92a3b-39feed354b.zip/node_modules/html-minifier-terser/",\
           "packageDependencies": [\
-            ["html-minifier-terser", "npm:7.1.0"],\
+            ["html-minifier-terser", "npm:7.2.0"],\
             ["camel-case", "npm:4.1.2"],\
-            ["clean-css", "npm:5.2.0"],\
-            ["commander", "npm:9.5.0"],\
+            ["clean-css", "npm:5.3.2"],\
+            ["commander", "npm:10.0.1"],\
             ["entities", "npm:4.4.0"],\
             ["param-case", "npm:3.0.4"],\
             ["relateurl", "npm:0.2.7"],\
@@ -8426,14 +8433,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-addon-api", [\
-        ["npm:5.1.0", {\
-          "packageLocation": "./.yarn/unplugged/node-addon-api-npm-5.1.0-b50d00f739/node_modules/node-addon-api/",\
-          "packageDependencies": [\
-            ["node-addon-api", "npm:5.1.0"],\
-            ["node-gyp", "npm:9.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:6.0.0", {\
           "packageLocation": "./.yarn/unplugged/node-addon-api-npm-6.0.0-150a5934ad/node_modules/node-addon-api/",\
           "packageDependencies": [\
@@ -10820,22 +10819,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sharp", [\
-        ["npm:0.31.3", {\
-          "packageLocation": "./.yarn/unplugged/sharp-npm-0.31.3-7533cf1669/node_modules/sharp/",\
-          "packageDependencies": [\
-            ["sharp", "npm:0.31.3"],\
-            ["color", "npm:4.2.3"],\
-            ["detect-libc", "npm:2.0.1"],\
-            ["node-addon-api", "npm:5.1.0"],\
-            ["node-gyp", "npm:9.3.1"],\
-            ["prebuild-install", "npm:7.1.1"],\
-            ["semver", "npm:7.3.8"],\
-            ["simple-get", "npm:4.0.1"],\
-            ["tar-fs", "npm:2.1.1"],\
-            ["tunnel-agent", "npm:0.6.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.32.0", {\
           "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.0-151cbbd0bb/node_modules/sharp/",\
           "packageDependencies": [\
@@ -11685,10 +11668,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.16.5", {\
-          "packageLocation": "./.yarn/cache/terser-npm-5.16.5-b3f4101afe-f2c1a087fa.zip/node_modules/terser/",\
+        ["npm:5.16.9", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.16.9-65df42a05f-b373693ee0.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:5.16.5"],\
+            ["terser", "npm:5.16.9"],\
             ["@jridgewell/source-map", "npm:0.3.2"],\
             ["acorn", "npm:8.8.2"],\
             ["commander", "npm:2.20.3"],\
@@ -12633,7 +12616,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.35"],\
+            ["astro-compress", "npm:1.1.36"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.38.0"],\

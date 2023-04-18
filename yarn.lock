@@ -1969,20 +1969,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.35":
-  version: 1.1.35
-  resolution: "astro-compress@npm:1.1.35"
+"astro-compress@npm:1.1.36":
+  version: 1.1.36
+  resolution: "astro-compress@npm:1.1.36"
   dependencies:
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
     "@types/sharp": 0.31.1
     csso: 5.0.5
-    files-pipe: 0.0.1
-    html-minifier-terser: 7.1.0
-    sharp: 0.31.3
+    files-pipe: 0.0.2
+    html-minifier-terser: 7.2.0
+    sharp: 0.32.0
     svgo: 3.0.2
-    terser: 5.16.5
-  checksum: 22a8059b862deba6c9aa71d360a9fd61000a1ab202260982fc5f9f6d5dbadd10cf54fecafaef604a891406e94a9bd001a4db6a2ddc2e855eff1f28cc8e2d0622
+    terser: 5.16.9
+  checksum: f5a4fb5f877b6e9ef8de0e5651d5133012a759b822e4433d4ce0a49e0eca9cd32d98f36c0791b521b01bc6c1e5af827354b4a57a284e0273f4327e8b7358b313
   languageName: node
   linkType: hard
 
@@ -2609,21 +2609,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:5.2.0":
-  version: 5.2.0
-  resolution: "clean-css@npm:5.2.0"
-  dependencies:
-    source-map: ~0.6.0
-  checksum: ccb63b244b200abf53a005429b50132845a49b994fb6a2889a7eb775d53fbde7cb0d0b13655e435b0c3a6788d5d0fbcd2f56ccf32da852ef21ae933198dcad24
-  languageName: node
-  linkType: hard
-
 "clean-css@npm:^4.2.1":
   version: 4.2.4
   resolution: "clean-css@npm:4.2.4"
   dependencies:
     source-map: ~0.6.0
   checksum: 045ff6fcf4b5c76a084b24e1633e0c78a13b24080338fc8544565a9751559aa32ff4ee5886d9e52c18a644a6ff119bd8e37bc58e574377c05382a1fb7dbe39f8
+  languageName: node
+  linkType: hard
+
+"clean-css@npm:~5.3.2":
+  version: 5.3.2
+  resolution: "clean-css@npm:5.3.2"
+  dependencies:
+    source-map: ~0.6.0
+  checksum: 8787b281acc9878f309b5f835d410085deedfd4e126472666773040a6a8a72f472a1d24185947d23b87b1c419bf2c5ed429395d5c5ff8279c98b05d8011e9758
   languageName: node
   linkType: hard
 
@@ -2770,6 +2770,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "commander@npm:10.0.1"
+  checksum: 436901d64a818295803c1996cd856621a74f30b9f9e28a588e726b2b1670665bccd7c1a77007ebf328729f0139838a88a19265858a0fa7a8728c4656796db948
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.19.0, commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
@@ -2788,13 +2795,6 @@ __metadata:
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
   checksum: 53501cbeee61d5157546c0bef0fedb6cdfc763a882136284bed9a07225f09a14b82d2a84e7637edfd1a679fb35ed9502fd58ef1d091e6287f60d790147f68ddc
-  languageName: node
-  linkType: hard
-
-"commander@npm:^9.4.1":
-  version: 9.5.0
-  resolution: "commander@npm:9.5.0"
-  checksum: c7a3e27aa59e913b54a1bafd366b88650bc41d6651f0cbe258d4ff09d43d6a7394232a4dadd0bf518b3e696fdf595db1028a0d82c785b88bd61f8a440cecfade
   languageName: node
   linkType: hard
 
@@ -3239,7 +3239,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge-ts@npm:4.3.0, deepmerge-ts@npm:^4.2.2":
+"deepmerge-ts@npm:5.1.0":
+  version: 5.1.0
+  resolution: "deepmerge-ts@npm:5.1.0"
+  checksum: 6b57db93c2985e4a35f24b2451db31715050d143988b7d6346f4049c9aec21a6c289514b88d3ee3d6e0697e72ef5d96ff0bbb7cb75422d56fee55ee85c7168e7
+  languageName: node
+  linkType: hard
+
+"deepmerge-ts@npm:^4.2.2":
   version: 4.3.0
   resolution: "deepmerge-ts@npm:4.3.0"
   checksum: d5f8a96df9a2bc7177d59544b9390ba76e50fb725f776669068ca04eef319e98ee8870cf7b7ecca9f636b711d57cea571ac61553ee01101a614c045f7a86e0be
@@ -4269,13 +4276,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"files-pipe@npm:0.0.1":
-  version: 0.0.1
-  resolution: "files-pipe@npm:0.0.1"
+"files-pipe@npm:0.0.2":
+  version: 0.0.2
+  resolution: "files-pipe@npm:0.0.2"
   dependencies:
-    deepmerge-ts: 4.3.0
+    deepmerge-ts: 5.1.0
     fast-glob: 3.2.12
-  checksum: e40cf793bf4273424162d2ce6625b0bcd7a28a01b06e452a66760423205987f6c41ba7fae3db03ee2e15f616f130d2a2cd22e3bbd8c8175be77b8c5df2c8edfb
+  checksum: 2c45669adedd6ebb5f914a05d908fbc660ea664224037b22789d6afd01d1f82d7baaef7f80d3f15fd00d8769c8e7ad97fa1bd166a3719957c3429956d74942b1
   languageName: node
   linkType: hard
 
@@ -5026,20 +5033,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-minifier-terser@npm:7.1.0":
-  version: 7.1.0
-  resolution: "html-minifier-terser@npm:7.1.0"
+"html-minifier-terser@npm:7.2.0":
+  version: 7.2.0
+  resolution: "html-minifier-terser@npm:7.2.0"
   dependencies:
     camel-case: ^4.1.2
-    clean-css: 5.2.0
-    commander: ^9.4.1
+    clean-css: ~5.3.2
+    commander: ^10.0.0
     entities: ^4.4.0
     param-case: ^3.0.4
     relateurl: ^0.2.7
     terser: ^5.15.1
   bin:
     html-minifier-terser: cli.js
-  checksum: 351de28d85f142314a6a9b5222bdcaf068cef6bf2f521952ef55d99a6acdcecd0b4dbc42578da2d438d579c6e868b899ca19eac901ee6f9f0c69c223b5942099
+  checksum: 39feed354b5a8aafc8e910977d68cfd961d6db330a8e1a5b16a528c86b8ee7745d8945134822cf00acf7bf0d0135bf1abad650bf308bee4ea73adb003f5b8656
   languageName: node
   linkType: hard
 
@@ -7227,15 +7234,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-addon-api@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "node-addon-api@npm:5.1.0"
-  dependencies:
-    node-gyp: latest
-  checksum: 2508bd2d2981945406243a7bd31362fc7af8b70b8b4d65f869c61731800058fb818cc2fd36c8eac714ddd0e568cc85becf5e165cebbdf7b5024d5151bbc75ea1
-  languageName: node
-  linkType: hard
-
 "node-addon-api@npm:^6.0.0":
   version: 6.0.0
   resolution: "node-addon-api@npm:6.0.0"
@@ -9047,24 +9045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.31.3":
-  version: 0.31.3
-  resolution: "sharp@npm:0.31.3"
-  dependencies:
-    color: ^4.2.3
-    detect-libc: ^2.0.1
-    node-addon-api: ^5.0.0
-    node-gyp: latest
-    prebuild-install: ^7.1.1
-    semver: ^7.3.8
-    simple-get: ^4.0.1
-    tar-fs: ^2.1.1
-    tunnel-agent: ^0.6.0
-  checksum: 29fd1dfbc616c6389f53f366cec342b4353d9f2a37e98952ca273db38dca57dfa0f336322d6d763f0fae876042ead22fd86ffe26d70c32ade2458d421db60d04
-  languageName: node
-  linkType: hard
-
-"sharp@npm:^0.32.0":
+"sharp@npm:0.32.0, sharp@npm:^0.32.0":
   version: 0.32.0
   resolution: "sharp@npm:0.32.0"
   dependencies:
@@ -9803,9 +9784,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.16.5":
-  version: 5.16.5
-  resolution: "terser@npm:5.16.5"
+"terser@npm:5.16.9":
+  version: 5.16.9
+  resolution: "terser@npm:5.16.9"
   dependencies:
     "@jridgewell/source-map": ^0.3.2
     acorn: ^8.5.0
@@ -9813,7 +9794,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: f2c1a087fac7f4ff04b1b4e79bffc52e2fc0b068b98912bfcc0b341184c284c30c19ed73f76ac92b225b71668f7f8fc586d99a7e50a29cdc1c916cb1265522ec
+  checksum: b373693ee01ce08cc9b9595d57df889acbbc899d929a7fe53662330ce954d53145582f6715c9cc4839d555f5769a28fbeb203155b54e3a9c6c646db292002edd
   languageName: node
   linkType: hard
 
@@ -10658,7 +10639,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
-    astro-compress: 1.1.35
+    astro-compress: 1.1.36
     astro-eslint-parser: ^0.13.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
