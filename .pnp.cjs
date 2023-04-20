@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.36"],\
+            ["astro-compress", "npm:1.1.39"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.38.0"],\
@@ -2594,10 +2594,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["astro-compress", [\
-        ["npm:1.1.36", {\
-          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.36-caa3e9e754-f5a4fb5f87.zip/node_modules/astro-compress/",\
+        ["npm:1.1.39", {\
+          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.39-9131f42e8d-3353f67f86.zip/node_modules/astro-compress/",\
           "packageDependencies": [\
-            ["astro-compress", "npm:1.1.36"],\
+            ["astro-compress", "npm:1.1.39"],\
             ["@types/csso", "npm:5.0.0"],\
             ["@types/html-minifier-terser", "npm:7.0.0"],\
             ["@types/sharp", "npm:0.31.1"],\
@@ -2606,7 +2606,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["html-minifier-terser", "npm:7.2.0"],\
             ["sharp", "npm:0.32.0"],\
             ["svgo", "npm:3.0.2"],\
-            ["terser", "npm:5.16.9"]\
+            ["terser", "npm:5.17.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11668,10 +11668,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.16.9", {\
-          "packageLocation": "./.yarn/cache/terser-npm-5.16.9-65df42a05f-b373693ee0.zip/node_modules/terser/",\
+        ["npm:5.17.1", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.17.1-5b220f4a17-69b0e80e3c.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:5.16.9"],\
+            ["terser", "npm:5.17.1"],\
             ["@jridgewell/source-map", "npm:0.3.2"],\
             ["acorn", "npm:8.8.2"],\
             ["commander", "npm:2.20.3"],\
@@ -12616,7 +12616,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.36"],\
+            ["astro-compress", "npm:1.1.39"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.38.0"],\
