@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.41"],\
+            ["astro-compress", "npm:1.1.42"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.39.0"],\
@@ -2772,10 +2772,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["astro-compress", [\
-        ["npm:1.1.41", {\
-          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.41-744295b4eb-be2f4fc4b4.zip/node_modules/astro-compress/",\
+        ["npm:1.1.42", {\
+          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.42-be7911ede6-fdf63ac1ac.zip/node_modules/astro-compress/",\
           "packageDependencies": [\
-            ["astro-compress", "npm:1.1.41"],\
+            ["astro-compress", "npm:1.1.42"],\
             ["@lightrix/config", "npm:0.0.11"],\
             ["@lightrix/scripts", "npm:1.0.3"],\
             ["@types/csso", "npm:5.0.0"],\
@@ -12827,7 +12827,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.0"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.0"],\
-            ["astro-compress", "npm:1.1.41"],\
+            ["astro-compress", "npm:1.1.42"],\
             ["astro-eslint-parser", "npm:0.13.3"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.39.0"],\
