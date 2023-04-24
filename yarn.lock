@@ -2146,9 +2146,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.41":
-  version: 1.1.41
-  resolution: "astro-compress@npm:1.1.41"
+"astro-compress@npm:1.1.42":
+  version: 1.1.42
+  resolution: "astro-compress@npm:1.1.42"
   dependencies:
     "@lightrix/config": 0.0.11
     "@lightrix/scripts": 1.0.3
@@ -2161,7 +2161,7 @@ __metadata:
     sharp: 0.32.0
     svgo: 3.0.2
     terser: 5.17.1
-  checksum: be2f4fc4b445da9ac296297eb9813966f2ef577392336fe62883e197701e4c65ce8afec3f215c8199e9392e5c9941dcf74d243257956e5add603216eb6ce24e5
+  checksum: fdf63ac1acea01795ecbd3c02ba46aa66bde779e5a03c1d697e3544567e7887dee75b5a31f3712aa57956eaaaf2e8d04f83af4c8dea8b04acabf29f1a5ebd0eb
   languageName: node
   linkType: hard
 
@@ -10897,7 +10897,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
-    astro-compress: 1.1.41
+    astro-compress: 1.1.42
     astro-eslint-parser: ^0.13.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
