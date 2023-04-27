@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.8.8"],\
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.0"],\
+            ["sharp", "npm:0.32.1"],\
             ["subfont", "npm:7.1.0"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
@@ -141,7 +141,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["kleur", "npm:4.1.5"],\
             ["magic-string", "npm:0.27.0"],\
             ["mime", "npm:3.0.0"],\
-            ["sharp", "npm:0.32.0"]\
+            ["sharp", "npm:0.32.1"]\
           ],\
           "packagePeers": [\
             "@types/astro",\
@@ -2758,7 +2758,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype", "npm:12.0.1"],\
             ["semver", "npm:7.3.8"],\
             ["server-destroy", "npm:1.0.1"],\
-            ["sharp", "npm:0.32.0"],\
+            ["sharp", "npm:0.32.1"],\
             ["shiki", "npm:0.11.1"],\
             ["slash", "npm:4.0.0"],\
             ["string-width", "npm:5.1.2"],\
@@ -8668,6 +8668,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-gyp", "npm:9.3.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:6.1.0", {\
+          "packageLocation": "./.yarn/unplugged/node-addon-api-npm-6.1.0-634c545b39/node_modules/node-addon-api/",\
+          "packageDependencies": [\
+            ["node-addon-api", "npm:6.1.0"],\
+            ["node-gyp", "npm:9.3.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["node-domexception", [\
@@ -11030,6 +11038,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.5.0", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.5.0-160502ad5d-2d26693775.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.5.0"],\
+            ["lru-cache", "npm:6.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["server-destroy", [\
@@ -11061,6 +11077,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-gyp", "npm:9.3.1"],\
             ["prebuild-install", "npm:7.1.1"],\
             ["semver", "npm:7.3.8"],\
+            ["simple-get", "npm:4.0.1"],\
+            ["tar-fs", "npm:2.1.1"],\
+            ["tunnel-agent", "npm:0.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.32.1", {\
+          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.1-5af640fc49/node_modules/sharp/",\
+          "packageDependencies": [\
+            ["sharp", "npm:0.32.1"],\
+            ["color", "npm:4.2.3"],\
+            ["detect-libc", "npm:2.0.1"],\
+            ["node-addon-api", "npm:6.1.0"],\
+            ["node-gyp", "npm:9.3.1"],\
+            ["prebuild-install", "npm:7.1.1"],\
+            ["semver", "npm:7.5.0"],\
             ["simple-get", "npm:4.0.1"],\
             ["tar-fs", "npm:2.1.1"],\
             ["tunnel-agent", "npm:0.6.0"]\
@@ -12847,7 +12879,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.8.8"],\
             ["prettier-plugin-astro", "npm:0.8.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.0"],\
+            ["sharp", "npm:0.32.1"],\
             ["subfont", "npm:7.1.0"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
