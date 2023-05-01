@@ -33,7 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/partytown", "npm:1.2.0"],\
             ["@astrojs/rss", "npm:2.4.0"],\
             ["@astrojs/sitemap", "npm:1.2.2"],\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.1"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@fontsource/inter", "npm:4.5.15"],\
@@ -305,24 +305,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/tailwind", [\
-        ["npm:3.1.1", {\
-          "packageLocation": "./.yarn/cache/@astrojs-tailwind-npm-3.1.1-5a4e96a6af-2c1db53b6b.zip/node_modules/@astrojs/tailwind/",\
+        ["npm:3.1.2", {\
+          "packageLocation": "./.yarn/cache/@astrojs-tailwind-npm-3.1.2-8cef19fff0-cf9dfd0295.zip/node_modules/@astrojs/tailwind/",\
           "packageDependencies": [\
-            ["@astrojs/tailwind", "npm:3.1.1"]\
+            ["@astrojs/tailwind", "npm:3.1.2"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-tailwind-virtual-1e537165ef/0/cache/@astrojs-tailwind-npm-3.1.1-5a4e96a6af-2c1db53b6b.zip/node_modules/@astrojs/tailwind/",\
+        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-tailwind-virtual-377ab058c2/0/cache/@astrojs-tailwind-npm-3.1.2-8cef19fff0-cf9dfd0295.zip/node_modules/@astrojs/tailwind/",\
           "packageDependencies": [\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.1"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2"],\
             ["@proload/core", "npm:0.3.3"],\
             ["@types/astro", null],\
             ["@types/tailwindcss", null],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.3.2"],\
-            ["autoprefixer", "virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:10.4.14"],\
-            ["postcss", "npm:8.4.21"],\
-            ["postcss-load-config", "virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:4.0.1"],\
+            ["autoprefixer", "virtual:377ab058c2b14783ce7d26a0aaf92140a24e81316f8cb106b2f53352224b1047d3da8221b6c63f3a25a0bb5bd3fe18b266fecf0062aec7fbc9b1b30f64afa4dd#npm:10.4.14"],\
+            ["postcss", "npm:8.4.23"],\
+            ["postcss-load-config", "virtual:9311a8c9fc2fa723a363b04526c261872a9280ff9a5542cdc84255404f48ad5c7925fba5ed45881f7890d0d836206f3c952ef9a86f561b44b7d6e17f15c70e68#npm:4.0.1"],\
             ["tailwindcss", "npm:3.3.2"]\
           ],\
           "packagePeers": [\
@@ -2869,17 +2869,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:10.4.14", {\
-          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-cb99856499/0/cache/autoprefixer-npm-10.4.14-1e0b8c34fb-e9f18e664a.zip/node_modules/autoprefixer/",\
+        ["virtual:377ab058c2b14783ce7d26a0aaf92140a24e81316f8cb106b2f53352224b1047d3da8221b6c63f3a25a0bb5bd3fe18b266fecf0062aec7fbc9b1b30f64afa4dd#npm:10.4.14", {\
+          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-ec8fa69214/0/cache/autoprefixer-npm-10.4.14-1e0b8c34fb-e9f18e664a.zip/node_modules/autoprefixer/",\
           "packageDependencies": [\
-            ["autoprefixer", "virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:10.4.14"],\
+            ["autoprefixer", "virtual:377ab058c2b14783ce7d26a0aaf92140a24e81316f8cb106b2f53352224b1047d3da8221b6c63f3a25a0bb5bd3fe18b266fecf0062aec7fbc9b1b30f64afa4dd#npm:10.4.14"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.5"],\
             ["caniuse-lite", "npm:1.0.30001467"],\
             ["fraction.js", "npm:4.2.0"],\
             ["normalize-range", "npm:0.1.2"],\
             ["picocolors", "npm:1.0.0"],\
-            ["postcss", "npm:8.4.21"],\
+            ["postcss", "npm:8.4.23"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -9588,25 +9588,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:4.0.1", {\
-          "packageLocation": "./.yarn/__virtual__/postcss-load-config-virtual-249c7c3016/0/cache/postcss-load-config-npm-4.0.1-351eb776f5-b61f890499.zip/node_modules/postcss-load-config/",\
-          "packageDependencies": [\
-            ["postcss-load-config", "virtual:1e537165ef415a407911e39164c28a72de8923987e8298ddbca4b961bc8dfcbe28c07ce8a54adbdaafdf103cc7a74c15fb600dcfcb538fa2facb13e4f0397f9b#npm:4.0.1"],\
-            ["@types/postcss", null],\
-            ["@types/ts-node", null],\
-            ["lilconfig", "npm:2.1.0"],\
-            ["postcss", "npm:8.4.21"],\
-            ["ts-node", null],\
-            ["yaml", "npm:2.2.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/postcss",\
-            "@types/ts-node",\
-            "postcss",\
-            "ts-node"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:9311a8c9fc2fa723a363b04526c261872a9280ff9a5542cdc84255404f48ad5c7925fba5ed45881f7890d0d836206f3c952ef9a86f561b44b7d6e17f15c70e68#npm:4.0.1", {\
           "packageLocation": "./.yarn/__virtual__/postcss-load-config-virtual-1b36bed240/0/cache/postcss-load-config-npm-4.0.1-351eb776f5-b61f890499.zip/node_modules/postcss-load-config/",\
           "packageDependencies": [\
@@ -12860,7 +12841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/partytown", "npm:1.2.0"],\
             ["@astrojs/rss", "npm:2.4.0"],\
             ["@astrojs/sitemap", "npm:1.2.2"],\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.1"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@fontsource/inter", "npm:4.5.15"],\
