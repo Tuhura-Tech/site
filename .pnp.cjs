@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.6"],\
             ["@astrojs/mdx", "npm:0.19.0"],\
             ["@astrojs/partytown", "npm:1.2.0"],\
-            ["@astrojs/rss", "npm:2.4.0"],\
+            ["@astrojs/rss", "npm:2.4.1"],\
             ["@astrojs/sitemap", "npm:1.2.2"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
@@ -278,10 +278,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/rss", [\
-        ["npm:2.4.0", {\
-          "packageLocation": "./.yarn/cache/@astrojs-rss-npm-2.4.0-9470a938dc-752c59ced4.zip/node_modules/@astrojs/rss/",\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/@astrojs-rss-npm-2.4.1-f7d22b05d9-86d771d3f6.zip/node_modules/@astrojs/rss/",\
           "packageDependencies": [\
-            ["@astrojs/rss", "npm:2.4.0"],\
+            ["@astrojs/rss", "npm:2.4.1"],\
             ["fast-xml-parser", "npm:4.1.3"],\
             ["kleur", "npm:4.1.5"]\
           ],\
@@ -12831,7 +12831,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.6"],\
             ["@astrojs/mdx", "npm:0.19.0"],\
             ["@astrojs/partytown", "npm:1.2.0"],\
-            ["@astrojs/rss", "npm:2.4.0"],\
+            ["@astrojs/rss", "npm:2.4.1"],\
             ["@astrojs/sitemap", "npm:1.2.2"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.2"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
