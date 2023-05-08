@@ -9885,8 +9885,8 @@ __metadata:
   linkType: hard
 
 "subfont@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "subfont@npm:7.1.0"
+  version: 7.1.1
+  resolution: "subfont@npm:7.1.1"
   dependencies:
     "@gustavnikolaj/async-main-wrap": ^3.0.1
     "@hookun/parse-animation-shorthand": ^0.1.5
@@ -9913,7 +9913,7 @@ __metadata:
     yargs: ^15.4.0
   bin:
     subfont: lib/cli.js
-  checksum: 7f63e6a2e0ad4dcb97113514fe6e62c8ed73dfcf463978766bc40026d0328e54f4f81a5a34d02e79bcdf0e8e48745d696fb82e94de220dd4d94808c75e0f62e3
+  checksum: 51f7ae42d56b0e5af62ec70151391101eb269caa67c5c448a4c0dfddc5bd6fbef17103eef8a319dedf8306e60449bd4104b127cefbec296b95e840bfab674487
   languageName: node
   linkType: hard
 
