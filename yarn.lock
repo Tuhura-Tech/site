@@ -2198,7 +2198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:^0.13.0, astro-eslint-parser@npm:^0.13.1":
+"astro-eslint-parser@npm:^0.13.1":
   version: 0.13.3
   resolution: "astro-eslint-parser@npm:0.13.3"
   dependencies:
@@ -2211,6 +2211,22 @@ __metadata:
     espree: ^9.0.0
     semver: ^7.3.8
   checksum: 5400c86f1bda5ea942ad200bbb6ce084496115dcdceb2df77630c00166a5181f459bcd39ab78f8953825be6ad97d572dd4fe5cc79a69ddda6a74f224442e0e43
+  languageName: node
+  linkType: hard
+
+"astro-eslint-parser@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "astro-eslint-parser@npm:0.14.0"
+  dependencies:
+    "@astrojs/compiler": ^1.0.0
+    "@typescript-eslint/scope-manager": ^5.48.2
+    "@typescript-eslint/types": ^5.25.0
+    astrojs-compiler-sync: ^0.3.0
+    debug: ^4.3.4
+    eslint-visitor-keys: ^3.0.0
+    espree: ^9.0.0
+    semver: ^7.3.8
+  checksum: 04f07255801d812c5b2605c937e27eb71bb78b105403dff65c31d499d9c640f80f5032f65f9459d24b47db9461e31ba695d275ba6b3f118f6c5b7a3821a29f70
   languageName: node
   linkType: hard
 
@@ -10980,7 +10996,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
     astro-compress: 1.1.42
-    astro-eslint-parser: ^0.13.0
+    astro-eslint-parser: ^0.14.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
     eslint-plugin-astro: ^0.26.0
