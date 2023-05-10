@@ -180,12 +180,12 @@ __metadata:
   linkType: hard
 
 "@astrojs/sitemap@npm:^1.0.1":
-  version: 1.3.0
-  resolution: "@astrojs/sitemap@npm:1.3.0"
+  version: 1.3.1
+  resolution: "@astrojs/sitemap@npm:1.3.1"
   dependencies:
     sitemap: ^7.1.1
     zod: ^3.17.3
-  checksum: 50a78d9d4613545cf56c8b57a51e019241e13c014c30518f146e68daf413a8791efe703e17addac72dcd3642d4949ab843436b9488f1c194cb6b44213e7bc9b3
+  checksum: 105ec8a85ecbce47e239291fcdc1999cb12fd39fc7940c3969619251613e60a3c22f11fe56a7eb3ac82ed884db149d670e889be124ae98a71803ec41edcf8f4d
   languageName: node
   linkType: hard
 
