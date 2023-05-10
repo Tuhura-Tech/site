@@ -2242,8 +2242,8 @@ __metadata:
   linkType: hard
 
 "astro@npm:^2.0.4":
-  version: 2.4.3
-  resolution: "astro@npm:2.4.3"
+  version: 2.4.4
+  resolution: "astro@npm:2.4.4"
   dependencies:
     "@astrojs/compiler": ^1.4.0
     "@astrojs/language-server": ^1.0.0
@@ -2305,7 +2305,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: dda8c1b7f421fe9e04d33414bb630e2d9af01df0e3456d5ee11b65a9d12ccb77ef360e3a5f12eaec370272df254d23677e69c5d54a9e8372b48ff5f256a3c3b7
+  checksum: a106957b7bff5b335234656320a00d547454ae5ffc1162cfcd38553d4e3377bb592891bf098c8ce7009509a502a3d5599b9300af352da7b26f0eeaa5ff9ce18e
   languageName: node
   linkType: hard
 
