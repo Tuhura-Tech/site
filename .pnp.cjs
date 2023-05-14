@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["limax", "npm:4.0.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.8"],\
-            ["prettier-plugin-astro", "npm:0.8.0"],\
+            ["prettier-plugin-astro", "npm:0.8.1"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.1"],\
             ["subfont", "npm:7.1.1"],\
@@ -162,7 +162,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vscode/emmet-helper", "npm:2.8.6"],\
             ["events", "npm:3.3.0"],\
             ["prettier", "npm:2.8.8"],\
-            ["prettier-plugin-astro", "npm:0.8.0"],\
+            ["prettier-plugin-astro", "npm:0.8.1"],\
             ["synckit", "npm:0.8.5"],\
             ["vscode-css-languageservice", "npm:6.2.5"],\
             ["vscode-html-languageservice", "npm:5.0.4"],\
@@ -10269,10 +10269,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-astro", [\
-        ["npm:0.8.0", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-astro-npm-0.8.0-f83f1add4a-95551c5945.zip/node_modules/prettier-plugin-astro/",\
+        ["npm:0.8.1", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-astro-npm-0.8.1-92cf886c5e-9aee16a3d6.zip/node_modules/prettier-plugin-astro/",\
           "packageDependencies": [\
-            ["prettier-plugin-astro", "npm:0.8.0"],\
+            ["prettier-plugin-astro", "npm:0.8.1"],\
             ["@astrojs/compiler", "npm:1.0.1"],\
             ["prettier", "npm:2.8.8"],\
             ["sass-formatter", "npm:0.7.6"],\
@@ -12872,7 +12872,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["limax", "npm:4.0.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.8"],\
-            ["prettier-plugin-astro", "npm:0.8.0"],\
+            ["prettier-plugin-astro", "npm:0.8.1"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.1"],\
             ["subfont", "npm:7.1.1"],\
