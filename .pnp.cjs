@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.5"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.5"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.4.5"],\
-            ["astro-compress", "npm:1.1.42"],\
+            ["astro-compress", "npm:1.1.43"],\
             ["astro-eslint-parser", "npm:0.14.0"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.40.0"],\
@@ -2062,11 +2062,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/sharp", [\
-        ["npm:0.31.1", {\
-          "packageLocation": "./.yarn/cache/@types-sharp-npm-0.31.1-2fd1486480-226871181f.zip/node_modules/@types/sharp/",\
+        ["npm:0.32.0", {\
+          "packageLocation": "./.yarn/cache/@types-sharp-npm-0.32.0-b89fbf03a9-9d0ca925eb.zip/node_modules/@types/sharp/",\
           "packageDependencies": [\
-            ["@types/sharp", "npm:0.31.1"],\
-            ["@types/node", "npm:18.15.3"]\
+            ["@types/sharp", "npm:0.32.0"],\
+            ["sharp", "npm:0.32.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2808,21 +2808,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["astro-compress", [\
-        ["npm:1.1.42", {\
-          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.42-be7911ede6-fdf63ac1ac.zip/node_modules/astro-compress/",\
+        ["npm:1.1.43", {\
+          "packageLocation": "./.yarn/cache/astro-compress-npm-1.1.43-fcf842b55f-9e73438cf0.zip/node_modules/astro-compress/",\
           "packageDependencies": [\
-            ["astro-compress", "npm:1.1.42"],\
+            ["astro-compress", "npm:1.1.43"],\
             ["@lightrix/config", "npm:0.0.11"],\
             ["@lightrix/scripts", "npm:1.0.3"],\
             ["@types/csso", "npm:5.0.0"],\
             ["@types/html-minifier-terser", "npm:7.0.0"],\
-            ["@types/sharp", "npm:0.31.1"],\
+            ["@types/sharp", "npm:0.32.0"],\
             ["csso", "npm:5.0.5"],\
             ["files-pipe", "npm:0.0.4"],\
             ["html-minifier-terser", "npm:7.2.0"],\
-            ["sharp", "npm:0.32.0"],\
+            ["sharp", "npm:0.32.1"],\
             ["svgo", "npm:3.0.2"],\
-            ["terser", "npm:5.17.1"]\
+            ["terser", "npm:5.17.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8717,14 +8717,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["node-addon-api", [\
-        ["npm:6.0.0", {\
-          "packageLocation": "./.yarn/unplugged/node-addon-api-npm-6.0.0-150a5934ad/node_modules/node-addon-api/",\
-          "packageDependencies": [\
-            ["node-addon-api", "npm:6.0.0"],\
-            ["node-gyp", "npm:9.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:6.1.0", {\
           "packageLocation": "./.yarn/unplugged/node-addon-api-npm-6.1.0-634c545b39/node_modules/node-addon-api/",\
           "packageDependencies": [\
@@ -11093,22 +11085,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sharp", [\
-        ["npm:0.32.0", {\
-          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.0-151cbbd0bb/node_modules/sharp/",\
-          "packageDependencies": [\
-            ["sharp", "npm:0.32.0"],\
-            ["color", "npm:4.2.3"],\
-            ["detect-libc", "npm:2.0.1"],\
-            ["node-addon-api", "npm:6.0.0"],\
-            ["node-gyp", "npm:9.3.1"],\
-            ["prebuild-install", "npm:7.1.1"],\
-            ["semver", "npm:7.3.8"],\
-            ["simple-get", "npm:4.0.1"],\
-            ["tar-fs", "npm:2.1.1"],\
-            ["tunnel-agent", "npm:0.6.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.32.1", {\
           "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.1-5af640fc49/node_modules/sharp/",\
           "packageDependencies": [\
@@ -11948,10 +11924,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.17.1", {\
-          "packageLocation": "./.yarn/cache/terser-npm-5.17.1-5b220f4a17-69b0e80e3c.zip/node_modules/terser/",\
+        ["npm:5.17.3", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.17.3-931416ee09-6b5a859bf9.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:5.17.1"],\
+            ["terser", "npm:5.17.3"],\
             ["@jridgewell/source-map", "npm:0.3.2"],\
             ["acorn", "npm:8.8.2"],\
             ["commander", "npm:2.20.3"],\
@@ -12887,7 +12863,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.5"],\
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:5.59.5"],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.4.5"],\
-            ["astro-compress", "npm:1.1.42"],\
+            ["astro-compress", "npm:1.1.43"],\
             ["astro-eslint-parser", "npm:0.14.0"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.40.0"],\

@@ -1650,12 +1650,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sharp@npm:0.31.1":
-  version: 0.31.1
-  resolution: "@types/sharp@npm:0.31.1"
+"@types/sharp@npm:0.32.0":
+  version: 0.32.0
+  resolution: "@types/sharp@npm:0.32.0"
   dependencies:
-    "@types/node": "*"
-  checksum: 226871181fc88b5ef8a6bc32c1e14a3426cc45480ed49536c45bb5c166c089169b8fe3e5c57aea8c34cc40b08311a95d5582c1a2f540f4425eb66fea3d6e0489
+    sharp: "*"
+  checksum: 9d0ca925ebb18e870740db0e0abcaaa2458645673068166b9f26e042640fa430644fe39aada320e03834f7ba3600e678de822201ffc312f9df1f515ba107ebd5
   languageName: node
   linkType: hard
 
@@ -2179,22 +2179,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.42":
-  version: 1.1.42
-  resolution: "astro-compress@npm:1.1.42"
+"astro-compress@npm:1.1.43":
+  version: 1.1.43
+  resolution: "astro-compress@npm:1.1.43"
   dependencies:
     "@lightrix/config": 0.0.11
     "@lightrix/scripts": 1.0.3
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
-    "@types/sharp": 0.31.1
+    "@types/sharp": 0.32.0
     csso: 5.0.5
     files-pipe: 0.0.4
     html-minifier-terser: 7.2.0
-    sharp: 0.32.0
+    sharp: 0.32.1
     svgo: 3.0.2
-    terser: 5.17.1
-  checksum: fdf63ac1acea01795ecbd3c02ba46aa66bde779e5a03c1d697e3544567e7887dee75b5a31f3712aa57956eaaaf2e8d04f83af4c8dea8b04acabf29f1a5ebd0eb
+    terser: 5.17.3
+  checksum: 9e73438cf0b8cdd2e5e59ec057bc37080ba3eaf52d045ac2a581ac0c60691c224120277b2e74bfc78ee9a3ae8fdae81aab181e163bdcf538cbf6a85715b1bc69
   languageName: node
   linkType: hard
 
@@ -7564,15 +7564,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-addon-api@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "node-addon-api@npm:6.0.0"
-  dependencies:
-    node-gyp: latest
-  checksum: a34a901b9f0d6d201a173e12ed378033e4e0f27f77fd27c225dc7e6f96e88a88e94bd78b2b0404fc95deee20a137f1cbfc92738cbfba38862ed9b6c2e61c1ab2
-  languageName: node
-  linkType: hard
-
 "node-addon-api@npm:^6.1.0":
   version: 6.1.0
   resolution: "node-addon-api@npm:6.1.0"
@@ -9395,24 +9386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.32.0":
-  version: 0.32.0
-  resolution: "sharp@npm:0.32.0"
-  dependencies:
-    color: ^4.2.3
-    detect-libc: ^2.0.1
-    node-addon-api: ^6.0.0
-    node-gyp: latest
-    prebuild-install: ^7.1.1
-    semver: ^7.3.8
-    simple-get: ^4.0.1
-    tar-fs: ^2.1.1
-    tunnel-agent: ^0.6.0
-  checksum: 82c6046038f45f1fdeb732cff8be6a8a3fb5eb25f46f4c3ecb4b71363c2c387b52de8c0c5c4674f2400663e467b8a7b93dbc5d70b3f0e145cb45fc27d39c5709
-  languageName: node
-  linkType: hard
-
-"sharp@npm:^0.32.0":
+"sharp@npm:*, sharp@npm:0.32.1, sharp@npm:^0.32.0":
   version: 0.32.1
   resolution: "sharp@npm:0.32.1"
   dependencies:
@@ -10150,9 +10124,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.17.1":
-  version: 5.17.1
-  resolution: "terser@npm:5.17.1"
+"terser@npm:5.17.3":
+  version: 5.17.3
+  resolution: "terser@npm:5.17.3"
   dependencies:
     "@jridgewell/source-map": ^0.3.2
     acorn: ^8.5.0
@@ -10160,7 +10134,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 69b0e80e3c4084db2819de4d6ae8a2ba79f2fcd7ed6df40fe4b602ec7bfd8e889cc63c7d5268f30990ffecbf6eeda18f857adad9386fe2c2331b398d58ed855c
+  checksum: 6b5a859bf9707f34be6e4c567437bc4e47e9364eec37a48b0ae3bff46bb510ef43caf543a23a89b8f43eca47c90a6759105add171fdb0d768dd639deb4545ac9
   languageName: node
   linkType: hard
 
@@ -10995,7 +10969,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
-    astro-compress: 1.1.42
+    astro-compress: 1.1.43
     astro-eslint-parser: ^0.14.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
