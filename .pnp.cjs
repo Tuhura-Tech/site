@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["astro-eslint-parser", "npm:0.14.0"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.40.0"],\
-            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.2"],\
+            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.0"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.0.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
@@ -2828,21 +2828,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["astro-eslint-parser", [\
-        ["npm:0.13.3", {\
-          "packageLocation": "./.yarn/cache/astro-eslint-parser-npm-0.13.3-d307f30289-5400c86f1b.zip/node_modules/astro-eslint-parser/",\
-          "packageDependencies": [\
-            ["astro-eslint-parser", "npm:0.13.3"],\
-            ["@astrojs/compiler", "npm:1.3.0"],\
-            ["@typescript-eslint/scope-manager", "npm:5.56.0"],\
-            ["@typescript-eslint/types", "npm:5.56.0"],\
-            ["astrojs-compiler-sync", "virtual:c18b9f1f45965056b6d8d098750e0b3318f146ab1b5b024615bb15856082e2b8517dd80aa606ef0075a6616908cea8beacf44952f4b747c5cfdbf0e5c08c7c04#npm:0.3.2"],\
-            ["debug", "virtual:2432407996ca91dedade2f1b21b4b672a675354625ae31cd0c772b48a6a337a8783f8b471a9a75972c24c26e8b166538f3c6f2d09693da7b54f1de5a27e3d40a#npm:4.3.4"],\
-            ["eslint-visitor-keys", "npm:3.3.0"],\
-            ["espree", "npm:9.5.0"],\
-            ["semver", "npm:7.3.8"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.14.0", {\
           "packageLocation": "./.yarn/cache/astro-eslint-parser-npm-0.14.0-c18b9f1f45-04f0725580.zip/node_modules/astro-eslint-parser/",\
           "packageDependencies": [\
@@ -4949,22 +4934,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["eslint-plugin-astro", [\
-        ["npm:0.26.2", {\
-          "packageLocation": "./.yarn/cache/eslint-plugin-astro-npm-0.26.2-76ace03871-d853b03214.zip/node_modules/eslint-plugin-astro/",\
+        ["npm:0.27.0", {\
+          "packageLocation": "./.yarn/cache/eslint-plugin-astro-npm-0.27.0-33f467d583-190bbd33f4.zip/node_modules/eslint-plugin-astro/",\
           "packageDependencies": [\
-            ["eslint-plugin-astro", "npm:0.26.2"]\
+            ["eslint-plugin-astro", "npm:0.27.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.2", {\
-          "packageLocation": "./.yarn/__virtual__/eslint-plugin-astro-virtual-c4d53f37ba/0/cache/eslint-plugin-astro-npm-0.26.2-76ace03871-d853b03214.zip/node_modules/eslint-plugin-astro/",\
+        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.0", {\
+          "packageLocation": "./.yarn/__virtual__/eslint-plugin-astro-virtual-5c073d6fd1/0/cache/eslint-plugin-astro-npm-0.27.0-33f467d583-190bbd33f4.zip/node_modules/eslint-plugin-astro/",\
           "packageDependencies": [\
-            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.2"],\
+            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.0"],\
             ["@eslint-community/eslint-utils", "virtual:a6b4fe835579a63d4bba3b36421e122e8b724dc74e77021d3ed41a4d6bdc515083819833b4bcb0b8779a78bf78a2815449cd2cdd0542f0d6beeafe4c89fe2213#npm:4.4.0"],\
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"],\
             ["@types/eslint", null],\
             ["@typescript-eslint/types", "npm:5.56.0"],\
-            ["astro-eslint-parser", "npm:0.13.3"],\
+            ["astro-eslint-parser", "npm:0.14.0"],\
             ["eslint", "npm:8.40.0"],\
             ["postcss", "npm:8.4.21"],\
             ["postcss-selector-parser", "npm:6.0.11"]\
@@ -12867,7 +12852,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["astro-eslint-parser", "npm:0.14.0"],\
             ["astro-icon", "npm:0.8.0"],\
             ["eslint", "npm:8.40.0"],\
-            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.26.2"],\
+            ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.0"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.0.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
