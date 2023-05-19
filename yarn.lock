@@ -151,12 +151,12 @@ __metadata:
   linkType: hard
 
 "@astrojs/partytown@npm:^1.0.3":
-  version: 1.2.1
-  resolution: "@astrojs/partytown@npm:1.2.1"
+  version: 1.2.2
+  resolution: "@astrojs/partytown@npm:1.2.2"
   dependencies:
     "@builder.io/partytown": ^0.7.4
     mrmime: ^1.0.0
-  checksum: c9f2c0939ad7d897c9ffaabd35c44bc64f07d18d566b417c6ba7c8f9cc13928e612638a36ac4c410cc858a71367da905d14e20083b934bf3bca0086fa2d68b2f
+  checksum: 44fff9acbd6ea25bc16bdf73d53dc2f70703be73581af98c42fca7759120c0ed626d7bf97129b0f7013d850a654a175dd192281b82f41ba30ebf456be4735ba4
   languageName: node
   linkType: hard
 
