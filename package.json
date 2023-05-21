@@ -22,7 +22,7 @@
     "@astrojs/tailwind": "^3.0.1",
     "@astrolib/analytics": "^0.3.0",
     "@astrolib/seo": "^0.3.0",
-    "@fontsource/inter": "^4.5.15",
+    "@fontsource/inter": "^5.0.0",
     "@tailwindcss/typography": "^0.5.9",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
