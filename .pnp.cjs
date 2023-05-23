@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.8"],\
-            ["@astrojs/mdx", "npm:0.19.1"],\
+            ["@astrojs/mdx", "npm:0.19.3"],\
             ["@astrojs/partytown", "npm:1.2.2"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.1"],\
@@ -176,13 +176,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/markdown-remark", [\
-        ["npm:2.2.0", {\
-          "packageLocation": "./.yarn/cache/@astrojs-markdown-remark-npm-2.2.0-871c85cd3c-14d9ed6695.zip/node_modules/@astrojs/markdown-remark/",\
-          "packageDependencies": [\
-            ["@astrojs/markdown-remark", "npm:2.2.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
         ["npm:2.2.1", {\
           "packageLocation": "./.yarn/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
           "packageDependencies": [\
@@ -190,11 +183,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-b5df0691eb/0/cache/@astrojs-markdown-remark-npm-2.2.0-871c85cd3c-14d9ed6695.zip/node_modules/@astrojs/markdown-remark/",\
+        ["virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-1f87f568a3/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
           "packageDependencies": [\
-            ["@astrojs/markdown-remark", "virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.2.0"],\
-            ["@astrojs/prism", "npm:2.1.1"],\
+            ["@astrojs/markdown-remark", "virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.2.1"],\
+            ["@astrojs/prism", "npm:2.1.2"],\
             ["@types/astro", null],\
             ["astro", null],\
             ["github-slugger", "npm:1.5.0"],\
@@ -244,14 +237,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/mdx", [\
-        ["npm:0.19.1", {\
-          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.1-9d77bcbfc2-91660b9d97.zip/node_modules/@astrojs/mdx/",\
+        ["npm:0.19.3", {\
+          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.3-28282e6baf-0c4e10237c.zip/node_modules/@astrojs/mdx/",\
           "packageDependencies": [\
-            ["@astrojs/mdx", "npm:0.19.1"],\
-            ["@astrojs/markdown-remark", "virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.2.0"],\
-            ["@astrojs/prism", "npm:2.1.1"],\
+            ["@astrojs/mdx", "npm:0.19.3"],\
+            ["@astrojs/markdown-remark", "virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.2.1"],\
+            ["@astrojs/prism", "npm:2.1.2"],\
             ["@mdx-js/mdx", "npm:2.3.0"],\
-            ["@mdx-js/rollup", "virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.3.0"],\
+            ["@mdx-js/rollup", "virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.3.0"],\
             ["acorn", "npm:8.8.2"],\
             ["es-module-lexer", "npm:1.2.0"],\
             ["estree-util-visit", "npm:1.2.1"],\
@@ -282,14 +275,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/prism", [\
-        ["npm:2.1.1", {\
-          "packageLocation": "./.yarn/cache/@astrojs-prism-npm-2.1.1-b322f64979-396314ba0b.zip/node_modules/@astrojs/prism/",\
-          "packageDependencies": [\
-            ["@astrojs/prism", "npm:2.1.1"],\
-            ["prismjs", "npm:1.29.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.1.2", {\
           "packageLocation": "./.yarn/cache/@astrojs-prism-npm-2.1.2-0a5b38e64f-79799428a2.zip/node_modules/@astrojs/prism/",\
           "packageDependencies": [\
@@ -1638,12 +1623,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.3.0", {\
-          "packageLocation": "./.yarn/__virtual__/@mdx-js-rollup-virtual-a19e9f9b30/0/cache/@mdx-js-rollup-npm-2.3.0-290dcfe230-a15f8d8357.zip/node_modules/@mdx-js/rollup/",\
+        ["virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.3.0", {\
+          "packageLocation": "./.yarn/__virtual__/@mdx-js-rollup-virtual-705579554d/0/cache/@mdx-js-rollup-npm-2.3.0-290dcfe230-a15f8d8357.zip/node_modules/@mdx-js/rollup/",\
           "packageDependencies": [\
-            ["@mdx-js/rollup", "virtual:9d77bcbfc299fcefca47c4e82e2831608ec22df73cc3cd4c28e22d0e1ee59eb4c335e56e1bbd30352fc6eaf14299f9413cfa3a2470958ec6248704a207cd31a5#npm:2.3.0"],\
+            ["@mdx-js/rollup", "virtual:28282e6baf5bc39c7c406dcdcfbc792ddb237c6ddf09bee6e12baf0978c8c91f1423862eebbb4b04b28333dc00f72e7d5223ce4841080cccb1743b9c18f106d8#npm:2.3.0"],\
             ["@mdx-js/mdx", "npm:2.3.0"],\
-            ["@rollup/pluginutils", "virtual:a19e9f9b308353db8c9e2327c45c2a74cd1e772cc8abafd9250c31f29a901dcc061669ed162324e75f0c8ff9de123915ad3e9e3f2a42b5411997780a9f1af529#npm:5.0.2"],\
+            ["@rollup/pluginutils", "virtual:705579554d3985779f9fb63297c6a1df17c6f487ee64fb669f1eeffcc2032c9b4b47b30a0355823bb40434aaf6df97f4e44fc2f22f9bd05f375da056405b5862#npm:5.0.2"],\
             ["@types/rollup", null],\
             ["rollup", null],\
             ["source-map", "npm:0.7.4"],\
@@ -1922,10 +1907,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a19e9f9b308353db8c9e2327c45c2a74cd1e772cc8abafd9250c31f29a901dcc061669ed162324e75f0c8ff9de123915ad3e9e3f2a42b5411997780a9f1af529#npm:5.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-b66758bd66/0/cache/@rollup-pluginutils-npm-5.0.2-6aa9d0ddd4-edea15e543.zip/node_modules/@rollup/pluginutils/",\
+        ["virtual:705579554d3985779f9fb63297c6a1df17c6f487ee64fb669f1eeffcc2032c9b4b47b30a0355823bb40434aaf6df97f4e44fc2f22f9bd05f375da056405b5862#npm:5.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-683f8388f7/0/cache/@rollup-pluginutils-npm-5.0.2-6aa9d0ddd4-edea15e543.zip/node_modules/@rollup/pluginutils/",\
           "packageDependencies": [\
-            ["@rollup/pluginutils", "virtual:a19e9f9b308353db8c9e2327c45c2a74cd1e772cc8abafd9250c31f29a901dcc061669ed162324e75f0c8ff9de123915ad3e9e3f2a42b5411997780a9f1af529#npm:5.0.2"],\
+            ["@rollup/pluginutils", "virtual:705579554d3985779f9fb63297c6a1df17c6f487ee64fb669f1eeffcc2032c9b4b47b30a0355823bb40434aaf6df97f4e44fc2f22f9bd05f375da056405b5862#npm:5.0.2"],\
             ["@types/estree", "npm:1.0.0"],\
             ["@types/rollup", null],\
             ["estree-walker", "npm:2.0.2"],\
@@ -13033,7 +13018,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["website", "workspace:."],\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.8"],\
-            ["@astrojs/mdx", "npm:0.19.1"],\
+            ["@astrojs/mdx", "npm:0.19.3"],\
             ["@astrojs/partytown", "npm:1.2.2"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.1"],\
