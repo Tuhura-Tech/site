@@ -30,7 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.9"],\
             ["@astrojs/mdx", "npm:0.19.4"],\
-            ["@astrojs/partytown", "npm:1.2.2"],\
+            ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.1"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3"],\
@@ -264,10 +264,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/partytown", [\
-        ["npm:1.2.2", {\
-          "packageLocation": "./.yarn/cache/@astrojs-partytown-npm-1.2.2-a7618d2dfa-44fff9acbd.zip/node_modules/@astrojs/partytown/",\
+        ["npm:1.2.3", {\
+          "packageLocation": "./.yarn/cache/@astrojs-partytown-npm-1.2.3-6c7453cb2f-e17c279043.zip/node_modules/@astrojs/partytown/",\
           "packageDependencies": [\
-            ["@astrojs/partytown", "npm:1.2.2"],\
+            ["@astrojs/partytown", "npm:1.2.3"],\
             ["@builder.io/partytown", "npm:0.7.6"],\
             ["mrmime", "npm:1.0.1"]\
           ],\
@@ -12819,7 +12819,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["website", "workspace:."],\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.9"],\
             ["@astrojs/mdx", "npm:0.19.4"],\
-            ["@astrojs/partytown", "npm:1.2.2"],\
+            ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.1"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3"],\
