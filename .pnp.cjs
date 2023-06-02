@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.41.0"],\
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.1"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
-            ["limax", "npm:4.0.0"],\
+            ["limax", "npm:4.1.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.8"],\
             ["prettier-plugin-astro", "npm:0.9.1"],\
@@ -1529,155 +1529,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/rollup",\
             "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-npm-1.7.1-0919fce514/node_modules/@napi-rs/pinyin/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-android-arm-eabi", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-android-arm64", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-darwin-arm64", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-darwin-x64", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-freebsd-x64", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-linux-arm-gnueabihf", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-linux-arm64-gnu", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-linux-arm64-musl", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-linux-x64-gnu", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-linux-x64-musl", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-win32-arm64-msvc", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-win32-ia32-msvc", "npm:1.7.1"],\
-            ["@napi-rs/pinyin-win32-x64-msvc", "npm:1.7.1"],\
-            ["@napi-rs/triples", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-android-arm-eabi", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-android-arm-eabi-npm-1.7.1-d375f2b5d7/node_modules/@napi-rs/pinyin-android-arm-eabi/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-android-arm-eabi", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-android-arm64", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-android-arm64-npm-1.7.1-75e14bd6c7/node_modules/@napi-rs/pinyin-android-arm64/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-android-arm64", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-darwin-arm64", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-darwin-arm64-npm-1.7.1-5935253e08/node_modules/@napi-rs/pinyin-darwin-arm64/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-darwin-arm64", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-darwin-x64", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-darwin-x64-npm-1.7.1-9ae5c66ee0/node_modules/@napi-rs/pinyin-darwin-x64/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-darwin-x64", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-freebsd-x64", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-freebsd-x64-npm-1.7.1-b503229cbd/node_modules/@napi-rs/pinyin-freebsd-x64/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-freebsd-x64", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-linux-arm-gnueabihf", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-linux-arm-gnueabihf-npm-1.7.1-9a8d4248bb/node_modules/@napi-rs/pinyin-linux-arm-gnueabihf/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-linux-arm-gnueabihf", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-linux-arm64-gnu", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-linux-arm64-gnu-npm-1.7.1-9ed8f6c9ea/node_modules/@napi-rs/pinyin-linux-arm64-gnu/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-linux-arm64-gnu", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-linux-arm64-musl", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-linux-arm64-musl-npm-1.7.1-89860793ac/node_modules/@napi-rs/pinyin-linux-arm64-musl/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-linux-arm64-musl", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-linux-x64-gnu", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-linux-x64-gnu-npm-1.7.1-a69c800f24/node_modules/@napi-rs/pinyin-linux-x64-gnu/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-linux-x64-gnu", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-linux-x64-musl", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-linux-x64-musl-npm-1.7.1-d52b440b88/node_modules/@napi-rs/pinyin-linux-x64-musl/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-linux-x64-musl", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-win32-arm64-msvc", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-win32-arm64-msvc-npm-1.7.1-6ba8874529/node_modules/@napi-rs/pinyin-win32-arm64-msvc/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-win32-arm64-msvc", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-win32-ia32-msvc", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-win32-ia32-msvc-npm-1.7.1-c29a3c402b/node_modules/@napi-rs/pinyin-win32-ia32-msvc/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-win32-ia32-msvc", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/pinyin-win32-x64-msvc", [\
-        ["npm:1.7.1", {\
-          "packageLocation": "./.yarn/unplugged/@napi-rs-pinyin-win32-x64-msvc-npm-1.7.1-7b1f7be2e4/node_modules/@napi-rs/pinyin-win32-x64-msvc/",\
-          "packageDependencies": [\
-            ["@napi-rs/pinyin-win32-x64-msvc", "npm:1.7.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@napi-rs/triples", [\
-        ["npm:1.1.0", {\
-          "packageLocation": "./.yarn/cache/@napi-rs-triples-npm-1.1.0-b4fbbdd497-8da77d47ec.zip/node_modules/@napi-rs/triples/",\
-          "packageDependencies": [\
-            ["@napi-rs/triples", "npm:1.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7280,13 +7131,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["limax", [\
-        ["npm:4.0.0", {\
-          "packageLocation": "./.yarn/cache/limax-npm-4.0.0-5a4c87b274-ad97fbeddd.zip/node_modules/limax/",\
+        ["npm:4.1.0", {\
+          "packageLocation": "./.yarn/cache/limax-npm-4.1.0-2b03ab283d-03ff0bcb4c.zip/node_modules/limax/",\
           "packageDependencies": [\
-            ["limax", "npm:4.0.0"],\
-            ["@napi-rs/pinyin", "npm:1.7.1"],\
+            ["limax", "npm:4.1.0"],\
             ["hepburn", "npm:1.2.0"],\
             ["lodash.deburr", "npm:4.1.0"],\
+            ["pinyin-pro", "npm:3.14.0"],\
             ["speakingurl", "npm:14.0.1"]\
           ],\
           "linkType": "HARD"\
@@ -9399,6 +9250,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pify-npm-4.0.1-062756097b-9c4e34278c.zip/node_modules/pify/",\
           "packageDependencies": [\
             ["pify", "npm:4.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["pinyin-pro", [\
+        ["npm:3.14.0", {\
+          "packageLocation": "./.yarn/cache/pinyin-pro-npm-3.14.0-80de36c7ab-fdb159d0e3.zip/node_modules/pinyin-pro/",\
+          "packageDependencies": [\
+            ["pinyin-pro", "npm:3.14.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12906,7 +12766,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.41.0"],\
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.1"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
-            ["limax", "npm:4.0.0"],\
+            ["limax", "npm:4.1.0"],\
             ["mdast-util-to-string", "npm:3.2.0"],\
             ["prettier", "npm:2.8.8"],\
             ["prettier-plugin-astro", "npm:0.9.1"],\
