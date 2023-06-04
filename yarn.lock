@@ -1140,6 +1140,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jridgewell/source-map@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@jridgewell/source-map@npm:0.3.3"
+  dependencies:
+    "@jridgewell/gen-mapping": ^0.3.0
+    "@jridgewell/trace-mapping": ^0.3.9
+  checksum: ae1302146339667da5cd6541260ecbef46ae06819a60f88da8f58b3e64682f787c09359933d050dea5d2173ea7fa40f40dd4d4e7a8d325c5892cccd99aaf8959
+  languageName: node
+  linkType: hard
+
 "@jridgewell/sourcemap-codec@npm:1.4.14, @jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.13, @jridgewell/sourcemap-codec@npm:^1.4.14":
   version: 1.4.14
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.14"
@@ -2052,19 +2062,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.46":
-  version: 1.1.46
-  resolution: "astro-compress@npm:1.1.46"
+"astro-compress@npm:1.1.47":
+  version: 1.1.47
+  resolution: "astro-compress@npm:1.1.47"
   dependencies:
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
     csso: 5.0.5
-    files-pipe: 0.0.6
+    files-pipe: 0.0.7
     html-minifier-terser: 7.2.0
     sharp: 0.32.1
     svgo: 3.0.2
-    terser: 5.17.6
-  checksum: b82745fb1a39bc6c17110065ed71430d87d8feed0853fce331bd5c7e18a1afec07c26502bf34f7a1363a9aae558a6d017d44e1dc1e246527c9ee54ef45a4d022
+    terser: 5.17.7
+  checksum: 61720e0cf1e5bf6a9b34839ce5c4d80f029eef19704a45b1189338a8839f7c29daee7d43ad60ad7dd586ec78bbab0acbb821866458699c940e335274071ac989
   languageName: node
   linkType: hard
 
@@ -4444,13 +4454,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"files-pipe@npm:0.0.6":
-  version: 0.0.6
-  resolution: "files-pipe@npm:0.0.6"
+"files-pipe@npm:0.0.7":
+  version: 0.0.7
+  resolution: "files-pipe@npm:0.0.7"
   dependencies:
     deepmerge-ts: 5.1.0
     fast-glob: 3.2.12
-  checksum: e42acf98fde51e042133de07baad6ef30c570ebff1e5c25ae19883624f43ccf30863d7b107ffdd4c44a71f07f7c0cc533248e540011524b75619b617442bf154
+  checksum: be12f3f39402b567ce2e016f00e51a6c786adf0d28011cca1300a78d30825ee4bcef4409bf4413a35ae360f5364fead5b4c29e3a7bd42dc1313791dbe319a811
   languageName: node
   linkType: hard
 
@@ -9995,17 +10005,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.17.6":
-  version: 5.17.6
-  resolution: "terser@npm:5.17.6"
+"terser@npm:5.17.7":
+  version: 5.17.7
+  resolution: "terser@npm:5.17.7"
   dependencies:
-    "@jridgewell/source-map": ^0.3.2
-    acorn: ^8.5.0
+    "@jridgewell/source-map": ^0.3.3
+    acorn: ^8.8.2
     commander: ^2.20.0
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 9c0ab0261a99a61c5f53d05d4ecc7f68c552bae6af481464fdd596bc9d7e89ce8e21b1833cb3ce06ad5f658e2b226081d543e4fe6e324b2cdf03ee8b7eeec01a
+  checksum: b7b17b281febadf3bea9b9412d699fa24edf9b3e20fc7ad4e1a9cec276bdb65ddaa291c9663d5ab66b58834e433377477f73328574ccab2da1637a15b095811d
   languageName: node
   linkType: hard
 
@@ -10840,7 +10850,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
-    astro-compress: 1.1.46
+    astro-compress: 1.1.47
     astro-eslint-parser: ^0.14.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
