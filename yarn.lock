@@ -57,6 +57,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/compiler@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@astrojs/compiler@npm:1.5.0"
+  checksum: 317bd349481fa94fb6cbccc3103b993c1b60ee92150171cab281755fd9736202df655c56655e653f1482d038bfb964b2fe82ea238bbfe67c302a308fbc1d6349
+  languageName: node
+  linkType: hard
+
 "@astrojs/image@npm:^0.16.0":
   version: 0.16.9
   resolution: "@astrojs/image@npm:0.16.9"
@@ -8480,6 +8487,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier-plugin-astro@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "prettier-plugin-astro@npm:0.10.0"
+  dependencies:
+    "@astrojs/compiler": ^1.5.0
+    prettier: ^2.8.8
+    sass-formatter: ^0.7.6
+  checksum: 4cb68c274dde64e42c1e2eb080ecd70c79fbcdef6ab4ba40f5d9e246ac794842d36534b82c5231d59d0536e70de1502c9f4fe9a603897a38606339868749d5e3
+  languageName: node
+  linkType: hard
+
 "prettier-plugin-astro@npm:^0.8.0":
   version: 0.8.1
   resolution: "prettier-plugin-astro@npm:0.8.1"
@@ -8489,18 +8507,6 @@ __metadata:
     sass-formatter: ^0.7.5
     synckit: ^0.8.4
   checksum: 9aee16a3d60172ef2d654a12b064f747b8b4d73eb3eb6fd3c532a238f2c98f515258d3151c1754554f704b95bf299f52f725dde7d64fc65f17838371ae115027
-  languageName: node
-  linkType: hard
-
-"prettier-plugin-astro@npm:^0.9.0":
-  version: 0.9.1
-  resolution: "prettier-plugin-astro@npm:0.9.1"
-  dependencies:
-    "@astrojs/compiler": ^1.0.1
-    prettier: ^2.8.3
-    sass-formatter: ^0.7.5
-    synckit: ^0.8.4
-  checksum: f5ec1022187a59be11425b34c40ac5f03039ef236e55c87bd038f17eae5164ed401e3a784d6a41029b9b69d4427625414db5abf1e9d49721e4a90c9ceaf38b43
   languageName: node
   linkType: hard
 
@@ -9153,7 +9159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-formatter@npm:^0.7.5":
+"sass-formatter@npm:^0.7.5, sass-formatter@npm:^0.7.6":
   version: 0.7.6
   resolution: "sass-formatter@npm:0.7.6"
   dependencies:
@@ -10843,7 +10849,7 @@ __metadata:
     limax: ^4.0.0
     mdast-util-to-string: ^3.1.1
     prettier: ^2.8.3
-    prettier-plugin-astro: ^0.9.0
+    prettier-plugin-astro: ^0.10.0
     reading-time: ^1.5.0
     sharp: ^0.32.0
     subfont: ^7.0.0
