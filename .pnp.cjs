@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.9"],\
-            ["@astrojs/mdx", "npm:0.19.4"],\
+            ["@astrojs/mdx", "npm:0.19.6"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
@@ -183,32 +183,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-80a2346cfd/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
-          "packageDependencies": [\
-            ["@astrojs/markdown-remark", "virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.2.1"],\
-            ["@astrojs/prism", "npm:2.1.2"],\
-            ["@types/astro", null],\
-            ["astro", null],\
-            ["github-slugger", "npm:1.5.0"],\
-            ["import-meta-resolve", "npm:2.2.2"],\
-            ["rehype-raw", "npm:6.1.1"],\
-            ["rehype-stringify", "npm:9.0.3"],\
-            ["remark-gfm", "npm:3.0.1"],\
-            ["remark-parse", "npm:10.0.1"],\
-            ["remark-rehype", "npm:10.1.0"],\
-            ["remark-smartypants", "npm:2.0.0"],\
-            ["shiki", "npm:0.14.2"],\
-            ["unified", "npm:10.1.2"],\
-            ["unist-util-visit", "npm:4.1.2"],\
-            ["vfile", "npm:5.3.7"]\
-          ],\
-          "packagePeers": [\
-            "@types/astro",\
-            "astro"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:b045e5b6956a4d11636bea80abda2c8da758b28532a649c84474b5629fa2692ebbcc7016a1ea37cf36b34335888a27288cf34ecb4457a48335e7aa7dcf213cbc#npm:2.2.1", {\
           "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-c8c48ad449/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
           "packageDependencies": [\
@@ -234,22 +208,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "astro"\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-69de27cbdf/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
+          "packageDependencies": [\
+            ["@astrojs/markdown-remark", "virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1"],\
+            ["@astrojs/prism", "npm:2.1.2"],\
+            ["@types/astro", null],\
+            ["astro", null],\
+            ["github-slugger", "npm:1.5.0"],\
+            ["import-meta-resolve", "npm:2.2.2"],\
+            ["rehype-raw", "npm:6.1.1"],\
+            ["rehype-stringify", "npm:9.0.3"],\
+            ["remark-gfm", "npm:3.0.1"],\
+            ["remark-parse", "npm:10.0.1"],\
+            ["remark-rehype", "npm:10.1.0"],\
+            ["remark-smartypants", "npm:2.0.0"],\
+            ["shiki", "npm:0.14.2"],\
+            ["unified", "npm:10.1.2"],\
+            ["unist-util-visit", "npm:4.1.2"],\
+            ["vfile", "npm:5.3.7"]\
+          ],\
+          "packagePeers": [\
+            "@types/astro",\
+            "astro"\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@astrojs/mdx", [\
-        ["npm:0.19.4", {\
-          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.4-284c2a2d21-bce353e050.zip/node_modules/@astrojs/mdx/",\
+        ["npm:0.19.6", {\
+          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.6-dbb060d57f-bbf8cfd767.zip/node_modules/@astrojs/mdx/",\
           "packageDependencies": [\
-            ["@astrojs/mdx", "npm:0.19.4"],\
-            ["@astrojs/markdown-remark", "virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.2.1"],\
+            ["@astrojs/mdx", "npm:0.19.6"],\
+            ["@astrojs/markdown-remark", "virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1"],\
             ["@astrojs/prism", "npm:2.1.2"],\
             ["@mdx-js/mdx", "npm:2.3.0"],\
-            ["@mdx-js/rollup", "virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.3.0"],\
             ["acorn", "npm:8.8.2"],\
             ["es-module-lexer", "npm:1.2.0"],\
             ["estree-util-visit", "npm:1.2.1"],\
             ["github-slugger", "npm:1.5.0"],\
             ["gray-matter", "npm:4.0.3"],\
+            ["hast-util-to-html", "npm:8.0.4"],\
             ["kleur", "npm:4.1.5"],\
             ["rehype-raw", "npm:6.1.1"],\
             ["remark-frontmatter", "npm:4.0.1"],\
@@ -1507,32 +1507,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@mdx-js/rollup", [\
-        ["npm:2.3.0", {\
-          "packageLocation": "./.yarn/cache/@mdx-js-rollup-npm-2.3.0-290dcfe230-a15f8d8357.zip/node_modules/@mdx-js/rollup/",\
-          "packageDependencies": [\
-            ["@mdx-js/rollup", "npm:2.3.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.3.0", {\
-          "packageLocation": "./.yarn/__virtual__/@mdx-js-rollup-virtual-331fd917c0/0/cache/@mdx-js-rollup-npm-2.3.0-290dcfe230-a15f8d8357.zip/node_modules/@mdx-js/rollup/",\
-          "packageDependencies": [\
-            ["@mdx-js/rollup", "virtual:284c2a2d2152ac6f6af330c66cdc79481f44519707554cacde068b029eb4aa513d7aad8be5dc0b488aaca96934e41a45595410f7d55f3a7b25044049be7f69d4#npm:2.3.0"],\
-            ["@mdx-js/mdx", "npm:2.3.0"],\
-            ["@rollup/pluginutils", "virtual:331fd917c0386b85ca9ed01d1092bb0e7c4cc435a9894b64a7bc7acf2bffdb802b14aa22c6e5a0a1a5a77e427b6f6f845a93f2e333cf9d9f122816ec7f4ff573#npm:5.0.2"],\
-            ["@types/rollup", null],\
-            ["rollup", null],\
-            ["source-map", "npm:0.7.4"],\
-            ["vfile", "npm:5.3.7"]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@nodelib/fs.scandir", [\
         ["npm:2.1.5", {\
           "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-a970d595bd.zip/node_modules/@nodelib/fs.scandir/",\
@@ -1638,31 +1612,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/typescript",\
             "typescript"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@rollup/pluginutils", [\
-        ["npm:5.0.2", {\
-          "packageLocation": "./.yarn/cache/@rollup-pluginutils-npm-5.0.2-6aa9d0ddd4-edea15e543.zip/node_modules/@rollup/pluginutils/",\
-          "packageDependencies": [\
-            ["@rollup/pluginutils", "npm:5.0.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:331fd917c0386b85ca9ed01d1092bb0e7c4cc435a9894b64a7bc7acf2bffdb802b14aa22c6e5a0a1a5a77e427b6f6f845a93f2e333cf9d9f122816ec7f4ff573#npm:5.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-2ee632d960/0/cache/@rollup-pluginutils-npm-5.0.2-6aa9d0ddd4-edea15e543.zip/node_modules/@rollup/pluginutils/",\
-          "packageDependencies": [\
-            ["@rollup/pluginutils", "virtual:331fd917c0386b85ca9ed01d1092bb0e7c4cc435a9894b64a7bc7acf2bffdb802b14aa22c6e5a0a1a5a77e427b6f6f845a93f2e333cf9d9f122816ec7f4ff573#npm:5.0.2"],\
-            ["@types/estree", "npm:1.0.0"],\
-            ["@types/rollup", null],\
-            ["estree-walker", "npm:2.0.2"],\
-            ["picomatch", "npm:2.3.1"],\
-            ["rollup", null]\
-          ],\
-          "packagePeers": [\
-            "@types/rollup",\
-            "rollup"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5081,13 +5030,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["estree-walker", [\
-        ["npm:2.0.2", {\
-          "packageLocation": "./.yarn/cache/estree-walker-npm-2.0.2-dfab42f65c-6151e6f982.zip/node_modules/estree-walker/",\
-          "packageDependencies": [\
-            ["estree-walker", "npm:2.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.0.0", {\
           "packageLocation": "./.yarn/cache/estree-walker-npm-3.0.0-eb28c1befc-3b6b5fd5e3.zip/node_modules/estree-walker/",\
           "packageDependencies": [\
@@ -12748,7 +12690,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["website", "workspace:."],\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.16.9"],\
-            ["@astrojs/mdx", "npm:0.19.4"],\
+            ["@astrojs/mdx", "npm:0.19.6"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
