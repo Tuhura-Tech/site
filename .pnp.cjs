@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.0"],\
-            ["@astrojs/mdx", "npm:0.19.6"],\
+            ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
@@ -199,10 +199,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-69de27cbdf/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
+        ["virtual:31cbf975e8fcc0382f3cc05ddd9e6b825dedaa801c0602a51a44fe438f65b6150c4894e892e0efd34ba95f3ca0f04dd4f64442d2455793ae0f8e5b016c8c49a3#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-markdown-remark-virtual-3be176cb6d/0/cache/@astrojs-markdown-remark-npm-2.2.1-175a5c5b0c-4ccbd4f3cb.zip/node_modules/@astrojs/markdown-remark/",\
           "packageDependencies": [\
-            ["@astrojs/markdown-remark", "virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1"],\
+            ["@astrojs/markdown-remark", "virtual:31cbf975e8fcc0382f3cc05ddd9e6b825dedaa801c0602a51a44fe438f65b6150c4894e892e0efd34ba95f3ca0f04dd4f64442d2455793ae0f8e5b016c8c49a3#npm:2.2.1"],\
             ["@astrojs/prism", "npm:2.1.2"],\
             ["@types/astro", null],\
             ["astro", null],\
@@ -253,11 +253,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/mdx", [\
-        ["npm:0.19.6", {\
-          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.6-dbb060d57f-bbf8cfd767.zip/node_modules/@astrojs/mdx/",\
+        ["npm:0.19.7", {\
+          "packageLocation": "./.yarn/cache/@astrojs-mdx-npm-0.19.7-31cbf975e8-366a865ba0.zip/node_modules/@astrojs/mdx/",\
           "packageDependencies": [\
-            ["@astrojs/mdx", "npm:0.19.6"],\
-            ["@astrojs/markdown-remark", "virtual:dbb060d57f60b387ae03b4e7977227d7e83eea345f2c16be2197ba62ceb01a339aba4ce1f40fc340136a32802d20f3dce01edd5d161052775e06c98049f5d49b#npm:2.2.1"],\
+            ["@astrojs/mdx", "npm:0.19.7"],\
+            ["@astrojs/markdown-remark", "virtual:31cbf975e8fcc0382f3cc05ddd9e6b825dedaa801c0602a51a44fe438f65b6150c4894e892e0efd34ba95f3ca0f04dd4f64442d2455793ae0f8e5b016c8c49a3#npm:2.2.1"],\
             ["@astrojs/prism", "npm:2.1.2"],\
             ["@mdx-js/mdx", "npm:2.3.0"],\
             ["acorn", "npm:8.8.2"],\
@@ -12715,7 +12715,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["website", "workspace:."],\
             ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.0"],\
-            ["@astrojs/mdx", "npm:0.19.6"],\
+            ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
