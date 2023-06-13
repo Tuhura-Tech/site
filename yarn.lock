@@ -1007,10 +1007,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/inter@npm:^4.5.15":
-  version: 4.5.15
-  resolution: "@fontsource/inter@npm:4.5.15"
-  checksum: d4330957c0a23a6c6a47f6f628b89c5603deec6305f28458fd3277bb652913dc77b31ac454bba96beeaecddef87eaf4b60befa2aad040ebb8c22c39ee33a2cf1
+"@fontsource/inter@npm:^5.0.0":
+  version: 5.0.3
+  resolution: "@fontsource/inter@npm:5.0.3"
+  checksum: 297d10d77636f25185631829b453227ee8f8c08a5e3cb2a585be562f2fb693a16adcb4cef5a6c561d1a34d5be04eb2c45a11e82c900935344a2412533f1829a8
   languageName: node
   linkType: hard
 
@@ -10853,7 +10853,7 @@ __metadata:
     "@astrojs/tailwind": ^3.0.1
     "@astrolib/analytics": ^0.3.0
     "@astrolib/seo": ^0.3.0
-    "@fontsource/inter": ^4.5.15
+    "@fontsource/inter": ^5.0.0
     "@tailwindcss/typography": ^0.5.9
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
