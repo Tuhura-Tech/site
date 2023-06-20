@@ -19,7 +19,7 @@
     "@astrojs/partytown": "^1.0.3",
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/tailwind": "^3.0.1",
+    "@astrojs/tailwind": "^4.0.0",
     "@astrolib/analytics": "^0.3.0",
     "@astrolib/seo": "^0.3.0",
     "@fontsource/inter": "^4.5.15",

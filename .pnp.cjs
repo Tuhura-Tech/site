@@ -33,7 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@fontsource/inter", "npm:4.5.15"],\
@@ -323,24 +323,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/tailwind", [\
-        ["npm:3.1.3", {\
-          "packageLocation": "./.yarn/cache/@astrojs-tailwind-npm-3.1.3-b17f8a6181-5f9d00a383.zip/node_modules/@astrojs/tailwind/",\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/@astrojs-tailwind-npm-4.0.0-b5f1c73dc0-0619428920.zip/node_modules/@astrojs/tailwind/",\
           "packageDependencies": [\
-            ["@astrojs/tailwind", "npm:3.1.3"]\
+            ["@astrojs/tailwind", "npm:4.0.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-tailwind-virtual-ec6334623f/0/cache/@astrojs-tailwind-npm-3.1.3-b17f8a6181-5f9d00a383.zip/node_modules/@astrojs/tailwind/",\
+        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-tailwind-virtual-6587be98cf/0/cache/@astrojs-tailwind-npm-4.0.0-b5f1c73dc0-0619428920.zip/node_modules/@astrojs/tailwind/",\
           "packageDependencies": [\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3"],\
-            ["@proload/core", "npm:0.3.3"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0"],\
             ["@types/astro", null],\
             ["@types/tailwindcss", null],\
             ["astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.6.5"],\
-            ["autoprefixer", "virtual:ec6334623f68f782ebfc76aabdddf29d10caf4c7b03be87eb3ac07a92656bbb3cc78ce6e22e46baac954164b1cb9880793a4cfb285fbece0f377d0a2cfb7e341#npm:10.4.14"],\
-            ["postcss", "npm:8.4.23"],\
-            ["postcss-load-config", "virtual:9311a8c9fc2fa723a363b04526c261872a9280ff9a5542cdc84255404f48ad5c7925fba5ed45881f7890d0d836206f3c952ef9a86f561b44b7d6e17f15c70e68#npm:4.0.1"],\
+            ["autoprefixer", "virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:10.4.14"],\
+            ["postcss", "npm:8.4.24"],\
+            ["postcss-load-config", "virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:4.0.1"],\
             ["tailwindcss", "npm:3.3.2"]\
           ],\
           "packagePeers": [\
@@ -1600,17 +1599,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@proload/core", [\
-        ["npm:0.3.3", {\
-          "packageLocation": "./.yarn/cache/@proload-core-npm-0.3.3-86989b8a45-bf1483f219.zip/node_modules/@proload/core/",\
-          "packageDependencies": [\
-            ["@proload/core", "npm:0.3.3"],\
-            ["deepmerge", "npm:4.3.1"],\
-            ["escalade", "npm:3.1.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@puppeteer/browsers", [\
         ["npm:0.4.0", {\
           "packageLocation": "./.yarn/cache/@puppeteer-browsers-npm-0.4.0-98110289b7-d21fce3daa.zip/node_modules/@puppeteer/browsers/",\
@@ -2758,17 +2746,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ec6334623f68f782ebfc76aabdddf29d10caf4c7b03be87eb3ac07a92656bbb3cc78ce6e22e46baac954164b1cb9880793a4cfb285fbece0f377d0a2cfb7e341#npm:10.4.14", {\
-          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-041a2ce622/0/cache/autoprefixer-npm-10.4.14-1e0b8c34fb-e9f18e664a.zip/node_modules/autoprefixer/",\
+        ["virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:10.4.14", {\
+          "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-bac86bfd06/0/cache/autoprefixer-npm-10.4.14-1e0b8c34fb-e9f18e664a.zip/node_modules/autoprefixer/",\
           "packageDependencies": [\
-            ["autoprefixer", "virtual:ec6334623f68f782ebfc76aabdddf29d10caf4c7b03be87eb3ac07a92656bbb3cc78ce6e22e46baac954164b1cb9880793a4cfb285fbece0f377d0a2cfb7e341#npm:10.4.14"],\
+            ["autoprefixer", "virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:10.4.14"],\
             ["@types/postcss", null],\
             ["browserslist", "npm:4.21.5"],\
             ["caniuse-lite", "npm:1.0.30001467"],\
             ["fraction.js", "npm:4.2.0"],\
             ["normalize-range", "npm:0.1.2"],\
             ["picocolors", "npm:1.0.0"],\
-            ["postcss", "npm:8.4.23"],\
+            ["postcss", "npm:8.4.24"],\
             ["postcss-value-parser", "npm:4.2.0"]\
           ],\
           "packagePeers": [\
@@ -4097,15 +4085,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/deep-is-npm-0.1.4-88938b5a67-edb65dd0d7.zip/node_modules/deep-is/",\
           "packageDependencies": [\
             ["deep-is", "npm:0.1.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["deepmerge", [\
-        ["npm:4.3.1", {\
-          "packageLocation": "./.yarn/cache/deepmerge-npm-4.3.1-4f751a0844-2024c6a980.zip/node_modules/deepmerge/",\
-          "packageDependencies": [\
-            ["deepmerge", "npm:4.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9270,6 +9249,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["source-map-js", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:8.4.24", {\
+          "packageLocation": "./.yarn/cache/postcss-npm-8.4.24-07c10836e5-814e2126da.zip/node_modules/postcss/",\
+          "packageDependencies": [\
+            ["postcss", "npm:8.4.24"],\
+            ["nanoid", "npm:3.3.6"],\
+            ["picocolors", "npm:1.0.0"],\
+            ["source-map-js", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["postcss-calc", [\
@@ -9489,6 +9478,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-load-config", "npm:4.0.1"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:4.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/postcss-load-config-virtual-7c91b18403/0/cache/postcss-load-config-npm-4.0.1-351eb776f5-b61f890499.zip/node_modules/postcss-load-config/",\
+          "packageDependencies": [\
+            ["postcss-load-config", "virtual:6587be98cff1ba002cdd3255afb961be378b02c66f54030c24d679834ab83972ee489a810526ff0e438f8bbcff1e158fbb5e1f0e47c14a892038a04eed74e9d0#npm:4.0.1"],\
+            ["@types/postcss", null],\
+            ["@types/ts-node", null],\
+            ["lilconfig", "npm:2.1.0"],\
+            ["postcss", "npm:8.4.24"],\
+            ["ts-node", null],\
+            ["yaml", "npm:2.2.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/postcss",\
+            "@types/ts-node",\
+            "postcss",\
+            "ts-node"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:9311a8c9fc2fa723a363b04526c261872a9280ff9a5542cdc84255404f48ad5c7925fba5ed45881f7890d0d836206f3c952ef9a86f561b44b7d6e17f15c70e68#npm:4.0.1", {\
           "packageLocation": "./.yarn/__virtual__/postcss-load-config-virtual-1b36bed240/0/cache/postcss-load-config-npm-4.0.1-351eb776f5-b61f890499.zip/node_modules/postcss-load-config/",\
@@ -12719,7 +12727,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
             ["@astrojs/sitemap", "npm:1.3.3"],\
-            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:3.1.3"],\
+            ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@fontsource/inter", "npm:4.5.15"],\
