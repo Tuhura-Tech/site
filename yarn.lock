@@ -65,22 +65,22 @@ __metadata:
   linkType: hard
 
 "@astrojs/image@npm:^0.17.0":
-  version: 0.17.0
-  resolution: "@astrojs/image@npm:0.17.0"
+  version: 0.17.1
+  resolution: "@astrojs/image@npm:0.17.1"
   dependencies:
     "@altano/tiny-async-pool": ^1.0.2
-    http-cache-semantics: ^4.1.0
+    http-cache-semantics: ^4.1.1
     image-size: ^1.0.2
     kleur: ^4.1.5
     magic-string: ^0.27.0
     mime: ^3.0.0
   peerDependencies:
-    astro: ^2.6.0
+    astro: ^2.7.0
     sharp: ">=0.31.0"
   peerDependenciesMeta:
     sharp:
       optional: true
-  checksum: d0659119d8a8f0bb4e9250e14cc455f17a1cff8e85f10d21c8ea3268a62a692e1c07fae42b407ae26a9c95c1e065d9c0b769d6d3c4f7f858837194f8ba802f9e
+  checksum: 77f8bb68d1960fbfcf9c3bd4ccdb3134fc48154dcbff334d860b2351ff31d4f8565613112e47bf70d7b078ab193442b255eeade05475421f606c30aaa17bbb5d
   languageName: node
   linkType: hard
 
@@ -5249,7 +5249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-cache-semantics@npm:^4.1.0":
+"http-cache-semantics@npm:^4.1.0, http-cache-semantics@npm:^4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
   checksum: 83ac0bc60b17a3a36f9953e7be55e5c8f41acc61b22583060e8dedc9dd5e3607c823a88d0926f9150e571f90946835c7fe150732801010845c72cd8bbff1a236
