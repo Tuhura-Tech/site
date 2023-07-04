@@ -2037,9 +2037,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.48":
-  version: 1.1.48
-  resolution: "astro-compress@npm:1.1.48"
+"astro-compress@npm:1.1.49":
+  version: 1.1.49
+  resolution: "astro-compress@npm:1.1.49"
   dependencies:
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
@@ -2049,7 +2049,7 @@ __metadata:
     sharp: 0.32.1
     svgo: 3.0.2
     terser: 5.18.2
-  checksum: 9e0c70bba6ce2d7c45e96df15bdcaecd1673db0f17d2bd3edfdf936d9f9caf93c2c6917a2aa477e27205de8add60f810fcec06344b2f1ad3a9504f84123b6e2b
+  checksum: ca5dfe77f7c551e46c93c96f5dc062df27adb8c1a0e3e392b949d1d3ce9dd40d2d966b4a3c0a19c985ce4c6d89e8e7bb6002b3f8d5c205fc158c4c45a39540a7
   languageName: node
   linkType: hard
 
@@ -10816,7 +10816,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     astro: ^2.0.4
-    astro-compress: 1.1.48
+    astro-compress: 1.1.49
     astro-eslint-parser: ^0.14.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
