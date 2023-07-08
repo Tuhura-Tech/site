@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.2"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.1.0"],\
-            ["mdast-util-to-string", "npm:3.2.0"],\
+            ["mdast-util-to-string", "npm:4.0.0"],\
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.10.0"],\
             ["reading-time", "npm:1.5.0"],\
@@ -1797,6 +1797,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-mdast-npm-3.0.11-4765a259eb-3b04cf4655.zip/node_modules/@types/mdast/",\
           "packageDependencies": [\
             ["@types/mdast", "npm:3.0.11"],\
+            ["@types/unist", "npm:2.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-mdast-npm-4.0.0-71d66a9287-d3d81818fe.zip/node_modules/@types/mdast/",\
+          "packageDependencies": [\
+            ["@types/mdast", "npm:4.0.0"],\
             ["@types/unist", "npm:2.0.6"]\
           ],\
           "linkType": "HARD"\
@@ -7613,11 +7621,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:3.2.0", {\
-          "packageLocation": "./.yarn/cache/mdast-util-to-string-npm-3.2.0-4f9fa356be-dc40b544d5.zip/node_modules/mdast-util-to-string/",\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/mdast-util-to-string-npm-4.0.0-fc8d9714a5-35489fb571.zip/node_modules/mdast-util-to-string/",\
           "packageDependencies": [\
-            ["mdast-util-to-string", "npm:3.2.0"],\
-            ["@types/mdast", "npm:3.0.11"]\
+            ["mdast-util-to-string", "npm:4.0.0"],\
+            ["@types/mdast", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12720,7 +12728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-astro", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.27.2"],\
             ["eslint-plugin-jsx-a11y", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:6.7.1"],\
             ["limax", "npm:4.1.0"],\
-            ["mdast-util-to-string", "npm:3.2.0"],\
+            ["mdast-util-to-string", "npm:4.0.0"],\
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.10.0"],\
             ["reading-time", "npm:1.5.0"],\
