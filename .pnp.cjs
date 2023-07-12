@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.10.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.1"],\
+            ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
@@ -157,7 +157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["kleur", "npm:4.1.5"],\
             ["magic-string", "npm:0.27.0"],\
             ["mime", "npm:3.0.0"],\
-            ["sharp", "npm:0.32.1"]\
+            ["sharp", "npm:0.32.2"]\
           ],\
           "packagePeers": [\
             "@types/astro",\
@@ -2649,7 +2649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype", "npm:12.0.1"],\
             ["semver", "npm:7.5.3"],\
             ["server-destroy", "npm:1.0.1"],\
-            ["sharp", "npm:0.32.1"],\
+            ["sharp", "npm:0.32.2"],\
             ["shiki", "npm:0.14.2"],\
             ["string-width", "npm:5.1.2"],\
             ["strip-ansi", "npm:7.1.0"],\
@@ -2800,6 +2800,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["axobject-query", "npm:3.1.1"],\
             ["deep-equal", "npm:2.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["b4a", [\
+        ["npm:1.6.4", {\
+          "packageLocation": "./.yarn/cache/b4a-npm-1.6.4-080bcba845-81b086f9af.zip/node_modules/b4a/",\
+          "packageDependencies": [\
+            ["b4a", "npm:1.6.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5143,6 +5152,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip/node_modules/fast-deep-equal/",\
           "packageDependencies": [\
             ["fast-deep-equal", "npm:3.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fast-fifo", [\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/fast-fifo-npm-1.3.0-bd15200000-edc589b818.zip/node_modules/fast-fifo/",\
+          "packageDependencies": [\
+            ["fast-fifo", "npm:1.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10349,6 +10367,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["queue-tick", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/queue-tick-npm-1.0.1-10bd6eaf3d-57c3292814.zip/node_modules/queue-tick/",\
+          "packageDependencies": [\
+            ["queue-tick", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["rc", [\
         ["npm:1.2.8", {\
           "packageLocation": "./.yarn/cache/rc-npm-1.2.8-d6768ac936-2e26e052f8.zip/node_modules/rc/",\
@@ -10951,6 +10978,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.5.4", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.5.4-c4ad957fcd-12d8ad952f.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.5.4"],\
+            ["lru-cache", "npm:6.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["server-destroy", [\
@@ -10984,6 +11019,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.5.0"],\
             ["simple-get", "npm:4.0.1"],\
             ["tar-fs", "npm:2.1.1"],\
+            ["tunnel-agent", "npm:0.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.32.2", {\
+          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.2-94f458aa69/node_modules/sharp/",\
+          "packageDependencies": [\
+            ["sharp", "npm:0.32.2"],\
+            ["color", "npm:4.2.3"],\
+            ["detect-libc", "npm:2.0.1"],\
+            ["node-addon-api", "npm:6.1.0"],\
+            ["node-gyp", "npm:9.3.1"],\
+            ["prebuild-install", "npm:7.1.1"],\
+            ["semver", "npm:7.5.4"],\
+            ["simple-get", "npm:4.0.1"],\
+            ["tar-fs", "npm:3.0.4"],\
             ["tunnel-agent", "npm:0.6.0"]\
           ],\
           "linkType": "HARD"\
@@ -11312,6 +11363,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/streamsearch-npm-1.1.0-fc3ad6536d-1cce16cea8.zip/node_modules/streamsearch/",\
           "packageDependencies": [\
             ["streamsearch", "npm:1.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["streamx", [\
+        ["npm:2.15.0", {\
+          "packageLocation": "./.yarn/cache/streamx-npm-2.15.0-ea55d22e88-6f1dcdc326.zip/node_modules/streamx/",\
+          "packageDependencies": [\
+            ["streamx", "npm:2.15.0"],\
+            ["fast-fifo", "npm:1.3.0"],\
+            ["queue-tick", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11741,6 +11803,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tar-stream", "npm:2.2.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.0.4", {\
+          "packageLocation": "./.yarn/cache/tar-fs-npm-3.0.4-fa3da2e321-dcf4054f9e.zip/node_modules/tar-fs/",\
+          "packageDependencies": [\
+            ["tar-fs", "npm:3.0.4"],\
+            ["mkdirp-classic", "npm:0.5.3"],\
+            ["pump", "npm:3.0.0"],\
+            ["tar-stream", "npm:3.1.6"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["tar-stream", [\
@@ -11753,6 +11825,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fs-constants", "npm:1.0.0"],\
             ["inherits", "npm:2.0.4"],\
             ["readable-stream", "npm:3.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.1.6", {\
+          "packageLocation": "./.yarn/cache/tar-stream-npm-3.1.6-ce3ac17e49-f3627f9185.zip/node_modules/tar-stream/",\
+          "packageDependencies": [\
+            ["tar-stream", "npm:3.1.6"],\
+            ["b4a", "npm:1.6.4"],\
+            ["fast-fifo", "npm:1.3.0"],\
+            ["streamx", "npm:2.15.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -12743,7 +12825,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.10.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.1"],\
+            ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.2"],\
