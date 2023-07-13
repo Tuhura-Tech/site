@@ -54,7 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
-            ["svgo", "npm:2.8.0"],\
+            ["svgo", "npm:3.0.2"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
@@ -12826,7 +12826,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
-            ["svgo", "npm:2.8.0"],\
+            ["svgo", "npm:3.0.2"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\

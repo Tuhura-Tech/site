@@ -40,7 +40,7 @@
     "reading-time": "^1.5.0",
     "sharp": "^0.32.0",
     "subfont": "^7.0.0",
-    "svgo": "2.8.0",
+    "svgo": "3.0.2",
     "tailwindcss": "^3.2.4",
     "typescript": "^5.0.0"
   },
