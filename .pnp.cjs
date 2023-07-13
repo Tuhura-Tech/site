@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["limax", "npm:4.1.0"],\
             ["mdast-util-to-string", "npm:4.0.0"],\
             ["prettier", "npm:3.0.0"],\
-            ["prettier-plugin-astro", "npm:0.10.0"],\
+            ["prettier-plugin-astro", "npm:0.11.0"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
@@ -121,17 +121,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:1.5.0", {\
-          "packageLocation": "./.yarn/cache/@astrojs-compiler-npm-1.5.0-7ede2c2a30-317bd34948.zip/node_modules/@astrojs/compiler/",\
-          "packageDependencies": [\
-            ["@astrojs/compiler", "npm:1.5.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.5.3", {\
           "packageLocation": "./.yarn/cache/@astrojs-compiler-npm-1.5.3-a93d5311b6-b4b450cf57.zip/node_modules/@astrojs/compiler/",\
           "packageDependencies": [\
             ["@astrojs/compiler", "npm:1.5.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.5.6", {\
+          "packageLocation": "./.yarn/cache/@astrojs-compiler-npm-1.5.6-46faed8099-a69dba8bd3.zip/node_modules/@astrojs/compiler/",\
+          "packageDependencies": [\
+            ["@astrojs/compiler", "npm:1.5.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10156,12 +10156,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-astro", [\
-        ["npm:0.10.0", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-astro-npm-0.10.0-6e4b3ac7a9-4cb68c274d.zip/node_modules/prettier-plugin-astro/",\
+        ["npm:0.11.0", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-astro-npm-0.11.0-9122f20f65-d1d0a21a00.zip/node_modules/prettier-plugin-astro/",\
           "packageDependencies": [\
-            ["prettier-plugin-astro", "npm:0.10.0"],\
-            ["@astrojs/compiler", "npm:1.5.0"],\
-            ["prettier", "npm:2.8.8"],\
+            ["prettier-plugin-astro", "npm:0.11.0"],\
+            ["@astrojs/compiler", "npm:1.5.6"],\
+            ["prettier", "npm:3.0.0"],\
             ["sass-formatter", "npm:0.7.6"]\
           ],\
           "linkType": "HARD"\
@@ -12823,7 +12823,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["limax", "npm:4.1.0"],\
             ["mdast-util-to-string", "npm:4.0.0"],\
             ["prettier", "npm:3.0.0"],\
-            ["prettier-plugin-astro", "npm:0.10.0"],\
+            ["prettier-plugin-astro", "npm:0.11.0"],\
             ["reading-time", "npm:1.5.0"],\
             ["sharp", "npm:0.32.2"],\
             ["subfont", "npm:7.1.1"],\
