@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.11.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.2"],\
+            ["sharp", "npm:0.32.3"],\
             ["subfont", "npm:7.1.1"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.3"],\
@@ -157,7 +157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["kleur", "npm:4.1.5"],\
             ["magic-string", "npm:0.27.0"],\
             ["mime", "npm:3.0.0"],\
-            ["sharp", "npm:0.32.2"]\
+            ["sharp", "npm:0.32.3"]\
           ],\
           "packagePeers": [\
             "@types/astro",\
@@ -2649,7 +2649,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rehype", "npm:12.0.1"],\
             ["semver", "npm:7.5.3"],\
             ["server-destroy", "npm:1.0.1"],\
-            ["sharp", "npm:0.32.2"],\
+            ["sharp", "npm:0.32.3"],\
             ["shiki", "npm:0.14.2"],\
             ["string-width", "npm:5.1.2"],\
             ["strip-ansi", "npm:7.1.0"],\
@@ -11023,10 +11023,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:0.32.2", {\
-          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.2-94f458aa69/node_modules/sharp/",\
+        ["npm:0.32.3", {\
+          "packageLocation": "./.yarn/unplugged/sharp-npm-0.32.3-accd89915c/node_modules/sharp/",\
           "packageDependencies": [\
-            ["sharp", "npm:0.32.2"],\
+            ["sharp", "npm:0.32.3"],\
             ["color", "npm:4.2.3"],\
             ["detect-libc", "npm:2.0.1"],\
             ["node-addon-api", "npm:6.1.0"],\
@@ -12824,7 +12824,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:3.0.0"],\
             ["prettier-plugin-astro", "npm:0.11.0"],\
             ["reading-time", "npm:1.5.0"],\
-            ["sharp", "npm:0.32.2"],\
+            ["sharp", "npm:0.32.3"],\
             ["subfont", "npm:7.1.1"],\
             ["svgo", "npm:2.8.0"],\
             ["tailwindcss", "npm:3.3.3"],\
