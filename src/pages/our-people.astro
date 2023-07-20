@@ -1,10 +1,9 @@
 ---
-import { Picture } from '@astrojs/image/components';
 import { SITE } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 
-import { getCanonical, getPermalink } from '~/utils/permalinks';
+import { getCanonical, getPermalink, getRelativeLink } from '~/utils/permalinks';
 
 const meta = {
   title: `Our People — ${SITE.name}`,
@@ -67,7 +66,7 @@ const board: Person[] = [
     position: 'Treasurer',
     about:
       'Kia ora koutou katoa! Ko wai ahau? Nō Kōria ki te Tonga me Īnia ōku tīpuna. I whānau mai ahau ki Edmonton. I tipu ake ahau ki Kānata. Ko Rocky Mountains ngā maunga. Ko Saskatchewan ki te Tokerau te awa. Ko Doha me Naenae ōku whatumanawa. I tae mai ahau ki Aotearoa i te tau rua mano. E noho ana ahau ki te Awa Kairangi ki Tai. Ko Lillian tōku ingoa.\n \n \nLillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.',
-    icon: '../assets/images/people/lillian.png',
+    icon: 'images/lillian.png',
   },
   {
     name: 'Justin Chua',
@@ -81,7 +80,7 @@ const board: Person[] = [
   {
     name: 'Wendy Bowie',
     about: '',
-    icon: '../assets/images/people/wendy.png',
+    icon: 'images/wendy.png',
   },
 ];
 ---
@@ -110,20 +109,7 @@ const board: Person[] = [
         team.map((item) => (
           <div class="group">
             <div class="mt-4 text-center">
-              {item.icon && (
-                <Picture
-                  src={import(item.icon)}
-                  class="h-auto w-auto md:max-w-[125%] md:max-h-[calc(100%+20em)] mx-auto relative -mt-10 -z-10"
-                  widths={[407, 814, 1273]}
-                  sizes="(max-width: 767px) 407px, (max-width: 1479px) 814px, 1629px"
-                  alt=""
-                  aspectRatio={1629 / 1273}
-                  loading="eager"
-                  width={1629}
-                  height={1273}
-                  formats={['webp', 'png']}
-                />
-              )}
+              {item.icon && <img src={getRelativeLink(item.icon)} />}
               <h2 class="text-lg"> {item.name}</h2>
               <h3 class="text-sm text-slate-500"> {item.position}</h3>
               <p class="text-slate-600 mt-2">{item.about}</p>
@@ -142,7 +128,7 @@ const board: Person[] = [
         volunteers.map((item) => (
           <div class="group">
             <div class="mt-4 text-center">
-              {item.icon && <Picture src={import(item.icon)} formats={['webp', 'png']} />}
+              {item.icon && <img src={getRelativeLink(item.icon)} />}
               <h2 class="text-lg"> {item.name}</h2>
               <h3 class="text-sm text-slate-500"> {item.position}</h3>
               <p class="text-slate-600 mt-2">{item.about}</p>
@@ -161,20 +147,7 @@ const board: Person[] = [
         board.map((item) => (
           <div class="group">
             <div class="mt-4 text-center">
-              {item.icon && (
-                <Picture
-                  src={import(item.icon)}
-                  class="h-auto w-auto md:max-w-[125%] md:max-h-[calc(100%+20em)] mx-auto relative -mt-10 -z-10"
-                  widths={[407, 814, 1273]}
-                  sizes="(max-width: 767px) 407px, (max-width: 1479px) 814px, 1629px"
-                  alt=""
-                  aspectRatio={1629 / 1273}
-                  loading="eager"
-                  width={1629}
-                  height={1273}
-                  formats={['webp', 'png']}
-                />
-              )}
+              {item.icon && <img src={getRelativeLink(item.icon)} />}
               <h2 class="text-lg"> {item.name}</h2>
               <h3 class="text-sm text-slate-500"> {item.position}</h3>
               <p class="text-sm text-slate-500"> {item.about}</p>

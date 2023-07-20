@@ -1,6 +1,6 @@
 ---
 import { SITE } from '~/config.mjs';
-import PageLayout from './PageLayout.astro';
+import Layout from './PageLayout.astro';
 
 interface Props {
   frontmatter: {
@@ -29,7 +29,7 @@ const meta = {
 };
 ---
 
-<PageLayout meta={meta}>
+<Layout meta={meta}>
   <section class="py-8 sm:py-16 lg:py-20 mx-auto">
     <div class="gap-x-10 lg:flex lg:items-start mx-auto px-6 sm:px-6 max-w-3xl">
       {
@@ -78,4 +78,4 @@ const meta = {
       </div>
     </div>
   </section>
-</PageLayout>
+</Layout>
