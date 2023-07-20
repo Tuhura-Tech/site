@@ -201,12 +201,12 @@ __metadata:
   linkType: hard
 
 "@astrojs/sitemap@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@astrojs/sitemap@npm:2.0.0"
+  version: 2.0.1
+  resolution: "@astrojs/sitemap@npm:2.0.1"
   dependencies:
     sitemap: ^7.1.1
     zod: ^3.17.3
-  checksum: 734d83c804d4b987fb8e0a9c05740ef9148c1217f7bbb516e6a764c04d836d8c49fe41e8f16213bc432dbbcdef981d6fc923946a81abaf0c090a17417b8022c8
+  checksum: f92e957d90f5af4a21bd1a2369cdbdbda0121db551329d7e80965d411733a830ff11263f3638742e6b8899e689dd9ed09a45f83ac67e0f355e8fec1a9534ef92
   languageName: node
   linkType: hard
 

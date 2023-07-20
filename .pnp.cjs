@@ -32,7 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
-            ["@astrojs/sitemap", "npm:2.0.0"],\
+            ["@astrojs/sitemap", "npm:2.0.1"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
@@ -321,10 +321,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/sitemap", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/@astrojs-sitemap-npm-2.0.0-7bcabb4975-734d83c804.zip/node_modules/@astrojs/sitemap/",\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/@astrojs-sitemap-npm-2.0.1-efe00891cf-f92e957d90.zip/node_modules/@astrojs/sitemap/",\
           "packageDependencies": [\
-            ["@astrojs/sitemap", "npm:2.0.0"],\
+            ["@astrojs/sitemap", "npm:2.0.1"],\
             ["sitemap", "npm:7.1.1"],\
             ["zod", "npm:3.21.4"]\
           ],\
@@ -12782,7 +12782,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
-            ["@astrojs/sitemap", "npm:2.0.0"],\
+            ["@astrojs/sitemap", "npm:2.0.1"],\
             ["@astrojs/tailwind", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.0.0"],\
             ["@astrolib/analytics", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
             ["@astrolib/seo", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.3.0"],\
