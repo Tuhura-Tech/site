@@ -1,62 +1,121 @@
 ---
 import { SITE } from '~/config.mjs';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const meta = {
   title: SITE.title,
   description: SITE.description,
-  dontUseTitleTemplate: true,
+  canonical: getCanonical(getHomePermalink()),
 };
 ---
 
 <Layout {meta}>
   <Hero
-    callToAction={{ text: 'Volunteer', href: 'https://forms.gle/rEkxxstnMLHqxfMz6' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-  >
-    <Fragment slot="title">Empowering the next generation through technology education</Fragment>
-
-    <Fragment slot="subtitle">
-      At Tūhura Tech, our mission is to provide free technology education to children in the Wellington region. We
-      believe that every child should have the opportunity to learn about and engage with technology, regardless of
-      their background or financial situation.
-    </Fragment>
-  </Hero>
-
-  <div id="what-we-do">
-    <Content
-      title="What we do"
-      items={[
+    title="Tūhura Tech"
+    ,
+    subtitle="Empowering the next generation through"
+    ,
+    subtitleColor="Technology Education"
+    ,
+    content="At Tūhura Tech, our mission is to provide free technology education to children in the Wellington region. We believe that every child should have the opportunity to learn about and engage with technology, regardless of their background or financial situation."
+  />
+  <Features
+    title="Our Mahi"
+    subtitle="We work across various areas with a focus on providing free or affordable sessions and support to kids 18 and under. Below is a snapshot of some of the work we do to accomplish this goal."
+    items={[
+      [
         {
-          title: 'After school clubs',
+          title: 'After School Sessions',
           description:
-            'At the core of what we do is after school clubs with a mix of our volunteers both from industry and other areas to provide a fun and relaxed environment to explore technology.',
+            'We run a number of free after school sessions at a variety of schools and community centres across school years 5-13 providing spaces where students can explore technology with the support of our staff and volunteers.',
+          icon: 'tabler:code',
         },
         {
-          title: 'In school sessions',
+          title: 'Public Resources',
           description:
-            'We work closely with schools to deliver specialised sessions during schools hours to expand on the areas of technology the school can cover.',
+            'All the resources and guides we create are available for free and publicly under CC BY-SA 4.0, MIT or AGPLv3+ Licenses including resources for NCEA.',
+          icon: 'tabler:book',
+        },
+        {
+          title: 'Workshops',
+          description:
+            'In collaboration with Industry or our other partners we run one off workshops on a variety of topics from VEX Robotics to 3D Printing.',
+          icon: 'grommet-icons:workshop',
+        },
+      ],
+      [
+        {
+          title: 'In School Sessions',
+          description:
+            'We work closely with a number of schools to support their classes or run outreach sessions during school time to provide greater opportunities to students.',
+          icon: 'tabler:school',
         },
         {
           title: 'Coaching',
           description:
-            'A number of our students qualify and compete in competitions across Aotearoa. We work with both our teams and teams in the area to support them in their goals.',
+            'Working across a range of subjects we coach and support teams and students who compete in a variety of competitions from CyberSecurity to Mechanical/Electrical Engineering.',
+          icon: 'tabler:robot',
         },
-      ]}
-    >
-      <Fragment slot="content">
-        We have several ways that we are able to support students with our key focuses being on the below areas.
-      </Fragment>
-    </Content>
-  </div>
+        {
+          title: 'Professional Development',
+          description:
+            'Taking our experience at a numebr of schools and with industry we support digitech teachers with Professional Development.',
+          icon: 'mdi:university',
+        },
+      ],
+    ]}
+  />
 
+  <Features2
+    title="Our Sessions"
+    subtitle="These are the locations where we are actively running sessions with more added all the time."
+    items={[
+      {
+        title: 'Wellington Girls College',
+        description: 'After school club every Monday from 3:30-5:30pm, Year 11-13, no signup needed',
+      },
+      {
+        title: 'Wellington High School',
+        description: 'After school club every Tuesday from 3:30-5:30pm, year 9-13, no signup needed.',
+      },
+      {
+        title: 'Strathmore Park Community Centre',
+        description:
+          'Intro to programming every Tuesday from 3:30-5:00pm, year 5-8, <a class="text-primary" href="https://forms.gle/8KScND39SpT7ZfBF6">signup here</a>.',
+      },
+      { title: 'Wellington East Girls College', description: 'During school outreach to years 12 and 13.' },
+      {
+        title: 'Wellington College',
+        description: 'After school club every Wednesday from 3:30-5:30pm, Year 11-13, no signup needed.',
+      },
+      { title: 'Wā Ora Montessori School', description: 'During school outrach to years 7, 8 and 9.' },
+      { title: 'South Wellington Intermediate School', description: 'During school outreach to years 7 and 8.' },
+      {
+        title: 'Looking for more sessions',
+        description:
+          '<a class="text-primary" href="/contact">Contact us</a> if you know somewhere we could help as we would love to provide support.',
+      },
+    ]}
+  />
+  <Stats
+    title="Stats"
+    items={[
+      { name: 'Kids', value: '500+' },
+      { name: 'Schools', value: '8' },
+      { name: 'Community Centres', value: '2' },
+      { name: 'Sessions', value: '300+' },
+    ]}
+  />
   <FAQs
     title="Frequently Asked Questions"
-    highlight="FAQs"
     items={[
       [
         {
@@ -87,11 +146,19 @@ const meta = {
             'We cover many areas of technology with a focus on expanding what is covered in schools, this includes areas such as robotics, cybersecurity, AI/ML and more.',
         },
         {
-          question: "Who are we?",
+          question: 'Who are we?',
           answer:
             'We are a group of volunteers, teachers and industry professionals who all care about technology and want to support students.',
         },
       ],
     ]}
+    class="bg-blue-50 dark:bg-slate-800"
+  />
+  <CallToAction
+    title="Come Join Us"
+    ,
+    subtitle="We constist of a team of passionate staff and volunteers focused on Technology Education.\n Any Help with content, resources, volunteering, sponsorship, technology support, old hardware or any other domain is greatly appreciated."
+    ,
+    callToAction={{ text: 'Support Us', href: '/support-us' }}
   />
 </Layout>

@@ -1,0 +1,81 @@
+---
+import { SITE } from '~/config.mjs';
+import PageLayout from './PageLayout.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    pubDate: string;
+    tags?: string[];
+    license?: string;
+    origin_url?: string;
+  };
+  headings: {
+    depth: number;
+    text: string;
+    slug: string;
+  }[];
+}
+const { frontmatter, headings } = Astro.props;
+
+let license_url;
+if (frontmatter.license != null) {
+  license_url = 'https://spdx.org/licenses/' + frontmatter.license + '.html';
+}
+
+const meta = {
+  title: `${frontmatter.title} | ${SITE.title}`,
+  description: headings[0]?.text || '',
+};
+---
+
+<PageLayout meta={meta}>
+  <section class="py-8 sm:py-16 lg:py-20 mx-auto">
+    <div class="gap-x-10 lg:flex lg:items-start mx-auto px-6 sm:px-6 max-w-3xl">
+      {
+        headings.length > 0 && (
+          <aside class="sticky top-20 order-2 -me-64 hidden basis-64 xl:block">
+            <a class="hover:text-primary-600" href="#top">
+              <h2 class="font-semibold">{frontmatter.title}</h2>
+            </a>
+            <ul class="mt-4 text-xs">
+              {headings.map(({ depth, slug, text }) => (
+                <li class="line-clamp-2">
+                  <a
+                    class={`block hover:text-primary-600 break-words ${
+                      depth <= 2 ? 'mt-3' : 'mt-2 ps-3 text-[0.6875rem]'
+                    }`}
+                    href={`#${slug}`}
+                    aria-label={`Scroll to section: ${text}`}
+                  >
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+      <div
+        class="container prose prose-steel dark:prose-invert prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:underline-offset-4 prose-a:decoration-steel-200 dark:prose-a:decoration-steel-500 hover:prose-a:text-primary-600 dark:hover:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lgr"
+      >
+        <h1 id="top" class="mb-6 pb-6 border-b border-steel-100 dark:border-steel-700">
+          {frontmatter.title}
+        </h1>
+        <slot />
+        {
+          frontmatter.license && (
+            <p class="page-license">
+              This page's content is available under the <a href={license_url}>{frontmatter.license}</a> license.
+              {frontmatter.origin_url && (
+                <span>
+                  It is derived from this <a href={frontmatter.origin_url}>original source</a>.
+                </span>
+              )}
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </section>
+</PageLayout>

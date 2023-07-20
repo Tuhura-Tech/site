@@ -5,11 +5,11 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'Tūhura Tech',
+  title: 'Tūhura Tech - Empowering the next generation',
   description:
-    'Wellington based charity focused on technology education for students.',
+    'Greater Wellington based charity focused on technology education for students.',
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'system',
 
   language: 'en',
   textDirection: 'ltr',
@@ -20,8 +20,8 @@ const CONFIG = {
     day: 'numeric',
     timeZone: 'UTC',
   }),
+
 };
 
-export const SITE = { ...CONFIG, blog: undefined };
-export const BLOG = CONFIG.blog;
+export const SITE = { ...CONFIG };
 export const DATE_FORMATTER = CONFIG.dateFormatter;

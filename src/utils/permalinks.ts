@@ -21,21 +21,21 @@ export const cleanSlug = (text = '') =>
     .join('/');
 
 /** */
-export const getCanonical = (path = ''): string | URL => new URL(path, SITE.origin);
+export const getCanonical = (path = ''): string | URL => {
+  const url = String(new URL(path, SITE.origin));
+  if (SITE.trailingSlash == false && path && url.endsWith('/')) {
+    return url.slice(0, -1);
+  } else if (SITE.trailingSlash == true && path && !url.endsWith('/')) {
+    return url + '/';
+  }
+  return url;
+};
 
 /** */
 export const getPermalink = (slug = '', type = 'page'): string => {
   let permalink: string;
 
   switch (type) {
-    case 'category':
-      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
-      break;
-
-    case 'tag':
-      permalink = createPath(TAG_BASE, trimSlash(slug));
-      break;
-
     case 'post':
       permalink = createPath(trimSlash(slug));
       break;
@@ -62,3 +62,8 @@ export const getAsset = (path: string): string =>
 
 /** */
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
+
+/** */
+export const getRelativeLink = (link = '') => {
+  return createPath(BASE_PATHNAME, trimSlash(link));
+};

@@ -1,0 +1,187 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { SITE } from '~/config.mjs';
+
+import Layout from '~/layouts/PageLayout.astro';
+
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+
+const meta = {
+  title: `Our People — ${SITE.name}`,
+  description: SITE.description,
+  canonical: getCanonical(getPermalink('our-people')),
+};
+
+type Person = {
+  name: string;
+  position?: string;
+  about: string;
+  icon?: string;
+};
+
+const team: Person[] = [
+  {
+    name: 'Leon Bowie',
+    position: 'Head of Operations',
+    about:
+      'Actively involved in technolgoy outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.',
+  },
+];
+
+const volunteers: Person[] = [
+  {
+    name: 'Ai Winters',
+    position: 'Volunteer',
+    about:
+      'Ai is an engaged and dedicated helper for Tūhura Tech in love with making and playing video games. Helping out on the Discord server they like to help with the smaller problems. They love to learn from any shred of wisdom and strive to make virtual reality games in the future.',
+  },
+  {
+    name: 'Sofie Claridge',
+    position: 'Volunteer',
+    about:
+      'Currently studying a Master of Computer Science at Te Herenga Waka - Victoria University of Wellington she has a passion for wearable technology. ',
+  },
+  {
+    name: 'Nixia C',
+    position: 'Volunteer',
+    about:
+      'A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look prefessional and clear. They originally designed our Logo and now activly support us on all materials.',
+  },
+];
+
+const board: Person[] = [
+  {
+    name: 'Leon Bowie',
+    position: 'Chair',
+    about:
+      'Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former robocup nz representative and NZ cyber security competition winner has a range of interests and passions across technology.',
+  },
+  {
+    name: 'John Barrow',
+    position: 'Secretary',
+    about:
+      'With a range of experience spanning decades both in industry and education John provides a unique voice that bridge both industry and the education sector together. Currently a DigiTech teacher at Wellington High School they are also actively involved directly in our sessions at their school.',
+  },
+  {
+    name: 'Lillian Pak',
+    position: 'Treasurer',
+    about:
+      'Kia ora koutou katoa! Ko wai ahau? Nō Kōria ki te Tonga me Īnia ōku tīpuna. I whānau mai ahau ki Edmonton. I tipu ake ahau ki Kānata. Ko Rocky Mountains ngā maunga. Ko Saskatchewan ki te Tokerau te awa. Ko Doha me Naenae ōku whatumanawa. I tae mai ahau ki Aotearoa i te tau rua mano. E noho ana ahau ki te Awa Kairangi ki Tai. Ko Lillian tōku ingoa.\n \n \nLillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.',
+    icon: '../assets/images/people/lillian.png',
+  },
+  {
+    name: 'Justin Chua',
+    about: '',
+  },
+  {
+    name: 'Thomas Jackson',
+    about:
+      'Currently at Wellington High School as a student they have been attending the Tūhura Tech sessions since 2022 when they started and currently serve as a student voice on our board.',
+  },
+  {
+    name: 'Wendy Bowie',
+    about: '',
+    icon: '../assets/images/people/wendy.png',
+  },
+];
+---
+
+<Layout {meta}>
+  <Fragment slot="title">Our Peopl</Fragment>
+  <Fragment>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl">
+      <p class="text-lg leading-relaxed text-slate-500 mb-10 md:mb-20">
+        Tūhura Tech is a group of tech-savvy and education-focused individuals who saw a need for better technology
+        education resources for students and schools in the Wellington area. Driven by a passion for technology and
+        education, we founded Tūhura Tech to provide consistent and comprehensive support for those looking to learn
+        about technology. Our team is dedicated to helping students and schools grow their technological knowledge and
+        skills to prepare them for the future. <br /><br /> With a focus on quality and accessibility, Tūhura Tech offers
+        a range of resources, including educational programs and workshops, designed to meet the needs of students and schools.
+        We believe that technology plays a critical role in shaping the future, and we are committed to empowering students
+        and schools with the tools and knowledge they need to succeed.
+      </p>
+    </div>
+    <!-- Team -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Team</h1>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        team.map((item) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              {item.icon && (
+                <Picture
+                  src={import(item.icon)}
+                  class="h-auto w-auto md:max-w-[125%] md:max-h-[calc(100%+20em)] mx-auto relative -mt-10 -z-10"
+                  widths={[407, 814, 1273]}
+                  sizes="(max-width: 767px) 407px, (max-width: 1479px) 814px, 1629px"
+                  alt=""
+                  aspectRatio={1629 / 1273}
+                  loading="eager"
+                  width={1629}
+                  height={1273}
+                  formats={['webp', 'png']}
+                />
+              )}
+              <h2 class="text-lg"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.position}</h3>
+              <p class="text-slate-600 mt-2">{item.about}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Team -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Volunteers</h1>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        volunteers.map((item) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              {item.icon && <Picture src={import(item.icon)} formats={['webp', 'png']} />}
+              <h2 class="text-lg"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.position}</h3>
+              <p class="text-slate-600 mt-2">{item.about}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Board -->
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Board</h1>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        board.map((item) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              {item.icon && (
+                <Picture
+                  src={import(item.icon)}
+                  class="h-auto w-auto md:max-w-[125%] md:max-h-[calc(100%+20em)] mx-auto relative -mt-10 -z-10"
+                  widths={[407, 814, 1273]}
+                  sizes="(max-width: 767px) 407px, (max-width: 1479px) 814px, 1629px"
+                  alt=""
+                  aspectRatio={1629 / 1273}
+                  loading="eager"
+                  width={1629}
+                  height={1273}
+                  formats={['webp', 'png']}
+                />
+              )}
+              <h2 class="text-lg"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.position}</h3>
+              <p class="text-sm text-slate-500"> {item.about}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Fragment>
+</Layout>
