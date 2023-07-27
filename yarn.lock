@@ -2055,19 +2055,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.49":
-  version: 1.1.49
-  resolution: "astro-compress@npm:1.1.49"
+"astro-compress@npm:1.1.50":
+  version: 1.1.50
+  resolution: "astro-compress@npm:1.1.50"
   dependencies:
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
     csso: 5.0.5
-    files-pipe: 0.0.7
+    files-pipe: 0.0.8
     html-minifier-terser: 7.2.0
-    sharp: 0.32.1
+    sharp: 0.32.4
     svgo: 3.0.2
-    terser: 5.18.2
-  checksum: ca5dfe77f7c551e46c93c96f5dc062df27adb8c1a0e3e392b949d1d3ce9dd40d2d966b4a3c0a19c985ce4c6d89e8e7bb6002b3f8d5c205fc158c4c45a39540a7
+    terser: 5.19.2
+  checksum: 2ce926825a213b694b70c3b473b04573226b8cb5294e5ee4fe9c74e9009b0c12ed6788cdc4f4abce0ab8799cde9f6875cda69a11d8f54c08236fa411f5c5a956
   languageName: node
   linkType: hard
 
@@ -3416,6 +3416,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-libc@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "detect-libc@npm:2.0.2"
+  checksum: 2b2cd3649b83d576f4be7cc37eb3b1815c79969c8b1a03a40a4d55d83bc74d010753485753448eacb98784abf22f7dbd3911fd3b60e29fda28fed2d1a997944d
+  languageName: node
+  linkType: hard
+
 "devalue@npm:^4.3.2":
   version: 4.3.2
   resolution: "devalue@npm:4.3.2"
@@ -4358,7 +4365,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.2.12, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
+"fast-glob@npm:3.3.1":
+  version: 3.3.1
+  resolution: "fast-glob@npm:3.3.1"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: b6f3add6403e02cf3a798bfbb1183d0f6da2afd368f27456010c0bc1f9640aea308243d4cb2c0ab142f618276e65ecb8be1661d7c62a7b4e5ba774b9ce5432e5
+  languageName: node
+  linkType: hard
+
+"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -4442,13 +4462,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"files-pipe@npm:0.0.7":
-  version: 0.0.7
-  resolution: "files-pipe@npm:0.0.7"
+"files-pipe@npm:0.0.8":
+  version: 0.0.8
+  resolution: "files-pipe@npm:0.0.8"
   dependencies:
     deepmerge-ts: 5.1.0
-    fast-glob: 3.2.12
-  checksum: be12f3f39402b567ce2e016f00e51a6c786adf0d28011cca1300a78d30825ee4bcef4409bf4413a35ae360f5364fead5b4c29e3a7bd42dc1313791dbe319a811
+    fast-glob: 3.3.1
+  checksum: 0989e2f9859671639b587a62f2f3e39df7af371a531891d320830a885603c1e5573792e62ee1fa83b2a7f690b2b7b0a9f851b909962e8a5112ca5254832fe4d3
   languageName: node
   linkType: hard
 
@@ -9241,17 +9261,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.0":
-  version: 7.5.0
-  resolution: "semver@npm:7.5.0"
-  dependencies:
-    lru-cache: ^6.0.0
-  bin:
-    semver: bin/semver.js
-  checksum: 2d266937756689a76f124ffb4c1ea3e1bbb2b263219f90ada8a11aebebe1280b13bb76cca2ca96bdee3dbc554cbc0b24752eb895b2a51577aa644427e9229f2b
-  languageName: node
-  linkType: hard
-
 "semver@npm:^7.5.3":
   version: 7.5.3
   resolution: "semver@npm:7.5.3"
@@ -9288,20 +9297,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.32.1":
-  version: 0.32.1
-  resolution: "sharp@npm:0.32.1"
+"sharp@npm:0.32.4":
+  version: 0.32.4
+  resolution: "sharp@npm:0.32.4"
   dependencies:
     color: ^4.2.3
-    detect-libc: ^2.0.1
+    detect-libc: ^2.0.2
     node-addon-api: ^6.1.0
     node-gyp: latest
     prebuild-install: ^7.1.1
-    semver: ^7.5.0
+    semver: ^7.5.4
     simple-get: ^4.0.1
-    tar-fs: ^2.1.1
+    tar-fs: ^3.0.4
     tunnel-agent: ^0.6.0
-  checksum: 99f50df380442aa8f3f952dd6f2e27634f9cab249cce47aa7f1a97c468334979ea94d71555f782aae5f5016e44b7832799f1c5ea1cb3ca975c089acd00e62e2e
+  checksum: 52e3cfe8fbba2623a9b935be8a3d00d6993a2c56c775ac5cc89b273826db95f029f68a0029a37f96dcb6790aa2e3c05a02599035535b319f50ab31f5d86a13f0
   languageName: node
   linkType: hard
 
@@ -9985,7 +9994,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar-fs@npm:2.1.1, tar-fs@npm:^2.0.0, tar-fs@npm:^2.1.1":
+"tar-fs@npm:2.1.1, tar-fs@npm:^2.0.0":
   version: 2.1.1
   resolution: "tar-fs@npm:2.1.1"
   dependencies:
@@ -10067,9 +10076,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.18.2":
-  version: 5.18.2
-  resolution: "terser@npm:5.18.2"
+"terser@npm:5.19.2":
+  version: 5.19.2
+  resolution: "terser@npm:5.19.2"
   dependencies:
     "@jridgewell/source-map": ^0.3.3
     acorn: ^8.8.2
@@ -10077,7 +10086,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 50988412533bfd5a07294df002d772ad5b1277a9d1164dd19c8876a2094ced7b78fcf36cb32122a9a5238ba2597d77178a2385dfc6c4d506622309493f613cf4
+  checksum: e059177775b4d4f4cff219ad89293175aefbd1b081252270444dc83e42a2c5f07824eb2a85eae6e22ef6eb7ef04b21af36dd7d1dd7cfb93912310e57d416a205
   languageName: node
   linkType: hard
 
@@ -10903,7 +10912,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.0.0
     "@typescript-eslint/parser": ^6.0.0
     astro: ^2.0.4
-    astro-compress: 1.1.49
+    astro-compress: 1.1.50
     astro-eslint-parser: ^0.14.0
     astro-icon: ^0.8.0
     eslint: ^8.33.0
