@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.2"],\
+            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.3"],\
             ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
@@ -137,17 +137,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@astrojs/image", [\
-        ["npm:0.17.2", {\
-          "packageLocation": "./.yarn/cache/@astrojs-image-npm-0.17.2-4147e8a882-29210756f9.zip/node_modules/@astrojs/image/",\
+        ["npm:0.17.3", {\
+          "packageLocation": "./.yarn/cache/@astrojs-image-npm-0.17.3-0a5ee445c5-b65e53505e.zip/node_modules/@astrojs/image/",\
           "packageDependencies": [\
-            ["@astrojs/image", "npm:0.17.2"]\
+            ["@astrojs/image", "npm:0.17.3"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.2", {\
-          "packageLocation": "./.yarn/__virtual__/@astrojs-image-virtual-99ab2a9ede/0/cache/@astrojs-image-npm-0.17.2-4147e8a882-29210756f9.zip/node_modules/@astrojs/image/",\
+        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.3", {\
+          "packageLocation": "./.yarn/__virtual__/@astrojs-image-virtual-dd559b93f0/0/cache/@astrojs-image-npm-0.17.3-0a5ee445c5-b65e53505e.zip/node_modules/@astrojs/image/",\
           "packageDependencies": [\
-            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.2"],\
+            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.3"],\
             ["@altano/tiny-async-pool", "npm:1.0.2"],\
             ["@types/astro", null],\
             ["@types/sharp", null],\
@@ -155,7 +155,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-cache-semantics", "npm:4.1.1"],\
             ["image-size", "npm:1.0.2"],\
             ["kleur", "npm:4.1.5"],\
-            ["magic-string", "npm:0.27.0"],\
+            ["magic-string", "npm:0.30.2"],\
             ["mime", "npm:3.0.0"],\
             ["sharp", "npm:0.32.3"]\
           ],\
@@ -1460,6 +1460,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@jridgewell-sourcemap-codec-npm-1.4.14-f5f0630788-61100637b6.zip/node_modules/@jridgewell/sourcemap-codec/",\
           "packageDependencies": [\
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.4.15", {\
+          "packageLocation": "./.yarn/cache/@jridgewell-sourcemap-codec-npm-1.4.15-a055fb62cf-b881c7e503.zip/node_modules/@jridgewell/sourcemap-codec/",\
+          "packageDependencies": [\
+            ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7341,6 +7348,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jridgewell/sourcemap-codec", "npm:1.4.14"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:0.30.2", {\
+          "packageLocation": "./.yarn/cache/magic-string-npm-0.30.2-c6ed3befd5-c0bbb9b27b.zip/node_modules/magic-string/",\
+          "packageDependencies": [\
+            ["magic-string", "npm:0.30.2"],\
+            ["@jridgewell/sourcemap-codec", "npm:1.4.15"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["make-fetch-happen", [\
@@ -12778,7 +12793,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["website", "workspace:."],\
-            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.2"],\
+            ["@astrojs/image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:0.17.3"],\
             ["@astrojs/mdx", "npm:0.19.7"],\
             ["@astrojs/partytown", "npm:1.2.3"],\
             ["@astrojs/rss", "npm:2.4.3"],\
