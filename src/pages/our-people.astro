@@ -1,4 +1,5 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import { SITE } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
@@ -6,7 +7,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getCanonical, getPermalink, getRelativeLink } from '~/utils/permalinks';
 
 const meta = {
-  title: `Our People — ${SITE.name}`,
+  title: `Our People`,
   description: SITE.description,
   canonical: getCanonical(getPermalink('our-people')),
 };
@@ -84,7 +85,6 @@ const board: Person[] = [
 ---
 
 <Layout {meta}>
-  <Fragment slot="title">Our Peopl</Fragment>
   <Fragment>
     <div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
     <h2
@@ -105,7 +105,7 @@ const board: Person[] = [
     </div>
     <!-- Team -->
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Team</h1>
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Staff</h1>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
@@ -140,6 +140,13 @@ const board: Person[] = [
         ))
       }
     </div>
+    <CallToAction
+    title="Volunteer with us"
+    ,
+    subtitle="Come join our volunteering team and help support students in your region. Any experience is appreciate with either helping teaching, buildiung resources or helping maintain our infrastructure. Send us an email if you are keen to help volunteer."
+    ,
+    callToAction={{ text: 'Contact Us', href: '/contact-us' }}
+  />
 
     <!-- Board -->
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
@@ -161,6 +168,5 @@ const board: Person[] = [
     </div>
     <br />
   <br />
-  </Fragment>
   
 </Layout>

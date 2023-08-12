@@ -5,7 +5,7 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'Tūhura Tech - Empowering the next generation',
+  title: 'Empowering the next generation',
   description:
     'Greater Wellington based charity focused on technology education for students.',
 
