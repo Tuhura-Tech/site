@@ -10,8 +10,8 @@
     "preview": "astro build && astro preview",
     "astro": "astro",
     "prepare": "husky install",
-    "format": "prettier -w --cache --plugin-search-dir=. .",
-    "format-ci": "prettier --check --plugin-search-dir=. .",
+    "format": "prettier -w --cache src",
+    "format-ci": "prettier --check src",
     "format-staged": "pretty-quick --staged",
     "lint:eslint": "eslint --cache --ext .js,.ts,.astro ."
   },

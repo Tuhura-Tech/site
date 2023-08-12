@@ -46,7 +46,7 @@ const volunteers: Person[] = [
     name: 'Nixia C',
     position: 'Volunteer',
     about:
-      'A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look prefessional and clear. They originally designed our Logo and now activly support us on all materials.',
+      'A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look professional and clear. They originally designed our Logo and now actively support us on all materials.',
   },
 ];
 
@@ -143,7 +143,7 @@ const board: Person[] = [
     <CallToAction
     title="Volunteer with us"
     ,
-    subtitle="Come join our volunteering team and help support students in your region. Any experience is appreciate with either helping teaching, buildiung resources or helping maintain our infrastructure. Send us an email if you are keen to help volunteer."
+    subtitle="Come join our volunteering team and help support students in your region. Any experience is appreciate with either helping teaching, building resources or helping maintain our infrastructure. Send us an email if you are keen to help volunteer."
     ,
     callToAction={{ text: 'Contact Us', href: '/contact-us' }}
   />
@@ -157,7 +157,6 @@ const board: Person[] = [
         board.map((item) => (
           <div class="group">
             <div class="mt-4 text-center">
-              {item.icon && <img src={getRelativeLink(item.icon)} />}
               <h2 class="text-lg"> {item.name}</h2>
               <h3 class="text-sm text-slate-500"> {item.position}</h3>
               <p class="text-sm text-slate-500"> {item.about}</p>

@@ -6,8 +6,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'Empowering the next generation',
-  description:
-    'Greater Wellington based charity focused on technology education for students.',
+  description: 'Greater Wellington based charity focused on technology education for students.',
 
   defaultTheme: 'system',
 
@@ -20,7 +19,6 @@ const CONFIG = {
     day: 'numeric',
     timeZone: 'UTC',
   }),
-
 };
 
 export const SITE = { ...CONFIG };
