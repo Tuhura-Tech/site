@@ -1,0 +1,94 @@
+---
+import { Icon } from 'astro-icon';
+
+const {
+	label = 'Toggle between Dark and Light mode',
+	class:
+		className = 'hidden text-zinc-500 dark:text-zinc-400 hover:bg-steel-100 dark:hover:bg-steel-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5',
+	iconClass = 'w-6 h-6',
+	iconName = 'tabler:sun',
+} = Astro.props;
+---
+
+<button type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>
+	<Icon name={iconName} class={iconClass} />
+</button>
+
+<script>
+	function darkRuleOverrider() {
+		// Gather the dark-mode rules (stylesheets must have already loaded)
+		const darkRules = [];
+		for (const stylesheet of document.styleSheets) {
+			for (const rule of stylesheet.cssRules) {
+				if (rule.media?.mediaText === '(prefers-color-scheme: dark)') {
+					darkRules.push(rule);
+				}
+			}
+		}
+
+		return function setDarkTheme(theme) {
+			let medium = '(prefers-color-scheme: dark)'; // auto
+			if (theme == 'dark') {
+				// enable all dark-scheme styles
+				medium = '';
+			} else if (theme == 'light') {
+				// disable all dark-scheme styles
+				medium = '(original-prefers-color-scheme)';
+			}
+			console.log(theme, medium);
+
+			darkRules.forEach((rule) => {
+				rule.media.mediaText = medium;
+			});
+		};
+	}
+
+	function themeToggler() {
+		const setDarkTheme = darkRuleOverrider();
+
+		// override theme on start if requested
+		if ('theme' in localStorage) {
+			setDarkTheme(localStorage.theme);
+		}
+
+		return function toggleTheme() {
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			let currentTheme = localStorage.getItem('theme');
+
+			// If the new theme matches the preferred theme, unset the preference so
+			// that the browser will toggle the theme natively.
+			// Otherwise, store the new theme in local storage.
+			if (prefersDark) {
+				if (currentTheme === 'light') {
+					localStorage.removeItem('theme');
+					setDarkTheme('auto');
+				} else {
+					localStorage.setItem('theme', 'light');
+					setDarkTheme('light');
+				}
+			} else {
+				if (currentTheme === 'dark') {
+					localStorage.removeItem('theme');
+					setDarkTheme('auto');
+				} else {
+					localStorage.setItem('theme', 'dark');
+					setDarkTheme('dark');
+				}
+			}
+		};
+	}
+
+	window.addEventListener('load', () => {
+		// THIS SHOULD ONLY BE CALLED WHEN ALL CSS HAS BEEN LOADED
+		const toggleTheme = themeToggler();
+
+		document.querySelectorAll('[data-aw-toggle-color-scheme]')?.forEach((elem) => {
+			if (!elem.classList.contains('hidden')) {
+				// elem already visible, prevent adding event listener again
+				return;
+			}
+			elem.classList.remove('hidden');
+			elem.addEventListener('click', toggleTheme, false);
+		});
+	});
+</script>
