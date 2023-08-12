@@ -3,6 +3,9 @@ import { Icon } from 'astro-icon';
 import Logo from '~/components/widgets/Logo.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
+
 
 interface Link {
   text?: string;
@@ -43,6 +46,10 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
+      <div class="flex items-center md:hidden">
+        <ToggleTheme />
+				<ToggleMenu />
+			</div>
     </div>
     <nav
       class="items-center w-full md:w-auto hidden md:flex dark:text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
