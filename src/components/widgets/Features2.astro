@@ -1,10 +1,7 @@
 ---
-import { Icon } from 'astro-icon';
-
 interface Item {
   title?: string;
   description?: string;
-  icon?: string;
 }
 
 export interface Props {
@@ -12,6 +9,7 @@ export interface Props {
   subtitle?: string;
   highlight?: string;
   items: Array<Item>;
+  cols?: string;
 }
 
 const {
@@ -19,12 +17,13 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   highlight,
   items = [],
+  cols = '3',
 } = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative not-prose">
   <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
-  <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 -mb-12">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 -mb-12">
     <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
       {
         (title || subtitle || highlight) && (
@@ -43,23 +42,19 @@ const {
             )}
 
             {subtitle && (
-              <p
-                class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
-                set:html={subtitle}
-              />
+              <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
             )}
           </div>
         )
       }
-      <div class={`grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch`}>
+      <div class={`grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-${cols} my-12 dark:text-white items-stretch`}>
         {
-          items.map(({ title, description, icon }) => (
+          items.map(({ title, description }) => (
             <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
               <div class="flex items-center">
-                <Icon name={icon} class="w-10 h-10" />
                 <div class="ml-4 text-xl font-bold">{title}</div>
               </div>
-              {description && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={description} />}
+              {description && <p class="ml-4 text-muted dark:text-gray-400 text-md mt-4" set:html={description} />}
             </div>
           ))
         }

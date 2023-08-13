@@ -1,0 +1,33 @@
+---
+type Person = {
+  name: string;
+  position?: string;
+  about: string;
+  icon?: string;
+};
+
+interface Props {
+  title: string;
+  people: Person[];
+}
+const { title, people = [] } = Astro.props;
+---
+
+<div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+  <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight" set:text={title} />
+</div>
+<div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+  {
+    people.map((item) => (
+      <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+        <div class="flex items-center">
+          <div class="ml-4 text-xl font-bold">{item.name}</div>
+        </div>
+        <div class="flex items-center">
+          <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
+        </div>
+        {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
+      </div>
+    ))
+  }
+</div>

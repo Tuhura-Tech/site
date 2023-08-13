@@ -1,3 +1,5 @@
+import type { AstroComponentFactory } from 'astro/dist/runtime/server';
+
 export interface Post {
   id: string;
   slug: string;
@@ -18,8 +20,10 @@ export interface Post {
   tags?: Array<string>;
   author?: string;
 
-  Content: unknown;
+  Content: AstroComponentFactory;
   content?: string;
+
+  readingTime?: number;
 }
 
 export interface MetaSEO {

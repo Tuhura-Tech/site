@@ -1,7 +1,14 @@
-import slugify from 'limax';
+import slugify from 'slug';
 
 import { SITE } from '~/config.mjs';
-import { trim } from '~/utils/utils';
+
+const trim = (str = '', ch?: string) => {
+  let start = 0,
+    end = str.length || 0;
+  while (start < end && str[start] === ch) ++start;
+  while (end > start && str[end - 1] === ch) --end;
+  return start > 0 || end < str.length ? str.substring(start, end) : str;
+};
 
 export const trimSlash = (s: string) => trim(trim(s, '/'));
 const createPath = (...params: string[]) => {
@@ -21,21 +28,21 @@ export const cleanSlug = (text = '') =>
     .join('/');
 
 /** */
-export const getCanonical = (path = ''): string | URL => new URL(path, SITE.origin);
+export const getCanonical = (path = ''): string | URL => {
+  const url = String(new URL(path, SITE.origin));
+  if (SITE.trailingSlash == false && path && url.endsWith('/')) {
+    return url.slice(0, -1);
+  } else if (SITE.trailingSlash == true && path && !url.endsWith('/')) {
+    return url + '/';
+  }
+  return url;
+};
 
 /** */
 export const getPermalink = (slug = '', type = 'page'): string => {
   let permalink: string;
 
   switch (type) {
-    case 'category':
-      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
-      break;
-
-    case 'tag':
-      permalink = createPath(TAG_BASE, trimSlash(slug));
-      break;
-
     case 'post':
       permalink = createPath(trimSlash(slug));
       break;
@@ -62,3 +69,8 @@ export const getAsset = (path: string): string =>
 
 /** */
 const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
+
+/** */
+export const getRelativeLink = (link = '') => {
+  return createPath(BASE_PATHNAME, trimSlash(link));
+};
