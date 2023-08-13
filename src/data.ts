@@ -38,7 +38,7 @@ export const footerData = {
         // { title: 'Fediverse - Mastodon', href: 'https://mastodon.tuhuratech.org.nz/@tuhuratech' },
         // { title: 'Fediverse - Pixelfed', href: 'https://pixelfed.tuhuratech.org.nz/@tuhuratech' },
         // { title: 'Matrix space', href: 'https://matrix.to/#/#home:matrix.tuhuratech.org.nz' },
-        // { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
+        { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
         { title: 'Discord', href: 'https://discord.gg/PNxh7cwKfQ' },
         // { title: 'Git', href: 'https://git.tuhuratech.org.nz/tuhuratech' },
         // { title: 'Identity proofs', href: 'https://keyoxide.org/contact@tuhuratech.org.nz' },
