@@ -17,7 +17,7 @@ const {
 <script>
   function darkRuleOverrider() {
     // Gather the dark-mode rules (stylesheets must have already loaded)
-    const darkRules = [];
+    const darkRules: CSSMediaRule[] = [];
     for (const stylesheet of document.styleSheets) {
       for (const rule of (stylesheet as CSSStyleSheet).cssRules) {
         if (rule instanceof CSSMediaRule && rule.media?.mediaText === '(prefers-color-scheme: dark)') {
@@ -26,7 +26,7 @@ const {
       }
     }
 
-    return function setDarkTheme(theme) {
+    return function setDarkTheme(theme: string) {
       let medium = '(prefers-color-scheme: dark)'; // auto
       if (theme == 'dark') {
         // enable all dark-scheme styles

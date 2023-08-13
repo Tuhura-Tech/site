@@ -19,10 +19,12 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# Visual Studio Code
+.vscode
+
 # eslintrc
 .eslintcache
 
 package-lock.json
-pnpm-lock.yaml
 
 .astro
