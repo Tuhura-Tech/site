@@ -19,7 +19,7 @@ interface Props {
 const { frontmatter, headings } = Astro.props;
 
 const meta = {
-  title: `${frontmatter.title} | ${SITE.title}`,
+  title: `${frontmatter.title} | ${SITE.name},
   description: headings[0]?.text || '',
 };
 ---

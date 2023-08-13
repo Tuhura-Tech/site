@@ -8,7 +8,7 @@ import People from '~/components/widgets/People.astro';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 
 const meta = {
-  title: `Our People`,
+  title: `Our People | ${SITE.name}`,
   description: SITE.description,
   canonical: getCanonical(getPermalink('our-people')),
 };
