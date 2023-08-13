@@ -41,7 +41,7 @@ export const footerData = {
         { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
         { title: 'Discord', href: 'https://discord.gg/PNxh7cwKfQ' },
         // { title: 'Git', href: 'https://git.tuhuratech.org.nz/tuhuratech' },
-        // { title: 'Identity proofs', href: 'https://keyoxide.org/contact@tuhuratech.org.nz' },
+        { title: 'Identity proofs', href: 'https://keyoxide.org/contact@tuhuratech.org.nz' },
       ],
     },
   ],

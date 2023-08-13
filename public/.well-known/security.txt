@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:contact@tuhuratech.org.nz
+Expires: 2025-08-13T00:30:00.000Z
+Encryption: http://pgp.net.nz:11371/pks/lookup?op=get&search=0xAFAB5D767F147657
+Preferred-Languages: en
+Canonical: https://tuhuratech.org.nz/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iJAEARYKADgWIQTM376NKbwNM9oIpuevq112fxR2VwUCZNijmRocY29udGFjdEB0
+dWh1cmF0ZWNoLm9yZy5uegAKCRCvq112fxR2V3DIAP9q0TI1YqzPUIsaPTEYPGvl
+w6DZHEmlWeaSB63InU9yMwEAuEeVk+Cqiqy5WxYpSJV17AQ88g1PU3zpjM57/Gxq
+4A4=
+=1YZQ
+-----END PGP SIGNATURE-----
