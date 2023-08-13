@@ -3,8 +3,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { SITE } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
+import People from '~/components/widgets/People.astro';
 
-import { getCanonical, getPermalink, getRelativeLink } from '~/utils/permalinks';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
 
 const meta = {
   title: `Our People`,
@@ -26,11 +27,10 @@ const team: Person[] = [
     about:
       'Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.',
   },
-  
 ];
 
 const volunteers: Person[] = [
-{
+  {
     name: 'Ai Winters',
     position: 'Volunteer',
     about:
@@ -73,7 +73,8 @@ const board: Person[] = [
   {
     name: 'Justin Chua',
     position: 'Board Member',
-    about: 'Currently a student at Massey University they are passionate about giving kids opportunities and supporting them. They view accessible and public resources and education as essential and want to help the charity have the maximum possible reach.',
+    about:
+      'Currently a student at Massey University they are passionate about giving kids opportunities and supporting them. They view accessible and public resources and education as essential and want to help the charity have the maximum possible reach.',
   },
   {
     name: 'Thomas Jackson',
@@ -87,10 +88,12 @@ const board: Person[] = [
 <Layout {meta}>
   <Fragment>
     <div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
-    <h2
-            class="text-4xl md:text-5xl leading-tighter tracking-tighter font-heading pb-6 bg-gradient-to-r from-teal-400 to-green-700 bg-clip-text text-transparent font-bold"
-          >Our People</h2>
-  </div>
+      <h2
+        class="text-4xl md:text-5xl leading-tighter tracking-tighter font-heading pb-6 bg-gradient-to-r from-teal-400 to-green-700 bg-clip-text text-transparent font-bold"
+      >
+        Our People
+      </h2>
+    </div>
     <div class="flex flex-col gap-3 mx-auto max-w-4xl">
       <p class="text-lg leading-relaxed text-slate-500 mb-10 md:mb-20">
         Tūhura Tech is a group of tech-savvy and education-focused individuals who saw a need for better technology
@@ -103,73 +106,20 @@ const board: Person[] = [
         and schools with the tools and knowledge they need to succeed.
       </p>
     </div>
-    <!-- Team -->
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Staff</h1>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        team.map((item) => (
-          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
-            <div class="flex items-center">
-              <div class="ml-4 text-xl font-bold">{item.name}</div>
-            </div>
-            <div class="flex items-center">
-              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
-            </div>
-            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
-          </div>
-        ))
-      }
-    </div>
 
-    <!-- Team -->
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Volunteers</h1>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        volunteers.map((item) => (
-          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
-            <div class="flex items-center">
-              <div class="ml-4 text-xl font-bold">{item.name}</div>
-            </div>
-            <div class="flex items-center">
-              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
-            </div>
-            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
-          </div>
-        ))
-      }
-    </div>
+    <People title="Our Staff" people={team} />
+
+    <People title="Our Volunteers" people={volunteers} />
+
     <CallToAction
-    title="Volunteer with us"
-    ,
-    subtitle="Come join our volunteering team and help support students in your region. Any experience is appreciate with either helping teaching, building resources or helping maintain our infrastructure. Send us an email if you are keen to help volunteer."
-    ,
-    callToAction={{ text: 'Contact Us', href: '/contact-us' }}
-  />
+      title="Volunteer with us"
+      subtitle="Come join our volunteering team and help support students in your region. Any experience is appreciate with either helping teaching, building resources or helping maintain our infrastructure. Send us an email if you are keen to help volunteer."
+      callToAction={{ text: 'Contact Us', href: '/contact-us' }}
+    />
 
     <!-- Board -->
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Our Board</h1>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        board.map((item) => (
-          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
-            <div class="flex items-center">
-              <div class="ml-4 text-xl font-bold">{item.name}</div>
-            </div>
-            <div class="flex items-center">
-              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
-            </div>
-            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
-          </div>
-        ))
-      }
-    </div>
+    <People title="Our Board" people={board} />
     <br />
-  <br />
-  
+    <br />
+  </Fragment>
 </Layout>

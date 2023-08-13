@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import { Image } from 'astro:assets';
-import logoIcon from "~/assets/images/logo-icon.png"
+import logoIcon from '~/assets/images/logo-icon.png';
 
 export interface Props {
   title: string;
@@ -30,7 +30,7 @@ const {
 
           <p class="text-3xl md:text-3xl mb-8">
             <span set:html={subtitle} />
-            
+
             <span
               class="bg-gradient-to-r from-teal-400 to-green-700 bg-clip-text text-transparent"
               set:html={subtitleColor}
@@ -41,13 +41,11 @@ const {
           <Image
             src={logoIcon}
             class="h-auto w-auto md:max-w-[125%] md:max-h-[calc(100%+20em)] mx-auto relative -mt-10 -z-10"
-            widths={[407, 814, 1273]}
             sizes="(max-width: 767px) 407px, (max-width: 1479px) 814px, 1629px"
             alt=""
             loading="eager"
             width={1629}
             height={1273}
-            formats={['webp', 'png']}
           />
         </div>
         <div class="text-justify md:text-left">

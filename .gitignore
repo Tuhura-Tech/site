@@ -19,6 +19,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# eslintrc
+.eslintcache
+
 package-lock.json
 pnpm-lock.yaml
 

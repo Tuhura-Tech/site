@@ -1,6 +1,4 @@
 ---
-import { Icon } from 'astro-icon';
-
 interface Item {
   title?: string;
   description?: string;
@@ -11,7 +9,7 @@ export interface Props {
   subtitle?: string;
   highlight?: string;
   items: Array<Item>;
-  cols: string;
+  cols?: string;
 }
 
 const {
@@ -19,7 +17,7 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   highlight,
   items = [],
-  cols = 3,
+  cols = '3',
 } = Astro.props;
 ---
 

@@ -59,11 +59,6 @@
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
 
-@font-face {
-  font-family: 'ADELIA';
-  src: url('../public/fonts/ADELIA.otf');
-}
-
 :root {
   --aw-font-sans: 'InterVariable';
 }
