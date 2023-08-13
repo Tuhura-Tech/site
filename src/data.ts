@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: getPermalink('/contact'),
+      href: getPermalink('/contact-us'),
     },
     {
       text: 'Wiki',
@@ -60,6 +60,7 @@ export const footerData = {
     //   href: 'https://pixelfed.tuhuratech.org.nz/@tuhuratech',
     // },
     // { label: 'Git', icon: 'tabler:git-merge', href: 'https://git.tuhuratech.org.nz/tuhuratech' },
+    { label: 'Discord', icon: 'simple-icons:discord', href: 'https://discord.gg/JEHncpzRcv' },
     { label: 'Facebook', icon: 'simple-icons:facebook', href: 'https://www.facebook.com/tuhuratech' },
     { label: 'LinkedIn', icon: 'simple-icons:linkedin', href: 'https://www.linkedin.com/company/tuhuratech' },
     { label: 'Instagram', icon: 'simple-icons:instagram', href: 'https://www.instagram.com/tuhuratech' },
