@@ -22,7 +22,7 @@ export interface Props {
 const { socialLinks = [], links = [] } = Astro.props;
 ---
 
-<footer class="border-t border-gray-200 dark:border-steel-700 dark:bg-steel-900">
+<footer class="border-t border-gray-200">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-6">
@@ -33,7 +33,7 @@ const { socialLinks = [], links = [] } = Astro.props;
         </div>
         <div class="text-sm text-zinc-600 dark:text-zinc-400">
           <a
-            class="text-zinc-600 dark:text-zinc-300 hover:text-primary-600 dark:hover:text-primary-400 hover:underline decoration-steel-200 dark:decoration-steel-500 hover:decoration-current transition duration-150 ease-in-out"
+            class="text-zinc-600 dark:text-zinc-300 hover:text-primary-600 dark:hover:text-primary-400 hover:underline hover:decoration-current transition duration-150 ease-in-out"
             href={getPermalink('privacy-policy', 'page')}>Privacy Policy</a
           >
         </div>
@@ -50,7 +50,7 @@ const { socialLinks = [], links = [] } = Astro.props;
                       class="
 												text-zinc-600 hover:text-primary-600 hover:underline
 												dark:text-zinc-300 dark:hover:text-primary-400
-												underline-offset-4 decoration-steel-200 dark:decoration-steel-600 hover:decoration-current
+												underline-offset-4 hover:decoration-current
 												transition duration-150 ease-in-out
 											"
                       href={href}
@@ -71,7 +71,7 @@ const { socialLinks = [], links = [] } = Astro.props;
           socialLinks.map(({ title, href, icon }) => (
             <li>
               <a
-                class="text-zinc-500 dark:text-zinc-400 hover:bg-steel-100 dark:hover:bg-steel-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                class="text-zinc-500 dark:text-zinc-400 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                 aria-label={title}
                 href={href}
                 rel="me"
@@ -87,12 +87,12 @@ const { socialLinks = [], links = [] } = Astro.props;
         Copyright © {new Date().getFullYear()} Tuhura Tech. Content available under
         <a
           href="https://creativecommons.org/licenses/by-sa/4.0/"
-          class="hover:text-primary-600 dark:hover:text-primary-400 underline decoration-steel-200 dark:decoration-steel-500 hover:decoration-current transition duration-150 ease-in-out"
+          class="hover:text-primary-600 dark:hover:text-primary-400 underline hover:decoration-current transition duration-150 ease-in-out"
           >CC BY-SA 4.0</a
         >, unless stated otherwise.<br />
         Registered Charitable Trust <a
           href="https://www.register.charities.govt.nz/Charity/CC60416"
-          class="hover:text-primary-600 dark:hover:text-primary-400 underline decoration-steel-200 dark:decoration-steel-500 hover:decoration-current transition duration-150 ease-in-out"
+          class="hover:text-primary-600 dark:hover:text-primary-400 underline hover:decoration-current transition duration-150 ease-in-out"
           >CC60416</a
         >.<br />
       </div>

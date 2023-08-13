@@ -110,13 +110,14 @@ const board: Person[] = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         team.map((item) => (
-          <div class="group">
-            <div class="mt-4 text-center">
-              {item.icon && <img src={getRelativeLink(item.icon)} />}
-              <h2 class="text-lg"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.position}</h3>
-              <p class="text-slate-600 mt-2">{item.about}</p>
+          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+            <div class="flex items-center">
+              <div class="ml-4 text-xl font-bold">{item.name}</div>
             </div>
+            <div class="flex items-center">
+              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
+            </div>
+            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
           </div>
         ))
       }
@@ -129,13 +130,14 @@ const board: Person[] = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         volunteers.map((item) => (
-          <div class="group">
-            <div class="mt-4 text-center">
-              {item.icon && <img src={getRelativeLink(item.icon)} />}
-              <h2 class="text-lg"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.position}</h3>
-              <p class="text-slate-600 mt-2">{item.about}</p>
+          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+            <div class="flex items-center">
+              <div class="ml-4 text-xl font-bold">{item.name}</div>
             </div>
+            <div class="flex items-center">
+              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
+            </div>
+            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
           </div>
         ))
       }
@@ -155,12 +157,14 @@ const board: Person[] = [
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         board.map((item) => (
-          <div class="group">
-            <div class="mt-4 text-center">
-              <h2 class="text-lg"> {item.name}</h2>
-              <h3 class="text-sm text-slate-500"> {item.position}</h3>
-              <p class="text-sm text-slate-500"> {item.about}</p>
+          <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+            <div class="flex items-center">
+              <div class="ml-4 text-xl font-bold">{item.name}</div>
             </div>
+            <div class="flex items-center">
+              <h3 class="ml-4 text-sm text-slate-500"> {item.position}</h3>
+            </div>
+            {item.about && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={item.about} />}
           </div>
         ))
       }

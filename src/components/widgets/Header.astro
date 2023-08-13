@@ -1,10 +1,10 @@
 ---
 import { Icon } from 'astro-icon';
-import Logo from '~/components/widgets/Logo.astro';
+import Logo from '~/components/atoms/Logo.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
-import ToggleMenu from '~/components/common/ToggleMenu.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import ToggleMenu from '~/components/core/ToggleMenu.astro';
+import ToggleTheme from '~/components/core/ToggleTheme.astro';
 
 
 interface Link {
@@ -90,6 +90,7 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
         }
       </ul>
     </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}></div>
+    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+      <ToggleTheme />
   </div>
 </header>

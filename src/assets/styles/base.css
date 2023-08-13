@@ -63,3 +63,7 @@
   font-family: 'ADELIA';
   src: url('../public/fonts/ADELIA.otf');
 }
+
+:root {
+  --aw-font-sans: 'InterVariable';
+}

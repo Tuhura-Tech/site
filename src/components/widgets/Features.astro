@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="scroll-mt-16 dark:bg-steel-700" id="features">
+<section class="scroll-mt-16" id="features">
   <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
     <div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
       <h2
@@ -28,7 +28,7 @@ const {
         set:html={title}
       />
       <p
-        class="max-w-3xl mx-auto sm:text-center text-xl text-steel-600 dark:text-steel-100 py-3 my-3 border-y border-steel-100 dark:border-steel-600"
+        class="max-w-3xl mx-auto sm:text-center text-xl py-3 my-3 border-y"
         set:html={subtitle}
       />
     </div>
@@ -44,13 +44,13 @@ const {
                 <div>
                   <h3
                     class="
-										leading-10 text-xl font-bold text-steel-600 dark:text-white
-										underline decoration-1 decoration-steel-100 dark:decoration-steel-600 underline-offset-[0.5rem]
+										leading-10 text-xl font-bold  dark:text-white
+										underline decoration-1  underline-offset-[0.5rem]
 									"
                   >
                     {title}
                   </h3>
-                  <p class="text-steel-600 dark:text-steel-200" set:html={description} />
+                  <p set:html={description} />
                 </div>
               </div>
             ))}

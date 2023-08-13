@@ -18,11 +18,6 @@ interface Props {
 }
 const { frontmatter, headings } = Astro.props;
 
-let license_url;
-if (frontmatter.license != null) {
-  license_url = 'https://spdx.org/licenses/' + frontmatter.license + '.html';
-}
-
 const meta = {
   title: `${frontmatter.title} | ${SITE.title}`,
   description: headings[0]?.text || '',
@@ -57,24 +52,12 @@ const meta = {
         )
       }
       <div
-        class="container prose prose-steel dark:prose-invert prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:underline-offset-4 prose-a:decoration-steel-200 dark:prose-a:decoration-steel-500 hover:prose-a:text-primary-600 dark:hover:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lgr"
+        class="container prose dark:prose-invert prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:underline-offset-4 hover:prose-a:text-primary-600 dark:hover:prose-a:text-primary-400 prose-img:rounded-md prose-img:shadow-lgr"
       >
-        <h1 id="top" class="mb-6 pb-6 border-b border-steel-100 dark:border-steel-700">
+        <h1 id="top" class="mb-6 pb-6 border-b0">
           {frontmatter.title}
         </h1>
         <slot />
-        {
-          frontmatter.license && (
-            <p class="page-license">
-              This page's content is available under the <a href={license_url}>{frontmatter.license}</a> license.
-              {frontmatter.origin_url && (
-                <span>
-                  It is derived from this <a href={frontmatter.origin_url}>original source</a>.
-                </span>
-              )}
-            </p>
-          )
-        }
       </div>
     </div>
   </section>
