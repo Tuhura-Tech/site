@@ -90,7 +90,10 @@ const { links = [], isSticky = false, position = 'center' } = Astro.props;
         }
       </ul>
     </nav>
-    <div class:list={[{ 'ml-auto': position === 'left' }, 'md:self-center flex items-center md:mb-0']}>
+    <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+      <div class="hidden items-center md:flex">
       <ToggleTheme />
+      </div>
+      </div>
   </div>
 </header>
