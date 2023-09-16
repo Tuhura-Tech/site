@@ -29,10 +29,6 @@ export default defineConfig({
 		mdx(),
 	],
 
-  experimental: {
-    assets: true
-  },
-
   image: {
     service: sharpImageService(),
   },
