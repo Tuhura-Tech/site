@@ -25,6 +25,4 @@ pnpm-debug.log*
 # eslintrc
 .eslintcache
 
-package-lock.json
-
 .astro
