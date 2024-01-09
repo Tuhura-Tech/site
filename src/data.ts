@@ -35,8 +35,7 @@ export const footerData = {
     {
       title: 'Community',
       items: [
-        // { title: 'Fediverse - Mastodon', href: 'https://mastodon.tuhuratech.org.nz/@tuhuratech' },
-        // { title: 'Fediverse - Pixelfed', href: 'https://pixelfed.tuhuratech.org.nz/@tuhuratech' },
+        { title: 'Fediverse - Mastodon', href: 'https://mastodon.nzoss.nz/@tuhuratech' },
         // { title: 'Matrix space', href: 'https://matrix.to/#/#home:matrix.tuhuratech.org.nz' },
         { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
         { title: 'Discord', href: 'https://discord.gg/PNxh7cwKfQ' },
@@ -47,13 +46,12 @@ export const footerData = {
   ],
 
   socialLinks: [
-    // { label: 'Keyoxide', icon: 'ic:round-verified', href: 'https://keyoxide.org/contact@tuhuratech.org.nz' },
     // { label: 'Matrix space', icon: 'simple-icons:matrix', href: 'https://matrix.to/#/#home:matrix.tuhuratech.org.nz' },
-    // {
-    //   label: 'Mastodon',
-    //   icon: 'simple-icons:mastodon',
-    //   href: 'https://mastodon.tuhuratech.org.nz/@tuhuratech',
-    // },
+    {
+      label: 'Mastodon',
+      icon: 'simple-icons:mastodon',
+      href: 'https://mastodon.nzoss.nz/@tuhuratech',
+    },
     // {
     //   label: 'Pixelfed',
     //   icon: 'ri:pixelfed-fill',
