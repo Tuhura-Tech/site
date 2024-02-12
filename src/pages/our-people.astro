@@ -31,17 +31,23 @@ const team: Person[] = [
     name: 'Ai Winters',
     position: 'Head Mentor',
     about:
-      'Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.'
+      'Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.',
   },
   {
-    name: 'Ari Mulligan',
+    name: 'Jennifer Howard',
     position: 'Head Mentor',
     about:
-      "She is currently studying a Bachelors of Computer Science and Media Design at Victoria University, who loves creating, solving and learning anything technological. As front-end development is her primary canvas, she's excited to help all kids paint the digital future."
+      'Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.',
   },
 ];
 
 const volunteers: Person[] = [
+  {
+    name: 'Nixia C',
+    position: 'Volunteer',
+    about:
+      'A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look professional and clear. They originally designed our Logo and now actively support us on all materials.',
+  },
   {
     name: 'Sofie Claridge',
     position: 'Volunteer',
@@ -49,10 +55,9 @@ const volunteers: Person[] = [
       'Currently studying a Master of Computer Science at Te Herenga Waka - Victoria University of Wellington she has a passion for wearable technology. ',
   },
   {
-    name: 'Nixia C',
+    name: 'Izaak Karasawa',
     position: 'Volunteer',
-    about:
-      'A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look professional and clear. They originally designed our Logo and now actively support us on all materials.',
+    about: 'Cybersecurity professional and blue team enthusiast. wants to see the industry in New Zealand grow and evolve.',
   },
 ];
 
@@ -61,7 +66,7 @@ const board: Person[] = [
     name: 'Leon Bowie',
     position: 'Chair',
     about:
-      'Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former robocup nz representative and NZ cyber security competition winner has a range of interests and passions across technology.',
+      'Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former Robocup NZ representative and NZ Cyber Security Competition winner has a range of interests and passions across technology.',
   },
   {
     name: 'John Barrow',
@@ -73,7 +78,7 @@ const board: Person[] = [
     name: 'Lillian Pak',
     position: 'Treasurer',
     about:
-      'Kia ora koutou katoa! Ko wai ahau? Nō Kōria ki te Tonga me Īnia ōku tīpuna. I whānau mai ahau ki Edmonton. I tipu ake ahau ki Kānata. Ko Rocky Mountains ngā maunga. Ko Saskatchewan ki te Tokerau te awa. Ko Doha me Naenae ōku whatumanawa. I tae mai ahau ki Aotearoa i te tau rua mano. E noho ana ahau ki te Awa Kairangi ki Tai. Ko Lillian tōku ingoa.\n \n \nLillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.',
+      'Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.',
     icon: 'images/lillian.png',
   },
   {
@@ -106,14 +111,20 @@ const board: Person[] = [
         education resources for students and schools in the Wellington area. Driven by a passion for technology and
         education, we founded Tūhura Tech to provide consistent and comprehensive support for those looking to learn
         about technology. Our team is dedicated to helping students and schools grow their technological knowledge and
-        skills to prepare them for the future. <br /><br /> With a focus on quality and accessibility, Tūhura Tech offers
-        a range of resources, including educational programs and workshops, designed to meet the needs of students and schools.
-        We believe that technology plays a critical role in shaping the future, and we are committed to empowering students
-        and schools with the tools and knowledge they need to succeed.
+        skills to prepare them for the future. <br /><br /> With a focus on quality and accessibility, Tūhura Tech
+        offers a range of resources, including educational programs and workshops, designed to meet the needs of
+        students and schools. We believe that technology plays a critical role in shaping the future, and we are
+        committed to empowering students and schools with the tools and knowledge they need to succeed.
       </p>
     </div>
 
     <People title="Our Staff" people={team} />
+
+    <CallToAction
+      title="Join our Team"
+      subtitle="We are looking for more people to join our team and help grow our mahi. We pay $40 per hour and are looking for more Head Mentors (10 hours per week) or for other people to join our team. Send us an email with your cv if interested."
+      callToAction={{ text: 'Contact Us', href: '/contact-us' }}
+    />
 
     <People title="Our Volunteers" people={volunteers} />
 
