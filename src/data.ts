@@ -29,7 +29,7 @@ export const footerData = {
       items: [
         { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
         // { title: 'Forum', href: 'https://forum.tuhuratech.org.nz' },
-        // { title: 'Git', href: 'https://git.tuhuratech.org.nz' },
+        { title: 'Git', href: 'https://github.com/Tuhura-Tech' },
       ],
     },
     {
@@ -61,6 +61,6 @@ export const footerData = {
     { label: 'Discord', icon: 'simple-icons:discord', href: 'https://discord.gg/JEHncpzRcv' },
     { label: 'Facebook', icon: 'simple-icons:facebook', href: 'https://www.facebook.com/tuhuratech' },
     { label: 'LinkedIn', icon: 'simple-icons:linkedin', href: 'https://www.linkedin.com/company/tuhuratech' },
-    { label: 'Instagram', icon: 'simple-icons:instagram', href: 'https://www.instagram.com/tuhuratech' },
+    { label: 'Instagram', icon: 'simple-icons:instagram', href: 'https://www.instagram.com/tuhura_tech' },
   ],
 };
