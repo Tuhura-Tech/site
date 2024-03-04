@@ -37,6 +37,7 @@ const {
             {title && (
               <h2
                 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                id={title.replace(/\s/g, '-').toLowerCase()}
                 set:html={title}
               />
             )}

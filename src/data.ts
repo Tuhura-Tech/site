@@ -36,28 +36,19 @@ export const footerData = {
       title: 'Community',
       items: [
         { title: 'Fediverse - Mastodon', href: 'https://mastodon.nzoss.nz/@tuhuratech' },
-        // { title: 'Matrix space', href: 'https://matrix.to/#/#home:matrix.tuhuratech.org.nz' },
         { title: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
         { title: 'Discord', href: 'https://discord.gg/PNxh7cwKfQ' },
-        // { title: 'Git', href: 'https://git.tuhuratech.org.nz/tuhuratech' },
         { title: 'Identity proofs', href: 'https://keyoxide.org/contact@tuhuratech.org.nz' },
       ],
     },
   ],
 
   socialLinks: [
-    // { label: 'Matrix space', icon: 'simple-icons:matrix', href: 'https://matrix.to/#/#home:matrix.tuhuratech.org.nz' },
     {
       label: 'Mastodon',
       icon: 'simple-icons:mastodon',
       href: 'https://mastodon.nzoss.nz/@tuhuratech',
     },
-    // {
-    //   label: 'Pixelfed',
-    //   icon: 'ri:pixelfed-fill',
-    //   href: 'https://pixelfed.tuhuratech.org.nz/@tuhuratech',
-    // },
-    // { label: 'Git', icon: 'tabler:git-merge', href: 'https://git.tuhuratech.org.nz/tuhuratech' },
     { label: 'Discord', icon: 'simple-icons:discord', href: 'https://discord.gg/JEHncpzRcv' },
     { label: 'Facebook', icon: 'simple-icons:facebook', href: 'https://www.facebook.com/tuhuratech' },
     { label: 'LinkedIn', icon: 'simple-icons:linkedin', href: 'https://www.linkedin.com/company/tuhuratech' },
