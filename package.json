@@ -28,7 +28,7 @@
     "astro": "^4.0.0",
     "astro-icon": "^0.8.1",
     "eslint": "^8.47.0",
-    "eslint-plugin-astro": "^0.33.0",
+    "eslint-plugin-astro": "^1.0.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "husky": "^9.0.0",
     "marked": "^12.0.0",
