@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Contact from "@components/Contact.astro";
+import Pricing from "@components/Pricing.astro";
+import heroImage from "@images/hero.avif";
+
+const title = "Support Us";
+
+const tiers = [
+  {
+    title: "Sponsor a Session",
+    amount: "$5,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+  {
+    title: "Sponsor ",
+    amount: "$10,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+  {
+    title: "Bronze",
+    amount: "$25,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+  {
+    title: "Silver",
+    amount: "$50,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+  {
+    title: "Gold",
+    amount: "$100,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+  {
+    title: "Diamond",
+    amount: "$250,000",
+    desc: ["8-16 rangatahi", "1 session location for a year"],
+  },
+];
+---
+
+<Layout meta={{ title }}>
+  <Pricing tiers={tiers} />
+
+  <Contact
+    title="Sponsor Us"
+    contactImage={heroImage}
+    email="sponsorship@tuhuratech.org.nz"
+    phone="0211990711"
+  />
+</Layout>

@@ -1,0 +1,16 @@
+---
+import Layout from "@layouts/Layout.astro";
+import heroImage from "@images/hero.avif";
+import ContactComponent from "@components/Contact.astro";
+
+const title = "Contact Us";
+---
+
+<Layout meta={{ title }}>
+  <ContactComponent
+    title="Contact Us"
+    contactImage={heroImage}
+    email="contact@tuhuratech.org.nz"
+    phone="0211990711"
+  />
+</Layout>

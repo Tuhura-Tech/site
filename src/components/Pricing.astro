@@ -1,0 +1,48 @@
+---
+interface Props {
+  tiers: { title: string; amount: string; desc: string[] }[];
+}
+const { tiers } = Astro.props;
+---
+
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-primary">
+      Join as a Sponsor
+    </h2>
+    <p class="mt-1 text-gray-600 dark:text-neutral-400">
+      Our mahi relies on sponsorship from organisations and people like you who
+      directly help build the future.
+    </p>
+  </div>
+
+  <div
+    class="relative before:absolute before:inset-0 before:-z-[1] before:bg-[radial-gradient(closest-side,#cbd5e1,transparent)] dark:before:bg-[radial-gradient(closest-side,#525252,transparent)] mt-12"
+  >
+    <div class="grid gap-px sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
+      {
+        tiers.map((tier) => (
+          <div class="flex flex-col h-full text-center">
+            <div class="bg-white pt-8 pb-5 px-8 dark:bg-neutral-900">
+              <h4 class="font-medium text-lg text-secondary">{tier.title}</h4>
+            </div>
+
+            <div class="h-full bg-white lg:mt-px lg:py-5 px-8 dark:bg-neutral-900">
+              <span class="mt-7 font-bold text-5xl text-gray-800 dark:text-neutral-200">
+                {tier.amount}
+              </span>
+            </div>
+
+            <div class="bg-white flex justify-center lg:mt-px pt-7 px-8 dark:bg-neutral-900">
+              <ul class="space-y-2.5 text-center text-sm">
+                {tier.desc.map((item) => (
+                  <li class="text-gray-800 dark:text-neutral-400">{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
