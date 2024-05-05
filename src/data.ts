@@ -142,20 +142,10 @@ export const people: Person[] = [
 export const SITE = {
   title: "Tūhura Tech",
   tagline: "Empowering the next generation through Technology Education.",
-  description:
-    "Tūhura Tech offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
+  description: "Empowering the next generation through Technology Education",
   description_short:
-    "Tūhura Tech offers top-tier hardware tools and expert construction services to meet all your project needs.",
+    "Empowering the next generation through Technology Education",
   url: "https://tuhuratech.org.nz",
-  author: "Tūhura Tech",
-};
-
-export const OG = {
-  type: "website",
-  url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description:
-    "Equip your projects with Tūhura Tech's top-quality hardware tools and expert construction services. Trusted by industry leaders, Tūhura Tech offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
   image: ogImageSrc,
 };
 

@@ -4,7 +4,7 @@ import { getImage } from "astro:assets";
 import faviconSvgSrc from "@images/icon.svg";
 import faviconSrc from "@images/icon.png";
 
-import { SITE, OG } from "../data";
+import { SITE } from "../data";
 
 interface Props {
   meta: string;
@@ -19,10 +19,10 @@ const { meta = defaultProps.meta, title } = Astro.props;
 
 const URL = `${Astro.site}`;
 const canonical = Astro.url.href;
-const ogTitle = OG.title;
-const ogDescription = OG.description;
+const ogTitle = SITE.title;
+const ogDescription = SITE.description;
 const socialImageRes = await getImage({
-  src: OG.image,
+  src: SITE.image,
   width: 1200,
   height: 600,
 });
