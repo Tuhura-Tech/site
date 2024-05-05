@@ -216,6 +216,7 @@ export const headerLinks: HeaderLink[] = [
       { label: "What We Do", href: "/what-we-do" },
       { label: "Sessions", href: "/mahi/sessions" },
       { label: "School Sessions", href: "/mahi/school-sessions" },
+      { label: "Workshops", href: "/mahi/workshops" },
       { label: "Teacher Workshops", href: "/mahi/teacher-workshops" },
     ],
   },
