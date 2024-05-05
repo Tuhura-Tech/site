@@ -34,6 +34,10 @@ export interface FAQ {
   answer: string;
 }
 
+interface HeaderLink extends Link {
+  links?: Link[];
+}
+
 export const board: Person[] = [
   {
     name: "Leon Bowie",
@@ -204,10 +208,16 @@ export const footerLinks: LinkCategory[] = [
   },
 ];
 
-export const headerLinks: Link[] = [
+export const headerLinks: HeaderLink[] = [
   {
     label: "What We Do",
     href: "/what-we-do",
+    links: [
+      { label: "What We Do", href: "/what-we-do" },
+      { label: "Sessions", href: "/mahi/sessions" },
+      { label: "School Sessions", href: "/mahi/school-sessions" },
+      { label: "Teacher Workshops", href: "/mahi/teacher-workshops" },
+    ],
   },
   {
     label: "About Us",
@@ -230,22 +240,22 @@ export const headerLinks: Link[] = [
 export const socials: IconLink[] = [
   {
     label: "Mastodon",
-    icon: "simple-icons:mastodon",
+    icon: "mdi:mastodon",
     href: "https://mastodon.nzoss.nz/@tuhuratech",
   },
   {
     label: "Facebook",
-    icon: "simple-icons:facebook",
+    icon: "mdi:facebook",
     href: "https://www.facebook.com/tuhuratech",
   },
   {
     label: "LinkedIn",
-    icon: "simple-icons:linkedin",
+    icon: "mdi:linkedin",
     href: "https://www.linkedin.com/company/tuhuratech",
   },
   {
     label: "Instagram",
-    icon: "simple-icons:instagram",
+    icon: "mdi:instagram",
     href: "https://www.instagram.com/tuhura_tech",
   },
 ];

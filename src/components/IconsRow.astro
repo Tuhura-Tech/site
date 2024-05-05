@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  cards: { title: string; description: string; icon: string; href: string }[];
+}
+const { cards } = Astro.props;
+---
+
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
+    {
+      cards.map((card) => (
+        <div>
+          <Icon
+            name={card.icon}
+            class="flex-shrink-0 size-9 text-gray-800 dark:text-white"
+          />
+          <div class="bg-gradient-to-r from-gray-200 via-gray-50 to-transparent h-0.5 mt-6 dark:from-neutral-700 dark:via-neutral-900">
+            <div class="bg-gray-400 w-9 h-0.5 dark:bg-neutral-600" />
+          </div>
+          <div class="mt-5">
+            <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+              {card.title}
+            </h3>
+            <p class="mt-1 text-gray-600 dark:text-neutral-400">
+              {card.description}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
