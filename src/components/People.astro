@@ -1,5 +1,6 @@
 ---
 import { type Person } from "../data";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
@@ -35,11 +36,13 @@ import { Icon } from "astro-icon/components";
       people.map((person) => (
         <div class="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
           <div class="flex items-center gap-x-4">
-            <img
-              class="rounded-full size-20"
-              src="https://static.wixstatic.com/media/ae8659_fe972254d04c4ee2ab48af1a0b73a1c7~mv2.jpeg/v1/crop/x_0,y_252,w_1935,h_1939/fill/w_292,h_292,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/LeonHeadshot.jpeg"
-              alt="Image Description"
-            />
+            {person.image && (
+              <Image
+                src={person.image}
+                alt="Group of rangatahi"
+                class="rounded-full size-20"
+              />
+            )}
             <div class="grow">
               <h3 class="font-medium text-secondary">{person.name}</h3>
               <p class="text-xs uppercase text-gray-500 dark:text-neutral-500">

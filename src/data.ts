@@ -1,4 +1,5 @@
 import ogImageSrc from "@images/hero.avif";
+import nixHeadShot from "@images/people/nixia.jpeg";
 
 interface Link {
   label: string;
@@ -125,6 +126,7 @@ export const people: Person[] = [
     role: "Volunteer - Graphic Designer",
     about:
       "A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look professional and clear. They originally designed our Logo and now actively support us on all materials.",
+    image: nixHeadShot,
   },
   {
     name: "Abhishek Rameshanand",
