@@ -38,6 +38,17 @@ interface HeaderLink extends Link {
   links?: Link[];
 }
 
+export interface Session {
+  title: string;
+  ages: string;
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  time: string;
+  description: string;
+  type: "After School" | "During School Enrichment";
+  signupLink?: string;
+  starts?: string;
+}
+
 export const board: Person[] = [
   {
     name: "Leon Bowie",
@@ -285,17 +296,6 @@ export const faqs: FAQ[] = [
       "We are a group of volunteers, kaiako and industry professionals who all care about technology and want to support rangatahi.",
   },
 ];
-
-export interface Session {
-  title: string;
-  ages: string;
-  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
-  time: string;
-  description: string;
-  type: "After School" | "During School Enrichment";
-  signupLink?: string;
-  starts?: string;
-}
 
 export const sessions: { location: string; sessions: Session[] }[] = [
   {
