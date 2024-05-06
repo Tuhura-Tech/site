@@ -7,8 +7,9 @@ interface Props {
   contactImage: ImageMetadata;
   email: string;
   phone: string;
+  description: string[];
 }
-const { title, contactImage, email, phone } = Astro.props;
+const { title, contactImage, email, phone, description } = Astro.props;
 ---
 
 <div class="max-w-7xl px-4 lg:px-6 py-12 lg:py-24 mx-auto" id="contact">
@@ -32,12 +33,15 @@ const { title, contactImage, email, phone } = Astro.props;
     <div class="space-y-8 lg:space-y-16">
       <div>
         <h3 class="mb-5 font-semibold text-secondary">Our contacts</h3>
-        <p class="mb-5 dark:text-white">
-          Interested in a new location, sponsorship or any other questions?
-        </p>
         <p class="mb-10 dark:text-white">
-          Give us an email or call and we will get back to you as soon as we
-          can.
+          {
+            description.map((desc) => (
+              <>
+                <span>{desc}</span>
+                <br />
+              </>
+            ))
+          }
         </p>
 
         <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
