@@ -11,12 +11,12 @@ const { cards, location } = Astro.props;
 
 <!-- Icon Blocks -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <h1
-    class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white"
+  <h2
+    class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-4xl dark:text-white"
     id={location.toLowerCase().replace(" ", "-")}
   >
-    {location}
-  </h1>
+    <a href={location.toLowerCase().replace(" ", "-")}>{location}</a>
+  </h2>
   <br />
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6">
     <!-- Card -->
