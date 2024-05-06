@@ -32,10 +32,10 @@ const { title, contactImage, email, phone } = Astro.props;
     <div class="space-y-8 lg:space-y-16">
       <div>
         <h3 class="mb-5 font-semibold text-secondary">Our contacts</h3>
-        <p class="mb-5">
+        <p class="mb-5 dark:text-white">
           Interested in a new location, sponsorship or any other questions?
         </p>
-        <p class="mb-10">
+        <p class="mb-10 dark:text-white">
           Give us an email or call and we will get back to you as soon as we
           can.
         </p>
@@ -54,7 +54,7 @@ const { title, contactImage, email, phone } = Astro.props;
               </p>
               <p>
                 <a
-                  class="relative inline-block font-medium text-gray-600 dark:text-neutral-400before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 focus:outline-none"
+                  class="relative inline-block font-medium text-gray-600 dark:text-neutral-400 before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 focus:outline-none"
                   href={`mailto:${email}`}
                 >
                   {email}
