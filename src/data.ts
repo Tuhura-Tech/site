@@ -286,7 +286,18 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export const sessions = [
+export interface Session {
+  title: string;
+  ages: string;
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  time: string;
+  description: string;
+  type: "After School" | "During School Enrichment";
+  signupLink?: string;
+  starts?: string;
+}
+
+export const sessions: { location: string; sessions: Session[] }[] = [
   {
     location: "Wellington",
     sessions: [
@@ -343,6 +354,7 @@ export const sessions = [
         ages: "5 - 8",
         day: "Thursday",
         time: "3:30pm to 5:30pm",
+        starts: "Thursday 9th May",
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
@@ -353,6 +365,7 @@ export const sessions = [
         ages: "7 - 8",
         day: "Friday",
         time: "Schooltime",
+
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "During School Enrichment",
@@ -365,7 +378,8 @@ export const sessions = [
       {
         title: "Naenae Community Centre",
         ages: "5 - 8",
-        date: "Monday from 3:30pm to 5:30pm",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
@@ -378,7 +392,8 @@ export const sessions = [
       {
         title: "Ūpane",
         ages: "9 - 13",
-        date: "Monday from 3:30pm to 5:30pm",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
@@ -386,7 +401,8 @@ export const sessions = [
       {
         title: "Ūpane",
         ages: "5 - 8",
-        date: "Tuesday from 3:30pm to 5:30pm",
+        day: "Tuesday",
+        time: "3:30pm to 5:30pm",
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
