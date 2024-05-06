@@ -285,3 +285,112 @@ export const faqs: FAQ[] = [
       "We are a group of volunteers, kaiako and industry professionals who all care about technology and want to support rangatahi.",
   },
 ];
+
+export const sessions = [
+  {
+    location: "Wellington",
+    sessions: [
+      {
+        title: "Wellington Girls College",
+        ages: "9 - 13",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+      {
+        title: "Wellington High School",
+        ages: "9 - 13",
+        day: "Tuesday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+      {
+        title: "Te Tūhunga Rau Community Centre",
+        ages: "5 - 8",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+        signupLink: "https://forms.gle/uCXEsoksTq3tSEBfA",
+      },
+      {
+        title: "Wellington College",
+        ages: "9 - 13",
+        day: "Wednesday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+
+      {
+        title: "Te Whare Pukapuka o Te Māhanga - Karori Library",
+        ages: "5 - 8",
+        day: "Wednesday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+        signupLink: "https://forms.gle/PqwLGaTZJPuT4tLc6",
+      },
+      {
+        title: "Ruakawa Community Centre",
+        ages: "5 - 8",
+        day: "Thursday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+        signupLink: "https://forms.gle/yxiPE7ccqQ6SZ5DZ9",
+      },
+      {
+        title: "South Wellington Intermediate School",
+        ages: "7 - 8",
+        day: "Friday",
+        time: "Schooltime",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "During School Enrichment",
+      },
+    ],
+  },
+  {
+    location: "Lower Hutt",
+    sessions: [
+      {
+        title: "Naenae Community Centre",
+        ages: "5 - 8",
+        date: "Monday from 3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+    ],
+  },
+  {
+    location: "Porirua",
+    sessions: [
+      {
+        title: "Ūpane",
+        ages: "9 - 13",
+        date: "Monday from 3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+      {
+        title: "Ūpane",
+        ages: "5 - 8",
+        date: "Tuesday from 3:30pm to 5:30pm",
+        description:
+          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        type: "After School",
+      },
+    ],
+  },
+];
