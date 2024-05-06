@@ -25,6 +25,7 @@ const { cards, location } = Astro.props;
         <a
           class="group flex gap-y-6 size-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-neutral-800 dark:focus:outline-none dark:focus:outline-none dark:focus:bg-neutral-800"
           href={card.signupLink}
+          id={`${card.title}-${card.ages}`.toLowerCase().replaceAll(" ", "-")}
         >
           <Icon
             name="mdi:school"

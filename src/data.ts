@@ -383,6 +383,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
+        signupLink: "https://example.com",
       },
     ],
   },
@@ -397,6 +398,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
+        signupLink: "https://example.com",
       },
       {
         title: "Ūpane",
@@ -406,6 +408,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         description:
           "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
         type: "After School",
+        signupLink: "https://example.com",
       },
     ],
   },
