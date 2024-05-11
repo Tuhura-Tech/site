@@ -1,13 +1,12 @@
 ---
-import featureImage from "@images/hero.avif";
 import { Image } from "astro:assets";
 
 interface Props {
   title: string;
   description: string;
-  contactImage: ImageMetadata;
+  featureImage: ImageMetadata;
 }
-const { title, contactImage, description } = Astro.props;
+const { title, featureImage, description } = Astro.props;
 ---
 
 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,9 +18,7 @@ const { title, contactImage, description } = Astro.props;
         {title}
       </h1>
       <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">
-        Hands on in-person sessions combining subject experts with rangatahi on
-        areas that interest them. Everything done is practical with real world
-        applications with actual outcomes.
+        {description}
       </p>
     </div>
 
