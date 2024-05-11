@@ -1,7 +1,62 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import SmallHero from "@components/SmallHero.astro";
+import Contact from "@components/Contact.astro";
+import FAQs from "@components/FAQs.astro";
 
-const title = "What We Do";
+
+import featureImage from "@images/hero.avif";
+
+const title = "Workshops";
 ---
 
-<Layout meta={{ title }} />
+<Layout meta={{ title }}>
+  <SmallHero
+    title="Workshops"
+    featureImage={featureImage}
+    description="Workshops and coaching for specialist areas, competitions and other events to support our rangatahi."
+  />
+  <FAQs
+    title="What does this look like?"
+    faqs={[
+      {
+        question: "What ages do you work with?",
+        answer: "We work with rangatahi from years 5-13",
+      },
+      {
+        question: "Do you cover school curriculm?",
+        answer:
+          "We do not cover any areas of the school curriculm and instead cover topics outside of school curriculm.",
+      },
+      {
+        question: "What is the cost?",
+        answer: "Our sessions are free of charge to all rangatahi and whanau.",
+      },
+      {
+        question: "What do I need to bring?",
+        answer:
+          "We can provide everything needed including laptops however if you do have a laptop it would be great to bring it.",
+      },
+      {
+        question: "Do I need prior knwoledge?",
+        answer:
+          "No prior knowledge is needed with rangatahi with no knowledge to those who are experts in the sessions.",
+      },
+      {
+        question: "What do we cover?",
+        answer:
+          "We cover topic from introduction to programming, cybersecurity, Artificual Intellegence and Machine Learning, robotics and anything else you could be interested in.",
+      },
+    ]}
+  />
+  <Contact
+    title="Sponsor Us"
+    contactImage={featureImage}
+    email="contact@tuhuratech.org.nz"
+    phone="0211990711"
+    description={[
+      "Interested in sponsoring us to enable us to grow and expand our mahi?",
+      "Want to donate some equipment or have some staff who can volunteer?",
+    ]}
+  />
+</Layout>
