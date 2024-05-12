@@ -12,7 +12,9 @@ const { tiers } = Astro.props;
 
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+    <h2
+      class="text-2xl font-bold text-primary md:text-4xl md:leading-tight dark:text-primary"
+    >
       Join as Sponsor
     </h2>
     <p class="mt-1 text-gray-600 dark:text-neutral-400">
@@ -39,7 +41,7 @@ const { tiers } = Astro.props;
             {tier.items.map((item) => (
               <li class="flex space-x-2">
                 <svg
-                  class="flex-shrink-0 mt-0.5 size-4 text-blue-600 dark:text-blue-500"
+                  class="flex-shrink-0 mt-0.5 size-4 text-secondary dark:text-secondary"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -58,7 +60,7 @@ const { tiers } = Astro.props;
           </ul>
 
           <a
-            class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-blue-600 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-blue-500 dark:hover:border-blue-600"
+            class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-secondary hover:text-secondary disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-secondary dark:hover:border-secondary"
             href="#contact"
           >
             Sponsor Us
@@ -83,7 +85,7 @@ const { tiers } = Astro.props;
       <ul class="mt-7 space-y-2.5 text-sm">
         <li class="flex space-x-2">
           <svg
-            class="flex-shrink-0 mt-0.5 size-4 text-blue-600 dark:text-blue-500"
+            class="flex-shrink-0 mt-0.5 size-4 text-secondary dark:text-secondary"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -103,7 +105,7 @@ const { tiers } = Astro.props;
       </ul>
 
       <a
-        class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-blue-600 hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-blue-500 dark:hover:border-blue-600"
+        class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-secondary hover:text-secondary disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-secondary dark:hover:border-secondary"
         href="#contact"
       >
         Sponsor Us

@@ -306,7 +306,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         day: "Monday",
         time: "3:30pm to 5:30pm",
         description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
         type: "After School",
       },
       {
@@ -315,7 +315,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         day: "Tuesday",
         time: "3:30pm to 5:30pm",
         description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
         type: "After School",
       },
       {
@@ -323,8 +323,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "5 - 8",
         day: "Monday",
         time: "3:30pm to 5:30pm",
-        description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        description: "Introduction to programming using Python.",
         type: "After School",
         signupLink: "https://forms.gle/uCXEsoksTq3tSEBfA",
       },
@@ -334,7 +333,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         day: "Wednesday",
         time: "3:30pm to 5:30pm",
         description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
         type: "After School",
       },
 
@@ -343,8 +342,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "5 - 8",
         day: "Wednesday",
         time: "3:30pm to 5:30pm",
-        description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        description: "Introduction to programming using Python.",
         type: "After School",
         signupLink: "https://forms.gle/PqwLGaTZJPuT4tLc6",
       },
@@ -353,9 +351,8 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "5 - 8",
         day: "Thursday",
         time: "3:30pm to 5:30pm",
-        starts: "Thursday 9th May",
-        description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        starts: "Thursday 16th May",
+        description: "Introduction to programming using Scratch.",
         type: "After School",
         signupLink: "https://forms.gle/yxiPE7ccqQ6SZ5DZ9",
       },
@@ -363,10 +360,8 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         title: "South Wellington Intermediate School",
         ages: "7 - 8",
         day: "Friday",
-        time: "Schooltime",
-
-        description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        time: "In School Enrichment",
+        description: "Introduction to programming using Python.",
         type: "During School Enrichment",
       },
     ],
@@ -379,9 +374,9 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "5 - 8",
         day: "Monday",
         time: "3:30pm to 5:30pm",
-        description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+        description: "Introduction to programming using Scratch.",
         type: "After School",
+        starts: "Monday 20th May",
         signupLink: "",
       },
     ],
@@ -394,8 +389,9 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "9 - 13",
         day: "Monday",
         time: "3:30pm to 5:30pm",
+        starts: "Monday 20th May",
         description:
-          "After school every Monday from 3:30pm to 5:30pm for students in years 9 to 13;",
+          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
         type: "After School",
         signupLink: "https://forms.gle/yoC2wsCnsPjwu8nv9",
       },
