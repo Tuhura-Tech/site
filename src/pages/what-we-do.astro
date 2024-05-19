@@ -1,0 +1,103 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SmallHero from "@components/SmallHero.astro";
+
+import featureImage from "@images/hero.avif";
+import { Image } from "astro:assets";
+const title = "What We Do";
+---
+
+<Layout meta={{ title }}>
+  <SmallHero
+    title="What We Do"
+    featureImage={featureImage}
+    description="Hands on in-person sessions combining subject experts with rangatahi on areas that interest them. Everything done is practical with real world applications with actual outcomes."
+  />
+  <div class="max-w-[85rem] px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+    <div class="space-y-5 md:space-y-8">
+      <div class="space-y-3">
+        <h2
+          class="text-2xl font-bold text-primary md:text-3xl dark:text-primary"
+        >
+          Sessions
+        </h2>
+
+        <p class="text-lg text-gray-800 dark:text-neutral-200">
+          At the core of what we do is our After School Sessions where we work
+          with Rangatahi to inspire them to explore different areas of
+          technology.Sessions cover a variety of topics with junior sessions
+          (year 5-8) being slightly structured and senior sessions (year 9-13)
+          functioning as a place to explore interests with support from our
+          staff. This means that rangatahi are always engaged and learning.
+        </p><p class="text-lg text-gray-800 dark:text-neutral-200">
+          Junior Sessions (Year 5-8) follow a rough structure where they will
+          focus on a topic such as Introduction to Programming with Scratch for
+          a Term before moving to another topic. These sessions while focused
+          ona topic are guided by their individual interests with a custom path
+          through created specifically for them.
+        </p><p class="text-lg text-gray-800 dark:text-neutral-200">
+          Our Senior sessions (Year 9-13) are more relaxed and casual with
+          everyone working on different projects and interests and a small
+          section doing a set subject. This is a space to explore and experiment
+          with the support of our staff or come along and focus on a topic that
+          changes every term.
+        </p>
+      </div>
+
+      <figure>
+        <Image
+          src={featureImage}
+          alt="Group of rangatahi"
+          class="w-full object-cover rounded-xl"
+        />
+        <figcaption
+          class="mt-3 text-sm text-center text-gray-500 dark:text-neutral-500"
+        >
+          Group of rangatahi at a session
+        </figcaption>
+      </figure>
+
+      <blockquote class="text-center p-4 sm:px-7">
+        <p
+          class="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal dark:text-neutral-200"
+        >
+          Our focus is on growing their interest and curiosity to allow them to
+          explore all areas of technology.
+        </p>
+        <p class="mt-5 text-gray-800 dark:text-neutral-200">
+          Leon Bowie - Head of Operations
+        </p>
+      </blockquote>
+
+      <div class="space-y-3">
+        <h3 class="text-2xl font-semibold dark:text-white">Resources</h3>
+
+        <p class="text-lg text-gray-800 dark:text-neutral-200">
+          Free, public, creative commons, resources designed for Rangatahi to
+          help them learn and explore the world of technology.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-2xl font-semibold dark:text-white">Workshops</h3>
+
+        <p class="text-lg text-gray-800 dark:text-neutral-200">
+          Workshops and coaching for specialist areas, competitions and other
+          events to support our rangatahi.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="text-2xl font-semibold dark:text-white">
+          Kura and Kaiako Support
+        </h3>
+
+        <p class="text-lg text-gray-800 dark:text-neutral-200">
+          We support schools and teachers with resources, workshops and support
+          to help them grow and keep up to date in the changing technology
+          landscape.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

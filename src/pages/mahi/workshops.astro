@@ -1,0 +1,26 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SmallHero from "@components/SmallHero.astro";
+import Contact from "@components/Contact.astro";
+
+
+import featureImage from "@images/hero.avif";
+
+const title = "Workshops";
+---
+
+<Layout meta={{ title }}>
+  <SmallHero
+    title="Workshops"
+    featureImage={featureImage}
+    description="Workshops and coaching for specialist areas, competitions and other events to support our rangatahi."
+  />
+  <Contact
+    title="Contact Us"
+    contactImage={featureImage}
+    email="contact@tuhuratech.org.nz"
+    description={[
+      "Interested in helping run a workshop or have a workshop you would like run?",
+    ]}
+  />
+</Layout>

@@ -1,0 +1,25 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SmallHero from "@components/SmallHero.astro";
+import Contact from "@components/Contact.astro";
+
+import featureImage from "@images/hero.avif";
+
+const title = "Kura and Kaiako Support";
+---
+
+<Layout meta={{ title }}>
+  <SmallHero
+    title="Kura and Kaiako Support"
+    featureImage={featureImage}
+    description="Workshops, training and curriculm support and resources to help grow and inspire interest in technology."
+  />
+  <Contact
+    title="Contact Us"
+    contactImage={featureImage}
+    email="contact@tuhuratech.org.nz"
+    description={[
+      "Interested in workshops, training or resources?",
+    ]}
+  />
+</Layout>

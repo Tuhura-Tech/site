@@ -1,0 +1,84 @@
+---
+import { getImage } from "astro:assets";
+
+import faviconSvgSrc from "@images/icon.svg";
+import faviconSrc from "@images/icon.png";
+
+import { SITE } from "../data";
+
+interface Props {
+  meta: string;
+  title: string;
+}
+
+const defaultProps = {
+  meta: SITE.description,
+};
+
+const { meta = defaultProps.meta, title } = Astro.props;
+
+const URL = `${Astro.site}`;
+const canonical = Astro.url.href;
+const ogTitle = SITE.title;
+const ogDescription = SITE.description;
+const socialImageRes = await getImage({
+  src: SITE.image,
+  width: 1200,
+  height: 600,
+});
+const socialImage = Astro.url.origin + socialImageRes.src;
+
+// Generate and optimize the favicon images
+const faviconSvg = await getImage({
+  src: faviconSvgSrc,
+  format: "svg",
+});
+
+const appleTouchIcon = await getImage({
+  src: faviconSrc,
+  width: 180,
+  height: 180,
+  format: "png",
+});
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta content={meta} name="description" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="canonical" href={canonical} />
+  <title>{title} | Tūhura Tech</title>
+
+  <meta property="og:locale" content="en_NZ" />
+  <meta property="og:url" content={URL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:site_name" content={SITE.title} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:image" content={socialImage} />
+  <meta content="1200" property="og:image:width" />
+  <meta content="600" property="og:image:height" />
+  <meta content="image/png" property="og:image:type" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content={URL} />
+  <meta property="twitter:url" content={URL} />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  <meta name="twitter:image" content={socialImage} />
+
+  <!-- https://docs.astro.build/en/guides/integrations-guide/sitemap/ -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <link href="/favicon.ico" rel="icon" sizes="any" type="image/x-icon" />
+  <link href={faviconSvg.src} rel="icon" type="image/svg+xml" sizes="any" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link href={appleTouchIcon.src} rel="apple-touch-icon" />
+  <link href={appleTouchIcon.src} rel="shortcut icon" />
+
+  <meta name="theme-color" content="#6aa469" />
+</head>

@@ -1,0 +1,64 @@
+---
+import Layout from "@layouts/Layout.astro";
+import SmallHero from "@components/SmallHero.astro";
+import FAQs from "@components/FAQs.astro";
+import { sessions } from "../../data";
+import IconCards from "@components/IconCards.astro";
+
+import featureImage from "@images/hero.avif";
+
+const title = "Sessions";
+---
+
+<Layout meta={{ title }}>
+  <SmallHero
+    title="Sessions"
+    featureImage={featureImage}
+    description="In person after school sessions at schools, libraries and community centers. These are for years 5 (age 9) to years 13 (age 18) with trained mentors."
+  />
+  <FAQs
+    title="What does this look like?"
+    faqs={[
+      {
+        question: "What ages do you work with?",
+        answer: "We work with rangatahi from years 5-13",
+      },
+      {
+        question: "Do you cover school curriculm?",
+        answer:
+          "We do not cover any areas of the school curriculm and instead cover topics outside of school curriculm.",
+      },
+      {
+        question: "What is the cost?",
+        answer: "Our sessions are free of charge to all rangatahi and whanau.",
+      },
+      {
+        question: "What do I need to bring?",
+        answer:
+          "We can provide everything needed including laptops however if you do have a laptop it would be great to bring it.",
+      },
+      {
+        question: "Do I need prior knwoledge?",
+        answer:
+          "No prior knowledge is needed with rangatahi with no knowledge to those who are experts in the sessions.",
+      },
+      {
+        question: "What do we cover?",
+        answer:
+          "We cover topic from introduction to programming, cybersecurity, Artificual Intellegence and Machine Learning, robotics and anything else you could be interested in.",
+      },
+    ]}
+  />
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" id="sessions">
+    <h1
+      class="text-6xl font-bold md:text-6xl md:leading-tight text-gray-800 dark:text-neutral-200"
+    >
+      Sessions
+    </h1>
+  </div>
+  {
+    sessions.map((location) => (
+      <IconCards cards={location.sessions} location={location.location} />
+    ))
+  }</Layout
+>

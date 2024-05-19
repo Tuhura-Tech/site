@@ -1,0 +1,21 @@
+---
+import Head from "@components/Head.astro";
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+
+const { meta } = Astro.props;
+---
+
+<html lang="en">
+  <Head {...meta} />
+  <body
+    class="mx-auto min-h-screen bg-white border-x-gray-200 px-4 sm:px-6 lg:px-8 xl:border-x dark:bg-neutral-800 dark:border-x-gray-700"
+  >
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+  </body><script>import "preline/dist/preline.js";</script>
+</html>

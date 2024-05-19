@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { board, people } from "../data";
+import People from "@components/People.astro";
+import Description from "@components/Description.astro";
+
+const title = "About Us";
+---
+
+<Layout meta={{ title }}>
+  <Description
+    title="About Us"
+    desc={[
+      "Tūhura Tech is a group of tech-savvy and education-focused individuals who saw a need for better technology education resources for students and schools in the Wellington area. Driven by a passion for technology and education, we founded Tūhura Tech to provide consistent and comprehensive support for those looking to learn about technology. Our team is dedicated to helping students and schools grow their technological knowledge and skills to prepare them for the future.",
+      "With a focus on quality and accessibility, Tūhura Tech offers a range of resources, including educational programs and workshops, designed to meet the needs of students and schools. We believe that technology plays a critical role in shaping the future, and we are committed to empowering students and schools with the tools and knowledge they need to succeed.",
+    ]}
+    sections={[
+      {
+        title: "Registered Charitable Trust",
+        description:
+          "As a fully registered charitable trust we focus on providing the best opportunities to all students regardless of background without focusing on making a profit.",
+        icon: "mdi:charity",
+      },
+      {
+        title: "Bring the Expertise to them",
+        description:
+          "Our focus is on bringing people with expertise and skills to Rangatahi where they can take that and explore there interests.",
+        icon: "mdi:computer",
+      },
+      {
+        title: "Not Curriculm Based",
+        description:
+          "As an independant charity we sit outside of schools and curriculm which allows us to be adaptable and cover all different areas in depth.",
+        icon: "mdi:book-open-blank-variant",
+      },
+    ]}
+  />
+  <People
+    people={people}
+    title="Our People"
+    desc="The staff and volunteers who make everything we do possible."
+    hiring={true}
+    hiringTitle="Volunteer with us"
+    hiringDescription="Any experience is appreciated with either helping teaching, building resources or helping maintain our infrastructure."
+    hiringLink="/contact"
+  />
+  <People
+    people={board}
+    title="Board of Trustees"
+    desc="The amazing people who provide guardianship over the whole charity and its direction."
+  />
+</Layout>

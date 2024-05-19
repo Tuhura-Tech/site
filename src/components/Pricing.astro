@@ -1,0 +1,115 @@
+---
+interface Props {
+  tiers: {
+    title: string;
+    amount: string;
+    description: string;
+    items: string[];
+  }[];
+}
+const { tiers } = Astro.props;
+---
+
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2
+      class="text-2xl font-bold text-primary md:text-4xl md:leading-tight dark:text-primary"
+    >
+      Join as Sponsor
+    </h2>
+    <p class="mt-1 text-gray-600 dark:text-neutral-400">
+      Our mahi relies on sponsorship from organisations and people like you who
+      directly help build the future.
+    </p>
+  </div>
+
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
+    {
+      tiers.map((tier) => (
+        <div class="flex flex-col border border-gray-200 text-center rounded-xl p-8 dark:border-neutral-800">
+          <h4 class="font-medium text-lg text-secondary dark:text-secondary">
+            {tier.title}
+          </h4>
+          <span class="mt-7 font-bold text-5xl text-gray-800 dark:text-neutral-200">
+            {tier.amount}
+          </span>
+          <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+            {tier.description}
+          </p>
+
+          <ul class="mt-7 space-y-2.5 text-sm">
+            {tier.items.map((item) => (
+              <li class="flex space-x-2">
+                <svg
+                  class="flex-shrink-0 mt-0.5 size-4 text-secondary dark:text-secondary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span class="text-gray-800 dark:text-neutral-400">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-secondary hover:text-secondary disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-secondary dark:hover:border-secondary"
+            href="#contact"
+          >
+            Sponsor Us
+          </a>
+        </div>
+      ))
+    }
+    <div
+      class="flex flex-col border border-dashed border-gray-200 text-center rounded-xl p-8 dark:border-neutral-800"
+    >
+      <h4 class="font-medium text-lg text-secondary dark:text-secondary">
+        Foundation Sponsor
+      </h4>
+      <span class="mt-7 font-bold text-5xl text-gray-800 dark:text-neutral-200">
+        $500,000+
+      </span>
+      <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+        Become a foundation sponsor and enable us to grow and exist long into
+        the future.
+      </p>
+
+      <ul class="mt-7 space-y-2.5 text-sm">
+        <li class="flex space-x-2">
+          <svg
+            class="flex-shrink-0 mt-0.5 size-4 text-secondary dark:text-secondary"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span class="text-gray-800 dark:text-neutral-400"
+            >Reach out around sponsorship at this level</span
+          >
+        </li>
+      </ul>
+
+      <a
+        class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:border-secondary hover:text-secondary disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-secondary dark:hover:border-secondary"
+        href="#contact"
+      >
+        Sponsor Us
+      </a>
+    </div>
+  </div>
+</div>

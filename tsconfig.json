@@ -1,14 +1,14 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "types": ["astro/client", "bun/types"],
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
+      "@": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
-    },
-    "verbatimModuleSyntax": true
+      "@layouts/*": ["src/layouts/*"],
+      "@data/*": ["src/data/*"],
+      "@images/*": ["src/images/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   }
 }
