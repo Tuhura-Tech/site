@@ -6,10 +6,9 @@ interface Props {
   title: string;
   contactImage: ImageMetadata;
   email: string;
-  phone: string;
   description: string[];
 }
-const { title, contactImage, email, phone, description } = Astro.props;
+const { title, contactImage, email, description } = Astro.props;
 ---
 
 <div class="max-w-7xl px-4 lg:px-6 py-12 lg:py-24 mx-auto" id="contact">
@@ -26,7 +25,7 @@ const { title, contactImage, email, phone, description } = Astro.props;
       <Image
         src={contactImage}
         alt="Group of rangatahi"
-        class="group-hover:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
+        class="group-hover:scale-105 h-auto transition-transform duration-500 ease-in-out object-cover rounded-2xl"
       />
     </div>
 
@@ -62,25 +61,6 @@ const { title, contactImage, email, phone, description } = Astro.props;
                   href={`mailto:${email}`}
                 >
                   {email}
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-4">
-            <Icon
-              name="mdi:phone"
-              class="flex-shrink-0 size-5 text-gray-500 dark:text-neutral-400"
-              title="Phone"
-            />
-            <div class="grow">
-              <p class="text-sm text-gray-600 dark:text-neutral-400">Call us</p>
-              <p>
-                <a
-                  class="relative text-gray-600 dark:text-neutral-400 inline-block font-medium before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h- focus:outline-none"
-                  href={`tel:${phone}`}
-                >
-                  {phone}
                 </a>
               </p>
             </div>
