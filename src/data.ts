@@ -376,7 +376,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:30pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
-        starts: "Monday 20th May",
+        starts: "Monday 27th May",
         signupLink: "",
       },
     ],
@@ -389,7 +389,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "9 - 13",
         day: "Monday",
         time: "3:30pm to 5:30pm",
-        starts: "Monday 20th May",
+        starts: "Monday 27th May",
         description:
           "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
         type: "After School",
