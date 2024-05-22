@@ -370,14 +370,14 @@ export const sessions: { location: string; sessions: Session[] }[] = [
     location: "Lower Hutt",
     sessions: [
       {
-        title: "Naenae Community Centre",
+        title: "CoCo Pop-Up Community Space",
         ages: "5 - 8",
         day: "Monday",
         time: "3:30pm to 5:30pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
         starts: "Monday 27th May",
-        signupLink: "",
+        signupLink: "https://forms.gle/mP16ndSfZwrTnYYw6",
       },
     ],
   },
