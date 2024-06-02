@@ -247,7 +247,7 @@ export const socials: IconLink[] = [
   {
     label: "Facebook",
     icon: "mdi:facebook",
-    href: "https://www.facebook.com/tuhuratech",
+    href: "https://www.facebook.com/p/Tūhura-Tech-100083052084710/",
   },
   {
     label: "LinkedIn",
