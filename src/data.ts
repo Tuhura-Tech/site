@@ -51,10 +51,15 @@ export interface Session {
 
 export const board: Person[] = [
   {
-    name: "Leon Bowie",
+    name: "Lillian Pak",
     role: "Chair",
     about:
-      "Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities. The former Robocup NZ representative and NZ Cyber Security Competition winner has a range of interests and passions across technology.",
+      "Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.",
+  },
+  {
+    name: "Simon McCallum",
+    role: "Treasurer",
+    about: "",
   },
   {
     name: "John Barrow",
@@ -63,10 +68,10 @@ export const board: Person[] = [
       "With a range of experience spanning decades both in industry and education John provides a unique voice that bridge both industry and the education sector together. Currently a DigiTech teacher at Wellington High School they are also actively involved directly in our sessions at their school.",
   },
   {
-    name: "Lillian Pak",
-    role: "Treasurer",
+    name: "Leon Bowie",
+    role: "Trustee",
     about:
-      "Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.",
+      "Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities.",
   },
   {
     name: "Justin Chua",
@@ -90,11 +95,6 @@ export const board: Person[] = [
     role: "Trustee",
     about:
       "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
-  },
-  {
-    name: "Simon McCallum",
-    role: "Trustee",
-    about: "",
   },
 ];
 
@@ -148,6 +148,11 @@ export const people: Person[] = [
     role: "Volunteer - Social Media Manager",
     about: "",
   },
+  {
+    name: "Izaak Karasawa",
+    role: "Volunteer - Cybersecurity",
+    about: "",
+  }
 ];
 
 export const SITE = {
