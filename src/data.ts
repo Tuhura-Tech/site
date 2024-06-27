@@ -101,7 +101,7 @@ export const board: Person[] = [
 export const people: Person[] = [
   {
     name: "Leon Bowie",
-    role: "Head of Operations",
+    role: "Founder",
     about:
       "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
     socials: [
@@ -141,7 +141,7 @@ export const people: Person[] = [
     role: "Volunteer - Graphic Designer",
     about:
       "A passionate graphical designer, Nixia is responsible for all of our graphics and generously donates her time and skills to make our content look professional and clear. They originally designed our Logo and now actively support us on all materials.",
-    image: nixHeadShot,
+    // image: nixHeadShot,
   },
   {
     name: "Abhishek Rameshanand",
