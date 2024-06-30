@@ -334,8 +334,8 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         title: "Cummings Park (Ngaio) Library",
         ages: "5 - 8",
         day: "Tuesday",
-        starts: "Tuesday 29th July",
-        time: "3:30pm to 5:30pm",
+        starts: "Tuesday 30th July",
+        time: "3:30pm to 5:15pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
         signupLink: "",
@@ -363,7 +363,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
           ages: "5 - 8",
           day: "Wednesday",
           time: "3:30pm to 5:30pm",
-          starts: "Wednseday 30th July",
+          starts: "Wednseday 31st July",
           description: "Introduction to programming using Scratch.",
           type: "After School",
           signupLink: "",
@@ -391,7 +391,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
     location: "Lower Hutt",
     sessions: [
       {
-        title: "CoCo Pop-Up Community Space",
+        title: "Te Mako Naenae Community Centre",
         ages: "5 - 8",
         day: "Monday",
         time: "3:30pm to 5:30pm",
