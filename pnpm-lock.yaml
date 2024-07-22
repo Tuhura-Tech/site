@@ -28,7 +28,7 @@ importers:
         version: 1.1.0
       preline:
         specifier: ^2.1.0
-        version: 2.3.0
+        version: 2.4.0
       sharp:
         specifier: ^0.33.3
         version: 0.33.4
@@ -2001,8 +2001,8 @@ packages:
     resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
     engines: {node: '>=10'}
 
-  preline@2.3.0:
-    resolution: {integrity: sha512-mBMF7NTbbhC2wp+1RHbBaHUCXsdM9ObJo64LvDcNRSKLbaC4uszkqBZ/X/paklEQh3+dOUAVBp1zvE5yQf/czw==}
+  preline@2.4.0:
+    resolution: {integrity: sha512-GWxpqLThSfIXtWC9w7Mq3qrVSQodVPtUSI5iyUeavBWRS+wLXxZSgfJc7sRIwc8Gn8LKx+yOFv+G0l0AB2aYwQ==}
 
   prettier-plugin-astro@0.14.0:
     resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
@@ -4761,7 +4761,7 @@ snapshots:
       path-exists: 4.0.0
       which-pm: 2.0.0
 
-  preline@2.3.0:
+  preline@2.4.0:
     dependencies:
       '@popperjs/core': 2.11.8
 
