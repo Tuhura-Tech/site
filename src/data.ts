@@ -334,7 +334,6 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         title: "Cummings Park (Ngaio) Library",
         ages: "5 - 8",
         day: "Tuesday",
-        starts: "Tuesday 30th July",
         time: "3:30pm to 5:15pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
@@ -363,7 +362,6 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         ages: "5 - 8",
         day: "Wednesday",
         time: "3:30pm to 5:30pm",
-        starts: "Wednesday 31st July",
         description: "Introduction to programming using Scratch.",
         type: "After School",
         signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
@@ -376,6 +374,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         description: "Introduction to programming using Scratch.",
         type: "After School",
         signupLink: "https://forms.gle/yxiPE7ccqQ6SZ5DZ9",
+      },
+      {
+        title: "Tawa College",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "Session to explore all areas of technology, work on projects and explore.",
+        type: "After School",
       },
       {
         title: "South Wellington Intermediate School",
