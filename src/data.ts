@@ -223,6 +223,7 @@ export const headerLinks: HeaderLink[] = [
       { label: "Kura and Kaiako Support", href: "/mahi/kura-kaiako" },
     ],
   },
+  { label: "Sessions", href: "/mahi/sessions" },
   {
     label: "About Us",
     href: "/about",
