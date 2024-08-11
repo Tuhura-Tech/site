@@ -129,12 +129,12 @@ export const people: Person[] = [
     about:
       "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
   },
-  {
-    name: "Zelle Marcovicci",
-    role: "Head Mentor",
-    about:
-      "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
-  },
+  // {
+  //   name: "Zelle Marcovicci",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
+  // },
   {
     name: "Nixia C",
     role: "Volunteer - Graphic Designer",
