@@ -129,6 +129,12 @@ export const people: Person[] = [
     about:
       "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
   },
+  {
+    name: "Arianna Mulligan",
+    role: "Head Mentor",
+    about:
+      "Ari has nearly finished her Computer Science degree, and is passionate about giving kids an understanding and confidence in technology.",
+  },
   // {
   //   name: "Zelle Marcovicci",
   //   role: "Head Mentor",
