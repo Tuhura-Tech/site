@@ -133,7 +133,7 @@ export const people: Person[] = [
     name: "Arianna Mulligan",
     role: "Head Mentor",
     about:
-      "Ari has nearly finished her Computer Science degree, and is passionate about giving kids an understanding and confidence in technology.",
+      "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
   },
   // {
   //   name: "Zelle Marcovicci",
