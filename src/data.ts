@@ -135,6 +135,13 @@ export const people: Person[] = [
     about:
       "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
   },
+  {
+    name: "Lillian Hide-Tobin",
+    role: "Head Mentor",
+    about:
+      "Lillian has freshly graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, whether in Game Development, algorithmic audio and video, storytelling, or anything else. She strives to encourage young women to engage with technology",
+  },
+  
   // {
   //   name: "Zelle Marcovicci",
   //   role: "Head Mentor",
