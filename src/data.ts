@@ -405,7 +405,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         description: "Intorduction to programming exploring game design",
         type: "After School",
         signupLink: "https://forms.gle/uTfyK5yCncdFbbQk6",
-      }
+      },
       {
         title: "Ruakawa Community Centre",
         ages: "5 - 8",
