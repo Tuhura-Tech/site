@@ -398,6 +398,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
       },
       {
+        title: "Newtown Primary School",
+        ages: "5 - 8",
+        day: "Thursday",
+        time: "3:30pm to 5:30pm",
+        description: "Intorduction to programming exploring game design",
+        type: "After School",
+        signupLink: "https://forms.gle/uTfyK5yCncdFbbQk6",
+      }
+      {
         title: "Ruakawa Community Centre",
         ages: "5 - 8",
         day: "Thursday",
