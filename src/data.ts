@@ -73,12 +73,6 @@ export const board: Person[] = [
       "Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities.",
   },
   {
-    name: "Justin Chua",
-    role: "Trustee",
-    about:
-      "Currently a student at Massey University they are passionate about giving kids opportunities and supporting them. They view accessible and public resources and education as essential and want to help the charity have the maximum possible reach.",
-  },
-  {
     name: "Thomas Jackson",
     role: "Trustee",
     about:
@@ -94,6 +88,24 @@ export const board: Person[] = [
     role: "Trustee",
     about:
       "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
+  },
+  {
+    name: "Aleisha Amohia",
+    role: "Trustee",
+    about:
+      "",
+  },
+  {
+    name: "Kendra Ross",
+    role: "Trustee",
+    about:
+      "",
+  },
+  {
+    name: "Carl Ross",
+    role: "Trustee",
+    about:
+      "",
   },
 ];
 
@@ -276,6 +288,11 @@ export const socials: IconLink[] = [
     icon: "mdi:instagram",
     href: "https://www.instagram.com/tuhura_tech",
   },
+  {
+    label: "Discord",
+    icon: "mdi:discord",
+    href: "https://discord.gg/PNxh7cwKfQ",
+  }
 ];
 
 export const coreUrls: Link[] = [];
