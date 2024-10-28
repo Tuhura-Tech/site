@@ -19,7 +19,7 @@ importers:
         version: 5.1.2(astro@4.16.0(@types/node@22.7.4)(rollup@4.24.0)(typescript@5.6.2))(tailwindcss@3.4.14)
       '@iconify-json/mdi':
         specifier: ^1.1.66
-        version: 1.2.0
+        version: 1.2.1
       astro:
         specifier: ^4.6.1
         version: 4.16.0(@types/node@22.7.4)(rollup@4.24.0)(typescript@5.6.2)
@@ -368,8 +368,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@iconify-json/mdi@1.2.0':
-    resolution: {integrity: sha512-E9/3l5Syg3wfuarorFodhn4s8YorxhH3U3U20LaNBNiqw1kFNIDWhF6HymuzAD35k7RH0OBasJ+ZUyFtVVV6eg==}
+  '@iconify-json/mdi@1.2.1':
+    resolution: {integrity: sha512-dSkQU78gsZV6Yxnq78+LuX7jzeFC/5NAmz7O3rh558GimGFcwMVY/OtqRowIzjqJBmMmWZft7wkFV4TrwRXjlg==}
 
   '@iconify/tools@4.0.5':
     resolution: {integrity: sha512-l8KoA1lxlN/FFjlMd3vjfD7BtcX/QnFWtlBapILMlJSBgM5zhDYak/ldw/LkKG3258q/0YmXa48sO/QpxX7ptg==}
@@ -2864,7 +2864,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@iconify-json/mdi@1.2.0':
+  '@iconify-json/mdi@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 
