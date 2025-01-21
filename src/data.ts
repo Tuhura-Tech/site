@@ -201,7 +201,7 @@ export const footerLinks: LinkCategory[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Support Us", href: "/support" },
+      { label: "Support Us", href: "https://givealittle.co.nz/org/tuhura-tech" },
       {
         label: "Identity proofs",
         href: "https://keyoxide.org/contact@tuhuratech.org.nz",
