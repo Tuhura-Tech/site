@@ -123,30 +123,30 @@ export const people: Person[] = [
       },
     ],
   },
-  {
-    name: "Ai Winters",
-    role: "Head Mentor",
-    about:
-      "Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.",
-  },
-  {
-    name: "Jennifer Howard",
-    role: "Head Mentor",
-    about:
-      "Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.",
-  },
-  {
-    name: "Abigail Clennell",
-    role: "Head Mentor",
-    about:
-      "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
-  },
-  {
-    name: "Arianna Mulligan",
-    role: "Head Mentor",
-    about:
-      "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
-  },
+  // {
+  //   name: "Ai Winters",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.",
+  // },
+  // {
+  //   name: "Jennifer Howard",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.",
+  // },
+  // {
+  //   name: "Abigail Clennell",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
+  // },
+  // {
+  //   name: "Arianna Mulligan",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
+  // },
   {
     name: "Lillian Hide-Tobin",
     role: "Head Mentor",
@@ -281,7 +281,7 @@ export const socials: IconLink[] = [
   {
     label: "LinkedIn",
     icon: "mdi:linkedin",
-    href: "https://www.linkedin.com/company/tuhuratech",
+    href: "https://www.linkedin.com/company/tūhura-tech/",
   },
   {
     label: "Instagram",
@@ -352,24 +352,24 @@ export const sessions: { location: string; sessions: Session[] }[] = [
       //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
       //   type: "After School",
       // },
-      // {
-      //   title: "Te Tūhunga Rau Community Centre",
-      //   ages: "5 - 8",
-      //   day: "Tuesday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Introduction to programming using Python.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/uCXEsoksTq3tSEBfA",
-      // },
-      // {
-      //   title: "Cummings Park (Ngaio) Library",
-      //   ages: "5 - 8",
-      //   day: "Tuesday",
-      //   time: "3:30pm to 5:15pm",
-      //   description: "Introduction to programming using Scratch.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/zDJQfMLadVoSLYzt8",
-      // },
+      {
+        title: "Te Tūhunga Rau Community Centre",
+        ages: "5 - 8",
+        day: "Tuesday",
+        time: "3:30pm to 5:30pm",
+        description: "Introduction to programming using Python.",
+        type: "After School",
+        signupLink: "https://forms.gle/uCXEsoksTq3tSEBfA",
+      },
+      {
+        title: "Cummings Park (Ngaio) Library",
+        ages: "5 - 8",
+        day: "Tuesday",
+        time: "3:30pm to 5:15pm",
+        description: "Introduction to programming using Scratch.",
+        type: "After School",
+        signupLink: "https://forms.gle/zDJQfMLadVoSLYzt8",
+      },
       // {
       //   title: "Wellington College",
       //   ages: "9 - 13",
@@ -379,42 +379,24 @@ export const sessions: { location: string; sessions: Session[] }[] = [
       //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
       //   type: "After School",
       // },
-      // {
-      //   title: "Te Whare Pukapuka o Te Māhanga - Karori Library",
-      //   ages: "5 - 8",
-      //   day: "Wednesday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Introduction to programming using Python.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/PqwLGaTZJPuT4tLc6",
-      // },
-      // {
-      //   title: "Johnsonville Library Makerspace",
-      //   ages: "5 - 8",
-      //   day: "Wednesday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Introduction to programming using Scratch.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
-      // },
-      // {
-      //   title: "Newtown Primary School",
-      //   ages: "5 - 8",
-      //   day: "Thursday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Intorduction to programming exploring game design",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/uTfyK5yCncdFbbQk6",
-      // },
-      // {
-      //   title: "Ruakawa Community Centre",
-      //   ages: "5 - 8",
-      //   day: "Thursday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Introduction to programming using Scratch.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/yxiPE7ccqQ6SZ5DZ9",
-      // },
+      {
+        title: "Te Whare Pukapuka o Te Māhanga - Karori Library",
+        ages: "5 - 8",
+        day: "Wednesday",
+        time: "3:30pm to 5:30pm",
+        description: "Introduction to programming using Python.",
+        type: "After School",
+        signupLink: "https://forms.gle/PqwLGaTZJPuT4tLc6",
+      },
+      {
+        title: "Johnsonville Library Makerspace",
+        ages: "5 - 8",
+        day: "Wednesday",
+        time: "3:30pm to 5:30pm",
+        description: "Introduction to programming using Scratch.",
+        type: "After School",
+        signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
+      },
       // {
       //   title: "Tawa College",
       //   ages: "9 - 13",
@@ -424,52 +406,60 @@ export const sessions: { location: string; sessions: Session[] }[] = [
       //     "Session to explore all areas of technology, work on projects and explore.",
       //   type: "After School",
       // },
-      // {
-      //   title: "South Wellington Intermediate School",
-      //   ages: "7 - 8",
-      //   day: "Friday",
-      //   time: "In School Enrichment",
-      //   description: "Introduction to programming using Python.",
-      //   type: "During School Enrichment",
-      // },
+      {
+        title: "South Wellington Intermediate School",
+        ages: "7 - 8",
+        day: "Friday",
+        time: "In School Enrichment",
+        description: "Introduction to programming using Python.",
+        type: "During School Enrichment",
+      },
     ],
   },
   {
     location: "Lower Hutt",
     sessions: [
-      // {
-      //   title: "Te Mako Naenae Community Centre",
-      //   ages: "5 - 8",
-      //   day: "Monday",
-      //   time: "3:30pm to 5:30pm",
-      //   description: "Introduction to programming using Scratch.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/mP16ndSfZwrTnYYw6",
-      // },
+      {
+        title: "Te Mako Naenae Community Centre",
+        ages: "5 - 8",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
+        description: "Introduction to programming using Scratch.",
+        type: "After School",
+        signupLink: "https://forms.gle/mP16ndSfZwrTnYYw6",
+      },
+      {
+        title: "Walter Nash Community Hub",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm - 5:30pm",
+        description: "Introduction to programming using Scratch.",
+        type: "After School",
+        signupLink: "https://forms.gle/mP16ndSfZwrTnYYw6",
+      }
     ],
   },
   {
     location: "Porirua",
     sessions: [
-      // {
-      //   title: "Ūpane",
-      //   ages: "7 - 10",
-      //   day: "Monday",
-      //   time: "3:30pm to 5:30pm",
-      //   description:
-      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-      //   type: "After School",
-      //   signupLink: "https://forms.gle/yoC2wsCnsPjwu8nv9",
-      // },
-      // {
-      //   title: "Porirua College",
-      //   ages: "9 - 10",
-      //   day: "Tuesday",
-      //   time: "In School Enrichment",
-      //   description:
-      //     "Exploring robotics, microelectronics and programming",
-      //   type: "During School Enrichment",
-      // },
+      {
+        title: "Porirua College",
+        ages: "9 - 10",
+        day: "Tuesday",
+        time: "In School Enrichment",
+        description:
+          "Exploring robotics, microelectronics and programming",
+        type: "During School Enrichment",
+      },
+      {
+        title: "Mana College",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm - 5:30pm",
+        description: "Exploring electronics, programming and cybersecurity..",
+        type: "After School",
+        signupLink: "https://forms.gle/DcU1qm1WVZGpAKwx9",
+      }
     ],
   },
 ];
