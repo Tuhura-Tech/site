@@ -73,12 +73,6 @@ export const board: Person[] = [
       "Leon is the Head of Operations for Tūhura Tech with a love of technology and a passion for education. Working in this space for the past 8 years they have a strong focus on supporting students and enhancing opportunities.",
   },
   {
-    name: "Justin Chua",
-    role: "Trustee",
-    about:
-      "Currently a student at Massey University they are passionate about giving kids opportunities and supporting them. They view accessible and public resources and education as essential and want to help the charity have the maximum possible reach.",
-  },
-  {
     name: "Thomas Jackson",
     role: "Trustee",
     about:
@@ -94,6 +88,24 @@ export const board: Person[] = [
     role: "Trustee",
     about:
       "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
+  },
+  {
+    name: "Aleisha Amohia",
+    role: "Trustee",
+    about:
+      "",
+  },
+  {
+    name: "Kendra Ross",
+    role: "Trustee",
+    about:
+      "",
+  },
+  {
+    name: "Carl Ross",
+    role: "Trustee",
+    about:
+      "",
   },
 ];
 
@@ -111,36 +123,37 @@ export const people: Person[] = [
       },
     ],
   },
-  {
-    name: "Ai Winters",
-    role: "Head Mentor",
-    about:
-      "Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.",
-  },
-  {
-    name: "Jennifer Howard",
-    role: "Head Mentor",
-    about:
-      "Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.",
-  },
-  {
-    name: "Abigail Clennell",
-    role: "Head Mentor",
-    about:
-      "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
-  },
-  {
-    name: "Arianna Mulligan",
-    role: "Head Mentor",
-    about:
-      "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
-  },
+  // {
+  //   name: "Ai Winters",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.",
+  // },
+  // {
+  //   name: "Jennifer Howard",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.",
+  // },
+  // {
+  //   name: "Abigail Clennell",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
+  // },
+  // {
+  //   name: "Arianna Mulligan",
+  //   role: "Head Mentor",
+  //   about:
+  //     "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
+  // },
   {
     name: "Lillian Hide-Tobin",
     role: "Head Mentor",
     about:
       "Lillian has freshly graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, whether in Game Development, algorithmic audio and video, storytelling, or anything else. She strives to encourage young women to engage with technology",
   },
+  
   
   // {
   //   name: "Zelle Marcovicci",
@@ -189,7 +202,7 @@ export const footerLinks: LinkCategory[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Support Us", href: "/support" },
+      { label: "Support Us", href: "https://givealittle.co.nz/org/tuhura-tech" },
       {
         label: "Identity proofs",
         href: "https://keyoxide.org/contact@tuhuratech.org.nz",
@@ -269,13 +282,18 @@ export const socials: IconLink[] = [
   {
     label: "LinkedIn",
     icon: "mdi:linkedin",
-    href: "https://www.linkedin.com/company/tuhuratech",
+    href: "https://www.linkedin.com/company/tūhura-tech/",
   },
   {
     label: "Instagram",
     icon: "mdi:instagram",
     href: "https://www.instagram.com/tuhura_tech",
   },
+  {
+    label: "Discord",
+    icon: "mdi:discord",
+    href: "https://discord.gg/PNxh7cwKfQ",
+  }
 ];
 
 export const coreUrls: Link[] = [];
@@ -317,24 +335,24 @@ export const sessions: { location: string; sessions: Session[] }[] = [
   {
     location: "Wellington",
     sessions: [
-      {
-        title: "Wellington Girls College",
-        ages: "9 - 13",
-        day: "Monday",
-        time: "3:30pm to 5:30pm",
-        description:
-          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-        type: "After School",
-      },
-      {
-        title: "Wellington High School",
-        ages: "9 - 13",
-        day: "Tuesday",
-        time: "3:30pm to 5:30pm",
-        description:
-          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-        type: "After School",
-      },
+      // {
+      //   title: "Wellington Girls College",
+      //   ages: "9 - 13",
+      //   day: "Monday",
+      //   time: "3:30pm to 5:30pm",
+      //   description:
+      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
+      //   type: "After School",
+      // },
+      // {
+      //   title: "Wellington High School",
+      //   ages: "9 - 13",
+      //   day: "Tuesday",
+      //   time: "3:30pm to 5:30pm",
+      //   description:
+      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
+      //   type: "After School",
+      // },
       {
         title: "Te Tūhunga Rau Community Centre",
         ages: "5 - 8",
@@ -342,7 +360,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:30pm",
         description: "Introduction to programming using Python.",
         type: "After School",
-        signupLink: "https://forms.gle/uCXEsoksTq3tSEBfA",
+        signupLink: "https://forms.gle/N85mC2rFVPiz8PDz7",
       },
       {
         title: "Cummings Park (Ngaio) Library",
@@ -351,17 +369,17 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:15pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
-        signupLink: "https://forms.gle/zDJQfMLadVoSLYzt8",
+        signupLink: "https://forms.gle/v7xfucRaSPFSNF4f7",
       },
-      {
-        title: "Wellington College",
-        ages: "9 - 13",
-        day: "Wednesday",
-        time: "3:30pm to 5:30pm",
-        description:
-          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-        type: "After School",
-      },
+      // {
+      //   title: "Wellington College",
+      //   ages: "9 - 13",
+      //   day: "Wednesday",
+      //   time: "3:30pm to 5:30pm",
+      //   description:
+      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
+      //   type: "After School",
+      // },
       {
         title: "Te Whare Pukapuka o Te Māhanga - Karori Library",
         ages: "5 - 8",
@@ -369,7 +387,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:30pm",
         description: "Introduction to programming using Python.",
         type: "After School",
-        signupLink: "https://forms.gle/PqwLGaTZJPuT4tLc6",
+        signupLink: "https://forms.gle/p1G2n5ddwT6EC3h67",
       },
       {
         title: "Johnsonville Library Makerspace",
@@ -380,24 +398,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         type: "After School",
         signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
       },
-      {
-        title: "Ruakawa Community Centre",
-        ages: "5 - 8",
-        day: "Thursday",
-        time: "3:30pm to 5:30pm",
-        description: "Introduction to programming using Scratch.",
-        type: "After School",
-        signupLink: "https://forms.gle/yxiPE7ccqQ6SZ5DZ9",
-      },
-      {
-        title: "Tawa College",
-        ages: "9 - 13",
-        day: "Thursday",
-        time: "3:30pm to 5:30pm",
-        description:
-          "Session to explore all areas of technology, work on projects and explore.",
-        type: "After School",
-      },
+      // {
+      //   title: "Tawa College",
+      //   ages: "9 - 13",
+      //   day: "Thursday",
+      //   time: "3:30pm to 5:30pm",
+      //   description:
+      //     "Session to explore all areas of technology, work on projects and explore.",
+      //   type: "After School",
+      // },
       {
         title: "South Wellington Intermediate School",
         ages: "7 - 8",
@@ -418,23 +427,22 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:30pm",
         description: "Introduction to programming using Scratch.",
         type: "After School",
-        signupLink: "https://forms.gle/mP16ndSfZwrTnYYw6",
+        signupLink: "https://forms.gle/q7CYEYYnwCG3gGHK7",
       },
+      {
+        title: "Walter Nash Community Hub",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm - 5:30pm",
+        description: "Introduction to programming using Scratch.",
+        type: "After School",
+        signupLink: "https://forms.gle/33xMEptKxm8Gp3gk8",
+      }
     ],
   },
   {
     location: "Porirua",
     sessions: [
-      {
-        title: "Ūpane",
-        ages: "9 - 13",
-        day: "Monday",
-        time: "3:30pm to 5:30pm",
-        description:
-          "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-        type: "After School",
-        signupLink: "https://forms.gle/yoC2wsCnsPjwu8nv9",
-      },
       {
         title: "Porirua College",
         ages: "9 - 10",
@@ -444,6 +452,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
           "Exploring robotics, microelectronics and programming",
         type: "During School Enrichment",
       },
+      {
+        title: "Mana College",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm - 5:30pm",
+        description: "Exploring electronics, programming and cybersecurity..",
+        type: "After School",
+        signupLink: "https://forms.gle/Af6sum3EPnYpB6NG7",
+      }
     ],
   },
 ];

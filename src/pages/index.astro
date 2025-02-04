@@ -2,11 +2,12 @@
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import FAQs from "@components/FAQs.astro";
-import { faqs } from "../data";
+import { faqs, sessions } from "../data";
 import FeaturesLarge from "@components/FeaturesLarge.astro";
 import largeLanding from "@images/large-landing.jpg";
 import Cards from "@components/Cards.astro";
 import Stats from "@components/Stats.astro";
+import IconCards from "@components/IconCards.astro";
 ---
 
 <Layout>
@@ -69,7 +70,7 @@ import Stats from "@components/Stats.astro";
         title: "Sponsor Us",
         description: "Join one of our sessions",
         icon: "mdi:money",
-        href: "/support",
+        href: "https://givealittle.co.nz/org/tuhura-tech",
       },
       {
         title: "Volunteer with Us",
@@ -79,5 +80,17 @@ import Stats from "@components/Stats.astro";
       },
     ]}
   />
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" id="sessions">
+    <h1
+      class="text-6xl font-bold md:text-6xl md:leading-tight text-gray-800 dark:text-neutral-200"
+    >
+      Sessions
+    </h1>
+  </div>
+  {
+    sessions.map((location) => (
+      <IconCards cards={location.sessions} location={location.location} />
+    ))
+  }
   <FAQs title="Frequently Asked Questions" faqs={faqs} />
 </Layout>
