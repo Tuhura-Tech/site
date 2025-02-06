@@ -334,24 +334,24 @@ export const sessions: { location: string; sessions: Session[] }[] = [
   {
     location: "Wellington",
     sessions: [
-      // {
-      //   title: "Wellington Girls College",
-      //   ages: "9 - 13",
-      //   day: "Monday",
-      //   time: "3:30pm to 5:30pm",
-      //   description:
-      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-      //   type: "After School",
-      // },
-      // {
-      //   title: "Wellington High School",
-      //   ages: "9 - 13",
-      //   day: "Tuesday",
-      //   time: "3:30pm to 5:30pm",
-      //   description:
-      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-      //   type: "After School",
-      // },
+      {
+        title: "Wellington Girls College",
+        ages: "9 - 13",
+        day: "Monday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "",
+        type: "After School",
+      },
+      {
+        title: "Wellington High School",
+        ages: "9 - 13",
+        day: "Tuesday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "",
+        type: "After School",
+      },
       {
         title: "Te Tūhunga Rau Community Centre",
         ages: "5 - 8",
@@ -370,15 +370,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         type: "After School",
         signupLink: "https://forms.gle/v7xfucRaSPFSNF4f7",
       },
-      // {
-      //   title: "Wellington College",
-      //   ages: "9 - 13",
-      //   day: "Wednesday",
-      //   time: "3:30pm to 5:30pm",
-      //   description:
-      //     "Session to explore all areas of technology, work on projects and explore. This term there is a focus on Cybersecurity/Ethical Hacking.",
-      //   type: "After School",
-      // },
+      {
+        title: "Wellington College",
+        ages: "9 - 13",
+        day: "Wednesday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "",
+        type: "After School",
+      },
       {
         title: "Te Whare Pukapuka o Te Māhanga - Karori Library",
         ages: "5 - 8",
@@ -397,15 +397,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         type: "After School",
         signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
       },
-      // {
-      //   title: "Tawa College",
-      //   ages: "9 - 13",
-      //   day: "Thursday",
-      //   time: "3:30pm to 5:30pm",
-      //   description:
-      //     "Session to explore all areas of technology, work on projects and explore.",
-      //   type: "After School",
-      // },
+      {
+        title: "Tawa College",
+        ages: "9 - 13",
+        day: "Thursday",
+        time: "3:30pm to 5:30pm",
+        description:
+          "",
+        type: "After School",
+      },
       {
         title: "South Wellington Intermediate School",
         ages: "7 - 8",
