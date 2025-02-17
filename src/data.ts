@@ -395,7 +395,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
         time: "3:30pm to 5:30pm",
         description: "",
         type: "After School",
-        signupLink: "https://forms.gle/DL9esYDZBUUv5Yvy8",
+        signupLink: "https://forms.gle/TEZDVGAAnRRkG28A9",
       },
       {
         title: "Tawa College",
