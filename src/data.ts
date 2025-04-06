@@ -123,30 +123,6 @@ export const people: Person[] = [
       },
     ],
   },
-  // {
-  //   name: "Ai Winters",
-  //   role: "Head Mentor",
-  //   about:
-  //     "Doing a Bachelors of Design Innovation in Game Design, they have a firce passion for all things creation. From cybersecurity to 3D modelling, they strive to make wonders and spawn awe. Helping others on their path of creation is of top priority.",
-  // },
-  // {
-  //   name: "Jennifer Howard",
-  //   role: "Head Mentor",
-  //   about:
-  //     "Interested in supporting and helping the next generation of tech enthusiasts, she mostly enjoys working with the younger students and introducing them to technology.",
-  // },
-  // {
-  //   name: "Abigail Clennell",
-  //   role: "Head Mentor",
-  //   about:
-  //     "Abby has 2 degrees with majors varying from AI to Computer Graphics and Mathematics and currently pursuing a Master's Thesis on AI and wildlife conservation. She has tutored many university courses that range from Cybersecurity to Concurrent Programming and even Game Development. She is a leader at Karori West and Wadestown Scout Groups working with ages 8-18.",
-  // },
-  // {
-  //   name: "Arianna Mulligan",
-  //   role: "Head Mentor",
-  //   about:
-  //     "Ari has nearly finished her Computer Science and Media Design degree, and is passionate about giving kids an understanding and confidence in technology.",
-  // },
   {
     name: "Lillian Hide-Tobin",
     role: "Head Mentor",
@@ -154,12 +130,12 @@ export const people: Person[] = [
       "Lillian has freshly graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, whether in Game Development, algorithmic audio and video, storytelling, or anything else. She strives to encourage young women to engage with technology",
   },
   
-  // {
-  //   name: "Zelle Marcovicci",
-  //   role: "Head Mentor",
-  //   about:
-  //     "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
-  // },
+  {
+    name: "Zelle Marcovicci",
+    role: "Head Mentor",
+    about:
+      "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
+  },
   {
     name: "Nixia C",
     role: "Volunteer - Graphic Designer",
