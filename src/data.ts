@@ -322,7 +322,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
       {
         title: "Wellington High School",
         ages: "9 - 13",
-        day: "Tuesday",
+        day: "Monday",
         time: "3:30pm to 5:30pm",
         description:
           "",
@@ -406,7 +406,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
       },
       {
         title: "Walter Nash Community Hub",
-        ages: "9 - 13",
+        ages: "5 - 8",
         day: "Thursday",
         time: "3:30pm - 5:30pm",
         description: "",
