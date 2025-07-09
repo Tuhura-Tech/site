@@ -1,25 +1,26 @@
 ---
-import { type Person } from "../data";
 import { Image } from "astro:assets";
+import { type Person } from "../data";
 
 interface Props {
-  title: string;
-  desc: string;
-  people: Person[];
-  hiring?: boolean;
-  hiringTitle?: string;
-  hiringDescription?: string;
-  hiringLink?: string;
+	title: string;
+	desc: string;
+	people: Person[];
+	hiring?: boolean;
+	hiringTitle?: string;
+	hiringDescription?: string;
+	hiringLink?: string;
 }
 const {
-  title,
-  desc,
-  people,
-  hiring = false,
-  hiringTitle = "",
-  hiringDescription = "",
-  hiringLink = "",
+	title,
+	desc,
+	people,
+	hiring = false,
+	hiringTitle = "",
+	hiringDescription = "",
+	hiringLink = "",
 } = Astro.props;
+
 import { Icon } from "astro-icon/components";
 ---
 

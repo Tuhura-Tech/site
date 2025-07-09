@@ -3,10 +3,10 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  image: ImageMetadata;
-  title: string;
-  description: string;
-  features: { title: string; description: string; icon: string }[];
+	image: ImageMetadata;
+	title: string;
+	description: string;
+	features: { title: string; description: string; icon: string }[];
 }
 const { title, description, image, features } = Astro.props;
 ---

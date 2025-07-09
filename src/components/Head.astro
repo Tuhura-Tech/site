@@ -1,18 +1,17 @@
 ---
 import { getImage } from "astro:assets";
-
-import faviconSvgSrc from "@images/icon.svg";
 import faviconSrc from "@images/icon.png";
+import faviconSvgSrc from "@images/icon.svg";
 
 import { SITE } from "../data";
 
 interface Props {
-  meta: string;
-  title: string;
+	meta: string;
+	title: string;
 }
 
 const defaultProps = {
-  meta: SITE.description,
+	meta: SITE.description,
 };
 
 const { meta = defaultProps.meta, title } = Astro.props;
@@ -22,23 +21,23 @@ const canonical = Astro.url.href;
 const ogTitle = SITE.title;
 const ogDescription = SITE.description;
 const socialImageRes = await getImage({
-  src: SITE.image,
-  width: 1200,
-  height: 600,
+	src: SITE.image,
+	width: 1200,
+	height: 600,
 });
 const socialImage = Astro.url.origin + socialImageRes.src;
 
 // Generate and optimize the favicon images
 const faviconSvg = await getImage({
-  src: faviconSvgSrc,
-  format: "svg",
+	src: faviconSvgSrc,
+	format: "svg",
 });
 
 const appleTouchIcon = await getImage({
-  src: faviconSrc,
-  width: 180,
-  height: 180,
-  format: "png",
+	src: faviconSrc,
+	width: 180,
+	height: 180,
+	format: "png",
 });
 ---
 
@@ -81,5 +80,5 @@ const appleTouchIcon = await getImage({
   <link href={appleTouchIcon.src} rel="shortcut icon" />
 
   <meta name="theme-color" content="#6aa469" />
-  <script defer data-domain="tuhuratech.org.nz" src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
+  <script is:inline defer data-domain="tuhuratech.org.nz" src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
 </head>

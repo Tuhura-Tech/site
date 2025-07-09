@@ -1,10 +1,11 @@
 ---
 interface Props {
-  title: string;
-  desc: string[];
-  sections: { title: string; description: string; icon: string }[];
+	title: string;
+	desc: string[];
+	sections: { title: string; description: string; icon: string }[];
 }
 const { title, desc, sections } = Astro.props;
+
 import { Icon } from "astro-icon/components";
 ---
 
