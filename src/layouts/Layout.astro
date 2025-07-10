@@ -1,8 +1,9 @@
 ---
 import Footer from "@components/Footer.astro";
+import DialogModal from "@components/DonateModal.astro";
 import Head from "@components/Head.astro";
 import Navbar from "@components/Navbar.astro";
-import "../styles/global.css";
+import "./src/styles/global.css";
 
 const { meta } = Astro.props;
 ---
@@ -16,6 +17,7 @@ const { meta } = Astro.props;
     <main>
       <slot />
     </main>
-
+    <DialogModal id="demo" />
     <Footer />
+  </body>
 </html>

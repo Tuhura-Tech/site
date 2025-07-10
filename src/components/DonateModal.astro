@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<dialog
+    id="demo"
+    closedby="any"
+    class="fixed inset-0 bg-bs-surface-0 m-auto z-50 p-6 md:p-12 rounded-xl w-full max-w-[95%] md:max-w-lg"
+>
+    <div id="dialog">
+        <h2 class="text-2xl flex justify-between items-center gap-4">
+            <span>Donate</span>
+
+            <button
+                onclick="this.closest('dialog').close('close')"
+                aria-label="Close"
+                class="bs-btn rounded-full !p-0 flex items-center justify-center"
+            >
+                <Icon name="mdi:cross-circle" title="Icon" />
+            </button>
+        </h2>
+        <div
+            class="raisely-donate"
+            data-campaign-path="tuhura-tech"
+            data-profile=""
+            data-width="100%"
+            data-height="800"
+        >
+            <script is:inline src="https://cdn.raisely.com/v3/public/embed.js"
+            ></script>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    const dialog = document.getElementById("demo");
+    dialog.addEventListener("click", (event) => {
+        if (event.target.id !== "dialog") {
+            dialog.close();
+        }
+    });
+</script>
+
+<style>
+    html:has(dialog[open]) {
+        overflow: hidden;
+        backdrop-filter: blur(0);
+        scrollbar-gutter: stable;
+    }
+
+    dialog[open]::backdrop {
+        backdrop-filter: blur(50px);
+    }
+
+    @keyframes scale-up {
+        to {
+            translate: 0 0;
+            scale: 1;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        dialog {
+            translate: 0 2rem;
+            scale: 0.8;
+        }
+
+        dialog[open] {
+            animation: scale-up forwards 1s;
+            animation-timing-function: var(--ease-bs-spring);
+        }
+    }
+</style>

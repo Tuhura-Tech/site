@@ -52,12 +52,33 @@ import { headerLinks } from "../data";
           ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
         >
       </button>
-      <a
-        href="https://givealittle.co.nz/org/tuhura-tech"
-        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+      <div
+        class="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none]"
       >
-        Support Us
-      </a>
+        <button
+          id="hs-mega-menu-basic-dr"
+          type="button"
+          class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+          onclick="demo.showModal()"
+        >
+          Donate
+        </button>
+
+        <div
+          class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 bg-white sm:shadow-md rounded-lg p-2 dark:bg-neutral-800 sm:dark:border dark:border-neutral-700 dark:divide-neutral-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5 hidden"
+        >
+          <div
+            class="raisely-donate"
+            data-campaign-path="tuhura-tech"
+            data-profile=""
+            data-width="100%"
+            data-height="800"
+          >
+            <script is:inline src="https://cdn.raisely.com/v3/public/embed.js"
+            ></script>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       id="navbar-alignment"

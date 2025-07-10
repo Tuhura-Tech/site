@@ -225,10 +225,6 @@ export const headerLinks: HeaderLink[] = [
 		href: "https://wiki.tuhuratech.org.nz",
 	},
 	{
-		label: "Donate",
-		href: "https://givealittle.co.nz/org/tuhura-tech",
-	},
-	{
 		label: "Contact Us",
 		href: "/contact",
 	},
