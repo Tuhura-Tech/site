@@ -176,7 +176,7 @@ export const footerLinks: LinkCategory[] = [
 			{ label: "Contact", href: "/contact" },
 			{
 				label: "Support Us",
-				href: "https://givealittle.co.nz/org/tuhura-tech",
+				href: "https://donate.tuhuratech.org.nz/en/",
 			},
 			{
 				label: "Identity proofs",
