@@ -1,0 +1,391 @@
+---
+import { Image } from "astro:assets";
+import teamImage from "@assets/team-photo.jpg";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const teamMembers = [
+  {
+    name: "Leon Bowie",
+    role: "Co-Founder & CEO",
+    bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
+    // avatar: "/avatar-juan.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
+      github: "https://github.com/Darkflame72",
+      // envolope: "mailto:leon@tuhuratech.org.nz",
+    },
+  },
+  {
+    name: "Lillian Hide-Tobin",
+    role: "Lead Mentor",
+    bio: "Lillian has freshly graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, whether in Game Development, algorithmic audio and video, storytelling, or anything else. She strives to encourage young women to engage with technology",
+    // avatar: "/avatar-sophia.jpg",
+    social: {},
+  },
+  {
+    name: "Zelle Marcovicci",
+    role: "Lead Mentor",
+    bio: "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
+    // avatar: "/avatar-marcus.jpg",
+    social: {},
+  },
+  {
+    name: "Neenu",
+    role: "Lead Mentor",
+    bio: "",
+    // avatar: "/avatar-marcus.jpg",
+    social: {},
+  },
+  {
+    name: "Irma",
+    role: "Admin and Operations Coordinator",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+  {
+    name: "Yui",
+    role: "Community Coordinator",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+];
+
+const boardMembers = [
+  {
+    name: "Lillian Pak",
+    role: "Co-Founder & Chair of the Board",
+    bio: "Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.",
+    // avatar: "/avatar-juan.jpg",
+    social: {},
+  },
+  {
+    name: "Simon McCallum",
+    role: "Treasurer",
+    bio: "",
+    // avatar: "/avatar-sophia.jpg",
+    social: {},
+  },
+  {
+    name: "Rose Langride",
+    role: "Secretary",
+    bio: "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
+    // avatar: "/avatar-marcus.jpg",
+    social: {},
+  },
+  {
+    name: "Jerome Dolman",
+    role: "Trustee",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+  {
+    name: "Aleisha Amohia",
+    role: "Trustee",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+  {
+    name: "Kendra Ross",
+    role: "Trustee",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+  {
+    name: "Carl Ross",
+    role: "Trustee",
+    bio: "",
+    // avatar: "/avatar-priya.jpg",
+    social: {},
+  },
+  {
+    name: "Leon Bowie",
+    role: "Co-Founder, CEO & Trustee",
+    bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
+    // avatar: "/avatar-priya.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
+      github: "https://github.com/Darkflame72",
+      // envolope: "mailto:leon@tuhuratech.org.nz",
+    },
+  },
+];
+
+const values = [
+  {
+    title: "Accessible & Equitable Education",
+    description:
+      "There should be no barriers to education and opportunities. We provide all our sessions free of charge, this includes our resources, laptops, robots, electronics and anything else enabling everything to be able to participate.",
+    icon: "ph:code-duotone",
+  },
+  {
+    title: "Industry Aligned Content",
+    description:
+      "There is no point teaching outdated content and practices, it's not engaging and doesn't set rangatahi up for success. We work with industry partners to bring their knowledge, skills and practices to rangatahi.",
+    icon: "ph:puzzle-piece-duotone",
+  },
+  {
+    title: "Knowledge and Support",
+    description:
+      "We provide trained staff, both in technology and education to enable rangatahi should be supported. It's why we are a Living Wage Accredited Employer and put our staff through industry training and certifications.",
+    icon: "ph:brain-duotone",
+  },
+  {
+    title: "Local Partnership",
+    description:
+      "We operate in partnership with local communities, iwi and kura focused on how best to support them and their needs rather than mandating a solution. This allows us to bring a targeted unique approach wherever we operate, producing long-term impact.",
+    icon: "ph:shield-check-duotone",
+  },
+];
+
+const timeline = [
+  {
+    year: "2021",
+    title: "The Idea",
+    description:
+      "With everything stopped after COVID-19 a group of us came together to build a sustainable prgram run with the community instead of part of a corporate agenda. Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie came together as the original board to start up the charity.",
+  },
+  {
+    year: "2021-2023",
+    title: "Proving the Concept",
+    description:
+      "Working with select Kura and Community Centres we begin to trial our session formats, resources and approaches to supporting rangatahi.",
+  },
+  {
+    year: "2023",
+    title: "Start Growing",
+    description:
+      "Hiring our first staff members and expanding to Porirua and Lower Hutt. We reach 1000+ rangatahi in yearly engagement.",
+  },
+  {
+    year: "2025+",
+    title: "Tūhura Tech across Greater Wellington",
+    description:
+      "Now with stable operations, a long term strategic vision and stable growth",
+  },
+];
+---
+
+<Layout
+  title="About Us"
+  description="Read about Tūhura Tech's mission, values, team, and the story of how we plan to support and empower the next generation through technology!"
+>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          About <span class="gradient-text">Tūhura Tech</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600">
+          We empower rangatahi through free, hands on, in person technology
+          education aimed at growing and igniting their passion and supported by
+          industry.
+        </p>
+      </div>
+
+      <div class="mt-16">
+        <div class="relative rounded-xl overflow-hidden">
+          <Image
+            src={teamImage}
+            alt="Tūhura Tech Team"
+            class="w-full h-auto"
+            width={1200}
+            height={600}
+          />
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-xl font-medium text-gray-700">
+          As the only Charitable Trust operating in the Greater Wellington
+          Region focused on Technology Education for Youth with trained staff we
+          focus on providing high quality sessions and support. We believe in
+          having hands on, montessori inspired sessions aligned to industry
+          content.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">Our Values</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          The principles that guide everything we do.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          values.map((value, index) => (
+            <div
+              class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow  "
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="h-12 w-12 rounded-lg bg-gradient-to-r from-tuhura-green to-tuhura-blue flex items-center justify-center text-white mb-6">
+                <Icon name={value.icon} class="h-6 w-6" />
+              </div>
+              <h3 class="text-xl font-semibold">{value.title}</h3>
+              <p class="mt-3 text-gray-600">{value.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">Our Story</h2>
+      </div>
+
+      <div class="mt-12 max-w-4xl mx-auto">
+        <div class="relative">
+          {
+            timeline.map((event, index) => (
+              <div
+                class="relative pl-8 pb-12 "
+                style={`animation-delay: ${index * 0.15}s`}
+              >
+                <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-tuhura-green to-tuhura-blue" />
+                <div class="absolute left-[-4px] top-2 h-2 w-2 rounded-full bg-tuhura-green" />
+                <div class="text-sm font-semibold text-tuhura-green">
+                  {event.year}
+                </div>
+                <h3 class="mt-2 text-xl font-semibold">{event.title}</h3>
+                <p class="mt-2 text-gray-600">{event.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">Meet Our Team</h2>
+        <p class="mt-4 text-xl text-gray-600">The people behind Tūhura Tech.</p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          teamMembers.map((member, index) => (
+            <div
+              class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow  text-center "
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="relative inline-block">
+                {/* <img
+                  src={member.avatar}
+                  alt={member.name}
+                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20"
+                /> */}
+              </div>
+              <h3 class="text-xl font-semibold">{member.name}</h3>
+              <p class="text-tuhura-green font-medium">{member.role}</p>
+              <p class="mt-3 text-gray-600 text-sm">{member.bio}</p>
+              <div class="mt-4 flex justify-center space-x-3">
+                {Object.entries(member.social).map((t, _) => (
+                  <a
+                    href={t[1]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-tuhura-green"
+                  >
+                    <Icon name={`ph:${t[0]}-logo-duotone`} class="h-8 w-8" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue text-white relative overflow-hidden"
+  >
+    <div class="absolute inset-0 opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <span
+          class="inline-block px-4 py-1 bg-white/10 rounded-full text-sm font-medium mb-6"
+        >
+          We're Hiring!
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold">Join Our Team</h2>
+        <p class="mt-6 text-xl opacity-90">
+          We're on a mission to empower rangatahi through technology education.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/careers" class="btn bg-white text-tuhura-green">
+            View Open Positions
+          </a>
+          <a
+            href="/contact"
+            class="btn bg-transparent border-2 border-white hover:bg-white/10"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Meet Our Board of Trustees
+        </h2>
+        <p class="mt-4 text-xl text-gray-600">
+          The amazing people who provide guardianship over the whole charity and
+          its direction.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          boardMembers.map((member, index) => (
+            <div
+              class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow  text-center "
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="relative inline-block">
+                {/* <img
+                  src={member.avatar}
+                  alt={member.name}
+                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20"
+                /> */}
+              </div>
+              <h3 class="text-xl font-semibold">{member.name}</h3>
+              <p class="text-tuhura-green font-medium">{member.role}</p>
+              <p class="mt-3 text-gray-600 text-sm">{member.bio}</p>
+              <div class="mt-4 flex justify-center space-x-3">
+                {Object.entries(member.social).map((t, k) => (
+                  <a
+                    href={t[1]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-tuhura-green"
+                  >
+                    <Icon name={`ph:${t[0]}-logo-duotone`} class="h-8 w-8" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

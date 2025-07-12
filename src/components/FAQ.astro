@@ -1,0 +1,111 @@
+---
+const faqs = [
+	{
+		question: "Who is this for?",
+		answer:
+			"We support and deliver content to akonga from years 5 to 13 in the Wellington, Lower & Upper Hutt regions. We are wanting to expand into Porirua this year.",
+	},
+	{
+		question: "How are we funded?",
+		answer:
+			"As a charitable trust we rely on sponsorships and donations from companies and the community; this allows us to run all of our sessions for free. If you or your company are interested in supporting us, we would love to talk to you. ",
+	},
+	{
+		question: "How do I help out?",
+		answer:
+			"We are looking for people with an interest in technology and working with rangatahi from current University students to industry professionals.",
+	},
+	{
+		question: "How do I get involved as a learner?",
+		answer:
+			"If we are not already running sessions at your school, feel free to come to one of our after-school sessions at a nearby school, or ask your kaiako (school) to get in touch with us.",
+	},
+	{
+		question: "What areas of Technology do we cover?",
+		answer:
+			"We cover many areas of technology with a focus on expanding what is covered in schools — this includes areas such as robotics, cybersecurity, Artificial Intelligence/Machine Learning and more.",
+	},
+	{
+		question: "Who are we?",
+		answer:
+			"We are a group of volunteers, kaiako and industry professionals who all care about technology and want to support rangatahi.",
+	},
+];
+---
+
+<section class="py-20 bg-tuhura-gray relative overflow-hidden">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0 bg-repeat"></div>
+  </div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+      <p class="mt-4 text-xl text-gray-600">
+        Everything you need to know about us.
+      </p>
+    </div>
+
+    <div class="mt-12 max-w-3xl mx-auto">
+      {
+        faqs.map((faq, index) => (
+          <div
+            class="mb-6 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden  faq-item hover:shadow-md transition-all "
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer p-6 transition-all  hover:bg-gray-50">
+                <h3 class="text-lg font-medium transition-colors  group-hover:text-tuhura-green">
+                  {faq.question}
+                </h3>
+                <div class="flex-shrink-0 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-gray-500 group-open:rotate-180 transition-transform duration-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600 faq-content">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600">Still have questions? We're here to help.</p>
+      <a
+        href="/contact"
+        class="mt-4 inline-flex items-center text-tuhura-green font-medium hover:underline group"
+      >
+        Contact Us
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

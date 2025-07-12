@@ -1,0 +1,253 @@
+---
+import Newsletter from "@components/Newsletter.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const tiers = [
+	{
+		name: "Donate",
+		description:
+			"Financially support us enabling us to continue running sessions free of charge for kiwi kids.",
+		features: [
+			"One off donation",
+			"Recurring donation",
+			"Sponsor a session",
+			"Sponsor rangatahi",
+		],
+		cta: {
+			text: "Donate",
+			href: "https://donate.tuhuratech.org.nz",
+		},
+	},
+	{
+		name: "Volunteer",
+		description:
+			"Support us directly! Lend your expertise and story either in a session, building resources or behind the .",
+		features: [
+			"Run a workshop at a sessions",
+			"Join a session for a term",
+			"Help write resources",
+		],
+		cta: {
+			text: "Contact Us",
+			href: "/contact",
+		},
+	},
+	{
+		name: "Donate Equipment",
+		description:
+			"Donate used laptops, monitors, tablets, servers, switches or any other electronics.",
+		features: [
+			"Enable rangatahi without laptops",
+			"Provide opportunities with specific equipment",
+		],
+		cta: {
+			text: "Contact Us",
+			href: "/contact",
+		},
+	},
+];
+
+const enterpriseFeatures = ["Organisation alignment on vision"];
+---
+
+<Layout
+  title="Support Us"
+  description="Support us and help grow our impact providing free technolgoy education for kiwi kids."
+>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          <span class="gradient-text">Support Us</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600">
+          Support us however you can in a way that is easy and convienient to
+          empower the next generation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {
+          tiers.map((tier, index) => (
+            <div
+              class={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow  relative  delay-${index + 2}`}
+            >
+              {tier.name === "Scale" && (
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-tuhura-green to-tuhura-blue text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </div>
+              )}
+              <h3 class="text-2xl font-semibold">{tier.name}</h3>
+              <p class="mt-4 text-gray-600">{tier.description}</p>
+              <ul class="mt-8 space-y-4">
+                {tier.features.map((feature) => (
+                  <li class="flex items-center text-gray-700">
+                    <Icon
+                      name="ph:check-circle-duotone"
+                      class="h-5 w-5 text-tuhura-green mr-2"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-8">
+                <a
+                  href={tier.cta.href}
+                  class="btn btn-primary w-full text-center"
+                >
+                  {tier.cta.text}
+                </a>
+              </div>
+            </div>
+          ))
+        }
+
+        <!-- Enterprise Tier -->
+        <div
+          class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white"
+        >
+          <h3 class="text-2xl font-semibold">Partnership</h3>
+          <div class="mt-4">
+            <span class="text-2xl font-medium">Partner With Us</span>
+          </div>
+          <p class="mt-4 text-white/90">
+            For large platforms with custom requirements and enterprise-grade
+            needs.
+          </p>
+          <ul class="mt-8 space-y-4">
+            {
+              enterpriseFeatures.map((feature) => (
+                <li class="flex items-center">
+                  <Icon
+                    name="ph:check-circle-duotone"
+                    class="h-5 w-5 text-white mr-2"
+                  />
+                  {feature}
+                </li>
+              ))
+            }
+          </ul>
+          <div class="mt-8">
+            <a
+              href="/contact"
+              class="btn bg-white text-tuhura-green hover:bg-white/90 w-full text-center"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <!-- <section class="py-20">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12 ">
+        <h2 class="text-3xl md:text-4xl font-bold">Compare Plans</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Find the perfect plan for your platform's needs
+        </p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse ">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="py-4 px-6 text-left">Features</th>
+              <th class="py-4 px-6 text-center">Growth</th>
+              <th class="py-4 px-6 text-center">Scale</th>
+              <th class="py-4 px-6 text-center">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6">Employee Limit</td>
+              <td class="py-4 px-6 text-center">500</td>
+              <td class="py-4 px-6 text-center">2,000</td>
+              <td class="py-4 px-6 text-center">Unlimited</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6">Support Level</td>
+              <td class="py-4 px-6 text-center">Standard</td>
+              <td class="py-4 px-6 text-center">Priority</td>
+              <td class="py-4 px-6 text-center">24/7 Dedicated</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6">API Access</td>
+              <td class="py-4 px-6 text-center">Basic</td>
+              <td class="py-4 px-6 text-center">Advanced</td>
+              <td class="py-4 px-6 text-center">Custom</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6">White Labeling</td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:x-circle-duotone"
+                  class="h-5 w-5 text-gray-400 mx-auto"
+                />
+              </td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:check-circle-duotone"
+                  class="h-5 w-5 text-tuhura-green mx-auto"
+                />
+              </td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:check-circle-duotone"
+                  class="h-5 w-5 text-tuhura-green mx-auto"
+                />
+              </td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6">Custom Development</td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:x-circle-duotone"
+                  class="h-5 w-5 text-gray-400 mx-auto"
+                />
+              </td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:x-circle-duotone"
+                  class="h-5 w-5 text-gray-400 mx-auto"
+                />
+              </td>
+              <td class="py-4 px-6 text-center">
+                <Icon
+                  name="ph:check-circle-duotone"
+                  class="h-5 w-5 text-tuhura-green mx-auto"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Frequently Asked Questions
+        </h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Have questions about how to support? Check out our FAQ or contact us
+          for more details.
+        </p>
+        <div class="mt-8">
+          <a href="/contact" class="btn btn-secondary"> Get in Touch </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Newsletter />
+</Layout>
