@@ -3,11 +3,11 @@ import { Image } from "astro:assets";
 import logoSrc from "@assets/logo.svg";
 
 const navItems = [
-	{ name: "Mahi", href: "/mahi" },
-	{ name: "Sessions", href: "/mahi/sessions" },
-	{ name: "About Us", href: "/about-us" },
-	{ name: "Wiki", href: "https://wiki.tuhuratech.org.nz" },
-	{ name: "Blog", href: "https://blog.tuhuratech.org.nz" },
+  { name: "Mahi", href: "/mahi" },
+  { name: "Sessions", href: "/mahi/sessions" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Wiki", href: "https://wiki.tuhuratech.org.nz" },
+  { name: "Blog", href: "https://blog.tuhuratech.org.nz" },
 ];
 ---
 
@@ -40,7 +40,7 @@ const navItems = [
         navItems.map((item) => (
           <a
             href={item.href}
-            class="text-gray-700 hover:text-tuhura-green focus:text-tuhura-green transition-all  focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded px-2 py-1"
+            class="text-gray-700 hover:text-tuhura-green focus:text-tuhura-green transition-all  focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2px-2 py-1"
           >
             {item.name}
           </a>
@@ -51,7 +51,7 @@ const navItems = [
     <div class="flex items-center space-x-4">
       <a
         href="/support-us"
-        class="hidden md:inline-block text-tuhura-dark hover:text-tuhura-green focus:text-tuhura-green transition-all relative focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded px-2 py-1"
+        class="hidden md:inline-block text-tuhura-dark hover:text-tuhura-green focus:text-tuhura-green transition-all relative focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2px-2 py-1"
       >
         Support Us
         <span
@@ -66,7 +66,7 @@ const navItems = [
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
-        class="md:hidden flex items-center transition-transform focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded p-1"
+        class="md:hidden flex items-center transition-transform focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2p-1"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
