@@ -1,96 +1,22 @@
 ---
-import Cards from "@components/Cards.astro";
-import FAQs from "@components/FAQs.astro";
-import FeaturesLarge from "@components/FeaturesLarge.astro";
+import FAQ from "@components/FAQ.astro";
+import Features from "@components/Features.astro";
 import Hero from "@components/Hero.astro";
-import IconCards from "@components/IconCards.astro";
-import Stats from "@components/Stats.astro";
-import largeLanding from "@images/large-landing.jpg";
+import HowItWorks from "@components/HowItWorks.astro";
+// import Testimonials from "@components/Testimonials.astro";
+import Newsletter from "@components/Newsletter.astro";
+import Partners from "@components/Partners.astro";
+import SessionWidget from "@components/SessionWidget.astro";
 import Layout from "@layouts/Layout.astro";
-import { faqs, sessions } from "../data";
 ---
 
 <Layout>
   <Hero />
-  <Stats
-    stats={[
-      { title: "Locations", value: "15+", description: "with sessions" },
-      {
-        title: "Rangatahi",
-        value: "1000+",
-        description: "through our sessions",
-      },
-      {
-        title: "Regions",
-        value: "3",
-        description: "in Greater Wellington",
-      },
-    ]}
-  />
-  <FeaturesLarge
-    title="We work directly with rangatahi."
-    description="We work across central Wellington, Lower Hutt, Upper Hutt and Porirua. We focus on providing free/affordable sessions and support to rangatahi aged 18 and under."
-    image={largeLanding}
-    features={[
-      {
-        title: "Sessions",
-        description:
-          "We run free after-school sessions at a variety of schools and community centres across school years 5-13 providing spaces where rangatahi can explore technology with the support of our staff and volunteers.",
-        icon: "mdi:robot",
-      },
-      {
-        title: "School Sessions",
-        description:
-          "We work closely with various schools to run outreach sessions during school time to provide greater opportunities for rangatahi.",
-        icon: "mdi:school",
-      },
-      {
-        title: "Workshops",
-        description:
-          "In collaboration with industry specialists and our other partners, we run one off workshops on a variety of topics from VEX Robotics to 3D Printing.",
-        icon: "mdi:tools",
-      },
-      {
-        title: "Support for kura and kaiako",
-        description:
-          "We work with kura and kaiako to support their mahi with resources and workshops.",
-        icon: "mdi:toolbox",
-      },
-    ]}
-  />
-  <Cards
-    cards={[
-      {
-        title: "Enquire About sessions",
-        description: "Join one of our sessions",
-        icon: "mdi:robot",
-        href: "/what-we-do",
-      },
-      {
-        title: "Sponsor Us",
-        description: "Join one of our sessions",
-        icon: "mdi:money",
-        href: "https://donate.tuhuratech.org.nz/en/",
-      },
-      {
-        title: "Volunteer with Us",
-        description: "Join one of our sessions",
-        icon: "mdi:volunteer",
-        href: "/contact",
-      },
-    ]}
-  />
-  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14" id="sessions">
-    <h1
-      class="text-6xl font-bold md:text-6xl md:leading-tight text-gray-800 dark:text-neutral-200"
-    >
-      Sessions
-    </h1>
-  </div>
-  {
-    sessions.map((location) => (
-      <IconCards cards={location.sessions} location={location.location} />
-    ))
-  }
-  <FAQs title="Frequently Asked Questions" faqs={faqs} />
+  <Partners />
+  <Features />
+  <HowItWorks />
+  <SessionWidget />
+  <!-- <Testimonials /> -->
+  <FAQ />
+  <Newsletter />
 </Layout>

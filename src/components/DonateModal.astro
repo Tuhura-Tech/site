@@ -16,7 +16,7 @@ import { Icon } from "astro-icon/components";
                 aria-label="Close"
                 class="bs-btn rounded-full !p-0 flex items-center justify-center"
             >
-                <Icon name="mdi:cross-circle" title="Icon" />
+                <Icon name="ph:stop-duotone" title="Icon" />
             </button>
         </h2>
         <div
@@ -33,9 +33,12 @@ import { Icon } from "astro-icon/components";
 </dialog>
 
 <script>
-    const dialog = document.getElementById("demo");
+    interface DialogEventTarget extends EventTarget {
+        id: string;
+    }
+    const dialog = document.getElementById("demo") as HTMLDialogElement;
     dialog.addEventListener("click", (event) => {
-        if (event.target.id !== "dialog") {
+        if ((event.target as DialogEventTarget).id !== "dialog") {
             dialog.close();
         }
     });
@@ -49,7 +52,7 @@ import { Icon } from "astro-icon/components";
     }
 
     dialog[open]::backdrop {
-        backdrop-filter: blur(50px);
+        backdrop-filter: blur(5px);
     }
 
     @keyframes scale-up {

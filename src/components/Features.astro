@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import eventImage from "@assets/robocup-2025.jpg";
+import sessionImage from "@assets/session.jpg";
+import { Icon } from "astro-icon/components";
+
+// import featureImage3 from "@assets/feature-3.svg";
+
+const features = [
+	{
+		title: "After School Clubs",
+		description:
+			"We run free after-school sessions at a variety of schools and community centres across school years 5-13 providing spaces where rangatahi can explore technology with the support of our staff and volunteers.",
+		icon: "ph:star-duotone",
+		image: sessionImage,
+		href: "/mahi/sessions",
+	},
+	{
+		title: "Workshops / Events",
+		description:
+			"In collaboration with industry specialists and our other partners, we run one off workshops on a variety of topics from VEX Robotics to 3D Printing.",
+		icon: "ph:lightning-duotone",
+		image: eventImage,
+		href: "/mahi/workshops",
+	},
+	{
+		title: "Kaiako (teacher) support",
+		description:
+			"We work with kura and kaiako to support their mahi with resources and workshops.",
+		icon: "ph:globe-duotone",
+		image: eventImage,
+		href: "/mahi/kaiako",
+	},
+];
+---
+
+<section
+  class="py-20 bg-gradient-to-b from-white to-tuhura-gray relative overflow-hidden"
+>
+  <!-- Subtle background pattern with parallax effect -->
+  <div class="absolute inset-0 opacity-5 parallax" data-speed="0.1">
+    <div class="absolute inset-0 bg-repeat"></div>
+  </div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold">Our Initiatives</h2>
+      <p class="mt-4 text-xl text-gray-600">
+        We work across central Wellington, Lower Hutt, Upper Hutt and Porirua.
+        We focus on providing free/affordable sessions and support to rangatahi
+        aged 18 and under.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        features.map((feature, index) => (
+          <a href={feature.href}>
+            <div class={`feature-card  delay-${index + 2} group`}>
+              <div class="h-12 w-12 rounded-lg bg-gradient-to-r from-tuhura-green to-tuhura-blue flex items-center justify-center text-white mb-6 transition-transform  group-hover:scale-110">
+                <Icon
+                  name={feature.icon}
+                  class="h-6 w-6 transition-transform  group-hover:rotate-12"
+                />
+              </div>
+              <h3 class="text-xl font-semibold transition-colors  group-hover:text-tuhura-green">
+                {feature.title}
+              </h3>
+              <p class="mt-3 text-gray-600">{feature.description}</p>
+              <div class="mt-6 hover-zoom rounded-lg overflow-hidden">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  class="w-full h-auto rounded-lg transition-all duration-500"
+                  width={300}
+                  height={200}
+                />
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

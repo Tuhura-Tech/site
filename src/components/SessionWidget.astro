@@ -1,0 +1,170 @@
+---
+import "leaflet/dist/leaflet.css";
+---
+
+<section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden relative">
+    <div class="container-custom relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1
+                    class="text-2xl md:text-2xl lg:text-2xl font-bold leading-tight"
+                >
+                    Join a session!
+                </h1>
+                <p class="mt-6 text-xl text-gray-600 max-w-lg">
+                    To enrol your child in a club, use our interactive map to
+                    find a session near you.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="/sessions" class="btn btn-primary"
+                        >Join a Session</a
+                    >
+                    <a href="/mahi" class="btn btn-secondary">Get Involved</a>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="relative hover-zoom">
+                    <div
+                        class="absolute -inset-0.5 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-xl blur opacity-30 transition-opacity hover:opacity-50"
+                    >
+                    </div>
+                    <div
+                        class="relative bg-white rounded-xl shadow-xl overflow-hidden"
+                    >
+                        <div class="map-center-container">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { Map, TileLayer, Marker, Popup, FeatureGroup } from "leaflet";
+    const sessions = [
+        {
+            name: "Wellington High School",
+            address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
+            latlong: [-41.300334, 174.775107],
+            age: "Year 9 - 13",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Strathmore Park Community Centre",
+            address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
+            latlong: [-41.330524, 174.821945],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
+            address: "1a Ottawa Road Ngaio Wellington",
+            latlong: [-41.249884, 174.773312],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Te Mako Naenae Community Centre",
+            address: "27 Hillary Court Naenae Lower Hutt 5011",
+            latlong: [-41.198645, 174.947569],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Mana College",
+            address: " Awarua St, Elsdon, Porirua 5022",
+            latlong: [-41.1292217, 174.8329403],
+            age: "Year 9 - 13",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Walter Nash Neighbourhood Hub ",
+            address: "22/26 Taine Street, Taitā, Lower Hutt",
+            latlong: [-41.198645, 174.947569],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "South Wellington Intermediate School",
+            address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
+            latlong: [-41.318344, 174.778997],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Johnsonville Library",
+            address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
+            latlong: [-41.222825, 174.804714],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+        {
+            name: "Te Whare Pukapuka o Te Māhanga - Karori Library ",
+            address: "247 Karori Rd, Karori, Wellington 6012",
+            latlong: [-41.284831, 174.73754],
+            age: "Year 4 - 8",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+        },
+    ];
+
+    const map = new Map("map");
+
+    let markers = [];
+    sessions.forEach((session) => {
+        const marker = new Marker(session.latlong).addTo(map);
+        var popup = new Popup().setContent(
+            `${session.name}<br>${session.address}`,
+        );
+
+        marker.bindPopup(popup).openPopup();
+        markers.push(marker);
+    });
+
+    var group = new FeatureGroup(markers);
+
+    map.fitBounds(group.getBounds().pad(0.5));
+
+    const tiles = new TileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            maxZoom: 19,
+            attribution:
+                '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        },
+    ).addTo(map);
+</script>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .map-center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #map {
+        width: 100%;
+        height: 100$;
+        min-width: 320px;
+        min-height: 320px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .leaflet-popup-content-wrapper {
+        color: #234c5e;
+    }
+
+    .leaflet-popup-content-wrapper .leaflet-popup-content {
+    }
+
+    .leaflet-popup-tip-container {
+    }
+</style>

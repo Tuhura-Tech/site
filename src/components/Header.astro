@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import logoSrc from "@assets/logo.svg";
+
+const navItems = [
+	{ name: "Mahi", href: "/mahi" },
+	{ name: "Sessions", href: "/mahi/sessions" },
+	{ name: "About Us", href: "/about-us" },
+	{ name: "Wiki", href: "https://wiki.tuhuratech.org.nz" },
+	{ name: "Blog", href: "https://blog.tuhuratech.org.nz" },
+];
+---
+
+<header
+  class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100"
+  role="banner"
+>
+  <div class="container-custom flex items-center justify-between h-20">
+    <a
+      href="/"
+      class="flex items-center transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded"
+      aria-label="Tūhura Tech home"
+    >
+      <Image
+        src={logoSrc}
+        alt="Tūhura Tech Logo"
+        width={40}
+        height={40}
+        class="transition-all hover:brightness-110 focus:brightness-110"
+      />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav
+      class="hidden md:flex items-center space-x-8"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-700 hover:text-tuhura-green focus:text-tuhura-green transition-all  focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded px-2 py-1"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center space-x-4">
+      <a
+        href="/support-us"
+        class="hidden md:inline-block text-tuhura-dark hover:text-tuhura-green focus:text-tuhura-green transition-all relative focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded px-2 py-1"
+      >
+        Support Us
+        <span
+          class="absolute bottom-0 left-0 w-0 h-0.5 bg-tuhura-green transition-all group-hover:w-full"
+        ></span>
+      </a>
+      <button
+        class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2"
+        onclick="demo.showModal()">Donate</button
+      >
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden flex items-center transition-transform focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded p-1"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobile-menu"
+    class="hidden md:hidden bg-white w-full border-t border-gray-100"
+    role="navigation"
+    aria-label="Mobile navigation"
+  >
+    <div class="container-custom py-4 space-y-4">
+      {
+        navItems.map((item, index) => (
+          <a
+            href={item.href}
+            class="block py-2 px-2 text-gray-700 hover:text-tuhura-green focus:text-tuhura-green transition-all  focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded"
+            style={`transition-delay: ${index * 50}ms;`}
+          >
+            {item.name}
+          </a>
+        ))
+      }
+      <a
+        href="/support-us"
+        class="block py-2 px-2 text-gray-700 hover:text-tuhura-green focus:text-tuhura-green transition-all focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 rounded"
+        >Support Us</a
+      >
+    </div>
+  </nav>
+</header>

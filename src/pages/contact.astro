@@ -1,19 +1,182 @@
 ---
-import ContactComponent from "@components/Contact.astro";
-import heroImage from "@images/hero.avif";
 import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
-const title = "Contact Us";
+const contactMethods = [
+	{
+		title: "Sessions",
+		description:
+			"Talk to our sales team about implementing Tūhura Tech for your platform.",
+		icon: "ph:laptop-duotone",
+		email: "sessions@tuhuratech.org.nz",
+	},
+	{
+		title: "Workshops",
+		description: "Get help with technical questions or implementation issues.",
+		icon: "ph:lifebuoy-duotone",
+		email: "workshops@tuhuratech.org.nz",
+	},
+	{
+		title: "Partnerships",
+		description: "Explore partnership opportunities with our team.",
+		icon: "ph:handshake-duotone",
+		email: "partners@tuhuratech.org.nz",
+	},
+];
 ---
 
-<Layout meta={{ title }}>
-  <ContactComponent
-    title="Contact Us"
-    contactImage={heroImage}
-    email="contact@tuhuratech.org.nz"
-    description={[
-      "Interested in a new location, sponsorship or any other questions?",
-      "Give us an email or call and we will get back to you as soon as we can.",
-    ]}
-  />
+<Layout
+  title="Contact Us"
+  description="Get in touch with our team for sales inquiries, technical support, or partnership opportunities."
+>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Get in <span class="gradient-text">Touch</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600">
+          We'd love to hear from you. Reach out to our team with any questions
+          or inquiries and we can have a kōrero.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {
+          contactMethods.map((method, index) => (
+            <div
+              class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center "
+              style={`animation-delay: ${index * 0.15}s`}
+            >
+              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-tuhura-green/10 text-tuhura-green mb-6">
+                <Icon name={method.icon} class="h-8 w-8" />
+              </div>
+              <h3 class="text-xl font-semibold">{method.title}</h3>
+              <p class="mt-3 text-gray-600">{method.description}</p>
+              <a
+                href={`mailto:${method.email}`}
+                class="mt-4 block text-tuhura-green font-medium hover:underline"
+              >
+                {method.email}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div
+        class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+      >
+        <div class="p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6">Send Us a Message</h2>
+          <form
+            class="space-y-6"
+            action="https://submit-form.com/Byck0EiW5"
+            method="POST"
+            id="contact-form"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tuhura-green focus:border-tuhura-green"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tuhura-green focus:border-tuhura-green"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label for="company" class="block text-gray-700 font-medium mb-2"
+                >Organisation (Optional)</label
+              >
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tuhura-green focus:border-tuhura-green"
+              />
+            </div>
+            <div>
+              <label for="subject" class="block text-gray-700 font-medium mb-2"
+                >Subject</label
+              >
+              <select
+                id="subject"
+                name="subject"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tuhura-green focus:border-tuhura-green"
+                required
+                onchange="formSubjectChange(this)"
+              >
+                <option value="" disabled selected>Select an option</option>
+                <option value="Session Query">Session Information</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Professional Development">Workshop</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 font-medium mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tuhura-green focus:border-tuhura-green"
+                required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary w-full md:w-auto">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function formSubjectChange(event) {
+      let action;
+      switch (event.value) {
+        case "Session Query":
+          action = "https://submit-form.com/TZiHVi9Ke";
+          break;
+        case "Workshop":
+          action = "https://submit-form.com/Lp6fxKSgP";
+          break;
+        case "Professional Development":
+          action = "https://submit-form.com/kIyrj2oTX";
+          break;
+        case "Partnership":
+          action = "https://submit-form.com/FbkLeNCgK";
+          break;
+        default:
+          action = "https://submit-form.com/Byck0EiW5";
+      }
+      (document.getElementById("contact-form") as HTMLFormElement).action =
+        action;
+    }
+  </script>
 </Layout>

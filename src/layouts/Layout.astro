@@ -1,23 +1,84 @@
 ---
+import { getImage } from "astro:assets";
+// import DonateModal from "@components/DonateModal.astro";
 import Footer from "@components/Footer.astro";
-import DialogModal from "@components/DonateModal.astro";
-import Head from "@components/Head.astro";
-import Navbar from "@components/Navbar.astro";
+import Header from "@components/Header.astro";
 import "../styles/global.css";
 
-const { meta } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteName = "Tūhura Tech";
+
+const {
+  title = siteName,
+  description = "Empowering the next generation through hands on, industry supported, Technology Education.",
+} = Astro.props;
+
+// Preload critical assets
+const faviconImg = await getImage({
+  src: "/favicon.svg",
+  width: 32,
+  height: 32,
+});
+let shownTitle: string;
+if (title !== siteName) {
+  shownTitle = `${title} | ${siteName}`;
+} else {
+  shownTitle = siteName;
+}
 ---
 
+<!doctype html>
 <html lang="en">
-  <Head {...meta} />
-  <body
-    class="mx-auto min-h-screen bg-white border-x-gray-200 px-4 sm:px-6 lg:px-8 xl:border-x dark:bg-neutral-800 dark:border-x-gray-700"
-  >
-    <Navbar />
-    <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href={faviconImg.src} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{shownTitle}</title>
+
+    <!-- Structured data -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tūhura Tech",
+        "url": "https://tuhuratech.org.nz",
+        "logo": "https://tuhuratech.org.nz/logo.png",
+        "sameAs": [
+          "https://twitter.com/payflo_dev",
+          "https://www.linkedin.com/company/tuhura-dev"
+        ]
+      }
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta
+      property="og:image"
+      content="https://tuhuratech.org.nz/og-image.jpg"
+    />
+
+    <!-- Plausible Analytics -->
+    <script
+      is:inline
+      data-domain="tuhuratech.org.nz"
+      src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content" class="flex-grow">
       <slot />
     </main>
-    <DialogModal id="demo" />
     <Footer />
+    <!-- <DonateModal /> -->
   </body>
 </html>

@@ -1,0 +1,49 @@
+---
+const testimonials = [{ author: "", role: "", quote: "" }];
+---
+
+<section class="py-20 bg-white relative overflow-hidden">
+  <!-- Subtle background pattern with parallax effect -->
+  <div class="absolute inset-0 opacity-5 parallax" data-speed="0.15">
+    <div class="absolute inset-0 bg-repeat"></div>
+  </div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold">Feedback on what we do</h2>
+      <p class="mt-4 text-xl text-gray-600">
+        See what whanau, tamariki, rangatahi and industry are saying about what
+        we do!
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        testimonials.map((testimonial, index) => (
+          <div
+            class="testimonial-card  group"
+            style={`animation-delay: ${index * 0.15}s`}
+          >
+            <div class="flex items-center mb-6">
+              <div>
+                <h4 class="font-semibold transition-colors  group-hover:text-tuhura-green">
+                  {testimonial.author}
+                </h4>
+                <p class="text-sm text-gray-600">{testimonial.role}</p>
+              </div>
+            </div>
+            <p class="text-gray-700 italic relative">
+              <span class="absolute -top-2 -left-1 text-4xl text-tuhura-green opacity-20 transition-all  group-hover:opacity-40 group-hover:scale-110">
+                "
+              </span>
+              {testimonial.quote}
+              <span class="absolute -bottom-2 -right-1 text-4xl text-tuhura-green opacity-20 transition-all  group-hover:opacity-40 group-hover:scale-110">
+                "
+              </span>
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

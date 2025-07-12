@@ -1,92 +1,252 @@
 ---
-import { Icon } from "astro-icon/components";
-import { coreUrls, footerLinks, socials } from "../data";
+import { Image } from "astro:assets";
+import logoSrc from "@assets/logo.svg";
+
+const companyLinks = [
+	{ name: "About Us", href: "/about-us" },
+	{ name: "Careers", href: "/careers" },
+	{ name: "Contact", href: "/contact" },
+	{ name: "Support Us", href: "/support-us" },
+	{
+		name: "Identity Proofs",
+		href: "https://keyoxide.org/contact@tuhuratech.org.nz",
+	},
+];
+
+const resourceLinks = [
+	{ name: "Blog", href: "/blog" },
+	{ name: "Wiki", href: "https://wiki.tuhuratech.org.nz" },
+	{ name: "Shop", href: "https://shop.tuhuratech.org.nz" },
+];
+
+const mahiLinks = [
+	{ name: "Mahi", href: "/mahi" },
+	{ name: "Sessions", href: "/mahi/sessions" },
+	{ name: "Workshops", href: "/mahi/workshops" },
+	{ name: "Events", href: "/mahi/events" },
+	{ name: "Professional Development", href: "/mahi/pld" },
+];
+
+const socialLinks = [
+	{
+		name: "Mastodon",
+		icon: "mastodon",
+		href: "https://mastodon.nzoss.nz/@tuhuratech",
+	},
+	{
+		name: "Facebook",
+		icon: "facebook",
+		href: "https://www.facebook.com/p/Tūhura-Tech-100083052084710/",
+	},
+	{
+		name: "LinkedIn",
+		icon: "linkedin",
+		href: "https://www.linkedin.com/company/tūhura-tech/",
+	},
+	{
+		name: "Instagram",
+		icon: "instagram",
+		href: "https://www.instagram.com/tuhura_tech",
+	},
+	{
+		name: "Discord",
+		icon: "discord",
+		href: "https://discord.gg/PNxh7cwKfQ",
+	},
+	{
+		name: "GitHub",
+		icon: "github",
+		href: "https://github.com/Tuhura-Tech",
+	},
+];
 ---
 
-<footer
-  class="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto border-t border-gray-200 dark:border-neutral-700"
->
-  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10">
-    <div class="col-span-full hidden lg:col-span-1 lg:block">
-      <a
-        class="flex-none text-xl font-semibold text-primary"
-        href="/"
-        aria-label="Brand">Tūhura Tech</a
-      >
-      <div class="text-xs text-zinc-700 mr-4 dark:text-zinc-400">
-        Copyright © {new Date().getFullYear()} Tūhura Tech. Content available under
-        <a
-          href="https://creativecommons.org/licenses/by-sa/4.0/"
-          class="hover:text-primary-600 dark:hover:text-primary-400 underline hover:decoration-current transition duration-150 ease-in-out"
-          >CC BY-SA 4.0</a
-        >, unless stated otherwise.<br /><br />
-        Registered Charitable Trust <a
-          href="https://www.register.charities.govt.nz/Charity/CC60416"
-          class="hover:text-primary-600 dark:hover:text-primary-400 underline hover:decoration-current transition duration-150 ease-in-out"
-          >CC60416</a
-        >.<br />
-      </div>
-    </div>
-    <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%"><script is:inline src="https://cdn.jsdelivr.net/ghost/signup-form@~0.2/umd/signup-form.min.js" data-label-1="website" data-button-color="#6aa469" data-button-text-color="#FFFFFF" data-site="https://blog.tuhuratech.org.nz/" data-locale="en" async></script></div>
-
-    {
-      footerLinks.map((category) => (
-        <div>
-          <h4 class="text-xs font-semibold uppercase text-secondary">
-            {category.href && <a href={category.href}>{category.title}</a>}
-            {!category.href && category.title}
-          </h4>
-
-          <div class="mt-3 grid space-y-3 text-sm">
-            {category.links.map((link) => (
-              <p>
-                <a
-                  href={link.href}
-                  class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                >
-                  {link.label}
-                </a>
-              </p>
-            ))}
-          </div>
-        </div>
-      ))
-    }
+<footer class="bg-gray-900 text-white pt-16 pb-8 relative overflow-hidden">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0 bg-repeat"></div>
   </div>
 
-  <div class="pt-5 mt-5 border-t border-gray-200 dark:border-neutral-700">
-    <div class="sm:flex sm:justify-between sm:items-center">
-      <div class="flex items-center gap-x-3">
-        <div class="space-x-4 text-sm ms-4">
+  <!-- Animated gradient background -->
+  <div
+    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tuhura-green via-tuhura-blue to-tuhura-green bg-[length:200%_auto]"
+  >
+  </div>
+
+  <div class="container-custom relative">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-gray-800"
+    >
+      <div class="lg:col-span-2">
+        <a
+          href="/"
+          class="inline-block transition-transform hover:scale-105"
+          aria-label="Tūhura Tech home"
+        >
+          <Image
+            src={logoSrc}
+            alt="Tūhura Tech Logo"
+            width={120}
+            height={40}
+            class="brightness-0 invert"
+          />
+        </a>
+        <p class="mt-4 text-gray-400 max-w-md">
+          Empowering the next generation through hands on, industry supported,
+          Technology Education.
+        </p>
+        <div class="mt-6 flex space-x-4">
           {
-            coreUrls.map((url) => (
+            socialLinks.map((social) => (
               <a
-                href={url.href}
-                class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white transition-all  hover:scale-110 transform"
+                aria-label={social.name}
               >
-                {url.label}
+                {social.icon === "linkedin" && (
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                )}
+                {social.icon === "github" && (
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                )}
+                {social.icon === "instagram" && (
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    />
+                    <path
+                      xmlns="http://www.w3.org/2000/svg"
+                      d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                    />
+                    <path
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                    />
+                  </svg>
+                )}
               </a>
             ))
           }
         </div>
       </div>
 
-      <div class="space-x-4">
-        {
-          socials.map((social) => (
-            <a
-              href={social.href}
-              class="inline-block text-gray-500 hover:text-gray-800 dark:text-neutral-500 dark:hover:text-neutral-200"
-            >
-              <Icon
-                name={social.icon}
-                class="flex-shrink-0 size-6"
-                title={social.label}
-              />
-            </a>
-          ))
-        }
+      <div>
+        <h3
+          class="text-lg font-semibold mb-4 text-white/90 hover:text-white transition-colors"
+        >
+          Organisation
+        </h3>
+        <ul class="space-y-3">
+          {
+            companyLinks.map((link, index) => (
+              <li class="transform transition-all  hover:translate-x-1">
+                <a
+                  href={link.href}
+                  class="text-gray-400 hover:text-white transition-colors  inline-block"
+                  style={`transition-delay: ${index * 50}ms;`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
+
+      <div>
+        <h3
+          class="text-lg font-semibold mb-4 text-white/90 hover:text-white transition-colors"
+        >
+          Resources
+        </h3>
+        <ul class="space-y-3">
+          {
+            resourceLinks.map((link, index) => (
+              <li class="transform transition-all  hover:translate-x-1">
+                <a
+                  href={link.href}
+                  class="text-gray-400 hover:text-white transition-colors  inline-block"
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    link.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  style={`transition-delay: ${index * 50}ms;`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="text-lg font-semibold mb-4 text-white/90 hover:text-white transition-colors"
+        >
+          Mahi
+        </h3>
+        <ul class="space-y-3">
+          {
+            mahiLinks.map((link, index) => (
+              <li class="transform transition-all  hover:translate-x-1">
+                <a
+                  href={link.href}
+                  class="text-gray-400 hover:text-white transition-colors  inline-block"
+                  style={`transition-delay: ${index * 50}ms;`}
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 text-center text-gray-400 text-sm">
+      <p class="hover:text-gray-300 transition-colors">
+        &copy; {new Date().getFullYear()} Tūhura Tech. Content available under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+          >CC BY-SA 4.0</a
+        >, unless stated otherwise.<br /><br />
+        Registered Charitable Trust <a
+          href="https://www.register.charities.govt.nz/Charity/CC60416"
+          >CC60416</a
+        >.<br />
+      </p>
     </div>
   </div>
 </footer>
