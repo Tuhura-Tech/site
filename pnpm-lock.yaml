@@ -34,10 +34,10 @@ importers:
         version: 5.8.3
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.0.6
+        specifier: 2.0.6
         version: 2.0.6
       sharp:
-        specifier: ^0.34.2
+        specifier: 0.34.2
         version: 0.34.2
 
 packages:
