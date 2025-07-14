@@ -23,7 +23,8 @@ export default defineConfig({
 					"paint-brush",
 					"academic-cap",
 					"code-bracket",
-					"link"
+					"link",
+					"computer-desktop"
 				],
 			},
 		}),
