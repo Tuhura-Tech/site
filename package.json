@@ -14,17 +14,17 @@
 		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.4",
 		"@astrojs/sitemap": "^3.4.1",
 		"@iconify-json/heroicons": "^1.2.2",
-		"@tailwindcss/vite": "^4.1.11",
 		"astro": "^5.11.0",
 		"astro-icon": "^1.1.5",
 		"leaflet": "^2.0.0-alpha",
-		"tailwindcss": "^4.1.11",
-		"typescript": "^5.8.3"
+		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
+		"@tailwindcss/vite": "^4.1.11",
+		"typescript": "^5.8.3",
+		"@astrojs/check": "^0.9.4",
 		"@biomejs/biome": "2.1.1",
 		"sharp": "^0.34.3"
 	},
