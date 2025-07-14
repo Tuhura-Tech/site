@@ -1,7 +1,126 @@
 ---
+import SessionWidget from "@components/SessionWidget.astro";
 import Layout from "@layouts/Layout.astro";
+import sessionImage from "@assets/session-1.jpg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+const topics = [
+  {
+    title: "Scratch",
+    description:
+      "Seamlessly integrate payroll into your existing platform with our APIs and UI components.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Godot 2D Games",
+    description:
+      "We handle all tax calculations, filings, and payments so you don't have to worry about compliance.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "3D modeling and printing",
+    description:
+      "Support for direct deposit, checks, and other payment methods to suit your customers' needs.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "Customize the entire experience to match your brand, making it feel like a native part of your platform.",
+    icon: "heroicons:paint-brush",
+  },
+  {
+    title: "Godot 3D Games",
+    description:
+      "Provide comprehensive payroll reports and analytics for your customers.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Robotics",
+    description:
+      "Well-documented RESTful APIs that make integration straightforward for your development team.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Websites",
+    description:
+      "Well-documented RESTful APIs that make integration straightforward for your development team.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Electronics",
+    description:
+      "Well-documented RESTful APIs that make integration straightforward for your development team.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "VR & AR",
+    description:
+      "Well-documented RESTful APIs that make integration straightforward for your development team.",
+    icon: "heroicons:puzzle-piece",
+  },
+];
 ---
 
 <Layout title="Sessions">
-  <main></main>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            Our <span class="gradient-text">Tech Sessions</span>
+          </h1>
+          <p class="mt-6 text-xl text-gray-600 max-w-lg">
+            Our during school or after school sessions covering technology at
+            local schools, community centres, libraries and more. These are all
+            available free of charge with our amazing staff and volunteers.
+          </p>
+        </div>
+
+        <div>
+          <div class="relative">
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-xl blur opacity-30"
+            >
+            </div>
+            <div class="relative bg-white rounded-xl shadow-xl overflow-hidden">
+              <Image
+                src={sessionImage}
+                alt="Tūhura Tech Product Dashboard"
+                class="w-full h-auto"
+                width={700}
+                height={500}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <SessionWidget />
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold">Session Topics</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Some of the common topics covered in our sessions.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          topics.map((topic, _) => (
+            <div class="bg-white rounded-xl p-8 shadow-sm ">
+              <div class="h-12 w-12 rounded-lg bg-gradient-to-r from-tuhura-green to-tuhura-blue flex items-center justify-center text-white mb-6">
+                <Icon name={topic.icon} class="h-6 w-6" />
+              </div>
+              <h3 class="text-xl font-semibold">{topic.title}</h3>
+              <p class="mt-3 text-gray-600">{topic.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </Layout>

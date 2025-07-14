@@ -4,48 +4,48 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const tiers = [
-	{
-		name: "Donate",
-		description:
-			"Financially support us enabling us to continue running sessions free of charge for kiwi kids.",
-		features: [
-			"One off donation",
-			"Recurring donation",
-			"Sponsor a session",
-			"Sponsor rangatahi",
-		],
-		cta: {
-			text: "Donate",
-			href: "https://donate.tuhuratech.org.nz",
-		},
-	},
-	{
-		name: "Volunteer",
-		description:
-			"Support us directly! Lend your expertise and story either in a session, building resources or behind the .",
-		features: [
-			"Run a workshop at a sessions",
-			"Join a session for a term",
-			"Help write resources",
-		],
-		cta: {
-			text: "Contact Us",
-			href: "/contact",
-		},
-	},
-	{
-		name: "Donate Equipment",
-		description:
-			"Donate used laptops, monitors, tablets, servers, switches or any other electronics.",
-		features: [
-			"Enable rangatahi without laptops",
-			"Provide opportunities with specific equipment",
-		],
-		cta: {
-			text: "Contact Us",
-			href: "/contact",
-		},
-	},
+  {
+    name: "Donate",
+    description:
+      "Financially support us enabling us to continue running sessions free of charge for kiwi kids.",
+    features: [
+      "One off donation",
+      "Recurring donation",
+      "Sponsor a session",
+      "Sponsor rangatahi",
+    ],
+    cta: {
+      text: "Donate",
+      href: "https://donate.tuhuratech.org.nz",
+    },
+  },
+  {
+    name: "Volunteer",
+    description:
+      "Support us directly! Lend your expertise and story either in a session, building resources or behind the .",
+    features: [
+      "Run a workshop at a sessions",
+      "Join a session for a term",
+      "Help write resources",
+    ],
+    cta: {
+      text: "Contact Us",
+      href: "/contact",
+    },
+  },
+  {
+    name: "Donate Equipment",
+    description:
+      "Donate used laptops, monitors, tablets, servers, switches or any other electronics.",
+    features: [
+      "Enable rangatahi without laptops",
+      "Provide opportunities with specific equipment",
+    ],
+    cta: {
+      text: "Contact Us",
+      href: "/contact",
+    },
+  },
 ];
 
 const enterpriseFeatures = ["Organisation alignment on vision"];
@@ -88,7 +88,7 @@ const enterpriseFeatures = ["Organisation alignment on vision"];
                 {tier.features.map((feature) => (
                   <li class="flex items-center text-gray-700">
                     <Icon
-                      name="ph:check-circle-duotone"
+                      name="heroicons:check-circle-solid"
                       class="h-5 w-5 text-tuhura-green mr-2"
                     />
                     {feature}
@@ -124,7 +124,7 @@ const enterpriseFeatures = ["Organisation alignment on vision"];
               enterpriseFeatures.map((feature) => (
                 <li class="flex items-center">
                   <Icon
-                    name="ph:check-circle-duotone"
+                    name="heroicons:check-circle-solid"
                     class="h-5 w-5 text-white mr-2"
                   />
                   {feature}
@@ -188,19 +188,19 @@ const enterpriseFeatures = ["Organisation alignment on vision"];
               <td class="py-4 px-6">White Labeling</td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:x-circle-duotone"
+                  name="heroicons:x-circle-solid"
                   class="h-5 w-5 text-gray-400 mx-auto"
                 />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:check-circle-duotone"
+                  name="heroicons:check-circle-solid"
                   class="h-5 w-5 text-tuhura-green mx-auto"
                 />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:check-circle-duotone"
+                  name="heroicons:check-circle-solid"
                   class="h-5 w-5 text-tuhura-green mx-auto"
                 />
               </td>
@@ -209,19 +209,19 @@ const enterpriseFeatures = ["Organisation alignment on vision"];
               <td class="py-4 px-6">Custom Development</td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:x-circle-duotone"
+                  name="heroicons:x-circle-solid"
                   class="h-5 w-5 text-gray-400 mx-auto"
                 />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:x-circle-duotone"
+                  name="heroicons:x-circle-solid"
                   class="h-5 w-5 text-gray-400 mx-auto"
                 />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon
-                  name="ph:check-circle-duotone"
+                  name="heroicons:check-circle-solid"
                   class="h-5 w-5 text-tuhura-green mx-auto"
                 />
               </td>
