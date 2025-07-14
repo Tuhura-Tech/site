@@ -320,7 +320,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm to 5:30pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/N85mC2rFVPiz8PDz7",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 			{
 				title: "Cummings Park (Ngaio) Library",
@@ -329,7 +329,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm to 5:15pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/v7xfucRaSPFSNF4f7",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 			{
 				title: "Wellington College",
@@ -346,7 +346,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm to 5:30pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/p1G2n5ddwT6EC3h67",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 			{
 				title: "Johnsonville Library Makerspace",
@@ -355,7 +355,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm to 5:30pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/TEZDVGAAnRRkG28A9",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 			{
 				title: "Tawa College",
@@ -385,7 +385,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm to 5:30pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/q7CYEYYnwCG3gGHK7",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 			{
 				title: "Walter Nash Community Hub",
@@ -394,7 +394,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm - 5:30pm",
 				description: "",
 				type: "After School",
-				signupLink: "https://forms.gle/33xMEptKxm8Gp3gk8",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 		],
 	},
@@ -416,7 +416,7 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				time: "3:30pm - 5:30pm",
 				description: "Exploring electronics, programming and cybersecurity..",
 				type: "After School",
-				signupLink: "https://forms.gle/Af6sum3EPnYpB6NG7",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
 		],
 	},
