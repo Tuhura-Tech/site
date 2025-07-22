@@ -126,7 +126,7 @@ import "leaflet/dist/leaflet.css";
 
     var group = new FeatureGroup(markers);
 
-    map.fitBounds(group.getBounds().pad(0.5));
+    map.fitBounds(group.getBounds().pad(0.1));
 
     const tiles = new TileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
