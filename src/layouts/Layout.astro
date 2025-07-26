@@ -73,12 +73,11 @@ if (title !== siteName) {
       src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
   </head>
   <body class="min-h-screen flex flex-col">
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Header />
-    <main id="main-content" class="flex-grow">
+    <main class="flex-grow">
       <slot />
     </main>
     <Footer />
-    <DonateModal />
+    <!-- <DonateModal /> -->
   </body>
 </html>

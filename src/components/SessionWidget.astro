@@ -108,6 +108,7 @@ import "leaflet/dist/leaflet.css";
     const map = new Map("map");
 
     let markers = [];
+    let markerOpen = [];
     const icon = new Icon({
         iconUrl: "marker-icon.png",
         shadowUrl: "marker-shadow.png",
@@ -124,8 +125,9 @@ import "leaflet/dist/leaflet.css";
             );
         }
 
-        marker.bindPopup(popup).openPopup();
+        marker.bindPopup(popup);
         markers.push(marker);
+        markerOpen.push({ title: session.name, marker });
     });
 
     var group = new FeatureGroup(markers);
@@ -140,6 +142,12 @@ import "leaflet/dist/leaflet.css";
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         },
     ).addTo(map);
+
+    function openMarker(markerTitle: string) {
+        const marker = markerOpen.find((m) => m.title === markerTitle).marker;
+        console.log(marker);
+        marker.openPopup();
+    }
 </script>
 
 <style>
