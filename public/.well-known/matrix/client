@@ -1,0 +1,12 @@
+{
+    "m.server": {
+        "base_url": "https://tuhuratech.org.nz"
+    },
+    "m.homeserver": {
+        "base_url": "https://tuhuratech.org.nz"
+    },
+    "org.matrix.msc2965.authentication": {
+        "issuer": "https://account.tuhuratech.org.nz/",
+        "account": "https://account.tuhuratech.org.nz"
+    }
+}
