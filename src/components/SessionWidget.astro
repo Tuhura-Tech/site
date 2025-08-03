@@ -1,11 +1,142 @@
 ---
 import "leaflet/dist/leaflet.css";
+
+const regions = [
+    {
+        name: "Wellington",
+        sessions: [
+            {
+                name: "Wellington High School",
+                address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
+                latlong: [-41.300334, 174.775107],
+                age: "Year 9 - 13",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Strathmore Park Community Centre",
+                address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
+                latlong: [-41.330524, 174.821945],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Tuesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
+                address: "1a Ottawa Road Ngaio Wellington",
+                latlong: [-41.249884, 174.773312],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Tuesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "South Wellington Intermediate School",
+                address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
+                latlong: [-41.318344, 174.778997],
+                age: "Year 7 - 8",
+                signupLink: null,
+                time: "Friday at 1:00 - 3:00pm",
+            },
+            {
+                name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
+                address: "247 Karori Rd, Karori, Wellington 6012",
+                latlong: [-41.284831, 174.73754],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Johnsonville Library",
+                address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
+                latlong: [-41.222825, 174.804714],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+    {
+        name: "Lower Hutt",
+        sessions: [
+            {
+                name: "Te Mako Naenae Community Centre",
+                address: "27 Hillary Court, Naenae, Lower Hutt",
+                latlong: [-41.198645, 174.947569],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Walter Nash Neighbourhood Hub",
+                address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
+                latlong: [-41.179429, 174.958979],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Thursday at 3:30 - 5:30pm",
+            },
+            {
+                name: "War Memorial Library",
+                address: "2 Queens Drive, Lower Hutt 5010",
+                latlong: [-41.211709, 174.900509],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Wednesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Wainuiomata Community Library",
+                address: "1 Queen St, Wainuiomata, Lower Hutt",
+                latlong: [-41.261747, 174.944866],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+    {
+        name: "Porirua",
+        sessions: [
+            {
+                name: "Mana College",
+                address: "Awarua St, Elsdon, Porirua 5022",
+                latlong: [-41.1292217, 174.8329403],
+                age: "Year 9 - 13",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Thursday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+];
 ---
 
 <section class="pt-10 pb-8 md:pt-14 md:pb-12 overflow-hidden relative">
-    <div class="container-custom relative">
-        <div class="relative bg-white rounded-xl shadow-xl overflow-hidden">
-            <div class="map-center-container">
+    <div class="container-custom relative" style="max-height: 600px; min-height: 400px;">
+        <div class="relative bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row" style="height: 100%; min-height: 400px;">
+            <!-- Left: Session List -->
+            <div class="w-full md:w-1/2 bg-gray-50 p-4 session-list" style="overflow-y: auto; max-height: 600px; min-height: 400px;">
+                {regions.map((region) => (
+                    <div class="mb-6" key={region.name}>
+                        <div class="font-bold text-xl mb-2">{region.name}</div>
+                        <ul>
+                            {region.sessions.map((session, idx) => (
+                                <li class="mb-4 last:mb-0" key={idx}>
+                                    <div class="p-3 rounded-lg bg-white shadow flex flex-col gap-1">
+                                        <div class="font-semibold text-lg">{session.name}</div>
+                                        <div class="text-sm text-gray-600">{session.address}</div>
+                                        <div class="text-sm">{session.time}</div>
+                                        <div class="text-xs text-gray-500">{session.age}</div>
+                                        {session.signupLink && (
+                                            <a href={session.signupLink} class="text-blue-600 underline text-sm mt-1" target="_blank" rel="noopener">Join Session</a>
+                                        )}
+                                        <button class="text-xs text-blue-500 mt-2 self-start hover:underline" onclick={`openMarker('${session.name.replace(/'/g, "\\'")}')`}>Show on Map</button>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+            <!-- Right: Map -->
+            <div class="w-full md:w-1/2 map-center-container">
                 <div id="map"></div>
             </div>
         </div>
@@ -14,126 +145,132 @@ import "leaflet/dist/leaflet.css";
 
 <script>
     import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from "leaflet";
-    const sessions = [
-        {
-            name: "Wellington High School",
-            address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
-            latlong: [-41.300334, 174.775107],
-            age: "Year 9 - 13",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Monday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Te Mako Naenae Community Centre",
-            address: "27 Hillary Court, Naenae, Lower Hutt",
-            latlong: [-41.198645, 174.947569],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Monday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Strathmore Park Community Centre",
-            address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
-            latlong: [-41.330524, 174.821945],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Tuesday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
-            address: "1a Ottawa Road Ngaio Wellington",
-            latlong: [-41.249884, 174.773312],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Tuesday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Mana College",
-            address: " Awarua St, Elsdon, Porirua 5022",
-            latlong: [-41.1292217, 174.8329403],
-            age: "Year 9 - 13",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Thursday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Walter Nash Neighbourhood Hub",
-            address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
-            latlong: [-41.179429, 174.958979],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Thursday at 3:30 - 5:30pm",
-        },
-        {
-            name: "South Wellington Intermediate School",
-            address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
-            latlong: [-41.318344, 174.778997],
-            age: "Year 7 - 8",
-            signupLink: null,
-            time: "Friday at 1:00 - 3:00pm",
-        },
-        {
-            name: "Johnsonville Library",
-            address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
-            latlong: [-41.222825, 174.804714],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Monday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
-            address: "247 Karori Rd, Karori, Wellington 6012",
-            latlong: [-41.284831, 174.73754],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Monday at 3:30 - 5:30pm",
-        },
-        {
-            name: "War Memorial Library",
-            address: "2 Queens Drive, Lower Hutt 5010",
-            latlong: [-41.211709, 174.900509],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Wednesday at 3:30 - 5:30pm",
-        },
-        {
-            name: "Wainuiomata Community Library",
-            address: "1 Queen St, Wainuiomata, Lower Hutt",
-            latlong: [-41.261747, 174.944866],
-            age: "Year 4 - 8",
-            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-            time: "Monday at 3:30 - 5:30pm",
-        },
-    ];
-
+    const regions = [
+    {
+        name: "Wellington",
+        sessions: [
+            {
+                name: "Wellington High School",
+                address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
+                latlong: [-41.300334, 174.775107],
+                age: "Year 9 - 13",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Strathmore Park Community Centre",
+                address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
+                latlong: [-41.330524, 174.821945],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Tuesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
+                address: "1a Ottawa Road Ngaio Wellington",
+                latlong: [-41.249884, 174.773312],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Tuesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "South Wellington Intermediate School",
+                address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
+                latlong: [-41.318344, 174.778997],
+                age: "Year 7 - 8",
+                signupLink: null,
+                time: "Friday at 1:00 - 3:00pm",
+            },
+            {
+                name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
+                address: "247 Karori Rd, Karori, Wellington 6012",
+                latlong: [-41.284831, 174.73754],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Johnsonville Library",
+                address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
+                latlong: [-41.222825, 174.804714],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+    {
+        name: "Lower Hutt",
+        sessions: [
+            {
+                name: "Te Mako Naenae Community Centre",
+                address: "27 Hillary Court, Naenae, Lower Hutt",
+                latlong: [-41.198645, 174.947569],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Walter Nash Neighbourhood Hub",
+                address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
+                latlong: [-41.179429, 174.958979],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Thursday at 3:30 - 5:30pm",
+            },
+            {
+                name: "War Memorial Library",
+                address: "2 Queens Drive, Lower Hutt 5010",
+                latlong: [-41.211709, 174.900509],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Wednesday at 3:30 - 5:30pm",
+            },
+            {
+                name: "Wainuiomata Community Library",
+                address: "1 Queen St, Wainuiomata, Lower Hutt",
+                latlong: [-41.261747, 174.944866],
+                age: "Year 4 - 8",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Monday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+    {
+        name: "Porirua",
+        sessions: [
+            {
+                name: "Mana College",
+                address: "Awarua St, Elsdon, Porirua 5022",
+                latlong: [-41.1292217, 174.8329403],
+                age: "Year 9 - 13",
+                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+                time: "Thursday at 3:30 - 5:30pm",
+            },
+        ],
+    },
+];
+    const allSessions = regions.flatMap(r => r.sessions);
     const map = new Map("map");
-
     let markers = [];
     let markerOpen = [];
     const icon = new Icon({
         iconUrl: "marker-icon.png",
         shadowUrl: "marker-shadow.png",
     });
-    sessions.forEach((session) => {
+    allSessions.forEach((session) => {
         const marker = new Marker(session.latlong, { icon }).addTo(map);
-        if (session.signupLink !== null) {
-            var popup = new Popup().setContent(
-                `<div role="dialog"><div>${session.name}</div><br /><div>${session.time}</div><br /><div>${session.age}</div><br /><a href="${session.signupLink}">Join Session</a></div>`,
-            );
-        } else {
-            var popup = new Popup().setContent(
-                `<div role="dialog"><div>${session.name}</div><br /><div>${session.time}</div><br /><div>${session.age}</div><br /></div>`,
-            );
+        let popupContent = `<div role=\"dialog\"><div>${session.name}</div><br /><div>${session.time}</div><br /><div>${session.age}</div>`;
+        if (session.signupLink) {
+            popupContent += `<br /><a href=\"${session.signupLink}\">Join Session</a>`;
         }
-
-        marker.bindPopup(popup);
+        popupContent += `</div>`;
+        marker.bindPopup(new Popup().setContent(popupContent));
         markers.push(marker);
         markerOpen.push({ title: session.name, marker });
     });
-
     var group = new FeatureGroup(markers);
-
     map.fitBounds(group.getBounds().pad(0.1));
-
     const tiles = new TileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
@@ -142,11 +279,11 @@ import "leaflet/dist/leaflet.css";
                 '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         },
     ).addTo(map);
-
-    function openMarker(markerTitle: string) {
-        const marker = markerOpen.find((m) => m.title === markerTitle).marker;
-        console.log(marker);
-        marker.openPopup();
+    window.openMarker = function(markerTitle) {
+        const markerObj = markerOpen.find((m) => m.title === markerTitle);
+        if (markerObj) {
+            markerObj.marker.openPopup();
+        }
     }
 </script>
 
@@ -156,13 +293,25 @@ import "leaflet/dist/leaflet.css";
         justify-content: center;
         align-items: center;
         width: 100%;
+        min-height: 400px;
     }
-
     #map {
         width: 100%;
-        height: 100$;
+        height: 400px;
         min-width: 320px;
         min-height: 320px;
         aspect-ratio: 1 / 1;
+    }
+    .session-list {
+        max-height: 600px;
+        min-height: 400px;
+    }
+    @media (min-width: 768px) {
+        .session-list {
+            max-height: 600px;
+        }
+        #map {
+            height: 600px;
+        }
     }
 </style>
