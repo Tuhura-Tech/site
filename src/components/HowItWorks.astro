@@ -1,19 +1,22 @@
 ---
 const steps = [
 	{
-		number: "01",
-		title: "Rangatahi",
+		title: "Join us on Matrix",
+		description: "Connect with other rangatahi across Aotearoa interested in technology and work on projects together.",
+    link: "https://matrix.to/#/#home:tuhuratech.org.nz",
+    icon: ""
+	},
+	{
+		title: "Explore our Open Source Tools",
+		description: "Explore and contribute to the open source projects we are building.",
+    link: "https://github.com/Tuhura-Tech/",
+    icon: ""
+	},
+	{
+		title: "Volunteer",
 		description: "3000+",
-	},
-	{
-		number: "02",
-		title: "Kura / Locations",
-		description: "30+",
-	},
-	{
-		number: "03",
-		title: "Events / Workshops",
-		description: "20+",
+    link: "https://matrix.to/#/#home:tuhuratech.org.nz",
+    icon: ""
 	},
 ];
 ---
@@ -26,23 +29,20 @@ const steps = [
   
   <div class="container-custom relative">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="  text-3xl md:text-4xl font-bold">Our Reach and Impact</h2>
+      <h2 class="  text-3xl md:text-4xl font-bold">Get involved</h2>
       <p class="  mt-4 text-xl text-gray-600">
-        The current numbers and stats behind what we are doing.
+        Join us and get invovled.
       </p>
     </div>
     
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-      <!-- Connecting line between steps (visible on desktop) -->
-      <div class="hidden md:block absolute top-16 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-tuhura-green to-tuhura-blue"></div>
-      
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 relative">      
       {steps.map((step, index) => (
-        <div 
-          class={`bg-white rounded-xl p-8 shadow-lg border border-gray-100  delay-${index + 2} group hover:shadow-xl transition-all  hover:-translate-y-2`}
+        <a 
+          class={`bg-white rounded-xl p-8 shadow-lg border border-gray-100  delay-${index + 2} group hover:shadow-xl transition-all  hover:-translate-y-2`} href={step.link}
         >
-          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-tuhura-green/10 text-tuhura-green font-semibold transition-all  group-hover:bg-tuhura-green group-hover:text-white group-hover:scale-110">
+          {/* <div class="flex items-center justify-center w-12 h-12 rounded-full bg-tuhura-green/10 text-tuhura-green font-semibold transition-all  group-hover:bg-tuhura-green group-hover:text-white group-hover:scale-110">
             {step.number}
-          </div>
+          </div> */}
           <h3 class="mt-6 text-xl font-semibold transition-colors  group-hover:text-tuhura-green">{step.title}</h3>
           <p class="mt-3 text-gray-600">{step.description}</p>
           
@@ -54,7 +54,7 @@ const steps = [
               </svg>
             </div>
           )}
-        </div>
+        </a>
       ))}
     </div>
     
