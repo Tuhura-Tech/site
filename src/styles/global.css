@@ -150,25 +150,22 @@ body {
 	@apply bg-white text-tuhura-dark border border-gray-200 hover:bg-gray-50;
 }
 
+.btn-sm {
+	@apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+	@apply px-8 py-3 text-lg;
+}
+
+/* ===== Container ===== */
 .container-custom {
 	@apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
 }
 
+/* ===== Section ===== */
 .section {
 	@apply py-16 md:py-24;
-}
-
-/* ===== Cards and UI Elements ===== */
-.feature-card {
-	@apply bg-white rounded-xl p-6 shadow-lg transition-all;
-	transform: translateZ(0);
-	/* For better performance */
-}
-
-.feature-card:hover,
-.feature-card:focus-within {
-	@apply shadow-xl;
-	transform: translateY(-5px);
 }
 
 /* ===== Header Scroll Effect ===== */
@@ -244,13 +241,18 @@ nav a:focus::after {
 #mobile-menu {
 	max-height: 0;
 	opacity: 0;
-	transition: all 0.3s ease-in-out;
+	transition:
+		max-height 0.3s ease,
+		opacity 0.2s ease;
 	overflow: hidden;
+	will-change: max-height, opacity;
 }
 
 #mobile-menu.mobile-menu-open {
-	max-height: 500px;
+	max-height: 75vh;
 	opacity: 1;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 #mobile-menu.mobile-menu-closing {
@@ -267,12 +269,6 @@ nav a:focus::after {
 	transform: rotate(90deg);
 }
 
-/* ===== Parallax Effect ===== */
-.parallax {
-	will-change: transform;
-	transform: translateZ(0);
-}
-
 /* ===== Image Hover Effects ===== */
 .hover-zoom {
 	overflow: hidden;
@@ -286,29 +282,7 @@ nav a:focus::after {
 	transform: scale(1.05);
 }
 
-/* ===== Testimonial Card Effects ===== */
-.testimonial-card {
-	@apply bg-tuhura-gray rounded-xl p-8 transition-all;
-}
-
-.testimonial-card:hover,
-.testimonial-card:focus-within {
-	@apply bg-white shadow-lg;
-	transform: translateY(-5px);
-}
-
-/* ===== Focus Indicators ===== */
-*:focus {
-	outline: 2px solid var(--color-tuhura-green);
-	outline-offset: 2px;
-}
-
-/* Remove focus outline for mouse users but keep for keyboard users */
-.js-focus-visible *:focus:not(.focus-visible) {
-	outline: none;
-}
-
-/* Skip to main content link */
+/* ===== Skip to main content link ===== */
 .skip-link {
 	position: absolute;
 	top: -40px;

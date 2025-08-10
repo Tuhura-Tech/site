@@ -1,7 +1,218 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const mahiOfferings = [
+	{
+		title: "Tech Sessions",
+		subtitle: "After-School & In-School",
+		description:
+			"Our core offering - weekly hands-on sessions where rangatahi explore technology through self-directed, project-based learning.",
+		icon: "heroicons:computer-desktop",
+		href: "/mahi/sessions",
+		features: [
+			"After-school community sessions",
+			"In-school programmes",
+			"Years 5-13",
+			"Self-directed learning",
+		],
+	},
+	{
+		title: "Events",
+		subtitle: "Competitions & Showcases",
+		description:
+			"Special gatherings that inspire, challenge, and connect rangatahi with technology through competitions and collaborative experiences.",
+		icon: "heroicons:trophy",
+		href: "/mahi/events",
+		features: [
+			"Game jams & hackathons",
+			"Robotics competitions",
+			"Tech showcases",
+			"Community festivals",
+		],
+	},
+	{
+		title: "Workshops (Wānanga)",
+		subtitle: "Intensive Learning",
+		description:
+			"Focused, hands-on sessions that dive deep into specific tech topics over hours or days of concentrated learning.",
+		icon: "heroicons:academic-cap",
+		href: "/mahi/workshops",
+		features: [
+			"During school holidays",
+			"Specific skill focus",
+			"All skill levels",
+			"Take-home projects",
+		],
+	},
+	{
+		title: "Kaiako PLD",
+		subtitle: "Professional Development",
+		description:
+			"Empowering educators with both technical skills and pedagogical expertise to inspire rangatahi in technology.",
+		icon: "heroicons:users",
+		href: "/mahi/pld",
+		features: [
+			"Teacher training",
+			"Curriculum support",
+			"Resource sharing",
+			"Community building",
+		],
+	},
+];
+
+const supportResources = [
+	{
+		title: "Free Learning Resources",
+		description: "Open-access materials, lesson plans, and project guides",
+		icon: "heroicons:document-text",
+	},
+	{
+		title: "Equipment Library",
+		description: "Loaning devices and tech equipment to schools and families",
+		icon: "heroicons:cube",
+	},
+	{
+		title: "Consultation & Support",
+		description: "Helping schools develop their own tech education programmes",
+		icon: "heroicons:chat-bubble-left-right",
+	},
+];
 ---
 
-<Layout title="Mahi">
-  <main></main>
+<Layout title="Mahi | Our Technology Education Programmes">
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          <span class="gradient-text">Our Mahi</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600">
+          Mahi means "work" or "activity" in te reo Māori. Our mahi encompasses everything we do to empower rangatahi through technology education - from regular sessions to special events, intensive workshops to educator training.
+        </p>
+        <div class="mt-8 bg-tuhura-gray rounded-xl p-6">
+          <p class="text-lg text-gray-700">
+            <strong>While after-school community sessions are our primary offering</strong>, we provide comprehensive technology education support including in-school programmes, holiday workshops, teacher training, competitions, and free resources for anyone working with rangatahi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Offerings -->
+      <div class="max-w-7xl mx-auto mb-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Core Programmes</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {mahiOfferings.map((offering, index) => (
+            <a href={offering.href} class="group block">
+              <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full group-hover:-translate-y-2" style={`animation-delay: ${index * 0.1}s`}>
+                <div class="flex items-start mb-6">
+                  <div class="w-20 h-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                    <Icon name={offering.icon} class="h-10 w-10 text-white" />
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-gray-900 group-hover:text-tuhura-green transition-colors">{offering.title}</h3>
+                    <p class="text-lg text-tuhura-green font-semibold">{offering.subtitle}</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-6 leading-relaxed text-lg">{offering.description}</p>
+                <div class="mb-6">
+                  <h4 class="font-bold text-gray-900 mb-4 text-lg">What we offer:</h4>
+                  <ul class="space-y-3">
+                    {offering.features.map((feature) => (
+                      <li class="flex items-start text-gray-600">
+                        <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="text-tuhura-green font-medium group-hover:underline">
+                  Learn More →
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Additional Support -->
+      <div class="max-w-6xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Beyond Sessions - Supporting the Ecosystem</h2>
+        <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+          We also provide resources and support to help grow technology education across communities.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {supportResources.map((resource, index) => (
+            <div class="bg-gradient-to-b from-white to-tuhura-gray/30 rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-all border border-gray-100" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="w-20 h-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Icon name={resource.icon} class="h-10 w-10 text-white" />
+              </div>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">{resource.title}</h3>
+              <p class="text-gray-700 leading-relaxed">{resource.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Age Groups & Accessibility -->
+      <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Who We Serve</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">Age Groups</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span><strong>Years 5-8:</strong> Foundation skills through visual programming and hands-on projects</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span><strong>Years 9-10:</strong> Intermediate coding, game development, and electronics</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span><strong>Years 11-13:</strong> Advanced projects, industry connections, and portfolio building</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">Our Commitment</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <Icon name="heroicons:heart" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span>All programmes completely free</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="heroicons:user-group" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span>Inclusive and accessible for all backgrounds</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="heroicons:globe-americas" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span>Community-based delivery in local spaces</span>
+              </li>
+              <li class="flex items-center">
+                <Icon name="heroicons:academic-cap" class="h-5 w-5 text-tuhura-green mr-3" />
+                <span>Self-directed, student-led learning approach</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Ready to Get Involved?</h2>
+        <p class="text-xl mb-8 opacity-90">
+          Whether you're looking for regular sessions, special workshops, teacher training, or community events - we're here to support rangatahi technology education in your area.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/mahi/sessions" class="btn bg-white text-tuhura-green hover:bg-gray-100">
+            Find Sessions Near You
+          </a>
+          <a href="/contact" class="btn bg-transparent border-2 border-white hover:bg-white/10">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -1,22 +1,27 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const steps = [
 	{
-		title: "Join us on Matrix",
-		description: "Connect with other rangatahi across Aotearoa interested in technology and work on projects together.",
-    link: "https://matrix.to/#/#home:tuhuratech.org.nz",
-    icon: ""
+		title: "Find a Session Near You",
+		description:
+			"Browse our locations across Wellington, Lower Hutt, Upper Hutt, and Porirua. Sessions run after school hours at schools and community centres.",
+		link: "/mahi/sessions",
+		icon: "heroicons:map-pin",
 	},
 	{
-		title: "Explore our Open Source Tools",
-		description: "Explore and contribute to the open source projects we are building.",
-    link: "https://github.com/Tuhura-Tech/",
-    icon: ""
+		title: "Join Our Community",
+		description:
+			"Connect with other rangatahi and kaiako on Matrix to share projects, ask questions, and collaborate on ideas.",
+		link: "https://matrix.to/#/#home:tuhuratech.org.nz",
+		icon: "heroicons:user-group",
 	},
 	{
-		title: "Volunteer",
-		description: "3000+",
-    link: "https://matrix.to/#/#home:tuhuratech.org.nz",
-    icon: ""
+		title: "Get Involved Further",
+		description:
+			"Volunteer with us, contribute to our open source projects, or support our mission to make tech education accessible to all.",
+		link: "/support-us",
+		icon: "heroicons:heart",
 	},
 ];
 ---
@@ -29,45 +34,51 @@ const steps = [
   
   <div class="container-custom relative">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="  text-3xl md:text-4xl font-bold">Get involved</h2>
-      <p class="  mt-4 text-xl text-gray-600">
-        Join us and get invovled.
+      <h2 class="text-3xl md:text-4xl font-bold">How to Get Started</h2>
+      <p class="mt-4 text-xl text-gray-600">
+        Ready to join our community of young tech explorers? Here's how to get involved with Tūhura Tech.
       </p>
     </div>
     
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 relative">      
+    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 relative">      
       {steps.map((step, index) => (
         <a 
-          class={`bg-white rounded-xl p-8 shadow-lg border border-gray-100  delay-${index + 2} group hover:shadow-xl transition-all  hover:-translate-y-2`} href={step.link}
+          class={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 delay-${index + 2} group hover:shadow-2xl transition-all hover:-translate-y-3 block`} 
+          href={step.link}
+          target={step.link.startsWith('http') ? '_blank' : undefined}
+          rel={step.link.startsWith('http') ? 'noopener noreferrer' : undefined}
         >
-          {/* <div class="flex items-center justify-center w-12 h-12 rounded-full bg-tuhura-green/10 text-tuhura-green font-semibold transition-all  group-hover:bg-tuhura-green group-hover:text-white group-hover:scale-110">
-            {step.number}
-          </div> */}
-          <h3 class="mt-6 text-xl font-semibold transition-colors  group-hover:text-tuhura-green">{step.title}</h3>
-          <p class="mt-3 text-gray-600">{step.description}</p>
-          
-          <!-- Arrow indicator for next step (visible on mobile) -->
-          {index < steps.length - 1 && (
-            <div class="flex justify-center mt-4 md:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-tuhura-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+          <div class="relative">
+            <div class="w-20 h-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 shadow-lg">
+              <Icon name={step.icon} class="h-10 w-10 text-white" />
             </div>
-          )}
+            <div class="absolute -top-2 -right-2 w-8 h-8 bg-tuhura-green rounded-full flex items-center justify-center text-white font-bold text-sm">
+              {index + 1}
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 transition-colors group-hover:text-tuhura-green">{step.title}</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">{step.description}</p>
+          <div class="text-tuhura-green font-medium group-hover:underline">
+            Get Started →
+          </div>
         </a>
       ))}
     </div>
     
     <div class="mt-16 text-center">
-      <div class=" ">
-        <a href="/support-us" class="btn btn-primary group">
-          <span class="inline-flex items-center">
-            Support Us
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform  group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </span>
-        </a>
+      <div class="bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white">
+        <h3 class="text-2xl font-bold mb-4">Questions About Joining?</h3>
+        <p class="text-xl mb-6 opacity-90">
+          Our friendly team is here to help you find the right session and get started.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
+            Contact Us
+          </a>
+          <a href="/mahi/sessions" class="btn bg-transparent border-2 border-white hover:bg-white/10">
+            View All Sessions
+          </a>
+        </div>
       </div>
     </div>
   </div>

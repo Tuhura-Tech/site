@@ -3,61 +3,129 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const contactMethods = [
-  {
-    title: "Sessions",
-    description: "",
-    icon: "heroicons:computer-desktop",
-    email: "sessions@tuhuratech.org.nz",
-  },
-  {
-    title: "Workshops",
-    description: "",
-    icon: "heroicons:computer-desktop",
-    email: "workshops@tuhuratech.org.nz",
-  },
-  {
-    title: "Partnerships",
-    description: ".",
-    icon: "heroicons:computer-desktop",
-    email: "partners@tuhuratech.org.nz",
-  },
+	{
+		title: "Sessions",
+		description:
+			"Questions about our regular weekly tech sessions, locations, or how to join.",
+		icon: "heroicons:academic-cap",
+		email: "sessions@tuhuratech.org.nz",
+	},
+	{
+		title: "Workshops (Wānanga)",
+		description:
+			"Intensive learning sessions, custom workshops, or PLD opportunities.",
+		icon: "heroicons:wrench-screwdriver",
+		email: "workshops@tuhuratech.org.nz",
+	},
+	{
+		title: "Partnerships",
+		description:
+			"Sponsorship, venue partnerships, or community collaboration opportunities.",
+		icon: "heroicons:users",
+		email: "partners@tuhuratech.org.nz",
+	},
+	{
+		title: "Careers & Volunteering",
+		description:
+			"Join our team as staff or volunteer to support rangatahi in their learning journey.",
+		icon: "heroicons:users",
+		email: "careers@tuhuratech.org.nz",
+	},
+	{
+		title: "Media & Events",
+		description:
+			"Press inquiries, event invitations, or speaking opportunities.",
+		icon: "heroicons:megaphone",
+		email: "media@tuhuratech.org.nz",
+	},
+	{
+		title: "General Inquiries",
+		description: "Any other questions or if you're not sure who to contact.",
+		icon: "heroicons:chat-bubble-left-right",
+		email: "info@tuhuratech.org.nz",
+	},
 ];
 ---
 
-<Layout title="Contact Us">
+<Layout title="Contact Us | Kōrero Mai">
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          Get in <span class="gradient-text">Touch</span>
+          Kōrero Mai <span class="gradient-text">(Get in Touch)</span>
         </h1>
         <p class="mt-6 text-xl text-gray-600">
-          We'd love to hear from you. Reach out to our team with any questions
-          or inquiries and we can have a kōrero.
+          We'd love to hear from you! Whether you're a rangatahi wanting to join sessions, 
+          a kaiako seeking support, or a community partner wanting to collaborate - reach out 
+          for a kōrero (conversation).
         </p>
       </div>
 
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Quick Contact Cards -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
           contactMethods.map((method, index) => (
             <div
-              class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center "
-              style={`animation-delay: ${index * 0.15}s`}
+              class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
+              style={`animation-delay: ${index * 0.1}s`}
             >
-              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-tuhura-green/10 text-tuhura-green mb-6">
+              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-tuhura-green/10 text-tuhura-green mb-4">
                 <Icon name={method.icon} class="h-8 w-8" />
               </div>
-              <h3 class="text-xl font-semibold">{method.title}</h3>
-              <p class="mt-3 text-gray-600">{method.description}</p>
+              <h3 class="text-lg font-semibold mb-2">{method.title}</h3>
+              <p class="text-sm text-gray-600 mb-4">{method.description}</p>
               <a
                 href={`mailto:${method.email}`}
-                class="mt-4 block text-tuhura-green font-medium hover:underline"
+                class="text-tuhura-green font-medium hover:underline text-sm"
               >
                 {method.email}
               </a>
             </div>
           ))
         }
+      </div>
+
+      <!-- Office Information -->
+      <div class="mt-16 bg-tuhura-gray rounded-xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">We Come to You</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <Icon name="heroicons:map-pin" class="h-6 w-6 text-tuhura-green mt-1" />
+                <div>
+                  <p class="font-medium">Community-Based Sessions</p>
+                  <p class="text-gray-600">We bring tech education directly to your community - schools, libraries, community centres, and marae across the Wellington region</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <Icon name="heroicons:clock" class="h-6 w-6 text-tuhura-green mt-1" />
+                <div>
+                  <p class="font-medium">Session Times</p>
+                  <p class="text-gray-600">After school hours, tailored to each location</p>
+                  <p class="text-gray-600">Each session is customized to the rangatahi who attend</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <Icon name="heroicons:building-library" class="h-6 w-6 text-tuhura-green mt-1" />
+                <div>
+                  <p class="font-medium">Session Locations</p>
+                  <p class="text-gray-600">Schools, libraries, community centres, marae</p>
+                  <p class="text-gray-600">Making tech education accessible in your neighborhood</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <!-- TODO: Add map showing session locations or community photo -->
+            <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+              <div class="text-center">
+                <Icon name="heroicons:users" class="h-12 w-12 text-gray-400 mx-auto mb-2" />
+                <span class="text-gray-500">Community Locations Map</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -126,7 +194,7 @@ const contactMethods = [
                 <option value="" disabled selected>Select an option</option>
                 <option value="Session Query">Session Information</option>
                 <option value="Workshop">Workshop</option>
-                <option value="Professional Development">Workshop</option>
+                <option value="Professional Development">Professional Development</option>
                 <option value="Partnership">Partnership</option>
                 <option value="Other">Other</option>
               </select>
@@ -153,9 +221,9 @@ const contactMethods = [
     </div>
   </section>
   <script>
-    function formSubjectChange(event) {
+    function formSubjectChange(event: HTMLSelectElement) {
       let action;
-      switch (event.value) {
+      switch ((event as any).value) {
         case "Session Query":
           action = "https://submit-form.com/TZiHVi9Ke";
           break;
@@ -174,5 +242,7 @@ const contactMethods = [
       (document.getElementById("contact-form") as HTMLFormElement).action =
         action;
     }
+    // keep reference to avoid tree-shaking in some build tools
+    (window as any).formSubjectChange = formSubjectChange;
   </script>
 </Layout>

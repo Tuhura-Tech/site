@@ -2,6 +2,146 @@
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title="PLD">
-  <main></main>
+<Layout title="Professional Learning & Development | Ako Ngaiotanga">
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Professional Learning & Development
+            <span class="block text-3xl md:text-4xl text-tuhura-green mt-2">(Ako Ngaiotanga)</span>
+          </h1>
+          <p class="text-xl text-gray-700 mb-6">
+            Our ako ngaiotanga (professional learning) programme empowers kaiako (educators), volunteers, and community members with the skills and confidence to inspire rangatahi in technology.
+          </p>
+          <p class="text-lg text-gray-600">
+            We believe that effective tech education requires both technical knowledge and pedagogical expertise. Our PLD combines hands-on technical training with research-based teaching methodologies.
+          </p>
+        </div>
+        <div>
+          <!-- TODO: Add image of educators collaborating in PLD session -->
+          <div class="bg-gray-200 h-64 lg:h-80 rounded-xl flex items-center justify-center">
+            <span class="text-gray-500">PLD Collaboration Image</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-8 text-center">Our Ako (Learning) Framework</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
+              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Technical Mastery</h3>
+              <p class="text-gray-600">Build confidence with technology tools, programming languages, and emerging tech.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
+              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Pedagogical Approaches</h3>
+              <p class="text-gray-600">Learn student-centred, project-based teaching methods that engage and inspire.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
+              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Cultural Responsiveness</h3>
+              <p class="text-gray-600">Integrate te ao Māori perspectives and culturally responsive practices.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
+              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Community Connection</h3>
+              <p class="text-gray-600">Build networks with industry professionals and fellow educators.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12 bg-tuhura-gray rounded-xl p-8">
+          <h2 class="text-3xl font-bold mb-6">PLD Programmes & Opportunities</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4">For Kaiako (Teachers)</h3>
+              <ul class="list-disc pl-6 text-lg space-y-3">
+                <li><strong>Digital Technologies Curriculum Support:</strong> Align your teaching with NZ curriculum requirements</li>
+                <li><strong>Tool Training:</strong> Master platforms like Scratch, Godot, Arduino, and more</li>
+                <li><strong>Assessment Strategies:</strong> Learn effective ways to assess student progress in tech</li>
+                <li><strong>Classroom Management:</strong> Handle diverse skill levels and tech challenges</li>
+                <li><strong>Project-Based Learning:</strong> Design engaging, real-world tech projects</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-4">For Community Volunteers</h3>
+              <ul class="list-disc pl-6 text-lg space-y-3">
+                <li><strong>Mentoring Skills:</strong> Support rangatahi effectively and safely</li>
+                <li><strong>Session Leadership:</strong> Run your own tech education sessions</li>
+                <li><strong>Age-Appropriate Teaching:</strong> Adapt content for different year levels</li>
+                <li><strong>Safeguarding Training:</strong> Ensure safe learning environments</li>
+                <li><strong>Industry Connections:</strong> Share your professional experience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6">Resources & Taonga (Tools)</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Lesson Plans</h3>
+              <p class="text-gray-600 mb-4">Ready-to-use, curriculum-aligned lesson plans for various tech topics and year levels.</p>
+              <!-- TODO: Add icon or small image representing lesson plans -->
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Project Guides</h3>
+              <p class="text-gray-600 mb-4">Step-by-step guides for hands-on projects that students love to build.</p>
+              <!-- TODO: Add icon or small image representing project guides -->
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Assessment Rubrics</h3>
+              <p class="text-gray-600 mb-4">Fair and effective ways to assess student learning in tech education.</p>
+              <!-- TODO: Add icon or small image representing assessment tools -->
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold mb-6">Join Our Kaiako Community</h2>
+          <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 class="text-2xl font-semibold mb-4">Ongoing Support & Whanaungatanga</h3>
+                <ul class="list-disc pl-6 text-lg space-y-2">
+                  <li>Monthly online hui (meetings) for sharing and problem-solving</li>
+                  <li>Dedicated Slack/Discord community for real-time support</li>
+                  <li>Quarterly in-person networking events</li>
+                  <li>Mentorship partnerships with experienced educators</li>
+                  <li>Access to industry guest speakers and experts</li>
+                  <li>Opportunities to co-present at conferences</li>
+                </ul>
+              </div>
+              <div>
+                <!-- TODO: Add image of community meeting or networking event -->
+                <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
+                  <span class="text-gray-500">Community Meeting Image</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center bg-tuhura-green text-white rounded-xl p-8">
+          <h2 class="text-3xl font-bold mb-4">Ready to Enhance Your Ako?</h2>
+          <p class="text-xl mb-6">Join our community of passionate tech educators and start making a difference in rangatahi lives.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="px-8 py-4 bg-white text-tuhura-green rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition">Apply for PLD</a>
+            <a href="/newsletter" class="px-8 py-4 bg-tuhura-blue text-white rounded-lg font-semibold shadow-lg hover:bg-blue-700 transition">Get Updates</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

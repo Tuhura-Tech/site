@@ -1,48 +1,52 @@
 ---
 const partners = [
-  {
-    name: "WellingtonNZ",
-    logo: "/partner-wnz.svg",
-    href: "https://wellingtonnz.com",
-  },
-  {
-    name: "Bastion Security Group",
-    logo: "/partner-bsg.svg",
-    href: "https://www.bastionsecurity.co.nz/",
-  },
-  {
-    name: "Hutt City Council",
-    logo: "/partner-hcc.svg",
-    href: "https://wellingtonnz.com",
-  },
-  {
-    name: "Spark Foundation",
-    logo: "/partner-spark.svg",
-    href: "https://wellingtonnz.com",
-  },
+	{
+		name: "WellingtonNZ",
+		logo: "/partner-wnz.svg",
+		href: "https://wellingtonnz.com",
+	},
+	{
+		name: "Bastion Security Group",
+		logo: "/partner-bsg.svg",
+		href: "https://www.bastionsecurity.co.nz/",
+	},
+	{
+		name: "Hutt City Council",
+		logo: "/partner-hcc.svg",
+		href: "https://wellingtonnz.com",
+	},
+	{
+		name: "Spark Foundation",
+		logo: "/partner-spark.svg",
+		href: "https://wellingtonnz.com",
+	},
 ];
 ---
 
 <section class="py-16 bg-white relative overflow-hidden">
   <div class="container-custom">
-    <div class="text-center">
-      <h3 class="text-gray-500 font-medium tracking-wider">
-        THANKS TO OUR AMAZING SUPPORTERS
+    <div class="text-center mb-12">
+      <h3 class="text-lg font-semibold text-gray-600 tracking-wider mb-2">
+        PROUDLY SUPPORTED BY
       </h3>
     </div>
 
-    <div
-      class=`mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-${partners.length} gap-8 items-center justify-items-center`
-    >
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
       {
         partners.map((partner, _) => (
-          <div class="group cursor-pointer">
-            <a href={partner.href} class="relative p-4 rounded-lg">
+          <div class="group">
+            <a 
+              href={partner.href} 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block p-6 rounded-xl bg-gray-50 hover:bg-white border border-gray-100 hover:shadow-lg transition-all duration-300"
+            >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                class="h-12 w-auto mx-auto transform group-hover:scale-110"
+                class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform"
               />
+              <p class="text-center text-xs text-gray-600 mt-3 font-medium">{partner.name}</p>
             </a>
           </div>
         ))

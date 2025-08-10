@@ -6,29 +6,30 @@ import Header from "@components/Header.astro";
 import "../styles/global.css";
 
 interface Props {
-  title?: string;
-  description?: string;
+	title?: string;
+	description?: string;
 }
 
 const siteName = "Tūhura Tech";
 
 const {
-  title = siteName,
-  description = "Empowering the next generation through hands on, industry supported, Technology Education.",
+	title = siteName,
+	description = "Empowering the next generation through hands on, industry supported, Technology Education.",
 } = Astro.props;
 
 // Preload critical assets
 const faviconImg = await getImage({
-  src: "/favicon.svg",
-  width: 32,
-  height: 32,
+	src: "/favicon.svg",
+	width: 32,
+	height: 32,
 });
 let shownTitle: string;
 if (title !== siteName) {
-  shownTitle = `${title} | ${siteName}`;
+	shownTitle = `${title} | ${siteName}`;
 } else {
-  shownTitle = siteName;
+	shownTitle = siteName;
 }
+const canonicalUrl = Astro.url?.href || "https://tuhuratech.org.nz";
 ---
 
 <!doctype html>
@@ -50,8 +51,9 @@ if (title !== siteName) {
         "url": "https://tuhuratech.org.nz",
         "logo": "https://tuhuratech.org.nz/logo.png",
         "sameAs": [
-          "https://twitter.com/payflo_dev",
-          "https://www.linkedin.com/company/tuhura-dev"
+          "https://www.linkedin.com/company/tūhura-tech/",
+          "https://github.com/Tuhura-Tech",
+          "https://www.facebook.com/p/Tūhura-Tech-100083052084710/"
         ]
       }
     </script>
@@ -60,7 +62,7 @@ if (title !== siteName) {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta
       property="og:image"
       content="https://tuhuratech.org.nz/og-image.jpg"
@@ -78,6 +80,16 @@ if (title !== siteName) {
       <slot />
     </main>
     <Footer />
-    <!-- <DonateModal /> -->
+    <DonateModal />
+    <script is:inline>
+      const headerEl = document.querySelector('header');
+      const onScroll = () => {
+        if (!headerEl) return;
+        if (window.scrollY > 2) headerEl.classList.add('scrolled');
+        else headerEl.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    </script>
   </body>
 </html>

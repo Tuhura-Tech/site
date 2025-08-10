@@ -14,9 +14,9 @@
 		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^3.4.1",
+		"@astrojs/sitemap": "^3.4.2",
 		"@iconify-json/heroicons": "^1.2.2",
-		"astro": "^5.12.3",
+		"astro": "^5.12.9",
 		"astro-icon": "^1.1.5",
 		"leaflet": "^2.0.0-alpha",
 		"tailwindcss": "^4.1.11"

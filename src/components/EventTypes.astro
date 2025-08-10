@@ -1,0 +1,39 @@
+---
+const eventTypes = [
+	{
+		title: "Competitions",
+		description:
+			"Test your skills in coding, robotics, electronics, and more. Competitions are designed to be fun and supportive, with opportunities for teamwork and prizes for creativity and problem-solving.",
+		icon: "heroicons:trophy",
+	},
+	{
+		title: "Showcases",
+		description:
+			"Share your projects, inventions, and creative work with the community. Showcases celebrate achievements and give students a platform to present their ideas.",
+		icon: "heroicons:star",
+	},
+	{
+		title: "Hackathons",
+		description:
+			"Work together in teams to solve real-world problems or build something new. Hackathons are fast-paced, collaborative, and a great way to learn new skills.",
+		icon: "heroicons:light-bulb",
+	},
+	{
+		title: "Community Gatherings",
+		description:
+			"Connect with other rangatahi, educators, and industry professionals. These gatherings include guest speakers, networking, and opportunities to learn about careers in tech.",
+		icon: "heroicons:users",
+	},
+];
+
+import { Icon } from "astro-icon/components";
+---
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+  {eventTypes.map((type) => (
+    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 flex flex-col">
+      <div class="mb-4"><Icon name={type.icon} class="h-8 w-8 text-tuhura-green" /></div>
+      <div class="font-semibold text-lg mb-2 text-tuhura-green">{type.title}</div>
+      <div class="text-gray-600">{type.description}</div>
+    </div>
+  ))}
+</div>

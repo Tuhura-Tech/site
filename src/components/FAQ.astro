@@ -1,34 +1,49 @@
 ---
 const faqs = [
 	{
-		question: "Who is this for?",
+		question: "What ages can participate in your sessions?",
 		answer:
-			"We support and deliver content to akonga from years 5 to 13 in the Wellington, Lower & Upper Hutt regions. We are wanting to expand into Porirua this year.",
+			"Our sessions welcome rangatahi and tamariki from years 5-13 (ages 9-18). We adapt activities and support to suit different age groups and experience levels - from beginners who've never coded to advanced students leading their own projects.",
 	},
 	{
-		question: "How are we funded?",
+		question: "What do you mean by 'technology education'?",
 		answer:
-			"As a charitable trust we rely on sponsorships and donations from companies and the community; this allows us to run all of our sessions for free. If you or your company are interested in supporting us, we would love to talk to you. ",
+			"We focus on hands-on exploration of coding, robotics, 3D printing, digital creativity, and problem-solving using technology. Led by trained kaiako with industry volunteer support, learning happens naturally through passion-driven projects rather than formal lessons.",
 	},
 	{
-		question: "How do I help out?",
+		question: "Do sessions really cost nothing?",
 		answer:
-			"We are looking for people with an interest in technology and working with rangatahi from current University students to industry professionals.",
+			"Yes! Sessions, equipment, and materials are completely free. Since our founding in 2022, we've been funded by corporate sponsors, local government partnerships, and community donations. No hidden costs, ever - this commitment helps us remove barriers to technology education.",
 	},
 	{
-		question: "How do I get involved as a learner?",
+		question: "Do you need prior technology experience?",
 		answer:
-			"If we are not already running sessions at your school, feel free to come to one of our after-school sessions at a nearby school, or ask your kaiako (school) to get in touch with us.",
+			"Not at all! We welcome complete beginners alongside experienced young coders. Our trained staff and volunteer mentors adapt to each participant's level, ensuring everyone feels supported and challenged appropriately.",
 	},
 	{
-		question: "What areas of Technology do we cover?",
+		question: "Who runs the sessions?",
 		answer:
-			"We cover many areas of technology with a focus on expanding what is covered in schools — this includes areas such as robotics, cybersecurity, Artificial Intelligence/Machine Learning and more.",
+			"Our sessions are led by trained kaiako (professional educators) with support from industry expert volunteers. All staff undergo appropriate safety checks. This combination provides both educational expertise and real-world tech industry experience for rangatahi.",
 	},
 	{
-		question: "Who are we?",
+		question: "Where do sessions happen?",
 		answer:
-			"We are a group of volunteers, kaiako and industry professionals who all care about technology and want to support rangatahi.",
+			"We bring technology education directly to communities! Our sessions run in schools, libraries, community centres, and marae across Wellington, Lower Hutt, Upper Hutt, and Porirua. Each location and session is tailored to the community and rangatahi who attend.",
+	},
+	{
+		question: "How can my child join a session?",
+		answer:
+			"Check our sessions page to find locations near you. If we're not already running sessions in your community, your child can join sessions at nearby locations, or encourage your school, library, or community centre to contact us about bringing sessions to your area.",
+	},
+	{
+		question: "How can I volunteer or support your work?",
+		answer:
+			"We welcome volunteers with technology backgrounds to support sessions, run workshops, or help with resources. You can also support us through donations or partnerships. Contact us to learn about opportunities that match your skills and availability.",
+	},
+	{
+		question: "How long have you been operating?",
+		answer:
+			"Tūhura Tech was founded in 2022 as a registered charitable trust. We've been serving Wellington communities for over 3 years, supported by established corporate sponsors like WellingtonNZ, Bastion Security Group, Hutt City Council, and Spark Foundation.",
 	},
 ];
 ---
@@ -47,42 +62,17 @@ const faqs = [
       </p>
     </div>
 
-    <div class="mt-12 max-w-3xl mx-auto">
-      {
-        faqs.map((faq, index) => (
-          <div
-            class="mb-6 bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden  faq-item hover:shadow-md transition-all "
-            style={`animation-delay: ${index * 0.1}s`}
-          >
-            <details class="group">
-              <summary class="flex justify-between items-center cursor-pointer p-6 transition-all  hover:bg-gray-50">
-                <h3 class="text-lg font-medium transition-colors  group-hover:text-tuhura-green">
-                  {faq.question}
-                </h3>
-                <div class="flex-shrink-0 ml-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-gray-500 group-open:rotate-180 transition-transform duration-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </summary>
-              <div class="px-6 pb-6 text-gray-600 faq-content">
-                <p>{faq.answer}</p>
-              </div>
-            </details>
-          </div>
-        ))
-      }
+    <div class="mt-12 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {
+          faqs.map((faq) => (
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col hover:shadow-md transition-shadow">
+              <div class="font-semibold text-xl mb-4 text-tuhura-green leading-tight">{faq.question}</div>
+              <div class="text-gray-600 leading-relaxed text-lg">{faq.answer}</div>
+            </div>
+          ))
+        }
+      </div>
     </div>
 
     <div class="mt-12 text-center">

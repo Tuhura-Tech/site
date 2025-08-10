@@ -9,26 +9,7 @@ export default defineConfig({
 	output: "static",
 	prefetch: true,
 
-	integrations: [
-		sitemap(),
-		icon({
-			include: {
-				heroicons: [
-					"star-solid",
-					"bolt-solid",
-					"globe-asia-australia",
-					"users",
-					"x-mark",
-					"puzzle-piece",
-					"paint-brush",
-					"academic-cap",
-					"code-bracket",
-					"link",
-					"computer-desktop"
-				],
-			},
-		}),
-	],
+	integrations: [sitemap(), icon()],
 
 	image: {
 		service: {

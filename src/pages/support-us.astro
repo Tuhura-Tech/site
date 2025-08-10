@@ -3,158 +3,523 @@ import Newsletter from "@components/Newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
-const tiers = [
-  {
-    name: "Donate",
-    description:
-      "Financially support us enabling us to continue running sessions free of charge for kiwi kids.",
-    features: [
-      "One off donation",
-      "Recurring donation",
-      "Sponsor a session",
-      "Sponsor rangatahi",
-    ],
-    cta: {
-      text: "Donate",
-      href: "https://donate.tuhuratech.org.nz",
-    },
-  },
-  {
-    name: "Volunteer",
-    description:
-      "Support us directly! Lend your expertise and story either in a session, building resources or behind the .",
-    features: [
-      "Run a workshop at a sessions",
-      "Join a session for a term",
-      "Help write resources",
-    ],
-    cta: {
-      text: "Contact Us",
-      href: "/contact",
-    },
-  },
-  {
-    name: "Donate Equipment",
-    description:
-      "Donate used laptops, monitors, tablets, servers, switches or any other electronics.",
-    features: [
-      "Enable rangatahi without laptops",
-      "Provide opportunities with specific equipment",
-    ],
-    cta: {
-      text: "Contact Us",
-      href: "/contact",
-    },
-  },
+const supportTypes = [
+	{
+		name: "Kōha (Donations)",
+		description:
+			"Your financial kōha enables us to continue running sessions free of charge for all rangatahi. Every dollar directly supports removing barriers to technology education.",
+		features: [
+			"$20 funds one rangatahi for a 2-hour session",
+			"$800 supports one rangatahi for a full year",
+			"$10,000 funds an entire session location for a year",
+			"One-off or recurring monthly donations",
+			"Tax-deductible charitable giving receipts",
+		],
+		icon: "heroicons:heart",
+		cta: {
+			type: "button",
+			text: "Make a Kōha",
+			onclick: "demo.showModal()",
+		},
+	},
+	{
+		name: "Volunteer Your Time & Expertise",
+		description:
+			"Share your mātauranga (knowledge) with rangatahi! Support our trained kaiako by bringing your industry experience and passion to sessions.",
+		features: [
+			"Support sessions weekly or as one-off opportunities",
+			"Bring real-world tech experience to rangatahi",
+			"Help build resources and train our staff",
+			"Police vetting check required (we can help with this)",
+			"Flexible commitment - work around your schedule",
+		],
+		icon: "heroicons:users",
+		cta: {
+			type: "link",
+			text: "Volunteer With Us",
+			href: "/contact",
+		},
+	},
+	{
+		name: "Equipment & Technology Donations",
+		description:
+			"We run entirely on donated equipment! Many whānau don't have laptops, so we provide everything needed for learning.",
+		features: [
+			"Donated laptops enable us to run more sessions",
+			"Electronics components for hands-on exploration",
+			"Robotics kits, 3D printers, and maker equipment",
+			"Even older devices can be valuable for specific activities",
+			"Software licenses and development tools",
+		],
+		icon: "heroicons:computer-desktop",
+		cta: {
+			type: "link",
+			text: "Donate Equipment",
+			href: "/contact",
+		},
+	},
 ];
 
-const enterpriseFeatures = ["Organisation alignment on vision"];
+const partnershipTypes = [
+	{
+		title: "Corporate Partners",
+		description:
+			"Large organizations collaborating to solve technology education challenges in the Wellington region.",
+		benefits: [
+			"Access to emerging talent pipeline",
+			"Industry-aligned curriculum development",
+			"Team volunteering and CSR opportunities",
+			"Part of Wellington Regional Economic Development Plan",
+		],
+	},
+	{
+		title: "Local Government Partners",
+		description:
+			"Councils and government agencies supporting regional technology education growth.",
+		benefits: [
+			"Contributing to regional economic development",
+			"Supporting digital equity initiatives",
+			"Community impact and social outcomes",
+			"Long-term workforce development",
+		],
+	},
+	{
+		title: "Community Partners",
+		description:
+			"Schools, libraries, community centres, and marae providing spaces and local connections.",
+		benefits: [
+			"Free tech education for your community",
+			"Enhanced reputation as education supporter",
+			"Networking with other community partners",
+			"Direct impact on local rangatahi",
+		],
+	},
+];
+
+const impactStats = [
+	{ number: "1000+", label: "Rangatahi reached annually" },
+	{ number: "15+", label: "Community locations" },
+	{ number: "100%", label: "Sessions free of charge" },
+	{ number: "50+", label: "Volunteers and kaiako" },
+];
+
+const donationImpact = [
+	{
+		amount: "$20",
+		impact: "Funds one rangatahi for a 2-hour session",
+		description: "Covers materials, equipment use, and educator support",
+	},
+	{
+		amount: "$800",
+		impact: "Supports one rangatahi for a full year",
+		description: "40 sessions of hands-on technology exploration",
+	},
+	{
+		amount: "$10,000",
+		impact: "Funds an entire session location for a year",
+		description: "Bringing tech education to a whole community",
+	},
+];
 ---
 
 <Layout
-  title="Support Us"
-  description="Support us and help grow our impact providing free technolgoy education for kiwi kids."
+  title="Support Us | Tautoko"
+  description="Support Tūhura Tech and help grow our impact providing free technology education for rangatahi across Aotearoa."
 >
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          <span class="gradient-text">Support Us</span>
+          <span class="gradient-text">Tautoko (Support Us)</span>
         </h1>
         <p class="mt-6 text-xl text-gray-600">
-          Support us however you can in a way that is easy and convienient to
-          empower the next generation.
+          Join our mission to empower the next generation of rangatahi through technology. 
+          Every contribution, whether time, resources, or kōha, makes a meaningful difference 
+          in breaking down barriers to technology education.
         </p>
+      </div>
+
+      <!-- Impact Statistics -->
+      <div class="mt-16 bg-tuhura-gray rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-center mb-8">Our Impact Together</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {impactStats.map((stat) => (
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-tuhura-green">{stat.number}</div>
+              <div class="text-gray-600 mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-tuhura-gray">
+  <section class="py-20 bg-white">
     <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Ways to Tautoko (Support)</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Choose the way that works best for you to help create opportunities for rangatahi.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {
-          tiers.map((tier, index) => (
+          supportTypes.map((type, index) => (
             <div
-              class={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow  relative  delay-${index + 2}`}
+              class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+              style={`animation-delay: ${index * 0.1}s`}
             >
-              {tier.name === "Scale" && (
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-tuhura-green to-tuhura-blue text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Most Popular
-                </div>
-              )}
-              <h3 class="text-2xl font-semibold">{tier.name}</h3>
-              <p class="mt-4 text-gray-600">{tier.description}</p>
-              <ul class="mt-8 space-y-4">
-                {tier.features.map((feature) => (
-                  <li class="flex items-center text-gray-700">
+              <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
+                <Icon name={type.icon} class="h-8 w-8 text-tuhura-green" />
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">{type.name}</h3>
+              <p class="text-gray-600 mb-6">{type.description}</p>
+              <ul class="space-y-3 mb-8">
+                {type.features.map((feature) => (
+                  <li class="flex items-start text-gray-700">
                     <Icon
-                      name="heroicons:computer-desktop"
-                      class="h-5 w-5 text-tuhura-green mr-2"
+                      name="heroicons:check-circle"
+                      class="h-5 w-5 text-tuhura-green mr-3 mt-0.5 flex-shrink-0"
                     />
-                    {feature}
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <div class="mt-8">
+              {type.cta.type === "button" ? (
+                <button
+                  class="btn btn-primary w-full text-center"
+                  onclick={type.cta.onclick}
+                >
+                  {type.cta.text}
+                </button>
+              ) : (
                 <a
-                  href={tier.cta.href}
+                  href={type.cta.href}
                   class="btn btn-primary w-full text-center"
                 >
-                  {tier.cta.text}
+                  {type.cta.text}
                 </a>
-              </div>
+              )}
             </div>
           ))
         }
+      </div>
+    </div>
+  </section>
 
-        <div
-          class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white"
-        >
-          <h3 class="text-2xl font-semibold">Partnership</h3>
-          <div class="mt-4">
-            <span class="text-2xl font-medium">Partner With Us</span>
-          </div>
-          <p class="mt-4 text-white/90">
-            For large platforms with custom requirements and enterprise-grade
-            needs.
-          </p>
-          <ul class="mt-8 space-y-4">
-            {
-              enterpriseFeatures.map((feature) => (
-                <li class="flex items-center">
-                  <Icon
-                    name="heroicons:computer-desktop"
-                    class="h-5 w-5 text-white mr-2"
-                  />
-                  {feature}
-                </li>
-              ))
-            }
+  <!-- Detailed Volunteer Information -->
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Volunteer with Us</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Your time and expertise make an incredible difference to rangatahi exploring technology.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-tuhura-green mb-4">What Volunteers Do</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
+              <div>
+                <p class="font-medium">Support Sessions</p>
+                <p class="text-gray-600 text-sm">Work alongside our trained kaiako to share your industry experience with rangatahi</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
+              <div>
+                <p class="font-medium">Flexible Commitment</p>
+                <p class="text-gray-600 text-sm">Choose weekly involvement or one-off opportunities that fit your schedule</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
+              <div>
+                <p class="font-medium">Resource Development</p>
+                <p class="text-gray-600 text-sm">Help create learning materials and train our staff in new technologies</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
+              <div>
+                <p class="font-medium">Real-World Perspective</p>
+                <p class="text-gray-600 text-sm">Give rangatahi tons of options and opportunities by sharing your career journey</p>
+              </div>
+            </li>
           </ul>
-          <div class="mt-8">
-            <a
-              href="/contact"
-              class="btn bg-white text-tuhura-green hover:bg-white/90 w-full text-center"
-            >
-              Contact Us
-            </a>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-tuhura-green mb-4">Getting Started</h3>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-tuhura-green text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">1</div>
+              <div>
+                <p class="font-medium">Contact Us</p>
+                <p class="text-gray-600 text-sm">Reach out to discuss your interests and availability</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-tuhura-green text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">2</div>
+              <div>
+                <p class="font-medium">Police Vetting</p>
+                <p class="text-gray-600 text-sm">Complete a police vetting check (we'll help you with this process)</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-tuhura-green text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">3</div>
+              <div>
+                <p class="font-medium">Start Supporting</p>
+                <p class="text-gray-600 text-sm">Join sessions and start making a difference in rangatahi lives</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 p-4 bg-tuhura-gray rounded-lg">
+            <p class="text-sm text-gray-700">
+              <strong>Important:</strong> Our trained kaiako run all sessions - volunteers support and enhance the experience 
+              by bringing real-world industry knowledge and additional mentoring opportunities.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Donation Impact -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Your Kōha Creates Real Impact</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          We offer everything for free to ensure no barriers, but it does cost us to run. 
+          See exactly how your donation supports rangatahi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {donationImpact.map((item, index) => (
+          <div class="text-center bg-tuhura-gray rounded-xl p-8" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="text-4xl font-bold text-tuhura-green mb-2">{item.amount}</div>
+            <h3 class="text-xl font-semibold mb-3">{item.impact}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary btn-lg">
+          Make a Donation Today
+        </a>
+        <p class="mt-4 text-gray-600">All donations are tax-deductible</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Donations -->
   <section class="py-20 bg-tuhura-gray">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Equipment Donations</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          We run entirely on donated equipment! Many whānau don't have laptops, 
+          so we provide everything needed for learning.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-6">
+          <Icon name="heroicons:computer-desktop" class="h-12 w-12 text-tuhura-green mb-4" />
+          <h3 class="text-xl font-bold mb-3">Laptops & Hardware</h3>
+          <p class="text-gray-700 mb-4">
+            Donated laptops directly enable us to run more sessions and support more rangatahi. 
+            Without them, we simply can't operate.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Laptops suitable for programming (minimum 8GB RAM preferred)</li>
+            <li>• Tablets for younger rangatahi learning activities</li>
+            <li>• Monitors, keyboards, and peripherals</li>
+            <li>• Even older devices can be valuable for specific projects</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <Icon name="heroicons:cpu-chip" class="h-12 w-12 text-tuhura-green mb-4" />
+          <h3 class="text-xl font-bold mb-3">Electronics & Components</h3>
+          <p class="text-gray-700 mb-4">
+            Electronics give us amazing things to show off and explore with rangatahi, 
+            sparking curiosity and hands-on learning.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Arduino kits, Raspberry Pi computers</li>
+            <li>• Robotics components and sensors</li>
+            <li>• 3D printers and maker equipment</li>
+            <li>• Circuit boards, LEDs, and electronic components</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/contact" class="btn btn-secondary">
+          Donate Equipment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Section -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Strategic Partnerships</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Partner with us to collaboratively solve technology education challenges. 
+          We're already part of the Wellington Regional Economic Development Plan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {partnershipTypes.map((partnership, index) => (
+          <div class="bg-tuhura-gray rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow" style={`animation-delay: ${index * 0.1}s`}>
+            <h3 class="text-xl font-bold text-tuhura-green mb-3">{partnership.title}</h3>
+            <p class="text-gray-700 mb-4">{partnership.description}</p>
+            <div>
+              <h4 class="font-semibold text-sm text-gray-900 mb-2">Partnership Benefits:</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                {partnership.benefits.map((benefit) => (
+                  <li class="flex items-start">
+                    <Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-0.5 flex-shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Enterprise Partnership CTA -->
+      <div class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white text-center">
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">Become a Strategic Partner</h3>
+        <p class="text-xl mb-6 opacity-90">
+          Partnership isn't just financial - it's our two organisations collaborating to solve 
+          technology education challenges in the Wellington region and beyond.
+        </p>
+        <div class="bg-white/10 rounded-lg p-4 mb-6">
+          <p class="text-lg">
+            <strong>We're already recognized</strong> in the Wellington Regional Economic Development Plan 
+            as the solution to technology education and growing the region's tech workforce.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
+            Discuss Partnership
+          </a>
+          <!-- TODO: Add partnership prospectus download -->
+          <a href="#" class="btn bg-transparent border-2 border-white hover:bg-white/10">
+            Download Prospectus
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-tuhura-gray">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <h2 class="text-3xl md:text-4xl font-bold">
           Frequently Asked Questions
         </h2>
         <p class="mt-4 text-xl text-gray-600">
-          Have questions about how to support? Check out our FAQ or contact us
-          for more details.
+          Have questions about supporting us? Here are some common questions from our community.
         </p>
-        <div class="mt-8">
-          <a href="/contact" class="btn btn-secondary"> Get in Touch </a>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3">How are donations used?</h3>
+          <p class="text-gray-700">
+            Every kōha goes directly towards keeping our sessions free for rangatahi. $20 funds one rangatahi for a 2-hour session, $800 supports one rangatahi for a full year, and $10,000 funds an entire session location for a year. We provide quarterly impact reports to all donors.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3">What's required to volunteer?</h3>
+          <p class="text-gray-700">
+            All volunteers need to complete a police vetting check (we help with this process). You don't need teaching experience - our trained kaiako run the sessions, and you support by sharing your industry knowledge and providing additional mentoring opportunities for rangatahi.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3">What equipment do you need most?</h3>
+          <p class="text-gray-700">
+            We desperately need laptops to run more sessions, as many whānau don't have them. We also value electronics components like Arduino kits and sensors that give us amazing things to explore with rangatahi and spark their curiosity about technology.
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-3">How does partnership work?</h3>
+          <p class="text-gray-700">
+            Partnership isn't just financial - it's about our organizations collaborating to solve technology education challenges. We're already recognized in the Wellington Regional Economic Development Plan as the solution to growing the region's tech workforce. Partnerships can include venue support, volunteer time, equipment, funding, or strategic collaboration.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Supporters Section -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          Thank You to Our Current Supporters
+        </h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Since our founding in 2022, these amazing organizations have made free technology 
+          education possible through corporate sponsorship, local government partnerships, and ongoing support.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-12">
+        <div class="group text-center">
+          <img src="/partner-wnz.svg" alt="WellingtonNZ" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
+          <p class="text-center text-sm text-gray-600 mt-3 font-medium">WellingtonNZ</p>
+          <p class="text-xs text-gray-500 mt-1">Economic Development Partner</p>
+        </div>
+        <div class="group text-center">
+          <img src="/partner-bsg.svg" alt="Bastion Security Group" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
+          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Bastion Security Group</p>
+          <p class="text-xs text-gray-500 mt-1">Corporate Sponsor</p>
+        </div>
+        <div class="group text-center">
+          <img src="/partner-hcc.svg" alt="Hutt City Council" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
+          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Hutt City Council</p>
+          <p class="text-xs text-gray-500 mt-1">Local Government Partner</p>
+        </div>
+        <div class="group text-center">
+          <img src="/partner-spark.svg" alt="Spark Foundation" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
+          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Spark Foundation</p>
+          <p class="text-xs text-gray-500 mt-1">Foundation Partner</p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-tuhura-green/5 to-tuhura-blue/5 rounded-2xl p-8 text-center">
+        <h3 class="text-2xl font-bold mb-4">Join Our Community of Supporters</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Every supporter helps us maintain 100% free technology education. 
+          Together, we're building the next generation of innovators.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary">Make a Donation</a>
+          <a href="/contact" class="btn btn-secondary">Explore Partnership</a>
         </div>
       </div>
     </div>

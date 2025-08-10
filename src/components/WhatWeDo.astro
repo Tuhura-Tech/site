@@ -1,0 +1,103 @@
+---
+import { Icon } from "astro-icon/components";
+
+const whatWeDo = [
+	{
+		title: "Coding & Programming",
+		description:
+			"Python, JavaScript, web development, app creation - starting from visual programming for beginners",
+		icon: "heroicons:code-bracket",
+	},
+	{
+		title: "Robotics & Electronics",
+		description:
+			"Arduino, Raspberry Pi, VEX robotics, micro:bit projects - building and programming physical devices",
+		icon: "heroicons:cpu-chip",
+	},
+	{
+		title: "Digital Creation",
+		description:
+			"3D printing, game development, web design - bringing creative ideas to life",
+		icon: "heroicons:cube-transparent",
+	},
+	{
+		title: "Problem Solving",
+		description:
+			"Computational thinking, project-based learning, real-world challenges using technology",
+		icon: "heroicons:puzzle-piece",
+	},
+];
+
+const approachPoints = [
+	{
+		icon: "heroicons:users",
+		title: "Trained Kaiako + Industry Volunteers",
+		description:
+			"Professional educators supported by working tech industry experts, adapting to each community's needs",
+	},
+	{
+		icon: "heroicons:heart",
+		title: "Passion-Driven Learning",
+		description:
+			"Each session tailored to the interests and curiosity of the rangatahi who attend",
+	},
+	{
+		icon: "heroicons:home",
+		title: "Community-Centered Approach",
+		description:
+			"We come to schools, libraries, community centres, and marae - making tech education accessible where rangatahi are",
+	},
+	{
+		icon: "heroicons:rocket-launch",
+		title: "Responsive & Flexible",
+		description:
+			"Every session is different, shaped by the community, space, and rangatahi involved",
+	},
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container-custom">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">What We Mean by "Technology Education"</h2>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        We bring hands-on technology learning directly to communities - schools, libraries and community centres. Our trained kaiako work with industry volunteers to create sessions tailored to each group 
+        of rangatahi, focusing on what sparks their curiosity and passion.
+      </p>
+    </div>
+
+    <!-- What We Do -->
+    <div class="mb-24">
+      <h3 class="text-3xl font-bold text-center mb-16">Technologies We Explore Together</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whatWeDo.map((item, index) => (
+          <div class="text-center p-8 rounded-2xl bg-gradient-to-b from-white to-tuhura-gray/30 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="w-20 h-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <Icon name={item.icon} class="h-10 w-10 text-white" />
+            </div>
+            <h4 class="font-bold text-xl mb-4 text-gray-900">{item.title}</h4>
+            <p class="text-gray-600 leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Our Approach -->
+    <div class="bg-gradient-to-r from-tuhura-green/5 to-tuhura-blue/5 rounded-2xl p-8 md:p-12">
+      <h3 class="text-2xl font-bold text-center mb-12">Our Approach to Learning</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {approachPoints.map((point, index) => (
+          <div class="flex items-start space-x-4" style={`animation-delay: ${index * 0.15}s`}>
+            <div class="w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <Icon name={point.icon} class="h-6 w-6 text-tuhura-green" />
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg mb-2">{point.title}</h4>
+              <p class="text-gray-600">{point.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
