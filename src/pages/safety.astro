@@ -4,20 +4,27 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout title="Safety" description="Our commitment to keeping rangatahi safe in all Tūhura Tech activities.">
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="container-custom prose prose-slate max-w-3xl">
-      <h1>Safety</h1>
-      <p>We put the safety and wellbeing of rangatahi first. Our kaiako are trained and police vetted, and we have clear processes for safeguarding.</p>
+    <div class="container-custom prose prose-slate max-w-3xl flex flex-col gap-5 ">
+     <div> 
+      <h1 class="font-bold">Safety</h1>
+      <p>We put the safety and well-being of rangatahi first. Our kaiako are trained, first aid certified, and police vetted, with clear processes in place for safeguarding.</p>
+     </div>
 
-      <h2>Our commitments</h2>
-      <ul>
-        <li>All staff and regular volunteers are police vetted</li>
-        <li>Clear codes of conduct for staff, volunteers and participants</li>
-        <li>Two-adult rule for sessions and events</li>
-        <li>Incident reporting and follow-up processes</li>
+    <div> 
+     <h2 class="font-bold">Our commitments</h2>
+      <ul class="list-disc list-inside">
+        <li>All staff and regular volunteers are police vetted.</li>
+        <li>At least one first aid certified person is present at every session and event.</li>
+        <li>Clear codes of conduct for staff, volunteers, and participants.</li>
+        <li>Two-adult rule for all sessions and events.</li>
+        <li>Incident reporting and follow-up processes.</li>
       </ul>
+    </div>
 
-      <h2>Contact</h2>
+      <div>
+      <h2 class="font-bold">Contact</h2>
       <p>If you have any safety concerns or feedback, email <a href="mailto:safety@tuhuratech.org.nz">safety@tuhuratech.org.nz</a>.</p>
+       </div>
 
       <p class="text-sm text-gray-600">Last updated: {new Date().toISOString().slice(0, 10)}</p>
     </div>

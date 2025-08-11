@@ -4,29 +4,39 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout title="Privacy" description="How Tūhura Tech handles your data and protects your privacy.">
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="container-custom prose prose-slate max-w-3xl">
-      <h1>Privacy</h1>
+    <div class="container-custom prose prose-slate max-w-3xl flex flex-col gap-5 ">
+      <div> 
+      <h1 class="font-bold">Privacy</h1>
       <p>We respect your privacy. We collect only the minimum information required to run our programmes and improve the website.</p>
-
-      <h2>What we collect</h2>
-      <ul>
+      </div>
+<div> 
+<h2 class="font-bold">What we collect</h2>
+      <ul class="list-disc list-inside">
         <li>Contact details you provide in forms (name, email, organisation)</li>
         <li>Anonymous website analytics via Plausible (no cookies, no personal data)</li>
         <li>Basic session attendance information for programme delivery</li>
       </ul>
-
-      <h2>How we use it</h2>
-      <ul>
+</div>
+      
+<div> 
+<h2 class="font-bold">How we use it</h2>
+      <ul class="list-disc list-inside">
         <li>Replying to enquiries and coordinating programmes</li>
         <li>Improving our services and reporting anonymised impact</li>
         <li>Complying with legal and safety obligations</li>
       </ul>
-
-      <h2>Data sharing</h2>
+</div>
+      
+<div> 
+ <h2 class="font-bold">Data sharing</h2>
       <p>We never sell your data. We only share information with service providers as needed to operate our programmes (e.g., email, forms), under confidentiality obligations.</p>
-
-      <h2>Your rights</h2>
+</div> 
+<div>
+     
+<h2 class="font-bold">Your rights</h2>
       <p>You can request, correct, or delete your personal information at any time. Contact <a href="mailto:privacy@tuhuratech.org.nz">privacy@tuhuratech.org.nz</a>.</p>
+</div>
+      
 
       <p class="text-sm text-gray-600">Last updated: {new Date().toISOString().slice(0, 10)}</p>
     </div>
