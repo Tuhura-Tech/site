@@ -1,12 +1,8 @@
 on: [push]
 
 jobs:
-  publish:
+  ci:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
@@ -17,3 +13,6 @@ jobs:
 
       - name: Lint project
         run: pnpm run lint:ci
+
+      - name: Build project
+        run: pnpm run build

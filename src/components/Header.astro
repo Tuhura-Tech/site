@@ -35,8 +35,8 @@ const navItems = [
       <Image
         src={logoSrc}
         alt="Tūhura Tech Logo"
-        width={40}
-        height={40}
+        width={48}
+        height={48}
         class="transition-all hover:brightness-110 focus:brightness-110"
       />
     </a>
@@ -94,6 +94,12 @@ const navItems = [
     </nav>
 
     <div class="flex items-center space-x-4">
+      <a
+        href="/mahi/sessions"
+        class="btn btn-secondary hidden md:inline-flex focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2"
+      >
+        Join Sessions
+      </a>
       <button
         class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2"
         onclick="demo.showModal()">Donate</button

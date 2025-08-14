@@ -155,7 +155,7 @@ const regions = [
                           href={session.signupLink} 
                           class="btn btn-primary text-sm py-2 px-4" 
                           target="_blank" 
-                          rel="noopener"
+                          rel="noopener noreferrer"
                         >
                           Join Session
                         </a>
@@ -182,117 +182,16 @@ const regions = [
   </div>
 </section>
 
-<script>
+<script define:vars={{ regions }}>
   import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from "leaflet";
-  const regions = [
-    {
-        name: "Wellington",
-        sessions: [
-            {
-                name: "Wellington High School",
-                address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
-                latlong: [-41.300334, 174.775107],
-                age: "Years 9-13 (Ages 13-18)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Strathmore Park Community Centre",
-                address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
-                latlong: [-41.330524, 174.821945],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Tuesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
-                address: "1a Ottawa Road Ngaio Wellington",
-                latlong: [-41.249884, 174.773312],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Tuesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "South Wellington Intermediate School",
-                address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
-                latlong: [-41.318344, 174.778997],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: null,
-                time: "Friday at 1:00 - 3:00pm",
-            },
-            {
-                name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
-                address: "247 Karori Rd, Karori, Wellington 6012",
-                latlong: [-41.284831, 174.73754],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Johnsonville Library",
-                address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
-                latlong: [-41.222825, 174.804714],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-        ],
-    },
-    {
-        name: "Lower Hutt",
-        sessions: [
-            {
-                name: "Te Mako Naenae Community Centre",
-                address: "27 Hillary Court, Naenae, Lower Hutt",
-                latlong: [-41.198645, 174.947569],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Walter Nash Neighbourhood Hub",
-                address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
-                latlong: [-41.179429, 174.958979],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Thursday at 3:30 - 5:30pm",
-            },
-            {
-                name: "War Memorial Library",
-                address: "2 Queens Drive, Lower Hutt 5010",
-                latlong: [-41.211709, 174.900509],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Wednesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Wainuiomata Community Library",
-                address: "1 Queen St, Wainuiomata, Lower Hutt",
-                latlong: [-41.261747, 174.944866],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-        ],
-    },
-    {
-        name: "Porirua",
-        sessions: [
-            {
-                name: "Mana College",
-                address: "Awarua St, Elsdon, Porirua 5022",
-                latlong: [-41.1292217, 174.8329403],
-                age: "Years 9-13 (Ages 13-18)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Thursday at 3:30 - 5:30pm",
-            },
-        ],
-    },
-  ];
+  /** @typedef {{ name: string, address: string, latlong: [number, number], age: string, signupLink: (string|null), time: string }} Session */
+
   const allSessions = regions.flatMap((r) => r.sessions);
   const map = new Map("map");
-  let markers = [];
-  let markerOpen = [];
+  /** @type {any[]} */
+  const markers = [];
+  /** @type {{ title: string, marker: any }[]} */
+  const markerOpen = [];
   const icon = new Icon({
     iconUrl: "/marker-icon.png",
     shadowUrl: "/marker-shadow.png",
@@ -315,7 +214,7 @@ const regions = [
       popupContent += `
         <a href="${session.signupLink}"
            style="display: inline-block; background: #059669; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; margin-top: 8px;"
-           target="_blank" rel="noopener">
+           target="_blank" rel="noopener noreferrer">
            Join This Session →
         </a>`;
     } else {
@@ -336,7 +235,8 @@ const regions = [
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
-  (window).openMarker = function (markerTitle) {
+
+  window.openMarker = function (markerTitle) {
     const markerObj = markerOpen.find((m) => m.title === markerTitle);
     if (markerObj) {
       markerObj.marker.openPopup();
