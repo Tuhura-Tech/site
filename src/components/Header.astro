@@ -101,9 +101,12 @@ const navItems = [
         Join Sessions
       </a>
       <button
+        id="donate-trigger"
         class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2"
-        onclick="demo.showModal()">Donate</button
-      >
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        onclick="(function(btn){ if(typeof window.toggleDonatePopover==='function'){ window.toggleDonatePopover(); const dlg=document.getElementById('donate-popover'); if(dlg && dlg instanceof HTMLDialogElement){ btn.setAttribute('aria-expanded', dlg.open ? 'true' : 'false'); } } })(this)"
+      >Donate</button>
       <!-- Mobile Menu Button -->
       <button
         id="menu-toggle"
