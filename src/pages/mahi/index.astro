@@ -27,7 +27,6 @@ const mahiOfferings = [
 		features: [
 			"Game jams & hackathons",
 			"Robotics competitions",
-			"Tech showcases",
 			"Community festivals",
 		],
 	},
@@ -39,8 +38,7 @@ const mahiOfferings = [
 		icon: "heroicons:academic-cap",
 		href: "/mahi/workshops",
 		features: [
-			"During school holidays",
-			"Specific skill focus",
+			"Specific topic focus",
 			"All skill levels",
 			"Take-home projects",
 		],
@@ -49,14 +47,13 @@ const mahiOfferings = [
 		title: "Kaiako PLD",
 		subtitle: "Professional Development",
 		description:
-			"Empowering educators with both technical skills and pedagogical expertise to inspire rangatahi in technology.",
+			"Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.",
 		icon: "heroicons:users",
 		href: "/mahi/pld",
 		features: [
 			"Teacher training",
 			"Curriculum support",
 			"Resource sharing",
-			"Community building",
 		],
 	},
 ];
@@ -64,14 +61,16 @@ const mahiOfferings = [
 const supportResources = [
 	{
 		title: "Free Learning Resources",
-		description: "Open-access materials, lesson plans, and project guides",
+		description: "Open-access materials, lesson plans, tutorials and guides",
 		icon: "heroicons:document-text",
 	},
-	{
+	/**
+    Would ideally like to replace this with something
+    {
 		title: "Equipment Library",
 		description: "Loaning devices and tech equipment to schools and families",
 		icon: "heroicons:cube",
-	},
+	},**/
 	{
 		title: "Consultation & Support",
 		description: "Helping schools develop their own tech education programmes",
@@ -92,7 +91,7 @@ const supportResources = [
         </p>
         <div class="mt-8 bg-tuhura-gray rounded-xl p-6">
           <p class="text-lg text-gray-700">
-            <strong>While after-school community sessions are our primary offering</strong>, we provide comprehensive technology education support including in-school programmes, holiday workshops, teacher training, competitions, and free resources for anyone working with rangatahi.
+            <strong>While after-school community sessions are our primary offering</strong>, we provide comprehensive technology education support including in-school programmes, teacher training, competitions, and free resources for rangatahi and Kaiako.
           </p>
         </div>
       </div>
@@ -140,7 +139,7 @@ const supportResources = [
         <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
           We also provide resources and support to help grow technology education across communities.
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           {supportResources.map((resource, index) => (
             <div class="bg-gradient-to-b from-white to-tuhura-gray/30 rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-all border border-gray-100" style={`animation-delay: ${index * 0.1}s`}>
               <div class="w-20 h-20 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">

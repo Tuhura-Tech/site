@@ -154,6 +154,36 @@ const donationImpact = [
     </div>
   </section>
 
+<!-- Donation Impact -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Your Kōha Creates Real Impact</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          We offer everything for free to ensure no barriers, but it does cost us to run. 
+          See exactly how your donation supports rangatahi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {donationImpact.map((item, index) => (
+          <div class="text-center bg-tuhura-gray rounded-xl p-8" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="text-4xl font-bold text-tuhura-green mb-2">{item.amount}</div>
+            <h3 class="text-xl font-semibold mb-3">{item.impact}</h3>
+            <p class="text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary btn-lg">
+          Make a Donation Today
+        </a>
+        <p class="mt-4 text-gray-600">All donations are tax-deductible</p>
+      </div>
+    </div>
+  </section>
+
   <section class="py-20 bg-white">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-12">
@@ -289,35 +319,7 @@ const donationImpact = [
     </div>
   </section>
 
-  <!-- Donation Impact -->
-  <section class="py-20 bg-white">
-    <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">Your Kōha Creates Real Impact</h2>
-        <p class="mt-4 text-xl text-gray-600">
-          We offer everything for free to ensure no barriers, but it does cost us to run. 
-          See exactly how your donation supports rangatahi.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        {donationImpact.map((item, index) => (
-          <div class="text-center bg-tuhura-gray rounded-xl p-8" style={`animation-delay: ${index * 0.1}s`}>
-            <div class="text-4xl font-bold text-tuhura-green mb-2">{item.amount}</div>
-            <h3 class="text-xl font-semibold mb-3">{item.impact}</h3>
-            <p class="text-gray-600">{item.description}</p>
-          </div>
-        ))}
-      </div>
-
-      <div class="mt-12 text-center">
-        <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary btn-lg">
-          Make a Donation Today
-        </a>
-        <p class="mt-4 text-gray-600">All donations are tax-deductible</p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Equipment Donations -->
   <section class="py-20 bg-tuhura-gray">
@@ -410,7 +412,7 @@ const donationImpact = [
         </p>
         <div class="bg-white/10 rounded-lg p-4 mb-6">
           <p class="text-lg">
-            <strong>We're already recognized</strong> in the Wellington Regional Economic Development Plan 
+            <strong>We're already been recognized</strong> in the Wellington Regional Economic Development Plan 
             as the solution to technology education and growing the region's tech workforce.
           </p>
         </div>
