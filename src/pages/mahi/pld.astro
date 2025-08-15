@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import pldImage from "@assets/pld.jpg";
 import Layout from "@layouts/Layout.astro";
 ---
 
@@ -19,11 +21,21 @@ import Layout from "@layouts/Layout.astro";
           </p>
         </div>
         <div>
-          <!-- TODO: Add image of educators collaborating in PLD session -->
-          <div class="bg-gray-200 h-64 lg:h-80 rounded-xl flex items-center justify-center">
-            <span class="text-gray-500">PLD Collaboration Image</span>
-          </div>
-        </div>
+					<div class="relative">
+						<div
+							class="absolute -inset-0.5 bg-gradient-to-r from-tuhura-green to-tuhura-blue rounded-xl blur opacity-30"
+						></div>
+						<div class="relative bg-white rounded-xl shadow-xl overflow-hidden">
+							<Image
+								src={pldImage}
+								alt="Tūhura Tech Product Dashboard"
+								class="w-full h-auto"
+								width={700}
+								height={500}
+							/>
+						</div>
+					</div>
+				</div>
       </div>
 
       <div class="max-w-5xl mx-auto">
@@ -70,7 +82,7 @@ import Layout from "@layouts/Layout.astro";
                 <li><strong>Digital Technologies Curriculum Support:</strong> Align your teaching with NZ curriculum requirements</li>
                 <li><strong>Tool Training:</strong> Master platforms like Scratch, Godot, Arduino, and more</li>
                 <li><strong>Assessment Strategies:</strong> Learn effective ways to assess student progress in tech</li>
-                <li><strong>Classroom Management:</strong> Handle diverse skill levels and tech challenges</li>
+                <!--<li><strong>Classroom Management:</strong> Handle diverse skill levels and tech challenges</li>-->
                 <li><strong>Project-Based Learning:</strong> Design engaging, real-world tech projects</li>
               </ul>
             </div>
@@ -78,7 +90,7 @@ import Layout from "@layouts/Layout.astro";
               <h3 class="text-2xl font-semibold mb-4">For Community Volunteers</h3>
               <ul class="list-disc pl-6 text-lg space-y-3">
                 <li><strong>Mentoring Skills:</strong> Support rangatahi effectively and safely</li>
-                <li><strong>Session Leadership:</strong> Run your own tech education sessions</li>
+                <!-- <li><strong>Session Leadership:</strong> Run your own tech education sessions</li>-->
                 <li><strong>Age-Appropriate Teaching:</strong> Adapt content for different year levels</li>
                 <li><strong>Safeguarding Training:</strong> Ensure safe learning environments</li>
                 <li><strong>Industry Connections:</strong> Share your professional experience</li>
@@ -101,13 +113,13 @@ import Layout from "@layouts/Layout.astro";
               <!-- TODO: Add icon or small image representing project guides -->
             </div>
             <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Assessment Rubrics</h3>
-              <p class="text-gray-600 mb-4">Fair and effective ways to assess student learning in tech education.</p>
+              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Skill Training</h3>
+              <p class="text-gray-600 mb-4">Confidence and a personal understanding of the content you're delivering</p>
               <!-- TODO: Add icon or small image representing assessment tools -->
             </div>
           </div>
         </div>
-
+        <!-- 
         <div class="mb-12">
           <h2 class="text-3xl font-bold mb-6">Join Our Kaiako Community</h2>
           <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
@@ -124,14 +136,14 @@ import Layout from "@layouts/Layout.astro";
                 </ul>
               </div>
               <div>
-                <!-- TODO: Add image of community meeting or networking event -->
+                
                 <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
                   <span class="text-gray-500">Community Meeting Image</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
 
         <div class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold mb-4">Ready to Enhance Your Ako?</h2>
