@@ -1,111 +1,5 @@
 ---
 import "leaflet/dist/leaflet.css";
-
-const regions = [
-	{
-		name: "Wellington",
-		sessions: [
-			{
-				name: "Wellington High School",
-				address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
-				latlong: [-41.300334, 174.775107],
-				age: "Years 9-13 (Ages 13-18)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Monday at 3:30 - 5:30pm",
-			},
-			{
-				name: "Strathmore Park Community Centre",
-				address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
-				latlong: [-41.330524, 174.821945],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Tuesday at 3:30 - 5:30pm",
-			},
-			{
-				name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
-				address: "1a Ottawa Road Ngaio Wellington",
-				latlong: [-41.249884, 174.773312],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Tuesday at 3:30 - 5:30pm",
-			},
-			{
-				name: "South Wellington Intermediate School",
-				address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
-				latlong: [-41.318344, 174.778997],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: null,
-				time: "Friday at 1:00 - 3:00pm",
-			},
-			{
-				name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
-				address: "247 Karori Rd, Karori, Wellington 6012",
-				latlong: [-41.284831, 174.73754],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Monday at 3:30 - 5:30pm",
-			},
-			{
-				name: "Johnsonville Library",
-				address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
-				latlong: [-41.222825, 174.804714],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Monday at 3:30 - 5:30pm",
-			},
-		],
-	},
-	{
-		name: "Lower Hutt",
-		sessions: [
-			{
-				name: "Te Mako Naenae Community Centre",
-				address: "27 Hillary Court, Naenae, Lower Hutt",
-				latlong: [-41.198645, 174.947569],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Monday at 3:30 - 5:30pm",
-			},
-			{
-				name: "Walter Nash Neighbourhood Hub",
-				address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
-				latlong: [-41.179429, 174.958979],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Thursday at 3:30 - 5:30pm",
-			},
-			{
-				name: "War Memorial Library",
-				address: "2 Queens Drive, Lower Hutt 5010",
-				latlong: [-41.211709, 174.900509],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Wednesday at 3:30 - 5:30pm",
-			},
-			{
-				name: "Wainuiomata Community Library",
-				address: "1 Queen St, Wainuiomata, Lower Hutt",
-				latlong: [-41.261747, 174.944866],
-				age: "Years 5-8 (Ages 8-12)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Monday at 3:30 - 5:30pm",
-			},
-		],
-	},
-	{
-		name: "Porirua",
-		sessions: [
-			{
-				name: "Mana College",
-				address: "Awarua St, Elsdon, Porirua 5022",
-				latlong: [-41.1292217, 174.8329403],
-				age: "Years 9-13 (Ages 13-18)",
-				signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-				time: "Thursday at 3:30 - 5:30pm",
-			},
-		],
-	},
-];
 ---
 
 <section class="py-20 bg-gradient-to-b from-tuhura-gray/30 to-white">
@@ -120,58 +14,11 @@ const regions = [
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div class="flex flex-col lg:flex-row" style="min-height: 600px;">
         <!-- Left: Session List -->
-        <div class="w-full lg:w-5/12 bg-gray-50 p-6 overflow-y-auto" style="max-height: 600px;">
-          {regions.map((region) => (
-            <div class="mb-8 last:mb-0">
-              <h3 class="font-bold text-2xl mb-4 text-tuhura-green border-b border-gray-200 pb-2">{region.name}</h3>
-              <div class="space-y-4">
-                {region.sessions.map((session) => (
-                  <div class="p-4 rounded-xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h4 class="font-semibold text-lg mb-2 text-gray-900">{session.name}</h4>
-                    <div class="space-y-2 text-sm text-gray-600">
-                      <div class="flex items-start space-x-2">
-                        <svg class="w-4 h-4 mt-0.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <span>{session.address}</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <span>{session.time}</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                        </svg>
-                        <span class="text-tuhura-green font-medium">{session.age}</span>
-                      </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-2 mt-4">
-                      {session.signupLink && (
-                        <a 
-                          href={session.signupLink} 
-                          class="btn btn-primary text-sm py-2 px-4" 
-                          target="_blank" 
-                          rel="noopener"
-                        >
-                          Join Session
-                        </a>
-                      )}
-                      <button 
-                        class="btn btn-secondary text-sm py-2 px-4" 
-                        onclick={`openMarker('${session.name.replace(/'/g, "\\'")}')`}
-                      >
-                        Show on Map
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div class="w-full lg:w-5/12 bg-gray-50 p-6 overflow-y-auto" style="max-height: 600px;" id="session-list">
+          <div class="text-center py-8">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-tuhura-green mx-auto"></div>
+            <p class="mt-2 text-gray-600">Loading sessions...</p>
+          </div>
         </div>
         <!-- Right: Map -->
         <div class="w-full lg:w-7/12 bg-gray-100">
@@ -184,164 +31,287 @@ const regions = [
 
 <script>
   import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from "leaflet";
-  const regions = [
-    {
+  
+  interface Session {
+    name: string;
+    address: string;
+    latlong: [number, number];
+    age: string;
+    signupLink: string | null;
+    time: string;
+  }
+  
+  interface Region {
+    name: string;
+    sessions: Session[];
+  }
+
+  // Regions data - in a real app this would come from an API
+  const loadRegions = async (): Promise<Region[]> => {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    return [
+      {
         name: "Wellington",
         sessions: [
-            {
-                name: "Wellington High School",
-                address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
-                latlong: [-41.300334, 174.775107],
-                age: "Years 9-13 (Ages 13-18)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Strathmore Park Community Centre",
-                address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
-                latlong: [-41.330524, 174.821945],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Tuesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
-                address: "1a Ottawa Road Ngaio Wellington",
-                latlong: [-41.249884, 174.773312],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Tuesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "South Wellington Intermediate School",
-                address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
-                latlong: [-41.318344, 174.778997],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: null,
-                time: "Friday at 1:00 - 3:00pm",
-            },
-            {
-                name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
-                address: "247 Karori Rd, Karori, Wellington 6012",
-                latlong: [-41.284831, 174.73754],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Johnsonville Library",
-                address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
-                latlong: [-41.222825, 174.804714],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
+          {
+            name: "Wellington High School",
+            address: "249 Taranaki Street, Mt Cook, 6011, Wellington",
+            latlong: [-41.300334, 174.775107],
+            age: "Years 9-13 (Ages 13-18)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Monday at 3:30 - 5:30pm",
+          },
+          {
+            name: "Strathmore Park Community Centre",
+            address: "108 Strathmore Ave, Strathmore Park, Wellington 6022",
+            latlong: [-41.330524, 174.821945],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Tuesday at 3:30 - 5:30pm",
+          },
+          {
+            name: "Te Whare Pukapuka o Korimako, Ngaio - Cummings Park (Ngaio) Library",
+            address: "1a Ottawa Road Ngaio Wellington",
+            latlong: [-41.249884, 174.773312],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Tuesday at 3:30 - 5:30pm",
+          },
+          {
+            name: "South Wellington Intermediate School",
+            address: "30 Te Wharepōuri St, Newtown, Wellington 6021",
+            latlong: [-41.318344, 174.778997],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: null,
+            time: "Friday at 1:00 - 3:00pm",
+          },
+          {
+            name: "Te Whare Pukapuka o Te Māhanga - Karori Library",
+            address: "247 Karori Rd, Karori, Wellington 6012",
+            latlong: [-41.284831, 174.73754],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Monday at 3:30 - 5:30pm",
+          },
+          {
+            name: "Johnsonville Library",
+            address: "34 Moorefield Rd, Johnsonville, Wellington 6037",
+            latlong: [-41.222825, 174.804714],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Monday at 3:30 - 5:30pm",
+          },
         ],
-    },
-    {
+      },
+      {
         name: "Lower Hutt",
         sessions: [
-            {
-                name: "Te Mako Naenae Community Centre",
-                address: "27 Hillary Court, Naenae, Lower Hutt",
-                latlong: [-41.198645, 174.947569],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Walter Nash Neighbourhood Hub",
-                address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
-                latlong: [-41.179429, 174.958979],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Thursday at 3:30 - 5:30pm",
-            },
-            {
-                name: "War Memorial Library",
-                address: "2 Queens Drive, Lower Hutt 5010",
-                latlong: [-41.211709, 174.900509],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Wednesday at 3:30 - 5:30pm",
-            },
-            {
-                name: "Wainuiomata Community Library",
-                address: "1 Queen St, Wainuiomata, Lower Hutt",
-                latlong: [-41.261747, 174.944866],
-                age: "Years 5-8 (Ages 8-12)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Monday at 3:30 - 5:30pm",
-            },
+          {
+            name: "Te Mako Naenae Community Centre",
+            address: "27 Hillary Court, Naenae, Lower Hutt",
+            latlong: [-41.198645, 174.947569],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Monday at 3:30 - 5:30pm",
+          },
+          {
+            name: "Walter Nash Neighbourhood Hub",
+            address: "22 Taine St, Taitā, Lower Hutt 5011, New Zealand",
+            latlong: [-41.179429, 174.958979],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Thursday at 3:30 - 5:30pm",
+          },
+          {
+            name: "War Memorial Library",
+            address: "2 Queens Drive, Lower Hutt 5010",
+            latlong: [-41.211709, 174.900509],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Wednesday at 3:30 - 5:30pm",
+          },
+          {
+            name: "Wainuiomata Community Library",
+            address: "1 Queen St, Wainuiomata, Lower Hutt",
+            latlong: [-41.261747, 174.944866],
+            age: "Years 5-8 (Ages 8-12)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Monday at 3:30 - 5:30pm",
+          },
         ],
-    },
-    {
+      },
+      {
         name: "Porirua",
         sessions: [
-            {
-                name: "Mana College",
-                address: "Awarua St, Elsdon, Porirua 5022",
-                latlong: [-41.1292217, 174.8329403],
-                age: "Years 9-13 (Ages 13-18)",
-                signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
-                time: "Thursday at 3:30 - 5:30pm",
-            },
+          {
+            name: "Mana College",
+            address: "Awarua St, Elsdon, Porirua 5022",
+            latlong: [-41.1292217, 174.8329403],
+            age: "Years 9-13 (Ages 13-18)",
+            signupLink: "https://forms.gle/hJiRmvQF6QcjmJjt9",
+            time: "Thursday at 3:30 - 5:30pm",
+          },
         ],
-    },
-  ];
-  const allSessions = regions.flatMap((r) => r.sessions);
-  const map = new Map("map");
-  let markers = [];
-  let markerOpen = [];
-  const icon = new Icon({
-    iconUrl: "/marker-icon.png",
-    shadowUrl: "/marker-shadow.png",
-  });
-  allSessions.forEach((session) => {
-    const marker = new Marker(session.latlong, { icon }).addTo(map);
-    let popupContent = `
-      <div class="session-popup" style="min-width: 250px; padding: 8px;">
-        <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #1f2937;">${session.name}</h3>
-        <div style="margin-bottom: 6px; color: #4b5563; font-size: 14px;">
-          <strong>📅 When:</strong> ${session.time}
+      },
+    ];
+  };
+
+  const renderSessionList = (regions: Region[]): void => {
+    const sessionList = document.getElementById("session-list");
+    if (!sessionList) return;
+
+    const content = regions.map(region => `
+      <div class="mb-8 last:mb-0">
+        <h3 class="font-bold text-2xl mb-4 text-tuhura-green border-b border-gray-200 pb-2">${region.name}</h3>
+        <div class="space-y-4">
+          ${region.sessions.map(session => `
+            <div class="p-4 rounded-xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <h4 class="font-semibold text-lg mb-2 text-gray-900">${session.name}</h4>
+              <div class="space-y-2 text-sm text-gray-600">
+                <div class="flex items-start space-x-2">
+                  <svg class="w-4 h-4 mt-0.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span>${session.address}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span>${session.time}</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                  </svg>
+                  <span class="text-tuhura-green font-medium">${session.age}</span>
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2 mt-4">
+                ${session.signupLink ? `
+                  <a 
+                    href="${session.signupLink}" 
+                    class="btn btn-primary text-sm py-2 px-4" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    Join Session
+                  </a>
+                ` : ''}
+                <button 
+                  class="btn btn-secondary text-sm py-2 px-4" 
+                  onclick="window.openMarker('${session.name.replace(/'/g, "\\'")}')"
+                >
+                  Show on Map
+                </button>
+              </div>
+            </div>
+          `).join('')}
         </div>
-        <div style="margin-bottom: 6px; color: #4b5563; font-size: 14px;">
-          <strong>👥 Ages:</strong> ${session.age}
-        </div>
-        <div style="margin-bottom: 8px; color: #6b7280; font-size: 13px;">
-          📍 ${session.address}
-        </div>`;
-    if (session.signupLink) {
-      popupContent += `
-        <a href="${session.signupLink}"
-           style="display: inline-block; background: #059669; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; margin-top: 8px;"
-           target="_blank" rel="noopener">
-           Join This Session →
-        </a>`;
-    } else {
-      popupContent += `
-        <div style="background: #f3f4f6; color: #6b7280; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-top: 8px; border-left: 3px solid #059669;">
-          💡 This is an in-school session. Contact us for similar community sessions.
-        </div>`;
+      </div>
+    `).join('');
+
+    sessionList.innerHTML = content;
+  };
+
+  const initializeMap = (regions: Region[]): void => {
+    const allSessions = regions.flatMap(r => r.sessions);
+    const map = new Map("map");
+    const markers: Marker[] = [];
+    const markerOpen: Array<{ title: string; marker: Marker }> = [];
+    
+    const icon = new Icon({
+      iconUrl: "/marker-icon.png",
+      shadowUrl: "/marker-shadow.png",
+    });
+
+    allSessions.forEach((session) => {
+      const marker = new Marker(session.latlong, { icon }).addTo(map);
+      let popupContent = `
+        <div class="session-popup" style="min-width: 250px; padding: 8px;">
+          <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #1f2937;">${session.name}</h3>
+          <div style="margin-bottom: 6px; color: #4b5563; font-size: 14px;">
+            <strong>📅 When:</strong> ${session.time}
+          </div>
+          <div style="margin-bottom: 6px; color: #4b5563; font-size: 14px;">
+            <strong>👥 Ages:</strong> ${session.age}
+          </div>
+          <div style="margin-bottom: 8px; color: #6b7280; font-size: 13px;">
+            📍 ${session.address}
+          </div>`;
+      
+      if (session.signupLink) {
+        popupContent += `
+          <a href="${session.signupLink}"
+             style="display: inline-block; background: #059669; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; margin-top: 8px;"
+             target="_blank" rel="noopener noreferrer">
+             Join This Session →
+          </a>`;
+      } else {
+        popupContent += `
+          <div style="background: #f3f4f6; color: #6b7280; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-top: 8px; border-left: 3px solid #059669;">
+            💡 This is an in-school session. Contact us for similar community sessions.
+          </div>`;
+      }
+      popupContent += `</div>`;
+      
+      marker.bindPopup(new Popup({ maxWidth: 300 }).setContent(popupContent));
+      markers.push(marker);
+      markerOpen.push({ title: session.name, marker });
+    });
+
+    const group = new FeatureGroup(markers);
+    map.fitBounds(group.getBounds().pad(0.1));
+    
+    new TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    // Extend window interface for openMarker function
+    declare global {
+      interface Window {
+        openMarker: (markerTitle: string) => void;
+      }
     }
-    popupContent += `</div>`;
-    marker.bindPopup(new Popup({ maxWidth: 300 }).setContent(popupContent));
-    markers.push(marker);
-    markerOpen.push({ title: session.name, marker });
-  });
-  const group = new FeatureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.1));
-  new TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
-  (window).openMarker = function (markerTitle) {
-    const markerObj = markerOpen.find((m) => m.title === markerTitle);
-    if (markerObj) {
-      markerObj.marker.openPopup();
+
+    window.openMarker = function (markerTitle: string): void {
+      const markerObj = markerOpen.find(m => m.title === markerTitle);
+      if (markerObj) {
+        markerObj.marker.openPopup();
+      }
+    };
+  };
+
+  // Initialize the component
+  const initializeComponent = async (): Promise<void> => {
+    try {
+      const regions = await loadRegions();
+      renderSessionList(regions);
+      initializeMap(regions);
+    } catch (error) {
+      console.error('Failed to load session data:', error);
+      const sessionList = document.getElementById("session-list");
+      if (sessionList) {
+        sessionList.innerHTML = `
+          <div class="text-center py-8">
+            <p class="text-red-600">Failed to load sessions. Please try again later.</p>
+          </div>
+        `;
+      }
     }
   };
+
+  // Start loading when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeComponent);
+  } else {
+    initializeComponent();
+  }
 </script>
 
 <style>

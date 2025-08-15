@@ -299,3 +299,9 @@ nav a:focus::after {
 .skip-link:focus {
 	top: 6px;
 }
+
+/* Donate popover placement helpers */
+dialog#donate-popover { z-index: 1300; }
+@media (max-width: 480px) {
+  dialog#donate-popover { right: .75rem; left: .75rem; width: auto; }
+}
