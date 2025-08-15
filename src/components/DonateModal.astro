@@ -6,7 +6,6 @@ import { Icon } from "astro-icon/components";
   id="donate-popover"
   role="dialog"
   aria-modal="false"
-  class="fixed z-[1300] m-0 p-0 rounded-xl border border-gray-200 bg-white shadow-2xl overflow-hidden"
 >
   <div class="p-0 max-h-[80vh] overflow-auto w-full">
     <div
@@ -30,9 +29,20 @@ import { Icon } from "astro-icon/components";
       if (!dlg || !trigger) return;
       var r = trigger.getBoundingClientRect();
       var maxWidth = 576; // 36rem
-      var dlgW = Math.min(Math.max(320, Math.floor(window.innerWidth * 0.95)), maxWidth);
-      var left = Math.min(r.left, window.innerWidth - dlgW - 8);
-      left = Math.max(8, left);
+      var minWidth = 320;
+      var vw = window.innerWidth;
+      var dlgW = Math.min(Math.max(minWidth, Math.floor(vw * 0.95)), maxWidth);
+      var left;
+      if (vw <= 480) {
+        // Right align to screen edge with 8px margin on small screens
+        left = Math.max(8, vw - dlgW - 8);
+      } else {
+        // Center over the trigger button
+        var center = r.left + r.width / 2;
+        left = Math.round(center - dlgW / 2);
+        // Clamp within viewport margins
+        left = Math.max(8, Math.min(left, vw - dlgW - 8));
+      }
       var top = Math.min(window.innerHeight - 16, r.bottom + 8);
       dlg.style.width = dlgW + 'px';
       dlg.style.left = left + 'px';
@@ -97,6 +107,7 @@ import { Icon } from "astro-icon/components";
 </script>
 
 <style>
+  dialog#donate-popover { border: none; outline: none; }
   @media (prefers-reduced-motion: no-preference) {
     dialog#donate-popover { opacity: 0; transform: translateY(8px) scale(0.98); transition: opacity .15s ease, transform .15s ease; }
     dialog#donate-popover[open] { opacity: 1; transform: translateY(0) scale(1); }
