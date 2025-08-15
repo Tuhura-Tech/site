@@ -36,7 +36,7 @@ const features = [
 ---
 
 <section
-  class="py-20 bg-gradient-to-b from-white to-tuhura-gray relative overflow-hidden"
+  class="py-20 bg-gray-50 relative overflow-hidden"
 >
   <!-- Subtle background pattern with parallax effect -->
   <div class="absolute inset-0 opacity-5 parallax" data-speed="0.1">
@@ -74,7 +74,7 @@ const features = [
         features.map((feature, index) => (
           <a href={feature.href} class="group block">
             <div class={`feature-card delay-${index + 2} bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col`}>
-              <div class="h-14 w-14 rounded-xl bg-gradient-to-r from-tuhura-green to-tuhura-blue flex items-center justify-center text-white mb-6 transition-transform group-hover:scale-110">
+              <div class="h-14 w-14 rounded-xl bg-tuhura-green flex items-center justify-center text-white mb-6 transition-transform group-hover:scale-110">
                 <Icon
                   name={feature.icon}
                   class="h-7 w-7 transition-transform group-hover:rotate-12"

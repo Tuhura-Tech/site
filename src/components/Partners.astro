@@ -4,49 +4,54 @@ const partners = [
 		name: "WellingtonNZ",
 		logo: "/partner-wnz.svg",
 		href: "https://wellingtonnz.com",
+		description: "Supporting Wellington's economic development",
 	},
 	{
 		name: "Bastion Security Group",
-		logo: "/partner-bsg.svg",
+		logo: "/partner-bsg.svg", 
 		href: "https://www.bastionsecurity.co.nz/",
+		description: "Cybersecurity expertise and training",
 	},
 	{
 		name: "Hutt City Council",
 		logo: "/partner-hcc.svg",
-		href: "https://wellingtonnz.com",
+		href: "https://huttcity.govt.nz",
+		description: "Local government community partnership",
 	},
 	{
 		name: "Spark Foundation",
 		logo: "/partner-spark.svg",
-		href: "https://wellingtonnz.com",
+		href: "https://www.sparkfoundation.org.nz",
+		description: "Connecting communities through technology",
 	},
 ];
 ---
 
-<section class="py-16 bg-white relative overflow-hidden">
+<section class="py-12">
   <div class="container-custom">
     <div class="text-center mb-12">
-      <h3 class="text-lg font-semibold text-gray-600 tracking-wider mb-2">
-        PROUDLY SUPPORTED BY
+      <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">
+        Proudly Supported By
       </h3>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
       {
-        partners.map((partner, _) => (
+        partners.map((partner) => (
           <div class="group">
             <a 
               href={partner.href} 
               target="_blank"
               rel="noopener noreferrer"
-              class="block p-6 rounded-xl bg-gray-50 hover:bg-white border border-gray-100 hover:shadow-lg transition-all duration-300"
+              class="p-6 rounded-xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-center items-center text-center"
             >
               <img
                 src={partner.logo}
-                alt={partner.name}
-                class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform"
+                alt={`${partner.name} logo`}
+                class="h-16 w-auto mx-auto mb-4 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
               />
-              <p class="text-center text-xs text-gray-600 mt-3 font-medium">{partner.name}</p>
+              <h4 class="text-sm font-medium text-gray-900 mb-2">{partner.name}</h4>
+              <p class="text-xs text-gray-600 leading-relaxed">{partner.description}</p>
             </a>
           </div>
         ))

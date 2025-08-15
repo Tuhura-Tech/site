@@ -2,6 +2,7 @@
 import Newsletter from "@components/Newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import Partners from "@components/Partners.astro";
 
 const supportTypes = [
 	{
@@ -59,43 +60,6 @@ const supportTypes = [
 		},
 	},
 ];
-
-const partnershipTypes = [
-	{
-		title: "Corporate Partners",
-		description:
-			"Large organizations collaborating to solve technology education challenges in the Wellington region.",
-		benefits: [
-			"Access to emerging talent pipeline",
-			"Industry-aligned curriculum development",
-			"Team volunteering and CSR opportunities",
-			"Part of Wellington Regional Economic Development Plan",
-		],
-	},
-	{
-		title: "Local Government Partners",
-		description:
-			"Councils and government agencies supporting regional technology education growth.",
-		benefits: [
-			"Contributing to regional economic development",
-			"Supporting digital equity initiatives",
-			"Community impact and social outcomes",
-			"Long-term workforce development",
-		],
-	},
-	{
-		title: "Community Partners",
-		description:
-			"Schools, libraries, community centres, and marae providing spaces and local connections.",
-		benefits: [
-			"Free tech education for your community",
-			"Enhanced reputation as education supporter",
-			"Networking with other community partners",
-			"Direct impact on local rangatahi",
-		],
-	},
-];
-
 const impactStats = [
 	{ number: "1000+", label: "Rangatahi reached annually" },
 	{ number: "15+", label: "Community locations" },
@@ -128,11 +92,11 @@ const donationImpact = [
 >
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
           <span class="gradient-text">Tautoko (Support Us)</span>
         </h1>
-        <p class="mt-6 text-xl text-gray-600">
+        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
           Join our mission to empower the next generation of rangatahi through technology. 
           Every contribution, whether time, resources, or kōha, makes a meaningful difference 
           in breaking down barriers to technology education.
@@ -140,13 +104,13 @@ const donationImpact = [
       </div>
 
       <!-- Impact Statistics -->
-      <div class="mt-16 bg-tuhura-gray rounded-xl p-8">
-        <h2 class="text-2xl font-bold text-center mb-8">Our Impact Together</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="mt-20 bg-tuhura-gray rounded-2xl p-8 md:p-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Our Impact Together</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           {impactStats.map((stat) => (
             <div class="text-center">
-              <div class="text-3xl md:text-4xl font-bold text-tuhura-green">{stat.number}</div>
-              <div class="text-gray-600 mt-1">{stat.label}</div>
+              <div class="text-4xl md:text-5xl font-bold text-tuhura-green mb-2">{stat.number}</div>
+              <div class="text-gray-600 text-lg">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -157,54 +121,54 @@ const donationImpact = [
 <!-- Donation Impact -->
   <section class="py-20 bg-white">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">Your Kōha Creates Real Impact</h2>
-        <p class="mt-4 text-xl text-gray-600">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Kōha Creates Real Impact</h2>
+        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
           We offer everything for free to ensure no barriers, but it does cost us to run. 
           See exactly how your donation supports rangatahi.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
         {donationImpact.map((item, index) => (
-          <div class="text-center bg-tuhura-gray rounded-xl p-8" style={`animation-delay: ${index * 0.1}s`}>
-            <div class="text-4xl font-bold text-tuhura-green mb-2">{item.amount}</div>
-            <h3 class="text-xl font-semibold mb-3">{item.impact}</h3>
-            <p class="text-gray-600">{item.description}</p>
+          <div class="text-center bg-tuhura-gray rounded-2xl p-8" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="text-5xl font-bold text-tuhura-green mb-4">{item.amount}</div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-900">{item.impact}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
 
-      <div class="mt-12 text-center">
+      <div class="text-center">
         <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary btn-lg">
           Make a Donation Today
         </a>
-        <p class="mt-4 text-gray-600">All donations are tax-deductible</p>
+        <p class="mt-4 text-gray-600 text-lg">All donations are tax-deductible</p>
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-gray-50">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">Ways to Tautoko (Support)</h2>
-        <p class="mt-4 text-xl text-gray-600">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ways to Tautoko (Support)</h2>
+        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
           Choose the way that works best for you to help create opportunities for rangatahi.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {
           supportTypes.map((type, index) => (
             <div
-              class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+              class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 h-full flex flex-col"
               style={`animation-delay: ${index * 0.1}s`}
             >
               <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
                 <Icon name={type.icon} class="h-8 w-8 text-tuhura-green" />
               </div>
-              <h3 class="text-2xl font-semibold mb-4">{type.name}</h3>
-              <p class="text-gray-600 mb-6">{type.description}</p>
+              <h3 class="text-2xl font-semibold mb-4 text-gray-900">{type.name}</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed flex-grow">{type.description}</p>
               <ul class="space-y-3 mb-8">
                 {type.features.map((feature) => (
                   <li class="flex items-start text-gray-700">
@@ -212,13 +176,13 @@ const donationImpact = [
                       name="heroicons:check-circle"
                       class="h-5 w-5 text-tuhura-green mr-3 mt-0.5 flex-shrink-0"
                     />
-                    <span>{feature}</span>
+                    <span class="leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
               {type.cta.type === "button" ? (
                 <button
-                  class="btn btn-primary w-full text-center"
+                  class="btn btn-primary w-full text-center mt-auto"
                   onclick={type.cta.onclick}
                 >
                   {type.cta.text}
@@ -226,7 +190,7 @@ const donationImpact = [
               ) : (
                 <a
                   href={type.cta.href}
-                  class="btn btn-primary w-full text-center inline-flex justify-center"
+                  class="btn btn-primary w-full text-center inline-flex justify-center mt-auto"
                 >
                   {type.cta.text}
                 </a>
@@ -383,28 +347,10 @@ const donationImpact = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        {partnershipTypes.map((partnership, index) => (
-          <div class="bg-tuhura-gray rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow" style={`animation-delay: ${index * 0.1}s`}>
-            <h3 class="text-xl font-bold text-tuhura-green mb-3">{partnership.title}</h3>
-            <p class="text-gray-700 mb-4">{partnership.description}</p>
-            <div>
-              <h4 class="font-semibold text-sm text-gray-900 mb-2">Partnership Benefits:</h4>
-              <ul class="text-sm text-gray-600 space-y-1">
-                {partnership.benefits.map((benefit) => (
-                  <li class="flex items-start">
-                    <Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-0.5 flex-shrink-0" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Partners />
 
       <!-- Enterprise Partnership CTA -->
-      <div class="bg-gradient-to-br from-tuhura-green to-tuhura-blue rounded-xl p-8 text-white text-center">
+      <div class="bg-tuhura-green rounded-xl p-8 text-white text-center">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Become a Strategic Partner</h3>
         <p class="text-xl mb-6 opacity-90">
           Partnership isn't just financial - it's our two organisations collaborating to solve 
@@ -430,98 +376,77 @@ const donationImpact = [
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-20 bg-tuhura-gray">
+  <section class="py-20 bg-white">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
           Frequently Asked Questions
         </h2>
-        <p class="mt-4 text-xl text-gray-600">
+        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
           Have questions about supporting us? Here are some common questions from our community.
         </p>
       </div>
 
       <div class="max-w-4xl mx-auto space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h3 class="text-lg font-semibold mb-3">How are donations used?</h3>
-          <p class="text-gray-700">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">How are donations used?</h3>
+          <p class="text-gray-700 leading-relaxed text-lg">
             Every kōha goes directly towards keeping our sessions free for rangatahi. $20 funds one rangatahi for a 2-hour session, $800 supports one rangatahi for a full year, and $10,000 funds an entire session location for a year. We provide quarterly impact reports to all donors.
           </p>
         </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h3 class="text-lg font-semibold mb-3">What's required to volunteer?</h3>
-          <p class="text-gray-700">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">What's required to volunteer?</h3>
+          <p class="text-gray-700 leading-relaxed text-lg">
             All volunteers need to complete a police vetting check (we help with this process). You don't need teaching experience - our trained kaiako run the sessions, and you support by sharing your industry knowledge and providing additional mentoring opportunities for rangatahi.
           </p>
         </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h3 class="text-lg font-semibold mb-3">What equipment do you need most?</h3>
-          <p class="text-gray-700">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">What equipment do you need most?</h3>
+          <p class="text-gray-700 leading-relaxed text-lg">
             We desperately need laptops to run more sessions, as many whānau don't have them. We also value electronics components like Arduino kits and sensors that give us amazing things to explore with rangatahi and spark their curiosity about technology.
           </p>
         </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <h3 class="text-lg font-semibold mb-3">How does partnership work?</h3>
-          <p class="text-gray-700">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+          <h3 class="text-xl font-semibold mb-4 text-gray-900">How does partnership work?</h3>
+          <p class="text-gray-700 leading-relaxed text-lg">
             Partnership isn't just financial - it's about our organizations collaborating to solve technology education challenges. We're already recognized in the Wellington Regional Economic Development Plan as the solution to growing the region's tech workforce. Partnerships can include venue support, volunteer time, equipment, funding, or strategic collaboration.
           </p>
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="text-center mt-16">
+        <a href="/contact" class="btn btn-secondary btn-lg">Get in Touch</a>
       </div>
     </div>
   </section>
 
   <!-- Current Supporters Section -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-gray-50">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold">
+      <div class="text-center max-w-4xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
           Thank You to Our Current Supporters
         </h2>
-        <p class="mt-4 text-xl text-gray-600">
+        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed">
           Since our founding in 2022, these amazing organizations have made free technology 
           education possible through corporate sponsorship, local government partnerships, and ongoing support.
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center mb-12">
-        <div class="group text-center">
-          <img src="/partner-wnz.svg" alt="WellingtonNZ" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-3 font-medium">WellingtonNZ</p>
-          <p class="text-xs text-gray-500 mt-1">Economic Development Partner</p>
-        </div>
-        <div class="group text-center">
-          <img src="/partner-bsg.svg" alt="Bastion Security Group" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Bastion Security Group</p>
-          <p class="text-xs text-gray-500 mt-1">Corporate Sponsor</p>
-        </div>
-        <div class="group text-center">
-          <img src="/partner-hcc.svg" alt="Hutt City Council" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Hutt City Council</p>
-          <p class="text-xs text-gray-500 mt-1">Local Government Partner</p>
-        </div>
-        <div class="group text-center">
-          <img src="/partner-spark.svg" alt="Spark Foundation" class="h-16 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-3 font-medium">Spark Foundation</p>
-          <p class="text-xs text-gray-500 mt-1">Foundation Partner</p>
-        </div>
-      </div>
+      <Partners />
 
-      <div class="bg-gradient-to-r from-tuhura-green/5 to-tuhura-blue/5 rounded-2xl p-8 text-center">
-        <h3 class="text-2xl font-bold mb-4">Join Our Community of Supporters</h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl p-8 md:p-12 text-center shadow-sm border border-gray-100">
+        <h3 class="text-2xl md:text-3xl font-bold mb-6">Join Our Community of Supporters</h3>
+        <p class="text-gray-600 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
           Every supporter helps us maintain 100% free technology education. 
           Together, we're building the next generation of innovators.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary">Make a Donation</a>
-          <a href="/contact" class="btn btn-secondary">Explore Partnership</a>
+          <a href="https://donate.tuhuratech.org.nz" class="btn btn-primary btn-lg">Make a Donation</a>
+          <a href="/contact" class="btn btn-secondary btn-lg">Explore Partnership</a>
         </div>
       </div>
     </div>
