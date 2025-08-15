@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import teamImage from "@assets/team-photo.jpg";
+import lillianhImage from "@assets/LHTheadshot.jpg";
+import logoSrc from "@assets/logo.svg";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
@@ -9,7 +11,7 @@ const teamMembers = [
 		name: "Leon Bowie",
 		role: "Co-Founder & CEO",
 		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
-		// avatar: "/avatar-juan.jpg",
+		avatar: logoSrc,
 		social: {
 			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
 			github: "https://github.com/Darkflame72",
@@ -20,35 +22,35 @@ const teamMembers = [
 		name: "Lillian Hide-Tobin",
 		role: "Lead Mentor",
 		bio: "Lillian has freshly graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, whether in Game Development, algorithmic audio and video, storytelling, or anything else. She strives to encourage young women to engage with technology",
-		// avatar: "/avatar-sophia.jpg",
+		avatar: lillianhImage,
 		social: {},
 	},
 	{
 		name: "Zelle Marcovicci",
 		role: "Lead Mentor",
 		bio: "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
-		// avatar: "/avatar-marcus.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Neenu",
 		role: "Lead Mentor",
 		bio: "",
-		// avatar: "/avatar-marcus.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Irma",
 		role: "Admin and Operations Coordinator",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Yui",
 		role: "Community Coordinator",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 ];
@@ -58,56 +60,56 @@ const boardMembers = [
 		name: "Lillian Pak",
 		role: "Co-Founder & Chair of the Board",
 		bio: "Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.",
-		// avatar: "/avatar-juan.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Simon McCallum",
 		role: "Treasurer",
 		bio: "",
-		// avatar: "/avatar-sophia.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Rose Langride",
 		role: "Secretary",
 		bio: "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
-		// avatar: "/avatar-marcus.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Jerome Dolman",
 		role: "Trustee",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Aleisha Amohia",
 		role: "Trustee",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Kendra Ross",
 		role: "Trustee",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Carl Ross",
 		role: "Trustee",
 		bio: "",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Leon Bowie",
 		role: "Co-Founder, CEO & Trustee",
 		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
-		// avatar: "/avatar-priya.jpg",
+		avatar: logoSrc,
 		social: {
 			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
 			github: "https://github.com/Darkflame72",
@@ -336,10 +338,13 @@ const timeline = [
               style={`animation-delay: ${index * 0.1}s`}
             >
               <div class="relative inline-block">
-                <!-- TODO: Add professional headshots of team members -->
-                <div class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center">
-                  <span class="text-gray-500 text-sm">Photo</span>
-                </div>
+                  <Image
+                  src={member.avatar}
+                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center object-cover"
+                  alt = {"A photo of " + member.name }
+                  />
+                <!-- <span class="text-gray-500 text-sm">Photo</span>-->
+                <!--</div>-->
               </div>
               <h3 class="text-xl font-semibold">{member.name}</h3>
               <p class="text-tuhura-green font-medium">{member.role}</p>
@@ -410,10 +415,11 @@ const timeline = [
               style={`animation-delay: ${index * 0.1}s`}
             >
               <div class="relative inline-block">
-                <!-- TODO: Add professional headshots of board members -->
-                <div class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center">
-                  <span class="text-gray-500 text-sm">Photo</span>
-                </div>
+                <Image
+                  src={member.avatar}
+                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center object-cover"
+                  alt = {"A photo of " + member.name }
+                />
               </div>
               <h3 class="text-xl font-semibold">{member.name}</h3>
               <p class="text-tuhura-green font-medium">{member.role}</p>
