@@ -106,7 +106,7 @@ const boardMembers = [
 		avatar: logoSrc,
 		social: {},
 	},
-	{
+  	{
 		name: "Leon Bowie",
 		role: "Co-Founder, CEO & Trustee",
 		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
@@ -123,25 +123,25 @@ const values = [
 	{
 		title: "Accessible & Equitable Education",
 		description:
-			"There should be no barriers to education and opportunities. We provide all our sessions free of charge, this includes our resources, laptops, robots, electronics and anything else enabling everything to be able to participate.",
+			"No barriers to education and opportunities. We provide all our sessions free of charge, including resources, laptops, robots, and electronics.",
 		icon: "heroicons:code-bracket",
 	},
 	{
 		title: "Industry Aligned Content",
 		description:
-			"There is no point teaching outdated content and practices, it's not engaging and doesn't set rangatahi up for success. We work with industry partners to bring their knowledge, skills and practices to rangatahi.",
+			"Current, engaging content that sets rangatahi up for success. We work with industry partners to bring their knowledge and practices to rangatahi.",
 		icon: "heroicons:code-bracket",
 	},
 	{
 		title: "Knowledge and Support",
 		description:
-			"We provide trained staff, both in technology and education to enable rangatahi should be supported. It's why we are a Living Wage Accredited Employer and put our staff through industry training and certifications.",
+			"Trained staff in both technology and education. We're a Living Wage Accredited Employer and invest in our staff through industry training and certifications.",
 		icon: "heroicons:code-bracket",
 	},
 	{
 		title: "Community-Centered Approach",
 		description:
-			"Rather than expecting rangatahi to come to us, we go to them. We operate in schools, libraries, community centres, and marae - bringing technology education into the heart of communities where it's most accessible and relevant.",
+			"Rather than expecting rangatahi to come to us, we go to them - operating in schools, libraries, community centres, and marae.",
 		icon: "heroicons:code-bracket",
 	},
 ];
@@ -353,7 +353,7 @@ const timeline = [
               <div class="mt-4 flex justify-center space-x-3">
                 {Object.entries(member.social).map(([, url]) => (
                   <a
-                    href={url}
+                    href={url as string}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-gray-400 hover:text-tuhura-green"
@@ -428,7 +428,7 @@ const timeline = [
               <div class="mt-4 flex justify-center space-x-3">
                 {Object.entries(member.social).map(([, url]) => (
                   <a
-                    href={url}
+                    href={url as string}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-gray-400 hover:text-tuhura-green"
