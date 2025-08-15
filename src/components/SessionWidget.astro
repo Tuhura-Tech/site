@@ -256,6 +256,15 @@ import "leaflet/dist/leaflet.css";
             💡 This is an in-school session. Contact us for similar community sessions.
           </div>`;
       }
+      if (session.latlong){
+        popupContent += `
+          <a href="https://www.google.com/maps/search/${session.latlong}"
+             style="display: inline-block; background: #059669; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; margin-top: 8px;"
+             target="_blank" rel="noopener noreferrer">
+             Open in Maps →
+          </a>`;
+        }
+
       popupContent += `</div>`;
       
       marker.bindPopup(new Popup({ maxWidth: 300 }).setContent(popupContent));
