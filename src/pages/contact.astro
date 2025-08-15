@@ -1,50 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-
-const contactMethods = [
-	{
-		title: "Sessions",
-		description:
-			"Questions about our regular weekly tech sessions, locations, or how to join.",
-		icon: "heroicons:academic-cap",
-		email: "sessions@tuhuratech.org.nz",
-	},
-	{
-		title: "Workshops (Wānanga)",
-		description:
-			"Intensive learning sessions, custom workshops, or PLD opportunities.",
-		icon: "heroicons:wrench-screwdriver",
-		email: "workshops@tuhuratech.org.nz",
-	},
-	{
-		title: "Partnerships",
-		description:
-			"Sponsorship, venue partnerships, or community collaboration opportunities.",
-		icon: "heroicons:users",
-		email: "partners@tuhuratech.org.nz",
-	},
-	{
-		title: "Careers & Volunteering",
-		description:
-			"Join our team as staff or volunteer to support rangatahi in their learning journey.",
-		icon: "heroicons:users",
-		email: "careers@tuhuratech.org.nz",
-	},
-	{
-		title: "Media & Events",
-		description:
-			"Press inquiries, event invitations, or speaking opportunities.",
-		icon: "heroicons:megaphone",
-		email: "media@tuhuratech.org.nz",
-	},
-	{
-		title: "General Inquiries",
-		description: "Any other questions or if you're not sure who to contact.",
-		icon: "heroicons:chat-bubble-left-right",
-		email: "info@tuhuratech.org.nz",
-	},
-];
 ---
 
 <Layout title="Contact Us | Kōrero Mai">
@@ -60,31 +16,6 @@ const contactMethods = [
           for a kōrero (conversation).
         </p>
       </div>
-
-      <!-- Quick Contact Cards -->
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          contactMethods.map((method, index) => (
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-tuhura-green/10 text-tuhura-green mb-4">
-                <Icon name={method.icon} class="h-8 w-8" />
-              </div>
-              <h3 class="text-lg font-semibold mb-2">{method.title}</h3>
-              <p class="text-sm text-gray-600 mb-4">{method.description}</p>
-              <a
-                href={`mailto:${method.email}`}
-                class="text-tuhura-green font-medium hover:underline text-sm"
-              >
-                {method.email}
-              </a>
-            </div>
-          ))
-        }
-      </div>
-
   </section>
 
   <section class="py-20 bg-tuhura-gray">
