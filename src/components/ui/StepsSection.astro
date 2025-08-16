@@ -1,0 +1,61 @@
+---
+interface Step {
+  title: string;
+  description: string;
+  number?: string;
+}
+
+interface Props {
+  steps: Step[];
+  title?: string;
+  description?: string;
+  columns?: "2" | "3" | "4";
+  variant?: "numbered" | "icon";
+  iconName?: string;
+}
+
+const {
+  steps,
+  title,
+  description,
+  columns = "4",
+  variant = "numbered",
+  iconName = "heroicons:check"
+} = Astro.props;
+
+const gridCols = {
+  "2": "grid-cols-1 md:grid-cols-2",
+  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  "4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+};
+
+import { Icon } from "astro-icon/components";
+import Card from "./Card.astro";
+---
+
+<section class="py-20">
+  <div class="container-custom">
+    {title && (
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
+        {description && <p class="text-xl text-gray-600">{description}</p>}
+      </div>
+    )}
+
+    <div class={`grid ${gridCols[columns]} gap-6`}>
+      {steps.map((step, index) => (
+        <Card variant="default" class="text-center">
+          <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
+            {variant === "numbered" ? (
+              <span class="text-white font-bold text-xl">{step.number || (index + 1)}</span>
+            ) : (
+              <Icon name={iconName} class="h-8 w-8 text-white" />
+            )}
+          </div>
+          <h3 class="text-xl font-semibold text-tuhura-green mb-3">{step.title}</h3>
+          <p class="text-gray-600">{step.description}</p>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>

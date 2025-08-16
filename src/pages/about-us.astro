@@ -5,7 +5,8 @@ import lillianhImage from "@assets/team/LHTheadshot.jpg";
 import neenuImage from "@assets/team/neenu.jpg";
 import logoSrc from "@assets/logo.svg";
 import Layout from "@layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
+import PersonCards from "@components/ui/PersonCards.astro";
+import IconFeatures from "@components/ui/IconFeatures.astro";
 
 const teamMembers = [
 	{
@@ -246,29 +247,18 @@ const timeline = [
 
   <section class="py-20 bg-tuhura-gray">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-bold">Our Values & Tikanga</h2>
         <p class="mt-4 text-xl text-gray-600">
           The principles that guide everything we do in our mahi.
         </p>
       </div>
 
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {
-          values.map((value, index) => (
-            <div
-              class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="h-12 w-12 rounded-lg bg-tuhura-green flex items-center justify-center text-white mb-6">
-                <Icon name={value.icon} class="h-6 w-6" />
-              </div>
-              <h3 class="text-xl font-semibold">{value.title}</h3>
-              <p class="mt-3 text-gray-600">{value.description}</p>
-            </div>
-          ))
-        }
-      </div>
+      <IconFeatures 
+        features={values}
+        columns="2"
+        iconVariant="default"
+      />
       
       <!-- Additional Values Section -->
       <div class="mt-16 bg-white rounded-xl p-8">
@@ -324,50 +314,11 @@ const timeline = [
     </div>
   </section>
 
-  <section class="py-20 bg-tuhura-gray">
-    <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold">Meet Our Kaimahi (Team)</h2>
-        <p class="mt-4 text-xl text-gray-600">The passionate people behind Tūhura Tech who make our mahi possible.</p>
-      </div>
-
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          teamMembers.map((member, index) => (
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="relative inline-block">
-                  <Image
-                  src={member.avatar}
-                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center object-cover"
-                  alt = {"A photo of " + member.name }
-                  />
-                <!-- <span class="text-gray-500 text-sm">Photo</span>-->
-                <!--</div>-->
-              </div>
-              <h3 class="text-xl font-semibold">{member.name}</h3>
-              <p class="text-tuhura-green font-medium">{member.role}</p>
-              <p class="mt-3 text-gray-600 text-sm">{member.bio}</p>
-              <div class="mt-4 flex justify-center space-x-3">
-                {Object.entries(member.social).map(([, url]) => (
-                  <a
-                    href={url as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-tuhura-green"
-                  >
-                    <Icon name="heroicons:link" class="h-5 w-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <PersonCards 
+    people={teamMembers}
+    title="Meet Our Kaimahi (Team)"
+    description="The passionate people behind Tūhura Tech who make our mahi possible."
+  />
 
   <section
     class="py-20 bg-tuhura-green text-white relative overflow-hidden"
@@ -396,53 +347,11 @@ const timeline = [
     </div>
   </section>
 
-  <section class="py-20 bg-tuhura-gray">
-    <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          Meet Our Board of Trustees (Poari Kaitiaki)
-        </h2>
-        <p class="mt-4 text-xl text-gray-600">
-          The amazing people who provide governance and guardianship over our charity and
-          its strategic direction.
-        </p>
-      </div>
-
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          boardMembers.map((member, index) => (
-            <div
-              class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="relative inline-block">
-                <Image
-                  src={member.avatar}
-                  class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-tuhura-green/20 bg-gray-200 flex items-center justify-center object-cover"
-                  alt = {"A photo of " + member.name }
-                />
-              </div>
-              <h3 class="text-xl font-semibold">{member.name}</h3>
-              <p class="text-tuhura-green font-medium">{member.role}</p>
-              <p class="mt-3 text-gray-600 text-sm">{member.bio}</p>
-              <div class="mt-4 flex justify-center space-x-3">
-                {Object.entries(member.social).map(([, url]) => (
-                  <a
-                    href={url as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-gray-400 hover:text-tuhura-green"
-                  >
-                    <Icon name="heroicons:link" class="h-5 w-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <PersonCards 
+    people={boardMembers}
+    title="Meet Our Board of Trustees (Poari Kaitiaki)"
+    description="The amazing people who provide governance and guardianship over our charity and its strategic direction."
+  />
 
   <!-- Supporters Section -->
   <section class="py-20 bg-gray-50">

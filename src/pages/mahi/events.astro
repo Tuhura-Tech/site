@@ -2,6 +2,9 @@
 import EventExamples from "@components/EventExamples.astro";
 import EventExpectations from "@components/EventExpectations.astro";
 import Layout from "@layouts/Layout.astro";
+import Checklist from "@components/ui/Checklist.astro";
+import Card from "@components/ui/Card.astro";
+import CallToAction from "@components/ui/CallToAction.astro";
 import { Icon } from "astro-icon/components";
 
 const eventCategories = [
@@ -94,7 +97,7 @@ const eventBenefits = [
         <h2 class="text-3xl font-bold text-center mb-12">Types of Tech Hui</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {eventCategories.map((category, index) => (
-            <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100" style={`animation-delay: ${index * 0.1}s`}>
+            <Card class="p-8" style={`animation-delay: ${index * 0.1}s`}>
               <div class="flex items-center mb-6">
                 <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mr-4">
                   <Icon name={category.icon} class="h-8 w-8 text-tuhura-green" />
@@ -104,16 +107,13 @@ const eventBenefits = [
               <p class="text-gray-700 mb-6">{category.description}</p>
               <div>
                 <h4 class="font-semibold text-gray-900 mb-3">Recent examples:</h4>
-                <ul class="space-y-2">
-                  {category.examples.map((example) => (
-                    <li class="flex items-start text-gray-600">
-                      <Icon name="heroicons:sparkles" class="h-4 w-4 text-tuhura-green mr-2 mt-0.5 flex-shrink-0" />
-                      {example}
-                    </li>
-                  ))}
-                </ul>
+                <Checklist 
+                  items={category.examples.map(example => ({ text: example }))}
+                  icon="heroicons:sparkles"
+                  iconColor="text-tuhura-green"
+                />
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -121,14 +121,12 @@ const eventBenefits = [
       <!-- Event Benefits -->
       <div class="bg-tuhura-gray rounded-xl p-8 max-w-4xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-center mb-8">Why Events Matter for Rangatahi</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {eventBenefits.map((benefit, index) => (
-            <div class="flex items-start" style={`animation-delay: ${index * 0.05}s`}>
-              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
-              <span class="text-gray-700">{benefit}</span>
-            </div>
-          ))}
-        </div>
+        <Checklist 
+          items={eventBenefits.map(benefit => ({ text: benefit }))}
+          icon="heroicons:check-circle"
+          iconColor="text-tuhura-green"
+          columns="2"
+        />
       </div>
 
       <!-- Existing Components -->
@@ -144,21 +142,21 @@ const eventBenefits = [
           
           <!-- Highlighted Events -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            <Card class="p-6">
               <Icon name="heroicons:puzzle-piece" class="h-12 w-12 text-tuhura-green mb-4" />
               <h3 class="text-xl font-bold mb-3">Game Jams</h3>
               <p class="text-gray-700">48-72 hour intensive game development challenges where teams create complete games from concept to playable prototype, often partnering with industry professionals.</p>
-            </div>
-            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            </Card>
+            <Card class="p-6">
               <Icon name="heroicons:shield-check" class="h-12 w-12 text-tuhura-green mb-4" />
               <h3 class="text-xl font-bold mb-3">CTF Competitions</h3>
               <p class="text-gray-700">Capture The Flag cybersecurity events where rangatahi learn ethical hacking, digital forensics, and security concepts through hands-on challenges.</p>
-            </div>
-            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            </Card>
+            <Card class="p-6">
               <Icon name="heroicons:cog" class="h-12 w-12 text-tuhura-green mb-4" />
               <h3 class="text-xl font-bold mb-3">RoboCup Regionals</h3>
               <p class="text-gray-700">Robotics competitions where teams design, build, and program autonomous robots to compete in various challenges, from soccer to rescue scenarios.</p>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
@@ -169,45 +167,29 @@ const eventBenefits = [
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Rangatahi</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>All skill levels welcome - from beginner to advanced</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Join as individuals or teams</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>All equipment and materials provided</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Mentorship and support throughout events</span>
-              </li>
-            </ul>
+            <Checklist 
+              items={[
+                { text: "All skill levels welcome - from beginner to advanced" },
+                { text: "Join as individuals or teams" },
+                { text: "All equipment and materials provided" },
+                { text: "Mentorship and support throughout events" }
+              ]}
+              icon="heroicons:check-circle"
+              iconColor="text-tuhura-green"
+            />
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Schools & Communities</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Host events at your venue with our support</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Bring groups of students to regional events</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Connect with industry partners and sponsors</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Professional development for kaiako</span>
-              </li>
-            </ul>
+            <Checklist 
+              items={[
+                { text: "Host events at your venue with our support" },
+                { text: "Bring groups of students to regional events" },
+                { text: "Connect with industry partners and sponsors" },
+                { text: "Professional development for kaiako" }
+              ]}
+              icon="heroicons:check-circle"
+              iconColor="text-tuhura-green"
+            />
           </div>
         </div>
         
@@ -226,21 +208,16 @@ const eventBenefits = [
       </div>
 
       <!-- Call to Action -->
-      <div class="bg-tuhura-green rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4">Ready to Experience a Tech Hui?</h2>
-        <p class="text-xl mb-8 opacity-90">
-          Whether you want to compete, collaborate, showcase, or just be inspired - our events create unforgettable 
-          experiences that connect rangatahi with technology and community.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
-            Join Our Community
-          </a>
-          <a href="/mahi/sessions" class="btn bg-transparent border-2 border-white hover:bg-white/10">
-            Explore Regular Sessions
-          </a>
-        </div>
-      </div>
+      <CallToAction 
+        title="Ready to Experience a Tech Hui?"
+        description="Whether you want to compete, collaborate, showcase, or just be inspired - our events create unforgettable experiences that connect rangatahi with technology and community."
+        buttons={[
+          { text: "Join Our Community", href: "/contact", variant: "primary" },
+          { text: "Explore Regular Sessions", href: "/mahi/sessions", variant: "secondary" }
+        ]}
+        bgColor="bg-tuhura-green"
+        textColor="text-white"
+      />
     </div>
   </section>
 </Layout>

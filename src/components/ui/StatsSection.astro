@@ -1,0 +1,48 @@
+---
+interface Stat {
+  title: string;
+  value: string;
+  description: string;
+}
+
+interface Props {
+  stats: Stat[];
+  title?: string;
+  description?: string;
+  variant?: "default" | "card" | "inline";
+  bgColor?: string;
+}
+
+const {
+  stats,
+  title,
+  description,
+  variant = "default",
+  bgColor = ""
+} = Astro.props;
+
+const wrapperClass = bgColor || (variant === "card" ? "bg-tuhura-gray rounded-xl p-8" : "");
+---
+
+<section class="py-20">
+  <div class="container-custom">
+    {title && (
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
+        {description && <p class="text-xl text-gray-600">{description}</p>}
+      </div>
+    )}
+
+    <div class={wrapperClass}>
+      <div class={`grid grid-cols-1 md:grid-cols-${stats.length} gap-6 text-center`}>
+        {stats.map((stat) => (
+          <div>
+            <div class="text-3xl font-bold text-tuhura-green">{stat.value}</div>
+            <p class="text-gray-600 mt-1">{stat.description}</p>
+            {variant === "default" && <p class="text-sm text-gray-500 mt-1">{stat.title}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

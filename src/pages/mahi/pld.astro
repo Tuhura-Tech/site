@@ -2,6 +2,26 @@
 import { Image } from "astro:assets";
 import pldImage from "@assets/pld.jpg";
 import Layout from "@layouts/Layout.astro";
+import StepsSection from "@components/ui/StepsSection.astro";
+
+const learningFramework = [
+  {
+    title: "Technical Mastery",
+    description: "Build confidence with technology tools, programming languages, and emerging tech."
+  },
+  {
+    title: "Teaching Approaches", 
+    description: "Learn student-centred, project-based teaching methods that engage and inspire."
+  },
+  {
+    title: "Cultural Responsiveness",
+    description: "Integrate te ao Māori perspectives and culturally responsive practices."
+  },
+  {
+    title: "Community Connection",
+    description: "Build networks with industry professionals and fellow educators."
+  }
+];
 ---
 
 <Layout title="Professional Learning & Development | Ako Ngaiotanga">
@@ -38,40 +58,11 @@ import Layout from "@layouts/Layout.astro";
 				</div>
       </div>
 
-      <div class="max-w-5xl mx-auto">
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-8 text-center">Our Ako (Learning) Framework</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
-              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">1</span>
-              </div>
-              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Technical Mastery</h3>
-              <p class="text-gray-600">Build confidence with technology tools, programming languages, and emerging tech.</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
-              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">2</span>
-              </div>
-              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Teaching Approaches</h3>
-              <p class="text-gray-600">Learn student-centred, project-based teaching methods that engage and inspire.</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
-              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">3</span>
-              </div>
-              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Cultural Responsiveness</h3>
-              <p class="text-gray-600">Integrate te ao Māori perspectives and culturally responsive practices.</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 text-center">
-              <div class="w-16 h-16 bg-tuhura-green rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-white font-bold text-xl">4</span>
-              </div>
-              <h3 class="text-xl font-semibold text-tuhura-green mb-3">Community Connection</h3>
-              <p class="text-gray-600">Build networks with industry professionals and fellow educators.</p>
-            </div>
-          </div>
-        </div>
+      <StepsSection 
+        steps={learningFramework}
+        title="Our Ako (Learning) Framework"
+        columns="4"
+      />
 
         <div class="mb-12 bg-tuhura-gray rounded-xl p-8">
           <h2 class="text-3xl font-bold mb-6">PLD Programmes & Opportunities</h2>

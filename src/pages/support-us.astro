@@ -3,6 +3,11 @@ import Newsletter from "@components/Newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import Partners from "@components/Partners.astro";
+import StatsSection from "@components/ui/StatsSection.astro";
+import Card from "@components/ui/Card.astro";
+import ProgramCards from "@components/ui/ProgramCards.astro";
+import Checklist from "@components/ui/Checklist.astro";
+import CallToAction from "@components/ui/CallToAction.astro";
 
 const supportTypes = [
 	{
@@ -103,18 +108,15 @@ const donationImpact = [
         </p>
       </div>
 
-      <!-- Impact Statistics -->
-      <div class="mt-20 bg-tuhura-gray rounded-2xl p-8 md:p-12">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Our Impact Together</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {impactStats.map((stat) => (
-            <div class="text-center">
-              <div class="text-4xl md:text-5xl font-bold text-tuhura-green mb-2">{stat.number}</div>
-              <div class="text-gray-600 text-lg">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <StatsSection 
+        title="Our Impact Together"
+        stats={impactStats.map(stat => ({
+          title: stat.label,
+          value: stat.number,
+          description: stat.label
+        }))}
+        bgColor="bg-tuhura-gray"
+      />
     </div>
   </section>
 
@@ -157,48 +159,16 @@ const donationImpact = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {
-          supportTypes.map((type, index) => (
-            <div
-              class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 h-full flex flex-col"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
-                <Icon name={type.icon} class="h-8 w-8 text-tuhura-green" />
-              </div>
-              <h3 class="text-2xl font-semibold mb-4 text-gray-900">{type.name}</h3>
-              <p class="text-gray-600 mb-6 leading-relaxed flex-grow">{type.description}</p>
-              <ul class="space-y-3 mb-8">
-                {type.features.map((feature) => (
-                  <li class="flex items-start text-gray-700">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="h-5 w-5 text-tuhura-green mr-3 mt-0.5 flex-shrink-0"
-                    />
-                    <span class="leading-relaxed">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              {type.cta.type === "button" ? (
-                <button
-                  class="btn btn-primary w-full text-center mt-auto"
-                  onclick={type.cta.onclick}
-                >
-                  {type.cta.text}
-                </button>
-              ) : (
-                <a
-                  href={type.cta.href}
-                  class="btn btn-primary w-full text-center inline-flex justify-center mt-auto"
-                >
-                  {type.cta.text}
-                </a>
-              )}
-            </div>
-          ))
-        }
-      </div>
+      <ProgramCards 
+        programs={supportTypes.map(type => ({
+          title: type.name,
+          description: type.description,
+          icon: type.icon,
+          features: type.features,
+          ...(type.cta.type === "link" && { href: type.cta.href })
+        }))}
+        columns="3"
+      />
     </div>
   </section>
 
@@ -215,29 +185,15 @@ const donationImpact = [
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <div class="bg-white rounded-xl p-8 shadow-sm">
           <h3 class="text-2xl font-bold text-tuhura-green mb-4">What Volunteers Do</h3>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
-              <div>
-                <p class="font-medium">Support Sessions</p>
-                <p class="text-gray-600 text-sm">Work alongside our trained kaiako to share your industry experience with rangatahi</p>
-              </div>
-            </li>
-            <li class="flex items-start">
-              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
-              <div>
-                <p class="font-medium">Resource Development</p>
-                <p class="text-gray-600 text-sm">Help create learning materials and train our staff in new technologies</p>
-              </div>
-            </li>
-            <li class="flex items-start">
-              <Icon name="heroicons:check-circle" class="h-6 w-6 text-tuhura-green mr-3 mt-0.5 flex-shrink-0" />
-              <div>
-                <p class="font-medium">Real-World Perspective</p>
-                <p class="text-gray-600 text-sm">Give rangatahi options and opportunities by sharing your career journey</p>
-              </div>
-            </li>
-          </ul>
+          <Checklist 
+            items={[
+              { text: "Support Sessions: Work alongside our trained kaiako to share your industry experience with rangatahi" },
+              { text: "Resource Development: Help create learning materials and train our staff in new technologies" },
+              { text: "Real-World Perspective: Give rangatahi options and opportunities by sharing your career journey" }
+            ]}
+            icon="heroicons:check-circle"
+            iconColor="text-tuhura-green"
+          />
         </div>
 
         <div class="bg-white rounded-xl p-8 shadow-sm">
@@ -288,7 +244,7 @@ const donationImpact = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-gray-50 rounded-xl p-6">
+        <Card class="bg-gray-50 p-6">
           <Icon name="heroicons:computer-desktop" class="h-12 w-12 text-tuhura-green mb-4" />
           <h3 class="text-xl font-bold mb-3">Laptops & Hardware</h3>
           <p class="text-gray-700 mb-4">
@@ -300,9 +256,9 @@ const donationImpact = [
             <li>• Tablets for younger rangatahi learning activities</li>
             <li>• Monitors, keyboards, and peripherals</li>
           </ul>
-        </div>
+        </Card>
 
-        <div class="bg-gray-50 rounded-xl p-6">
+        <Card class="bg-gray-50 p-6">
           <Icon name="heroicons:cpu-chip" class="h-12 w-12 text-tuhura-green mb-4" />
           <h3 class="text-xl font-bold mb-3">Electronics & Components</h3>
           <p class="text-gray-700 mb-4">
@@ -314,7 +270,7 @@ const donationImpact = [
             <li>• Robotics components and sensors</li>
             <li>• 3D printers and maker equipment</li>
           </ul>
-        </div>
+        </Card>
       </div>
 
       <div class="mt-8 text-center">
@@ -339,28 +295,17 @@ const donationImpact = [
       <Partners />
 
       <!-- Enterprise Partnership CTA -->
-      <div class="bg-tuhura-green rounded-xl p-8 text-white text-center">
-        <h3 class="text-2xl md:text-3xl font-bold mb-4">Become a Strategic Partner</h3>
-        <p class="text-xl mb-6 opacity-90">
-          Partnership isn't just financial - it's our two organisations collaborating to solve 
-          technology education challenges in the Wellington region and beyond.
-        </p>
-        <div class="bg-white/10 rounded-lg p-4 mb-6">
-          <p class="text-lg">
-            <strong>We're recognized</strong> in the Wellington Regional Economic Development Plan 
-            as the solution to technology education and growing the region's tech workforce.
-          </p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
-            Discuss Partnership
-          </a>
-          <!-- TODO: Add partnership prospectus download -->
-          <a href="#" class="btn bg-transparent border-2 border-white hover:bg-white/10">
-            Download Prospectus
-          </a>
-        </div>
-      </div>
+      <CallToAction 
+        title="Become a Strategic Partner"
+        description="Partnership isn't just financial - it's our two organisations collaborating to solve technology education challenges in the Wellington region and beyond."
+        badge="We're recognized in the Wellington Regional Economic Development Plan as the solution to technology education and growing the region's tech workforce."
+        buttons={[
+          { text: "Discuss Partnership", href: "/contact", variant: "primary" },
+          { text: "Download Prospectus", href: "#", variant: "outline" }
+        ]}
+        bgColor="bg-tuhura-green"
+        textColor="text-white"
+      />
     </div>
   </section>
 
@@ -377,33 +322,33 @@ const donationImpact = [
       </div>
 
       <div class="max-w-4xl mx-auto space-y-6">
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <Card class="bg-gray-50 p-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-900">How are donations used?</h3>
           <p class="text-gray-700 leading-relaxed text-lg">
             Every kōha goes directly towards keeping our sessions free for rangatahi. We provide quarterly impact reports to all donors.
           </p>
-        </div>
+        </Card>
         
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <Card class="bg-gray-50 p-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-900">What's required to volunteer?</h3>
           <p class="text-gray-700 leading-relaxed text-lg">
             Police vetting check required (we help with this process). You don't need teaching experience - our trained kaiako run the sessions, and you support by sharing your industry knowledge.
           </p>
-        </div>
+        </Card>
         
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <Card class="bg-gray-50 p-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-900">What equipment do you need most?</h3>
           <p class="text-gray-700 leading-relaxed text-lg">
             Laptops are our biggest need - many whānau don't have them. We also value electronics components like Arduino kits and sensors that give us amazing things to explore with rangatahi.
           </p>
-        </div>
+        </Card>
         
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-sm">
+        <Card class="bg-gray-50 p-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-900">How does partnership work?</h3>
           <p class="text-gray-700 leading-relaxed text-lg">
             Partnership isn't just financial - it's about collaboration to solve technology education challenges. We're recognized in the Wellington Regional Economic Development Plan as the solution to growing the region's tech workforce.
           </p>
-        </div>
+        </Card>
       </div>
 
       <div class="text-center mt-16">
