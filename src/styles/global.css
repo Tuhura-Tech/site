@@ -301,7 +301,13 @@ nav a:focus::after {
 }
 
 /* Donate popover placement helpers */
-dialog#donate-popover { z-index: 1300; }
+dialog#donate-popover {
+	z-index: 1300;
+}
 @media (max-width: 480px) {
-  dialog#donate-popover { right: .75rem; left: .75rem; width: auto; }
+	dialog#donate-popover {
+		right: 0.75rem;
+		left: 0.75rem;
+		width: auto;
+	}
 }

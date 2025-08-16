@@ -1,28 +1,28 @@
 ---
 interface Props {
-  class?: string;
-  style?: string;
-  variant?: "default" | "hover" | "shadow";
-  padding?: "sm" | "md" | "lg";
+	class?: string;
+	style?: string;
+	variant?: "default" | "hover" | "shadow";
+	padding?: "sm" | "md" | "lg";
 }
 
-const { 
-  class: className = "",
-  style = "",
-  variant = "default",
-  padding = "md"
+const {
+	class: className = "",
+	style = "",
+	variant = "default",
+	padding = "md",
 } = Astro.props;
 
 const baseClasses = "bg-white rounded-xl border border-gray-100";
 const variantClasses = {
-  default: "shadow-sm",
-  hover: "shadow-lg hover:shadow-xl transition-shadow",
-  shadow: "shadow-xl"
+	default: "shadow-sm",
+	hover: "shadow-lg hover:shadow-xl transition-shadow",
+	shadow: "shadow-xl",
 };
 const paddingClasses = {
-  sm: "p-4",
-  md: "p-6",
-  lg: "p-8"
+	sm: "p-4",
+	md: "p-6",
+	lg: "p-8",
 };
 ---
 

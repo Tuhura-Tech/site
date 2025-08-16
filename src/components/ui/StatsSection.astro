@@ -1,27 +1,28 @@
 ---
 interface Stat {
-  title: string;
-  value: string;
-  description: string;
+	title: string;
+	value: string;
+	description: string;
 }
 
 interface Props {
-  stats: Stat[];
-  title?: string;
-  description?: string;
-  variant?: "default" | "card" | "inline";
-  bgColor?: string;
+	stats: Stat[];
+	title?: string;
+	description?: string;
+	variant?: "default" | "card" | "inline";
+	bgColor?: string;
 }
 
 const {
-  stats,
-  title,
-  description,
-  variant = "default",
-  bgColor = ""
+	stats,
+	title,
+	description,
+	variant = "default",
+	bgColor = "",
 } = Astro.props;
 
-const wrapperClass = bgColor || (variant === "card" ? "bg-tuhura-gray rounded-xl p-8" : "");
+const wrapperClass =
+	bgColor || (variant === "card" ? "bg-tuhura-gray rounded-xl p-8" : "");
 ---
 
 <section class="py-20">

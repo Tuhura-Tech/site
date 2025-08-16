@@ -2,29 +2,30 @@
 import { Icon } from "astro-icon/components";
 
 interface ChecklistItem {
-  text: string;
-  icon?: string;
+	text: string;
+	icon?: string;
 }
 
 interface Props {
-  items: ChecklistItem[];
-  title?: string;
-  description?: string;
-  icon?: string;
-  columns?: "1" | "2";
-  iconColor?: string;
+	items: ChecklistItem[];
+	title?: string;
+	description?: string;
+	icon?: string;
+	columns?: "1" | "2";
+	iconColor?: string;
 }
 
 const {
-  items,
-  title,
-  description,
-  icon = "heroicons:check-circle",
-  columns = "1",
-  iconColor = "text-tuhura-green"
+	items,
+	title,
+	description,
+	icon = "heroicons:check-circle",
+	columns = "1",
+	iconColor = "text-tuhura-green",
 } = Astro.props;
 
-const gridClass = columns === "2" ? "grid grid-cols-1 md:grid-cols-2 gap-x-8" : "";
+const gridClass =
+	columns === "2" ? "grid grid-cols-1 md:grid-cols-2 gap-x-8" : "";
 ---
 
 {title && (
