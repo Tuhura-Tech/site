@@ -396,6 +396,15 @@ export const sessions: { location: string; sessions: Session[] }[] = [
 				type: "After School",
 				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
 			},
+			{
+				title: "Wainuiamata Neighbourhood Hub",
+				ages: "5 - 8",
+				day: "Thursday",
+				time: "3:30pm - 4:30pm",
+				description: "",
+				type: "After School",
+				signupLink: "https://forms.gle/syJykrBBN5xKjGM8A",
+			},
 		],
 	},
 	{
