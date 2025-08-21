@@ -1,6 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import pldImage from "@assets/pld.jpg";
+import robocupImage from "@assets/robocup-2025.jpg";
+// Import images
+import sessionImage from "@assets/session.jpg";
+import session1Image from "@assets/session-1.jpg";
+import teamPhotoImage from "@assets/team-photo.jpg";
 import Card from "@components/ui/Card.astro";
-import IconFeatures from "@components/ui/IconFeatures.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
@@ -73,26 +80,104 @@ const workshopTopics = [
 ---
 
 <Layout title="Workshops | Wānanga" description="Intensive technology learning workshops for rangatahi - during-school curriculum support, and community events">
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+  <!-- Visual Hero Section -->
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5">
     <div class="container-custom">
-      <div class="text-center max-w-4xl mx-auto mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          Workshops <span class="text-tuhura-green">(Wānanga)</span>
-        </h1>
-        <p class="mt-6 text-xl text-gray-600">
-          Focused learning experiences that dive deep into specific technology topics. 
-          These intensive sessions provide rangatahi and kaiako with practical skills they can use immediately.
-        </p>
-        <div class="mt-8 bg-tuhura-gray rounded-xl p-6">
-          <p class="text-lg text-gray-700">
-            <strong>Workshops complement our regular sessions</strong> by offering intensive skill-building opportunities 
-            during school holidays, within school timetables, or as special community events.
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            Workshops <span class="text-tuhura-green">(Wānanga)</span>
+          </h1>
+          <p class="mt-6 text-xl text-gray-600">
+            Intensive learning experiences diving deep into specific technology topics. Perfect for skill-building during school holidays or special events.
           </p>
+          <div class="mt-8 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <p class="text-lg text-gray-700">
+              <strong>Complement regular sessions</strong> with focused, hands-on workshops lasting hours or days.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#workshop-types" class="btn btn-primary">
+              Explore Workshop Types
+            </a>
+            <a href="/contact" class="btn btn-secondary">
+              Book a Workshop
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src={pldImage}
+                  alt="Professional development workshop for educators"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  width={280}
+                  height={192}
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <p class="text-white text-sm font-medium">Teacher PLD</p>
+                  </div>
+                </div>
+              </div>
+              <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src={sessionImage}
+                  alt="Hands-on technology workshop"
+                  class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                  width={280}
+                  height={128}
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                  <div class="absolute bottom-2 left-3 right-3">
+                    <p class="text-white text-xs font-medium">Hands-on Learning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-4 pt-8">
+              <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src={robocupImage}
+                  alt="Robotics workshop preparation"
+                  class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                  width={280}
+                  height={128}
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                  <div class="absolute bottom-2 left-3 right-3">
+                    <p class="text-white text-xs font-medium">Robotics</p>
+                  </div>
+                </div>
+              </div>
+              <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src={session1Image}
+                  alt="Collaborative workshop environment"
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  width={280}
+                  height={192}
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <p class="text-white text-sm font-medium">Group Projects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="py-16">
+    <div class="container-custom">
       <!-- Workshop Formats -->
-      <div class="max-w-6xl mx-auto mb-20">
+      <div class="max-w-6xl mx-auto mb-20" id="workshop-types">
         <h2 class="text-3xl font-bold text-center mb-12">Workshop Types</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {workshopFormats.map((format, index) => (
@@ -168,6 +253,105 @@ const workshopTopics = [
           ))}
         </div>
       </div>
+
+      <!-- Visual Impact Section -->
+      <section class="py-20 bg-tuhura-gray rounded-3xl mb-20">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Workshop Experience</h2>
+            <p class="mt-4 text-xl text-gray-600">
+              See the intensive learning and skill development happening in our wānanga
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                <div class="relative overflow-hidden rounded-xl mb-6">
+                  <Image
+                    src={teamPhotoImage}
+                    alt="Workshop participants and mentors"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={320}
+                    height={192}
+                  />
+                </div>
+                <h3 class="text-xl font-bold mb-3">Expert-Led Sessions</h3>
+                <p class="text-gray-600">
+                  Professional educators and industry volunteers guide hands-on learning experiences tailored to participant interests.
+                </p>
+                <div class="mt-4 flex items-center text-tuhura-green">
+                  <Icon name="heroicons:users" class="w-5 h-5 mr-2" />
+                  <span class="font-medium">Small group focus</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                <div class="relative overflow-hidden rounded-xl mb-6">
+                  <Image
+                    src={session1Image}
+                    alt="Hands-on project development"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={320}
+                    height={192}
+                  />
+                </div>
+                <h3 class="text-xl font-bold mb-3">Project-Based Learning</h3>
+                <p class="text-gray-600">
+                  Every workshop produces tangible outcomes - apps, games, robots, or digital creations that participants take home.
+                </p>
+                <div class="mt-4 flex items-center text-tuhura-green">
+                  <Icon name="heroicons:cube" class="w-5 h-5 mr-2" />
+                  <span class="font-medium">Take-home projects</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                <div class="relative overflow-hidden rounded-xl mb-6">
+                  <Image
+                    src={robocupImage}
+                    alt="Competition preparation and skill building"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={320}
+                    height={192}
+                  />
+                </div>
+                <h3 class="text-xl font-bold mb-3">Skill Development</h3>
+                <p class="text-gray-600">
+                  Intensive skill-building prepares participants for competitions, curriculum assessments, and personal projects.
+                </p>
+                <div class="mt-4 flex items-center text-tuhura-green">
+                  <Icon name="heroicons:trophy" class="w-5 h-5 mr-2" />
+                  <span class="font-medium">Competition ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-12">
+            <div class="inline-flex items-center space-x-8 bg-white rounded-full px-8 py-4 shadow-sm">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">2-8</div>
+                <div class="text-sm text-gray-600">Hours per workshop</div>
+              </div>
+              <div class="w-px h-8 bg-gray-200"></div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">8-15</div>
+                <div class="text-sm text-gray-600">Participants</div>
+              </div>
+              <div class="w-px h-8 bg-gray-200"></div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">100%</div>
+                <div class="text-sm text-gray-600">Free</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Who Can Participate - Might be useful?
       <div class="bg-tuhura-gray rounded-xl p-8 max-w-4xl mx-auto mb-16">

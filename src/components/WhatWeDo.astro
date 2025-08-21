@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import session1Image from "@assets/session-1.jpg";
 import { Icon } from "astro-icon/components";
 
 const whatWeDo = [
@@ -61,8 +63,7 @@ const approachPoints = [
     <div class="text-center max-w-4xl mx-auto mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">What We Mean by "Technology Education"</h2>
       <p class="text-xl text-gray-600 leading-relaxed">
-        We bring technology learning directly to communities - schools, libraries and community centres. Our trained kaiako work with industry volunteers to create sessions tailored to each group 
-        of rangatahi, focusing on what sparks their curiosity and passion.
+        Technology learning in community spaces. Our trained kaiako and industry volunteers create sessions tailored to each group's interests and curiosity.
       </p>
     </div>
 
@@ -79,6 +80,42 @@ const approachPoints = [
             <p class="text-gray-600 leading-relaxed">{item.description}</p>
           </div>
         ))}
+      </div>
+    </div>
+
+    <!-- Visual Divider Section -->
+    <div class="mb-24 bg-gradient-to-r from-tuhura-green/10 to-blue-500/10 rounded-3xl p-8 md:p-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-tuhura-green">Learning Through Doing</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Every session is hands-on and project-based. Rangatahi don't just learn about technology - 
+            they create with it, building games, apps, robots, and digital art that they're passionate about.
+          </p>
+          <p class="text-gray-600">
+            Whether it's their first time coding or they're already building complex projects, 
+            our mentors meet each rangatahi where they are and help them explore what excites them most.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <Image
+              src={session1Image}
+              alt="Rangatahi collaborating on hands-on technology projects"
+              class="w-full h-80 object-cover"
+              width={500}
+              height={320}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+              <div class="absolute bottom-6 left-6 right-6">
+                <h4 class="text-white text-xl font-bold mb-2">Collaborative Creation</h4>
+                <p class="text-white/90">
+                  Rangatahi working together on projects that combine creativity, problem-solving, and technology skills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

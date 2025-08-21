@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+
+interface SlideImage {
+	src: ImageMetadata;
+	alt: string;
+	title: string;
+	description?: string;
+}
+
+interface Props {
+	images: SlideImage[];
+	height?: "sm" | "md" | "lg";
+	autoplay?: boolean;
+	autoplayDelay?: number;
+	showControls?: boolean;
+	className?: string;
+}
+
+const {
+	images,
+	height = "md",
+	autoplay = true,
+	autoplayDelay = 5000,
+	showControls = true,
+	className = "",
+} = Astro.props;
+
+const heightClasses = {
+	sm: "h-64",
+	md: "h-96",
+	lg: "h-[32rem]",
+};
+
+const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class={`slideshow-container relative w-full ${heightClasses[height]} rounded-xl overflow-hidden shadow-2xl ${className}`} id={slideshowId}>
+  {images.map((image, index) => (
+    <div class={`slide absolute inset-0 transition-opacity duration-500 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        class="w-full h-full object-cover"
+        loading={index === 0 ? "eager" : "lazy"}
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="text-white text-2xl font-bold mb-2">{image.title}</h3>
+          {image.description && (
+            <p class="text-white/90 text-lg">{image.description}</p>
+          )}
+        </div>
+      </div>
+    </div>
+  ))}
+  
+  {showControls && images.length > 1 && (
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {images.map((_, index) => (
+        <button 
+          class={`w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-white' : 'bg-white/50'} hover:bg-white`}
+          onclick={`slideshow_${slideshowId.replace('-', '_')}.goToSlide(${index})`}
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))}
+    </div>
+  )}
+</div>
+
+<script define:vars={{ slideshowId, images, autoplay, autoplayDelay }}>
+  class Slideshow {
+    constructor(containerId, slides, autoplay, delay) {
+      this.container = document.getElementById(containerId);
+      this.slides = this.container?.querySelectorAll('.slide') || [];
+      this.dots = this.container?.querySelectorAll('button') || [];
+      this.currentSlide = 0;
+      this.autoplay = autoplay;
+      this.delay = delay;
+      this.intervalId = null;
+      
+      if (this.autoplay && this.slides.length > 1) {
+        this.startAutoplay();
+      }
+      
+      // Pause autoplay on hover
+      this.container?.addEventListener('mouseenter', () => this.stopAutoplay());
+      this.container?.addEventListener('mouseleave', () => {
+        if (this.autoplay) this.startAutoplay();
+      });
+    }
+    
+    goToSlide(index) {
+      // Hide current slide
+      this.slides[this.currentSlide]?.classList.remove('opacity-100');
+      this.slides[this.currentSlide]?.classList.add('opacity-0');
+      this.dots[this.currentSlide]?.classList.remove('bg-white');
+      this.dots[this.currentSlide]?.classList.add('bg-white/50');
+      
+      // Show new slide
+      this.currentSlide = index;
+      this.slides[this.currentSlide]?.classList.remove('opacity-0');
+      this.slides[this.currentSlide]?.classList.add('opacity-100');
+      this.dots[this.currentSlide]?.classList.remove('bg-white/50');
+      this.dots[this.currentSlide]?.classList.add('bg-white');
+    }
+    
+    nextSlide() {
+      const next = (this.currentSlide + 1) % this.slides.length;
+      this.goToSlide(next);
+    }
+    
+    startAutoplay() {
+      this.stopAutoplay();
+      if (this.slides.length > 1) {
+        this.intervalId = setInterval(() => this.nextSlide(), this.delay);
+      }
+    }
+    
+    stopAutoplay() {
+      if (this.intervalId) {
+        clearInterval(this.intervalId);
+        this.intervalId = null;
+      }
+    }
+  }
+  
+  // Create global reference
+  const slideshowVar = `slideshow_${slideshowId.replace('-', '_')}`;
+  window[slideshowVar] = new Slideshow(slideshowId, images, autoplay, autoplayDelay);
+</script>

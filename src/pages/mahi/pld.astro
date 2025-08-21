@@ -1,8 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import pldImage from "@assets/pld.jpg";
+import sessionImage from "@assets/session.jpg";
+import session1Image from "@assets/session-1.jpg";
+import teamPhotoImage from "@assets/team-photo.jpg";
 import StepsSection from "@components/ui/StepsSection.astro";
 import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
 const learningFramework = [
 	{
@@ -38,10 +42,10 @@ const learningFramework = [
             <span class="block text-3xl md:text-4xl text-tuhura-green mt-2">(Ako Ngaiotanga)</span>
           </h1>
           <p class="text-xl text-gray-700 mb-6">
-            Our ako ngaiotanga (professional learning) programme empowers kaiako (educators), volunteers, and community members with the skills and confidence to inspire rangatahi in technology.
+            Empowering kaiako, volunteers, and community members with skills and confidence to inspire rangatahi in technology.
           </p>
           <p class="text-lg text-gray-600">
-            We believe that effective tech education requires both technical knowledge and pedagogical expertise. Our PLD combines technical training with research-based teaching methodologies.
+            Effective tech education needs both technical knowledge and teaching expertise. Our PLD combines hands-on training with proven methodologies.
           </p>
         </div>
         <div>
@@ -114,6 +118,128 @@ const learningFramework = [
             </div>
           </div>
         </div>
+
+        <!-- Visual Impact Section -->
+        <div class="mb-12 bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 rounded-3xl p-8 md:p-12">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">PLD in Action</h2>
+            <p class="text-xl text-gray-600">
+              See how our professional learning empowers educators and transforms classrooms
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-6 text-tuhura-green">Educator Stories</h3>
+              <div class="space-y-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="heroicons:academic-cap" class="w-6 h-6 text-tuhura-green" />
+                    </div>
+                    <div>
+                      <blockquote class="text-gray-700 mb-3">
+                        "The PLD transformed how I teach digital technologies. My students are now creating games and apps I never thought possible!"
+                      </blockquote>
+                      <cite class="text-sm text-gray-600 font-medium">Sarah M., Year 7-8 Teacher</cite>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="heroicons:users" class="w-6 h-6 text-blue-500" />
+                    </div>
+                    <div>
+                      <blockquote class="text-gray-700 mb-3">
+                        "As a volunteer mentor, the training gave me confidence to support rangatahi effectively while keeping sessions fun and safe."
+                      </blockquote>
+                      <cite class="text-sm text-gray-600 font-medium">James K., Industry Volunteer</cite>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <Image
+                      src={sessionImage}
+                      alt="Educator leading hands-on technology session"
+                      class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={280}
+                      height={128}
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                      <div class="absolute bottom-2 left-3 right-3">
+                        <p class="text-white text-xs font-medium">Hands-on Learning</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <Image
+                      src={teamPhotoImage}
+                      alt="Professional learning community gathering"
+                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={280}
+                      height={192}
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                      <div class="absolute bottom-3 left-3 right-3">
+                        <p class="text-white text-sm font-medium">Community Support</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                  <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                    <Image
+                      src={session1Image}
+                      alt="Collaborative professional development session"
+                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={280}
+                      height={192}
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                      <div class="absolute bottom-3 left-3 right-3">
+                        <p class="text-white text-sm font-medium">Skill Building</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-tuhura-green mb-1">95%</div>
+                      <div class="text-sm text-gray-600">Educator satisfaction</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Impact Stats -->
+          <div class="text-center">
+            <div class="inline-flex items-center space-x-8 bg-white rounded-full px-8 py-4 shadow-sm">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">150+</div>
+                <div class="text-sm text-gray-600">Educators trained</div>
+              </div>
+              <div class="w-px h-8 bg-gray-200"></div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">25+</div>
+                <div class="text-sm text-gray-600">Schools supported</div>
+              </div>
+              <div class="w-px h-8 bg-gray-200"></div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-tuhura-green">100%</div>
+                <div class="text-sm text-gray-600">Free</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- 
         <div class="mb-12">
           <h2 class="text-3xl font-bold mb-6">Join Our Kaiako Community</h2>
@@ -140,8 +266,19 @@ const learningFramework = [
           </div>
         </div>-->
 
-              <div class="bg-tuhura-green text-white rounded-lg p-6 text-center">
-        <h3 class="text-xl font-bold mb-2">Ready to Get Started?</h3>
+              <div class="bg-tuhura-green text-white rounded-lg p-8 text-center">
+        <h3 class="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+        <p class="text-xl mb-6 opacity-90">
+          Join our community of educators who are transforming technology education in Aotearoa New Zealand.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-white text-tuhura-green px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Join PLD Programme
+          </a>
+          <a href="/mahi/sessions" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+            Explore Sessions
+          </a>
+        </div>
       </div>
     </div>
   </section>
