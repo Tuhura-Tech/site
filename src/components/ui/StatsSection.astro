@@ -17,15 +17,12 @@ const {
 	stats,
 	title,
 	description,
-	variant = "default",
-	bgColor = "",
 } = Astro.props;
 
-const wrapperClass =
-	bgColor || (variant === "card" ? "bg-tuhura-gray rounded-xl p-8" : "");
+
 ---
 
-<section class="py-20">
+<section class="mt-10 bg-tuhura-gray rounded-2xl p-8 md:p-12">
   <div class="container-custom">
     {title && (
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -33,17 +30,30 @@ const wrapperClass =
         {description && <p class="text-xl text-gray-600">{description}</p>}
       </div>
     )}
-
-    <div class={wrapperClass}>
+    
+    <div>
       <div class={`grid grid-cols-1 md:grid-cols-${stats.length} gap-6 text-center`}>
         {stats.map((stat) => (
           <div>
-            <div class="text-3xl font-bold text-tuhura-green">{stat.value}</div>
-            <p class="text-gray-600 mt-1">{stat.description}</p>
-            {variant === "default" && <p class="text-sm text-gray-500 mt-1">{stat.title}</p>}
+            <div class="text-4xl md:text-5xl font-bold text-tuhura-green mb-2">{stat.value}</div>
+            <p class="text-gray-600 text-lg">{stat.description}</p>
+           
           </div>
         ))}
       </div>
     </div>
   </div>
 </section>
+
+
+<!-- <div class="mt-20 bg-tuhura-gray rounded-2xl p-8 md:p-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Our Impact Together</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {impactStats.map((stat) => (
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-tuhura-green mb-2">{stat.number}</div>
+              <div class="text-gray-600 text-lg">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>-->
