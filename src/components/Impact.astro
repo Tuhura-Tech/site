@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import sessionImage from "@assets/session.jpg";
 import { Icon } from "astro-icon/components";
 
 const stats = [
@@ -63,6 +65,22 @@ const pillars = [
               <div class="text-xs text-gray-600">{s.label}</div>
             </div>
           ))}
+        </div>
+        
+        <!-- Visual element -->
+        <div class="mt-6 relative overflow-hidden rounded-xl">
+          <Image
+            src={sessionImage}
+            alt="Rangatahi learning together in our community sessions"
+            class="w-full h-32 object-cover"
+            width={300}
+            height={128}
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+            <div class="absolute bottom-3 left-3 right-3">
+              <p class="text-white text-sm font-medium">Community Learning</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="lg:col-span-2 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">

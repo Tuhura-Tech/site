@@ -1,18 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import teamImage from "@assets/team-photo.jpg";
+import logoSrc from "@assets/logo.svg";
 import lillianhImage from "@assets/team/LHTheadshot.jpg";
 import neenuImage from "@assets/team/neenu.jpg";
-import logoSrc from "@assets/logo.svg";
-import Layout from "@layouts/Layout.astro";
-import PersonCards from "@components/ui/PersonCards.astro";
+import teamImage from "@assets/team-photo.jpg";
+import Partners from "@components/Partners.astro";
 import IconFeatures from "@components/ui/IconFeatures.astro";
+import PersonCards from "@components/ui/PersonCards.astro";
+import Layout from "@layouts/Layout.astro";
 
 const teamMembers = [
 	{
 		name: "Leon Bowie",
 		role: "Co-Founder & CEO",
-		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
+		bio: "Co-founder with 7+ years in tech education through Code Clubs and robotics coaching. DevOps Engineer by trade who leads Tūhura Tech's operations and partnerships.",
 		avatar: logoSrc,
 		social: {
 			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
@@ -23,21 +24,21 @@ const teamMembers = [
 	{
 		name: "Lillian Hide-Tobin",
 		role: "Lead Mentor",
-		bio: "Lillian graduated with degrees in Computer Science and Psychology. She has a great passion for the power of tech to act as a powerful creative medium, specifically in Game Development, algorithmic audio and video, storytelling, and anything else creative! She strives to encourage young women to engage with technology.",
+		bio: "Computer Science and Psychology graduate passionate about tech as a creative medium, especially game development and algorithmic arts. Dedicated to encouraging young women in technology.",
 		avatar: lillianhImage,
 		social: {},
 	},
 	{
 		name: "Zelle Marcovicci",
 		role: "Lead Mentor",
-		bio: "Zelle graduated with a Bachelors of Creative Media Production, specializing in video games and other kinds of wobbly interactive technology. In addition to her work with Tūhura Tech, she teaches immersive storytelling, programming and web development to first- and second-year students at Massey University.",
+		bio: "Creative Media Production graduate specializing in video games and interactive technology. Teaches immersive storytelling and programming at Massey University alongside her Tūhura Tech work.",
 		avatar: logoSrc,
 		social: {},
 	},
 	{
 		name: "Neenu",
 		role: "Lead Mentor",
-		bio: "Neenu holds a Bachelors degree in Electronics and Communication Engineering and a Masters in Signal Processing. She is currently pursuing her Masters in Professional Business Analysis at Victoria University of Wellington, where she also tutors. At Tūhura Tech, Neenu loves inspiring kids to explore technology, guiding them through creative and hands-on learning experiences. She believes in teaching, sharing, and growing alongside the kids she mentors.",
+		bio: "Electronics Engineering graduate with Masters in Signal Processing, currently pursuing Professional Business Analysis at VUW where she also tutors. Passionate about inspiring kids through hands-on tech learning.",
 		avatar: neenuImage,
 		social: {},
 	},
@@ -61,7 +62,7 @@ const boardMembers = [
 	{
 		name: "Lillian Pak",
 		role: "Co-Founder & Chair of the Board",
-		bio: "Kia ora koutou katoa! Lillian Pak has had a varied career in education, libraries, and public service, in a range of roles covering programme and project management, senior management, teaching, curriculum and materials development, teacher training, quality assurance and stakeholder engagement, in both Aotearoa New Zealand and overseas. She also brings extensive governance, and grassroots community development experience. What she loves most about Tūhura Tech is how it removes barriers and provides free and equitable access to education, learning and knowledge.",
+		bio: "Experienced leader in education, libraries, and public service with extensive governance and community development experience. Passionate about Tūhura Tech's mission of removing barriers to equitable education.",
 		avatar: logoSrc,
 		social: {},
 	},
@@ -75,7 +76,7 @@ const boardMembers = [
 	{
 		name: "Rose Langride",
 		role: "Secretary",
-		bio: "Rose has been working in the education industry for over a decade. Rose currently works with akonga in senior high school at Wa Ora Montessori School. Tuhura Tech's mission of equitable access to learning is a large reason why Rose has joined the board.",
+		bio: "Education industry veteran with over a decade of experience. Currently works with senior high school students at Wa Ora Montessori School. Joined the board because of Tūhura Tech's commitment to equitable access to learning.",
 		avatar: logoSrc,
 		social: {},
 	},
@@ -107,7 +108,7 @@ const boardMembers = [
 		avatar: logoSrc,
 		social: {},
 	},
-  	{
+	{
 		name: "Leon Bowie",
 		role: "Co-Founder, CEO & Trustee",
 		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
@@ -142,7 +143,7 @@ const values = [
 	{
 		title: "Community-Centered Approach",
 		description:
-			"Rather than expecting rangatahi to come to us, we go to them - operating in schools, libraries, community centres, and marae.",
+			"We go to rangatahi in their communities - operating in schools, libraries, community centres, and marae.",
 		icon: "heroicons:code-bracket",
 	},
 ];
@@ -152,13 +153,13 @@ const timeline = [
 		year: "2021",
 		title: "The Idea",
 		description:
-			"With everything stopped after COVID-19 a group of us came together to build a sustainable prgram run with the community instead of part of a corporate agenda. Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie came together as the original board to start up the charity.",
+			"Post-COVID, a group of us came together to build a sustainable, community-run programme. The original board of Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie established the charity.",
 	},
 	{
 		year: "2021-2023",
 		title: "Proving the Concept",
 		description:
-			"Working with select Kura and Community Centres we begin to trial our session formats, resources and approaches to supporting rangatahi.",
+			"Trialled session formats and approaches with select kura and community centres to refine our support model for rangatahi.",
 	},
 	{
 		year: "2023",
@@ -371,24 +372,7 @@ const timeline = [
         </p>
       </div>
 
-      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-        <div class="group">
-          <img src="/partner-wnz.svg" alt="WellingtonNZ" class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-2">WellingtonNZ</p>
-        </div>
-        <div class="group">
-          <img src="/partner-bsg.svg" alt="Bastion Security Group" class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-2">Bastion Security Group</p>
-        </div>
-        <div class="group">
-          <img src="/partner-hcc.svg" alt="Hutt City Council" class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-2">Hutt City Council</p>
-        </div>
-        <div class="group">
-          <img src="/partner-spark.svg" alt="Spark Foundation" class="h-12 w-auto mx-auto transform group-hover:scale-110 transition-transform" />
-          <p class="text-center text-sm text-gray-600 mt-2">Spark Foundation</p>
-        </div>
-      </div>
+      <Partners />
 
       <div class="mt-12 text-center">
         <p class="text-gray-600 mb-4">

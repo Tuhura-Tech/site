@@ -1,28 +1,28 @@
 ---
 interface Props {
-  background?: "white" | "gray" | "green" | "gray-50" | "tuhura-gray";
-  padding?: "sm" | "md" | "lg";
-  class?: string;
+	background?: "white" | "gray" | "green" | "gray-50" | "tuhura-gray";
+	padding?: "sm" | "md" | "lg";
+	class?: string;
 }
 
-const { 
-  background = "white",
-  padding = "md",
-  class: className = ""
+const {
+	background = "white",
+	padding = "md",
+	class: className = "",
 } = Astro.props;
 
 const backgroundClasses = {
-  white: "bg-white",
-  gray: "bg-gray-50", 
-  "gray-50": "bg-gray-50",
-  green: "bg-tuhura-green",
-  "tuhura-gray": "bg-tuhura-gray"
+	white: "bg-white",
+	gray: "bg-gray-50",
+	"gray-50": "bg-gray-50",
+	green: "bg-tuhura-green",
+	"tuhura-gray": "bg-tuhura-gray",
 };
 
 const paddingClasses = {
-  sm: "py-12",
-  md: "py-20", 
-  lg: "py-28"
+	sm: "py-12",
+	md: "py-20",
+	lg: "py-28",
 };
 ---
 

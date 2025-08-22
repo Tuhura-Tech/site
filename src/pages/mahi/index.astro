@@ -1,8 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import heroImage from "@assets/hero.jpg";
+import pldImage from "@assets/pld.jpg";
+import eventImage from "@assets/robocup-2025.jpg";
+import sessionImage from "@assets/session.jpg";
+import session1Image from "@assets/session-1.jpg";
+import teamImage from "@assets/team-photo.jpg";
+import IconFeatures from "@components/ui/IconFeatures.astro";
+import ProgramCards from "@components/ui/ProgramCards.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-import ProgramCards from "@components/ui/ProgramCards.astro";
-import IconFeatures from "@components/ui/IconFeatures.astro";
 
 const mahiOfferings = [
 	{
@@ -52,11 +59,7 @@ const mahiOfferings = [
 			"Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.",
 		icon: "heroicons:users",
 		href: "/mahi/pld",
-		features: [
-			"Teacher training",
-			"Curriculum support",
-			"Resource sharing",
-		],
+		features: ["Teacher training", "Curriculum support", "Resource sharing"],
 	},
 ];
 
@@ -82,19 +85,96 @@ const supportResources = [
 ---
 
 <Layout title="Mahi | Our Technology Education Programmes">
+  <!-- Hero Section with Image Slideshow -->
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
-      <div class="text-center max-w-4xl mx-auto mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          <span class="gradient-text">Our Mahi</span>
-        </h1>
-        <p class="mt-6 text-xl text-gray-600">
-          Mahi means "work" or "activity" in te reo Māori. Our mahi encompasses everything we do to empower rangatahi through technology education - from regular sessions to special events, intensive workshops to educator training.
-        </p>
-        <div class="mt-8 bg-tuhura-gray rounded-xl p-6">
-          <p class="text-lg text-gray-700">
-            <strong>While after-school community sessions are our primary offering</strong>, we provide comprehensive technology education support including in-school programmes, teacher training, competitions, and free resources for rangatahi and Kaiako.
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            <span class="gradient-text">Our Mahi</span>
+          </h1>
+          <p class="mt-6 text-xl text-gray-600">
+            Everything we do to empower rangatahi through technology - from regular sessions to competitions, workshops, and educator training.
           </p>
+          <div class="mt-6 bg-tuhura-gray rounded-lg p-4">
+            <p class="text-lg text-gray-700">
+              <strong>After-school community sessions are our core offering</strong>, supported by in-school programmes, teacher training, and free resources.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Image Slideshow -->
+        <div class="relative">
+          <div class="slideshow-container relative w-full h-96 rounded-xl overflow-hidden shadow-2xl">
+            <div class="slide active">
+              <Image
+                src={sessionImage}
+                alt="Rangatahi engaged in technology sessions"
+                class="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 class="text-white text-xl font-bold">Community Tech Sessions</h3>
+                <p class="text-white/90">Weekly hands-on learning in your neighborhood</p>
+              </div>
+            </div>
+            <div class="slide">
+              <Image
+                src={session1Image}
+                alt="Interactive technology workshops"
+                class="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 class="text-white text-xl font-bold">Interactive Learning</h3>
+                <p class="text-white/90">Student-directed exploration and projects</p>
+              </div>
+            </div>
+            <div class="slide">
+              <Image
+                src={eventImage}
+                alt="Technology competitions and events"
+                class="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 class="text-white text-xl font-bold">Competitions & Events</h3>
+                <p class="text-white/90">Challenges that inspire and connect</p>
+              </div>
+            </div>
+            <div class="slide">
+              <Image
+                src={pldImage}
+                alt="Professional development for educators"
+                class="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 class="text-white text-xl font-bold">Kaiako Support</h3>
+                <p class="text-white/90">Professional development for educators</p>
+              </div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <button class="prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-colors">
+              <Icon name="heroicons:chevron-left" class="w-6 h-6 text-white" />
+            </button>
+            <button class="next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-colors">
+              <Icon name="heroicons:chevron-right" class="w-6 h-6 text-white" />
+            </button>
+            
+            <!-- Dots indicator -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              <button class="dot active w-3 h-3 rounded-full bg-white/70" data-slide="0"></button>
+              <button class="dot w-3 h-3 rounded-full bg-white/30" data-slide="1"></button>
+              <button class="dot w-3 h-3 rounded-full bg-white/30" data-slide="2"></button>
+              <button class="dot w-3 h-3 rounded-full bg-white/30" data-slide="3"></button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -103,6 +183,149 @@ const supportResources = [
         title="Our Core Programmes"
         columns="2"
       />
+
+      <!-- Visual Stories Section -->
+      <div class="my-20 bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 rounded-3xl p-8 md:p-12">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold">Stories from Our Community</h2>
+          <p class="mt-4 text-xl text-gray-600">
+            See how our mahi is making a difference in the lives of rangatahi across Te Whanganui-a-Tara
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Image Gallery -->
+          <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                  <Image
+                    src={sessionImage}
+                    alt="Rangatahi collaborating in tech sessions"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={280}
+                    height={192}
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                    <div class="absolute bottom-3 left-3 right-3">
+                      <p class="text-white text-sm font-medium">Regular Sessions</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                  <Image
+                    src={teamImage}
+                    alt="Community celebrating achievements"
+                    class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={280}
+                    height={128}
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                    <div class="absolute bottom-2 left-3 right-3">
+                      <p class="text-white text-xs font-medium">Celebrating Success</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                  <Image
+                    src={eventImage}
+                    alt="Exciting robotics competitions"
+                    class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={280}
+                    height={128}
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                    <div class="absolute bottom-2 left-3 right-3">
+                      <p class="text-white text-xs font-medium">Competitions</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                  <Image
+                    src={session1Image}
+                    alt="Hands-on learning in action"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={280}
+                    height={192}
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                    <div class="absolute bottom-3 left-3 right-3">
+                      <p class="text-white text-sm font-medium">Creative Projects</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonials -->
+          <div class="space-y-6">
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="heroicons:star" class="w-6 h-6 text-yellow-500" />
+                </div>
+                <div>
+                  <blockquote class="text-gray-700 mb-3 text-lg">
+                    "My daughter has grown so much in confidence since joining Tūhura Tech. She's now teaching me about the apps she's building!"
+                  </blockquote>
+                  <cite class="text-gray-600 font-medium">Maria R., Parent</cite>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="heroicons:heart" class="w-6 h-6 text-red-500" />
+                </div>
+                <div>
+                  <blockquote class="text-gray-700 mb-3 text-lg">
+                    "These sessions helped me discover my passion for coding. The mentors are amazing and I love that I can learn at my own pace."
+                  </blockquote>
+                  <cite class="text-gray-600 font-medium">Aroha T., Session Participant</cite>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-tuhura-green to-emerald-600 rounded-xl p-6 text-white">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="heroicons:academic-cap" class="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <blockquote class="text-white mb-3 text-lg">
+                    "The PLD transformed how I teach digital technologies. My students are now creating games and apps I never thought possible!"
+                  </blockquote>
+                  <cite class="text-white/90 font-medium">Sarah M., Teacher</cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Impact Stats -->
+        <div class="text-center mt-12">
+          <div class="inline-flex items-center space-x-8 bg-white rounded-full px-8 py-4 shadow-sm">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tuhura-green">1000+</div>
+              <div class="text-sm text-gray-600">Rangatahi engaged</div>
+            </div>
+            <div class="w-px h-8 bg-gray-200"></div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tuhura-green">15+</div>
+              <div class="text-sm text-gray-600">Community locations</div>
+            </div>
+            <div class="w-px h-8 bg-gray-200"></div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tuhura-green">100%</div>
+              <div class="text-sm text-gray-600">Free</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Additional Support -->
             <IconFeatures 
@@ -133,6 +356,22 @@ const supportResources = [
                 <span><strong>Years 11-13:</strong> Advanced projects, industry connections, and portfolio building</span>
               </li>
             </ul>
+            
+            <!-- Visual element for this section -->
+            <div class="mt-6 relative overflow-hidden rounded-xl">
+              <Image
+                src={heroImage}
+                alt="Diverse group of rangatahi learning together"
+                class="w-full h-32 object-cover"
+                width={300}
+                height={128}
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+                <div class="absolute bottom-2 left-3 right-3">
+                  <p class="text-white text-sm font-medium">All Ages & Skill Levels Welcome</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-tuhura-green mb-4">Our Commitment</h3>
@@ -154,6 +393,12 @@ const supportResources = [
                 <span>Self-directed, student-led learning approach</span>
               </li>
             </ul>
+            
+            <!-- Visual element for this section -->
+            <div class="mt-6 bg-tuhura-green/5 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-tuhura-green mb-1">100%</div>
+              <div class="text-sm text-gray-600">Free for all participants</div>
+            </div>
           </div>
         </div>
       </div>
@@ -176,3 +421,81 @@ const supportResources = [
     </div>
   </section>
 </Layout>
+
+<style>
+  .slideshow-container {
+    position: relative;
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dot.active {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  .slide.active {
+    animation: slideIn 0.5s ease-out;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    
+    function showSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      
+      currentSlide = (n + totalSlides) % totalSlides;
+      
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+    
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+    
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+    
+    // Navigation arrows
+    document.querySelector('.next')?.addEventListener('click', nextSlide);
+    document.querySelector('.prev')?.addEventListener('click', prevSlide);
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto-advance slides
+    setInterval(nextSlide, 5000);
+  });
+</script>
