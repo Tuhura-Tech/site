@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import sessionImage from "@assets/session-1.jpg";
+import session1ImageCropped from "@assets/session-1-cropped.jpg";
 import SessionWidget from "@components/SessionWidget.astro";
 import HeroSection from "@components/ui/HeroSection.astro";
 import IconFeatures from "@components/ui/IconFeatures.astro";
@@ -291,7 +292,7 @@ const sessionHighlights = [
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
 					<Image
-						src={sessionImage}
+						src={session1ImageCropped}
 						alt="Rangatahi collaborating on technology projects"
 						class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
 						width={600}
