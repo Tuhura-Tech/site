@@ -13,27 +13,27 @@ import { Icon } from "astro-icon/components";
 
 const workshopFormats = [
   {
-    title: "During-School Workshops",
-    description: "Tailored sessions that fit within school timetables",
+    title: "School-Time Workshops",
+    description: "Specialist workshops delivered in schools during school hours for participating akonga",
     duration: "1-4 hours",
     icon: "heroicons:academic-cap",
     examples: [
       "Digital technologies curriculum support",
-      "Specific skill workshops for classes",
-      "Assessment preparation sessions",
-      "Take-home portfolio projects",
+      "Competition preparation (RoboCup, CTF)",
+      "Specialist skill development sessions",
+      "Project showcase preparation",
     ],
   },
   {
-    title: "Community Event Workshops",
-    description: "Special workshops as part of community events and gatherings",
-    duration: "1-3 hours",
+    title: "Intensive Session Workshops",
+    description: "Deep-dive workshops for rangatahi already participating in our regular sessions",
+    duration: "Half day to multi-day",
     icon: "heroicons:user-group",
     examples: [
-      "Technology demonstrations",
-      "Hands-on maker activities",
-      "Coding taster sessions",
-      "Tech career showcases",
+      "Holiday intensive workshops",
+      "Competition training camps",
+      "Specialist technology deep-dives",
+      "Collaborative project workshops",
     ],
   },
 ];
@@ -81,7 +81,7 @@ const workshopTopics = [
 
 <Layout
   title="Workshops | Wānanga"
-  description="Intensive technology learning workshops for rangatahi - during-school curriculum support, and community events"
+  description="Specialist workshops for rangatahi participating in our sessions - intensive skill-building and collaborative learning experiences"
 >
   <!-- Visual Hero Section -->
   <section
@@ -96,23 +96,20 @@ const workshopTopics = [
             Workshops <span class="text-tuhura-green">(Wānanga)</span>
           </h1>
           <p class="mt-6 text-xl text-gray-600">
-            Intensive learning experiences diving deep into specific technology
-            topics. Perfect for skill-building during school holidays or special
-            events.
+            Specialist workshops for rangatahi participating in our sessions - diving deep into specific technology topics through intensive, hands-on learning.
           </p>
           <div
             class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
           >
             <p class="text-lg text-gray-700">
-              <strong>Complement regular sessions</strong> with focused, hands-on
-              workshops lasting hours or days.
+              <strong>For current participants:</strong> Workshops complement our regular after-school sessions with focused, intensive learning experiences.
             </p>
           </div>
           <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#workshop-types" class="btn btn-primary">
-              Explore Workshop Types
+            <a href="/mahi/sessions" class="btn btn-primary">
+              Join Our Sessions First
             </a>
-            <a href="/contact" class="btn btn-secondary"> Book a Workshop </a>
+            <a href="/contact" class="btn btn-secondary"> Contact Us </a>
           </div>
         </div>
 
@@ -504,30 +501,28 @@ const workshopTopics = [
             </ul>
           </div>
           <div>
-            <h3 class="mb-4 text-xl font-semibold">Community Workshops</h3>
+            <h3 class="mb-4 text-xl font-semibold">Participant Workshops</h3>
             <ul class="list-disc space-y-2 pl-6 text-lg">
-              <li>Open registration through our newsletter</li>
-              <li>Mixed age groups and skill levels</li>
-              <li>Various community venue locations</li>
-              <li>Focused on specialised topics</li>
-              <li>Free for all participants and families</li>
+              <li>For rangatahi already in our regular sessions</li>
+              <li>Holiday intensives and skill deep-dives</li>
+              <li>Competition preparation workshops</li>
+              <li>Collaborative project development</li>
+              <li>Free for all session participants</li>
             </ul>
           </div>
         </div>
 
         <div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
-          <h3 class="mb-3 text-xl font-bold">Ready to Book or Learn More?</h3>
+          <h3 class="mb-3 text-xl font-bold">Interested in Workshops?</h3>
           <p class="mb-4 text-gray-700">
-            Whether you want to arrange a custom workshop for your school or
-            join one of our community workshops, we're here to help create an
-            amazing learning experience.
+            Schools can request specialist workshops for their students, while rangatahi in our sessions are invited to participate in intensive workshops.
           </p>
           <div class="flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/contact" class="btn btn-primary">
-              Request Custom Workshop
+              Request School Workshop
             </a>
-            <a href="/contact" class="btn btn-secondary">
-              Join Community Workshops
+            <a href="/mahi/sessions" class="btn btn-secondary">
+              Join Our Sessions
             </a>
           </div>
         </div>

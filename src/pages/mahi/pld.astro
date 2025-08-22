@@ -10,47 +10,44 @@ import { Icon } from "astro-icon/components";
 
 const learningFramework = [
   {
-    title: "Technical Mastery",
+    title: "Curriculum Support",
     description:
-      "Build confidence with technology tools, programming languages, and emerging tech.",
+      "Resources and guidance aligned with NZ Digital Technologies curriculum requirements.",
   },
   {
-    title: "Teaching Approaches",
+    title: "Workshop Delivery",
     description:
-      "Learn student-centred, project-based teaching methods that engage and inspire.",
+      "Specialist workshops delivered in schools to support kaiako and enhance student learning.",
   },
   {
-    title: "Cultural Responsiveness",
+    title: "Resource Sharing",
     description:
-      "Integrate te ao Māori perspectives and culturally responsive practices.",
+      "Access to our educational resources, lesson plans, and project guides.",
   },
   {
-    title: "Community Connection",
+    title: "Ongoing Partnership",
     description:
-      "Build networks with industry professionals and fellow educators.",
+      "Collaborative relationships with schools to support technology education goals.",
   },
 ];
 ---
 
-<Layout title="Professional Learning & Development | Ako Ngaiotanga">
+<Layout title="Kura & Kaiako Support | Ako Ngaiotanga" description="Supporting schools and teachers with technology education resources, workshops, and curriculum-aligned guidance for enhanced learning outcomes.">
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
       <div class="mb-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div>
           <h1 class="mb-6 text-4xl leading-tight font-bold md:text-5xl">
-            Professional Learning & Development
+            Kura & Kaiako Support
             <span class="mt-2 block text-3xl text-tuhura-green md:text-4xl"
               >(Ako Ngaiotanga)</span
             >
           </h1>
           <p class="mb-6 text-xl text-gray-700">
-            Empowering kaiako, volunteers, and community members with skills and
-            confidence to inspire rangatahi in technology.
+            Supporting schools and teachers with resources, workshops, and guidance to enhance technology education for akonga.
           </p>
           <p class="text-lg text-gray-600">
-            Effective tech education needs both technical knowledge and teaching
-            expertise. Our PLD combines hands-on training with proven
-            methodologies.
+            We work directly with kura and kaiako to provide curriculum-aligned support, resources, and specialist workshops that complement our student sessions.
           </p>
         </div>
         <div>
@@ -74,89 +71,50 @@ const learningFramework = [
 
       <StepsSection
         steps={learningFramework}
-        title="Our Ako (Learning) Framework"
+        title="How We Support Kura & Kaiako"
         columns="4"
       />
 
       <div class="mb-12 rounded-xl bg-tuhura-gray p-8">
-        <h2 class="mb-6 text-3xl font-bold">PLD Programmes & Opportunities</h2>
+        <h2 class="mb-6 text-3xl font-bold">Support & Resources Available</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div>
             <h3 class="mb-4 text-2xl font-semibold">For Kaiako (Teachers)</h3>
             <ul class="list-disc space-y-3 pl-6 text-lg">
               <li>
-                <strong>Digital Technologies Curriculum Support:</strong> Align your
-                teaching with NZ curriculum requirements
+                <strong>Curriculum Alignment:</strong> Resources aligned with NZ Digital Technologies curriculum
               </li>
               <li>
-                <strong>Tool Training:</strong> Master platforms like Scratch, Godot,
-                Python, and more
+                <strong>In-School Workshops:</strong> Specialist sessions delivered in your school
               </li>
               <li>
-                <strong>Assessment Strategies:</strong> Learn effective ways to assess
-                student progress in tech
+                <strong>Resource Access:</strong> Educational materials, lesson plans, and project guides
               </li>
               <li>
-                <strong>Project-Based Learning:</strong> Design engaging, real-world
-                tech projects
+                <strong>Partnership Support:</strong> Ongoing collaboration to enhance tech education
               </li>
             </ul>
-        </div>
-      </div>
-
-      <div class="mb-12">
-        <h2 class="mb-6 text-3xl font-bold">Resources & Taonga (Tools)</h2>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm">
-            <h3 class="mb-3 text-xl font-semibold text-tuhura-green">
-              Lesson Plans
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Ready-to-use, curriculum-aligned lesson plans for various tech
-              topics and year levels.
-            </p>
-            <!-- TODO: Add icon or small image representing lesson plans -->
           </div>
-          <div class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm">
-            <h3 class="mb-3 text-xl font-semibold text-tuhura-green">
-              Project Guides
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Step-by-step guides for projects that students love to build.
-            </p>
-            <!-- TODO: Add icon or small image representing project guides -->
-          </div>
-          <div class="rounded-lg border border-gray-100 bg-white p-6 shadow-sm">
-            <h3 class="mb-3 text-xl font-semibold text-tuhura-green">
-              Skill Training
-            </h3>
-            <p class="mb-4 text-gray-600">
-              Confidence and a personal understanding of the content you're
-              delivering
-            </p>
-            <!-- TODO: Add icon or small image representing assessment tools -->
+          <div>
+            <h3 class="mb-4 text-2xl font-semibold">For Kura (Schools)</h3>
+            <ul class="list-disc space-y-3 pl-6 text-lg">
+              <li>
+                <strong>After-School Programs:</strong> Regular sessions hosted at your school
+              </li>
+              <li>
+                <strong>Curriculum Support:</strong> Assistance with Digital Technologies implementation
+              </li>
+              <li>
+                <strong>Industry Connections:</strong> Links to technology professionals and opportunities
+              </li>
+              <li>
+                <strong>Equipment & Resources:</strong> Access to technology tools and educational materials
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div class="rounded-lg bg-tuhura-green p-8 text-center text-white">
-        <h3 class="mb-4 text-2xl font-bold">Ready to Get Started?</h3>
-        <p class="mb-6 text-xl opacity-90">
-          Join our community of educators who are transforming technology
-          education in Aotearoa New Zealand.
-        </p>
-        <div class="flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="/contact"
-            class="rounded-lg bg-white px-6 py-3 font-semibold text-tuhura-green transition hover:bg-gray-100"
-          >
-            Join PLD Programme
-          </a>
-          <a
-            href="/mahi/sessions"
-            class="rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold transition hover:bg-white/10"
-          >
-            Explore Sessions
-          </a>
+              </li>
+            </ul>
         </div>
       </div>
     </div>
