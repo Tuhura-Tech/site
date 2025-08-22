@@ -80,9 +80,9 @@ const topics = [
 
 const sessionHighlights = [
   {
-    title: "Peer-to-Peer Learning",
+    title: "Montessori Style Approach",
     description:
-      "Experienced participants mentor newcomers, creating a supportive learning community.",
+      "Learner-driven exploration focused on interests and curiosity.",
     icon: "heroicons:users",
   },
   {
@@ -173,126 +173,6 @@ const sessionHighlights = [
   </section>
 
   <SessionWidget />
-
-  <!-- Session Types Section - This is covered in overview and multiple other places. This page is also about sessions specifically we don't need this stuff here
-	<section class="py-20 bg-white">
-		<div class="container-custom max-w-6xl mx-auto">
-			<div class="text-center mb-12">
-				<h2 class="text-3xl md:text-4xl font-bold">Session Types & Formats</h2>
-				<p class="mt-4 text-xl text-gray-600">
-					We adapt our delivery to meet different community needs and school requirements.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				<div class="bg-tuhura-gray rounded-xl p-8">
-					<div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
-						<Icon name="heroicons:home" class="h-8 w-8 text-tuhura-green" />
-					</div>
-					<h3 class="text-2xl font-bold text-tuhura-green mb-4">After-School Community Sessions</h3>
-					<p class="text-gray-700 mb-4">
-						<strong>Our primary offering:</strong> Regular weekly sessions in community spaces where rangatahi can explore technology freely.
-					</p>
-					<ul class="space-y-2 text-gray-600">
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Libraries, community centres, marae
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Self-directed, project-based learning
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Mixed ages and skill levels
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Ongoing weekly commitment
-						</li>
-					</ul>
-				</div>
-
-				<div class="bg-tuhura-gray rounded-xl p-8">
-					<div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
-						<Icon name="heroicons:academic-cap" class="h-8 w-8 text-tuhura-green" />
-					</div>
-					<h3 class="text-2xl font-bold text-tuhura-green mb-4">In-School Programmes</h3>
-					<p class="text-gray-700 mb-4">
-						Curriculum-aligned sessions that fit within school timetables and support classroom learning.
-					</p>
-					<ul class="space-y-2 text-gray-600">
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Digital Technologies curriculum support
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Co-delivery with classroom teachers
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							NCEA assessment preparation
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Flexible session frequency
-						</li>
-					</ul>
-				</div>
-
-			</div>
-				<div class="bg-tuhura-gray rounded-xl p-8">
-					<div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mb-6">
-						<Icon name="heroicons:user-group" class="h-8 w-8 text-tuhura-green" />
-					</div>
-					<h3 class="text-2xl font-bold text-tuhura-green mb-4">Flexible Arrangements</h3>
-					<p class="text-gray-700 mb-4">
-						Custom session formats designed around specific community needs and timing constraints.
-					</p>
-					<ul class="space-y-2 text-gray-600">
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Weekend family sessions
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							One-off introduction sessions
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Special event tie-ins
-						</li>
-						<li class="flex items-start">
-							<Icon name="heroicons:check" class="h-4 w-4 text-tuhura-green mr-2 mt-1 flex-shrink-0" />
-							Community-specific programming
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 mt-8">
-				<h3 class="text-2xl font-bold text-center text-tuhura-green mb-6">What All Sessions Include</h3>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<div class="text-center">
-						<Icon name="heroicons:computer-desktop" class="h-12 w-12 text-tuhura-green mx-auto mb-3" />
-						<h4 class="font-semibold mb-2">All Equipment Provided</h4>
-						<p class="text-gray-600 text-sm">Laptops, electronics, robotics kits, and all materials needed for hands-on learning.</p>
-					</div>
-					<div class="text-center">
-						<Icon name="heroicons:users" class="h-12 w-12 text-tuhura-green mx-auto mb-3" />
-						<h4 class="font-semibold mb-2">Expert Facilitation</h4>
-						<p class="text-gray-600 text-sm">Trained kaiako and industry volunteers provide guidance and mentorship.</p>
-					</div>
-					<div class="text-center">
-						<Icon name="heroicons:heart" class="h-12 w-12 text-tuhura-green mx-auto mb-3" />
-						<h4 class="font-semibold mb-2">Completely Free</h4>
-						<p class="text-gray-600 text-sm">No cost to participants, schools, or communities thanks to our supporters.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>-->
 
   <IconFeatures
     features={topics}
