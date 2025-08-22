@@ -7,6 +7,7 @@ import session1Image from "@assets/session-1.jpg";
 import teamPhotoImage from "@assets/team-photo.jpg";
 import EventExamples from "@components/EventExamples.astro";
 import EventExpectations from "@components/EventExpectations.astro";
+import Partners from "@components/Partners.astro";
 import CallToAction from "@components/ui/CallToAction.astro";
 import Card from "@components/ui/Card.astro";
 import Checklist from "@components/ui/Checklist.astro";
@@ -17,14 +18,15 @@ const eventCategories = [
   {
     title: "Competitions & Challenges",
     description:
-      "High-energy events that challenge rangatahi to push their creative and technical boundaries",
+      "High-energy events that challenge rangatahi to push their creative and technical boundaries, often in partnership with national organizations",
     icon: "heroicons:trophy",
     examples: [
       "Game jams with NZ Games Festival",
       "Capture The Flag (CTF) cybersecurity competitions",
-      "Robotics tournaments and RoboCup events",
+      "RoboCup events and competitions",
+      "VEX Robotics tournaments with Kiwibots",
+      "Aquabots marine robotics with Ministry of Inspiration",
       "Hackathons for social good",
-      "Code challenges and programming contests",
     ],
   },
   {
@@ -39,15 +41,15 @@ const eventCategories = [
     ],
   },
   {
-    title: "Collaborative Workshops",
+    title: "Collaborative Events",
     description:
-      "Special group events focusing on teamwork and community problem-solving",
+      "Special group events for session participants, focusing on teamwork and community connections",
     icon: "heroicons:user-group",
     examples: [
       "All Girls Tech events empowering young women",
-      "Cross-age mentoring sessions",
-      "Community tech problem-solving workshops",
-      "Industry partnership events",
+      "Cross-age mentoring sessions between participants",
+      "Collaborative project development events",
+      "Industry partnership events for participants",
       "Cultural technology fusion events",
     ],
   },
@@ -95,15 +97,17 @@ const eventBenefits = [
             Events <span class="text-tuhura-green">(Hui)</span>
           </h1>
           <p class="mt-6 text-xl text-gray-600">
-            Special gatherings that inspire, challenge, and connect rangatahi
-            through competitions, showcases, and collaborative workshops.
+            Special gatherings for rangatahi in our sessions - competitions,
+            showcases, and collaborative events that inspire, challenge, and
+            connect participants.
           </p>
           <div
             class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
           >
             <p class="text-lg text-gray-700">
-              <strong>All events are free and open</strong> to rangatahi from any
-              community, plus whānau and supporters.
+              <strong>For session participants:</strong> These events extend the
+              learning and community connections built in our regular after-school
+              sessions.
             </p>
           </div>
           <div class="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -354,9 +358,9 @@ const eventBenefits = [
               />
               <h3 class="mb-3 text-xl font-bold">Game Jams</h3>
               <p class="text-gray-700">
-                48-72 hour intensive game development challenges where teams
-                create complete games from concept to playable prototype, often
-                partnering with industry professionals.
+                48-72 hour intensive game development challenges in partnership
+                with NZ Games Festival, where teams create complete games from
+                concept to playable prototype with industry mentorship.
               </p>
             </Card>
             <Card class="p-6">
@@ -376,11 +380,12 @@ const eventBenefits = [
                 name="heroicons:cog"
                 class="mb-4 h-12 w-12 text-tuhura-green"
               />
-              <h3 class="mb-3 text-xl font-bold">RoboCup Regionals</h3>
+              <h3 class="mb-3 text-xl font-bold">Robotics Competitions</h3>
               <p class="text-gray-700">
-                Robotics competitions where teams design, build, and program
-                autonomous robots to compete in various challenges, from soccer
-                to rescue scenarios.
+                International competitions including RoboCup events, VEX
+                tournaments with Kiwibots, and Aquabots marine robotics with
+                Ministry of Inspiration - connecting rangatahi to world-class
+                robotics challenges.
               </p>
             </Card>
           </div>
@@ -438,6 +443,85 @@ const eventBenefits = [
             <a href="/contact" class="btn btn-secondary"> Propose an Event </a>
           </div>
         </div>
+      </div>
+
+      <!-- Partnership & Collaboration Section -->
+      <div class="mx-auto mb-20 max-w-6xl">
+        <div class="mb-12 text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">
+            Event Partnerships
+          </h2>
+          <p class="mx-auto max-w-3xl text-xl text-gray-600">
+            We collaborate with national organizations, industry partners, and
+            community groups to create amazing opportunities for rangatahi.
+            Every event is stronger when we work together.
+          </p>
+        </div>
+
+        <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+          <Card class="p-6">
+            <h3 class="mb-4 text-xl font-bold text-tuhura-green">
+              Current Collaborations
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <Icon
+                  name="heroicons:trophy"
+                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
+                />
+                <span
+                  ><strong>NZ Games Festival:</strong> Game development jams and
+                  showcases</span
+                >
+              </li>
+              <li class="flex items-start">
+                <Icon
+                  name="heroicons:cpu-chip"
+                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
+                />
+                <span
+                  ><strong>RoboCup Federation:</strong> International robotics competitions</span
+                >
+              </li>
+              <li class="flex items-start">
+                <Icon
+                  name="heroicons:cog"
+                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
+                />
+                <span
+                  ><strong>Kiwibots:</strong> VEX Robotics tournaments and training</span
+                >
+              </li>
+              <li class="flex items-start">
+                <Icon
+                  name="heroicons:beaker"
+                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
+                />
+                <span
+                  ><strong>Ministry of Inspiration:</strong> Aquabots marine robotics
+                  competitions</span
+                >
+              </li>
+            </ul>
+          </Card>
+
+          <Card class="bg-tuhura-green p-6 text-white">
+            <h3 class="mb-4 text-xl font-bold">Want to Collaborate?</h3>
+            <p class="mb-4 opacity-90">
+              We're always looking for new partners to create exciting
+              opportunities for rangatahi. Whether you're an organization,
+              charity, or company with ideas for tech events.
+            </p>
+            <a
+              href="/contact"
+              class="btn bg-white text-tuhura-green hover:bg-gray-100"
+            >
+              Discuss Partnership
+            </a>
+          </Card>
+        </div>
+
+        <Partners />
       </div>
 
       <!-- Call to Action -->

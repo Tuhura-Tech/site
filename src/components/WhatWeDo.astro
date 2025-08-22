@@ -71,28 +71,6 @@ const approachPoints = [
       </p>
     </div>
 
-    <!-- What We Do -->
-    <div class="mb-24">
-      <h3 class="mb-16 text-center text-3xl font-bold">
-        Technologies We Explore Together
-      </h3>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {
-          whatWeDo.map((item, index) => (
-            <div
-              class="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
-                <Icon name={item.icon} class="h-10 w-10 text-white" />
-              </div>
-              <h4 class="mb-4 text-xl font-bold text-gray-900">{item.title}</h4>
-              <p class="leading-relaxed text-gray-600">{item.description}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
 
     <!-- Visual Divider Section -->
     <div
@@ -160,6 +138,30 @@ const approachPoints = [
                 <h4 class="mb-2 text-lg font-semibold">{point.title}</h4>
                 <p class="text-gray-600">{point.description}</p>
               </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+
+    <!-- What We Do -->
+    <div class="mb-24">
+      <h3 class="mb-16 text-center text-3xl font-bold">
+        Technologies We Explore Together
+      </h3>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {
+          whatWeDo.map((item, index) => (
+            <div
+              class="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg"
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
+                <Icon name={item.icon} class="h-10 w-10 text-white" />
+              </div>
+              <h4 class="mb-4 text-xl font-bold text-gray-900">{item.title}</h4>
+              <p class="leading-relaxed text-gray-600">{item.description}</p>
             </div>
           ))
         }
