@@ -1,12 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import pldImage from "@assets/pld.jpg";
-import sessionImage from "@assets/session.jpg";
-import session1Image from "@assets/session-1.jpg";
-import teamPhotoImage from "@assets/team-photo.jpg";
 import StepsSection from "@components/ui/StepsSection.astro";
 import Layout from "@layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
 
 const learningFramework = [
   {
@@ -42,9 +38,6 @@ const learningFramework = [
         <div>
           <h1 class="mb-6 text-4xl leading-tight font-bold md:text-5xl">
             Kura & Kaiako Support
-            <span class="mt-2 block text-3xl text-tuhura-green md:text-4xl"
-              >(Ako Ngaiotanga)</span
-            >
           </h1>
           <p class="mb-6 text-xl text-gray-700">
             Supporting schools and teachers with resources, workshops, and
@@ -128,6 +121,27 @@ const learningFramework = [
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="bg-white py-16">
+    <div class="container-custom mx-auto max-w-2xl text-center">
+      <h2 class="mb-4 text-2xl font-bold md:text-3xl">Work with Us</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Interested in working with us to grow your impact on akonga? We would
+        love to support your kura or kaiako with PLD, resources, and workshops.
+      </p>
+      <p class="mb-6 text-lg text-gray-700">
+        To work with us, simply{" "}
+        <a href="/contact" class="font-medium text-tuhura-green underline">
+          contact us
+        </a>
+      </p>
+      <a
+        href="/contact"
+        class="inline-block rounded-lg bg-tuhura-green px-6 py-3 font-semibold text-white shadow transition hover:bg-tuhura-blue"
+      >
+        Contact Us
+      </a>
     </div>
   </section>
 </Layout>
