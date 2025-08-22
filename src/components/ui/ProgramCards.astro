@@ -7,10 +7,9 @@ interface Program {
   subtitle?: string;
   description: string;
   icon: string;
-  href?: string;
-  button?: {
+  cta?: {
     text: string;
-    onclick?: string;
+    href: string;
   };
   features: string[];
 }
@@ -84,20 +83,10 @@ const gridCols = {
                   iconColor="text-tuhura-green"
                 />
               </div>
-              {program.href && (
-                <div class="font-medium text-tuhura-green group-hover:underline">
-                  Learn More →
-                </div>
-              )}
-              {program.button && (
-                <div class="mt-4">
-                  <button
-                    class="btn btn-primary"
-                    onclick={program.button.onclick}
-                  >
-                    {program.button.text}
-                  </button>
-                </div>
+              {program.cta && (
+                <a href={program.cta.href} class="font-medium text-tuhura-green group-hover:underline">
+                  {program.cta.text}
+                </a>
               )}
             </Element>
           );

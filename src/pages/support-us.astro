@@ -17,15 +17,15 @@ const supportTypes = [
     features: [
       "$20 funds one rangatahi for a 2-hour session",
       "$800 supports one rangatahi for a full year",
-      "$10,000 funds an entire session location for a year",
+      "$12,000 funds an entire session location for a year",
       "One-off or recurring monthly donations",
       "Tax-deductible charitable giving receipts",
     ],
     icon: "heroicons:heart",
     cta: {
-      type: "button",
+      type: "link",
       text: "Make a Kōha",
-      onclick: "demo.showModal()",
+      onclick: "https://donate.tuhuratech.org.nz",
     },
   },
   {
@@ -91,14 +91,14 @@ const donationImpact = [
 ---
 
 <Layout
-  title="Support Us | Tautoko"
+  title="Support Us"
   description="Support Tūhura Tech and help grow our impact providing free technology education for rangatahi across Aotearoa."
 >
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
       <div class="mx-auto max-w-4xl text-center">
         <h1 class="mb-6 text-4xl leading-tight font-bold md:text-5xl">
-          <span class="gradient-text">Tautoko (Support Us)</span>
+          <span class="gradient-text">Support Us</span>
         </h1>
         <p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
           Join our mission to empower the next generation of rangatahi through
@@ -172,7 +172,7 @@ const donationImpact = [
     <div class="container-custom">
       <div class="mx-auto mb-16 max-w-4xl text-center">
         <h2 class="mb-6 text-3xl font-bold md:text-4xl">
-          Ways to Tautoko (Support)
+          Ways to Support
         </h2>
         <p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
           Choose the way that works best for you to help create opportunities
@@ -186,13 +186,7 @@ const donationImpact = [
           description: type.description,
           icon: type.icon,
           features: type.features,
-          ...(type.cta.type === "link" && { href: type.cta.href }),
-          ...(type.cta.type === "button" && {
-            button: {
-              text: type.cta.text,
-              onclick: type.cta.onclick,
-            },
-          }),
+          cta: type.cta
         }))}
         columns="3"
       />
