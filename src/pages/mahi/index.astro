@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "@assets/hero.jpg";
+
 import pldImage from "@assets/pld.jpg";
 import eventImage from "@assets/robocup-2025.jpg";
 import sessionImage from "@assets/session.jpg";
@@ -184,6 +184,16 @@ const supportResources = [
         columns="2"
       />
 
+           <!-- Additional Support -->
+            <IconFeatures 
+        features={supportResources}
+        title="Beyond Sessions - Supporting the Ecosystem"
+        description="Additional ways we support technology education in our communities."
+        columns="2"
+        iconVariant="default"
+      />
+
+      
       <!-- Visual Stories Section -->
       <div class="my-20 bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 rounded-3xl p-8 md:p-12">
         <div class="text-center mb-12">
@@ -259,6 +269,8 @@ const supportResources = [
               </div>
             </div>
           </div>
+
+          
           
           <!-- Testimonials -->
           <div class="space-y-6">
@@ -327,16 +339,8 @@ const supportResources = [
         </div>
       </div>
 
-      <!-- Additional Support -->
-            <IconFeatures 
-        features={supportResources}
-        title="Beyond Sessions - Supporting the Ecosystem"
-        description="Additional ways we support technology education in our communities."
-        columns="2"
-        iconVariant="default"
-      />
-
-      <!-- Age Groups & Accessibility -->
+ 
+      <!-- Age Groups & Accessibility 
       <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-center mb-8">Who We Serve</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -357,7 +361,7 @@ const supportResources = [
               </li>
             </ul>
             
-            <!-- Visual element for this section -->
+            
             <div class="mt-6 relative overflow-hidden rounded-xl">
               <Image
                 src={heroImage}
@@ -394,14 +398,14 @@ const supportResources = [
               </li>
             </ul>
             
-            <!-- Visual element for this section -->
+            
             <div class="mt-6 bg-tuhura-green/5 rounded-xl p-4 text-center">
               <div class="text-2xl font-bold text-tuhura-green mb-1">100%</div>
               <div class="text-sm text-gray-600">Free for all participants</div>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
       <!-- Call to Action -->
       <div class="bg-tuhura-green rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
