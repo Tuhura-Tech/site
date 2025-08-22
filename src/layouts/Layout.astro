@@ -6,28 +6,28 @@ import Header from "@components/Header.astro";
 import "../styles/global.css";
 
 interface Props {
-	title?: string;
-	description?: string;
+  title?: string;
+  description?: string;
 }
 
 const siteName = "Tūhura Tech";
 
 const {
-	title = siteName,
-	description = "Empowering the next generation through industry supported Technology Education.",
+  title = siteName,
+  description = "Empowering the next generation through industry supported Technology Education.",
 } = Astro.props;
 
 // Preload critical assets
 const faviconImg = await getImage({
-	src: "/favicon.svg",
-	width: 32,
-	height: 32,
+  src: "/favicon.svg",
+  width: 32,
+  height: 32,
 });
 let shownTitle: string;
 if (title !== siteName) {
-	shownTitle = `${title} | ${siteName}`;
+  shownTitle = `${title} | ${siteName}`;
 } else {
-	shownTitle = siteName;
+  shownTitle = siteName;
 }
 const canonicalUrl = Astro.url?.href || "https://tuhuratech.org.nz";
 ---
@@ -74,7 +74,7 @@ const canonicalUrl = Astro.url?.href || "https://tuhuratech.org.nz";
       data-domain="tuhuratech.org.nz"
       src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="flex min-h-screen flex-col">
     <Header />
     <main class="flex-grow">
       <slot />
@@ -82,13 +82,13 @@ const canonicalUrl = Astro.url?.href || "https://tuhuratech.org.nz";
     <Footer />
     <DonateModal />
     <script is:inline>
-      const headerEl = document.querySelector('header');
+      const headerEl = document.querySelector("header");
       const onScroll = () => {
         if (!headerEl) return;
-        if (window.scrollY > 2) headerEl.classList.add('scrolled');
-        else headerEl.classList.remove('scrolled');
+        if (window.scrollY > 2) headerEl.classList.add("scrolled");
+        else headerEl.classList.remove("scrolled");
       };
-      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
     </script>
   </body>

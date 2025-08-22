@@ -3,78 +3,92 @@ import { Icon } from "astro-icon/components";
 import Checklist from "./Checklist.astro";
 
 interface Program {
-	title: string;
-	subtitle?: string;
-	description: string;
-	icon: string;
-	href?: string;
-	features: string[];
+  title: string;
+  subtitle?: string;
+  description: string;
+  icon: string;
+  href?: string;
+  features: string[];
 }
 
 interface Props {
-	programs: Program[];
-	title?: string;
-	description?: string;
-	columns?: "1" | "2" | "3";
+  programs: Program[];
+  title?: string;
+  description?: string;
+  columns?: "1" | "2" | "3";
 }
 
 const { programs, title, description, columns = "2" } = Astro.props;
 
 const gridCols = {
-	"1": "grid-cols-1",
-	"2": "grid-cols-1 lg:grid-cols-2",
-	"3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  "1": "grid-cols-1",
+  "2": "grid-cols-1 lg:grid-cols-2",
+  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
 };
 ---
 
 <section class="py-20">
   <div class="container-custom">
-    {title && (
-      <div class="text-center max-w-4xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-        {description && <p class="text-xl text-gray-600">{description}</p>}
-      </div>
-    )}
+    {
+      title && (
+        <div class="mx-auto mb-16 max-w-4xl text-center">
+          <h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
+          {description && <p class="text-xl text-gray-600">{description}</p>}
+        </div>
+      )
+    }
 
     <div class={`max-w-7xl mx-auto grid ${gridCols[columns]} gap-10`}>
-      {programs.map((program, index) => {
-        const Element = program.href ? 'a' : 'div';
-        return (
-          <Element 
-            href={program.href} 
-            class={`${program.href ? 'group block' : ''} bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full ${program.href ? 'group-hover:-translate-y-2' : ''}`}
-            style={`animation-delay: ${index * 0.1}s`}
-          >
-            <div class="flex items-start mb-6">
-              <div class={`w-20 h-20 bg-tuhura-green rounded-2xl flex items-center justify-center mr-6 flex-shrink-0 shadow-lg ${program.href ? 'group-hover:scale-110' : ''} transition-transform`}>
-                <Icon name={program.icon} class="h-10 w-10 text-white" />
+      {
+        programs.map((program, index) => {
+          const Element = program.href ? "a" : "div";
+          return (
+            <Element
+              href={program.href}
+              class={`${program.href ? "group block" : ""} h-full rounded-2xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-2xl ${program.href ? "group-hover:-translate-y-2" : ""}`}
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="mb-6 flex items-start">
+                <div
+                  class={`mr-6 flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg ${program.href ? "group-hover:scale-110" : ""} transition-transform`}
+                >
+                  <Icon name={program.icon} class="h-10 w-10 text-white" />
+                </div>
+                <div>
+                  <h3
+                    class={`text-2xl font-bold text-gray-900 ${program.href ? "group-hover:text-tuhura-green" : ""} transition-colors`}
+                  >
+                    {program.title}
+                  </h3>
+                  {program.subtitle && (
+                    <p class="text-lg font-semibold text-tuhura-green">
+                      {program.subtitle}
+                    </p>
+                  )}
+                </div>
               </div>
-              <div>
-                <h3 class={`text-2xl font-bold text-gray-900 ${program.href ? 'group-hover:text-tuhura-green' : ''} transition-colors`}>
-                  {program.title}
-                </h3>
-                {program.subtitle && (
-                  <p class="text-lg text-tuhura-green font-semibold">{program.subtitle}</p>
-                )}
+              <p class="mb-6 text-lg leading-relaxed text-gray-700">
+                {program.description}
+              </p>
+              <div class="mb-6">
+                <h4 class="mb-4 text-lg font-bold text-gray-900">
+                  What we offer:
+                </h4>
+                <Checklist
+                  items={program.features.map((feature) => ({ text: feature }))}
+                  icon="heroicons:check-circle"
+                  iconColor="text-tuhura-green"
+                />
               </div>
-            </div>
-            <p class="text-gray-700 mb-6 leading-relaxed text-lg">{program.description}</p>
-            <div class="mb-6">
-              <h4 class="font-bold text-gray-900 mb-4 text-lg">What we offer:</h4>
-              <Checklist 
-                items={program.features.map(feature => ({ text: feature }))}
-                icon="heroicons:check-circle"
-                iconColor="text-tuhura-green"
-              />
-            </div>
-            {program.href && (
-              <div class="text-tuhura-green font-medium group-hover:underline">
-                Learn More →
-              </div>
-            )}
-          </Element>
-        );
-      })}
+              {program.href && (
+                <div class="font-medium text-tuhura-green group-hover:underline">
+                  Learn More →
+                </div>
+              )}
+            </Element>
+          );
+        })
+      }
     </div>
   </div>
 </section>

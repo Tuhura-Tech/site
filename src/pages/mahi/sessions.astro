@@ -10,148 +10,171 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const topics = [
-	{
-		title: "Scratch & Block Coding",
-		description:
-			"Learn the basics of programming through fun, visual block-based coding activities. Great for beginners and younger students.",
-		icon: "heroicons:puzzle-piece",
-	},
-	{
-		title: "Godot Game Development",
-		description:
-			"Create 2D and 3D games using the Godot engine. Explore game design, logic, and creative storytelling.",
-		icon: "heroicons:code-bracket",
-	},
-	{
-		title: "3D Modeling & Printing",
-		description:
-			"Design and print your own 3D objects. Learn about CAD, prototyping, and how digital models become real-world creations.",
-		icon: "heroicons:puzzle-piece",
-	},
-	{
-		title: "Cybersecurity",
-		description:
-			"Discover how to stay safe online, protect your data, and understand the basics of digital security.",
-		icon: "heroicons:shield-check",
-	},
-	{
-		title: "Robotics",
-		description:
-			"Build and program robots using kits and microcontrollers. Hands-on activities in engineering and automation.",
-		icon: "heroicons:cpu-chip",
-	},
-	{
-		title: "Websites & Web Apps",
-		description:
-			"Design and build your own websites and web applications using HTML, CSS, and JavaScript.",
-		icon: "heroicons:globe-alt",
-	},
-	{
-		title: "Electronics & Circuits",
-		description:
-			"Experiment with electronics, circuits, and sensors. Learn how hardware powers the digital world.",
-		icon: "heroicons:bolt",
-	},
-	{
-		title: "VR & AR",
-		description:
-			"Explore virtual and augmented reality technologies. Create immersive experiences and learn about the future of interaction.",
-		icon: "heroicons:eye",
-	},
-	{
-		title: "Python Programming",
-		description:
-			"Dive into text-based coding with Python. Build games, apps, and automation scripts.",
-		icon: "heroicons:code-bracket",
-	},
-	{
-		title: "Artificial Intelligence & Machine Learning",
-		description:
-			"Discover how computers can learn and make decisions. Experiment with simple AI projects and concepts.",
-		icon: "heroicons:light-bulb",
-	},
-	{
-		title: "Mobile App Development",
-		description:
-			"Design and build apps for smartphones and tablets. Learn about user experience and mobile technology.",
-		icon: "heroicons:device-phone-mobile",
-	},
+  {
+    title: "Scratch & Block Coding",
+    description:
+      "Learn the basics of programming through fun, visual block-based coding activities. Great for beginners and younger students.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Godot Game Development",
+    description:
+      "Create 2D and 3D games using the Godot engine. Explore game design, logic, and creative storytelling.",
+    icon: "heroicons:code-bracket",
+  },
+  {
+    title: "3D Modeling & Printing",
+    description:
+      "Design and print your own 3D objects. Learn about CAD, prototyping, and how digital models become real-world creations.",
+    icon: "heroicons:puzzle-piece",
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "Discover how to stay safe online, protect your data, and understand the basics of digital security.",
+    icon: "heroicons:shield-check",
+  },
+  {
+    title: "Robotics",
+    description:
+      "Build and program robots using kits and microcontrollers. Hands-on activities in engineering and automation.",
+    icon: "heroicons:cpu-chip",
+  },
+  {
+    title: "Websites & Web Apps",
+    description:
+      "Design and build your own websites and web applications using HTML, CSS, and JavaScript.",
+    icon: "heroicons:globe-alt",
+  },
+  {
+    title: "Electronics & Circuits",
+    description:
+      "Experiment with electronics, circuits, and sensors. Learn how hardware powers the digital world.",
+    icon: "heroicons:bolt",
+  },
+  {
+    title: "VR & AR",
+    description:
+      "Explore virtual and augmented reality technologies. Create immersive experiences and learn about the future of interaction.",
+    icon: "heroicons:eye",
+  },
+  {
+    title: "Python Programming",
+    description:
+      "Dive into text-based coding with Python. Build games, apps, and automation scripts.",
+    icon: "heroicons:code-bracket",
+  },
+  {
+    title: "Artificial Intelligence & Machine Learning",
+    description:
+      "Discover how computers can learn and make decisions. Experiment with simple AI projects and concepts.",
+    icon: "heroicons:light-bulb",
+  },
+  {
+    title: "Mobile App Development",
+    description:
+      "Design and build apps for smartphones and tablets. Learn about user experience and mobile technology.",
+    icon: "heroicons:device-phone-mobile",
+  },
 ];
 
 const sessionHighlights = [
-	{
-		title: "Peer-to-Peer Learning",
-		description:
-			"Experienced participants mentor newcomers, creating a supportive learning community.",
-		icon: "heroicons:users",
-	},
-	{
-		title: "Project-Based Discovery",
-		description:
-			"Learning happens through hands-on exploration of real projects that interest each participant.",
-		icon: "heroicons:light-bulb",
-	},
-	{
-		title: "Expert Guidance",
-		description:
-			"Professional educators and industry volunteers provide mentorship and technical support.",
-		icon: "heroicons:academic-cap",
-	},
+  {
+    title: "Peer-to-Peer Learning",
+    description:
+      "Experienced participants mentor newcomers, creating a supportive learning community.",
+    icon: "heroicons:users",
+  },
+  {
+    title: "Project-Based Discovery",
+    description:
+      "Learning happens through hands-on exploration of real projects that interest each participant.",
+    icon: "heroicons:light-bulb",
+  },
+  {
+    title: "Expert Guidance",
+    description:
+      "Professional educators and industry volunteers provide mentorship and technical support.",
+    icon: "heroicons:academic-cap",
+  },
 ];
 ---
 
 <Layout title="Sessions">
-	<HeroSection 
-		title="Community-Based <span class='gradient-text'>Tech Sessions</span>"
-		description="Student-directed, project-based technology learning in community spaces. Each session adapts to what sparks rangatahi curiosity."
-		image={sessionImage}
-		imageAlt="Tūhura Tech community session in action"
-		backgroundClass="bg-white"
-	/>
-	
-	<!-- Additional session info -->
-	<section class="py-8 bg-tuhura-gray">
-		<div class="container-custom">
-			<div class="max-w-4xl mx-auto">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div class="bg-white rounded-lg p-6">
-						<h3 class="text-lg font-semibold mb-3">Session Details</h3>
-						<ul class="space-y-3">
-							<li class="flex items-center space-x-3">
-								<Icon name="heroicons:map-pin" class="h-5 w-5 text-tuhura-green" />
-								<span class="text-gray-700">15+ locations across Wellington region</span>
-							</li>
-							<li class="flex items-center space-x-3">
-								<Icon name="heroicons:users" class="h-5 w-5 text-tuhura-green" />
-								<span class="text-gray-700">Led by trained kaiako with industry volunteers</span>
-							</li>
-							<li class="flex items-center space-x-3">
-								<Icon name="heroicons:heart" class="h-5 w-5 text-tuhura-green" />
-								<span class="text-gray-700">Tailored to participants' interests</span>
-							</li>
-						</ul>
-					</div>
-					<div class="bg-white rounded-lg p-6">
-						<h3 class="text-lg font-semibold mb-3">Age Groups</h3>
-						<div class="space-y-3">
-							<div>
-								<p class="font-medium text-tuhura-green">Junior Sessions (Years 5–8)</p>
-								<p class="text-gray-600 text-sm">Guided activities for building foundations</p>
-							</div>
-							<div>
-								<p class="font-medium text-tuhura-green">Senior Sessions (Years 9–13)</p>
-								<p class="text-gray-600 text-sm">Student-led project exploration</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<SessionWidget />
-	
-	<!-- Session Types Section - This is covered in overview and multiple other places. This page is also about sessions specifically we don't need this stuff here
+  <HeroSection
+    title="Community-Based <span class='gradient-text'>Tech Sessions</span>"
+    description="Student-directed, project-based technology learning in community spaces. Each session adapts to what sparks rangatahi curiosity."
+    image={sessionImage}
+    imageAlt="Tūhura Tech community session in action"
+    backgroundClass="bg-white"
+  />
+
+  <!-- Additional session info -->
+  <section class="bg-tuhura-gray py-8">
+    <div class="container-custom">
+      <div class="mx-auto max-w-4xl">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div class="rounded-lg bg-white p-6">
+            <h3 class="mb-3 text-lg font-semibold">Session Details</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:map-pin"
+                  class="h-5 w-5 text-tuhura-green"
+                />
+                <span class="text-gray-700"
+                  >15+ locations across Wellington region</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:users"
+                  class="h-5 w-5 text-tuhura-green"
+                />
+                <span class="text-gray-700"
+                  >Led by trained kaiako with industry volunteers</span
+                >
+              </li>
+              <li class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:heart"
+                  class="h-5 w-5 text-tuhura-green"
+                />
+                <span class="text-gray-700"
+                  >Tailored to participants' interests</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-white p-6">
+            <h3 class="mb-3 text-lg font-semibold">Age Groups</h3>
+            <div class="space-y-3">
+              <div>
+                <p class="font-medium text-tuhura-green">
+                  Junior Sessions (Years 5–8)
+                </p>
+                <p class="text-sm text-gray-600">
+                  Guided activities for building foundations
+                </p>
+              </div>
+              <div>
+                <p class="font-medium text-tuhura-green">
+                  Senior Sessions (Years 9–13)
+                </p>
+                <p class="text-sm text-gray-600">
+                  Student-led project exploration
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SessionWidget />
+
+  <!-- Session Types Section - This is covered in overview and multiple other places. This page is also about sessions specifically we don't need this stuff here
 	<section class="py-20 bg-white">
 		<div class="container-custom max-w-6xl mx-auto">
 			<div class="text-center mb-12">
@@ -270,149 +293,177 @@ const sessionHighlights = [
 			</div>
 		</div>
 	</section>-->
-	
-	<IconFeatures 
-		features={topics}
-		title="Session Topics"
-		description="Some of the common topics covered in our sessions."
-		columns="3"
-		iconVariant="colored"
-	/>
 
-	<!-- Visual Gallery Section -->
-	<section class="py-20 bg-tuhura-gray">
-		<div class="container-custom">
-			<div class="text-center max-w-3xl mx-auto mb-16">
-				<h2 class="text-3xl md:text-4xl font-bold">See Our Sessions in Action</h2>
-				<p class="mt-4 text-xl text-gray-600">
-					Get a glimpse of the hands-on learning and collaborative exploration happening in our community sessions.
-				</p>
-			</div>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<div class="relative group overflow-hidden rounded-2xl shadow-lg">
-					<Image
-						src={session1ImageCropped}
-						alt="Rangatahi collaborating on technology projects"
-						class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-						width={600}
-						height={320}
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/70 transition-colors">
-						<div class="absolute bottom-6 left-6 right-6">
-							<h3 class="text-white text-xl font-bold mb-2">Collaborative Learning</h3>
-							<p class="text-white/90">Rangatahi working together on creative technology projects, learning from each other and our mentors.</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="space-y-6">
-					{sessionHighlights.map((highlight) => (
-						<InfoCard 
-							title={highlight.title}
-							description={highlight.description}
-							icon={highlight.icon}
-							variant="default"
-						/>
-					))}
-				</div>
-			</div>
-		</div>
-	</section>
+  <IconFeatures
+    features={topics}
+    title="Session Topics"
+    description="Some of the common topics covered in our sessions."
+    columns="3"
+    iconVariant="colored"
+  />
 
-	<!-- Visual Testimonials -->
-	<section class="py-20">
-		<div class="container-custom">
-			<div class="text-center max-w-3xl mx-auto mb-16">
-				<h2 class="text-3xl md:text-4xl font-bold">Stories from Our Community</h2>
-				<p class="mt-4 text-xl text-gray-600">
-					Hear from rangatahi and whānau about their experiences in our tech sessions.
-				</p>
-			</div>
-			
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-				<div class="bg-gradient-to-br from-tuhura-green to-emerald-600 rounded-2xl p-8 text-white">
-					<div class="mb-6">
-						<Icon name="heroicons:chat-bubble-left-ellipsis" class="w-8 h-8 text-white/80" />
-					</div>
-					<blockquote class="text-lg mb-6 leading-relaxed">
-						"These sessions helped me discover my passion for coding. The mentors are amazing and I love that I can learn at my own pace."
-					</blockquote>
-					<div class="flex items-center">
-						<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-							<Icon name="heroicons:user" class="w-6 h-6" />
-						</div>
-						<div>
-							<p class="font-semibold">Aroha T.</p>
-							<p class="text-white/80 text-sm">Session participant</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-					<div class="mb-6">
-						<Icon name="heroicons:heart" class="w-8 h-8 text-red-500" />
-					</div>
-					<blockquote class="text-lg mb-6 leading-relaxed text-gray-700">
-						"My daughter has grown so much in confidence since joining. She's now teaching me about the apps she's building!"
-					</blockquote>
-					<div class="flex items-center">
-						<div class="w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center mr-4">
-							<Icon name="heroicons:user" class="w-6 h-6 text-tuhura-green" />
-						</div>
-						<div>
-							<p class="font-semibold">Maria R.</p>
-							<p class="text-gray-600 text-sm">Parent</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
-					<div class="mb-6">
-						<Icon name="heroicons:star" class="w-8 h-8 text-yellow-300" />
-					</div>
-					<blockquote class="text-lg mb-6 leading-relaxed">
-						"The best part is the community. We support each other and celebrate every small win together."
-					</blockquote>
-					<div class="flex items-center">
-						<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-							<Icon name="heroicons:user" class="w-6 h-6" />
-						</div>
-						<div>
-							<p class="font-semibold">James K.</p>
-							<p class="text-white/80 text-sm">Regular attendee</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Visual Gallery Section -->
+  <section class="bg-tuhura-gray py-20">
+    <div class="container-custom">
+      <div class="mx-auto mb-16 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold md:text-4xl">
+          See Our Sessions in Action
+        </h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Get a glimpse of the hands-on learning and collaborative exploration
+          happening in our community sessions.
+        </p>
+      </div>
 
-	<section class="py-16 bg-white">
-		<div class="container-custom max-w-2xl mx-auto text-center">
-			<h2 class="text-2xl md:text-3xl font-bold mb-4">Request a Session</h2>
-			<p class="text-lg text-gray-700 mb-4">
-				Interested in having a session at your school, community centre, or
-				library? All our sessions are{" "}
-				<strong>free of charge</strong> thanks to our sponsors and volunteers.
-			</p>
-			<p class="text-lg text-gray-700 mb-6">
-				To request a session, simply{" "}
-				<a
-					href="/contact"
-					class="text-tuhura-green underline font-medium"
-				>
-				contact us
-				</a>{" "}
-				and let us know your needs. We’ll work with you to arrange a session
-				that fits your group and interests.
-			</p>
-			<a
-				href="/contact"
-				class="inline-block px-6 py-3 bg-tuhura-green text-white rounded-lg font-semibold shadow hover:bg-tuhura-blue transition"
-			>
-				Contact Us
-			</a>
-		</div>
-	</section>
+      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+          <Image
+            src={session1ImageCropped}
+            alt="Rangatahi collaborating on technology projects"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            width={600}
+            height={320}
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-colors group-hover:from-black/70"
+          >
+            <div class="absolute right-6 bottom-6 left-6">
+              <h3 class="mb-2 text-xl font-bold text-white">
+                Collaborative Learning
+              </h3>
+              <p class="text-white/90">
+                Rangatahi working together on creative technology projects,
+                learning from each other and our mentors.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          {
+            sessionHighlights.map((highlight) => (
+              <InfoCard
+                title={highlight.title}
+                description={highlight.description}
+                icon={highlight.icon}
+                variant="default"
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Testimonials -->
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="mx-auto mb-16 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold md:text-4xl">
+          Stories from Our Community
+        </h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Hear from rangatahi and whānau about their experiences in our tech
+          sessions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div
+          class="rounded-2xl bg-gradient-to-br from-tuhura-green to-emerald-600 p-8 text-white"
+        >
+          <div class="mb-6">
+            <Icon
+              name="heroicons:chat-bubble-left-ellipsis"
+              class="h-8 w-8 text-white/80"
+            />
+          </div>
+          <blockquote class="mb-6 text-lg leading-relaxed">
+            "These sessions helped me discover my passion for coding. The
+            mentors are amazing and I love that I can learn at my own pace."
+          </blockquote>
+          <div class="flex items-center">
+            <div
+              class="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/20"
+            >
+              <Icon name="heroicons:user" class="h-6 w-6" />
+            </div>
+            <div>
+              <p class="font-semibold">Aroha T.</p>
+              <p class="text-sm text-white/80">Session participant</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-lg">
+          <div class="mb-6">
+            <Icon name="heroicons:heart" class="h-8 w-8 text-red-500" />
+          </div>
+          <blockquote class="mb-6 text-lg leading-relaxed text-gray-700">
+            "My daughter has grown so much in confidence since joining. She's
+            now teaching me about the apps she's building!"
+          </blockquote>
+          <div class="flex items-center">
+            <div
+              class="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-tuhura-green/10"
+            >
+              <Icon name="heroicons:user" class="h-6 w-6 text-tuhura-green" />
+            </div>
+            <div>
+              <p class="font-semibold">Maria R.</p>
+              <p class="text-sm text-gray-600">Parent</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-8 text-white"
+        >
+          <div class="mb-6">
+            <Icon name="heroicons:star" class="h-8 w-8 text-yellow-300" />
+          </div>
+          <blockquote class="mb-6 text-lg leading-relaxed">
+            "The best part is the community. We support each other and celebrate
+            every small win together."
+          </blockquote>
+          <div class="flex items-center">
+            <div
+              class="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/20"
+            >
+              <Icon name="heroicons:user" class="h-6 w-6" />
+            </div>
+            <div>
+              <p class="font-semibold">James K.</p>
+              <p class="text-sm text-white/80">Regular attendee</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="container-custom mx-auto max-w-2xl text-center">
+      <h2 class="mb-4 text-2xl font-bold md:text-3xl">Request a Session</h2>
+      <p class="mb-4 text-lg text-gray-700">
+        Interested in having a session at your school, community centre, or
+        library? All our sessions are{" "}
+        <strong>free of charge</strong> thanks to our sponsors and volunteers.
+      </p>
+      <p class="mb-6 text-lg text-gray-700">
+        To request a session, simply{" "}
+        <a href="/contact" class="font-medium text-tuhura-green underline">
+          contact us
+        </a>{" "}
+        and let us know your needs. We’ll work with you to arrange a session that
+        fits your group and interests.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block rounded-lg bg-tuhura-green px-6 py-3 font-semibold text-white shadow transition hover:bg-tuhura-blue"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
 </Layout>

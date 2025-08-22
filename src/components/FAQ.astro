@@ -2,106 +2,115 @@
 import { Icon } from "astro-icon/components";
 
 const faqs = [
-	{
-		question: "What ages can participate?",
-		answer:
-			"Years 5-13 (ages 9-18). We adapt activities for different experience levels - from complete beginners to advanced students leading their own projects.",
-		icon: "heroicons:users",
-	},
-	{
-		question: "What is 'technology education'?",
-		answer:
-			"Hands-on exploration of coding, robotics, 3D printing, and digital creativity. Learning happens through passion-driven projects led by trained kaiako with industry volunteer support.",
-		icon: "heroicons:code-bracket",
-	},
-	{
-		question: "Are sessions really free?",
-		answer:
-			"Yes! Sessions, equipment, and materials are completely free. We're funded by corporate sponsors, government partnerships, and community donations.",
-		icon: "heroicons:heart",
-	},
-	{
-		question: "Do I need tech experience?",
-		answer:
-			"Not at all! We welcome complete beginners alongside experienced coders. Our mentors adapt to each participant's level.",
-		icon: "heroicons:star",
-	},
-	{
-		question: "Who runs the sessions?",
-		answer:
-			"Trained kaiako (professional educators) with support from industry volunteers. All staff undergo safety checks.",
-		icon: "heroicons:academic-cap",
-	},
-	{
-		question: "Where do sessions happen?",
-		answer:
-			"Schools, libraries, community centres, and marae across Wellington, Lower Hutt, Upper Hutt, and Porirua. Each session is tailored to its community.",
-		icon: "heroicons:map-pin",
-	},
-	{
-		question: "How can my child join?",
-		answer:
-			"Check our sessions page to find locations near you. If we're not in your area yet, contact us about bringing sessions to your community.",
-		icon: "heroicons:hand-raised",
-	},
-	{
-		question: "How can I volunteer or support you?",
-		answer:
-			"We welcome volunteers with tech backgrounds and supporters through donations or partnerships. Contact us to learn about opportunities.",
-		icon: "heroicons:hand-raised",
-	},
-	{
-		question: "How long have you been operating?",
-		answer:
-			"Tūhura Tech was founded in 2022 as a registered charitable trust. We've been serving Wellington communities for over 3 years, supported by established corporate sponsors like WellingtonNZ, Bastion Security Group, Hutt City Council, and Spark Foundation.",
-		icon: "heroicons:clock",
-	},
+  {
+    question: "What ages can participate?",
+    answer:
+      "Years 5-13 (ages 9-18). We adapt activities for different experience levels - from complete beginners to advanced students leading their own projects.",
+    icon: "heroicons:users",
+  },
+  {
+    question: "What is 'technology education'?",
+    answer:
+      "Hands-on exploration of coding, robotics, 3D printing, and digital creativity. Learning happens through passion-driven projects led by trained kaiako with industry volunteer support.",
+    icon: "heroicons:code-bracket",
+  },
+  {
+    question: "Are sessions really free?",
+    answer:
+      "Yes! Sessions, equipment, and materials are completely free. We're funded by corporate sponsors, government partnerships, and community donations.",
+    icon: "heroicons:heart",
+  },
+  {
+    question: "Do I need tech experience?",
+    answer:
+      "Not at all! We welcome complete beginners alongside experienced coders. Our mentors adapt to each participant's level.",
+    icon: "heroicons:star",
+  },
+  {
+    question: "Who runs the sessions?",
+    answer:
+      "Trained kaiako (professional educators) with support from industry volunteers. All staff undergo safety checks.",
+    icon: "heroicons:academic-cap",
+  },
+  {
+    question: "Where do sessions happen?",
+    answer:
+      "Schools, libraries, community centres, and marae across Wellington, Lower Hutt, Upper Hutt, and Porirua. Each session is tailored to its community.",
+    icon: "heroicons:map-pin",
+  },
+  {
+    question: "How can my child join?",
+    answer:
+      "Check our sessions page to find locations near you. If we're not in your area yet, contact us about bringing sessions to your community.",
+    icon: "heroicons:hand-raised",
+  },
+  {
+    question: "How can I volunteer or support you?",
+    answer:
+      "We welcome volunteers with tech backgrounds and supporters through donations or partnerships. Contact us to learn about opportunities.",
+    icon: "heroicons:hand-raised",
+  },
+  {
+    question: "How long have you been operating?",
+    answer:
+      "Tūhura Tech was founded in 2022 as a registered charitable trust. We've been serving Wellington communities for over 3 years, supported by established corporate sponsors like WellingtonNZ, Bastion Security Group, Hutt City Council, and Spark Foundation.",
+    icon: "heroicons:clock",
+  },
 ];
 ---
 
-<section class="py-20 bg-tuhura-gray relative overflow-hidden">
+<section class="relative overflow-hidden bg-tuhura-gray py-20">
   <!-- Subtle background pattern -->
   <div class="absolute inset-0 opacity-5">
     <div class="absolute inset-0 bg-repeat"></div>
   </div>
 
   <div class="container-custom relative">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
       <p class="mt-4 text-xl text-gray-600">
         Everything you need to know about us.
       </p>
     </div>
 
-    <div class="mt-12 max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="mx-auto mt-12 max-w-6xl">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {
           faqs.map((faq, index) => (
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col hover:shadow-md transition-shadow" style={`animation-delay: ${index * 0.1}s`}>
-              <div class="flex items-start mb-4">
-                <div class="w-12 h-12 bg-tuhura-green/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <Icon name={faq.icon} class="w-6 h-6 text-tuhura-green" />
+            <div
+              class="flex flex-col rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="mb-4 flex items-start">
+                <div class="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-tuhura-green/10">
+                  <Icon name={faq.icon} class="h-6 w-6 text-tuhura-green" />
                 </div>
-                <div class="font-semibold text-xl text-tuhura-green leading-tight">{faq.question}</div>
+                <div class="text-xl leading-tight font-semibold text-tuhura-green">
+                  {faq.question}
+                </div>
               </div>
-              <div class="text-gray-600 leading-relaxed text-lg ml-16">{faq.answer}</div>
+              <div class="ml-16 text-lg leading-relaxed text-gray-600">
+                {faq.answer}
+              </div>
             </div>
           ))
         }
       </div>
     </div>
 
-     <div class="mt-16 text-center">
-      <div class="bg-tuhura-green rounded-xl p-8 text-white">
-        <h3 class="text-2xl font-bold mb-4">Still have Questions?</h3>
-        <p class="text-xl mb-6 opacity-90">
+    <div class="mt-16 text-center">
+      <div class="rounded-xl bg-tuhura-green p-8 text-white">
+        <h3 class="mb-4 text-2xl font-bold">Still have Questions?</h3>
+        <p class="mb-6 text-xl opacity-90">
           Our friendly team is here to help.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
+        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="/contact"
+            class="btn bg-white text-tuhura-green hover:bg-gray-100"
+          >
             Contact Us
           </a>
-          
         </div>
       </div>
     </div>

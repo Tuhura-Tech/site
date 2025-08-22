@@ -1,52 +1,58 @@
 ---
 const partners = [
-	{
-		name: "WellingtonNZ",
-		logo: "/partner-wnz.svg",
-		href: "https://wellingtonnz.com",
-	},
-	{
-		name: "Bastion Security Group",
-		logo: "/partner-bsg.svg",
-		href: "https://www.bastionsecurity.co.nz/",
-	},
-	{
-		name: "Hutt City Council",
-		logo: "/partner-hcc.svg",
-		href: "https://huttcity.govt.nz",
-	},
-	{
-		name: "Spark Foundation",
-		logo: "/partner-spark.svg",
-		href: "https://www.sparkfoundation.org.nz",
-	},
+  {
+    name: "WellingtonNZ",
+    logo: "/partner-wnz.svg",
+    href: "https://wellingtonnz.com",
+  },
+  {
+    name: "Bastion Security Group",
+    logo: "/partner-bsg.svg",
+    href: "https://www.bastionsecurity.co.nz/",
+  },
+  {
+    name: "Hutt City Council",
+    logo: "/partner-hcc.svg",
+    href: "https://huttcity.govt.nz",
+  },
+  {
+    name: "Spark Foundation",
+    logo: "/partner-spark.svg",
+    href: "https://www.sparkfoundation.org.nz",
+  },
 ];
 ---
 
 <section class="py-12">
   <div class="container-custom">
-    <div class="text-center mb-12">
-      <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">
+    <div class="mb-12 text-center">
+      <h3
+        class="mb-6 text-sm font-semibold tracking-wider text-gray-500 uppercase"
+      >
         Proudly Supported By
       </h3>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div
+      class="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+    >
       {
         partners.map((partner) => (
           <div class="group">
-            <a 
-              href={partner.href} 
+            <a
+              href={partner.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="p-6 rounded-xl bg-gray-50 hover:bg-white border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300 h-full flex flex-col justify-center items-center text-center"
+              class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
             >
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                class="h-16 w-auto mx-auto mb-4 object-contain filter group-hover:grayscale-0 transition-all duration-300"
+                class="mx-auto mb-4 h-16 w-auto object-contain filter transition-all duration-300 group-hover:grayscale-0"
               />
-              <h4 class="text-sm font-medium text-gray-900 mb-2">{partner.name}</h4>
+              <h4 class="mb-2 text-sm font-medium text-gray-900">
+                {partner.name}
+              </h4>
             </a>
           </div>
         ))

@@ -2,78 +2,82 @@
 import { Image } from "astro:assets";
 
 interface GalleryImage {
-	src: ImageMetadata;
-	alt: string;
-	caption?: string;
-	overlay?: string;
+  src: ImageMetadata;
+  alt: string;
+  caption?: string;
+  overlay?: string;
 }
 
 interface Props {
-	images: GalleryImage[];
-	columns?: "2" | "3" | "4";
-	title?: string;
-	description?: string;
-	className?: string;
+  images: GalleryImage[];
+  columns?: "2" | "3" | "4";
+  title?: string;
+  description?: string;
+  className?: string;
 }
 
 const {
-	images,
-	columns = "3",
-	title,
-	description,
-	className = "",
+  images,
+  columns = "3",
+  title,
+  description,
+  className = "",
 } = Astro.props;
 
 const gridClasses = {
-	"2": "grid-cols-1 md:grid-cols-2",
-	"3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-	"4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+  "2": "grid-cols-1 md:grid-cols-2",
+  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  "4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
 };
 ---
 
 <section class={`py-16 ${className}`}>
   <div class="container-custom">
-    {title && (
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-        {description && (
-          <p class="text-xl text-gray-600">{description}</p>
-        )}
-      </div>
-    )}
-    
-    <div class={`grid ${gridClasses[columns]} gap-8`}>
-      {images.map((image, index) => (
-        <div 
-          class="group cursor-pointer"
-          style={`animation-delay: ${index * 0.1}s`}
-        >
-          <div class="relative bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300">
-            <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
-            
-            {image.overlay && (
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-4 left-4 right-4">
-                  <p class="text-white text-sm font-medium">{image.overlay}</p>
-                </div>
-              </div>
-            )}
-            
-            {image.caption && (
-              <div class="p-4">
-                <p class="text-gray-600 text-sm">{image.caption}</p>
-              </div>
-            )}
-          </div>
+    {
+      title && (
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <h2 class="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+          {description && <p class="text-xl text-gray-600">{description}</p>}
         </div>
-      ))}
+      )
+    }
+
+    <div class={`grid ${gridClasses[columns]} gap-8`}>
+      {
+        images.map((image, index) => (
+          <div
+            class="group cursor-pointer"
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            <div class="relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 group-hover:shadow-xl">
+              <div class="aspect-[4/3] overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
+              {image.overlay && (
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div class="absolute right-4 bottom-4 left-4">
+                    <p class="text-sm font-medium text-white">
+                      {image.overlay}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {image.caption && (
+                <div class="p-4">
+                  <p class="text-sm text-gray-600">{image.caption}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

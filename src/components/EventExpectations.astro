@@ -1,13 +1,12 @@
 ---
 const expectations = [
-	"Events are project-based and designed for all experience levels.",
-	"All events are free of charge and open to everyone, not just students from host locations.",
-	"Sessions are run in partnership with local schools, community centres, and industry partners.",
-	"Support and mentoring from experienced volunteers and professionals.",
+  "Events are project-based and designed for all experience levels.",
+  "All events are free of charge and open to everyone, not just students from host locations.",
+  "Sessions are run in partnership with local schools, community centres, and industry partners.",
+  "Support and mentoring from experienced volunteers and professionals.",
 ];
 ---
-<ul class="list-disc pl-6 text-lg mb-6">
-  {expectations.map((item) => (
-    <li>{item}</li>
-  ))}
+
+<ul class="mb-6 list-disc pl-6 text-lg">
+  {expectations.map((item) => <li>{item}</li>)}
 </ul>

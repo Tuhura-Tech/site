@@ -3,74 +3,85 @@ import { Icon } from "astro-icon/components";
 import Card from "./Card.astro";
 
 interface Feature {
-	title: string;
-	description: string;
-	icon: string;
+  title: string;
+  description: string;
+  icon: string;
 }
 
 interface Props {
-	features: Feature[];
-	title?: string;
-	description?: string;
-	columns?: "2" | "3" | "4";
-	iconVariant?: "default" | "colored" | "outlined";
+  features: Feature[];
+  title?: string;
+  description?: string;
+  columns?: "2" | "3" | "4";
+  iconVariant?: "default" | "colored" | "outlined";
 }
 
 const {
-	features,
-	title,
-	description,
-	columns = "3",
-	iconVariant = "default",
+  features,
+  title,
+  description,
+  columns = "3",
+  iconVariant = "default",
 } = Astro.props;
 
 const gridCols = {
-	"2": "grid-cols-1 md:grid-cols-2",
-	"3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-	"4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+  "2": "grid-cols-1 md:grid-cols-2",
+  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  "4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
 };
 
 const iconClasses = {
-	default:
-		"w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center",
-	colored:
-		"w-20 h-20 bg-tuhura-green rounded-2xl flex items-center justify-center shadow-lg",
-	outlined:
-		"w-12 h-12 border-2 border-tuhura-green rounded-full flex items-center justify-center",
+  default:
+    "w-12 h-12 bg-tuhura-green/10 rounded-full flex items-center justify-center",
+  colored:
+    "w-20 h-20 bg-tuhura-green rounded-2xl flex items-center justify-center shadow-lg",
+  outlined:
+    "w-12 h-12 border-2 border-tuhura-green rounded-full flex items-center justify-center",
 };
 
 const iconSizes = {
-	default: "h-6 w-6",
-	colored: "h-10 w-10",
-	outlined: "h-6 w-6",
+  default: "h-6 w-6",
+  colored: "h-10 w-10",
+  outlined: "h-6 w-6",
 };
 
 const iconColors = {
-	default: "text-tuhura-green",
-	colored: "text-white",
-	outlined: "text-tuhura-green",
+  default: "text-tuhura-green",
+  colored: "text-white",
+  outlined: "text-tuhura-green",
 };
 ---
 
 <section class="py-20">
   <div class="container-custom">
-    {title && (
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-        {description && <p class="text-xl text-gray-600">{description}</p>}
-      </div>
-    )}
+    {
+      title && (
+        <div class="mx-auto mb-16 max-w-3xl text-center">
+          <h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
+          {description && <p class="text-xl text-gray-600">{description}</p>}
+        </div>
+      )
+    }
 
     <div class={`grid ${gridCols[columns]} gap-8`}>
-      {features.map((feature, index) => (
-        <Card variant="hover" class="text-center" style={`animation-delay: ${index * 0.1}s`}>
-          <div class={`${iconClasses[iconVariant]} mx-auto mb-6`}>
-            <Icon name={feature.icon} class={`${iconSizes[iconVariant]} ${iconColors[iconVariant]}`} />
-          </div>
-          <h3 class="text-xl font-semibold mb-4">{feature.title}</h3>
-          <p class="text-gray-600">{feature.description}</p>
-        </Card>
-      ))}
+      {
+        features.map((feature, index) => (
+          <Card
+            variant="hover"
+            class="text-center"
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            <div class={`${iconClasses[iconVariant]} mx-auto mb-6`}>
+              <Icon
+                name={feature.icon}
+                class={`${iconSizes[iconVariant]} ${iconColors[iconVariant]}`}
+              />
+            </div>
+            <h3 class="mb-4 text-xl font-semibold">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </Card>
+        ))
+      }
     </div>
   </div>
 </section>

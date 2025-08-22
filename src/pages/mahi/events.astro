@@ -14,121 +14,135 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const eventCategories = [
-	{
-		title: "Competitions & Challenges",
-		description:
-			"High-energy events that challenge rangatahi to push their creative and technical boundaries",
-		icon: "heroicons:trophy",
-		examples: [
-			"Game jams with NZ Games Festival",
-			"Capture The Flag (CTF) cybersecurity competitions",
-			"Robotics tournaments and RoboCup events",
-			"Hackathons for social good",
-			"Code challenges and programming contests",
-		],
-	},
-	{
-		title: "Showcases & Festivals",
-		description:
-			"Celebrating rangatahi achievements and inspiring the wider community",
-		icon: "heroicons:presentation-chart-line",
-		examples: [
-			"Tech showcase events at community venues",
-			"Game development exhibitions",
-			"Portfolio presentation nights",
-		],
-	},
-	{
-		title: "Collaborative Workshops",
-		description:
-			"Special group events focusing on teamwork and community problem-solving",
-		icon: "heroicons:user-group",
-		examples: [
-			"All Girls Tech events empowering young women",
-			"Cross-age mentoring sessions",
-			"Community tech problem-solving workshops",
-			"Industry partnership events",
-			"Cultural technology fusion events",
-		],
-	},
-	{
-		title: "Industry Connections",
-		description:
-			"Bridging the gap between learning and real-world technology careers",
-		icon: "heroicons:building-office",
-		examples: [
-			"Tech industry meetups for rangatahi",
-			"Workplace visits and tech company tours",
-			"Industry professional guest speaker events",
-			"Career pathway showcases",
-			"Internship and mentorship matching events",
-		],
-	},
+  {
+    title: "Competitions & Challenges",
+    description:
+      "High-energy events that challenge rangatahi to push their creative and technical boundaries",
+    icon: "heroicons:trophy",
+    examples: [
+      "Game jams with NZ Games Festival",
+      "Capture The Flag (CTF) cybersecurity competitions",
+      "Robotics tournaments and RoboCup events",
+      "Hackathons for social good",
+      "Code challenges and programming contests",
+    ],
+  },
+  {
+    title: "Showcases & Festivals",
+    description:
+      "Celebrating rangatahi achievements and inspiring the wider community",
+    icon: "heroicons:presentation-chart-line",
+    examples: [
+      "Tech showcase events at community venues",
+      "Game development exhibitions",
+      "Portfolio presentation nights",
+    ],
+  },
+  {
+    title: "Collaborative Workshops",
+    description:
+      "Special group events focusing on teamwork and community problem-solving",
+    icon: "heroicons:user-group",
+    examples: [
+      "All Girls Tech events empowering young women",
+      "Cross-age mentoring sessions",
+      "Community tech problem-solving workshops",
+      "Industry partnership events",
+      "Cultural technology fusion events",
+    ],
+  },
+  {
+    title: "Industry Connections",
+    description:
+      "Bridging the gap between learning and real-world technology careers",
+    icon: "heroicons:building-office",
+    examples: [
+      "Tech industry meetups for rangatahi",
+      "Workplace visits and tech company tours",
+      "Industry professional guest speaker events",
+      "Career pathway showcases",
+      "Internship and mentorship matching events",
+    ],
+  },
 ];
 
 const eventBenefits = [
-	"Build confidence through real-world challenges",
-	"Connect with rangatahi from different communities",
-	"Experience collaborative problem-solving",
-	"Showcase projects to wider community",
-	"Meet industry professionals and mentors",
-	"Develop presentation and communication skills",
-	"Gain recognition for technical achievements",
-	"Build portfolios and project collections",
+  "Build confidence through real-world challenges",
+  "Connect with rangatahi from different communities",
+  "Experience collaborative problem-solving",
+  "Showcase projects to wider community",
+  "Meet industry professionals and mentors",
+  "Develop presentation and communication skills",
+  "Gain recognition for technical achievements",
+  "Build portfolios and project collections",
 ];
 ---
 
-<Layout title="Events | Hui" description="Join our tech events - competitions, showcases, and collaborative workshops that inspire, challenge, and connect rangatahi with technology and community.">
+<Layout
+  title="Events | Hui"
+  description="Join our tech events - competitions, showcases, and collaborative workshops that inspire, challenge, and connect rangatahi with technology and community."
+>
   <!-- Visual Hero Section -->
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
+  <section
+    class="bg-gradient-to-br from-blue-500/5 to-purple-500/5 pt-20 pb-16 md:pt-28 md:pb-24"
+  >
     <div class="container-custom">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-16">
+      <div
+        class="mx-auto mb-16 grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2"
+      >
         <div class="text-center lg:text-left">
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl">
             Events <span class="text-tuhura-green">(Hui)</span>
           </h1>
           <p class="mt-6 text-xl text-gray-600">
-            Special gatherings that inspire, challenge, and connect rangatahi through competitions, showcases, and collaborative workshops.
+            Special gatherings that inspire, challenge, and connect rangatahi
+            through competitions, showcases, and collaborative workshops.
           </p>
-          <div class="mt-8 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
+          >
             <p class="text-lg text-gray-700">
-              <strong>All events are free and open</strong> to rangatahi from any community, plus whānau and supporters.
+              <strong>All events are free and open</strong> to rangatahi from any
+              community, plus whānau and supporters.
             </p>
           </div>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
             <a href="#event-types" class="btn btn-primary">
               Explore Event Types
             </a>
-            <a href="/contact" class="btn btn-secondary">
-              Join Next Event
-            </a>
+            <a href="/contact" class="btn btn-secondary"> Join Next Event </a>
           </div>
         </div>
-        
+
         <!-- Featured Event Image -->
         <div class="relative">
           <div class="relative overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src={robocupImage}
               alt="RoboCup 2025 competition featuring robotics teams"
-              class="w-full h-100 object-cover"
+              class="h-100 w-full object-cover"
               width={600}
               height={320}
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/100 via-transparent to-transparent">
-              <div class="absolute bottom-0 left-0 right-0">
-                <div class="bg-white/20 rounded-lg p-3">
-                  <h3 class="text-white text-xl font-bold mb-2">RoboCup 2025</h3>
-                  <p class="text-white/90 text-sm">
-                    Teams from across New Zealand competing in robotics challenges, showcasing innovation and teamwork.
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/100 via-transparent to-transparent"
+            >
+              <div class="absolute right-0 bottom-0 left-0">
+                <div class="rounded-lg bg-white/20 p-3">
+                  <h3 class="mb-2 text-xl font-bold text-white">
+                    RoboCup 2025
+                  </h3>
+                  <p class="text-sm text-white/90">
+                    Teams from across New Zealand competing in robotics
+                    challenges, showcasing innovation and teamwork.
                   </p>
                   <div class="mt-3 flex items-center space-x-4">
-                    <div class="flex items-center text-white/80 text-sm">
-                      <Icon name="heroicons:calendar" class="w-4 h-4 mr-1" />
+                    <div class="flex items-center text-sm text-white/80">
+                      <Icon name="heroicons:calendar" class="mr-1 h-4 w-4" />
                       Upcoming
                     </div>
-                    <div class="flex items-center text-white/80 text-sm">
-                      <Icon name="heroicons:users" class="w-4 h-4 mr-1" />
+                    <div class="flex items-center text-sm text-white/80">
+                      <Icon name="heroicons:users" class="mr-1 h-4 w-4" />
                       All levels
                     </div>
                   </div>
@@ -144,36 +158,47 @@ const eventBenefits = [
   <section class="py-16">
     <div class="container-custom">
       <!-- Event Categories -->
-      <div class="max-w-6xl mx-auto mb-20" id="event-types">
-        <h2 class="text-3xl font-bold text-center mb-12">Types of Tech Hui</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {eventCategories.map((category, index) => (
-            <Card class="p-8" style={`animation-delay: ${index * 0.1}s`}>
-              <div class="flex items-center mb-6">
-                <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mr-4">
-                  <Icon name={category.icon} class="h-8 w-8 text-tuhura-green" />
+      <div class="mx-auto mb-20 max-w-6xl" id="event-types">
+        <h2 class="mb-12 text-center text-3xl font-bold">Types of Tech Hui</h2>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {
+            eventCategories.map((category, index) => (
+              <Card class="p-8" style={`animation-delay: ${index * 0.1}s`}>
+                <div class="mb-6 flex items-center">
+                  <div class="mr-4 flex h-16 w-16 items-center justify-center rounded-full bg-tuhura-green/10">
+                    <Icon
+                      name={category.icon}
+                      class="h-8 w-8 text-tuhura-green"
+                    />
+                  </div>
+                  <h3 class="text-2xl font-bold">{category.title}</h3>
                 </div>
-                <h3 class="text-2xl font-bold">{category.title}</h3>
-              </div>
-              <p class="text-gray-700 mb-6">{category.description}</p>
-              <div>
-                <h4 class="font-semibold text-gray-900 mb-3">Recent examples:</h4>
-                <Checklist 
-                  items={category.examples.map(example => ({ text: example }))}
-                  icon="heroicons:sparkles"
-                  iconColor="text-tuhura-green"
-                />
-              </div>
-            </Card>
-          ))}
+                <p class="mb-6 text-gray-700">{category.description}</p>
+                <div>
+                  <h4 class="mb-3 font-semibold text-gray-900">
+                    Recent examples:
+                  </h4>
+                  <Checklist
+                    items={category.examples.map((example) => ({
+                      text: example,
+                    }))}
+                    icon="heroicons:sparkles"
+                    iconColor="text-tuhura-green"
+                  />
+                </div>
+              </Card>
+            ))
+          }
         </div>
       </div>
 
       <!-- Event Benefits -->
-      <div class="bg-tuhura-gray rounded-xl p-8 max-w-4xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">Why Events Matter for Rangatahi</h2>
-        <Checklist 
-          items={eventBenefits.map(benefit => ({ text: benefit }))}
+      <div class="mx-auto mb-16 max-w-4xl rounded-xl bg-tuhura-gray p-8">
+        <h2 class="mb-8 text-center text-3xl font-bold">
+          Why Events Matter for Rangatahi
+        </h2>
+        <Checklist
+          items={eventBenefits.map((benefit) => ({ text: benefit }))}
           icon="heroicons:check-circle"
           iconColor="text-tuhura-green"
           columns="2"
@@ -181,114 +206,137 @@ const eventBenefits = [
       </div>
 
       <!-- Existing Components -->
-      <div class="max-w-4xl mx-auto mb-16">
+      <div class="mx-auto mb-16 max-w-4xl">
         <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-8">Event Experiences</h2>
+          <h2 class="mb-8 text-3xl font-bold">Event Experiences</h2>
           <EventExpectations />
         </div>
-        
+
         <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-8">Featured Past Events</h2>
+          <h2 class="mb-8 text-3xl font-bold">Featured Past Events</h2>
           <EventExamples />
 
           <!-- Event Showcase Gallery -->
-          <div class="mt-20 bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 rounded-3xl p-8 md:p-12">
-            <div class="text-center mb-12">
-              <h3 class="text-3xl font-bold mb-4">Event Highlights</h3>
+          <div
+            class="mt-20 rounded-3xl bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 p-8 md:p-12"
+          >
+            <div class="mb-12 text-center">
+              <h3 class="mb-4 text-3xl font-bold">Event Highlights</h3>
               <p class="text-xl text-gray-600">
                 See the energy, creativity, and collaboration at our tech hui
               </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div class="relative group">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div class="group relative">
+                <div
+                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
+                >
                   <div class="relative overflow-hidden">
                     <Image
                       src={teamPhotoImage}
                       alt="Event participants celebrating achievements"
-                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       width={320}
                       height={192}
                     />
                     <div class="absolute top-4 left-4">
-                      <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span
+                        class="rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white"
+                      >
                         Showcase
                       </span>
                     </div>
                   </div>
                   <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Community Showcase</h4>
-                    <p class="text-gray-600 text-sm">
-                      Celebrating amazing projects and achievements from rangatahi across the region.
+                    <h4 class="mb-2 text-lg font-bold">Community Showcase</h4>
+                    <p class="text-sm text-gray-600">
+                      Celebrating amazing projects and achievements from
+                      rangatahi across the region.
                     </p>
                   </div>
                 </div>
               </div>
-              
-              <div class="relative group">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+
+              <div class="group relative">
+                <div
+                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
+                >
                   <div class="relative overflow-hidden">
                     <Image
                       src={sessionImage}
                       alt="Collaborative tech challenge in progress"
-                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       width={320}
                       height={192}
                     />
                     <div class="absolute top-4 left-4">
-                      <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span
+                        class="rounded-full bg-green-500 px-3 py-1 text-sm font-medium text-white"
+                      >
                         Hackathon
                       </span>
                     </div>
                   </div>
                   <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Collaborative Challenges</h4>
-                    <p class="text-gray-600 text-sm">
-                      Teams working together to solve real-world problems using technology and creativity.
+                    <h4 class="mb-2 text-lg font-bold">
+                      Collaborative Challenges
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Teams working together to solve real-world problems using
+                      technology and creativity.
                     </p>
                   </div>
                 </div>
               </div>
-              
-              <div class="relative group md:col-span-2 lg:col-span-1">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+
+              <div class="group relative md:col-span-2 lg:col-span-1">
+                <div
+                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
+                >
                   <div class="relative overflow-hidden">
                     <Image
                       src={session1Image}
                       alt="Industry professionals mentoring rangatahi"
-                      class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       width={320}
                       height={192}
                     />
                     <div class="absolute top-4 left-4">
-                      <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span
+                        class="rounded-full bg-purple-500 px-3 py-1 text-sm font-medium text-white"
+                      >
                         Industry Connect
                       </span>
                     </div>
                   </div>
                   <div class="p-6">
-                    <h4 class="font-bold text-lg mb-2">Professional Mentorship</h4>
-                    <p class="text-gray-600 text-sm">
-                      Industry professionals sharing insights and building connections with future tech leaders.
+                    <h4 class="mb-2 text-lg font-bold">
+                      Professional Mentorship
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Industry professionals sharing insights and building
+                      connections with future tech leaders.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div class="text-center mt-12">
-              <div class="inline-flex items-center space-x-8 bg-white rounded-full px-8 py-4 shadow-sm">
+
+            <div class="mt-12 text-center">
+              <div
+                class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
+              >
                 <div class="text-center">
                   <div class="text-2xl font-bold text-tuhura-green">12+</div>
                   <div class="text-sm text-gray-600">Events annually</div>
                 </div>
-                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="h-8 w-px bg-gray-200"></div>
                 <div class="text-center">
                   <div class="text-2xl font-bold text-tuhura-green">300+</div>
                   <div class="text-sm text-gray-600">Participants</div>
                 </div>
-                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="h-8 w-px bg-gray-200"></div>
                 <div class="text-center">
                   <div class="text-2xl font-bold text-tuhura-green">100%</div>
                   <div class="text-sm text-gray-600">Free</div>
@@ -296,81 +344,113 @@ const eventBenefits = [
               </div>
             </div>
           </div>
-          
+
           <!-- Highlighted Events -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
             <Card class="p-6">
-              <Icon name="heroicons:puzzle-piece" class="h-12 w-12 text-tuhura-green mb-4" />
-              <h3 class="text-xl font-bold mb-3">Game Jams</h3>
-              <p class="text-gray-700">48-72 hour intensive game development challenges where teams create complete games from concept to playable prototype, often partnering with industry professionals.</p>
+              <Icon
+                name="heroicons:puzzle-piece"
+                class="mb-4 h-12 w-12 text-tuhura-green"
+              />
+              <h3 class="mb-3 text-xl font-bold">Game Jams</h3>
+              <p class="text-gray-700">
+                48-72 hour intensive game development challenges where teams
+                create complete games from concept to playable prototype, often
+                partnering with industry professionals.
+              </p>
             </Card>
             <Card class="p-6">
-              <Icon name="heroicons:shield-check" class="h-12 w-12 text-tuhura-green mb-4" />
-              <h3 class="text-xl font-bold mb-3">CTF Competitions</h3>
-              <p class="text-gray-700">Capture The Flag cybersecurity events where rangatahi learn ethical hacking, digital forensics, and security concepts through hands-on challenges.</p>
+              <Icon
+                name="heroicons:shield-check"
+                class="mb-4 h-12 w-12 text-tuhura-green"
+              />
+              <h3 class="mb-3 text-xl font-bold">CTF Competitions</h3>
+              <p class="text-gray-700">
+                Capture The Flag cybersecurity events where rangatahi learn
+                ethical hacking, digital forensics, and security concepts
+                through hands-on challenges.
+              </p>
             </Card>
             <Card class="p-6">
-              <Icon name="heroicons:cog" class="h-12 w-12 text-tuhura-green mb-4" />
-              <h3 class="text-xl font-bold mb-3">RoboCup Regionals</h3>
-              <p class="text-gray-700">Robotics competitions where teams design, build, and program autonomous robots to compete in various challenges, from soccer to rescue scenarios.</p>
+              <Icon
+                name="heroicons:cog"
+                class="mb-4 h-12 w-12 text-tuhura-green"
+              />
+              <h3 class="mb-3 text-xl font-bold">RoboCup Regionals</h3>
+              <p class="text-gray-700">
+                Robotics competitions where teams design, build, and program
+                autonomous robots to compete in various challenges, from soccer
+                to rescue scenarios.
+              </p>
             </Card>
           </div>
         </div>
       </div>
 
       <!-- How to Participate -->
-      <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">Join Our Next Event</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div
+        class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+      >
+        <h2 class="mb-8 text-center text-3xl font-bold">Join Our Next Event</h2>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
-            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Rangatahi</h3>
-            <Checklist 
+            <h3 class="mb-4 text-2xl font-semibold text-tuhura-green">
+              For Rangatahi
+            </h3>
+            <Checklist
               items={[
-                { text: "All skill levels welcome - from beginner to advanced" },
+                {
+                  text: "All skill levels welcome - from beginner to advanced",
+                },
                 { text: "Join as individuals or teams" },
                 { text: "All equipment and materials provided" },
-                { text: "Mentorship and support throughout events" }
+                { text: "Mentorship and support throughout events" },
               ]}
               icon="heroicons:check-circle"
               iconColor="text-tuhura-green"
             />
           </div>
           <div>
-            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Schools & Communities</h3>
-            <Checklist 
+            <h3 class="mb-4 text-2xl font-semibold text-tuhura-green">
+              For Schools & Communities
+            </h3>
+            <Checklist
               items={[
                 { text: "Host events at your venue with our support" },
                 { text: "Bring groups of students to regional events" },
                 { text: "Connect with industry partners and sponsors" },
-                { text: "Professional development for kaiako" }
+                { text: "Professional development for kaiako" },
               ]}
               icon="heroicons:check-circle"
               iconColor="text-tuhura-green"
             />
           </div>
         </div>
-        
-        <div class="mt-8 p-6 bg-tuhura-gray rounded-lg text-center">
-          <h3 class="text-xl font-bold mb-3">Upcoming Events</h3>
-          <p class="text-gray-700 mb-4">Stay connected to hear about upcoming hui first! Events are announced through our newsletter and community networks.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" class="btn btn-primary">
-              Get Event Updates
-            </a>
-            <a href="/contact" class="btn btn-secondary">
-              Propose an Event
-            </a>
+
+        <div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
+          <h3 class="mb-3 text-xl font-bold">Upcoming Events</h3>
+          <p class="mb-4 text-gray-700">
+            Stay connected to hear about upcoming hui first! Events are
+            announced through our newsletter and community networks.
+          </p>
+          <div class="flex flex-col justify-center gap-4 sm:flex-row">
+            <a href="/contact" class="btn btn-primary"> Get Event Updates </a>
+            <a href="/contact" class="btn btn-secondary"> Propose an Event </a>
           </div>
         </div>
       </div>
 
       <!-- Call to Action -->
-      <CallToAction 
+      <CallToAction
         title="Ready to Experience a Tech Hui?"
         description="Whether you want to compete, collaborate, showcase, or just be inspired - our events create unforgettable experiences that connect rangatahi with technology and community."
         buttons={[
           { text: "Join Our Community", href: "/contact", variant: "primary" },
-          { text: "Explore Regular Sessions", href: "/mahi/sessions", variant: "secondary" }
+          {
+            text: "Explore Regular Sessions",
+            href: "/mahi/sessions",
+            variant: "secondary",
+          },
         ]}
         bgColor="bg-tuhura-green"
         textColor="text-white"

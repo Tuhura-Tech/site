@@ -1,29 +1,34 @@
 ---
 const examples = [
-	{
-		title: "Robotics Challenge",
-		description:
-			"Teams built and programmed robots to complete obstacle courses.",
-	},
-	{
-		title: "Game Jam",
-		description:
-			"Students created video games in a weekend, learning design and coding skills.",
-	},
-	{
-		title: "Tech Expo",
-		description:
-			"A showcase of student projects, from electronics to digital art.",
-	},
-	{
-		title: "Cybersecurity Workshop",
-		description:
-			"Hands-on activities to learn about online safety and digital security.",
-	},
+  {
+    title: "Robotics Challenge",
+    description:
+      "Teams built and programmed robots to complete obstacle courses.",
+  },
+  {
+    title: "Game Jam",
+    description:
+      "Students created video games in a weekend, learning design and coding skills.",
+  },
+  {
+    title: "Tech Expo",
+    description:
+      "A showcase of student projects, from electronics to digital art.",
+  },
+  {
+    title: "Cybersecurity Workshop",
+    description:
+      "Hands-on activities to learn about online safety and digital security.",
+  },
 ];
 ---
-<ul class="list-disc pl-6 text-lg mb-6">
-  {examples.map((ex) => (
-    <li><strong>{ex.title}:</strong> {ex.description}</li>
-  ))}
+
+<ul class="mb-6 list-disc pl-6 text-lg">
+  {
+    examples.map((ex) => (
+      <li>
+        <strong>{ex.title}:</strong> {ex.description}
+      </li>
+    ))
+  }
 </ul>

@@ -2,42 +2,42 @@
 const testimonials = [{ author: "", role: "", quote: "" }];
 ---
 
-<section class="py-20 bg-white relative overflow-hidden">
+<section class="relative overflow-hidden bg-white py-20">
   <!-- Subtle background pattern with parallax effect -->
-  <div class="absolute inset-0 opacity-5 parallax" data-speed="0.15">
+  <div class="parallax absolute inset-0 opacity-5" data-speed="0.15">
     <div class="absolute inset-0 bg-repeat"></div>
   </div>
 
   <div class="container-custom relative">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold">Feedback on what we do</h2>
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold md:text-4xl">Feedback on what we do</h2>
       <p class="mt-4 text-xl text-gray-600">
         See what whanau, tamariki, rangatahi and industry are saying about what
         we do!
       </p>
     </div>
 
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
       {
         testimonials.map((testimonial, index) => (
           <div
-            class="testimonial-card  group"
+            class="testimonial-card group"
             style={`animation-delay: ${index * 0.15}s`}
           >
-            <div class="flex items-center mb-6">
+            <div class="mb-6 flex items-center">
               <div>
-                <h4 class="font-semibold transition-colors  group-hover:text-tuhura-green">
+                <h4 class="font-semibold transition-colors group-hover:text-tuhura-green">
                   {testimonial.author}
                 </h4>
                 <p class="text-sm text-gray-600">{testimonial.role}</p>
               </div>
             </div>
-            <p class="text-gray-700 italic relative">
-              <span class="absolute -top-2 -left-1 text-4xl text-tuhura-green opacity-20 transition-all  group-hover:opacity-40 group-hover:scale-110">
+            <p class="relative text-gray-700 italic">
+              <span class="absolute -top-2 -left-1 text-4xl text-tuhura-green opacity-20 transition-all group-hover:scale-110 group-hover:opacity-40">
                 "
               </span>
               {testimonial.quote}
-              <span class="absolute -bottom-2 -right-1 text-4xl text-tuhura-green opacity-20 transition-all  group-hover:opacity-40 group-hover:scale-110">
+              <span class="absolute -right-1 -bottom-2 text-4xl text-tuhura-green opacity-20 transition-all group-hover:scale-110 group-hover:opacity-40">
                 "
               </span>
             </p>
