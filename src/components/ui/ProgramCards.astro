@@ -8,6 +8,10 @@ interface Program {
   description: string;
   icon: string;
   href?: string;
+  button?: {
+    text: string;
+    onclick?: string;
+  };
   features: string[];
 }
 
@@ -83,6 +87,16 @@ const gridCols = {
               {program.href && (
                 <div class="font-medium text-tuhura-green group-hover:underline">
                   Learn More →
+                </div>
+              )}
+              {program.button && (
+                <div class="mt-4">
+                  <button
+                    class="btn btn-primary"
+                    onclick={program.button.onclick}
+                  >
+                    {program.button.text}
+                  </button>
                 </div>
               )}
             </Element>

@@ -69,7 +69,6 @@ const impactStats = [
   { number: "1000+", label: "Rangatahi reached annually" },
   { number: "15+", label: "Community locations" },
   { number: "100%", label: "Sessions free of charge" },
-  { number: "50+", label: "Volunteers and kaiako" },
 ];
 
 const donationImpact = [
@@ -188,6 +187,12 @@ const donationImpact = [
           icon: type.icon,
           features: type.features,
           ...(type.cta.type === "link" && { href: type.cta.href }),
+          ...(type.cta.type === "button" && {
+            button: {
+              text: type.cta.text,
+              onclick: type.cta.onclick,
+            },
+          }),
         }))}
         columns="3"
       />
@@ -358,8 +363,7 @@ const donationImpact = [
         description="Partnership isn't just financial - it's our two organisations collaborating to solve technology education challenges in the Wellington region and beyond."
         badge="We're recognized in the Wellington Regional Economic Development Plan as the solution to technology education and growing the region's tech workforce."
         buttons={[
-          { text: "Discuss Partnership", href: "/contact", variant: "primary" },
-          { text: "Download Prospectus", href: "#", variant: "outline" },
+          { text: "Discuss Partnership", href: "/contact", variant: "outline" },
         ]}
         bgColor="bg-tuhura-green"
         textColor="text-white"

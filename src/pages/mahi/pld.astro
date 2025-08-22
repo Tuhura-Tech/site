@@ -80,7 +80,6 @@ const learningFramework = [
 
       <div class="mb-12 rounded-xl bg-tuhura-gray p-8">
         <h2 class="mb-6 text-3xl font-bold">PLD Programmes & Opportunities</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div>
             <h3 class="mb-4 text-2xl font-semibold">For Kaiako (Teachers)</h3>
             <ul class="list-disc space-y-3 pl-6 text-lg">
@@ -90,41 +89,17 @@ const learningFramework = [
               </li>
               <li>
                 <strong>Tool Training:</strong> Master platforms like Scratch, Godot,
-                Arduino, and more
+                Python, and more
               </li>
               <li>
                 <strong>Assessment Strategies:</strong> Learn effective ways to assess
                 student progress in tech
               </li>
-              <!--<li><strong>Classroom Management:</strong> Handle diverse skill levels and tech challenges</li>-->
               <li>
                 <strong>Project-Based Learning:</strong> Design engaging, real-world
                 tech projects
               </li>
             </ul>
-          </div>
-          <div>
-            <h3 class="mb-4 text-2xl font-semibold">
-              For Community Volunteers
-            </h3>
-            <ul class="list-disc space-y-3 pl-6 text-lg">
-              <li>
-                <strong>Mentoring Skills:</strong> Support rangatahi effectively
-                and safely
-              </li>
-              <!-- <li><strong>Session Leadership:</strong> Run your own tech education sessions</li>-->
-              <li>
-                <strong>Age-Appropriate Teaching:</strong> Adapt content for different
-                year levels
-              </li>
-              <li>
-                <strong>Safeguarding Training:</strong> Ensure safe learning environments
-              </li>
-              <li>
-                <strong>Industry Connections:</strong> Share your professional experience
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
@@ -162,206 +137,6 @@ const learningFramework = [
           </div>
         </div>
       </div>
-
-      <!-- Visual Impact Section -->
-      <div
-        class="mb-12 rounded-3xl bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 p-8 md:p-12"
-      >
-        <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold md:text-4xl">PLD in Action</h2>
-          <p class="text-xl text-gray-600">
-            See how our professional learning empowers educators and transforms
-            classrooms
-          </p>
-        </div>
-
-        <div class="mb-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h3 class="mb-6 text-2xl font-bold text-tuhura-green">
-              Educator Stories
-            </h3>
-            <div class="space-y-6">
-              <div
-                class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-              >
-                <div class="flex items-start space-x-4">
-                  <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-tuhura-green/10"
-                  >
-                    <Icon
-                      name="heroicons:academic-cap"
-                      class="h-6 w-6 text-tuhura-green"
-                    />
-                  </div>
-                  <div>
-                    <blockquote class="mb-3 text-gray-700">
-                      "The PLD transformed how I teach digital technologies. My
-                      students are now creating games and apps I never thought
-                      possible!"
-                    </blockquote>
-                    <cite class="text-sm font-medium text-gray-600"
-                      >Sarah M., Year 7-8 Teacher</cite
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-              >
-                <div class="flex items-start space-x-4">
-                  <div
-                    class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/10"
-                  >
-                    <Icon
-                      name="heroicons:users"
-                      class="h-6 w-6 text-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <blockquote class="mb-3 text-gray-700">
-                      "As a volunteer mentor, the training gave me confidence to
-                      support rangatahi effectively while keeping sessions fun
-                      and safe."
-                    </blockquote>
-                    <cite class="text-sm font-medium text-gray-600"
-                      >James K., Industry Volunteer</cite
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="space-y-4">
-                <div
-                  class="group relative overflow-hidden rounded-xl shadow-lg"
-                >
-                  <Image
-                    src={sessionImage}
-                    alt="Educator leading hands-on technology session"
-                    class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={280}
-                    height={128}
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                  >
-                    <div class="absolute right-3 bottom-2 left-3">
-                      <p class="text-xs font-medium text-white">
-                        Hands-on Learning
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="group relative overflow-hidden rounded-xl shadow-lg"
-                >
-                  <Image
-                    src={teamPhotoImage}
-                    alt="Professional learning community gathering"
-                    class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={280}
-                    height={192}
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                  >
-                    <div class="absolute right-3 bottom-3 left-3">
-                      <p class="text-sm font-medium text-white">
-                        Community Support
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-4 pt-8">
-                <div
-                  class="group relative overflow-hidden rounded-xl shadow-lg"
-                >
-                  <Image
-                    src={session1Image}
-                    alt="Collaborative professional development session"
-                    class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={280}
-                    height={192}
-                  />
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                  >
-                    <div class="absolute right-3 bottom-3 left-3">
-                      <p class="text-sm font-medium text-white">
-                        Skill Building
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-                >
-                  <div class="text-center">
-                    <div class="mb-1 text-2xl font-bold text-tuhura-green">
-                      95%
-                    </div>
-                    <div class="text-sm text-gray-600">
-                      Educator satisfaction
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Impact Stats -->
-        <div class="text-center">
-          <div
-            class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
-          >
-            <div class="text-center">
-              <div class="text-2xl font-bold text-tuhura-green">150+</div>
-              <div class="text-sm text-gray-600">Educators trained</div>
-            </div>
-            <div class="h-8 w-px bg-gray-200"></div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-tuhura-green">25+</div>
-              <div class="text-sm text-gray-600">Schools supported</div>
-            </div>
-            <div class="h-8 w-px bg-gray-200"></div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-tuhura-green">100%</div>
-              <div class="text-sm text-gray-600">Free</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold mb-6">Join Our Kaiako Community</h2>
-          <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 class="text-2xl font-semibold mb-4">Ongoing Support & Whanaungatanga</h3>
-                <ul class="list-disc pl-6 text-lg space-y-2">
-                  <li>Monthly online hui (meetings) for sharing and problem-solving</li>
-                  <li>Dedicated Slack/Discord community for real-time support</li>
-                  <li>Quarterly in-person networking events</li>
-                  <li>Mentorship partnerships with experienced educators</li>
-                  <li>Access to industry guest speakers and experts</li>
-                  <li>Opportunities to co-present at conferences</li>
-                </ul>
-              </div>
-              <div>
-                
-                <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                  <span class="text-gray-500">Community Meeting Image</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
 
       <div class="rounded-lg bg-tuhura-green p-8 text-center text-white">
         <h3 class="mb-4 text-2xl font-bold">Ready to Get Started?</h3>
