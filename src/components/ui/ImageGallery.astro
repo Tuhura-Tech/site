@@ -2,32 +2,32 @@
 import { Image } from "astro:assets";
 
 interface GalleryImage {
-  src: ImageMetadata;
-  alt: string;
-  caption?: string;
-  overlay?: string;
+	src: ImageMetadata;
+	alt: string;
+	caption?: string;
+	overlay?: string;
 }
 
 interface Props {
-  images: GalleryImage[];
-  columns?: "2" | "3" | "4";
-  title?: string;
-  description?: string;
-  className?: string;
+	images: GalleryImage[];
+	columns?: "2" | "3" | "4";
+	title?: string;
+	description?: string;
+	className?: string;
 }
 
 const {
-  images,
-  columns = "3",
-  title,
-  description,
-  className = "",
+	images,
+	columns = "3",
+	title,
+	description,
+	className = "",
 } = Astro.props;
 
 const gridClasses = {
-  "2": "grid-cols-1 md:grid-cols-2",
-  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-  "4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+	"2": "grid-cols-1 md:grid-cols-2",
+	"3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+	"4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
 };
 ---
 

@@ -2,38 +2,38 @@
 import { Icon } from "astro-icon/components";
 
 interface Props {
-  title: string;
-  description: string;
-  icon?: string;
-  iconColor?: string;
-  href?: string;
-  target?: "_blank" | "_self";
-  variant?: "default" | "large" | "compact";
-  className?: string;
+	title: string;
+	description: string;
+	icon?: string;
+	iconColor?: string;
+	href?: string;
+	target?: "_blank" | "_self";
+	variant?: "default" | "large" | "compact";
+	className?: string;
 }
 
 const {
-  title,
-  description,
-  icon,
-  iconColor = "text-tuhura-green",
-  href,
-  target = "_self",
-  variant = "default",
-  className = "",
+	title,
+	description,
+	icon,
+	iconColor = "text-tuhura-green",
+	href,
+	target = "_self",
+	variant = "default",
+	className = "",
 } = Astro.props;
 
 const Tag = href ? "a" : "div";
 
 const variantClasses = {
-  default: "bg-white rounded-xl p-6 shadow-sm border border-gray-100",
-  large: "bg-white rounded-xl p-8 shadow-lg border border-gray-100",
-  compact: "bg-white rounded-lg p-4 shadow-sm border border-gray-100",
+	default: "bg-white rounded-xl p-6 shadow-sm border border-gray-100",
+	large: "bg-white rounded-xl p-8 shadow-lg border border-gray-100",
+	compact: "bg-white rounded-lg p-4 shadow-sm border border-gray-100",
 };
 
 const hoverClasses = href
-  ? "hover:shadow-xl transition-all duration-300 group"
-  : "";
+	? "hover:shadow-xl transition-all duration-300 group"
+	: "";
 ---
 
 <Tag

@@ -10,83 +10,83 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const supportTypes = [
-  {
-    name: "Kōha (Donations)",
-    description:
-      "Your financial kōha enables us to continue running sessions free of charge for all rangatahi. Every dollar directly supports removing barriers to technology education.",
-    features: [
-      "$20 funds one rangatahi for a 2-hour session",
-      "$800 supports one rangatahi for a full year",
-      "$12,000 funds an entire session location for a year",
-      "One-off or recurring monthly donations",
-      "Tax-deductible charitable giving receipts",
-    ],
-    icon: "heroicons:heart",
-    cta: {
-      type: "link",
-      text: "Make a Kōha",
-      onclick: "https://donate.tuhuratech.org.nz",
-    },
-  },
-  {
-    name: "Volunteer Your Time & Expertise",
-    description:
-      "Share your mātauranga (knowledge) with rangatahi! Support our trained kaiako by bringing your industry experience and passion to sessions.",
-    features: [
-      "Support sessions weekly or as one-off opportunities",
-      "Bring real-world tech experience to rangatahi",
-      "Help build resources and train our staff",
-      "Police vetting check required (we can help with this)",
-      "Flexible commitment - work around your schedule",
-    ],
-    icon: "heroicons:users",
-    cta: {
-      type: "link",
-      text: "Volunteer With Us",
-      href: "/contact",
-    },
-  },
-  {
-    name: "Equipment & Technology Donations",
-    description:
-      "We run entirely on donated equipment! Many whānau don't have laptops, so we provide everything needed for learning.",
-    features: [
-      "Donated laptops enable us to run more sessions",
-      "Electronics components for hands-on exploration",
-      "Robotics kits, 3D printers, and maker equipment",
-      "Even older devices can be valuable for specific activities",
-      "Software licenses and development tools",
-    ],
-    icon: "heroicons:computer-desktop",
-    cta: {
-      type: "link",
-      text: "Donate Equipment",
-      href: "/contact",
-    },
-  },
+	{
+		name: "Kōha (Donations)",
+		description:
+			"Your financial kōha enables us to continue running sessions free of charge for all rangatahi. Every dollar directly supports removing barriers to technology education.",
+		features: [
+			"$20 funds one rangatahi for a 2-hour session",
+			"$800 supports one rangatahi for a full year",
+			"$12,000 funds an entire session location for a year",
+			"One-off or recurring monthly donations",
+			"Tax-deductible charitable giving receipts",
+		],
+		icon: "heroicons:heart",
+		cta: {
+			type: "link",
+			text: "Make a Kōha",
+			onclick: "https://donate.tuhuratech.org.nz",
+		},
+	},
+	{
+		name: "Volunteer Your Time & Expertise",
+		description:
+			"Share your mātauranga (knowledge) with rangatahi! Support our trained kaiako by bringing your industry experience and passion to sessions.",
+		features: [
+			"Support sessions weekly or as one-off opportunities",
+			"Bring real-world tech experience to rangatahi",
+			"Help build resources and train our staff",
+			"Police vetting check required (we can help with this)",
+			"Flexible commitment - work around your schedule",
+		],
+		icon: "heroicons:users",
+		cta: {
+			type: "link",
+			text: "Volunteer With Us",
+			href: "/contact",
+		},
+	},
+	{
+		name: "Equipment & Technology Donations",
+		description:
+			"We run entirely on donated equipment! Many whānau don't have laptops, so we provide everything needed for learning.",
+		features: [
+			"Donated laptops enable us to run more sessions",
+			"Electronics components for hands-on exploration",
+			"Robotics kits, 3D printers, and maker equipment",
+			"Even older devices can be valuable for specific activities",
+			"Software licenses and development tools",
+		],
+		icon: "heroicons:computer-desktop",
+		cta: {
+			type: "link",
+			text: "Donate Equipment",
+			href: "/contact",
+		},
+	},
 ];
 const impactStats = [
-  { number: "1000+", label: "Rangatahi reached annually" },
-  { number: "15+", label: "Community locations" },
-  { number: "100%", label: "Sessions free of charge" },
+	{ number: "1000+", label: "Rangatahi reached annually" },
+	{ number: "15+", label: "Community locations" },
+	{ number: "100%", label: "Sessions free of charge" },
 ];
 
 const donationImpact = [
-  {
-    amount: "$20",
-    impact: "Funds one rangatahi for a 2-hour session",
-    description: "Covers materials, equipment use, and educator support",
-  },
-  {
-    amount: "$800",
-    impact: "Supports one rangatahi for a full year",
-    description: "40 sessions of hands-on technology exploration",
-  },
-  {
-    amount: "$10,000",
-    impact: "Funds an entire session location for a year",
-    description: "Bringing tech education to a whole community",
-  },
+	{
+		amount: "$20",
+		impact: "Funds one rangatahi for a 2-hour session",
+		description: "Covers materials, equipment use, and educator support",
+	},
+	{
+		amount: "$800",
+		impact: "Supports one rangatahi for a full year",
+		description: "40 sessions of hands-on technology exploration",
+	},
+	{
+		amount: "$10,000",
+		impact: "Funds an entire session location for a year",
+		description: "Bringing tech education to a whole community",
+	},
 ];
 ---
 

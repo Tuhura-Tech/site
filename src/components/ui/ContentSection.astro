@@ -1,42 +1,42 @@
 ---
 interface Props {
-  title?: string;
-  description?: string;
-  width?: "sm" | "md" | "lg" | "xl" | "full";
-  backgroundClass?: string;
-  textAlign?: "left" | "center" | "right";
-  padding?: "sm" | "md" | "lg";
-  className?: string;
+	title?: string;
+	description?: string;
+	width?: "sm" | "md" | "lg" | "xl" | "full";
+	backgroundClass?: string;
+	textAlign?: "left" | "center" | "right";
+	padding?: "sm" | "md" | "lg";
+	className?: string;
 }
 
 const {
-  title,
-  description,
-  width = "lg",
-  backgroundClass = "bg-white",
-  textAlign = "center",
-  padding = "lg",
-  className = "",
+	title,
+	description,
+	width = "lg",
+	backgroundClass = "bg-white",
+	textAlign = "center",
+	padding = "lg",
+	className = "",
 } = Astro.props;
 
 const widthClasses = {
-  sm: "max-w-2xl",
-  md: "max-w-3xl",
-  lg: "max-w-4xl",
-  xl: "max-w-6xl",
-  full: "max-w-full",
+	sm: "max-w-2xl",
+	md: "max-w-3xl",
+	lg: "max-w-4xl",
+	xl: "max-w-6xl",
+	full: "max-w-full",
 };
 
 const paddingClasses = {
-  sm: "py-8",
-  md: "py-12",
-  lg: "py-20",
+	sm: "py-8",
+	md: "py-12",
+	lg: "py-20",
 };
 
 const textAlignClasses = {
-  left: "text-left",
-  center: "text-center",
-  right: "text-right",
+	left: "text-left",
+	center: "text-center",
+	right: "text-right",
 };
 ---
 

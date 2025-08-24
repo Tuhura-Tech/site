@@ -6,82 +6,81 @@ import eventImage from "@assets/robocup-2025.jpg";
 import sessionImage from "@assets/session.jpg";
 //import session1ImageCropped from "@assets/session-1-cropped.jpg";
 import session1Image from "@assets/session-1.jpg";
-import teamImage from "@assets/team-photo.jpg";
 import IconFeatures from "@components/ui/IconFeatures.astro";
 import ProgramCards from "@components/ui/ProgramCards.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const mahiOfferings = [
-  {
-    title: "Tech Sessions",
-    subtitle: "After-School & In-School",
-    description:
-      "Weekly sessions where rangatahi explore technology through self-directed, project-based learning.",
-    icon: "heroicons:computer-desktop",
-    href: "/mahi/sessions",
-    features: [
-      "After-school community sessions",
-      "In-school programmes",
-      "Years 5-13",
-      "Self-directed learning",
-    ],
-  },
-  {
-    title: "Events",
-    subtitle: "Competitions & Showcases",
-    description:
-      "Special gatherings that inspire, challenge, and connect rangatahi with technology through competitions and collaborative experiences.",
-    icon: "heroicons:trophy",
-    href: "/mahi/events",
-    features: [
-      "Game jams & hackathons",
-      "Robotics competitions",
-      "Community festivals",
-    ],
-  },
-  {
-    title: "Workshops (Wānanga)",
-    subtitle: "Intensive Learning",
-    description:
-      "Focused sessions that dive deep into specific tech topics over hours or days of concentrated learning.",
-    icon: "heroicons:academic-cap",
-    href: "/mahi/workshops",
-    features: [
-      "Specific topic focus",
-      "All skill levels",
-      "Take-home projects",
-    ],
-  },
-  {
-    title: "Kaiako PLD",
-    subtitle: "Professional Development",
-    description:
-      "Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.",
-    icon: "heroicons:users",
-    href: "/mahi/pld",
-    features: ["Teacher training", "Curriculum support", "Resource sharing"],
-  },
+	{
+		title: "Tech Sessions",
+		subtitle: "After-School & In-School",
+		description:
+			"Weekly sessions where rangatahi explore technology through self-directed, project-based learning.",
+		icon: "heroicons:computer-desktop",
+		href: "/mahi/sessions",
+		features: [
+			"After-school community sessions",
+			"In-school programmes",
+			"Years 5-13",
+			"Self-directed learning",
+		],
+	},
+	{
+		title: "Events",
+		subtitle: "Competitions & Showcases",
+		description:
+			"Special gatherings that inspire, challenge, and connect rangatahi with technology through competitions and collaborative experiences.",
+		icon: "heroicons:trophy",
+		href: "/mahi/events",
+		features: [
+			"Game jams & hackathons",
+			"Robotics competitions",
+			"Community festivals",
+		],
+	},
+	{
+		title: "Workshops (Wānanga)",
+		subtitle: "Intensive Learning",
+		description:
+			"Focused sessions that dive deep into specific tech topics over hours or days of concentrated learning.",
+		icon: "heroicons:academic-cap",
+		href: "/mahi/workshops",
+		features: [
+			"Specific topic focus",
+			"All skill levels",
+			"Take-home projects",
+		],
+	},
+	{
+		title: "Kaiako PLD",
+		subtitle: "Professional Development",
+		description:
+			"Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.",
+		icon: "heroicons:users",
+		href: "/mahi/pld",
+		features: ["Teacher training", "Curriculum support", "Resource sharing"],
+	},
 ];
 
 const supportResources = [
-  {
-    title: "Free Learning Resources",
-    description: "Open-access materials, lesson plans, tutorials and guides",
-    icon: "heroicons:document-text",
-  },
-  /**
+	{
+		title: "Free Learning Resources",
+		description: "Open-access materials, lesson plans, tutorials and guides",
+		icon: "heroicons:document-text",
+	},
+	/**
     Would ideally like to replace this with something
     {
 		title: "Equipment Library",
 		description: "Loaning devices and tech equipment to schools and families",
 		icon: "heroicons:cube",
 	},**/
-  {
-    title: "Consultation & Support",
-    description: "Helping schools develop their own tech education programmes",
-    icon: "heroicons:chat-bubble-left-right",
-  },
+	{
+		title: "Consultation & Support",
+		description: "Helping schools develop their own tech education programmes",
+		icon: "heroicons:chat-bubble-left-right",
+	},
 ];
 ---
 

@@ -1,25 +1,31 @@
 ---
+import { Image } from "astro:assets";
+import bastionSecurityGroup from "@assets/partners/partner-bsg.svg";
+import huttCityCouncil from "@assets/partners/partner-hcc.svg";
+import sparkFoundation from "@assets/partners/partner-spark.svg";
+import wellingtonNZ from "@assets/partners/partner-wnz.svg";
+
 const partners = [
-  {
-    name: "WellingtonNZ",
-    logo: "/partner-wnz.svg",
-    href: "https://wellingtonnz.com",
-  },
-  {
-    name: "Bastion Security Group",
-    logo: "/partner-bsg.svg",
-    href: "https://www.bastionsecurity.co.nz/",
-  },
-  {
-    name: "Hutt City Council",
-    logo: "/partner-hcc.svg",
-    href: "https://huttcity.govt.nz",
-  },
-  {
-    name: "Spark Foundation",
-    logo: "/partner-spark.svg",
-    href: "https://www.sparkfoundation.org.nz",
-  },
+	{
+		name: "WellingtonNZ",
+		logo: wellingtonNZ,
+		href: "https://wellingtonnz.com",
+	},
+	{
+		name: "Bastion Security Group",
+		logo: bastionSecurityGroup,
+		href: "https://www.bastionsecurity.co.nz/",
+	},
+	{
+		name: "Hutt City Council",
+		logo: huttCityCouncil,
+		href: "https://huttcity.govt.nz",
+	},
+	{
+		name: "Spark Foundation",
+		logo: sparkFoundation,
+		href: "https://www.sparkfoundation.org.nz",
+	},
 ];
 ---
 
@@ -45,11 +51,7 @@ const partners = [
               rel="noopener noreferrer"
               class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
             >
-              <img
-                src={partner.logo}
-                alt={`${partner.name} logo`}
-                class="mx-auto mb-4 h-16 w-auto object-contain filter transition-all duration-300 group-hover:grayscale-0"
-              />
+              <Image src={partner.logo} alt={`${partner.name} logo`} class="mx-auto mb-4 h-16 w-auto object-contain filter transition-all duration-300" />
               <h4 class="mb-2 text-sm font-medium text-gray-900">
                 {partner.name}
               </h4>

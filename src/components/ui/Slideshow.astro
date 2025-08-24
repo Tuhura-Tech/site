@@ -2,34 +2,34 @@
 import { Image } from "astro:assets";
 
 interface SlideImage {
-  src: ImageMetadata;
-  alt: string;
-  title: string;
-  description?: string;
+	src: ImageMetadata;
+	alt: string;
+	title: string;
+	description?: string;
 }
 
 interface Props {
-  images: SlideImage[];
-  height?: "sm" | "md" | "lg";
-  autoplay?: boolean;
-  autoplayDelay?: number;
-  showControls?: boolean;
-  className?: string;
+	images: SlideImage[];
+	height?: "sm" | "md" | "lg";
+	autoplay?: boolean;
+	autoplayDelay?: number;
+	showControls?: boolean;
+	className?: string;
 }
 
 const {
-  images,
-  height = "md",
-  autoplay = true,
-  autoplayDelay = 5000,
-  showControls = true,
-  className = "",
+	images,
+	height = "md",
+	autoplay = true,
+	autoplayDelay = 5000,
+	showControls = true,
+	className = "",
 } = Astro.props;
 
 const heightClasses = {
-  sm: "h-64",
-  md: "h-96",
-  lg: "h-[32rem]",
+	sm: "h-64",
+	md: "h-96",
+	lg: "h-[32rem]",
 };
 
 const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;

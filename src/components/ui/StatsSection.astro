@@ -1,16 +1,16 @@
 ---
 interface Stat {
-  title: string;
-  value: string;
-  description: string;
+	title: string;
+	value: string;
+	description: string;
 }
 
 interface Props {
-  stats: Stat[];
-  title?: string;
-  description?: string;
-  variant?: "default" | "card" | "inline";
-  bgColor?: string;
+	stats: Stat[];
+	title?: string;
+	description?: string;
+	variant?: "default" | "card" | "inline";
+	bgColor?: string;
 }
 
 const { stats, title, description } = Astro.props;

@@ -1,35 +1,35 @@
 ---
 interface Button {
-  text: string;
-  href: string;
-  variant?: "primary" | "secondary" | "outline";
+	text: string;
+	href: string;
+	variant?: "primary" | "secondary" | "outline";
 }
 
 interface Props {
-  title: string;
-  description?: string;
-  badge?: string;
-  buttons: Button[];
-  bgColor?: string;
-  textColor?: string;
-  centered?: boolean;
+	title: string;
+	description?: string;
+	badge?: string;
+	buttons: Button[];
+	bgColor?: string;
+	textColor?: string;
+	centered?: boolean;
 }
 
 const {
-  title,
-  description,
-  badge,
-  buttons,
-  bgColor = "bg-tuhura-green",
-  textColor = "text-white",
-  centered = true,
+	title,
+	description,
+	badge,
+	buttons,
+	bgColor = "bg-tuhura-green",
+	textColor = "text-white",
+	centered = true,
 } = Astro.props;
 
 const alignmentClass = centered ? "text-center" : "text-left";
 const buttonVariants = {
-  primary: "btn btn-primary",
-  secondary: "btn btn-secondary",
-  outline: "btn bg-transparent border-2 border-white hover:bg-white/10",
+	primary: "btn btn-primary",
+	secondary: "btn btn-secondary",
+	outline: "btn bg-transparent border-2 border-white hover:bg-white/10",
 };
 ---
 

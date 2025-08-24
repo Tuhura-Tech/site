@@ -1,544 +1,176 @@
 ---
-import { Image } from "astro:assets";
-// Import images
-import robocupImage from "@assets/robocup-2025.jpg";
-import sessionImage from "@assets/session.jpg";
-import session1Image from "@assets/session-1.jpg";
-import teamPhotoImage from "@assets/team-photo.jpg";
-import EventExamples from "@components/EventExamples.astro";
-import EventExpectations from "@components/EventExpectations.astro";
-import Partners from "@components/Partners.astro";
-import CallToAction from "@components/ui/CallToAction.astro";
-import Card from "@components/ui/Card.astro";
-import Checklist from "@components/ui/Checklist.astro";
 import Layout from "@layouts/Layout.astro";
+import HeroSection from "@components/ui/HeroSection.astro";
+import Card from "@components/ui/Card.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
-const eventCategories = [
-  {
-    title: "Competitions & Challenges",
-    description:
-      "High-energy events that challenge rangatahi to push their creative and technical boundaries, often in partnership with national organizations",
-    icon: "heroicons:trophy",
-    examples: [
-      "Game jams with NZ Games Festival",
-      "Capture The Flag (CTF) cybersecurity competitions",
-      "RoboCup events and competitions",
-      "VEX Robotics tournaments with Kiwibots",
-      "Aquabots marine robotics with Ministry of Inspiration",
-      "Hackathons for social good",
-    ],
-  },
-  {
-    title: "Showcases & Festivals",
-    description:
-      "Celebrating rangatahi achievements and inspiring the wider community",
-    icon: "heroicons:presentation-chart-line",
-    examples: [
-      "Tech showcase events at community venues",
-      "Game development exhibitions",
-      "Portfolio presentation nights",
-    ],
-  },
-  {
-    title: "Collaborative Events",
-    description:
-      "Special group events for session participants, focusing on teamwork and community connections",
-    icon: "heroicons:user-group",
-    examples: [
-      "All Girls Tech events empowering young women",
-      "Cross-age mentoring sessions between participants",
-      "Collaborative project development events",
-      "Industry partnership events for participants",
-      "Cultural technology fusion events",
-    ],
-  },
-  {
-    title: "Industry Connections",
-    description:
-      "Bridging the gap between learning and real-world technology careers",
-    icon: "heroicons:building-office",
-    examples: [
-      "Tech industry meetups for rangatahi",
-      "Workplace visits and tech company tours",
-      "Industry professional guest speaker events",
-      "Career pathway showcases",
-      "Internship and mentorship matching events",
-    ],
-  },
+import partnerDUCTF from "@assets/community-partners/ductf.svg";
+import partnerKiwibots from "@assets/community-partners/kiwibots.png";
+import partnerMOI from "@assets/community-partners/ministryofinspiration.png";
+import robocupImage from "@assets/robocup-2025.jpg";
+
+// Types
+type UpcomingEvent = {
+	title: string;
+	description: string;
+	icon: string;
+	frequency: string;
+	duration: string;
+};
+
+type Collab = {
+	logo?: ImageMetadata;
+	partnerName: string;
+	eventName: string;
+	description: string;
+};
+
+// Data
+const upcomingEvents: UpcomingEvent[] = [
+	{
+		title: "Game Jams",
+		description: "Weekend team game-building sprints and showcases.",
+		icon: "heroicons:puzzle-piece",
+		frequency: "Quarterly",
+		duration: "~48h",
+	},
+	{
+		title: "Robotics Competitions",
+		description: "Design, build, and program robots to complete challenges.",
+		icon: "heroicons:cpu-chip",
+		frequency: "Seasonal",
+		duration: "1–2 days",
+	},
+	{
+		title: "Hackathons",
+		description: "Collaborative coding to solve real-world problems.",
+		icon: "heroicons:code-bracket",
+		frequency: "Twice yearly",
+		duration: "24–48h",
+	},
 ];
 
-const eventBenefits = [
-  "Build confidence through real-world challenges",
-  "Connect with rangatahi from different communities",
-  "Experience collaborative problem-solving",
-  "Showcase projects to wider community",
-  "Meet industry professionals and mentors",
-  "Develop presentation and communication skills",
-  "Gain recognition for technical achievements",
-  "Build portfolios and project collections",
+const collabs: Collab[] = [
+	{
+		logo: partnerDUCTF,
+		partnerName: "DownUnderCTF",
+		eventName: "DownUnderCTF for Aotearoa",
+		description:
+			"National cybersecurity competition connecting rangatahi with real-world security challenges",
+	},
+	{
+		logo: partnerKiwibots,
+		partnerName: "Kiwibots",
+		eventName: "VEX Robotics Competitions",
+		description:
+			"Competitive robotics tournaments where teams design, build, and program robots",
+	},
+	{
+		logo: partnerMOI,
+		partnerName: "Ministry of Inspiration",
+		eventName: "RoboCup Junior",
+		description:
+			"International robotics challenge fostering STEM education through competitive robotics",
+	},
+	{
+		logo: partnerMOI,
+		partnerName: "Ministry of Inspiration",
+		eventName: "Aquabots Challenge",
+		description:
+			"Underwater robotics competition combining engineering with environmental awareness",
+	},
+	{
+		partnerName: "NZ Games Festival",
+		eventName: "Student Game Jam",
+		description:
+			"Collaborative game creation events where rangatahi build games in teams over weekends",
+	},
+	{
+		partnerName: "Genesia Girls",
+		eventName: "All Girls Hackathon",
+		description:
+			"Empowering female rangatahi through collaborative coding and problem-solving challenges",
+	},
 ];
 ---
 
-<Layout
-  title="Events | Hui"
-  description="Join our tech events - competitions, showcases, and collaborative workshops that inspire, challenge, and connect rangatahi with technology and community."
->
-  <!-- Visual Hero Section -->
-  <section
-    class="bg-gradient-to-br from-blue-500/5 to-purple-500/5 pt-20 pb-16 md:pt-28 md:pb-24"
-  >
-    <div class="container-custom">
-      <div
-        class="mx-auto mb-16 grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2"
-      >
-        <div class="text-center lg:text-left">
-          <h1 class="text-4xl leading-tight font-bold md:text-5xl">
-            Events <span class="text-tuhura-green">(Hui)</span>
-          </h1>
-          <p class="mt-6 text-xl text-gray-600">
-            Special gatherings for rangatahi in our sessions - competitions,
-            showcases, and collaborative events that inspire, challenge, and
-            connect participants.
-          </p>
-          <div
-            class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-          >
-            <p class="text-lg text-gray-700">
-              <strong>For session participants:</strong> These events extend the
-              learning and community connections built in our regular after-school
-              sessions.
-            </p>
-          </div>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#event-types" class="btn btn-primary">
-              Explore Event Types
-            </a>
-            <a href="/contact" class="btn btn-secondary"> Join Next Event </a>
-          </div>
-        </div>
+<Layout title="Events" description="Competitions, hackathons, and partner-led events for rangatahi across the region.">
+	<HeroSection
+		title="Tech Events & <span class='gradient-text'>Competitions</span>"
+		description="Showcase skills, connect with peers, and take on real-world challenges."
+		image={robocupImage}
+		imageAlt="RoboCup competition with student participants"
+		backgroundClass="bg-white"
+		ctaText="Explore Events"
+		ctaHref="#types"
+	/>
 
-        <!-- Featured Event Image -->
-        <div class="relative">
-          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-            <Image
-              src={robocupImage}
-              alt="RoboCup 2025 competition featuring robotics teams"
-              class="h-100 w-full object-cover"
-              width={600}
-              height={320}
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/100 via-transparent to-transparent"
-            >
-              <div class="absolute right-0 bottom-0 left-0">
-                <div class="rounded-lg bg-white/20 p-3">
-                  <h3 class="mb-2 text-xl font-bold text-white">
-                    RoboCup 2025
-                  </h3>
-                  <p class="text-sm text-white/90">
-                    Teams from across New Zealand competing in robotics
-                    challenges, showcasing innovation and teamwork.
-                  </p>
-                  <div class="mt-3 flex items-center space-x-4">
-                    <div class="flex items-center text-sm text-white/80">
-                      <Icon name="heroicons:calendar" class="mr-1 h-4 w-4" />
-                      Upcoming
-                    </div>
-                    <div class="flex items-center text-sm text-white/80">
-                      <Icon name="heroicons:users" class="mr-1 h-4 w-4" />
-                      All levels
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<!-- Regular Events -->
+	<section id="regular" class="bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 py-20 scroll-mt-24">
+		<div class="container-custom">
+			<div class="mx-auto mb-12 max-w-3xl text-center">
+				<h2 class="mb-4 text-3xl font-bold md:text-4xl">Regular Events</h2>
+				<p class="text-lg leading-relaxed text-gray-600">Recurring events through the year.</p>
+			</div>
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+				{upcomingEvents.map((event) => (
+					<Card variant="hover" padding="lg">
+						<div class="mb-6 flex items-start">
+							<div class="mr-6 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
+								<Icon name={event.icon} class="h-8 w-8 text-white" />
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900">{event.title}</h3>
+								<div class="mt-2 flex gap-4 text-xs text-tuhura-green">
+									<span class="font-medium">
+										<Icon name="heroicons:calendar" class="mr-1 inline h-4 w-4" />
+										{event.frequency}
+									</span>
+									<span class="font-medium">
+										<Icon name="heroicons:clock" class="mr-1 inline h-4 w-4" />
+										{event.duration}
+									</span>
+								</div>
+							</div>
+						</div>
+						<p class="text-base leading-relaxed text-gray-700">{event.description}</p>
+					</Card>
+				))}
+			</div>
+		</div>
+	</section>
 
-  <section class="py-16">
-    <div class="container-custom">
-      <!-- Event Categories -->
-      <div class="mx-auto mb-20 max-w-6xl" id="event-types">
-        <h2 class="mb-12 text-center text-3xl font-bold">Types of Tech Hui</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {
-            eventCategories.map((category, index) => (
-              <Card class="p-8" style={`animation-delay: ${index * 0.1}s`}>
-                <div class="mb-6 flex items-center">
-                  <div class="mr-4 flex h-16 w-16 items-center justify-center rounded-full bg-tuhura-green/10">
-                    <Icon
-                      name={category.icon}
-                      class="h-8 w-8 text-tuhura-green"
-                    />
-                  </div>
-                  <h3 class="text-2xl font-bold">{category.title}</h3>
-                </div>
-                <p class="mb-6 text-gray-700">{category.description}</p>
-                <div>
-                  <h4 class="mb-3 font-semibold text-gray-900">
-                    Recent examples:
-                  </h4>
-                  <Checklist
-                    items={category.examples.map((example) => ({
-                      text: example,
-                    }))}
-                    icon="heroicons:sparkles"
-                    iconColor="text-tuhura-green"
-                  />
-                </div>
-              </Card>
-            ))
-          }
-        </div>
-      </div>
-
-      <!-- Event Benefits -->
-      <div class="mx-auto mb-16 max-w-4xl rounded-xl bg-tuhura-gray p-8">
-        <h2 class="mb-8 text-center text-3xl font-bold">
-          Why Events Matter for Rangatahi
-        </h2>
-        <Checklist
-          items={eventBenefits.map((benefit) => ({ text: benefit }))}
-          icon="heroicons:check-circle"
-          iconColor="text-tuhura-green"
-          columns="2"
-        />
-      </div>
-
-      <!-- Existing Components -->
-      <div class="mx-auto mb-16 max-w-4xl">
-        <div class="mb-12">
-          <h2 class="mb-8 text-3xl font-bold">Event Experiences</h2>
-          <EventExpectations />
-        </div>
-
-        <div class="mb-12">
-          <h2 class="mb-8 text-3xl font-bold">Featured Past Events</h2>
-          <EventExamples />
-
-          <!-- Event Showcase Gallery -->
-          <div
-            class="mt-20 rounded-3xl bg-gradient-to-br from-tuhura-green/5 to-blue-500/5 p-8 md:p-12"
-          >
-            <div class="mb-12 text-center">
-              <h3 class="mb-4 text-3xl font-bold">Event Highlights</h3>
-              <p class="text-xl text-gray-600">
-                See the energy, creativity, and collaboration at our tech hui
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div class="group relative">
-                <div
-                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
-                >
-                  <div class="relative overflow-hidden">
-                    <Image
-                      src={teamPhotoImage}
-                      alt="Event participants celebrating achievements"
-                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      width={320}
-                      height={192}
-                    />
-                    <div class="absolute top-4 left-4">
-                      <span
-                        class="rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white"
-                      >
-                        Showcase
-                      </span>
-                    </div>
-                  </div>
-                  <div class="p-6">
-                    <h4 class="mb-2 text-lg font-bold">Community Showcase</h4>
-                    <p class="text-sm text-gray-600">
-                      Celebrating amazing projects and achievements from
-                      rangatahi across the region.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="group relative">
-                <div
-                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
-                >
-                  <div class="relative overflow-hidden">
-                    <Image
-                      src={sessionImage}
-                      alt="Collaborative tech challenge in progress"
-                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      width={320}
-                      height={192}
-                    />
-                    <div class="absolute top-4 left-4">
-                      <span
-                        class="rounded-full bg-green-500 px-3 py-1 text-sm font-medium text-white"
-                      >
-                        Hackathon
-                      </span>
-                    </div>
-                  </div>
-                  <div class="p-6">
-                    <h4 class="mb-2 text-lg font-bold">
-                      Collaborative Challenges
-                    </h4>
-                    <p class="text-sm text-gray-600">
-                      Teams working together to solve real-world problems using
-                      technology and creativity.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="group relative md:col-span-2 lg:col-span-1">
-                <div
-                  class="overflow-hidden rounded-xl bg-white shadow-lg transition-shadow group-hover:shadow-xl"
-                >
-                  <div class="relative overflow-hidden">
-                    <Image
-                      src={session1Image}
-                      alt="Industry professionals mentoring rangatahi"
-                      class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      width={320}
-                      height={192}
-                    />
-                    <div class="absolute top-4 left-4">
-                      <span
-                        class="rounded-full bg-purple-500 px-3 py-1 text-sm font-medium text-white"
-                      >
-                        Industry Connect
-                      </span>
-                    </div>
-                  </div>
-                  <div class="p-6">
-                    <h4 class="mb-2 text-lg font-bold">
-                      Professional Mentorship
-                    </h4>
-                    <p class="text-sm text-gray-600">
-                      Industry professionals sharing insights and building
-                      connections with future tech leaders.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-12 text-center">
-              <div
-                class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
-              >
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-tuhura-green">12+</div>
-                  <div class="text-sm text-gray-600">Events annually</div>
-                </div>
-                <div class="h-8 w-px bg-gray-200"></div>
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-tuhura-green">300+</div>
-                  <div class="text-sm text-gray-600">Participants</div>
-                </div>
-                <div class="h-8 w-px bg-gray-200"></div>
-                <div class="text-center">
-                  <div class="text-2xl font-bold text-tuhura-green">100%</div>
-                  <div class="text-sm text-gray-600">Free</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Highlighted Events -->
-          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            <Card class="p-6">
-              <Icon
-                name="heroicons:puzzle-piece"
-                class="mb-4 h-12 w-12 text-tuhura-green"
-              />
-              <h3 class="mb-3 text-xl font-bold">Game Jams</h3>
-              <p class="text-gray-700">
-                48-72 hour intensive game development challenges in partnership
-                with NZ Games Festival, where teams create complete games from
-                concept to playable prototype with industry mentorship.
-              </p>
-            </Card>
-            <Card class="p-6">
-              <Icon
-                name="heroicons:shield-check"
-                class="mb-4 h-12 w-12 text-tuhura-green"
-              />
-              <h3 class="mb-3 text-xl font-bold">CTF Competitions</h3>
-              <p class="text-gray-700">
-                Capture The Flag cybersecurity events where rangatahi learn
-                ethical hacking, digital forensics, and security concepts
-                through hands-on challenges.
-              </p>
-            </Card>
-            <Card class="p-6">
-              <Icon
-                name="heroicons:cog"
-                class="mb-4 h-12 w-12 text-tuhura-green"
-              />
-              <h3 class="mb-3 text-xl font-bold">Robotics Competitions</h3>
-              <p class="text-gray-700">
-                International competitions including RoboCup events, VEX
-                tournaments with Kiwibots, and Aquabots marine robotics with
-                Ministry of Inspiration - connecting rangatahi to world-class
-                robotics challenges.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </div>
-
-      <!-- How to Participate -->
-      <div
-        class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
-      >
-        <h2 class="mb-8 text-center text-3xl font-bold">Join Our Next Event</h2>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <h3 class="mb-4 text-2xl font-semibold text-tuhura-green">
-              For Rangatahi
-            </h3>
-            <Checklist
-              items={[
-                {
-                  text: "All skill levels welcome - from beginner to advanced",
-                },
-                { text: "Join as individuals or teams" },
-                { text: "All equipment and materials provided" },
-                { text: "Mentorship and support throughout events" },
-              ]}
-              icon="heroicons:check-circle"
-              iconColor="text-tuhura-green"
-            />
-          </div>
-          <div>
-            <h3 class="mb-4 text-2xl font-semibold text-tuhura-green">
-              For Schools & Communities
-            </h3>
-            <Checklist
-              items={[
-                { text: "Host events at your venue with our support" },
-                { text: "Bring groups of students to regional events" },
-                { text: "Connect with industry partners and sponsors" },
-                { text: "Professional development for kaiako" },
-              ]}
-              icon="heroicons:check-circle"
-              iconColor="text-tuhura-green"
-            />
-          </div>
-        </div>
-
-        <div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
-          <h3 class="mb-3 text-xl font-bold">Upcoming Events</h3>
-          <p class="mb-4 text-gray-700">
-            Stay connected to hear about upcoming hui first! Events are
-            announced through our newsletter and community networks.
-          </p>
-          <div class="flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/contact" class="btn btn-primary"> Get Event Updates </a>
-            <a href="/contact" class="btn btn-secondary"> Propose an Event </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Partnership & Collaboration Section -->
-      <div class="mx-auto mb-20 max-w-6xl">
-        <div class="mb-12 text-center">
-          <h2 class="mb-4 text-3xl font-bold md:text-4xl">
-            Event Partnerships
-          </h2>
-          <p class="mx-auto max-w-3xl text-xl text-gray-600">
-            We collaborate with national organizations, industry partners, and
-            community groups to create amazing opportunities for rangatahi.
-            Every event is stronger when we work together.
-          </p>
-        </div>
-
-        <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Card class="p-6">
-            <h3 class="mb-4 text-xl font-bold text-tuhura-green">
-              Current Collaborations
-            </h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <Icon
-                  name="heroicons:trophy"
-                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
-                />
-                <span
-                  ><strong>NZ Games Festival:</strong> Game development jams and
-                  showcases</span
-                >
-              </li>
-              <li class="flex items-start">
-                <Icon
-                  name="heroicons:cpu-chip"
-                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
-                />
-                <span
-                  ><strong>RoboCup Federation:</strong> International robotics competitions</span
-                >
-              </li>
-              <li class="flex items-start">
-                <Icon
-                  name="heroicons:cog"
-                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
-                />
-                <span
-                  ><strong>Kiwibots:</strong> VEX Robotics tournaments and training</span
-                >
-              </li>
-              <li class="flex items-start">
-                <Icon
-                  name="heroicons:beaker"
-                  class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
-                />
-                <span
-                  ><strong>Ministry of Inspiration:</strong> Aquabots marine robotics
-                  competitions</span
-                >
-              </li>
-            </ul>
-          </Card>
-
-          <Card class="bg-tuhura-green p-6 text-white">
-            <h3 class="mb-4 text-xl font-bold">Want to Collaborate?</h3>
-            <p class="mb-4 opacity-90">
-              We're always looking for new partners to create exciting
-              opportunities for rangatahi. Whether you're an organization,
-              charity, or company with ideas for tech events.
-            </p>
-            <a
-              href="/contact"
-              class="btn bg-white text-tuhura-green hover:bg-gray-100"
-            >
-              Discuss Partnership
-            </a>
-          </Card>
-        </div>
-
-        <Partners />
-      </div>
-
-      <!-- Call to Action -->
-      <CallToAction
-        title="Ready to Experience a Tech Hui?"
-        description="Whether you want to compete, collaborate, showcase, or just be inspired - our events create unforgettable experiences that connect rangatahi with technology and community."
-        buttons={[
-          { text: "Join Our Community", href: "/contact", variant: "primary" },
-          {
-            text: "Explore Regular Sessions",
-            href: "/mahi/sessions",
-            variant: "secondary",
-          },
-        ]}
-        bgColor="bg-tuhura-green"
-        textColor="text-white"
-      />
-    </div>
-  </section>
+	<!-- Partnership Collaborations -->
+	<section id="collab" class="bg-tuhura-gray py-20 scroll-mt-24">
+		<div class="container-custom">
+			<div class="mx-auto mb-12 max-w-3xl text-center">
+				<h2 class="mb-4 text-3xl font-bold md:text-4xl">Community Partnership Events</h2>
+				<p class="text-lg leading-relaxed text-gray-600">Delivered with national and community partners.</p>
+			</div>
+			<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+				{collabs.map((collab) => (
+					<Card variant="hover" padding="lg">
+						<div class="mb-6 flex items-start">
+							{collab.logo ? (
+								<div class="mr-6 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-white p-2 shadow-lg">
+									<Image src={collab.logo} alt={`${collab.partnerName} logo`} class="h-12 w-12 object-contain" />
+								</div>
+							) : (
+								<div class="mr-6 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
+									<Icon name="heroicons:building-office" class="h-8 w-8 text-white" />
+								</div>
+							)}
+							<div>
+								<h3 class="text-xl font-bold text-gray-900">{collab.eventName}</h3>
+								<p class="text-sm font-medium text-tuhura-green">Partner: {collab.partnerName}</p>
+							</div>
+						</div>
+						<p class="text-gray-700">{collab.description}</p>
+					</Card>
+				))}
+			</div>
+		</div>
+	</section>
 </Layout>

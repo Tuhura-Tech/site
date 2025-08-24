@@ -4,26 +4,26 @@ import { Icon } from "astro-icon/components";
 import Card from "./Card.astro";
 
 interface Person {
-  name: string;
-  role: string;
-  bio: string;
-  avatar: ImageMetadata;
-  social: Record<string, string>;
+	name: string;
+	role: string;
+	bio: string;
+	avatar: ImageMetadata;
+	social: Record<string, string>;
 }
 
 interface Props {
-  people: Person[];
-  title?: string;
-  description?: string;
-  columns?: "2" | "3" | "4";
+	people: Person[];
+	title?: string;
+	description?: string;
+	columns?: "2" | "3" | "4";
 }
 
 const { people, title, description, columns = "3" } = Astro.props;
 
 const gridCols = {
-  "2": "grid-cols-1 md:grid-cols-2",
-  "3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-  "4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+	"2": "grid-cols-1 md:grid-cols-2",
+	"3": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+	"4": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
 };
 ---
 

@@ -4,175 +4,174 @@ import logoSrc from "@assets/logo.svg";
 import lillianhImage from "@assets/team/LHTheadshot.jpg";
 import neenuImage from "@assets/team/neenu.jpg";
 import teamImage from "@assets/team-photo.jpg";
-import Partners from "@components/Partners.astro";
 import IconFeatures from "@components/ui/IconFeatures.astro";
 import PersonCards from "@components/ui/PersonCards.astro";
 import Layout from "@layouts/Layout.astro";
 
 const teamMembers = [
-  {
-    name: "Leon Bowie",
-    role: "Co-Founder & CEO",
-    bio: "Co-founder with 7+ years in tech education through Code Clubs and robotics coaching. DevOps Engineer by trade who leads Tūhura Tech's operations and partnerships.",
-    avatar: logoSrc,
-    social: {
-      linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
-      github: "https://github.com/Darkflame72",
-      // envolope: "mailto:leon@tuhuratech.org.nz",
-    },
-  },
-  {
-    name: "Lillian Hide-Tobin",
-    role: "Lead Mentor",
-    bio: "Computer Science and Psychology graduate passionate about tech as a creative medium, especially game development and algorithmic arts. Dedicated to encouraging young women in technology.",
-    avatar: lillianhImage,
-    social: {},
-  },
-  {
-    name: "Zelle Marcovicci",
-    role: "Lead Mentor",
-    bio: "Creative Media Production graduate specializing in video games and interactive technology. Teaches immersive storytelling and programming at Massey University alongside her Tūhura Tech work.",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Neenu",
-    role: "Lead Mentor",
-    bio: "Electronics Engineering graduate with Masters in Signal Processing, currently pursuing Professional Business Analysis at VUW where she also tutors. Passionate about inspiring kids through hands-on tech learning.",
-    avatar: neenuImage,
-    social: {},
-  },
-  {
-    name: "Irma",
-    role: "Admin and Operations Coordinator",
-    bio: "Irma brings expertise in business operations, administration and finance to Tūhura Tech. Working quietly behind the scenes, she keeps everything organised and running smoothly while applying financial discipline and community focus to help Tūhura Tech deliver more impactful programmes and build sustainable partnerships with funders and supporters. She values inclusivity and loves being part of the team that breaks barriers in technology education and makes it accessible to all.",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Yui",
-    role: "Community Coordinator",
-    bio: "Commerce student who brings her Industrial Design background and student support experience to spreading the word about Tūhura Tech's awesome mahi. She helps share what the organisation is doing and makes sure more people know about the opportunities available.",
-    avatar: logoSrc,
-    social: {},
-  },
+	{
+		name: "Leon Bowie",
+		role: "Co-Founder & CEO",
+		bio: "Co-founder with 7+ years in tech education through Code Clubs and robotics coaching. DevOps Engineer by trade who leads Tūhura Tech's operations and partnerships.",
+		avatar: logoSrc,
+		social: {
+			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
+			github: "https://github.com/Darkflame72",
+			// envolope: "mailto:leon@tuhuratech.org.nz",
+		},
+	},
+	{
+		name: "Lillian Hide-Tobin",
+		role: "Lead Mentor",
+		bio: "Computer Science and Psychology graduate passionate about tech as a creative medium, especially game development and algorithmic arts. Dedicated to encouraging young women in technology.",
+		avatar: lillianhImage,
+		social: {},
+	},
+	{
+		name: "Zelle Marcovicci",
+		role: "Lead Mentor",
+		bio: "Creative Media Production graduate specializing in video games and interactive technology. Teaches immersive storytelling and programming at Massey University alongside her Tūhura Tech work.",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Neenu",
+		role: "Lead Mentor",
+		bio: "Electronics Engineering graduate with Masters in Signal Processing, currently pursuing Professional Business Analysis at VUW where she also tutors. Passionate about inspiring kids through hands-on tech learning.",
+		avatar: neenuImage,
+		social: {},
+	},
+	{
+		name: "Irma",
+		role: "Admin and Operations Coordinator",
+		bio: "Irma brings expertise in business operations, administration and finance to Tūhura Tech. Working quietly behind the scenes, she keeps everything organised and running smoothly while applying financial discipline and community focus to help Tūhura Tech deliver more impactful programmes and build sustainable partnerships with funders and supporters. She values inclusivity and loves being part of the team that breaks barriers in technology education and makes it accessible to all.",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Yui",
+		role: "Community Coordinator",
+		bio: "Commerce student who brings her Industrial Design background and student support experience to spreading the word about Tūhura Tech's awesome mahi. She helps share what the organisation is doing and makes sure more people know about the opportunities available.",
+		avatar: logoSrc,
+		social: {},
+	},
 ];
 
 const boardMembers = [
-  {
-    name: "Lillian Pak",
-    role: "Co-Founder & Chair of the Board",
-    bio: "Experienced leader in education, libraries, and public service with extensive governance and community development experience. Passionate about Tūhura Tech's mission of removing barriers to equitable education.",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Simon McCallum",
-    role: "Treasurer",
-    bio: "",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Rose Langride",
-    role: "Secretary",
-    bio: "Education industry veteran with over a decade of experience. Currently works with senior high school students at Wa Ora Montessori School. Joined the board because of Tūhura Tech's commitment to equitable access to learning.",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Jerome Dolman",
-    role: "Trustee",
-    bio: "",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Aleisha Amohia",
-    role: "Trustee",
-    bio: "",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Kendra Ross",
-    role: "Trustee",
-    bio: "",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Carl Ross",
-    role: "Trustee",
-    bio: "",
-    avatar: logoSrc,
-    social: {},
-  },
-  {
-    name: "Leon Bowie",
-    role: "Co-Founder, CEO & Trustee",
-    bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
-    avatar: logoSrc,
-    social: {
-      linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
-      github: "https://github.com/Darkflame72",
-      // envolope: "mailto:leon@tuhuratech.org.nz",
-    },
-  },
+	{
+		name: "Lillian Pak",
+		role: "Co-Founder & Chair of the Board",
+		bio: "Experienced leader in education, libraries, and public service with extensive governance and community development experience. Passionate about Tūhura Tech's mission of removing barriers to equitable education.",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Simon McCallum",
+		role: "Treasurer",
+		bio: "",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Rose Langride",
+		role: "Secretary",
+		bio: "Education industry veteran with over a decade of experience. Currently works with senior high school students at Wa Ora Montessori School. Joined the board because of Tūhura Tech's commitment to equitable access to learning.",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Jerome Dolman",
+		role: "Trustee",
+		bio: "",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Aleisha Amohia",
+		role: "Trustee",
+		bio: "",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Kendra Ross",
+		role: "Trustee",
+		bio: "",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Carl Ross",
+		role: "Trustee",
+		bio: "",
+		avatar: logoSrc,
+		social: {},
+	},
+	{
+		name: "Leon Bowie",
+		role: "Co-Founder, CEO & Trustee",
+		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
+		avatar: logoSrc,
+		social: {
+			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
+			github: "https://github.com/Darkflame72",
+			// envolope: "mailto:leon@tuhuratech.org.nz",
+		},
+	},
 ];
 
 const values = [
-  {
-    title: "Accessible & Equitable Education",
-    description:
-      "No barriers to education and opportunities. We provide all our sessions free of charge, including resources, laptops, robots, and electronics.",
-    icon: "heroicons:code-bracket",
-  },
-  {
-    title: "Industry Aligned Content",
-    description:
-      "Current, engaging content that sets rangatahi up for success. We work with industry partners to bring their knowledge and practices to rangatahi.",
-    icon: "heroicons:code-bracket",
-  },
-  {
-    title: "Knowledge and Support",
-    description:
-      "Trained staff in both technology and education. We're a Living Wage Accredited Employer and invest in our staff through industry training and certifications.",
-    icon: "heroicons:code-bracket",
-  },
-  {
-    title: "Community-Centered Approach",
-    description:
-      "We go to rangatahi in their communities - operating in schools, libraries, community centres, and marae.",
-    icon: "heroicons:code-bracket",
-  },
+	{
+		title: "Accessible & Equitable Education",
+		description:
+			"No barriers to education and opportunities. We provide all our sessions free of charge, including resources, laptops, robots, and electronics.",
+		icon: "heroicons:code-bracket",
+	},
+	{
+		title: "Industry Aligned Content",
+		description:
+			"Current, engaging content that sets rangatahi up for success. We work with industry partners to bring their knowledge and practices to rangatahi.",
+		icon: "heroicons:code-bracket",
+	},
+	{
+		title: "Knowledge and Support",
+		description:
+			"Trained staff in both technology and education. We're a Living Wage Accredited Employer and invest in our staff through industry training and certifications.",
+		icon: "heroicons:code-bracket",
+	},
+	{
+		title: "Community-Centered Approach",
+		description:
+			"We go to rangatahi in their communities - operating in schools, libraries, community centres, and marae.",
+		icon: "heroicons:code-bracket",
+	},
 ];
 
 const timeline = [
-  {
-    year: "2021",
-    title: "The Idea",
-    description:
-      "Post-COVID, a group of us came together to build a sustainable, community-run programme. The original board of Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie established the charity.",
-  },
-  {
-    year: "2021-2023",
-    title: "Proving the Concept",
-    description:
-      "Trialled session formats and approaches with select kura and community centres to refine our support model for rangatahi.",
-  },
-  {
-    year: "2023",
-    title: "Start Growing",
-    description:
-      "Hiring our first staff members and expanding to Porirua and Lower Hutt. We reach 1000+ rangatahi in yearly engagement.",
-  },
-  {
-    year: "2025+",
-    title: "Tūhura Tech across Greater Wellington",
-    description:
-      "Now with stable operations, a long term strategic vision and stable growth",
-  },
+	{
+		year: "2021",
+		title: "The Idea",
+		description:
+			"Post-COVID, a group of us came together to build a sustainable, community-run programme. The original board of Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie established the charity.",
+	},
+	{
+		year: "2021-2023",
+		title: "Proving the Concept",
+		description:
+			"Trialled session formats and approaches with select kura and community centres to refine our support model for rangatahi.",
+	},
+	{
+		year: "2023",
+		title: "Start Growing",
+		description:
+			"Hiring our first staff members and expanding to Porirua and Lower Hutt. We reach 1000+ rangatahi in yearly engagement.",
+	},
+	{
+		year: "2025+",
+		title: "Tūhura Tech across Greater Wellington",
+		description:
+			"Now with stable operations, a long term strategic vision and stable growth",
+	},
 ];
 ---
 
@@ -389,8 +388,6 @@ const timeline = [
           free technology education for over 3 years.
         </p>
       </div>
-
-      <Partners />
 
       <div class="mt-12 text-center">
         <p class="mb-4 text-gray-600">

@@ -2,31 +2,31 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  title: string;
-  subtitle?: string;
-  description: string;
-  image?: ImageMetadata;
-  imageAlt?: string;
-  ctaText?: string;
-  ctaHref?: string;
-  ctaTarget?: "_blank" | "_self";
-  backgroundClass?: string;
-  imagePosition?: "left" | "right";
-  compact?: boolean;
+	title: string;
+	subtitle?: string;
+	description: string;
+	image?: ImageMetadata;
+	imageAlt?: string;
+	ctaText?: string;
+	ctaHref?: string;
+	ctaTarget?: "_blank" | "_self";
+	backgroundClass?: string;
+	imagePosition?: "left" | "right";
+	compact?: boolean;
 }
 
 const {
-  title,
-  subtitle,
-  description,
-  image,
-  imageAlt = "",
-  ctaText,
-  ctaHref,
-  ctaTarget = "_self",
-  backgroundClass = "bg-white",
-  imagePosition = "right",
-  compact = false,
+	title,
+	subtitle,
+	description,
+	image,
+	imageAlt = "",
+	ctaText,
+	ctaHref,
+	ctaTarget = "_self",
+	backgroundClass = "bg-white",
+	imagePosition = "right",
+	compact = false,
 } = Astro.props;
 
 const paddingClass = compact ? "py-12 md:py-16" : "py-16 md:py-24";

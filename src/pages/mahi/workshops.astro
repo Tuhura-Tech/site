@@ -12,78 +12,83 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 const workshopFormats = [
-  {
-    title: "School-Time Workshops",
-    description:
-      "Specialist workshops delivered in schools during school hours for participating akonga",
-    duration: "1-4 hours",
-    icon: "heroicons:academic-cap",
-    examples: [
-      "Digital technologies curriculum support",
-      "Competition preparation (RoboCup, CTF)",
-      "Specialist skill development sessions",
-      "Project showcase preparation",
-    ],
-  },
-  {
-    title: "Intensive Session Workshops",
-    description:
-      "Deep-dive workshops for rangatahi already participating in our regular sessions",
-    duration: "Half day to multi-day",
-    icon: "heroicons:user-group",
-    examples: [
-      "Holiday intensive workshops",
-      "Competition training camps",
-      "Specialist technology deep-dives",
-      "Collaborative project workshops",
-    ],
-  },
+	{
+		title: "Introduction Workshops",
+		description:
+			"One-off sessions introducing rangatahi to new technology topics and sparking curiosity",
+		duration: "2-3 hours",
+		icon: "heroicons:light-bulb",
+		examples: [
+			"First steps in game development",
+			"Introduction to robotics and electronics",
+			"Getting started with 3D design",
+			"Basics of cybersecurity and online safety",
+			"Your first coding experience",
+		],
+	},
+	{
+		title: "Deep Dive Workshops",
+		description:
+			"Intensive one-off sessions exploring advanced concepts for those ready to challenge themselves",
+		duration: "Half day to full day",
+		icon: "heroicons:academic-cap",
+		examples: [
+			"Advanced AI and machine learning concepts",
+			"Complex robotics programming challenges",
+			"Professional game development techniques",
+			"Advanced cybersecurity techniques",
+			"Real-world programming projects",
+		],
+	},
 ];
 
 const workshopTopics = [
-  {
-    category: "Creative Technology",
-    topics: [
-      "Game Development with Godot",
-      "Music Production & Sound Design",
-      "3D Modeling & Printing",
-    ],
-  },
-  {
-    category: "Programming & Development",
-    topics: [
-      "Web Development (HTML/CSS/JavaScript)",
-      "Python Programming",
-      "App Development",
-      "Database Design",
-      "API Development",
-    ],
-  },
-  {
-    category: "Hardware & Electronics",
-    topics: [
-      "Arduino Projects",
-      "Raspberry Pi Computing",
-      "Robotics Building & Programming",
-      "IoT (Internet of Things)",
-      "Circuit Design",
-    ],
-  },
-  {
-    category: "Emerging Technologies",
-    topics: [
-      "Artificial Intelligence Basics",
-      "Machine Learning Projects",
-      "Cybersecurity & Ethical Hacking",
-      "Virtual & Augmented Reality",
-    ],
-  },
+	{
+		category: "Creative Technology",
+		topics: [
+			"Introduction to Game Development",
+			"3D Design and Printing Basics",
+			"Music Production Fundamentals",
+			"Advanced Game Development Techniques",
+			"Professional 3D Modeling",
+		],
+	},
+	{
+		category: "Programming & Development",
+		topics: [
+			"Your First Programming Experience",
+			"Web Development Basics",
+			"Mobile App Introduction",
+			"Advanced Python Projects",
+			"Professional Web Development",
+		],
+	},
+	{
+		category: "Hardware & Electronics",
+		topics: [
+			"Introduction to Electronics and Circuits",
+			"Getting Started with Arduino",
+			"Robotics for Beginners",
+			"Advanced Robotics Programming",
+			"IoT and Connected Devices",
+		],
+	},
+	{
+		category: "Emerging Technologies",
+		topics: [
+			"AI and Machine Learning Basics",
+			"Cybersecurity Awareness",
+			"Virtual Reality Introduction",
+			"Advanced AI Applications",
+			"Cybersecurity Fundamentals",
+		],
+	},
 ];
 ---
 
 <Layout
-  title="Workshops | Wānanga"
-  description="Specialist workshops for rangatahi participating in our sessions - intensive skill-building and collaborative learning experiences"
+  title="Workshops"
+  description="One-off workshops for rangatahi - introduction sessions to spark curiosity or deep dives into specific technology topics"
 >
   <!-- Visual Hero Section -->
   <section
@@ -95,48 +100,28 @@ const workshopTopics = [
       >
         <div class="text-center lg:text-left">
           <h1 class="text-4xl leading-tight font-bold md:text-5xl">
-            Workshops <span class="text-tuhura-green">(Wānanga)</span>
+            Workshops
           </h1>
           <p class="mt-6 text-xl text-gray-600">
-            Specialist workshops for rangatahi participating in our sessions -
-            diving deep into specific technology topics through intensive,
-            hands-on learning.
+            One-off workshops focused on specific technology topics for rangatahi - from introductory sessions that spark curiosity to deep dives for those ready to explore further.
           </p>
           <div
             class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
           >
             <p class="text-lg text-gray-700">
-              <strong>For current participants:</strong> Workshops complement our
-              regular after-school sessions with focused, intensive learning experiences.
+              <strong>Standalone experiences:</strong> Each workshop is a complete learning experience focused on one specific topic or skill.
             </p>
           </div>
           <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="/mahi/sessions" class="btn btn-primary">
-              Join Our Sessions First
+            <a href="#workshop-types" class="btn btn-primary">
+              Explore Workshop Types
             </a>
-            <a href="/contact" class="btn btn-secondary"> Contact Us </a>
           </div>
         </div>
 
         <div class="relative">
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-4">
-              <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <Image
-                  src={pldImage}
-                  alt="Professional development workshop for educators"
-                  class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  width={280}
-                  height={192}
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                >
-                  <div class="absolute right-3 bottom-3 left-3">
-                    <p class="text-sm font-medium text-white">Teacher PLD</p>
-                  </div>
-                </div>
-              </div>
               <div class="group relative overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src={sessionImage}
@@ -246,37 +231,14 @@ const workshopTopics = [
         </div>
       </div>
 
-      <!-- During-School Support - Don't think this is needed, information covered elsewhere and signup also available elsewhere
-      <div class="bg-tuhura-green text-white rounded-xl p-8 max-w-4xl mx-auto mb-20">
-        <h2 class="text-3xl font-bold text-center mb-8">Supporting Schools & Kaiako</h2>
-        <p class="text-xl text-center mb-8 opacity-90">
-          We work directly with schools to provide curriculum-aligned workshops that support teachers and enhance student learning.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {schoolSupport.map((support, index) => (
-            <div class="flex items-start bg-white/10 rounded-lg p-6" style={`animation-delay: ${index * 0.1}s`}>
-              <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <Icon name={support.icon} class="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 class="text-xl font-bold mb-2">{support.title}</h3>
-                <p class="opacity-90">{support.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div class="text-center mt-8">
-          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
-            Book School Workshop
-          </a>
-        </div>
-      </div>-->
-
       <!-- Workshop Topics -->
       <div class="mx-auto mb-20 max-w-6xl">
         <h2 class="mb-12 text-center text-3xl font-bold">
-          Workshop Kaupapa (Topics)
+          Topics We Explore
         </h2>
+        <p class="mb-12 text-center text-xl text-gray-600 max-w-3xl mx-auto">
+          Each workshop focuses on one specific topic, offering either an introduction for newcomers or a deep dive for those ready to explore further.
+        </p>
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {
             workshopTopics.map((category, index) => (
@@ -311,8 +273,7 @@ const workshopTopics = [
           <div class="mb-16 text-center">
             <h2 class="text-3xl font-bold md:text-4xl">Workshop Experience</h2>
             <p class="mt-4 text-xl text-gray-600">
-              See the intensive learning and skill development happening in our
-              wānanga
+              Focused, hands-on learning sessions designed to spark curiosity and build confidence in specific technology topics
             </p>
           </div>
 
@@ -355,14 +316,13 @@ const workshopTopics = [
                     height={192}
                   />
                 </div>
-                <h3 class="mb-3 text-xl font-bold">Project-Based Learning</h3>
+                <h3 class="mb-3 text-xl font-bold">Complete Learning Experience</h3>
                 <p class="text-gray-600">
-                  Every workshop produces tangible outcomes - apps, games,
-                  robots, or digital creations that participants take home.
+                  Every workshop is a complete standalone experience - participants go from curious to confident in one focused session.
                 </p>
                 <div class="mt-4 flex items-center text-tuhura-green">
                   <Icon name="heroicons:cube" class="mr-2 h-5 w-5" />
-                  <span class="font-medium">Take-home projects</span>
+                  <span class="font-medium">One session, full experience</span>
                 </div>
               </div>
             </div>
@@ -380,14 +340,13 @@ const workshopTopics = [
                     height={192}
                   />
                 </div>
-                <h3 class="mb-3 text-xl font-bold">Skill Development</h3>
+                <h3 class="mb-3 text-xl font-bold">Topic-Focused Learning</h3>
                 <p class="text-gray-600">
-                  Intensive skill-building prepares participants for
-                  competitions, curriculum assessments, and personal projects.
+                  Each workshop focuses intensively on one specific technology topic, offering either an introduction or advanced exploration.
                 </p>
                 <div class="mt-4 flex items-center text-tuhura-green">
-                  <Icon name="heroicons:trophy" class="mr-2 h-5 w-5" />
-                  <span class="font-medium">Competition ready</span>
+                  <Icon name="heroicons:light-bulb" class="mr-2 h-5 w-5" />
+                  <span class="font-medium">Focused exploration</span>
                 </div>
               </div>
             </div>
@@ -416,141 +375,51 @@ const workshopTopics = [
         </div>
       </section>
 
-      <!-- Who Can Participate - Might be useful?
-      <div class="bg-tuhura-gray rounded-xl p-8 max-w-4xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">Who Can Join Our Wānanga?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="heroicons:user-group" class="h-8 w-8 text-tuhura-green" />
-            </div>
-            <h3 class="text-xl font-bold mb-3">Rangatahi (Years 5-13)</h3>
-            <p class="text-gray-700">Welcome to all skill levels, from complete beginners to advanced learners.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="heroicons:academic-cap" class="h-8 w-8 text-tuhura-green" />
-            </div>
-            <h3 class="text-xl font-bold mb-3">Kaiako (Teachers)</h3>
-            <p class="text-gray-700">Professional development workshops that develop confidence with technology and modern teaching approaches.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-tuhura-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="heroicons:heart" class="h-8 w-8 text-tuhura-green" />
-            </div>
-            <h3 class="text-xl font-bold mb-3">Whānau (Families)</h3>
-            <p class="text-gray-700">Family-friendly weekend workshops where parents and tamariki can learn together and support each other.</p>
-          </div>
-        </div>
-      </div>-->
-
-      <!-- What's Included 
-      <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-4xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">What's Included in Every Workshop</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Participants</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>All equipment, materials, and software provided</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Take-home projects and digital portfolios</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Ongoing access to resources and support</span>
-              </li>
-
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold text-tuhura-green mb-4">For Schools</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Curriculum alignment documentation</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Lesson plans and follow-up activities</span>
-              </li>
-              <li class="flex items-start">
-                <Icon name="heroicons:check-circle" class="h-5 w-5 text-tuhura-green mr-3 mt-1" />
-                <span>Teacher professional development</span>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>-->
-
-      <!-- Booking Information -->
+      <!-- How Workshops Work -->
       <div
         class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
       >
         <h2 class="mb-8 text-center text-3xl font-bold">
-          How to Book a Workshop
+          How Workshops Work
         </h2>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
-            <h3 class="mb-4 text-xl font-semibold">School Workshops</h3>
+            <h3 class="mb-4 text-xl font-semibold">Introduction Workshops</h3>
             <ul class="list-disc space-y-2 pl-6 text-lg">
-              <li>Minimum 8-12 participants (depending on topic)</li>
-              <li>Can be tailored to specific curriculum needs</li>
-              <li>Flexible scheduling including during school hours</li>
-              <li>2-8 weeks lead time preferred</li>
-              <li>All workshops completely free of charge</li>
+              <li>Perfect for rangatahi new to a technology topic</li>
+              <li>2-3 hour sessions covering fundamentals</li>
+              <li>Hands-on activities and take-home knowledge</li>
+              <li>No prior experience required</li>
+              <li>Spark curiosity and build confidence</li>
             </ul>
           </div>
           <div>
-            <h3 class="mb-4 text-xl font-semibold">Participant Workshops</h3>
+            <h3 class="mb-4 text-xl font-semibold">Deep Dive Workshops</h3>
             <ul class="list-disc space-y-2 pl-6 text-lg">
-              <li>For rangatahi already in our regular sessions</li>
-              <li>Holiday intensives and skill deep-dives</li>
-              <li>Competition preparation workshops</li>
-              <li>Collaborative project development</li>
-              <li>Free for all session participants</li>
+              <li>For rangatahi ready to explore advanced concepts</li>
+              <li>Half-day to full-day intensive sessions</li>
+              <li>Complex projects and real-world applications</li>
+              <li>Building on existing knowledge and skills</li>
+              <li>Challenge yourself with advanced topics</li>
             </ul>
           </div>
         </div>
 
         <div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
-          <h3 class="mb-3 text-xl font-bold">Interested in Workshops?</h3>
+          <h3 class="mb-3 text-xl font-bold">Stay Updated on Workshops</h3>
           <p class="mb-4 text-gray-700">
-            Schools can request specialist workshops for their students, while
-            rangatahi in our sessions are invited to participate in intensive
-            workshops.
+            Workshops are announced through our newsletter and community networks. Each workshop is a complete learning experience focused on one specific topic.
           </p>
           <div class="flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/contact" class="btn btn-primary">
-              Request School Workshop
+              Get Workshop Notifications
             </a>
             <a href="/mahi/sessions" class="btn btn-secondary">
-              Join Our Sessions
+              Join Regular Sessions Too
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Call to Action 
-      <div class="bg-tuhura-green rounded-xl p-8 text-white text-center max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-4">Intensive Learning, Lasting Impact</h2>
-        <p class="text-xl mb-8 opacity-90">
-          Our workshops create focused learning experiences that build confidence, develop practical skills, 
-          and inspire rangatahi to continue their technology journey.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="btn bg-white text-tuhura-green hover:bg-gray-100">
-            Kōrero Mai (Get in Touch)
-          </a>
-          <a href="/mahi/sessions" class="btn bg-transparent border-2 border-white hover:bg-white/10">
-            Explore Regular Sessions
-          </a>
-        </div>
-      </div>-->
     </div>
   </section>
 </Layout>
