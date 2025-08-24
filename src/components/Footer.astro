@@ -1,272 +1,239 @@
 ---
-import { Image } from "astro:assets";
-import logoSrc from "@assets/logo.svg";
+import { Image } from 'astro:assets';
+import logoSrc from '@assets/logo.svg';
 
 const companyLinks = [
-	{ name: "About Us", href: "/about-us" },
-	{ name: "Contact", href: "/contact" },
-	{ name: "Support Us", href: "/support-us" },
+	{ name: 'About Us', href: '/about-us' },
+	{ name: 'Contact', href: '/contact' },
+	{ name: 'Support Us', href: '/support-us' },
 	{
-		name: "Identity Proofs",
-		href: "https://keyoxide.org/contact@tuhuratech.org.nz",
+		name: 'Identity Proofs',
+		href: 'https://keyoxide.org/contact@tuhuratech.org.nz',
 	},
 ];
 
 const resourceLinks = [
-	{ name: "Blog", href: "https://blog.tuhuratech.org.nz" },
-	{ name: "Wiki", href: "https://wiki.tuhuratech.org.nz" },
-	{ name: "Shop", href: "https://shop.tuhuratech.org.nz" },
-	{ name: "Privacy", href: "/privacy" },
-	{ name: "Safety", href: "/safety" },
+	{ name: 'Blog', href: 'https://blog.tuhuratech.org.nz' },
+	{ name: 'Wiki', href: 'https://wiki.tuhuratech.org.nz' },
+	{ name: 'Shop', href: 'https://shop.tuhuratech.org.nz' },
+	{ name: 'Privacy', href: '/privacy' },
+	{ name: 'Safety', href: '/safety' },
 ];
 
 const mahiLinks = [
-	{ name: "Mahi", href: "/mahi" },
-	{ name: "Sessions", href: "/mahi/sessions" },
-	{ name: "Workshops", href: "/mahi/workshops" },
-	{ name: "Events", href: "/mahi/events" },
-	{ name: "Professional Development", href: "/mahi/pld" },
+	{ name: 'Mahi', href: '/mahi' },
+	{ name: 'Sessions', href: '/mahi/sessions' },
+	{ name: 'Workshops', href: '/mahi/workshops' },
+	{ name: 'Events', href: '/mahi/events' },
+	{ name: 'Professional Development', href: '/mahi/pld' },
 ];
 
 const socialLinks = [
 	{
-		name: "Mastodon",
-		icon: "mastodon",
-		href: "https://mastodon.nzoss.nz/@tuhuratech",
+		name: 'Mastodon',
+		icon: 'mastodon',
+		href: 'https://mastodon.nzoss.nz/@tuhuratech',
 	},
 	{
-		name: "Facebook",
-		icon: "facebook",
-		href: "https://www.facebook.com/p/Tūhura-Tech-100083052084710/",
+		name: 'Facebook',
+		icon: 'facebook',
+		href: 'https://www.facebook.com/p/Tūhura-Tech-100083052084710/',
 	},
 	{
-		name: "LinkedIn",
-		icon: "linkedin",
-		href: "https://www.linkedin.com/company/tūhura-tech/",
+		name: 'LinkedIn',
+		icon: 'linkedin',
+		href: 'https://www.linkedin.com/company/tūhura-tech/',
 	},
 	{
-		name: "Instagram",
-		icon: "instagram",
-		href: "https://www.instagram.com/tuhura_tech",
+		name: 'Instagram',
+		icon: 'instagram',
+		href: 'https://www.instagram.com/tuhura_tech',
 	},
 	{
-		name: "Discord",
-		icon: "discord",
-		href: "https://discord.gg/PNxh7cwKfQ",
+		name: 'Discord',
+		icon: 'discord',
+		href: 'https://discord.gg/PNxh7cwKfQ',
 	},
 	{
-		name: "GitHub",
-		icon: "github",
-		href: "https://github.com/Tuhura-Tech",
+		name: 'GitHub',
+		icon: 'github',
+		href: 'https://github.com/Tuhura-Tech',
 	},
 ];
 ---
 
 <footer class="relative overflow-hidden bg-gray-900 pt-16 pb-8 text-white">
-  <!-- Subtle background pattern -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute inset-0 bg-repeat"></div>
-  </div>
+	<!-- Subtle background pattern -->
+	<div class="absolute inset-0 opacity-5">
+		<div class="absolute inset-0 bg-repeat"></div>
+	</div>
 
-  <!-- Animated gradient background -->
-  <div class="absolute top-0 right-0 left-0 h-1 bg-tuhura-green"></div>
+	<!-- Animated gradient background -->
+	<div class="absolute top-0 right-0 left-0 h-1 bg-tuhura-green"></div>
 
-  <div class="container-custom relative">
-    <div
-      class="grid grid-cols-1 gap-8 border-b border-gray-800 pb-12 md:grid-cols-2 lg:grid-cols-5"
-    >
-      <div class="lg:col-span-2">
-        <a
-          href="/"
-          class="inline-block transition-transform hover:scale-105"
-          aria-label="Tūhura Tech home"
-        >
-          <Image src={logoSrc} alt="Tūhura Tech Logo" width={128} height={44} />
-        </a>
-        <p class="mt-4 max-w-md text-gray-400">
-          Empowering the next generation through hands on, industry supported,
-          Technology Education.
-        </p>
-        <div class="mt-6 flex items-center gap-4">
-          {
-            socialLinks.map((social) => (
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="transform text-gray-400 transition-all hover:scale-110 hover:text-white"
-                aria-label={social.name}
-              >
-                {social.icon === "facebook" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56v1.87h2.76l-.44 2.9h-2.32v7.03C18.34 21.21 22 17.06 22 12.06z" />
-                  </svg>
-                )}
-                {social.icon === "linkedin" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                )}
-                {social.icon === "github" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                )}
-                {social.icon === "mastodon" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 1000 1000"
-                    aria-hidden="true"
-                  >
-                    <path d=" M 502 18C 623 19 740 32 808 64C 808 64 942 124 942 330C 942 330 944 482 924 587C 911 654 807 727 688 741C 626 749 565 756 500 753C 394 748 310 727 310 727C 310 738 310 747 312 757C 326 862 416 868 501 871C 588 874 665 850 665 850C 665 850 668 928 668 928C 668 928 608 960 500 966C 441 969 367 965 281 942C 95 893 63 694 58 493C 57 433 58 377 58 330C 58 124 193 64 193 64C 261 32 377 19 499 18C 499 18 502 18 502 18M 256 224C 230 254 217 295 217 346C 217 346 217 595 217 595C 217 595 315 595 315 595C 315 595 315 353 315 353C 315 302 337 276 380 276C 427 276 451 307 451 368C 451 368 451 500 451 500C 451 500 549 500 549 500C 549 500 549 368 549 368C 549 307 573 276 620 276C 663 276 685 302 685 353C 685 353 685 595 685 595C 685 595 783 595 783 595C 783 595 783 346 783 346C 783 295 770 254 744 224C 717 194 682 179 639 179C 588 179 550 199 525 237C 525 237 500 279 500 279C 500 279 475 237 475 237C 450 199 412 179 361 179C 318 179 283 194 256 224C 256 224 256 224 256 224" />
-                  </svg>
-                )}
-                {social.icon === "discord" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 -28.5 256 256"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
-                      fill-rule="nonzero"
-                    />
-                  </svg>
-                )}
-                {social.icon === "instagram" && (
-                  <svg
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                    />
-                    <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                    />
-                  </svg>
-                )}
-              </a>
-            ))
-          }
-        </div>
-      </div>
+	<div class="container-custom relative">
+		<div
+			class="grid grid-cols-1 gap-8 border-b border-gray-800 pb-12 md:grid-cols-2 lg:grid-cols-5"
+		>
+			<div class="lg:col-span-2">
+				<a
+					href="/"
+					class="inline-block transition-transform hover:scale-105"
+					aria-label="Tūhura Tech home"
+				>
+					<Image src={logoSrc} alt="Tūhura Tech Logo" width={128} height={44} />
+				</a>
+				<p class="mt-4 max-w-md text-gray-400">
+					Empowering the next generation through hands on, industry supported, Technology Education.
+				</p>
+				<div class="mt-6 flex items-center gap-4">
+					{
+						socialLinks.map((social) => (
+							<a
+								href={social.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transform text-gray-400 transition-all hover:scale-110 hover:text-white"
+								aria-label={social.name}
+							>
+								{social.icon === 'facebook' && (
+									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.62.77-1.62 1.56v1.87h2.76l-.44 2.9h-2.32v7.03C18.34 21.21 22 17.06 22 12.06z" />
+									</svg>
+								)}
+								{social.icon === 'linkedin' && (
+									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+									</svg>
+								)}
+								{social.icon === 'github' && (
+									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<path
+											fill-rule="evenodd"
+											d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+								)}
+								{social.icon === 'mastodon' && (
+									<svg
+										class="h-6 w-6"
+										fill="currentColor"
+										viewBox="0 0 1000 1000"
+										aria-hidden="true"
+									>
+										<path d=" M 502 18C 623 19 740 32 808 64C 808 64 942 124 942 330C 942 330 944 482 924 587C 911 654 807 727 688 741C 626 749 565 756 500 753C 394 748 310 727 310 727C 310 738 310 747 312 757C 326 862 416 868 501 871C 588 874 665 850 665 850C 665 850 668 928 668 928C 668 928 608 960 500 966C 441 969 367 965 281 942C 95 893 63 694 58 493C 57 433 58 377 58 330C 58 124 193 64 193 64C 261 32 377 19 499 18C 499 18 502 18 502 18M 256 224C 230 254 217 295 217 346C 217 346 217 595 217 595C 217 595 315 595 315 595C 315 595 315 353 315 353C 315 302 337 276 380 276C 427 276 451 307 451 368C 451 368 451 500 451 500C 451 500 549 500 549 500C 549 500 549 368 549 368C 549 307 573 276 620 276C 663 276 685 302 685 353C 685 353 685 595 685 595C 685 595 783 595 783 595C 783 595 783 346 783 346C 783 295 770 254 744 224C 717 194 682 179 639 179C 588 179 550 199 525 237C 525 237 500 279 500 279C 500 279 475 237 475 237C 450 199 412 179 361 179C 318 179 283 194 256 224C 256 224 256 224 256 224" />
+									</svg>
+								)}
+								{social.icon === 'discord' && (
+									<svg
+										class="h-6 w-6"
+										fill="currentColor"
+										viewBox="0 -28.5 256 256"
+										aria-hidden="true"
+									>
+										<path
+											d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+											fill-rule="nonzero"
+										/>
+									</svg>
+								)}
+								{social.icon === 'instagram' && (
+									<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+										/>
+										<path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+										/>
+									</svg>
+								)}
+							</a>
+						))
+					}
+				</div>
+			</div>
 
-      <div>
-        <h3
-          class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white"
-        >
-          Organisation
-        </h3>
-        <ul class="space-y-3">
-          {
-            companyLinks.map((link, index) => (
-              <li class="transform transition-all hover:translate-x-1">
-                <a
-                  href={link.href}
-                  class="inline-block text-gray-400 transition-colors hover:text-white"
-                  style={`transition-delay: ${index * 50}ms;`}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+			<div>
+				<h3 class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white">
+					Organisation
+				</h3>
+				<ul class="space-y-3">
+					{
+						companyLinks.map((link, index) => (
+							<li class="transform transition-all hover:translate-x-1">
+								<a
+									href={link.href}
+									class="inline-block text-gray-400 transition-colors hover:text-white"
+									style={`transition-delay: ${index * 50}ms;`}
+								>
+									{link.name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
 
-      <div>
-        <h3
-          class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white"
-        >
-          Resources
-        </h3>
-        <ul class="space-y-3">
-          {
-            resourceLinks.map((link, index) => (
-              <li class="transform transition-all hover:translate-x-1">
-                <a
-                  href={link.href}
-                  class="inline-block text-gray-400 transition-colors hover:text-white"
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={
-                    link.href.startsWith("http")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  style={`transition-delay: ${index * 50}ms;`}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+			<div>
+				<h3 class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white">
+					Resources
+				</h3>
+				<ul class="space-y-3">
+					{
+						resourceLinks.map((link, index) => (
+							<li class="transform transition-all hover:translate-x-1">
+								<a
+									href={link.href}
+									class="inline-block text-gray-400 transition-colors hover:text-white"
+									target={link.href.startsWith('http') ? '_blank' : undefined}
+									rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+									style={`transition-delay: ${index * 50}ms;`}
+								>
+									{link.name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
 
-      <div>
-        <h3
-          class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white"
-        >
-          Mahi
-        </h3>
-        <ul class="space-y-3">
-          {
-            mahiLinks.map((link, index) => (
-              <li class="transform transition-all hover:translate-x-1">
-                <a
-                  href={link.href}
-                  class="inline-block text-gray-400 transition-colors hover:text-white"
-                  style={`transition-delay: ${index * 50}ms;`}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
+			<div>
+				<h3 class="mb-4 text-lg font-semibold text-white/90 transition-colors hover:text-white">
+					Mahi
+				</h3>
+				<ul class="space-y-3">
+					{
+						mahiLinks.map((link, index) => (
+							<li class="transform transition-all hover:translate-x-1">
+								<a
+									href={link.href}
+									class="inline-block text-gray-400 transition-colors hover:text-white"
+									style={`transition-delay: ${index * 50}ms;`}
+								>
+									{link.name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
 
-    <div class="pt-8 text-center text-sm text-gray-400">
-      <p class="transition-colors hover:text-gray-300">
-        &copy; {new Date().getFullYear()} Tūhura Tech. Content available under
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/"
-          >CC BY-SA 4.0</a
-        >, unless stated otherwise.<br /><br />
-        Registered Charitable Trust <a
-          href="https://www.register.charities.govt.nz/Charity/CC60416"
-          >CC60416</a
-        >.<br />
-      </p>
-    </div>
-  </div>
+		<div class="pt-8 text-center text-sm text-gray-400">
+			<p class="transition-colors hover:text-gray-300">
+				&copy; {new Date().getFullYear()} Tūhura Tech. Content available under
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, unless stated
+				otherwise.<br /><br />
+				Registered Charitable Trust <a href="https://www.register.charities.govt.nz/Charity/CC60416"
+					>CC60416</a
+				>.<br />
+			</p>
+		</div>
+	</div>
 </footer>

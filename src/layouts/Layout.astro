@@ -1,26 +1,26 @@
 ---
-import { getImage } from "astro:assets";
-import DonateModal from "@components/DonateModal.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import Partners from "@components/Partners.astro";
-import "../styles/global.css";
+import { getImage } from 'astro:assets';
+import DonateModal from '@components/DonateModal.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Partners from '@components/Partners.astro';
+import '../styles/global.css';
 
 interface Props {
 	title?: string;
 	description?: string;
 }
 
-const siteName = "Tūhura Tech";
+const siteName = 'Tūhura Tech';
 
 const {
 	title = siteName,
-	description = "Empowering the next generation through industry supported Technology Education.",
+	description = 'Empowering the next generation through industry supported Technology Education.',
 } = Astro.props;
 
 // Preload critical assets
 const faviconImg = await getImage({
-	src: "/favicon.svg",
+	src: '/favicon.svg',
 	width: 32,
 	height: 32,
 });
@@ -30,68 +30,65 @@ if (title !== siteName) {
 } else {
 	shownTitle = siteName;
 }
-const canonicalUrl = Astro.url?.href || "https://tuhuratech.org.nz";
+const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href={faviconImg.src} />
-    <meta name="generator" content={Astro.generator} />
-    <title>{shownTitle}</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href={faviconImg.src} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{shownTitle}</title>
 
-    <!-- Structured data -->
-    <script is:inline type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Tūhura Tech",
-        "url": "https://tuhuratech.org.nz",
-        "logo": "https://tuhuratech.org.nz/logo.png",
-        "sameAs": [
-          "https://www.linkedin.com/company/tūhura-tech/",
-          "https://github.com/Tuhura-Tech",
-          "https://www.facebook.com/p/Tūhura-Tech-100083052084710/"
-        ]
-      }
-    </script>
+		<!-- Structured data -->
+		<script is:inline type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Tūhura Tech",
+				"url": "https://tuhuratech.org.nz",
+				"logo": "https://tuhuratech.org.nz/logo.png",
+				"sameAs": [
+					"https://www.linkedin.com/company/tūhura-tech/",
+					"https://github.com/Tuhura-Tech",
+					"https://www.facebook.com/p/Tūhura-Tech-100083052084710/"
+				]
+			}
+		</script>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta
-      property="og:image"
-      content="https://tuhuratech.org.nz/og-image.jpg"
-    />
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content="https://tuhuratech.org.nz/og-image.jpg" />
 
-    <!-- Plausible Analytics -->
-    <script
-      is:inline
-      data-domain="tuhuratech.org.nz"
-      src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
-  </head>
-  <body class="flex min-h-screen flex-col">
-    <Header />
-    <main class="flex-grow">
-      <slot />
-    </main>
-    <Partners />
-    <Footer />
-    <DonateModal />
-    <script is:inline>
-      const headerEl = document.querySelector("header");
-      const onScroll = () => {
-        if (!headerEl) return;
-        if (window.scrollY > 2) headerEl.classList.add("scrolled");
-        else headerEl.classList.remove("scrolled");
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-    </script>
-  </body>
+		<!-- Plausible Analytics -->
+		<script
+			is:inline
+			data-domain="tuhuratech.org.nz"
+			src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
+	</head>
+	<body class="flex min-h-screen flex-col">
+		<Header />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<Partners />
+		<Footer />
+		<DonateModal />
+		<script is:inline>
+			const headerEl = document.querySelector('header');
+			const onScroll = () => {
+				if (!headerEl) return;
+				if (window.scrollY > 2) headerEl.classList.add('scrolled');
+				else headerEl.classList.remove('scrolled');
+			};
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+		</script>
+	</body>
 </html>

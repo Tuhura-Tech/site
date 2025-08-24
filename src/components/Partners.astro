@@ -1,64 +1,62 @@
 ---
-import { Image } from "astro:assets";
-import bastionSecurityGroup from "@assets/partners/partner-bsg.svg";
-import huttCityCouncil from "@assets/partners/partner-hcc.svg";
-import sparkFoundation from "@assets/partners/partner-spark.svg";
-import wellingtonNZ from "@assets/partners/partner-wnz.svg";
+import { Image } from 'astro:assets';
+import bastionSecurityGroup from '@assets/partners/partner-bsg.svg';
+import huttCityCouncil from '@assets/partners/partner-hcc.svg';
+import sparkFoundation from '@assets/partners/partner-spark.svg';
+import wellingtonNZ from '@assets/partners/partner-wnz.svg';
 
 const partners = [
 	{
-		name: "WellingtonNZ",
+		name: 'WellingtonNZ',
 		logo: wellingtonNZ,
-		href: "https://wellingtonnz.com",
+		href: 'https://wellingtonnz.com',
 	},
 	{
-		name: "Bastion Security Group",
+		name: 'Bastion Security Group',
 		logo: bastionSecurityGroup,
-		href: "https://www.bastionsecurity.co.nz/",
+		href: 'https://www.bastionsecurity.co.nz/',
 	},
 	{
-		name: "Hutt City Council",
+		name: 'Hutt City Council',
 		logo: huttCityCouncil,
-		href: "https://huttcity.govt.nz",
+		href: 'https://huttcity.govt.nz',
 	},
 	{
-		name: "Spark Foundation",
+		name: 'Spark Foundation',
 		logo: sparkFoundation,
-		href: "https://www.sparkfoundation.org.nz",
+		href: 'https://www.sparkfoundation.org.nz',
 	},
 ];
 ---
 
 <section class="py-12">
-  <div class="container-custom">
-    <div class="mb-12 text-center">
-      <h3
-        class="mb-6 text-sm font-semibold tracking-wider text-gray-500 uppercase"
-      >
-        Proudly Supported By
-      </h3>
-    </div>
+	<div class="container-custom">
+		<div class="mb-12 text-center">
+			<h3 class="mb-6 text-sm font-semibold tracking-wider text-gray-500 uppercase">
+				Proudly Supported By
+			</h3>
+		</div>
 
-    <div
-      class="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
-    >
-      {
-        partners.map((partner) => (
-          <div class="group">
-            <a
-              href={partner.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
-            >
-              <Image src={partner.logo} alt={`${partner.name} logo`} class="mx-auto mb-4 h-16 w-auto object-contain filter transition-all duration-300" />
-              <h4 class="mb-2 text-sm font-medium text-gray-900">
-                {partner.name}
-              </h4>
-            </a>
-          </div>
-        ))
-      }
-    </div>
-  </div>
+		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+			{
+				partners.map((partner) => (
+					<div class="group">
+						<a
+							href={partner.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
+						>
+							<Image
+								src={partner.logo}
+								alt={`${partner.name} logo`}
+								class="mx-auto mb-4 h-16 w-auto object-contain filter transition-all duration-300"
+							/>
+							<h4 class="mb-2 text-sm font-medium text-gray-900">{partner.name}</h4>
+						</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
 </section>

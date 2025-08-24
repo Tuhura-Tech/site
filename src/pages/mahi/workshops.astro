@@ -1,425 +1,390 @@
 ---
-import { Image } from "astro:assets";
-import pldImage from "@assets/pld.jpg";
-import robocupImage from "@assets/robocup-2025.jpg";
+import { Image } from 'astro:assets';
+import pldImage from '@assets/pld.jpg';
+import robocupImage from '@assets/robocup-2025.jpg';
 // Import images
-import sessionImage from "@assets/session.jpg";
-import session1Image from "@assets/session-1.jpg";
-import teamPhotoImage from "@assets/team-photo.jpg";
-import Card from "@components/ui/Card.astro";
+import sessionImage from '@assets/session.jpg';
+import session1Image from '@assets/session-1.jpg';
+import teamPhotoImage from '@assets/team-photo.jpg';
+import Card from '@components/ui/Card.astro';
 
-import Layout from "@layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 
 const workshopFormats = [
 	{
-		title: "Introduction Workshops",
+		title: 'Introduction Workshops',
 		description:
-			"One-off sessions introducing rangatahi to new technology topics and sparking curiosity",
-		duration: "2-3 hours",
-		icon: "heroicons:light-bulb",
+			'One-off sessions introducing rangatahi to new technology topics and sparking curiosity',
+		duration: '2-3 hours',
+		icon: 'heroicons:light-bulb',
 		examples: [
-			"First steps in game development",
-			"Introduction to robotics and electronics",
-			"Getting started with 3D design",
-			"Basics of cybersecurity and online safety",
-			"Your first coding experience",
+			'First steps in game development',
+			'Introduction to robotics and electronics',
+			'Getting started with 3D design',
+			'Basics of cybersecurity and online safety',
+			'Your first coding experience',
 		],
 	},
 	{
-		title: "Deep Dive Workshops",
+		title: 'Deep Dive Workshops',
 		description:
-			"Intensive one-off sessions exploring advanced concepts for those ready to challenge themselves",
-		duration: "Half day to full day",
-		icon: "heroicons:academic-cap",
+			'Intensive one-off sessions exploring advanced concepts for those ready to challenge themselves',
+		duration: 'Half day to full day',
+		icon: 'heroicons:academic-cap',
 		examples: [
-			"Advanced AI and machine learning concepts",
-			"Complex robotics programming challenges",
-			"Professional game development techniques",
-			"Advanced cybersecurity techniques",
-			"Real-world programming projects",
+			'Advanced AI and machine learning concepts',
+			'Complex robotics programming challenges',
+			'Professional game development techniques',
+			'Advanced cybersecurity techniques',
+			'Real-world programming projects',
 		],
 	},
 ];
 
 const workshopTopics = [
 	{
-		category: "Creative Technology",
+		category: 'Creative Technology',
 		topics: [
-			"Introduction to Game Development",
-			"3D Design and Printing Basics",
-			"Music Production Fundamentals",
-			"Advanced Game Development Techniques",
-			"Professional 3D Modeling",
+			'Introduction to Game Development',
+			'3D Design and Printing Basics',
+			'Music Production Fundamentals',
+			'Advanced Game Development Techniques',
+			'Professional 3D Modeling',
 		],
 	},
 	{
-		category: "Programming & Development",
+		category: 'Programming & Development',
 		topics: [
-			"Your First Programming Experience",
-			"Web Development Basics",
-			"Mobile App Introduction",
-			"Advanced Python Projects",
-			"Professional Web Development",
+			'Your First Programming Experience',
+			'Web Development Basics',
+			'Mobile App Introduction',
+			'Advanced Python Projects',
+			'Professional Web Development',
 		],
 	},
 	{
-		category: "Hardware & Electronics",
+		category: 'Hardware & Electronics',
 		topics: [
-			"Introduction to Electronics and Circuits",
-			"Getting Started with Arduino",
-			"Robotics for Beginners",
-			"Advanced Robotics Programming",
-			"IoT and Connected Devices",
+			'Introduction to Electronics and Circuits',
+			'Getting Started with Arduino',
+			'Robotics for Beginners',
+			'Advanced Robotics Programming',
+			'IoT and Connected Devices',
 		],
 	},
 	{
-		category: "Emerging Technologies",
+		category: 'Emerging Technologies',
 		topics: [
-			"AI and Machine Learning Basics",
-			"Cybersecurity Awareness",
-			"Virtual Reality Introduction",
-			"Advanced AI Applications",
-			"Cybersecurity Fundamentals",
+			'AI and Machine Learning Basics',
+			'Cybersecurity Awareness',
+			'Virtual Reality Introduction',
+			'Advanced AI Applications',
+			'Cybersecurity Fundamentals',
 		],
 	},
 ];
 ---
 
 <Layout
-  title="Workshops"
-  description="One-off workshops for rangatahi - introduction sessions to spark curiosity or deep dives into specific technology topics"
+	title="Workshops"
+	description="One-off workshops for rangatahi - introduction sessions to spark curiosity or deep dives into specific technology topics"
 >
-  <!-- Visual Hero Section -->
-  <section
-    class="bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 pt-20 pb-16 md:pt-28 md:pb-24"
-  >
-    <div class="container-custom">
-      <div
-        class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2"
-      >
-        <div class="text-center lg:text-left">
-          <h1 class="text-4xl leading-tight font-bold md:text-5xl">
-            Workshops
-          </h1>
-          <p class="mt-6 text-xl text-gray-600">
-            One-off workshops focused on specific technology topics for rangatahi - from introductory sessions that spark curiosity to deep dives for those ready to explore further.
-          </p>
-          <div
-            class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-          >
-            <p class="text-lg text-gray-700">
-              <strong>Standalone experiences:</strong> Each workshop is a complete learning experience focused on one specific topic or skill.
-            </p>
-          </div>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#workshop-types" class="btn btn-primary">
-              Explore Workshop Types
-            </a>
-          </div>
-        </div>
+	<!-- Visual Hero Section -->
+	<section
+		class="bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 pt-20 pb-16 md:pt-28 md:pb-24"
+	>
+		<div class="container-custom">
+			<div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
+				<div class="text-center lg:text-left">
+					<h1 class="text-4xl leading-tight font-bold md:text-5xl">Workshops</h1>
+					<p class="mt-6 text-xl text-gray-600">
+						One-off workshops focused on specific technology topics for rangatahi - from
+						introductory sessions that spark curiosity to deep dives for those ready to explore
+						further.
+					</p>
+					<div class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<p class="text-lg text-gray-700">
+							<strong>Standalone experiences:</strong> Each workshop is a complete learning experience
+							focused on one specific topic or skill.
+						</p>
+					</div>
+					<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+						<a href="#workshop-types" class="btn btn-primary"> Explore Workshop Types </a>
+					</div>
+				</div>
 
-        <div class="relative">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="space-y-4">
-              <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <Image
-                  src={sessionImage}
-                  alt="Hands-on technology workshop"
-                  class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  width={280}
-                  height={128}
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                >
-                  <div class="absolute right-3 bottom-2 left-3">
-                    <p class="text-xs font-medium text-white">
-                      Hands-on Learning
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="space-y-4 pt-8">
-              <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <Image
-                  src={robocupImage}
-                  alt="Robotics workshop preparation"
-                  class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  width={280}
-                  height={128}
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                >
-                  <div class="absolute right-3 bottom-2 left-3">
-                    <p class="text-xs font-medium text-white">Robotics</p>
-                  </div>
-                </div>
-              </div>
-              <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <Image
-                  src={session1Image}
-                  alt="Collaborative workshop environment"
-                  class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  width={280}
-                  height={192}
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
-                >
-                  <div class="absolute right-3 bottom-3 left-3">
-                    <p class="text-sm font-medium text-white">Group Projects</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="relative">
+					<div class="grid grid-cols-2 gap-4">
+						<div class="space-y-4">
+							<div class="group relative overflow-hidden rounded-xl shadow-lg">
+								<Image
+									src={sessionImage}
+									alt="Hands-on technology workshop"
+									class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+									width={280}
+									height={128}
+								/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+									<div class="absolute right-3 bottom-2 left-3">
+										<p class="text-xs font-medium text-white">Hands-on Learning</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="space-y-4 pt-8">
+							<div class="group relative overflow-hidden rounded-xl shadow-lg">
+								<Image
+									src={robocupImage}
+									alt="Robotics workshop preparation"
+									class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+									width={280}
+									height={128}
+								/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+									<div class="absolute right-3 bottom-2 left-3">
+										<p class="text-xs font-medium text-white">Robotics</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative overflow-hidden rounded-xl shadow-lg">
+								<Image
+									src={session1Image}
+									alt="Collaborative workshop environment"
+									class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+									width={280}
+									height={192}
+								/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+									<div class="absolute right-3 bottom-3 left-3">
+										<p class="text-sm font-medium text-white">Group Projects</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="py-16">
-    <div class="container-custom">
-      <!-- Workshop Formats -->
-      <div class="mx-auto mb-20 max-w-6xl" id="workshop-types">
-        <h2 class="mb-12 text-center text-3xl font-bold">Workshop Types</h2>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {
-            workshopFormats.map((format, index) => (
-              <Card
-                variant="hover"
-                padding="lg"
-                style={`animation-delay: ${index * 0.1}s`}
-              >
-                <div class="mb-6 flex items-center">
-                  <div class="mr-4 flex h-16 w-16 items-center justify-center rounded-full bg-tuhura-green/10">
-                    <Icon
-                      name={format.icon}
-                      class="h-8 w-8 text-tuhura-green"
-                    />
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold">{format.title}</h3>
-                    <p class="font-medium text-tuhura-green">
-                      {format.duration}
-                    </p>
-                  </div>
-                </div>
-                <p class="mb-6 text-gray-700">{format.description}</p>
-                <div>
-                  <h4 class="mb-3 font-semibold text-gray-900">
-                    What's included:
-                  </h4>
-                  <ul class="space-y-2">
-                    {format.examples.map((example) => (
-                      <li class="flex items-start text-gray-600">
-                        <Icon
-                          name="heroicons:sparkles"
-                          class="mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-tuhura-green"
-                        />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            ))
-          }
-        </div>
-      </div>
+	<section class="py-16">
+		<div class="container-custom">
+			<!-- Workshop Formats -->
+			<div class="mx-auto mb-20 max-w-6xl" id="workshop-types">
+				<h2 class="mb-12 text-center text-3xl font-bold">Workshop Types</h2>
+				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+					{
+						workshopFormats.map((format, index) => (
+							<Card variant="hover" padding="lg" style={`animation-delay: ${index * 0.1}s`}>
+								<div class="mb-6 flex items-center">
+									<div class="mr-4 flex h-16 w-16 items-center justify-center rounded-full bg-tuhura-green/10">
+										<Icon name={format.icon} class="h-8 w-8 text-tuhura-green" />
+									</div>
+									<div>
+										<h3 class="text-2xl font-bold">{format.title}</h3>
+										<p class="font-medium text-tuhura-green">{format.duration}</p>
+									</div>
+								</div>
+								<p class="mb-6 text-gray-700">{format.description}</p>
+								<div>
+									<h4 class="mb-3 font-semibold text-gray-900">What's included:</h4>
+									<ul class="space-y-2">
+										{format.examples.map((example) => (
+											<li class="flex items-start text-gray-600">
+												<Icon
+													name="heroicons:sparkles"
+													class="mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-tuhura-green"
+												/>
+												{example}
+											</li>
+										))}
+									</ul>
+								</div>
+							</Card>
+						))
+					}
+				</div>
+			</div>
 
-      <!-- Workshop Topics -->
-      <div class="mx-auto mb-20 max-w-6xl">
-        <h2 class="mb-12 text-center text-3xl font-bold">
-          Topics We Explore
-        </h2>
-        <p class="mb-12 text-center text-xl text-gray-600 max-w-3xl mx-auto">
-          Each workshop focuses on one specific topic, offering either an introduction for newcomers or a deep dive for those ready to explore further.
-        </p>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {
-            workshopTopics.map((category, index) => (
-              <Card
-                variant="default"
-                padding="lg"
-                style={`animation-delay: ${index * 0.1}s`}
-              >
-                <h3 class="mb-6 text-2xl font-bold text-tuhura-green">
-                  {category.category}
-                </h3>
-                <ul class="space-y-3">
-                  {category.topics.map((topic) => (
-                    <li class="flex items-start">
-                      <Icon
-                        name="heroicons:check-circle"
-                        class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
-                      />
-                      <span class="text-gray-700">{topic}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))
-          }
-        </div>
-      </div>
+			<!-- Workshop Topics -->
+			<div class="mx-auto mb-20 max-w-6xl">
+				<h2 class="mb-12 text-center text-3xl font-bold">Topics We Explore</h2>
+				<p class="mx-auto mb-12 max-w-3xl text-center text-xl text-gray-600">
+					Each workshop focuses on one specific topic, offering either an introduction for newcomers
+					or a deep dive for those ready to explore further.
+				</p>
+				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+					{
+						workshopTopics.map((category, index) => (
+							<Card variant="default" padding="lg" style={`animation-delay: ${index * 0.1}s`}>
+								<h3 class="mb-6 text-2xl font-bold text-tuhura-green">{category.category}</h3>
+								<ul class="space-y-3">
+									{category.topics.map((topic) => (
+										<li class="flex items-start">
+											<Icon
+												name="heroicons:check-circle"
+												class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
+											/>
+											<span class="text-gray-700">{topic}</span>
+										</li>
+									))}
+								</ul>
+							</Card>
+						))
+					}
+				</div>
+			</div>
 
-      <!-- Visual Impact Section -->
-      <section class="mb-20 rounded-3xl bg-tuhura-gray py-20">
-        <div class="mx-auto max-w-6xl">
-          <div class="mb-16 text-center">
-            <h2 class="text-3xl font-bold md:text-4xl">Workshop Experience</h2>
-            <p class="mt-4 text-xl text-gray-600">
-              Focused, hands-on learning sessions designed to spark curiosity and build confidence in specific technology topics
-            </p>
-          </div>
+			<!-- Visual Impact Section -->
+			<section class="mb-20 rounded-3xl bg-tuhura-gray py-20">
+				<div class="mx-auto max-w-6xl">
+					<div class="mb-16 text-center">
+						<h2 class="text-3xl font-bold md:text-4xl">Workshop Experience</h2>
+						<p class="mt-4 text-xl text-gray-600">
+							Focused, hands-on learning sessions designed to spark curiosity and build confidence
+							in specific technology topics
+						</p>
+					</div>
 
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div class="group relative">
-              <div
-                class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
-              >
-                <div class="relative mb-6 overflow-hidden rounded-xl">
-                  <Image
-                    src={teamPhotoImage}
-                    alt="Workshop participants and mentors"
-                    class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={320}
-                    height={192}
-                  />
-                </div>
-                <h3 class="mb-3 text-xl font-bold">Expert-Led Sessions</h3>
-                <p class="text-gray-600">
-                  Professional educators and industry volunteers guide hands-on
-                  learning experiences tailored to participant interests.
-                </p>
-                <div class="mt-4 flex items-center text-tuhura-green">
-                  <Icon name="heroicons:users" class="mr-2 h-5 w-5" />
-                  <span class="font-medium">Small group focus</span>
-                </div>
-              </div>
-            </div>
+					<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+						<div class="group relative">
+							<div
+								class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+							>
+								<div class="relative mb-6 overflow-hidden rounded-xl">
+									<Image
+										src={teamPhotoImage}
+										alt="Workshop participants and mentors"
+										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+										width={320}
+										height={192}
+									/>
+								</div>
+								<h3 class="mb-3 text-xl font-bold">Expert-Led Sessions</h3>
+								<p class="text-gray-600">
+									Professional educators and industry volunteers guide hands-on learning experiences
+									tailored to participant interests.
+								</p>
+								<div class="mt-4 flex items-center text-tuhura-green">
+									<Icon name="heroicons:users" class="mr-2 h-5 w-5" />
+									<span class="font-medium">Small group focus</span>
+								</div>
+							</div>
+						</div>
 
-            <div class="group relative">
-              <div
-                class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
-              >
-                <div class="relative mb-6 overflow-hidden rounded-xl">
-                  <Image
-                    src={session1Image}
-                    alt="Hands-on project development"
-                    class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={320}
-                    height={192}
-                  />
-                </div>
-                <h3 class="mb-3 text-xl font-bold">Complete Learning Experience</h3>
-                <p class="text-gray-600">
-                  Every workshop is a complete standalone experience - participants go from curious to confident in one focused session.
-                </p>
-                <div class="mt-4 flex items-center text-tuhura-green">
-                  <Icon name="heroicons:cube" class="mr-2 h-5 w-5" />
-                  <span class="font-medium">One session, full experience</span>
-                </div>
-              </div>
-            </div>
+						<div class="group relative">
+							<div
+								class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+							>
+								<div class="relative mb-6 overflow-hidden rounded-xl">
+									<Image
+										src={session1Image}
+										alt="Hands-on project development"
+										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+										width={320}
+										height={192}
+									/>
+								</div>
+								<h3 class="mb-3 text-xl font-bold">Complete Learning Experience</h3>
+								<p class="text-gray-600">
+									Every workshop is a complete standalone experience - participants go from curious
+									to confident in one focused session.
+								</p>
+								<div class="mt-4 flex items-center text-tuhura-green">
+									<Icon name="heroicons:cube" class="mr-2 h-5 w-5" />
+									<span class="font-medium">One session, full experience</span>
+								</div>
+							</div>
+						</div>
 
-            <div class="group relative">
-              <div
-                class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
-              >
-                <div class="relative mb-6 overflow-hidden rounded-xl">
-                  <Image
-                    src={robocupImage}
-                    alt="Competition preparation and skill building"
-                    class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    width={320}
-                    height={192}
-                  />
-                </div>
-                <h3 class="mb-3 text-xl font-bold">Topic-Focused Learning</h3>
-                <p class="text-gray-600">
-                  Each workshop focuses intensively on one specific technology topic, offering either an introduction or advanced exploration.
-                </p>
-                <div class="mt-4 flex items-center text-tuhura-green">
-                  <Icon name="heroicons:light-bulb" class="mr-2 h-5 w-5" />
-                  <span class="font-medium">Focused exploration</span>
-                </div>
-              </div>
-            </div>
-          </div>
+						<div class="group relative">
+							<div
+								class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+							>
+								<div class="relative mb-6 overflow-hidden rounded-xl">
+									<Image
+										src={robocupImage}
+										alt="Competition preparation and skill building"
+										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+										width={320}
+										height={192}
+									/>
+								</div>
+								<h3 class="mb-3 text-xl font-bold">Topic-Focused Learning</h3>
+								<p class="text-gray-600">
+									Each workshop focuses intensively on one specific technology topic, offering
+									either an introduction or advanced exploration.
+								</p>
+								<div class="mt-4 flex items-center text-tuhura-green">
+									<Icon name="heroicons:light-bulb" class="mr-2 h-5 w-5" />
+									<span class="font-medium">Focused exploration</span>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="mt-12 text-center">
-            <div
-              class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
-            >
-              <div class="text-center">
-                <div class="text-2xl font-bold text-tuhura-green">2-8</div>
-                <div class="text-sm text-gray-600">Hours per workshop</div>
-              </div>
-              <div class="h-8 w-px bg-gray-200"></div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-tuhura-green">8-15</div>
-                <div class="text-sm text-gray-600">Participants</div>
-              </div>
-              <div class="h-8 w-px bg-gray-200"></div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-tuhura-green">100%</div>
-                <div class="text-sm text-gray-600">Free</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+					<div class="mt-12 text-center">
+						<div
+							class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
+						>
+							<div class="text-center">
+								<div class="text-2xl font-bold text-tuhura-green">2-8</div>
+								<div class="text-sm text-gray-600">Hours per workshop</div>
+							</div>
+							<div class="h-8 w-px bg-gray-200"></div>
+							<div class="text-center">
+								<div class="text-2xl font-bold text-tuhura-green">8-15</div>
+								<div class="text-sm text-gray-600">Participants</div>
+							</div>
+							<div class="h-8 w-px bg-gray-200"></div>
+							<div class="text-center">
+								<div class="text-2xl font-bold text-tuhura-green">100%</div>
+								<div class="text-sm text-gray-600">Free</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <!-- How Workshops Work -->
-      <div
-        class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
-      >
-        <h2 class="mb-8 text-center text-3xl font-bold">
-          How Workshops Work
-        </h2>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <h3 class="mb-4 text-xl font-semibold">Introduction Workshops</h3>
-            <ul class="list-disc space-y-2 pl-6 text-lg">
-              <li>Perfect for rangatahi new to a technology topic</li>
-              <li>2-3 hour sessions covering fundamentals</li>
-              <li>Hands-on activities and take-home knowledge</li>
-              <li>No prior experience required</li>
-              <li>Spark curiosity and build confidence</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="mb-4 text-xl font-semibold">Deep Dive Workshops</h3>
-            <ul class="list-disc space-y-2 pl-6 text-lg">
-              <li>For rangatahi ready to explore advanced concepts</li>
-              <li>Half-day to full-day intensive sessions</li>
-              <li>Complex projects and real-world applications</li>
-              <li>Building on existing knowledge and skills</li>
-              <li>Challenge yourself with advanced topics</li>
-            </ul>
-          </div>
-        </div>
+			<!-- How Workshops Work -->
+			<div class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+				<h2 class="mb-8 text-center text-3xl font-bold">How Workshops Work</h2>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<div>
+						<h3 class="mb-4 text-xl font-semibold">Introduction Workshops</h3>
+						<ul class="list-disc space-y-2 pl-6 text-lg">
+							<li>Perfect for rangatahi new to a technology topic</li>
+							<li>2-3 hour sessions covering fundamentals</li>
+							<li>Hands-on activities and take-home knowledge</li>
+							<li>No prior experience required</li>
+							<li>Spark curiosity and build confidence</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="mb-4 text-xl font-semibold">Deep Dive Workshops</h3>
+						<ul class="list-disc space-y-2 pl-6 text-lg">
+							<li>For rangatahi ready to explore advanced concepts</li>
+							<li>Half-day to full-day intensive sessions</li>
+							<li>Complex projects and real-world applications</li>
+							<li>Building on existing knowledge and skills</li>
+							<li>Challenge yourself with advanced topics</li>
+						</ul>
+					</div>
+				</div>
 
-        <div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
-          <h3 class="mb-3 text-xl font-bold">Stay Updated on Workshops</h3>
-          <p class="mb-4 text-gray-700">
-            Workshops are announced through our newsletter and community networks. Each workshop is a complete learning experience focused on one specific topic.
-          </p>
-          <div class="flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/contact" class="btn btn-primary">
-              Get Workshop Notifications
-            </a>
-            <a href="/mahi/sessions" class="btn btn-secondary">
-              Join Regular Sessions Too
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
+					<h3 class="mb-3 text-xl font-bold">Stay Updated on Workshops</h3>
+					<p class="mb-4 text-gray-700">
+						Workshops are announced through our newsletter and community networks. Each workshop is
+						a complete learning experience focused on one specific topic.
+					</p>
+					<div class="flex flex-col justify-center gap-4 sm:flex-row">
+						<a href="/contact" class="btn btn-primary"> Get Workshop Notifications </a>
+						<a href="/mahi/sessions" class="btn btn-secondary"> Join Regular Sessions Too </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>

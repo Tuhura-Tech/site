@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
 	--color-tuhura-green: #6aa469;
@@ -184,7 +184,7 @@ nav a {
 }
 
 nav a::after {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 0;
 	height: 2px;
@@ -213,11 +213,7 @@ nav a:focus::after {
 	top: 0;
 	left: 0;
 	height: 3px;
-	background: linear-gradient(
-		to right,
-		var(--color-tuhura-green),
-		var(--color-tuhura-blue)
-	);
+	background: linear-gradient(to right, var(--color-tuhura-green), var(--color-tuhura-blue));
 	z-index: 100;
 	width: 0%;
 	transition: width 0.1s ease;

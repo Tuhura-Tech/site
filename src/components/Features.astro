@@ -1,115 +1,104 @@
 ---
-import { Image } from "astro:assets";
-import pldImage from "@assets/pld.jpg";
-import eventImage from "@assets/robocup-2025.jpg";
-import sessionImage from "@assets/session.jpg";
-import { Icon } from "astro-icon/components";
+import { Image } from 'astro:assets';
+import pldImage from '@assets/pld.jpg';
+import eventImage from '@assets/robocup-2025.jpg';
+import sessionImage from '@assets/session.jpg';
+import { Icon } from 'astro-icon/components';
 
 // import featureImage3 from "@assets/feature-3.svg";
 
 const features = [
 	{
-		title: "Community-Based Sessions",
+		title: 'Community-Based Sessions',
 		description:
 			"Free tech education in schools, libraries, community centres, and marae. Each session adapts to the group's interests and needs.",
-		icon: "heroicons:star-solid",
+		icon: 'heroicons:star-solid',
 		image: sessionImage,
-		href: "/mahi/sessions",
+		href: '/mahi/sessions',
 	},
 	{
-		title: "Workshops & Events",
+		title: 'Workshops & Events',
 		description:
-			"Intensive experiences in community spaces. From robotics competitions to 3D printing workshops, customized to venue and participants.",
-		icon: "heroicons:globe-asia-australia",
+			'Intensive experiences in community spaces. From robotics competitions to 3D printing workshops, customized to venue and participants.',
+		icon: 'heroicons:globe-asia-australia',
 		image: eventImage,
-		href: "/mahi/workshops",
+		href: '/mahi/workshops',
 	},
 	{
-		title: "Kaiako (Teacher) Support",
+		title: 'Kaiako (Teacher) Support',
 		description:
-			"Professional development delivered to schools and communities. Resources, training, and ongoing mentorship for educators.",
-		icon: "heroicons:academic-cap",
+			'Professional development delivered to schools and communities. Resources, training, and ongoing mentorship for educators.',
+		icon: 'heroicons:academic-cap',
 		image: pldImage,
-		href: "/mahi/pld",
+		href: '/mahi/pld',
 	},
 ];
 ---
 
 <section class="relative overflow-hidden bg-gray-50 py-20">
-  <!-- Subtle background pattern with parallax effect -->
-  <div class="parallax absolute inset-0 opacity-5" data-speed="0.1">
-    <div class="absolute inset-0 bg-repeat"></div>
-  </div>
+	<!-- Subtle background pattern with parallax effect -->
+	<div class="parallax absolute inset-0 opacity-5" data-speed="0.1">
+		<div class="absolute inset-0 bg-repeat"></div>
+	</div>
 
-  <div class="container-custom relative">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 class="text-3xl font-bold md:text-4xl">We Come to Your Community</h2>
-      <p class="mt-4 text-xl text-gray-600">
-        We bring technology education directly to communities. Our trained
-        kaiako and industry volunteers deliver sessions adapted to each group of
-        rangatahi.
-      </p>
-      <div
-        class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-      >
-        <div class="grid grid-cols-1 gap-6 text-center md:grid-cols-3">
-          <div>
-            <div class="text-2xl font-bold text-tuhura-green">15+</div>
-            <div class="text-sm text-gray-600">
-              Community locations across Wellington region
-            </div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-tuhura-green">Tailored</div>
-            <div class="text-sm text-gray-600">
-              Each session adapted to participants
-            </div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-tuhura-green">Accessible</div>
-            <div class="text-sm text-gray-600">
-              We come to your neighborhood
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="container-custom relative">
+		<div class="mx-auto max-w-3xl text-center">
+			<h2 class="text-3xl font-bold md:text-4xl">We Come to Your Community</h2>
+			<p class="mt-4 text-xl text-gray-600">
+				We bring technology education directly to communities. Our trained kaiako and industry
+				volunteers deliver sessions adapted to each group of rangatahi.
+			</p>
+			<div class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+				<div class="grid grid-cols-1 gap-6 text-center md:grid-cols-3">
+					<div>
+						<div class="text-2xl font-bold text-tuhura-green">15+</div>
+						<div class="text-sm text-gray-600">Community locations across Wellington region</div>
+					</div>
+					<div>
+						<div class="text-2xl font-bold text-tuhura-green">Tailored</div>
+						<div class="text-sm text-gray-600">Each session adapted to participants</div>
+					</div>
+					<div>
+						<div class="text-2xl font-bold text-tuhura-green">Accessible</div>
+						<div class="text-sm text-gray-600">We come to your neighborhood</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
-      {
-        features.map((feature, index) => (
-          <a href={feature.href} class="group block">
-            <div
-              class={`feature-card delay-${index + 2} flex h-full flex-col rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl`}
-            >
-              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-tuhura-green text-white transition-transform group-hover:scale-110">
-                <Icon
-                  name={feature.icon}
-                  class="h-7 w-7 transition-transform group-hover:rotate-12"
-                />
-              </div>
-              <h3 class="mb-4 text-2xl font-bold transition-colors group-hover:text-tuhura-green">
-                {feature.title}
-              </h3>
-              <p class="mb-6 flex-grow leading-relaxed text-gray-600">
-                {feature.description}
-              </p>
-              <div class="hover-zoom overflow-hidden rounded-xl">
-                <Image
-                  src={feature.image}
-                  alt={feature.title}
-                  class="h-48 w-full rounded-xl object-cover transition-all duration-500"
-                  width={400}
-                  height={200}
-                />
-              </div>
-              <div class="mt-4 font-medium text-tuhura-green group-hover:underline">
-                Learn More →
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </div>
+		<div class="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
+			{
+				features.map((feature, index) => (
+					<a href={feature.href} class="group block">
+						<div
+							class={`feature-card delay-${index + 2} flex h-full flex-col rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl`}
+						>
+							<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-tuhura-green text-white transition-transform group-hover:scale-110">
+								<Icon
+									name={feature.icon}
+									class="h-7 w-7 transition-transform group-hover:rotate-12"
+								/>
+							</div>
+							<h3 class="mb-4 text-2xl font-bold transition-colors group-hover:text-tuhura-green">
+								{feature.title}
+							</h3>
+							<p class="mb-6 flex-grow leading-relaxed text-gray-600">{feature.description}</p>
+							<div class="hover-zoom overflow-hidden rounded-xl">
+								<Image
+									src={feature.image}
+									alt={feature.title}
+									class="h-48 w-full rounded-xl object-cover transition-all duration-500"
+									width={400}
+									height={200}
+								/>
+							</div>
+							<div class="mt-4 font-medium text-tuhura-green group-hover:underline">
+								Learn More →
+							</div>
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</div>
 </section>

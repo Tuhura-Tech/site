@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 interface Props {
 	title: string;
@@ -9,9 +9,9 @@ interface Props {
 	imageAlt?: string;
 	ctaText?: string;
 	ctaHref?: string;
-	ctaTarget?: "_blank" | "_self";
+	ctaTarget?: '_blank' | '_self';
 	backgroundClass?: string;
-	imagePosition?: "left" | "right";
+	imagePosition?: 'left' | 'right';
 	compact?: boolean;
 }
 
@@ -20,84 +20,67 @@ const {
 	subtitle,
 	description,
 	image,
-	imageAlt = "",
+	imageAlt = '',
 	ctaText,
 	ctaHref,
-	ctaTarget = "_self",
-	backgroundClass = "bg-white",
-	imagePosition = "right",
+	ctaTarget = '_self',
+	backgroundClass = 'bg-white',
+	imagePosition = 'right',
 	compact = false,
 } = Astro.props;
 
-const paddingClass = compact ? "py-12 md:py-16" : "py-16 md:py-24";
+const paddingClass = compact ? 'py-12 md:py-16' : 'py-16 md:py-24';
 ---
 
 <section class={`${paddingClass} ${backgroundClass}`}>
-  <div class="container-custom">
-    <div
-      class={`${image ? "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" : "text-center max-w-4xl mx-auto"}`}
-    >
-      <div
-        class={image && imagePosition === "right"
-          ? "order-1 lg:order-1"
-          : image && imagePosition === "left"
-            ? "order-1 lg:order-2"
-            : ""}
-      >
-        {
-          subtitle && (
-            <p class="mb-4 text-lg font-medium text-tuhura-green">{subtitle}</p>
-          )
-        }
+	<div class="container-custom">
+		<div
+			class={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-12 items-center' : 'text-center max-w-4xl mx-auto'}`}
+		>
+			<div
+				class={image && imagePosition === 'right'
+					? 'order-1 lg:order-1'
+					: image && imagePosition === 'left'
+						? 'order-1 lg:order-2'
+						: ''}
+			>
+				{subtitle && <p class="mb-4 text-lg font-medium text-tuhura-green">{subtitle}</p>}
 
-        <h1
-          class={`font-bold leading-tight mb-6 ${compact ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"}`}
-        >
-          <Fragment set:html={title} />
-        </h1>
+				<h1
+					class={`font-bold leading-tight mb-6 ${compact ? 'text-3xl md:text-4xl' : 'text-4xl md:text-5xl'}`}
+				>
+					<Fragment set:html={title} />
+				</h1>
 
-        <p
-          class={`text-gray-600 mb-8 leading-relaxed ${compact ? "text-lg" : "text-xl"}`}
-        >
-          {description}
-        </p>
+				<p class={`text-gray-600 mb-8 leading-relaxed ${compact ? 'text-lg' : 'text-xl'}`}>
+					{description}
+				</p>
 
-        {
-          ctaText && ctaHref && (
-            <div class={image ? "" : "flex justify-center"}>
-              <a
-                href={ctaHref}
-                target={ctaTarget}
-                rel={ctaTarget === "_blank" ? "noopener noreferrer" : undefined}
-                class="btn btn-primary btn-lg"
-              >
-                {ctaText}
-              </a>
-            </div>
-          )
-        }
-      </div>
+				{
+					ctaText && ctaHref && (
+						<div class={image ? '' : 'flex justify-center'}>
+							<a
+								href={ctaHref}
+								target={ctaTarget}
+								rel={ctaTarget === '_blank' ? 'noopener noreferrer' : undefined}
+								class="btn btn-primary btn-lg"
+							>
+								{ctaText}
+							</a>
+						</div>
+					)
+				}
+			</div>
 
-      {
-        image && (
-          <div
-            class={
-              imagePosition === "right"
-                ? "order-2 lg:order-2"
-                : "order-2 lg:order-1"
-            }
-          >
-            <div class="relative overflow-hidden rounded-xl bg-white shadow-xl">
-              <Image
-                src={image}
-                alt={imageAlt}
-                class="h-auto w-full"
-                loading="eager"
-              />
-            </div>
-          </div>
-        )
-      }
-    </div>
-  </div>
+			{
+				image && (
+					<div class={imagePosition === 'right' ? 'order-2 lg:order-2' : 'order-2 lg:order-1'}>
+						<div class="relative overflow-hidden rounded-xl bg-white shadow-xl">
+							<Image src={image} alt={imageAlt} class="h-auto w-full" loading="eager" />
+						</div>
+					</div>
+				)
+			}
+		</div>
+	</div>
 </section>

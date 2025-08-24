@@ -1,56 +1,56 @@
 ---
-import { Image } from "astro:assets";
-import logoSrc from "@assets/logo.svg";
-import lillianhImage from "@assets/team/LHTheadshot.jpg";
-import neenuImage from "@assets/team/neenu.jpg";
-import teamImage from "@assets/team-photo.jpg";
-import IconFeatures from "@components/ui/IconFeatures.astro";
-import PersonCards from "@components/ui/PersonCards.astro";
-import Layout from "@layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import logoSrc from '@assets/logo.svg';
+import lillianhImage from '@assets/team/LHTheadshot.jpg';
+import neenuImage from '@assets/team/neenu.jpg';
+import teamImage from '@assets/team-photo.jpg';
+import IconFeatures from '@components/ui/IconFeatures.astro';
+import PersonCards from '@components/ui/PersonCards.astro';
+import Layout from '@layouts/Layout.astro';
 
 const teamMembers = [
 	{
-		name: "Leon Bowie",
-		role: "Co-Founder & CEO",
+		name: 'Leon Bowie',
+		role: 'Co-Founder & CEO',
 		bio: "Co-founder with 7+ years in tech education through Code Clubs and robotics coaching. DevOps Engineer by trade who leads Tūhura Tech's operations and partnerships.",
 		avatar: logoSrc,
 		social: {
-			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
-			github: "https://github.com/Darkflame72",
+			linkedin: 'https://www.linkedin.com/in/leon-bowie-36a33234a',
+			github: 'https://github.com/Darkflame72',
 			// envolope: "mailto:leon@tuhuratech.org.nz",
 		},
 	},
 	{
-		name: "Lillian Hide-Tobin",
-		role: "Lead Mentor",
-		bio: "Computer Science and Psychology graduate passionate about tech as a creative medium, especially game development and algorithmic arts. Dedicated to encouraging young women in technology.",
+		name: 'Lillian Hide-Tobin',
+		role: 'Lead Mentor',
+		bio: 'Computer Science and Psychology graduate passionate about tech as a creative medium, especially game development and algorithmic arts. Dedicated to encouraging young women in technology.',
 		avatar: lillianhImage,
 		social: {},
 	},
 	{
-		name: "Zelle Marcovicci",
-		role: "Lead Mentor",
-		bio: "Creative Media Production graduate specializing in video games and interactive technology. Teaches immersive storytelling and programming at Massey University alongside her Tūhura Tech work.",
+		name: 'Zelle Marcovicci',
+		role: 'Lead Mentor',
+		bio: 'Creative Media Production graduate specializing in video games and interactive technology. Teaches immersive storytelling and programming at Massey University alongside her Tūhura Tech work.',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Neenu",
-		role: "Lead Mentor",
-		bio: "Electronics Engineering graduate with Masters in Signal Processing, currently pursuing Professional Business Analysis at VUW where she also tutors. Passionate about inspiring kids through hands-on tech learning.",
+		name: 'Neenu',
+		role: 'Lead Mentor',
+		bio: 'Electronics Engineering graduate with Masters in Signal Processing, currently pursuing Professional Business Analysis at VUW where she also tutors. Passionate about inspiring kids through hands-on tech learning.',
 		avatar: neenuImage,
 		social: {},
 	},
 	{
-		name: "Irma",
-		role: "Admin and Operations Coordinator",
-		bio: "Irma brings expertise in business operations, administration and finance to Tūhura Tech. Working quietly behind the scenes, she keeps everything organised and running smoothly while applying financial discipline and community focus to help Tūhura Tech deliver more impactful programmes and build sustainable partnerships with funders and supporters. She values inclusivity and loves being part of the team that breaks barriers in technology education and makes it accessible to all.",
+		name: 'Irma',
+		role: 'Admin and Operations Coordinator',
+		bio: 'Irma brings expertise in business operations, administration and finance to Tūhura Tech. Working quietly behind the scenes, she keeps everything organised and running smoothly while applying financial discipline and community focus to help Tūhura Tech deliver more impactful programmes and build sustainable partnerships with funders and supporters. She values inclusivity and loves being part of the team that breaks barriers in technology education and makes it accessible to all.',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Yui",
-		role: "Community Coordinator",
+		name: 'Yui',
+		role: 'Community Coordinator',
 		bio: "Commerce student who brings her Industrial Design background and student support experience to spreading the word about Tūhura Tech's awesome mahi. She helps share what the organisation is doing and makes sure more people know about the opportunities available.",
 		avatar: logoSrc,
 		social: {},
@@ -59,62 +59,62 @@ const teamMembers = [
 
 const boardMembers = [
 	{
-		name: "Lillian Pak",
-		role: "Co-Founder & Chair of the Board",
+		name: 'Lillian Pak',
+		role: 'Co-Founder & Chair of the Board',
 		bio: "Experienced leader in education, libraries, and public service with extensive governance and community development experience. Passionate about Tūhura Tech's mission of removing barriers to equitable education.",
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Simon McCallum",
-		role: "Treasurer",
-		bio: "",
+		name: 'Simon McCallum',
+		role: 'Treasurer',
+		bio: '',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Rose Langride",
-		role: "Secretary",
+		name: 'Rose Langride',
+		role: 'Secretary',
 		bio: "Education industry veteran with over a decade of experience. Currently works with senior high school students at Wa Ora Montessori School. Joined the board because of Tūhura Tech's commitment to equitable access to learning.",
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Jerome Dolman",
-		role: "Trustee",
-		bio: "",
+		name: 'Jerome Dolman',
+		role: 'Trustee',
+		bio: '',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Aleisha Amohia",
-		role: "Trustee",
-		bio: "",
+		name: 'Aleisha Amohia',
+		role: 'Trustee',
+		bio: '',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Kendra Ross",
-		role: "Trustee",
-		bio: "",
+		name: 'Kendra Ross',
+		role: 'Trustee',
+		bio: '',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Carl Ross",
-		role: "Trustee",
-		bio: "",
+		name: 'Carl Ross',
+		role: 'Trustee',
+		bio: '',
 		avatar: logoSrc,
 		social: {},
 	},
 	{
-		name: "Leon Bowie",
-		role: "Co-Founder, CEO & Trustee",
-		bio: "Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.",
+		name: 'Leon Bowie',
+		role: 'Co-Founder, CEO & Trustee',
+		bio: 'Actively involved in technology outreach for the past 7 years running Code Clubs, coaching robotics teams and working in industry as a DevOps Engineer. One of the founders who now runs Tūhura Tech working with our staff, volunteers and sponsors to make sure all kids can get the best support possible.',
 		avatar: logoSrc,
 		social: {
-			linkedin: "https://www.linkedin.com/in/leon-bowie-36a33234a",
-			github: "https://github.com/Darkflame72",
+			linkedin: 'https://www.linkedin.com/in/leon-bowie-36a33234a',
+			github: 'https://github.com/Darkflame72',
 			// envolope: "mailto:leon@tuhuratech.org.nz",
 		},
 	},
@@ -122,279 +122,258 @@ const boardMembers = [
 
 const values = [
 	{
-		title: "Accessible & Equitable Education",
+		title: 'Accessible & Equitable Education',
 		description:
-			"No barriers to education and opportunities. We provide all our sessions free of charge, including resources, laptops, robots, and electronics.",
-		icon: "heroicons:code-bracket",
+			'No barriers to education and opportunities. We provide all our sessions free of charge, including resources, laptops, robots, and electronics.',
+		icon: 'heroicons:code-bracket',
 	},
 	{
-		title: "Industry Aligned Content",
+		title: 'Industry Aligned Content',
 		description:
-			"Current, engaging content that sets rangatahi up for success. We work with industry partners to bring their knowledge and practices to rangatahi.",
-		icon: "heroicons:code-bracket",
+			'Current, engaging content that sets rangatahi up for success. We work with industry partners to bring their knowledge and practices to rangatahi.',
+		icon: 'heroicons:code-bracket',
 	},
 	{
-		title: "Knowledge and Support",
+		title: 'Knowledge and Support',
 		description:
 			"Trained staff in both technology and education. We're a Living Wage Accredited Employer and invest in our staff through industry training and certifications.",
-		icon: "heroicons:code-bracket",
+		icon: 'heroicons:code-bracket',
 	},
 	{
-		title: "Community-Centered Approach",
+		title: 'Community-Centered Approach',
 		description:
-			"We go to rangatahi in their communities - operating in schools, libraries, community centres, and marae.",
-		icon: "heroicons:code-bracket",
+			'We go to rangatahi in their communities - operating in schools, libraries, community centres, and marae.',
+		icon: 'heroicons:code-bracket',
 	},
 ];
 
 const timeline = [
 	{
-		year: "2021",
-		title: "The Idea",
+		year: '2021',
+		title: 'The Idea',
 		description:
-			"Post-COVID, a group of us came together to build a sustainable, community-run programme. The original board of Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie established the charity.",
+			'Post-COVID, a group of us came together to build a sustainable, community-run programme. The original board of Lillian Pak, Danielle Sims, Justin Chua, John Barrow and Leon Bowie established the charity.',
 	},
 	{
-		year: "2021-2023",
-		title: "Proving the Concept",
+		year: '2021-2023',
+		title: 'Proving the Concept',
 		description:
-			"Trialled session formats and approaches with select kura and community centres to refine our support model for rangatahi.",
+			'Trialled session formats and approaches with select kura and community centres to refine our support model for rangatahi.',
 	},
 	{
-		year: "2023",
-		title: "Start Growing",
+		year: '2023',
+		title: 'Start Growing',
 		description:
-			"Hiring our first staff members and expanding to Porirua and Lower Hutt. We reach 1000+ rangatahi in yearly engagement.",
+			'Hiring our first staff members and expanding to Porirua and Lower Hutt. We reach 1000+ rangatahi in yearly engagement.',
 	},
 	{
-		year: "2025+",
-		title: "Tūhura Tech across Greater Wellington",
-		description:
-			"Now with stable operations, a long term strategic vision and stable growth",
+		year: '2025+',
+		title: 'Tūhura Tech across Greater Wellington',
+		description: 'Now with stable operations, a long term strategic vision and stable growth',
 	},
 ];
 ---
 
 <Layout
-  title="About Us"
-  description="Read about Tūhura Tech's mission, values, team, and the story of how we plan to support and empower the next generation through technology!"
+	title="About Us"
+	description="Read about Tūhura Tech's mission, values, team, and the story of how we plan to support and empower the next generation through technology!"
 >
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h1 class="text-4xl leading-tight font-bold md:text-5xl">
-          About <span class="gradient-text">Tūhura Tech</span>
-        </h1>
-        <p class="mb-4 text-lg font-medium text-tuhura-green">
-          Kia ora koutou katoa! Welcome to our whānau!
-        </p>
-        <p class="mt-6 text-xl text-gray-600">
-          We bring free technology education directly to rangatahi (young
-          people) in their own communities - schools, libraries, community
-          centres, and marae. Each session is tailored to the participants,
-          supported by trained kaiako and industry professionals who share their
-          passion for technology.
-        </p>
-      </div>
+	<section class="pt-20 pb-16 md:pt-28 md:pb-24">
+		<div class="container-custom">
+			<div class="mx-auto max-w-3xl text-center">
+				<h1 class="text-4xl leading-tight font-bold md:text-5xl">
+					About <span class="gradient-text">Tūhura Tech</span>
+				</h1>
+				<p class="mb-4 text-lg font-medium text-tuhura-green">
+					Kia ora koutou katoa! Welcome to our whānau!
+				</p>
+				<p class="mt-6 text-xl text-gray-600">
+					We bring free technology education directly to rangatahi (young people) in their own
+					communities - schools, libraries, community centres, and marae. Each session is tailored
+					to the participants, supported by trained kaiako and industry professionals who share
+					their passion for technology.
+				</p>
+			</div>
 
-      <div class="mt-16">
-        <div class="relative overflow-hidden rounded-xl">
-          <Image
-            src={teamImage}
-            alt="Tūhura Tech Team - Our passionate educators and rangatahi working together"
-            class="h-auto w-full"
-            width={1200}
-            height={600}
-          />
-          <!-- TODO: Replace with image showing diverse team of staff, volunteers, and students collaborating -->
-        </div>
-      </div>
-      <div class="mt-12 text-center">
-        <p class="text-xl font-medium text-gray-700">
-          As the only Charitable Trust operating in the Greater Wellington
-          Region focused on Technology Education for rangatahi with trained
-          kaiako (staff), we focus on providing high-quality sessions and
-          support. We believe in hands-on, Montessori-inspired ako (learning)
-          aligned to industry content and culturally responsive practices.
-        </p>
-      </div>
+			<div class="mt-16">
+				<div class="relative overflow-hidden rounded-xl">
+					<Image
+						src={teamImage}
+						alt="Tūhura Tech Team - Our passionate educators and rangatahi working together"
+						class="h-auto w-full"
+						width={1200}
+						height={600}
+					/>
+					<!-- TODO: Replace with image showing diverse team of staff, volunteers, and students collaborating -->
+				</div>
+			</div>
+			<div class="mt-12 text-center">
+				<p class="text-xl font-medium text-gray-700">
+					As the only Charitable Trust operating in the Greater Wellington Region focused on
+					Technology Education for rangatahi with trained kaiako (staff), we focus on providing
+					high-quality sessions and support. We believe in hands-on, Montessori-inspired ako
+					(learning) aligned to industry content and culturally responsive practices.
+				</p>
+			</div>
 
-      <!-- Mission Statement Section -->
-      <div class="mt-16 rounded-xl bg-tuhura-gray p-8">
-        <div class="text-center">
-          <h2 class="mb-6 text-3xl font-bold">Our Kaupapa (Mission)</h2>
-          <p class="mb-6 text-xl text-gray-700">
-            To remove barriers and provide equitable access to technology
-            education for all rangatahi in Aotearoa New Zealand, regardless of
-            their background, location, or circumstances.
-          </p>
-          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-tuhura-green">1000+</div>
-              <p class="text-gray-600">Rangatahi engaged annually</p>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-tuhura-green">15+</div>
-              <p class="text-gray-600">Community locations</p>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-tuhura-green">100%</div>
-              <p class="text-gray-600">Free of charge</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			<!-- Mission Statement Section -->
+			<div class="mt-16 rounded-xl bg-tuhura-gray p-8">
+				<div class="text-center">
+					<h2 class="mb-6 text-3xl font-bold">Our Kaupapa (Mission)</h2>
+					<p class="mb-6 text-xl text-gray-700">
+						To remove barriers and provide equitable access to technology education for all
+						rangatahi in Aotearoa New Zealand, regardless of their background, location, or
+						circumstances.
+					</p>
+					<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+						<div class="text-center">
+							<div class="text-3xl font-bold text-tuhura-green">1000+</div>
+							<p class="text-gray-600">Rangatahi engaged annually</p>
+						</div>
+						<div class="text-center">
+							<div class="text-3xl font-bold text-tuhura-green">15+</div>
+							<p class="text-gray-600">Community locations</p>
+						</div>
+						<div class="text-center">
+							<div class="text-3xl font-bold text-tuhura-green">100%</div>
+							<p class="text-gray-600">Free of charge</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="bg-tuhura-gray py-20">
-    <div class="container-custom">
-      <div class="mx-auto mb-16 max-w-3xl text-center">
-        <h2 class="text-3xl font-bold md:text-4xl">Our Values & Tikanga</h2>
-        <p class="mt-4 text-xl text-gray-600">
-          The principles that guide everything we do in our mahi.
-        </p>
-      </div>
+	<section class="bg-tuhura-gray py-20">
+		<div class="container-custom">
+			<div class="mx-auto mb-16 max-w-3xl text-center">
+				<h2 class="text-3xl font-bold md:text-4xl">Our Values & Tikanga</h2>
+				<p class="mt-4 text-xl text-gray-600">
+					The principles that guide everything we do in our mahi.
+				</p>
+			</div>
 
-      <IconFeatures features={values} columns="2" iconVariant="default" />
+			<IconFeatures features={values} columns="2" iconVariant="default" />
 
-      <!-- Additional Values Section -->
-      <div class="mt-16 rounded-xl bg-white p-8">
-        <h3 class="mb-8 text-center text-2xl font-bold">
-          Our Commitment to Te Ao Māori
-        </h3>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <h4 class="mb-3 text-lg font-semibold text-tuhura-green">
-              Manaakitanga (Care & Hospitality)
-            </h4>
-            <p class="text-gray-600">
-              We create welcoming, inclusive spaces where every rangatahi feels
-              valued and supported.
-            </p>
-          </div>
-          <div>
-            <h4 class="mb-3 text-lg font-semibold text-tuhura-green">
-              Whanaungatanga (Relationships)
-            </h4>
-            <p class="text-gray-600">
-              We build strong, lasting connections within our community and with
-              whānau.
-            </p>
-          </div>
-          <div>
-            <h4 class="mb-3 text-lg font-semibold text-tuhura-green">
-              Ako (Reciprocal Learning)
-            </h4>
-            <p class="text-gray-600">
-              We learn from each other - kaiako and rangatahi both teach and
-              learn together.
-            </p>
-          </div>
-          <div>
-            <h4 class="mb-3 text-lg font-semibold text-tuhura-green">
-              Kaitiakitanga (Guardianship)
-            </h4>
-            <p class="text-gray-600">
-              We are guardians of our rangatahi's learning journey and digital
-              future.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			<!-- Additional Values Section -->
+			<div class="mt-16 rounded-xl bg-white p-8">
+				<h3 class="mb-8 text-center text-2xl font-bold">Our Commitment to Te Ao Māori</h3>
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<div>
+						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
+							Manaakitanga (Care & Hospitality)
+						</h4>
+						<p class="text-gray-600">
+							We create welcoming, inclusive spaces where every rangatahi feels valued and
+							supported.
+						</p>
+					</div>
+					<div>
+						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
+							Whanaungatanga (Relationships)
+						</h4>
+						<p class="text-gray-600">
+							We build strong, lasting connections within our community and with whānau.
+						</p>
+					</div>
+					<div>
+						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">Ako (Reciprocal Learning)</h4>
+						<p class="text-gray-600">
+							We learn from each other - kaiako and rangatahi both teach and learn together.
+						</p>
+					</div>
+					<div>
+						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
+							Kaitiakitanga (Guardianship)
+						</h4>
+						<p class="text-gray-600">
+							We are guardians of our rangatahi's learning journey and digital future.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="bg-white py-20">
-    <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold md:text-4xl">Our Story</h2>
-      </div>
+	<section class="bg-white py-20">
+		<div class="container-custom">
+			<div class="mx-auto max-w-3xl text-center">
+				<h2 class="text-3xl font-bold md:text-4xl">Our Story</h2>
+			</div>
 
-      <div class="mx-auto mt-12 max-w-4xl">
-        <div class="relative">
-          {
-            timeline.map((event, index) => (
-              <div
-                class="relative pb-12 pl-8"
-                style={`animation-delay: ${index * 0.15}s`}
-              >
-                <div class="absolute top-0 left-0 h-full w-px bg-tuhura-green" />
-                <div class="absolute top-2 left-[-4px] h-2 w-2 rounded-full bg-tuhura-green" />
-                <div class="text-sm font-semibold text-tuhura-green">
-                  {event.year}
-                </div>
-                <h3 class="mt-2 text-xl font-semibold">{event.title}</h3>
-                <p class="mt-2 text-gray-600">{event.description}</p>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </section>
+			<div class="mx-auto mt-12 max-w-4xl">
+				<div class="relative">
+					{
+						timeline.map((event, index) => (
+							<div class="relative pb-12 pl-8" style={`animation-delay: ${index * 0.15}s`}>
+								<div class="absolute top-0 left-0 h-full w-px bg-tuhura-green" />
+								<div class="absolute top-2 left-[-4px] h-2 w-2 rounded-full bg-tuhura-green" />
+								<div class="text-sm font-semibold text-tuhura-green">{event.year}</div>
+								<h3 class="mt-2 text-xl font-semibold">{event.title}</h3>
+								<p class="mt-2 text-gray-600">{event.description}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <PersonCards
-    people={teamMembers}
-    title="Meet Our Kaimahi (Team)"
-    description="The passionate people behind Tūhura Tech who make our mahi possible."
-  />
+	<PersonCards
+		people={teamMembers}
+		title="Meet Our Kaimahi (Team)"
+		description="The passionate people behind Tūhura Tech who make our mahi possible."
+	/>
 
-  <section class="relative overflow-hidden bg-tuhura-green py-20 text-white">
-    <div class="absolute inset-0 opacity-10"></div>
-    <div class="container-custom relative">
-      <div class="mx-auto max-w-3xl text-center">
-        <span
-          class="mb-6 inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium"
-        >
-          We're Hiring!
-        </span>
-        <h2 class="text-3xl font-bold md:text-4xl">Join Our Team</h2>
-        <p class="mt-6 text-xl opacity-90">
-          We're on a mission to empower rangatahi through technology education.
-        </p>
-        <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="/contact"
-            class="btn border-2 border-white bg-transparent hover:bg-white/10"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+	<section class="relative overflow-hidden bg-tuhura-green py-20 text-white">
+		<div class="absolute inset-0 opacity-10"></div>
+		<div class="container-custom relative">
+			<div class="mx-auto max-w-3xl text-center">
+				<span class="mb-6 inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium">
+					We're Hiring!
+				</span>
+				<h2 class="text-3xl font-bold md:text-4xl">Join Our Team</h2>
+				<p class="mt-6 text-xl opacity-90">
+					We're on a mission to empower rangatahi through technology education.
+				</p>
+				<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+					<a href="/contact" class="btn border-2 border-white bg-transparent hover:bg-white/10">
+						Get in Touch
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <PersonCards
-    people={boardMembers}
-    title="Meet Our Board of Trustees (Poari Kaitiaki)"
-    description="The amazing people who provide governance and guardianship over our charity and its strategic direction."
-  />
+	<PersonCards
+		people={boardMembers}
+		title="Meet Our Board of Trustees (Poari Kaitiaki)"
+		description="The amazing people who provide governance and guardianship over our charity and its strategic direction."
+	/>
 
-  <!-- Supporters Section -->
-  <section class="bg-gray-50 py-20">
-    <div class="container-custom">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold md:text-4xl">Our Amazing Supporters</h2>
-        <p class="mt-4 text-xl text-gray-600">
-          Tūhura Tech is proudly funded by corporate sponsors, local government
-          partnerships, and community donations. This support makes our 100%
-          free sessions possible.
-        </p>
-        <p class="mt-4 text-gray-600">
-          <strong>Established 2022</strong>
-          <br />
-          Thanks to our supporters, we've been serving Wellington communities with
-          free technology education for over 3 years.
-        </p>
-      </div>
+	<!-- Supporters Section -->
+	<section class="bg-gray-50 py-20">
+		<div class="container-custom">
+			<div class="mx-auto max-w-3xl text-center">
+				<h2 class="text-3xl font-bold md:text-4xl">Our Amazing Supporters</h2>
+				<p class="mt-4 text-xl text-gray-600">
+					Tūhura Tech is proudly funded by corporate sponsors, local government partnerships, and
+					community donations. This support makes our 100% free sessions possible.
+				</p>
+				<p class="mt-4 text-gray-600">
+					<strong>Established 2022</strong>
+					<br />
+					Thanks to our supporters, we've been serving Wellington communities with free technology education
+					for over 3 years.
+				</p>
+			</div>
 
-      <div class="mt-12 text-center">
-        <p class="mb-4 text-gray-600">
-          Want to support free technology education in your community?
-        </p>
-        <a href="/support-us" class="btn btn-primary"> Become a Supporter </a>
-      </div>
-    </div>
-  </section>
+			<div class="mt-12 text-center">
+				<p class="mb-4 text-gray-600">
+					Want to support free technology education in your community?
+				</p>
+				<a href="/support-us" class="btn btn-primary"> Become a Supporter </a>
+			</div>
+		</div>
+	</section>
 </Layout>

@@ -9,7 +9,7 @@ interface Props {
 	stats: Stat[];
 	title?: string;
 	description?: string;
-	variant?: "default" | "card" | "inline";
+	variant?: 'default' | 'card' | 'inline';
 	bgColor?: string;
 }
 
@@ -17,33 +17,29 @@ const { stats, title, description } = Astro.props;
 ---
 
 <section class="mt-10 rounded-2xl bg-tuhura-gray p-8 md:p-12">
-  <div class="container-custom">
-    {
-      title && (
-        <div class="mx-auto mb-16 max-w-3xl text-center">
-          <h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
-          {description && <p class="text-xl text-gray-600">{description}</p>}
-        </div>
-      )
-    }
+	<div class="container-custom">
+		{
+			title && (
+				<div class="mx-auto mb-16 max-w-3xl text-center">
+					<h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
+					{description && <p class="text-xl text-gray-600">{description}</p>}
+				</div>
+			)
+		}
 
-    <div>
-      <div
-        class={`grid grid-cols-1 md:grid-cols-${stats.length} gap-6 text-center`}
-      >
-        {
-          stats.map((stat) => (
-            <div>
-              <div class="mb-2 text-4xl font-bold text-tuhura-green md:text-5xl">
-                {stat.value}
-              </div>
-              <p class="text-lg text-gray-600">{stat.description}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
+		<div>
+			<div class={`grid grid-cols-1 md:grid-cols-${stats.length} gap-6 text-center`}>
+				{
+					stats.map((stat) => (
+						<div>
+							<div class="mb-2 text-4xl font-bold text-tuhura-green md:text-5xl">{stat.value}</div>
+							<p class="text-lg text-gray-600">{stat.description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- <div class="mt-20 bg-tuhura-gray rounded-2xl p-8 md:p-12">

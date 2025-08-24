@@ -1,41 +1,38 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "@assets/hero.jpg";
+import { Image } from 'astro:assets';
+import heroImage from '@assets/hero.jpg';
 ---
 
 <section class="flex items-center bg-gray-50 pt-20 lg:py-32">
-  <div class="container-custom relative">
-    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-      <div>
-        <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
-          Engaging <span class="gradient-text">rangatahi</span> through technology
-        </h1>
-        <p class="mt-6 max-w-lg text-xl text-gray-600">
-          Free tech education in schools, libraries, and communities. We bring
-          the gear, mentors, and kaupapa.
-        </p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-          <a href="/mahi" class="btn btn-primary">Explore our mahi</a>
-          <a href="/support-us" class="btn btn-secondary">Partner with us</a>
-        </div>
-      </div>
-      <div class="">
-        <div class="relative">
-          <div
-            class="absolute -inset-0.5 rounded-xl bg-tuhura-green opacity-30 blur"
-          >
-          </div>
-          <div class="relative overflow-hidden rounded-xl bg-white shadow-xl">
-            <Image
-              src={heroImage}
-              alt="Tūhura Tech"
-              class="h-auto w-full"
-              width={700}
-              height={500}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container-custom relative">
+		<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+			<div>
+				<h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+					Engaging <span class="gradient-text">rangatahi</span> through technology
+				</h1>
+				<p class="mt-6 max-w-lg text-xl text-gray-600">
+					Free tech education in schools, libraries, and communities. We bring the gear, mentors,
+					and kaupapa.
+				</p>
+				<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+					<a href="/mahi" class="btn btn-primary">Explore our mahi</a>
+					<a href="/support-us" class="btn btn-secondary">Partner with us</a>
+				</div>
+			</div>
+			<div class="">
+				<div class="relative">
+					<div class="absolute -inset-0.5 rounded-xl bg-tuhura-green opacity-30 blur"></div>
+					<div class="relative overflow-hidden rounded-xl bg-white shadow-xl">
+						<Image
+							src={heroImage}
+							alt="Tūhura Tech"
+							class="h-auto w-full"
+							width={700}
+							height={500}
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

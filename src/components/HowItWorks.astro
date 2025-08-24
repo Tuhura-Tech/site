@@ -1,74 +1,68 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 
 const steps = [
 	{
-		title: "Find a Session Near You",
+		title: 'Find a Session Near You',
 		description:
-			"Browse our locations across Wellington, Lower Hutt, Upper Hutt, and Porirua. Sessions run after school hours at schools and community centres.",
-		link: "/mahi/sessions",
-		icon: "heroicons:map-pin",
+			'Browse our locations across Wellington, Lower Hutt, Upper Hutt, and Porirua. Sessions run after school hours at schools and community centres.',
+		link: '/mahi/sessions',
+		icon: 'heroicons:map-pin',
 	},
 	{
-		title: "Join Our Community",
+		title: 'Join Our Community',
 		description:
-			"Connect with other rangatahi and kaiako on Matrix to share projects, ask questions, and collaborate on ideas.",
-		link: "https://matrix.to/#/#home:tuhuratech.org.nz",
-		icon: "heroicons:user-group",
+			'Connect with other rangatahi and kaiako on Matrix to share projects, ask questions, and collaborate on ideas.',
+		link: 'https://matrix.to/#/#home:tuhuratech.org.nz',
+		icon: 'heroicons:user-group',
 	},
 	{
-		title: "Get Involved Further",
+		title: 'Get Involved Further',
 		description:
-			"Volunteer with us, contribute to our open source projects, or support our mission to make tech education accessible to all.",
-		link: "/support-us",
-		icon: "heroicons:heart",
+			'Volunteer with us, contribute to our open source projects, or support our mission to make tech education accessible to all.',
+		link: '/support-us',
+		icon: 'heroicons:heart',
 	},
 ];
 ---
 
 <section class="relative overflow-hidden bg-tuhura-gray py-20">
-  <!-- Subtle background pattern -->
-  <div class="absolute inset-0 opacity-5">
-    <div class="absolute inset-0 bg-repeat"></div>
-  </div>
+	<!-- Subtle background pattern -->
+	<div class="absolute inset-0 opacity-5">
+		<div class="absolute inset-0 bg-repeat"></div>
+	</div>
 
-  <div class="container-custom relative">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 class="text-3xl font-bold md:text-4xl">How to Get Started</h2>
-      <p class="mt-4 text-xl text-gray-600">
-        Here's how to get involved with Tūhura Tech.
-      </p>
-    </div>
+	<div class="container-custom relative">
+		<div class="mx-auto max-w-3xl text-center">
+			<h2 class="text-3xl font-bold md:text-4xl">How to Get Started</h2>
+			<p class="mt-4 text-xl text-gray-600">Here's how to get involved with Tūhura Tech.</p>
+		</div>
 
-    <div class="relative mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
-      {
-        steps.map((step, index) => (
-          <a
-            class={`rounded-2xl border border-gray-100 bg-white p-8 shadow-lg delay-${index + 2} group block transition-all hover:-translate-y-3 hover:shadow-2xl`}
-            href={step.link}
-            target={step.link.startsWith("http") ? "_blank" : undefined}
-            rel={
-              step.link.startsWith("http") ? "noopener noreferrer" : undefined
-            }
-          >
-            <div class="relative">
-              <div class="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg transition-transform group-hover:scale-110">
-                <Icon name={step.icon} class="h-10 w-10 text-white" />
-              </div>
-              <div class="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-tuhura-green text-sm font-bold text-white">
-                {index + 1}
-              </div>
-            </div>
-            <h3 class="mb-4 text-2xl font-bold transition-colors group-hover:text-tuhura-green">
-              {step.title}
-            </h3>
-            <p class="mb-4 leading-relaxed text-gray-600">{step.description}</p>
-            <div class="font-medium text-tuhura-green group-hover:underline">
-              Get Started →
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </div>
+		<div class="relative mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
+			{
+				steps.map((step, index) => (
+					<a
+						class={`rounded-2xl border border-gray-100 bg-white p-8 shadow-lg delay-${index + 2} group block transition-all hover:-translate-y-3 hover:shadow-2xl`}
+						href={step.link}
+						target={step.link.startsWith('http') ? '_blank' : undefined}
+						rel={step.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+					>
+						<div class="relative">
+							<div class="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg transition-transform group-hover:scale-110">
+								<Icon name={step.icon} class="h-10 w-10 text-white" />
+							</div>
+							<div class="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-tuhura-green text-sm font-bold text-white">
+								{index + 1}
+							</div>
+						</div>
+						<h3 class="mb-4 text-2xl font-bold transition-colors group-hover:text-tuhura-green">
+							{step.title}
+						</h3>
+						<p class="mb-4 leading-relaxed text-gray-600">{step.description}</p>
+						<div class="font-medium text-tuhura-green group-hover:underline">Get Started →</div>
+					</a>
+				))
+			}
+		</div>
+	</div>
 </section>

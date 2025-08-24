@@ -3,139 +3,137 @@
 ---
 
 <dialog id="donate-popover" role="dialog" aria-modal="false">
-  <div class="max-h-[80vh] w-full overflow-auto p-0">
-    <div
-      class="raisely-donate"
-      data-campaign-path="tuhura-tech"
-      data-profile=""
-      data-width="100%"
-      data-height="700"
-    >
-      <script is:inline src="https://cdn.raisely.com/v3/public/embed.js"
-      ></script>
-    </div>
-  </div>
+	<div class="max-h-[80vh] w-full overflow-auto p-0">
+		<div
+			class="raisely-donate"
+			data-campaign-path="tuhura-tech"
+			data-profile=""
+			data-width="100%"
+			data-height="700"
+		>
+			<script is:inline src="https://cdn.raisely.com/v3/public/embed.js"></script>
+		</div>
+	</div>
 </dialog>
 
 <script is:inline>
-  (function () {
-    var dlg = document.getElementById("donate-popover");
-    var trigger = document.getElementById("donate-trigger");
+	(function () {
+		var dlg = document.getElementById('donate-popover');
+		var trigger = document.getElementById('donate-trigger');
 
-    function computePosition() {
-      if (!dlg || !trigger) return;
-      var r = trigger.getBoundingClientRect();
-      var maxWidth = 576; // 36rem
-      var minWidth = 320;
-      var vw = window.innerWidth;
-      var dlgW = Math.min(Math.max(minWidth, Math.floor(vw * 0.95)), maxWidth);
-      var left;
-      if (vw <= 480) {
-        // Right align to screen edge with 8px margin on small screens
-        left = Math.max(8, vw - dlgW - 8);
-      } else {
-        // Center over the trigger button
-        var center = r.left + r.width / 2;
-        left = Math.round(center - dlgW / 2);
-        // Clamp within viewport margins
-        left = Math.max(8, Math.min(left, vw - dlgW - 8));
-      }
-      var top = Math.min(window.innerHeight - 16, r.bottom + 8);
-      dlg.style.width = dlgW + "px";
-      dlg.style.left = left + "px";
-      dlg.style.top = top + "px";
-    }
+		function computePosition() {
+			if (!dlg || !trigger) return;
+			var r = trigger.getBoundingClientRect();
+			var maxWidth = 576; // 36rem
+			var minWidth = 320;
+			var vw = window.innerWidth;
+			var dlgW = Math.min(Math.max(minWidth, Math.floor(vw * 0.95)), maxWidth);
+			var left;
+			if (vw <= 480) {
+				// Right align to screen edge with 8px margin on small screens
+				left = Math.max(8, vw - dlgW - 8);
+			} else {
+				// Center over the trigger button
+				var center = r.left + r.width / 2;
+				left = Math.round(center - dlgW / 2);
+				// Clamp within viewport margins
+				left = Math.max(8, Math.min(left, vw - dlgW - 8));
+			}
+			var top = Math.min(window.innerHeight - 16, r.bottom + 8);
+			dlg.style.width = dlgW + 'px';
+			dlg.style.left = left + 'px';
+			dlg.style.top = top + 'px';
+		}
 
-    function setExpanded() {
-      if (!trigger) return;
-      if (dlg && dlg instanceof HTMLDialogElement && dlg.open) {
-        trigger.setAttribute("aria-expanded", "true");
-      } else {
-        trigger.setAttribute("aria-expanded", "false");
-      }
-    }
+		function setExpanded() {
+			if (!trigger) return;
+			if (dlg && dlg instanceof HTMLDialogElement && dlg.open) {
+				trigger.setAttribute('aria-expanded', 'true');
+			} else {
+				trigger.setAttribute('aria-expanded', 'false');
+			}
+		}
 
-    function openPopover() {
-      if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
-      computePosition();
-      if (!dlg.open) dlg.show();
-      setExpanded();
-    }
+		function openPopover() {
+			if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
+			computePosition();
+			if (!dlg.open) dlg.show();
+			setExpanded();
+		}
 
-    function closePopover() {
-      if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
-      if (dlg.open) dlg.close();
-      setExpanded();
-    }
+		function closePopover() {
+			if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
+			if (dlg.open) dlg.close();
+			setExpanded();
+		}
 
-    function togglePopover() {
-      if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
-      if (dlg.open) closePopover();
-      else openPopover();
-    }
+		function togglePopover() {
+			if (!dlg || !(dlg instanceof HTMLDialogElement)) return;
+			if (dlg.open) closePopover();
+			else openPopover();
+		}
 
-    // Expose a safe toggle on window for the header button to call
-    window.toggleDonatePopover = togglePopover;
+		// Expose a safe toggle on window for the header button to call
+		window.toggleDonatePopover = togglePopover;
 
-    // Keep positioned on resize/scroll while open
-    window.addEventListener(
-      "resize",
-      function () {
-        if (dlg instanceof HTMLDialogElement && dlg.open) computePosition();
-      },
-      { passive: true },
-    );
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (dlg instanceof HTMLDialogElement && dlg.open) computePosition();
-      },
-      { passive: true },
-    );
+		// Keep positioned on resize/scroll while open
+		window.addEventListener(
+			'resize',
+			function () {
+				if (dlg instanceof HTMLDialogElement && dlg.open) computePosition();
+			},
+			{ passive: true },
+		);
+		window.addEventListener(
+			'scroll',
+			function () {
+				if (dlg instanceof HTMLDialogElement && dlg.open) computePosition();
+			},
+			{ passive: true },
+		);
 
-    // Sync aria on close
-    if (dlg instanceof HTMLDialogElement) {
-      dlg.addEventListener("close", setExpanded);
-      dlg.addEventListener("cancel", function (e) {
-        e.preventDefault();
-        closePopover();
-      });
-    }
+		// Sync aria on close
+		if (dlg instanceof HTMLDialogElement) {
+			dlg.addEventListener('close', setExpanded);
+			dlg.addEventListener('cancel', function (e) {
+				e.preventDefault();
+				closePopover();
+			});
+		}
 
-    // Close when clicking outside (ignore clicks on trigger)
-    document.addEventListener("click", function (event) {
-      if (!(dlg instanceof HTMLDialogElement) || !dlg.open) return;
-      var target = event.target;
-      if (!(target instanceof Node)) return;
-      var onTrigger =
-        (target.closest && target.closest("#donate-trigger")) || null;
-      if (onTrigger) return;
-      if (!dlg.contains(target)) closePopover();
-    });
+		// Close when clicking outside (ignore clicks on trigger)
+		document.addEventListener('click', function (event) {
+			if (!(dlg instanceof HTMLDialogElement) || !dlg.open) return;
+			var target = event.target;
+			if (!(target instanceof Node)) return;
+			var onTrigger = (target.closest && target.closest('#donate-trigger')) || null;
+			if (onTrigger) return;
+			if (!dlg.contains(target)) closePopover();
+		});
 
-    // Close on Escape
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") closePopover();
-    });
-  })();
+		// Close on Escape
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Escape') closePopover();
+		});
+	})();
 </script>
 
 <style>
-  dialog#donate-popover {
-    border: none;
-    outline: none;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    dialog#donate-popover {
-      opacity: 0;
-      transform: translateY(8px) scale(0.98);
-      transition:
-        opacity 0.15s ease,
-        transform 0.15s ease;
-    }
-    dialog#donate-popover[open] {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
+	dialog#donate-popover {
+		border: none;
+		outline: none;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		dialog#donate-popover {
+			opacity: 0;
+			transform: translateY(8px) scale(0.98);
+			transition:
+				opacity 0.15s ease,
+				transform 0.15s ease;
+		}
+		dialog#donate-popover[open] {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
 </style>

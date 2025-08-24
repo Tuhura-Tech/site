@@ -1,171 +1,150 @@
 ---
-import { Image } from "astro:assets";
-import session1Image from "@assets/session-1.jpg";
-import { Icon } from "astro-icon/components";
+import { Image } from 'astro:assets';
+import session1Image from '@assets/session-1.jpg';
+import { Icon } from 'astro-icon/components';
 
 const whatWeDo = [
 	{
-		title: "Coding & Programming",
+		title: 'Coding & Programming',
 		description:
-			"Python, JavaScript, web development, app creation - starting from visual programming for beginners",
-		icon: "heroicons:code-bracket",
+			'Python, JavaScript, web development, app creation - starting from visual programming for beginners',
+		icon: 'heroicons:code-bracket',
 	},
 	{
-		title: "Robotics & Electronics",
+		title: 'Robotics & Electronics',
 		description:
-			"Arduino, Raspberry Pi, VEX robotics, micro:bit projects - building and programming physical devices",
-		icon: "heroicons:cpu-chip",
+			'Arduino, Raspberry Pi, VEX robotics, micro:bit projects - building and programming physical devices',
+		icon: 'heroicons:cpu-chip',
 	},
 	{
-		title: "Digital Creation",
-		description:
-			"3D printing, game development, web design - bringing creative ideas to life",
-		icon: "heroicons:cube-transparent",
+		title: 'Digital Creation',
+		description: '3D printing, game development, web design - bringing creative ideas to life',
+		icon: 'heroicons:cube-transparent',
 	},
 	{
-		title: "Problem Solving",
+		title: 'Problem Solving',
 		description:
-			"Computational thinking, project-based learning, real-world challenges using technology",
-		icon: "heroicons:puzzle-piece",
+			'Computational thinking, project-based learning, real-world challenges using technology',
+		icon: 'heroicons:puzzle-piece',
 	},
 ];
 
 const approachPoints = [
 	{
-		icon: "heroicons:users",
-		title: "Trained Kaiako + Industry Volunteers",
+		icon: 'heroicons:users',
+		title: 'Trained Kaiako + Industry Volunteers',
 		description:
 			"Professional educators supported by working tech industry experts, adapting to each community's needs",
 	},
 	{
-		icon: "heroicons:heart",
-		title: "Passion-Driven Learning",
-		description:
-			"Each session tailored to the interests and curiosity of the rangatahi who attend",
+		icon: 'heroicons:heart',
+		title: 'Passion-Driven Learning',
+		description: 'Each session tailored to the interests and curiosity of the rangatahi who attend',
 	},
 	{
-		icon: "heroicons:home",
-		title: "Community-Centered Approach",
+		icon: 'heroicons:home',
+		title: 'Community-Centered Approach',
 		description:
-			"We come to schools, libraries, community centres, and marae - making tech education accessible where rangatahi are",
+			'We come to schools, libraries, community centres, and marae - making tech education accessible where rangatahi are',
 	},
 	{
-		icon: "heroicons:rocket-launch",
-		title: "Responsive & Flexible",
+		icon: 'heroicons:rocket-launch',
+		title: 'Responsive & Flexible',
 		description:
-			"Every session is different, shaped by the community, space, and rangatahi involved",
+			'Every session is different, shaped by the community, space, and rangatahi involved',
 	},
 ];
 ---
 
 <section class="bg-white py-20">
-  <div class="container-custom">
-    <div class="mx-auto mb-16 max-w-4xl text-center">
-      <h2 class="mb-6 text-3xl font-bold md:text-4xl">
-        What We Mean by "Technology Education"
-      </h2>
-      <p class="text-xl leading-relaxed text-gray-600">
-        Technology learning in community spaces. Our trained kaiako and industry
-        volunteers create sessions tailored to each group's interests and
-        curiosity.
-      </p>
-    </div>
+	<div class="container-custom">
+		<div class="mx-auto mb-16 max-w-4xl text-center">
+			<h2 class="mb-6 text-3xl font-bold md:text-4xl">What We Mean by "Technology Education"</h2>
+			<p class="text-xl leading-relaxed text-gray-600">
+				Technology learning in community spaces. Our trained kaiako and industry volunteers create
+				sessions tailored to each group's interests and curiosity.
+			</p>
+		</div>
 
+		<!-- Visual Divider Section -->
+		<div class="mb-24 rounded-3xl bg-gradient-to-r from-tuhura-green/10 to-blue-500/10 p-8 md:p-12">
+			<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+				<div>
+					<h3 class="mb-6 text-2xl font-bold text-tuhura-green">Learning Through Doing</h3>
+					<p class="mb-4 text-lg text-gray-700">
+						Every session is hands-on and project-based. Rangatahi don't just learn about technology
+						- they create with it, building games, apps, robots, and digital art that they're
+						passionate about.
+					</p>
+					<p class="text-gray-600">
+						Whether it's their first time coding or they're already building complex projects, our
+						mentors meet each rangatahi where they are and help them explore what excites them most.
+					</p>
+				</div>
+				<div class="relative">
+					<div class="relative overflow-hidden rounded-2xl shadow-xl">
+						<Image
+							src={session1Image}
+							alt="Rangatahi collaborating on hands-on technology projects"
+							class="h-80 w-full object-cover"
+							width={500}
+							height={320}
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+						>
+							<div class="absolute right-6 bottom-6 left-6">
+								<h4 class="mb-2 text-xl font-bold text-white">Collaborative Creation</h4>
+								<p class="text-white/90">
+									Rangatahi working together on projects that combine creativity, problem-solving,
+									and technology skills.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Visual Divider Section -->
-    <div
-      class="mb-24 rounded-3xl bg-gradient-to-r from-tuhura-green/10 to-blue-500/10 p-8 md:p-12"
-    >
-      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-        <div>
-          <h3 class="mb-6 text-2xl font-bold text-tuhura-green">
-            Learning Through Doing
-          </h3>
-          <p class="mb-4 text-lg text-gray-700">
-            Every session is hands-on and project-based. Rangatahi don't just
-            learn about technology - they create with it, building games, apps,
-            robots, and digital art that they're passionate about.
-          </p>
-          <p class="text-gray-600">
-            Whether it's their first time coding or they're already building
-            complex projects, our mentors meet each rangatahi where they are and
-            help them explore what excites them most.
-          </p>
-        </div>
-        <div class="relative">
-          <div class="relative overflow-hidden rounded-2xl shadow-xl">
-            <Image
-              src={session1Image}
-              alt="Rangatahi collaborating on hands-on technology projects"
-              class="h-80 w-full object-cover"
-              width={500}
-              height={320}
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
-            >
-              <div class="absolute right-6 bottom-6 left-6">
-                <h4 class="mb-2 text-xl font-bold text-white">
-                  Collaborative Creation
-                </h4>
-                <p class="text-white/90">
-                  Rangatahi working together on projects that combine
-                  creativity, problem-solving, and technology skills.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+		<!-- Our Approach -->
+		<div class="rounded-2xl bg-gray-50 p-8 md:p-12">
+			<h3 class="mb-12 text-center text-2xl font-bold">Our Approach to Learning</h3>
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+				{
+					approachPoints.map((point, index) => (
+						<div class="flex items-start space-x-4" style={`animation-delay: ${index * 0.15}s`}>
+							<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-tuhura-green/10">
+								<Icon name={point.icon} class="h-6 w-6 text-tuhura-green" />
+							</div>
+							<div>
+								<h4 class="mb-2 text-lg font-semibold">{point.title}</h4>
+								<p class="text-gray-600">{point.description}</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
 
-    <!-- Our Approach -->
-    <div class="rounded-2xl bg-gray-50 p-8 md:p-12">
-      <h3 class="mb-12 text-center text-2xl font-bold">
-        Our Approach to Learning
-      </h3>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {
-          approachPoints.map((point, index) => (
-            <div
-              class="flex items-start space-x-4"
-              style={`animation-delay: ${index * 0.15}s`}
-            >
-              <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-tuhura-green/10">
-                <Icon name={point.icon} class="h-6 w-6 text-tuhura-green" />
-              </div>
-              <div>
-                <h4 class="mb-2 text-lg font-semibold">{point.title}</h4>
-                <p class="text-gray-600">{point.description}</p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-
-
-    <!-- What We Do -->
-    <div class="mb-24">
-      <h3 class="mb-16 text-center text-3xl font-bold">
-        Technologies We Explore Together
-      </h3>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-        {
-          whatWeDo.map((item, index) => (
-            <div
-              class="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg"
-              style={`animation-delay: ${index * 0.1}s`}
-            >
-              <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
-                <Icon name={item.icon} class="h-10 w-10 text-white" />
-              </div>
-              <h4 class="mb-4 text-xl font-bold text-gray-900">{item.title}</h4>
-              <p class="leading-relaxed text-gray-600">{item.description}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
+		<!-- What We Do -->
+		<div class="mb-24">
+			<h3 class="mb-16 text-center text-3xl font-bold">Technologies We Explore Together</h3>
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+				{
+					whatWeDo.map((item, index) => (
+						<div
+							class="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg"
+							style={`animation-delay: ${index * 0.1}s`}
+						>
+							<div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-tuhura-green shadow-lg">
+								<Icon name={item.icon} class="h-10 w-10 text-white" />
+							</div>
+							<h4 class="mb-4 text-xl font-bold text-gray-900">{item.title}</h4>
+							<p class="leading-relaxed text-gray-600">{item.description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
 </section>
