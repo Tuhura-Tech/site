@@ -11,7 +11,9 @@
 		"check": "astro check",
 		"lint": "biome check",
 		"lint:ci": "biome ci",
-		"lint:fix": "biome check --write ."
+		"lint:fix": "biome check --write .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.5.0",
