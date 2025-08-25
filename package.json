@@ -11,7 +11,9 @@
 		"check": "astro check",
 		"lint": "biome check",
 		"lint:ci": "biome ci",
-		"lint:fix": "biome check --write ."
+		"lint:fix": "biome check --write .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.5.0",
@@ -23,7 +25,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",
-		"@biomejs/biome": "2.1.1",
+		"@biomejs/biome": "2.2.2",
 		"@tailwindcss/vite": "4.1.12",
 		"prettier": "3.6.2",
 		"prettier-plugin-astro": "0.14.1",

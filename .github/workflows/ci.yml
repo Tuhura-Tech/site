@@ -14,5 +14,11 @@ jobs:
       - name: Lint project
         run: pnpm run lint:ci
 
+      - name: Prettier check
+        run: pnpm run format:check
+
+      - name: Astro Check
+        run: pnpm run check
+
       - name: Build project
         run: pnpm run build
