@@ -1,0 +1,59 @@
+---
+interface Button {
+	text: string;
+	href: string;
+	variant?: 'primary' | 'secondary' | 'outline';
+}
+
+interface Props {
+	title: string;
+	description?: string;
+	badge?: string;
+	buttons: Button[];
+	bgColor?: string;
+	textColor?: string;
+	centered?: boolean;
+}
+
+const {
+	title,
+	description,
+	badge,
+	buttons,
+	bgColor = 'bg-tuhura-green',
+	textColor = 'text-white',
+	centered = true,
+} = Astro.props;
+
+const alignmentClass = centered ? 'text-center' : 'text-left';
+const buttonVariants = {
+	primary: 'btn btn-primary',
+	secondary: 'btn btn-secondary',
+	outline: 'btn bg-transparent border-2 border-white hover:bg-white/10',
+};
+---
+
+<section class={`py-10 ${bgColor} ${textColor} relative overflow-hidden rounded-xl`}>
+	<div class="container-custom relative">
+		<div class={`max-w-3xl mx-auto ${alignmentClass}`}>
+			{
+				badge && (
+					<span class="text-m mb-6 inline-block rounded-full bg-white/10 px-4 py-3 font-medium">
+						{badge}
+					</span>
+				)
+			}
+			<h2 class="text-3xl font-bold md:text-4xl">{title}</h2>
+			{description && <p class="mt-6 text-xl opacity-90">{description}</p>}
+			<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+				{
+					buttons.map((button) => (
+						<a href={button.href} class={buttonVariants[button.variant || 'primary']}>
+							{button.text}
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

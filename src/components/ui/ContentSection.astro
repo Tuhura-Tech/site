@@ -1,0 +1,58 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	width?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+	backgroundClass?: string;
+	textAlign?: 'left' | 'center' | 'right';
+	padding?: 'sm' | 'md' | 'lg';
+	className?: string;
+}
+
+const {
+	title,
+	description,
+	width = 'lg',
+	backgroundClass = 'bg-white',
+	textAlign = 'center',
+	padding = 'lg',
+	className = '',
+} = Astro.props;
+
+const widthClasses = {
+	sm: 'max-w-2xl',
+	md: 'max-w-3xl',
+	lg: 'max-w-4xl',
+	xl: 'max-w-6xl',
+	full: 'max-w-full',
+};
+
+const paddingClasses = {
+	sm: 'py-8',
+	md: 'py-12',
+	lg: 'py-20',
+};
+
+const textAlignClasses = {
+	left: 'text-left',
+	center: 'text-center',
+	right: 'text-right',
+};
+---
+
+<section class={`${paddingClasses[padding]} ${backgroundClass} ${className}`}>
+	<div class="container-custom">
+		{
+			(title || description) && (
+				<div class={`${textAlignClasses[textAlign]} ${widthClasses[width]} mx-auto mb-16`}>
+					{title && <h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>}
+					{description && <p class="text-xl text-gray-600">{description}</p>}
+				</div>
+			)
+		}
+
+		<div class={`${widthClasses[width]} mx-auto`}>
+			<slot />
+		</div>
+	</div>
+</section>

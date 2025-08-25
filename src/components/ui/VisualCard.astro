@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	image: ImageMetadata;
+	title: string;
+	description?: string;
+	alt: string;
+	overlayColor?: 'light' | 'dark';
+	overlayOpacity?: '40' | '50' | '60' | '70';
+	textPosition?: 'bottom' | 'center';
+	href?: string;
+	target?: '_blank' | '_self';
+	className?: string;
+	aspectRatio?: 'square' | 'video' | 'wide' | 'tall';
+}
+
+const {
+	image,
+	title,
+	description,
+	alt,
+	overlayColor = 'dark',
+	overlayOpacity = '50',
+	textPosition = 'bottom',
+	href,
+	target = '_self',
+	className = '',
+	aspectRatio = 'video',
+} = Astro.props;
+
+const Tag = href ? 'a' : 'div';
+
+const aspectClasses = {
+	square: 'aspect-square',
+	video: 'aspect-[4/3]',
+	wide: 'aspect-[16/9]',
+	tall: 'aspect-[3/4]',
+};
+
+const overlayClasses = {
+	light: `bg-gradient-to-t from-white/${overlayOpacity} to-transparent`,
+	dark: `bg-gradient-to-t from-black/${overlayOpacity} to-transparent`,
+};
+
+const textColor = overlayColor === 'dark' ? 'text-white' : 'text-gray-900';
+const textOpacity = overlayColor === 'dark' ? 'text-white/90' : 'text-gray-700';
+
+const hoverClasses = href ? 'group cursor-pointer' : 'group';
+const linkProps = href
+	? {
+			href,
+			target,
+			rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+		}
+	: {};
+---
+
+<Tag
+	class={`relative overflow-hidden rounded-xl shadow-lg ${hoverClasses} ${className}`}
+	{...linkProps}
+>
+	<div class={`${aspectClasses[aspectRatio]} overflow-hidden`}>
+		<Image
+			src={image}
+			alt={alt}
+			class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+			loading="lazy"
+		/>
+	</div>
+
+	<div
+		class={`absolute inset-0 ${overlayClasses[overlayColor]} ${href ? 'group-hover:from-black/70 transition-colors' : ''}`}
+	>
+		<div
+			class={`absolute ${textPosition === 'bottom' ? 'bottom-4 left-4 right-4' : 'inset-0 flex items-center justify-center text-center p-4'}`}
+		>
+			<div>
+				<h3
+					class={`font-bold mb-2 ${textColor} ${textPosition === 'bottom' ? 'text-lg' : 'text-xl'}`}
+				>
+					{title}
+				</h3>
+				{
+					description && (
+						<p class={`${textOpacity} ${textPosition === 'bottom' ? 'text-sm' : 'text-base'}`}>
+							{description}
+						</p>
+					)
+				}
+			</div>
+		</div>
+	</div>
+</Tag>

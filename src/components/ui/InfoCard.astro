@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	title: string;
+	description: string;
+	icon?: string;
+	iconColor?: string;
+	href?: string;
+	target?: '_blank' | '_self';
+	variant?: 'default' | 'large' | 'compact';
+	className?: string;
+}
+
+const {
+	title,
+	description,
+	icon,
+	iconColor = 'text-tuhura-green',
+	href,
+	target = '_self',
+	variant = 'default',
+	className = '',
+} = Astro.props;
+
+const Tag = href ? 'a' : 'div';
+
+const variantClasses = {
+	default: 'bg-white rounded-xl p-6 shadow-sm border border-gray-100',
+	large: 'bg-white rounded-xl p-8 shadow-lg border border-gray-100',
+	compact: 'bg-white rounded-lg p-4 shadow-sm border border-gray-100',
+};
+
+const hoverClasses = href ? 'hover:shadow-xl transition-all duration-300 group' : '';
+---
+
+<Tag
+	class={`${variantClasses[variant]} ${hoverClasses} ${className} ${href ? 'block' : ''}`}
+	href={href}
+	target={target}
+	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+>
+	{
+		icon && (
+			<div class="mb-4">
+				<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-50">
+					<Icon name={icon} class={`h-6 w-6 ${iconColor}`} />
+				</div>
+			</div>
+		)
+	}
+
+	<h3
+		class={`font-semibold mb-3 ${href ? 'group-hover:text-tuhura-green transition-colors' : ''} ${variant === 'large' ? 'text-xl' : 'text-lg'}`}
+	>
+		{title}
+	</h3>
+
+	<p class="leading-relaxed text-gray-600">
+		{description}
+	</p>
+</Tag>

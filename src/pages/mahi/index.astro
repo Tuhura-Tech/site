@@ -1,0 +1,251 @@
+---
+import { Image } from 'astro:assets';
+
+import pldImage from '@assets/pld.jpg';
+import eventImage from '@assets/robocup-2025.jpg';
+import sessionImage from '@assets/session.jpg';
+import session1Image from '@assets/session-1.jpg';
+import IconFeatures from '@components/ui/IconFeatures.astro';
+import ProgramCards from '@components/ui/ProgramCards.astro';
+import Slideshow from '@components/ui/Slideshow.astro';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+const mahiOfferings = [
+	{
+		title: 'Tech Sessions',
+		subtitle: 'After-School & In-School',
+		description:
+			'Weekly sessions where rangatahi explore technology through self-directed, project-based learning.',
+		icon: 'heroicons:computer-desktop',
+		href: '/mahi/sessions',
+		features: [
+			'After-school community sessions',
+			'In-school programmes',
+			'Years 5-13',
+			'Self-directed learning',
+		],
+	},
+	{
+		title: 'Events',
+		subtitle: 'Competitions & Showcases',
+		description:
+			'Special gatherings that inspire, challenge, and connect rangatahi with technology through competitions and collaborative experiences.',
+		icon: 'heroicons:trophy',
+		href: '/mahi/events',
+		features: ['Game jams & hackathons', 'Robotics competitions', 'Community festivals'],
+	},
+	{
+		title: 'Workshops (Wānanga)',
+		subtitle: 'Intensive Learning',
+		description:
+			'Focused sessions that dive deep into specific tech topics over hours or days of concentrated learning.',
+		icon: 'heroicons:academic-cap',
+		href: '/mahi/workshops',
+		features: ['Specific topic focus', 'All skill levels', 'Take-home projects'],
+	},
+	{
+		title: 'Kaiako PLD',
+		subtitle: 'Professional Development',
+		description:
+			'Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.',
+		icon: 'heroicons:users',
+		href: '/mahi/pld',
+		features: ['Teacher training', 'Curriculum support', 'Resource sharing'],
+	},
+];
+
+const supportResources = [
+	{
+		title: 'Free Learning Resources',
+		description: 'Open-access materials, lesson plans, tutorials and guides',
+		icon: 'heroicons:document-text',
+	},
+	/**
+    Would ideally like to replace this with something
+    {
+		title: "Equipment Library",
+		description: "Loaning devices and tech equipment to schools and families",
+		icon: "heroicons:cube",
+	},**/
+	{
+		title: 'Consultation & Support',
+		description: 'Helping schools develop their own tech education programmes',
+		icon: 'heroicons:chat-bubble-left-right',
+	},
+];
+---
+
+<Layout title="Mahi | Our Technology Education Programmes">
+	<!-- Hero Section with Image Slideshow -->
+	<section class="pt-20 pb-16 md:pt-28 md:pb-24">
+		<div class="container-custom">
+			<div class="mb-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+				<div>
+					<h1 class="text-4xl leading-tight font-bold md:text-5xl">
+						<span class="gradient-text">Our Mahi</span>
+					</h1>
+					<p class="mt-6 text-xl text-gray-600">
+						Everything we do to empower rangatahi through technology - from regular sessions to
+						competitions, workshops, and educator training.
+					</p>
+					<div class="mt-6 rounded-lg bg-tuhura-gray p-4">
+						<p class="text-lg text-gray-700">
+							<strong>After-school community sessions are our core offering</strong>, supported by
+							in-school programmes, teacher training, and free resources.
+						</p>
+					</div>
+				</div>
+
+				<!-- Image Slideshow -->
+				<div class="relative">
+					<div
+						class="slideshow-container relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
+					>
+						<div class="slide active">
+							<Image
+								src={sessionImage}
+								alt="Rangatahi engaged in technology sessions"
+								class="h-full w-full object-cover"
+								width={600}
+								height={400}
+							/>
+							<div
+								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+							>
+								<div class="p-3">
+									<h3 class="text-xl font-bold text-white">Community Tech Sessions</h3>
+									<p class="text-white/90">Weekly hands-on learning in your neighborhood</p>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<Image
+								src={session1Image}
+								alt="Interactive technology workshops"
+								class="h-full w-full object-cover"
+								width={600}
+								height={400}
+							/>
+							<div
+								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+							>
+								<div class="p-3">
+									<h3 class="bottom-2 text-xl font-bold text-white">Interactive Learning</h3>
+									<p class="bottom-2 text-white/90">Student-directed exploration and projects</p>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<Image
+								src={eventImage}
+								alt="Technology competitions and events"
+								class="h-full w-full object-cover"
+								width={600}
+								height={400}
+							/>
+							<div
+								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+							>
+								<div class="p-3">
+									<h3 class="text-xl font-bold text-white">Competitions & Events</h3>
+									<p class="text-white/90">Challenges that inspire and connect</p>
+								</div>
+							</div>
+						</div>
+						<div class="slide">
+							<Image
+								src={pldImage}
+								alt="Professional development for educators"
+								class="h-full w-full object-cover"
+								width={600}
+								height={400}
+							/>
+							<div
+								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
+							>
+								<div class="p-3">
+									<h3 class="text-xl font-bold text-white">Kaiako Support</h3>
+									<p class="text-white/90">Professional development for educators</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Navigation arrows -->
+						<button
+							class="prev absolute top-1/2 left-4 -translate-y-1/2 transform rounded-full bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30"
+						>
+							<Icon name="heroicons:chevron-left" class="h-6 w-6 text-white" />
+						</button>
+						<button
+							class="next absolute top-1/2 right-4 -translate-y-1/2 transform rounded-full bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30"
+						>
+							<Icon name="heroicons:chevron-right" class="h-6 w-6 text-white" />
+						</button>
+
+						<!-- Dots indicator -->
+						<div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
+							<button class="dot active h-3 w-3 rounded-full bg-white/70" data-slide="0"></button>
+							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="1"></button>
+							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="2"></button>
+							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="3"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ProgramCards programs={mahiOfferings} title="Our Core Programmes" columns="2" />
+
+			<!-- Additional Support -->
+			<IconFeatures
+				features={supportResources}
+				title="Beyond Sessions - Supporting the Ecosystem"
+				description="Additional ways we support technology education in our communities."
+				columns="2"
+				iconVariant="default"
+			/>
+
+			<!-- Call to Action -->
+			<div class="mx-auto max-w-4xl rounded-xl bg-tuhura-green p-8 text-center text-white">
+				<h2 class="mb-4 text-3xl font-bold">Ready to Get Involved?</h2>
+				<p class="mb-8 text-xl opacity-90">
+					Whether you're looking for regular sessions, specialist workshops, or kura support - we're
+					here to support rangatahi technology education in your area.
+				</p>
+				<div class="flex flex-col justify-center gap-4 sm:flex-row">
+					<a href="/mahi/sessions" class="btn bg-white text-tuhura-green hover:bg-gray-100">
+						Find Sessions Near You
+					</a>
+					<a href="/contact" class="btn border-2 border-white bg-transparent hover:bg-white/10">
+						Get in Touch
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+
+<!-- Slideshow component usage -->
+<Slideshow images={[
+  {
+    src: eventImage, 
+    alt: "Rangatahi participating in RoboCup 2025 robotics competition with robots on display", 
+    title: "Technology Competitions"
+  }, 
+  {
+    src: sessionImage, 
+    alt: "Students collaborating on technology projects during after-school session", 
+    title: "Community Tech Sessions"
+  }, 
+  {
+    src: session1Image, 
+    alt: "Rangatahi engaged in hands-on learning with computers and technology equipment", 
+    title: "Interactive Learning"
+  }, 
+  {
+    src: pldImage, 
+    alt: "Educators participating in professional development workshop for technology education", 
+    title: "Kaiako Professional Development"
+  }
+]} />

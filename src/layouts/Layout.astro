@@ -1,23 +1,94 @@
 ---
-import Footer from "@components/Footer.astro";
-import DialogModal from "@components/DonateModal.astro";
-import Head from "@components/Head.astro";
-import Navbar from "@components/Navbar.astro";
-import "../styles/global.css";
+import { getImage } from 'astro:assets';
+import DonateModal from '@components/DonateModal.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Partners from '@components/Partners.astro';
+import '../styles/global.css';
 
-const { meta } = Astro.props;
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const siteName = 'Tūhura Tech';
+
+const {
+	title = siteName,
+	description = 'Empowering the next generation through industry supported Technology Education.',
+} = Astro.props;
+
+// Preload critical assets
+const faviconImg = await getImage({
+	src: '/favicon.svg',
+	width: 32,
+	height: 32,
+});
+let shownTitle: string;
+if (title !== siteName) {
+	shownTitle = `${title} | ${siteName}`;
+} else {
+	shownTitle = siteName;
+}
+const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 ---
 
+<!doctype html>
 <html lang="en">
-  <Head {...meta} />
-  <body
-    class="mx-auto min-h-screen bg-white border-x-gray-200 px-4 sm:px-6 lg:px-8 xl:border-x dark:bg-neutral-800 dark:border-x-gray-700"
-  >
-    <Navbar />
-    <main>
-      <slot />
-    </main>
-    <DialogModal id="demo" />
-    <Footer />
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href={faviconImg.src} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{shownTitle}</title>
+
+		<!-- Structured data -->
+		<script is:inline type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Tūhura Tech",
+				"url": "https://tuhuratech.org.nz",
+				"logo": "https://tuhuratech.org.nz/logo.png",
+				"sameAs": [
+					"https://www.linkedin.com/company/tūhura-tech/",
+					"https://github.com/Tuhura-Tech",
+					"https://www.facebook.com/p/Tūhura-Tech-100083052084710/"
+				]
+			}
+		</script>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content="https://tuhuratech.org.nz/og-image.jpg" />
+
+		<!-- Plausible Analytics -->
+		<script
+			is:inline
+			data-domain="tuhuratech.org.nz"
+			src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
+	</head>
+	<body class="flex min-h-screen flex-col">
+		<Header />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<Partners />
+		<Footer />
+		<DonateModal />
+		<script is:inline>
+			const headerEl = document.querySelector('header');
+			const onScroll = () => {
+				if (!headerEl) return;
+				if (window.scrollY > 2) headerEl.classList.add('scrolled');
+				else headerEl.classList.remove('scrolled');
+			};
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+		</script>
+	</body>
 </html>

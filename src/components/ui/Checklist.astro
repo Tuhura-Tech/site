@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface ChecklistItem {
+	text: string;
+	icon?: string;
+}
+
+interface Props {
+	items: ChecklistItem[];
+	title?: string;
+	description?: string;
+	icon?: string;
+	columns?: '1' | '2';
+	iconColor?: string;
+}
+
+const {
+	items,
+	title,
+	description,
+	icon = 'heroicons:check-circle',
+	columns = '1',
+	iconColor = 'text-tuhura-green',
+} = Astro.props;
+
+const gridClass = columns === '2' ? 'grid grid-cols-1 md:grid-cols-2 gap-x-8' : '';
+---
+
+{
+	title && (
+		<div class="mb-6">
+			<h3 class="mb-4 text-2xl font-semibold text-tuhura-green">{title}</h3>
+			{description && <p class="mb-4 text-gray-700">{description}</p>}
+		</div>
+	)
+}
+
+<div class={gridClass}>
+	<ul class="space-y-3">
+		{
+			items.map((item) => (
+				<li class="flex items-start">
+					<Icon name={item.icon || icon} class={`h-5 w-5 ${iconColor} mt-0.5 mr-3 flex-shrink-0`} />
+					<span class="text-gray-700">{item.text}</span>
+				</li>
+			))
+		}
+	</ul>
+</div>

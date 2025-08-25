@@ -1,6 +1,309 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-	--color-primary: #6aa469;
-	--color-secondary: #175b98;
+	--color-tuhura-green: #6aa469;
+	--color-tuhura-blue: #175b98;
+	--color-tuhura-pink: #ff4d4d;
+	--color-tuhura-gray: #f4f7fa;
+	--color-tuhura-dark: #111111;
+
+	--font-sans: Inter Variable, sans-serif;
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideUp {
+		0% {
+			transform: translateY(30px);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideInRight {
+		0% {
+			transform: translateX(50px);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes gradientX {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.5;
+		}
+	}
+
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(-25%);
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		}
+
+		50% {
+			transform: translateY(0);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+}
+
+:root {
+	--gradient-purple-blue: linear-gradient(135deg, #6aa469 0%, #175b98 100%);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply font-sans text-tuhura-dark;
+	position: relative;
+	/* For scroll progress bar */
+}
+
+.gradient-text {
+	@apply bg-clip-text text-transparent;
+	background-image: var(--gradient-purple-blue);
+}
+
+/* ===== Button Styles & Effects ===== */
+.btn {
+	@apply inline-block rounded-lg px-6 py-3 font-medium transition-all;
+	position: relative;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	/* For better performance */
+}
+
+.btn:hover,
+.btn:focus {
+	transform: translateY(-2px);
+	box-shadow:
+		0 7px 14px rgba(50, 50, 93, 0.1),
+		0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+	transform: translateY(1px);
+}
+
+.btn:focus {
+	outline: 2px solid var(--color-tuhura-green);
+	outline-offset: 2px;
+}
+
+.btn-primary {
+	@apply bg-tuhura-green text-white;
+}
+
+.btn-secondary {
+	@apply border border-gray-200 bg-white text-tuhura-dark hover:bg-gray-50;
+}
+
+.btn-sm {
+	@apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+	@apply px-8 py-3 text-lg;
+}
+
+/* ===== Container ===== */
+.container-custom {
+	@apply container mx-auto max-w-7xl px-4 md:px-6 lg:px-8;
+}
+
+/* ===== Section ===== */
+.section {
+	@apply py-16 md:py-24;
+}
+
+/* ===== Header Scroll Effect ===== */
+header {
+	transition: all 0.3s ease;
+}
+
+header.scrolled {
+	@apply bg-white/95 shadow-md;
+	backdrop-filter: blur(8px);
+}
+
+/* ===== Navigation Link Effects ===== */
+nav a {
+	position: relative;
+}
+
+nav a::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: var(--color-tuhura-green);
+	transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+	width: 100%;
+}
+
+.active-nav-link {
+	@apply text-tuhura-green;
+}
+
+.active-nav-link::after {
+	width: 100%;
+}
+
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	background: linear-gradient(to right, var(--color-tuhura-green), var(--color-tuhura-blue));
+	z-index: 100;
+	width: 0%;
+	transition: width 0.1s ease;
+}
+
+/* ===== FAQ Accordion Animations ===== */
+.faq-item {
+	overflow: hidden;
+}
+
+.faq-item summary {
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+/* ===== Mobile Menu Animations ===== */
+#mobile-menu {
+	max-height: 0;
+	opacity: 0;
+	transition:
+		max-height 0.3s ease,
+		opacity 0.2s ease;
+	overflow: hidden;
+	will-change: max-height, opacity;
+}
+
+#mobile-menu.mobile-menu-open {
+	max-height: 75vh;
+	opacity: 1;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#mobile-menu.mobile-menu-closing {
+	max-height: 0;
+	opacity: 0;
+}
+
+/* Hamburger to X animation */
+#menu-toggle svg {
+	transition: transform 0.3s ease;
+}
+
+#menu-toggle.menu-open svg {
+	transform: rotate(90deg);
+}
+
+/* ===== Image Hover Effects ===== */
+.hover-zoom {
+	overflow: hidden;
+}
+
+.hover-zoom img {
+	transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover img {
+	transform: scale(1.05);
+}
+
+/* ===== Skip to main content link ===== */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 6px;
+	background: var(--color-tuhura-green);
+	color: white;
+	padding: 8px;
+	border-radius: 4px;
+	text-decoration: none;
+	z-index: 1000;
+	transition: top 0.3s;
+}
+
+.skip-link:focus {
+	top: 6px;
+}
+
+/* Donate popover placement helpers */
+dialog#donate-popover {
+	z-index: 1300;
+}
+@media (max-width: 480px) {
+	dialog#donate-popover {
+		right: 0.75rem;
+		left: 0.75rem;
+		width: auto;
+	}
 }
