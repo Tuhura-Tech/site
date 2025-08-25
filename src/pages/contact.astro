@@ -95,9 +95,8 @@ import Layout from '@layouts/Layout.astro';
 	</Section>
 </Layout>
 <script>
-	function formSubjectChange(event: Event) {
+	function formSubjectChange(select: HTMLSelectElement) {
 		let action;
-		const select = event.target as HTMLSelectElement;
 		switch (select.value) {
 			case 'Session Query':
 				action = 'https://submit-form.com/TZiHVi9Ke';
