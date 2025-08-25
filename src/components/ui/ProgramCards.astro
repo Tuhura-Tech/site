@@ -81,24 +81,7 @@ const gridCols = {
 									iconColor="text-tuhura-green"
 								/>
 							</div>
-							{program.cta &&
-								(program.cta.href ? (
-									<a
-										href={program.cta.href}
-										class="font-medium text-tuhura-green group-hover:underline"
-									>
-										{program.cta.text}
-									</a>
-								) : program.cta.onclick ? (
-									<a
-										href={program.cta.onclick}
-										class="font-medium text-tuhura-green group-hover:underline"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{program.cta.text}
-									</a>
-								) : null)}
+							
 						</Element>
 					);
 				})
