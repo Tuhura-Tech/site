@@ -2,7 +2,14 @@
 import { Image } from 'astro:assets';
 import logoSrc from '@assets/logo.svg';
 
-const navItems = [
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+type NavBase = { name: string; href: string };
+type NavExternal = NavBase & { external: true };
+type NavDropdown = NavBase & { dropdown: Array<NavBase | NavExternal> };
+type NavItem = NavDropdown | NavExternal | NavBase;
+
+const navItems: NavItem[] = [
 	{
 		name: 'Mahi',
 		href: '/mahi',
@@ -17,8 +24,15 @@ const navItems = [
 	{ name: 'About Us', href: '/about-us' },
 	{ name: 'Contact', href: '/contact' },
 	{ name: 'Support Us', href: '/support-us' },
-	{ name: 'Resources', href: 'https://wiki.tuhuratech.org.nz', external: true },
-	{ name: 'Blog', href: 'https://blog.tuhuratech.org.nz', external: true },
+	{
+		name: 'Resources',
+		href: '#',
+		dropdown: [
+			{ name: 'Blog', href: 'https://blog.tuhuratech.org.nz', external: true },
+			{ name: 'Wiki', href: 'https://wiki.tuhuratech.org.nz', external: true },
+			// { name: 'Shop', href: 'https://shop.tuhuratech.org.nz', external: true },
+		],
+	},
 ];
 ---
 
@@ -49,13 +63,16 @@ const navItems = [
 		>
 			{
 				navItems.map((item) =>
-					item.dropdown ? (
+					'dropdown' in item ? (
 						<div class="group relative">
 							<a
 								href={item.href}
-								class="flex items-center px-2 py-1 text-gray-700 transition-all hover:text-tuhura-green focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
+								class={`flex items-center px-2 py-1 transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${currentPath.startsWith('/mahi') ? 'active-nav-link text-tuhura-green' : 'text-gray-700 hover:text-tuhura-green'}`}
+								aria-current={currentPath.startsWith('/mahi') ? 'page' : undefined}
+								title={item.name === 'Mahi' ? 'Mahi (Programs)' : undefined}
 							>
 								{item.name}
+								{item.name === 'Mahi' && <span class="sr-only"> (Programs)</span>}
 								<svg
 									class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
 									fill="none"
@@ -75,9 +92,15 @@ const navItems = [
 									{item.dropdown.map((subItem) => (
 										<a
 											href={subItem.href}
-											class="block px-4 py-3 text-gray-700 transition-colors hover:bg-tuhura-green/5 hover:text-tuhura-green"
+											class={`block px-4 py-3 transition-colors hover:bg-tuhura-green/5 hover:text-tuhura-green ${currentPath === subItem.href.replace(/\/$/, '') ? 'font-medium text-tuhura-green' : 'text-gray-700'}`}
+											aria-current={
+												currentPath === subItem.href.replace(/\/$/, '') ? 'page' : undefined
+											}
+											target={'external' in subItem ? '_blank' : undefined}
+											rel={'external' in subItem ? 'noopener noreferrer' : undefined}
 										>
 											{subItem.name}
+											{'external' in subItem && <span class="sr-only"> (opens in a new tab)</span>}
 										</a>
 									))}
 								</div>
@@ -86,12 +109,17 @@ const navItems = [
 					) : (
 						<a
 							href={item.href}
-							class="px-2 py-1 text-gray-700 transition-all hover:text-tuhura-green focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
-							target={item.external ? '_blank' : undefined}
-							rel={item.external ? 'noopener noreferrer' : undefined}
+							class={`px-2 py-1 transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${currentPath === item.href.replace(/\/$/, '') ? 'active-nav-link text-tuhura-green' : 'text-gray-700 hover:text-tuhura-green'}`}
+							target={'external' in item ? '_blank' : undefined}
+							rel={'external' in item ? 'noopener noreferrer' : undefined}
+							aria-current={
+								!('external' in item) && currentPath === item.href.replace(/\/$/, '')
+									? 'page'
+									: undefined
+							}
 						>
 							{item.name}
-							{item.external && (
+							{'external' in item && (
 								<svg
 									class="ml-1 inline h-3 w-3"
 									fill="none"
@@ -106,6 +134,7 @@ const navItems = [
 									/>
 								</svg>
 							)}
+							{'external' in item && <span class="sr-only"> (opens in a new tab)</span>}
 						</a>
 					),
 				)
@@ -163,12 +192,14 @@ const navItems = [
 		<div class="container-custom space-y-2 py-4">
 			{
 				navItems.map((item, index) =>
-					item.dropdown ? (
+					'dropdown' in item ? (
 						<div>
 							<a
 								href={item.href}
-								class="block rounded px-2 py-3 font-medium text-gray-700 transition-all hover:text-tuhura-green focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
+								class={`block rounded px-2 py-3 font-medium transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${currentPath.startsWith('/mahi') ? 'text-tuhura-green' : 'text-gray-700 hover:text-tuhura-green'}`}
+								aria-current={currentPath.startsWith('/mahi') ? 'page' : undefined}
 								style={`transition-delay: ${index * 50}ms;`}
+								title={item.name === 'Mahi' ? 'Mahi (Programs)' : undefined}
 							>
 								{item.name}
 							</a>
@@ -176,9 +207,15 @@ const navItems = [
 								{item.dropdown.map((subItem) => (
 									<a
 										href={subItem.href}
-										class="block rounded px-2 py-2 text-sm text-gray-600 transition-all hover:text-tuhura-green focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
+										class={`block rounded px-2 py-2 text-sm transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${currentPath === subItem.href.replace(/\/$/, '') ? 'font-medium text-tuhura-green' : 'text-gray-600 hover:text-tuhura-green'}`}
+										aria-current={
+											currentPath === subItem.href.replace(/\/$/, '') ? 'page' : undefined
+										}
+										target={'external' in subItem ? '_blank' : undefined}
+										rel={'external' in subItem ? 'noopener noreferrer' : undefined}
 									>
 										{subItem.name}
+										{'external' in subItem && <span class="sr-only"> (opens in a new tab)</span>}
 									</a>
 								))}
 							</div>
@@ -186,13 +223,18 @@ const navItems = [
 					) : (
 						<a
 							href={item.href}
-							class="block rounded px-2 py-3 text-gray-700 transition-all hover:text-tuhura-green focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
+							class={`block rounded px-2 py-3 transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${!('external' in item) && currentPath === item.href.replace(/\/$/, '') ? 'font-medium text-tuhura-green' : 'text-gray-700 hover:text-tuhura-green'}`}
 							style={`transition-delay: ${index * 50}ms;`}
-							target={item.external ? '_blank' : undefined}
-							rel={item.external ? 'noopener noreferrer' : undefined}
+							target={'external' in item ? '_blank' : undefined}
+							rel={'external' in item ? 'noopener noreferrer' : undefined}
+							aria-current={
+								!('external' in item) && currentPath === item.href.replace(/\/$/, '')
+									? 'page'
+									: undefined
+							}
 						>
 							{item.name}
-							{item.external && (
+							{'external' in item && (
 								<svg
 									class="ml-1 inline h-3 w-3"
 									fill="none"
@@ -211,6 +253,12 @@ const navItems = [
 					),
 				)
 			}
+			<!-- CTA duplicated for mobile -->
+			<div class="pt-2">
+				<a href="/mahi/sessions" class="btn btn-primary w-full" aria-label="Join Sessions">
+					Join Sessions
+				</a>
+			</div>
 		</div>
 	</nav>
 </header>
@@ -236,6 +284,25 @@ const navItems = [
 				}, 300);
 			} else {
 				menu.classList.add('mobile-menu-open');
+			}
+		});
+		// Close menu when clicking a link inside
+		menu.addEventListener('click', (e) => {
+			const target = e.target;
+			if (target && target instanceof Element && target.closest('a')) {
+				// collapse with animation parity
+				if (menu.classList.contains('mobile-menu-open')) {
+					menu.classList.remove('mobile-menu-open');
+					menu.classList.add('mobile-menu-closing');
+					toggle.setAttribute('aria-expanded', 'false');
+					setTimeout(() => {
+						menu.classList.remove('mobile-menu-closing');
+						menu.classList.add('hidden');
+					}, 300);
+				} else {
+					menu.classList.add('hidden');
+					toggle.setAttribute('aria-expanded', 'false');
+				}
 			}
 		});
 	}

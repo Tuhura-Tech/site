@@ -1,5 +1,6 @@
 ---
 import { getImage } from 'astro:assets';
+import heroOg from '@assets/hero.jpg';
 import DonateModal from '@components/DonateModal.astro';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
@@ -31,6 +32,8 @@ if (title !== siteName) {
 	shownTitle = siteName;
 }
 const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
+const ogImage = await getImage({ src: heroOg, width: 1200, height: 630, format: 'jpg' });
+const ogImageUrl = new URL(ogImage.src, canonicalUrl).toString();
 ---
 
 <!doctype html>
@@ -40,6 +43,7 @@ const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href={faviconImg.src} />
+		<link rel="canonical" href={canonicalUrl} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{shownTitle}</title>
 
@@ -50,7 +54,7 @@ const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 				"@type": "Organization",
 				"name": "Tūhura Tech",
 				"url": "https://tuhuratech.org.nz",
-				"logo": "https://tuhuratech.org.nz/logo.png",
+				"logo": "https://tuhuratech.org.nz/favicon.svg",
 				"sameAs": [
 					"https://www.linkedin.com/company/tūhura-tech/",
 					"https://github.com/Tuhura-Tech",
@@ -64,7 +68,7 @@ const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:image" content="https://tuhuratech.org.nz/og-image.jpg" />
+		<meta property="og:image" content={ogImageUrl} />
 
 		<!-- Plausible Analytics -->
 		<script
@@ -73,8 +77,9 @@ const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 			src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
 	</head>
 	<body class="flex min-h-screen flex-col">
+		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<Header />
-		<main class="flex-grow">
+		<main id="main-content" class="flex-grow">
 			<slot />
 		</main>
 		<Partners />

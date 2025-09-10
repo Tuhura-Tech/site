@@ -32,7 +32,7 @@ const heightClasses = {
 	lg: 'h-[32rem]',
 };
 
-const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
+const slideshowId = `slideshow-${Math.random().toString(36).slice(2, 11)}`;
 ---
 
 <div
@@ -66,7 +66,7 @@ const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
 				{images.map((_, index) => (
 					<button
 						class={`h-3 w-3 rounded-full transition-all ${index === 0 ? 'bg-white' : 'bg-white/50'} hover:bg-white`}
-						onclick={`slideshow_${slideshowId.replace('-', '_')}.goToSlide(${index})`}
+						data-slide-index={index}
 						aria-label={`Go to slide ${index + 1}`}
 					/>
 				))}
@@ -75,16 +75,22 @@ const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
 	}
 </div>
 
-<script define:vars={{ slideshowId, images, autoplay, autoplayDelay }}>
+<script is:inline define:vars={{ slideshowId, images, autoplay, autoplayDelay }}>
 	class Slideshow {
 		constructor(containerId, slides, autoplay, delay) {
 			this.container = document.getElementById(containerId);
 			this.slides = this.container?.querySelectorAll('.slide') || [];
-			this.dots = this.container?.querySelectorAll('button') || [];
+			this.dots = this.container?.querySelectorAll('button[data-slide-index]') || [];
 			this.currentSlide = 0;
 			this.autoplay = autoplay;
 			this.delay = delay;
 			this.intervalId = null;
+			this.mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+			// Respect reduced motion: disable autoplay if user prefers reduced motion
+			if (this.mql.matches) {
+				this.autoplay = false;
+			}
 
 			if (this.autoplay && this.slides.length > 1) {
 				this.startAutoplay();
@@ -94,6 +100,28 @@ const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
 			this.container?.addEventListener('mouseenter', () => this.stopAutoplay());
 			this.container?.addEventListener('mouseleave', () => {
 				if (this.autoplay) this.startAutoplay();
+			});
+
+			// Dot clicks
+			if (this.dots && this.dots.length) {
+				this.dots.forEach((btn) => {
+					btn.addEventListener('click', () => {
+						const idxAttr = btn.getAttribute('data-slide-index');
+						const idx = idxAttr ? parseInt(idxAttr, 10) : 0;
+						this.goToSlide(idx);
+					});
+				});
+			}
+
+			// React to changes in reduced-motion preference
+			this.mql.addEventListener?.('change', (e) => {
+				if (e.matches) {
+					this.autoplay = false;
+					this.stopAutoplay();
+				} else {
+					this.autoplay = true;
+					this.startAutoplay();
+				}
 			});
 		}
 
@@ -132,7 +160,14 @@ const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
 		}
 	}
 
-	// Create global reference
-	const slideshowVar = `slideshow_${slideshowId.replace('-', '_')}`;
-	window[slideshowVar] = new Slideshow(slideshowId, images, autoplay, autoplayDelay);
+	// Instantiate using the container before this script to avoid global IDs
+	(function () {
+		const scriptEl = document.currentScript;
+		if (!scriptEl) return;
+		const container = scriptEl.previousElementSibling;
+		if (!container || !(container instanceof HTMLElement)) return;
+		const containerId = container.id;
+		if (!containerId) return;
+		new Slideshow(containerId, images, autoplay, autoplayDelay);
+	})();
 </script>

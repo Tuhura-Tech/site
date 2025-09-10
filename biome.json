@@ -12,6 +12,9 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"suspicious": {
+				"noUnknownAtRules": "off"
+			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
 			},
@@ -36,9 +39,7 @@
 			"semicolons": "always"
 		}
 	},
-	"css": {
-		"formatter": { "quoteStyle": "single" }
-	},
+	"css": { "formatter": { "quoteStyle": "single" } },
 	"json": {
 		"parser": {
 			"allowComments": true,
