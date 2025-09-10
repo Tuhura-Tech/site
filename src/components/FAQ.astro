@@ -75,20 +75,32 @@ const faqs = [
 			<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
 				{
 					faqs.map((faq, index) => (
-						<div
-							class="flex flex-col rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+						<details
+							class="group rounded-xl border border-gray-100 bg-white p-4 shadow-sm open:shadow-md"
 							style={`animation-delay: ${index * 0.1}s`}
 						>
-							<div class="mb-4 flex items-start">
+							<summary
+								class="flex cursor-pointer list-none items-start justify-between rounded-lg p-4 outline-none transition-colors hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-tuhura-green"
+							>
 								<div class="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-tuhura-green/10">
 									<Icon name={faq.icon} class="h-6 w-6 text-tuhura-green" />
 								</div>
-								<div class="text-xl leading-tight font-semibold text-tuhura-green">
-									{faq.question}
+								<div class="flex-1 text-left">
+									<h3 class="text-lg leading-tight font-semibold text-gray-900">
+										{faq.question}
+									</h3>
 								</div>
+								<svg
+									class="ml-4 mt-1 h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+									viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+								>
+									<path fill-rule="evenodd" d="M10 3a1 1 0 01.832.445l5 7a1 1 0 01-1.664 1.11L10 5.882 5.832 11.555a1 1 0 01-1.664-1.11l5-7A1 1 0 0110 3z" clip-rule="evenodd" />
+								</svg>
+							</summary>
+							<div class="px-4 pb-4 pl-20 text-base leading-relaxed text-gray-600">
+								{faq.answer}
 							</div>
-							<div class="ml-16 text-lg leading-relaxed text-gray-600">{faq.answer}</div>
-						</div>
+						</details>
 					))
 				}
 			</div>

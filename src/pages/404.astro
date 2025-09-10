@@ -10,7 +10,41 @@ import Layout from '@layouts/Layout.astro';
 			<p class="mx-auto mb-10 max-w-xl text-xl text-gray-600">
 				The page you're looking for doesn't exist or has been moved.
 			</p>
-			<a href="/" class="btn btn-primary"> Back to Home </a>
+			<div class="mx-auto mb-10 max-w-xl">
+				<label for="site-search" class="sr-only">Search</label>
+				<input
+					id="site-search"
+					type="text"
+					placeholder="Try searching for sessions, workshops, events..."
+					class="w-full rounded-lg border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tuhura-green"
+				/>
+				<p class="mt-2 text-sm text-gray-500">Press Enter to search the site</p>
+			</div>
+			<div class="mx-auto max-w-3xl">
+				<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+					<a href="/mahi/sessions" class="btn btn-secondary">Find Sessions</a>
+					<a href="/mahi/workshops" class="btn btn-secondary">Workshops</a>
+					<a href="/mahi/events" class="btn btn-secondary">Events</a>
+					<a href="/support-us" class="btn btn-secondary">Support Us</a>
+					<a href="/about-us" class="btn btn-secondary">About Us</a>
+					<a href="/contact" class="btn btn-secondary">Contact</a>
+				</div>
+				<div class="mt-6">
+					<a href="/" class="btn btn-primary"> Back to Home </a>
+				</div>
+			</div>
 		</div>
 	</section>
 </Layout>
+
+<script is:inline>
+	const input = document.getElementById('site-search');
+	if (input) {
+		input.addEventListener('keydown', (ev) => {
+			if (ev.key === 'Enter') {
+				const q = encodeURIComponent(input.value || '');
+				window.location.href = `https://duckduckgo.com/?q=site%3Atuhuratech.org.nz+${q}`;
+			}
+		});
+	}
+</script>
