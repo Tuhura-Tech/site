@@ -71,7 +71,8 @@ const navItems: NavItem[] = [
 								aria-current={currentPath.startsWith('/mahi') ? 'page' : undefined}
 								title={item.name === 'Mahi' ? 'Mahi (Programs)' : undefined}
 							>
-								{item.name}{item.name === 'Mahi' && <span class="sr-only"> (Programs)</span>}
+								{item.name}
+								{item.name === 'Mahi' && <span class="sr-only"> (Programs)</span>}
 								<svg
 									class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
 									fill="none"
@@ -112,7 +113,9 @@ const navItems: NavItem[] = [
 							target={'external' in item ? '_blank' : undefined}
 							rel={'external' in item ? 'noopener noreferrer' : undefined}
 							aria-current={
-								!('external' in item) && currentPath === item.href.replace(/\/$/, '') ? 'page' : undefined
+								!('external' in item) && currentPath === item.href.replace(/\/$/, '')
+									? 'page'
+									: undefined
 							}
 						>
 							{item.name}
@@ -196,7 +199,7 @@ const navItems: NavItem[] = [
 								class={`block rounded px-2 py-3 font-medium transition-all focus:text-tuhura-green focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none ${currentPath.startsWith('/mahi') ? 'text-tuhura-green' : 'text-gray-700 hover:text-tuhura-green'}`}
 								aria-current={currentPath.startsWith('/mahi') ? 'page' : undefined}
 								style={`transition-delay: ${index * 50}ms;`}
-				title={item.name === 'Mahi' ? 'Mahi (Programs)' : undefined}
+								title={item.name === 'Mahi' ? 'Mahi (Programs)' : undefined}
 							>
 								{item.name}
 							</a>
@@ -225,7 +228,9 @@ const navItems: NavItem[] = [
 							target={'external' in item ? '_blank' : undefined}
 							rel={'external' in item ? 'noopener noreferrer' : undefined}
 							aria-current={
-								!('external' in item) && currentPath === item.href.replace(/\/$/, '') ? 'page' : undefined
+								!('external' in item) && currentPath === item.href.replace(/\/$/, '')
+									? 'page'
+									: undefined
 							}
 						>
 							{item.name}

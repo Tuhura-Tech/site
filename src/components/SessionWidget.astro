@@ -23,17 +23,26 @@ import 'leaflet/dist/leaflet.css';
 					<!-- Filters -->
 					<div class="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-4">
 						<label class="sr-only" for="filter-region">Filter by region</label>
-						<select id="filter-region" class="rounded-lg border border-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tuhura-green">
+						<select
+							id="filter-region"
+							class="rounded-lg border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-tuhura-green focus:outline-none"
+						>
 							<option value="">All regions</option>
 						</select>
 						<label class="sr-only" for="filter-age">Filter by age group</label>
-						<select id="filter-age" class="rounded-lg border border-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tuhura-green">
+						<select
+							id="filter-age"
+							class="rounded-lg border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-tuhura-green focus:outline-none"
+						>
 							<option value="">All ages</option>
 							<option value="5-8">Years 5-8</option>
 							<option value="9-13">Years 9-13</option>
 						</select>
 						<label class="sr-only" for="filter-day">Filter by day of week</label>
-						<select id="filter-day" class="rounded-lg border border-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tuhura-green">
+						<select
+							id="filter-day"
+							class="rounded-lg border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-tuhura-green focus:outline-none"
+						>
 							<option value="">Any day</option>
 							<option>Monday</option>
 							<option>Tuesday</option>
@@ -42,9 +51,19 @@ import 'leaflet/dist/leaflet.css';
 							<option>Friday</option>
 						</select>
 						<label class="sr-only" for="filter-text">Search sessions</label>
-						<input id="filter-text" type="search" placeholder="Search name or address" class="rounded-lg border border-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tuhura-green" />
+						<input
+							id="filter-text"
+							type="search"
+							placeholder="Search name or address"
+							class="rounded-lg border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-tuhura-green focus:outline-none"
+						/>
 						<div class="sm:col-span-4">
-							<button id="clear-filters" type="button" class="mt-1 text-sm font-medium text-tuhura-green hover:underline">Clear filters</button>
+							<button
+								id="clear-filters"
+								type="button"
+								class="mt-1 text-sm font-medium text-tuhura-green hover:underline"
+								>Clear filters</button
+							>
 						</div>
 					</div>
 					<div id="session-results" aria-live="polite"></div>
@@ -92,7 +111,8 @@ import 'leaflet/dist/leaflet.css';
 	// Map state shared across functions
 	let mapRef: any;
 	let markerLayerRef: any;
-	const allMarkers: Array<{ title: string; marker: LMarker; session: Session; region: string }> = [];
+	const allMarkers: Array<{ title: string; marker: LMarker; session: Session; region: string }> =
+		[];
 
 	// Regions data - in a real app this would come from an API
 	const loadRegions = async (): Promise<Region[]> => {
@@ -241,8 +261,8 @@ import 'leaflet/dist/leaflet.css';
 	const populateFilters = (regions: Region[]) => {
 		const regionSelect = document.getElementById('filter-region') as HTMLSelectElement | null;
 		if (!regionSelect) return;
-		const unique = Array.from(new Set(regions.map(r => r.name)));
-		unique.forEach(name => {
+		const unique = Array.from(new Set(regions.map((r) => r.name)));
+		unique.forEach((name) => {
 			const opt = document.createElement('option');
 			opt.value = name;
 			opt.textContent = name;
@@ -251,9 +271,12 @@ import 'leaflet/dist/leaflet.css';
 	};
 
 	const getFilters = () => {
-		const region = (document.getElementById('filter-region') as HTMLSelectElement | null)?.value || '';
+		const region =
+			(document.getElementById('filter-region') as HTMLSelectElement | null)?.value || '';
 		const age = (document.getElementById('filter-age') as HTMLSelectElement | null)?.value || '';
-		const text = (document.getElementById('filter-text') as HTMLInputElement | null)?.value?.toLowerCase() || '';
+		const text =
+			(document.getElementById('filter-text') as HTMLInputElement | null)?.value?.toLowerCase() ||
+			'';
 		const day = (document.getElementById('filter-day') as HTMLSelectElement | null)?.value || '';
 		return { region, age, text, day };
 	};
@@ -261,17 +284,17 @@ import 'leaflet/dist/leaflet.css';
 	const filterRegions = (regions: Region[]): Region[] => {
 		const { region, age, text, day } = getFilters();
 		return regions
-			.filter(r => !region || r.name === region)
-			.map(r => ({
+			.filter((r) => !region || r.name === region)
+			.map((r) => ({
 				...r,
-				sessions: r.sessions.filter(s => {
+				sessions: r.sessions.filter((s) => {
 					const byAge = !age || (age === '5-8' ? s.age.includes('5-8') : s.age.includes('9-13'));
 					const byText = !text || `${s.name} ${s.address}`.toLowerCase().includes(text);
 					const byDay = !day || s.time.toLowerCase().startsWith(day.toLowerCase());
 					return byAge && byText && byDay;
 				}),
 			}))
-			.filter(r => r.sessions.length > 0);
+			.filter((r) => r.sessions.length > 0);
 	};
 
 	const renderSessionList = (regions: Region[]): void => {
@@ -279,17 +302,18 @@ import 'leaflet/dist/leaflet.css';
 		if (!sessionList) return;
 
 		const filtered = filterRegions(regions);
-				const content = filtered.length === 0
-						? `<div class="text-center py-8 text-gray-600" role="status">No sessions match your filters.</div>`
-						: filtered
-								.map(
-										(region) => `
+		const content =
+			filtered.length === 0
+				? `<div class="text-center py-8 text-gray-600" role="status">No sessions match your filters.</div>`
+				: filtered
+						.map(
+							(region) => `
 			<section class="mb-8 last:mb-0" aria-labelledby="region-${region.name}">
 				<h3 id="region-${region.name}" class="font-bold text-2xl mb-4 text-tuhura-green border-b border-gray-200 pb-2">${region.name} <span class="text-gray-500 text-base">(${region.sessions.length})</span></h3>
 				<ul role="list" class="space-y-4">
 					${region.sessions
-												.map(
-														(session) => `
+						.map(
+							(session) => `
 						<li role="listitem" class="p-4 rounded-xl bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
 							<h4 class="font-semibold text-lg mb-2 text-gray-900">${session.name}</h4>
 							<div class="space-y-2 text-sm text-gray-600">
@@ -342,12 +366,16 @@ import 'leaflet/dist/leaflet.css';
 				</ul>
 			</section>
     `,
-			)
-			.join('');
+						)
+						.join('');
 
 		const results = document.getElementById('session-results');
 		if (results) results.innerHTML = content;
-		else sessionList.insertAdjacentHTML('beforeend', `<div id="session-results" aria-live="polite">${content}</div>`);
+		else
+			sessionList.insertAdjacentHTML(
+				'beforeend',
+				`<div id="session-results" aria-live="polite">${content}</div>`,
+			);
 	};
 
 	const initializeMap = (regions: Region[]): void => {
@@ -361,8 +389,10 @@ import 'leaflet/dist/leaflet.css';
 			shadowUrl: '/marker-shadow.png',
 		});
 
-	allSessions.forEach((session) => {
-			const marker = new Marker(session.latlong, { icon }).addTo(markerLayerRef) as unknown as LMarker;
+		allSessions.forEach((session) => {
+			const marker = new Marker(session.latlong, { icon }).addTo(
+				markerLayerRef,
+			) as unknown as LMarker;
 			let popupContent = `
         <div class="session-popup" style="min-width: 250px; padding: 8px;">
           <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #1f2937;">${session.name}</h3>
@@ -440,9 +470,9 @@ import 'leaflet/dist/leaflet.css';
 			mapRef.addLayer(markerLayerRef);
 		}
 		const visible = new Set<string>();
-		filtered.forEach(r => r.sessions.forEach(s => visible.add(s.name)));
-		const toShow = allMarkers.filter(m => visible.has(m.session.name));
-		toShow.forEach(m => (markerLayerRef as any).addLayer(m.marker as any));
+		filtered.forEach((r) => r.sessions.forEach((s) => visible.add(s.name)));
+		const toShow = allMarkers.filter((m) => visible.has(m.session.name));
+		toShow.forEach((m) => (markerLayerRef as any).addLayer(m.marker as any));
 		if (toShow.length > 0) {
 			try {
 				mapRef.fitBounds(markerLayerRef.getBounds().pad(0.1));
@@ -467,12 +497,13 @@ import 'leaflet/dist/leaflet.css';
 			bind('filter-day', 'change');
 			bind('filter-text', 'input');
 			// Also update map markers on filter changes
-			['filter-region','filter-age','filter-day','filter-text'].forEach((id) => {
+			['filter-region', 'filter-age', 'filter-day', 'filter-text'].forEach((id) => {
 				const el = document.getElementById(id);
-				if (el) el.addEventListener(id === 'filter-text' ? 'input' : 'change', () => {
-					const filtered = filterRegions(regions);
-					updateMapForFilteredRegions(filtered);
-				});
+				if (el)
+					el.addEventListener(id === 'filter-text' ? 'input' : 'change', () => {
+						const filtered = filterRegions(regions);
+						updateMapForFilteredRegions(filtered);
+					});
 			});
 			// Delegate Show on Map clicks
 			document.addEventListener('click', (e) => {
