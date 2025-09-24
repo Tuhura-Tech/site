@@ -78,7 +78,7 @@ import 'leaflet/dist/leaflet.css';
 </section>
 
 <script>
-	import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from 'leaflet';
+	//import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from 'leaflet';
 
 	// Extend window interface for openMarker function
 	declare global {
@@ -392,7 +392,7 @@ import 'leaflet/dist/leaflet.css';
 		});
 
 		allSessions.forEach((session) => {
-			const marker = new Marker(session.latlong, { icon }).addTo(
+			//const marker = new Marker(session.latlong, {icon}).addTo(
 				markerLayerRef,
 			) as unknown as LMarker;
 			let popupContent = `
