@@ -1,10 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-import robocupImage from '@assets/robocup-2025.jpg';
+import robots from '@assets/robots.jpg';
+import robocup from '@assets/robocup-2025.jpg';
 // Import images
 import sessionImage from '@assets/session.jpg';
-import session1Image from '@assets/session-1.jpg';
-import teamPhotoImage from '@assets/team-photo.jpg';
+import session1Image from '@assets/student-working-6.jpg';
+import gamedev from '@assets/student-working-1.jpg'
+import tutorHelping from '@assets/tutor-helping.jpg';
 import Card from '@components/ui/Card.astro';
 
 import Layout from '@layouts/Layout.astro';
@@ -115,8 +117,8 @@ const workshopTopics = [
 				</div>
 
 				<div class="relative">
-					<div class="grid grid-cols-2 gap-4">
-						<div class="space-y-4">
+					<div class="grid grid-cols-2 gap-2">
+						<div class="space-y-2">
 							<div class="group relative overflow-hidden rounded-xl shadow-lg">
 								<Image
 									src={sessionImage}
@@ -131,11 +133,26 @@ const workshopTopics = [
 									</div>
 								</div>
 							</div>
+							<div class="group relative overflow-hidden rounded-xl shadow-lg">
+								<Image
+									src={gamedev}
+									alt="Collaborative workshop environment"
+									class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+									width={280}
+									height={192}
+								/>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent">
+									<div class="absolute right-3 bottom-3 left-3">
+										<p class="text-sm font-medium text-white">Game Development</p>
+									</div>
+								</div>
+							</div>
 						</div>
+						
 						<div class="space-y-4 pt-8">
 							<div class="group relative overflow-hidden rounded-xl shadow-lg">
 								<Image
-									src={robocupImage}
+									src={robots}
 									alt="Robotics workshop preparation"
 									class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
 									width={280}
@@ -147,6 +164,7 @@ const workshopTopics = [
 									</div>
 								</div>
 							</div>
+							
 							<div class="group relative overflow-hidden rounded-xl shadow-lg">
 								<Image
 									src={session1Image}
@@ -161,6 +179,7 @@ const workshopTopics = [
 									</div>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -254,7 +273,7 @@ const workshopTopics = [
 							>
 								<div class="relative mb-6 overflow-hidden rounded-xl">
 									<Image
-										src={teamPhotoImage}
+										src={tutorHelping}
 										alt="Workshop participants and mentors"
 										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
 										width={320}
@@ -304,7 +323,7 @@ const workshopTopics = [
 							>
 								<div class="relative mb-6 overflow-hidden rounded-xl">
 									<Image
-										src={robocupImage}
+										src={robocup}
 										alt="Competition preparation and skill building"
 										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
 										width={320}
