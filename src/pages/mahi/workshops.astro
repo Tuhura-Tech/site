@@ -2,11 +2,13 @@
 import { Image } from 'astro:assets';
 import robots from '@assets/robots.jpg';
 import robocup from '@assets/robocup-2025.jpg';
-// Import images
 import sessionImage from '@assets/session.jpg';
 import session1Image from '@assets/student-working-6.jpg';
 import gamedev from '@assets/student-working-1.jpg'
 import tutorHelping from '@assets/tutor-helping.jpg';
+
+
+
 import Card from '@components/ui/Card.astro';
 
 import Layout from '@layouts/Layout.astro';
@@ -272,7 +274,6 @@ const workshopTopics = [
 								<div class="relative mb-6 overflow-hidden rounded-xl">
 									<Image
 										src={tutorHelping}
-										src={tutorHelping}
 										alt="Workshop participants and mentors"
 										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
 										width={320}
@@ -322,7 +323,6 @@ const workshopTopics = [
 							>
 								<div class="relative mb-6 overflow-hidden rounded-xl">
 									<Image
-										src={robocup}
 										src={robocup}
 										alt="Competition preparation and skill building"
 										class="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
