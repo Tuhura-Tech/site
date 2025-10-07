@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-
 import pldImage from '@assets/pld.jpg';
 import eventImage from '@assets/robocup-2025.jpg';
 import sessionImage from '@assets/session.jpg';
@@ -9,7 +7,7 @@ import IconFeatures from '@components/ui/IconFeatures.astro';
 import ProgramCards from '@components/ui/ProgramCards.astro';
 import Slideshow from '@components/ui/Slideshow.astro';
 import Layout from '@layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+
 
 const mahiOfferings = [
 	{
@@ -102,94 +100,30 @@ const supportResources = [
 					<div
 						class="slideshow-container relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
 					>
-						<div class="slide active">
-							<Image
-								src={sessionImage}
-								alt="Rangatahi engaged in technology sessions"
-								class="h-full w-full object-cover"
-								width={600}
-								height={400}
-							/>
-							<div
-								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
-							>
-								<div class="p-3">
-									<h3 class="text-xl font-bold text-white">Community Tech Sessions</h3>
-									<p class="text-white/90">Weekly hands-on learning in your neighborhood</p>
-								</div>
-							</div>
-						</div>
-						<div class="slide">
-							<Image
-								src={session1Image}
-								alt="Interactive technology workshops"
-								class="h-full w-full object-cover"
-								width={600}
-								height={400}
-							/>
-							<div
-								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
-							>
-								<div class="p-3">
-									<h3 class="bottom-2 text-xl font-bold text-white">Interactive Learning</h3>
-									<p class="bottom-2 text-white/90">Student-directed exploration and projects</p>
-								</div>
-							</div>
-						</div>
-						<div class="slide">
-							<Image
-								src={eventImage}
-								alt="Technology competitions and events"
-								class="h-full w-full object-cover"
-								width={600}
-								height={400}
-							/>
-							<div
-								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
-							>
-								<div class="p-3">
-									<h3 class="text-xl font-bold text-white">Competitions & Events</h3>
-									<p class="text-white/90">Challenges that inspire and connect</p>
-								</div>
-							</div>
-						</div>
-						<div class="slide">
-							<Image
-								src={pldImage}
-								alt="Professional development for educators"
-								class="h-full w-full object-cover"
-								width={600}
-								height={400}
-							/>
-							<div
-								class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6"
-							>
-								<div class="p-3">
-									<h3 class="text-xl font-bold text-white">Kaiako Support</h3>
-									<p class="text-white/90">Professional development for educators</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Navigation arrows -->
-						<button
-							class="prev absolute top-1/2 left-4 -translate-y-1/2 transform rounded-full bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30"
-						>
-							<Icon name="heroicons:chevron-left" class="h-6 w-6 text-white" />
-						</button>
-						<button
-							class="next absolute top-1/2 right-4 -translate-y-1/2 transform rounded-full bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30"
-						>
-							<Icon name="heroicons:chevron-right" class="h-6 w-6 text-white" />
-						</button>
-
-						<!-- Dots indicator -->
-						<div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
-							<button class="dot active h-3 w-3 rounded-full bg-white/70" data-slide="0"></button>
-							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="1"></button>
-							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="2"></button>
-							<button class="dot h-3 w-3 rounded-full bg-white/30" data-slide="3"></button>
-						</div>
+						<Slideshow
+							images={[
+								{
+									src: eventImage,
+									alt: 'Rangatahi participating in RoboCup 2025 robotics competition with robots on display',
+									title: 'Technology Competitions',
+								},
+								{
+									src: sessionImage,
+									alt: 'Students collaborating on technology projects during after-school session',
+									title: 'Community Tech Sessions',
+								},
+								{
+									src: session1Image,
+									alt: 'Rangatahi engaged in hands-on learning with computers and technology equipment',
+									title: 'Interactive Learning',
+								},
+								{
+									src: pldImage,
+									alt: 'Educators participating in professional development workshop for technology education',
+									title: 'Kaiako Professional Development',
+								},
+							]}
+						/>
 					</div>
 				</div>
 			</div>
@@ -226,27 +160,4 @@ const supportResources = [
 </Layout>
 
 <!-- Slideshow component usage -->
-<Slideshow
-	images={[
-		{
-			src: eventImage,
-			alt: 'Rangatahi participating in RoboCup 2025 robotics competition with robots on display',
-			title: 'Technology Competitions',
-		},
-		{
-			src: sessionImage,
-			alt: 'Students collaborating on technology projects during after-school session',
-			title: 'Community Tech Sessions',
-		},
-		{
-			src: session1Image,
-			alt: 'Rangatahi engaged in hands-on learning with computers and technology equipment',
-			title: 'Interactive Learning',
-		},
-		{
-			src: pldImage,
-			alt: 'Educators participating in professional development workshop for technology education',
-			title: 'Kaiako Professional Development',
-		},
-	]}
-/>
+
