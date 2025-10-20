@@ -24,7 +24,7 @@
 		"tailwindcss": "^4.1.11"
 	},
 	"devDependencies": {
-		"@astrojs/check": "0.9.4",
+		"@astrojs/check": "0.9.5",
 		"@biomejs/biome": "2.2.6",
 		"@tailwindcss/vite": "4.1.14",
 		"prettier": "3.6.2",
