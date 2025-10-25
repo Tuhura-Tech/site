@@ -39,7 +39,7 @@
 			"semicolons": "always"
 		}
 	},
-	"css": { "formatter": { "quoteStyle": "single" } },
+	"css": { "formatter": { "quoteStyle": "single" }, "parser": { "tailwindDirectives": true } },
 	"json": {
 		"parser": {
 			"allowComments": true,
