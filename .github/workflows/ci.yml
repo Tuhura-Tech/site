@@ -19,7 +19,7 @@ jobs:
           run_install: true
 
       - name: Lint project
-        run: pnpm run lint:ci
+        run: pnpm run lint:ci --css-parse-tailwind-directives=true
 
       - name: Prettier check
         run: pnpm run format:check
