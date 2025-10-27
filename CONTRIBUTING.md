@@ -86,8 +86,8 @@ When writing `.astro` files:
 ---
 // TypeScript goes here - define props, import dependencies
 interface Props {
- title: string;
- showSubtitle?: boolean;
+	title: string;
+	showSubtitle?: boolean;
 }
 
 const { title, showSubtitle = false } = Astro.props;
@@ -95,8 +95,8 @@ const { title, showSubtitle = false } = Astro.props;
 
 <!-- HTML template goes here -->
 <section class="py-8">
- <h2 class="text-2xl font-bold text-gray-900">{title}</h2>
- {showSubtitle && <p class="mt-2 text-gray-600">Subtitle content</p>}
+	<h2 class="text-2xl font-bold text-gray-900">{title}</h2>
+	{showSubtitle && <p class="mt-2 text-gray-600">Subtitle content</p>}
 </section>
 ```
 

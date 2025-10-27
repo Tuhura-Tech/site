@@ -43,6 +43,7 @@ We welcome contributions of all kinds! Please read our [Contributing Guide](CONT
 - Pull request workflow
 
 Quick checklist before submitting:
+
 - Run `pnpm check` and `pnpm lint`
 - Test accessibility with keyboard navigation
 - Verify responsive design across screen sizes
@@ -63,6 +64,7 @@ Quick checklist before submitting:
 ## Deployment
 
 Automatically deployed via GitHub Actions:
+
 - Production deployment on `main` branch
 - Preview builds for pull requests
 - Automated testing and quality checks
