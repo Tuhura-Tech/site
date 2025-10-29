@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import livingWage from '@assets/awards/livingwage.png';
+import pridePledge from '@assets/awards/pridepledge.png';
+
+
+const partners = [
+	{
+		name: 'Pride Pledge',
+		logo: pridePledge,
+		href: 'https://pridepledge.co.nz/',
+        description: 'We are proud to be part of the Pride Pledge, supporting both staff and Rangatahi',
+	},
+	{
+		name: 'Living Wage Employer',
+		logo: livingWage,
+		href: 'https://www.livingwage.org.nz/',
+        description: 'We are a living wage employer, and are committed to fair wages for all staff'
+	},
+];
+---
+
+<section class="py-12">
+	<div class="container-custom">
+		<div class="mb-12 text-center">
+			<h3 class="mb-6 text-xl font-semibold tracking-wider text-gray-500 uppercase">
+				Accredidations
+			</h3>
+		</div>
+
+		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+			{
+				partners.map((partner) => (
+					<div class="group">
+						<a
+							href={partner.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
+						>
+                            <h4 class="mb-2 text-xl font-bold text-gray-900">{partner.name}</h4>
+							<Image
+								src={partner.logo}
+								alt={`${partner.name} logo`}
+								class="mx-auto mb-4 h-32 w-auto object-contain filter transition-all duration-300"
+							/>
+							<h4 class="mb-2 text-l font-bold text-gray-600">{partner.description}</h4>
+						</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

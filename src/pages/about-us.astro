@@ -16,6 +16,7 @@ import yuiImage from '@assets/team/Yui.jpg'
 import IconFeatures from '@components/ui/IconFeatures.astro';
 import PersonCards from '@components/ui/PersonCards.astro';
 import Layout from '@layouts/Layout.astro';
+import Pledges from '@components/Pledges.astro';
 
 const teamMembers = [
 	{
@@ -356,7 +357,7 @@ const timeline = [
 			</div>
 		</div>
 	</section>
-
+	<Pledges/>
 	<PersonCards
 		people={teamMembers}
 		title="Meet Our Kaimahi (Team)"
