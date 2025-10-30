@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import twodegrees from '@assets/awards/2degrees.png';
+import cityfinalist from '@assets/awards/welairportcityfinalist.png';
+import huttdevelopment from '@assets/awards/welairporthuttdevelopment.png';
+import huttsupreme from '@assets/awards/welairporthuttsupreme.png';
+
+const awards = [
+	{
+		type: 'Winner',
+		category: 'Supreme',
+		name: '2025 Wellington Airport Regional Community Awards Hutt City',
+		logo: huttsupreme,
+	},
+	{
+		type: 'Winner',
+		category: 'Education & Youth Development',
+		name: '2025 Wellington Airport Regional Community Awards Hutt City',
+		logo: huttdevelopment,
+	},
+	{
+		type: 'Finalist',
+		category: 'Overall',
+		name: '2025 Wellington Airport Regional Community Awards Wellington City ',
+		logo: cityfinalist,
+	},
+	{
+		type: 'Finalist',
+		category: 'Diversity, Inclusion & Growing People',
+		name: '2degrees Wellington Regional Business Excellence Awards 2025 ',
+		logo: twodegrees,
+	},
+];
+---
+
+<section class="py-12">
+	<div class="container-custom">
+		<div class="mb-12 text-center">
+			<h1 class="mb-6 text-3xl font-bold tracking-wider text-gray-900">Awards</h1>
+		</div>
+
+		<div class="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-4 lg:grid-cols-4">
+			{
+				awards.map((award) => (
+					<div class="group">
+						<div class="flex h-full flex-col items-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md">
+							<h2 class="mb-2 text-center text-2xl font-bold text-gray-900">{award.type}</h2>
+							<Image
+								src={award.logo}
+								alt={`${award.name} logo`}
+								class="mx-auto mb-4 h-35 w-auto object-contain filter transition-all duration-300"
+							/>
+							<h3 class="mb-2 h-15 text-center text-xl font-bold text-gray-600">
+								{award.category}
+							</h3>
+							<h4 class="mb-2 text-sm font-medium text-gray-500">{award.name}</h4>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

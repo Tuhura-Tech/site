@@ -11,6 +11,7 @@ import neenuImage from '@assets/team/neenu.jpg';
 import yuiImage from '@assets/team/Yui.jpg';
 import zelleImage from '@assets/team/zelle.jpg';
 import teamImage from '@assets/team-photo.jpg';
+import Pledges from '@components/Pledges.astro';
 import IconFeatures from '@components/ui/IconFeatures.astro';
 import PersonCards from '@components/ui/PersonCards.astro';
 import Layout from '@layouts/Layout.astro';
@@ -350,7 +351,7 @@ const timeline = [
 			</div>
 		</div>
 	</section>
-
+	<Pledges />
 	<PersonCards
 		people={teamMembers}
 		title="Meet Our Kaimahi (Team)"

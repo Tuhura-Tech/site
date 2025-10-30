@@ -1,161 +1,230 @@
 ---
-import pldImage from '@assets/pld.jpg';
-import eventImage from '@assets/robocup-2025.jpg';
-import session1Image from '@assets/robots.jpg';
-import techSesssion from '@assets/tutor-teaching.jpg';
+import { Image } from 'astro:assets';
+import session1ImageCropped from '@assets/session-1-cropped.jpg';
+import sessionImage from '@assets/student-working-5.jpg';
+import SessionWidget from '@components/SessionWidget.astro';
+import HeroSection from '@components/ui/HeroSection.astro';
 import IconFeatures from '@components/ui/IconFeatures.astro';
-import ProgramCards from '@components/ui/ProgramCards.astro';
-import Slideshow from '@components/ui/Slideshow.astro';
+import InfoCard from '@components/ui/InfoCard.astro';
 import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 
-const mahiOfferings = [
+const topics = [
 	{
-		title: 'Tech Sessions',
-		subtitle: 'After-School & In-School',
+		title: 'Scratch & Block Coding',
 		description:
-			'Weekly sessions where rangatahi explore technology through self-directed, project-based learning.',
-		icon: 'heroicons:computer-desktop',
-		href: '/mahi/sessions',
-		features: [
-			'After-school community sessions',
-			'In-school programmes',
-			'Years 5-13',
-			'Self-directed learning',
-		],
+			'Learn the basics of programming through fun, visual block-based coding activities. Great for beginners and younger students.',
+		icon: 'heroicons:puzzle-piece',
 	},
 	{
-		title: 'Events',
-		subtitle: 'Competitions & Showcases',
+		title: 'Godot Game Development',
 		description:
-			'Special gatherings that inspire, challenge, and connect rangatahi with technology through competitions and collaborative experiences.',
-		icon: 'heroicons:trophy',
-		href: '/mahi/events',
-		features: ['Game jams & hackathons', 'Robotics competitions', 'Community festivals'],
+			'Create 2D and 3D games using the Godot engine. Explore game design, logic, and creative storytelling.',
+		icon: 'heroicons:code-bracket',
 	},
 	{
-		title: 'Workshops (Wānanga)',
-		subtitle: 'Intensive Learning',
+		title: '3D Modeling & Printing',
 		description:
-			'Focused sessions that dive deep into specific tech topics over hours or days of concentrated learning.',
-		icon: 'heroicons:academic-cap',
-		href: '/mahi/workshops',
-		features: ['Specific topic focus', 'All skill levels', 'Take-home projects'],
+			'Design and print your own 3D objects. Learn about CAD, prototyping, and how digital models become real-world creations.',
+		icon: 'heroicons:puzzle-piece',
 	},
 	{
-		title: 'Kaiako PLD',
-		subtitle: 'Professional Development',
+		title: 'Cybersecurity',
 		description:
-			'Empowering educators with both technical skills and area specific expertise to inspire rangatahi in technology.',
-		icon: 'heroicons:users',
-		href: '/mahi/pld',
-		features: ['Teacher training', 'Curriculum support', 'Resource sharing'],
+			'Discover how to stay safe online, protect your data, and understand the basics of digital security.',
+		icon: 'heroicons:shield-check',
+	},
+	{
+		title: 'Robotics',
+		description:
+			'Build and program robots using kits and microcontrollers. Hands-on activities in engineering and automation.',
+		icon: 'heroicons:cpu-chip',
+	},
+	{
+		title: 'Websites & Web Apps',
+		description:
+			'Design and build your own websites and web applications using HTML, CSS, and JavaScript.',
+		icon: 'heroicons:globe-alt',
+	},
+	{
+		title: 'Electronics & Circuits',
+		description:
+			'Experiment with electronics, circuits, and sensors. Learn how hardware powers the digital world.',
+		icon: 'heroicons:bolt',
+	},
+	{
+		title: 'VR & AR',
+		description:
+			'Explore virtual and augmented reality technologies. Create immersive experiences and learn about the future of interaction.',
+		icon: 'heroicons:eye',
+	},
+	{
+		title: 'Python Programming',
+		description:
+			'Dive into text-based coding with Python. Build games, apps, and automation scripts.',
+		icon: 'heroicons:code-bracket',
+	},
+	{
+		title: 'Artificial Intelligence & Machine Learning',
+		description:
+			'Discover how computers can learn and make decisions. Experiment with simple AI projects and concepts.',
+		icon: 'heroicons:light-bulb',
+	},
+	{
+		title: 'Mobile App Development',
+		description:
+			'Design and build apps for smartphones and tablets. Learn about user experience and mobile technology.',
+		icon: 'heroicons:device-phone-mobile',
 	},
 ];
 
-const supportResources = [
+const sessionHighlights = [
 	{
-		title: 'Free Learning Resources',
-		description: 'Open-access materials, lesson plans, tutorials and guides',
-		icon: 'heroicons:document-text',
+		title: 'Montessori Style Approach',
+		description: 'Learner-driven exploration focused on interests and curiosity.',
+		icon: 'heroicons:users',
 	},
-	/**
-    Would ideally like to replace this with something
-    {
-		title: "Equipment Library",
-		description: "Loaning devices and tech equipment to schools and families",
-		icon: "heroicons:cube",
-	},**/
 	{
-		title: 'Consultation & Support',
-		description: 'Helping schools develop their own tech education programmes',
-		icon: 'heroicons:chat-bubble-left-right',
+		title: 'Project-Based Discovery',
+		description:
+			'Learning happens through hands-on exploration of real projects that interest each participant.',
+		icon: 'heroicons:light-bulb',
+	},
+	{
+		title: 'Expert Guidance',
+		description:
+			'Professional educators and industry volunteers provide mentorship and technical support.',
+		icon: 'heroicons:academic-cap',
 	},
 ];
 ---
 
-<Layout title="Mahi | Our Technology Education Programmes">
-	<!-- Hero Section with Image Slideshow -->
-	<section class="pt-20 pb-16 md:pt-28 md:pb-24">
+<Layout title="Sessions">
+	<HeroSection
+		title="Community-Based <span class='gradient-text'>Tech Sessions</span>"
+		description="Student-directed, project-based technology learning in community spaces. Each session adapts to what sparks rangatahi curiosity."
+		image={sessionImage}
+		imageAlt="Tūhura Tech community session in action"
+		backgroundClass="bg-white"
+	/>
+
+	<!-- Additional session info -->
+	<section class="bg-tuhura-gray py-8">
 		<div class="container-custom">
-			<div class="mb-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-				<div>
-					<h1 class="text-4xl leading-tight font-bold md:text-5xl">
-						<span class="gradient-text">Our Mahi</span>
-					</h1>
-					<p class="mt-6 text-xl text-gray-600">
-						Everything we do to empower rangatahi through technology - from regular sessions to
-						competitions, workshops, and educator training.
-					</p>
-					<div class="mt-6 rounded-lg bg-tuhura-gray p-4">
-						<p class="text-lg text-gray-700">
-							<strong>After-school community sessions are our core offering</strong>, supported by
-							in-school programmes, teacher training, and free resources.
-						</p>
+			<div class="mx-auto max-w-4xl">
+				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+					<div class="rounded-lg bg-white p-6">
+						<h3 class="mb-3 text-lg font-semibold">Session Details</h3>
+						<ul class="space-y-3">
+							<li class="flex items-center space-x-3">
+								<Icon name="heroicons:map-pin" class="h-5 w-5 text-tuhura-green" />
+								<span class="text-gray-700">15+ locations across Wellington region</span>
+							</li>
+							<li class="flex items-center space-x-3">
+								<Icon name="heroicons:users" class="h-5 w-5 text-tuhura-green" />
+								<span class="text-gray-700">Led by trained kaiako with industry volunteers</span>
+							</li>
+							<li class="flex items-center space-x-3">
+								<Icon name="heroicons:heart" class="h-5 w-5 text-tuhura-green" />
+								<span class="text-gray-700">Tailored to participants' interests</span>
+							</li>
+						</ul>
 					</div>
-				</div>
-
-				<!-- Image Slideshow -->
-				<div class="relative">
-					<div
-						class="slideshow-container relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
-					>
-						<Slideshow
-							images={[
-								{
-									src: eventImage,
-									alt: 'Rangatahi participating in RoboCup 2025 robotics competition with robots on display',
-									title: 'Technology Competitions',
-								},
-								{
-									src: techSesssion,
-									alt: 'A tutor delivering content during after-school session',
-									title: 'Community Tech Sessions',
-								},
-								{
-									src: session1Image,
-									alt: 'Rangatahi engaged in hands-on learning with computers and technology equipment',
-									title: 'Interactive Learning',
-								},
-								{
-									src: pldImage,
-									alt: 'Educators participating in professional development workshop for technology education',
-									title: 'Kaiako Professional Development',
-								},
-							]}
-						/>
+					<div class="rounded-lg bg-white p-6">
+						<h3 class="mb-3 text-lg font-semibold">Age Groups</h3>
+						<div class="space-y-3">
+							<div>
+								<p class="font-medium text-tuhura-green">Junior Sessions (Years 5–8)</p>
+								<p class="text-sm text-gray-600">Guided activities for building foundations</p>
+							</div>
+							<div>
+								<p class="font-medium text-tuhura-green">Senior Sessions (Years 9–13)</p>
+								<p class="text-sm text-gray-600">Student-led project exploration</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-
-			<ProgramCards programs={mahiOfferings} title="Our Core Programmes" columns="2" />
-
-			<!-- Additional Support -->
-			<IconFeatures
-				features={supportResources}
-				title="Beyond Sessions - Supporting the Ecosystem"
-				description="Additional ways we support technology education in our communities."
-				columns="2"
-				iconVariant="default"
-			/>
-
-			<!-- Call to Action -->
-			<div class="mx-auto max-w-4xl rounded-xl bg-tuhura-green p-8 text-center text-white">
-				<h2 class="mb-4 text-3xl font-bold">Ready to Get Involved?</h2>
-				<p class="mb-8 text-xl opacity-90">
-					Whether you're looking for regular sessions, specialist workshops, or kura support - we're
-					here to support rangatahi technology education in your area.
-				</p>
-				<div class="flex flex-col justify-center gap-4 sm:flex-row">
-					<a href="/mahi/sessions" class="btn bg-white text-tuhura-green hover:bg-gray-100">
-						Find Sessions Near You
-					</a>
-					<a href="/contact" class="btn border-2 border-white bg-transparent hover:bg-white/10">
-						Get in Touch
-					</a>
 				</div>
 			</div>
 		</div>
 	</section>
-</Layout>
 
-<!-- Slideshow component usage -->
+	<SessionWidget />
+
+	<IconFeatures
+		features={topics}
+		title="Session Topics"
+		description="Some of the common topics covered in our sessions."
+		columns="3"
+		iconVariant="colored"
+	/>
+
+	<!-- Visual Gallery Section -->
+	<section class="bg-tuhura-gray py-20">
+		<div class="container-custom">
+			<div class="mx-auto mb-16 max-w-3xl text-center">
+				<h2 class="text-3xl font-bold md:text-4xl">See Our Sessions in Action</h2>
+				<p class="mt-4 text-xl text-gray-600">
+					Get a glimpse of the hands-on learning and collaborative exploration happening in our
+					community sessions.
+				</p>
+			</div>
+
+			<div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+				<div class="group relative overflow-hidden rounded-2xl shadow-lg">
+					<Image
+						src={session1ImageCropped}
+						alt="Rangatahi collaborating on technology projects"
+						class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+						width={600}
+						height={320}
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-colors group-hover:from-black/70"
+					>
+						<div class="absolute right-6 bottom-6 left-6">
+							<h3 class="mb-2 text-xl font-bold text-white">Collaborative Learning</h3>
+							<p class="text-white/90">
+								Rangatahi working together on creative technology projects, learning from each other
+								and our mentors.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="space-y-6">
+					{
+						sessionHighlights.map((highlight) => (
+							<InfoCard
+								title={highlight.title}
+								description={highlight.description}
+								icon={highlight.icon}
+								variant="default"
+							/>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-white py-16">
+		<div class="container-custom mx-auto max-w-2xl text-center">
+			<h2 class="mb-4 text-2xl font-bold md:text-3xl">Request a Session</h2>
+			<p class="mb-4 text-lg text-gray-700">
+				Interested in having a session at your school, community centre, or library? All our
+				sessions are{' '}
+				<strong>free of charge</strong> thanks to our sponsors and volunteers.
+			</p>
+			<p class="mb-6 text-lg text-gray-700">
+				To request a session, simply{' '}
+				<a href="/contact" class="font-medium text-tuhura-green underline"> contact us </a>
+			</p>
+			<a
+				href="/contact"
+				class="inline-block rounded-lg bg-tuhura-green px-6 py-3 font-semibold text-white shadow transition hover:bg-tuhura-blue"
+			>
+				Contact Us
+			</a>
+		</div>
+	</section>
+</Layout>
