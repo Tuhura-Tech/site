@@ -3,8 +3,8 @@
 //import heroImage from '@assets/hero.jpg';
 import pldImage from '@assets/pld.jpg';
 import eventImage from '@assets/robocup-2025.jpg';
-import techSesssion from '@assets/tutor-teaching.jpg'
 import session1Image from '@assets/robots.jpg';
+import techSesssion from '@assets/tutor-teaching.jpg';
 import Slideshow from '@components/ui/Slideshow.astro';
 ---
 
@@ -25,35 +25,33 @@ import Slideshow from '@components/ui/Slideshow.astro';
 				</div>
 			</div>
 			<div class="relative">
-					<div
-						class="slideshow-container relative h-96 w-full overflow-hidden rounded-xl shadow-2xl"
-					>
-						<Slideshow
-							images={[
-								{
-									src: techSesssion,
-									alt: 'A tutor delivering content during after-school session',
-									title: 'Community Tech Sessions',
-								},
-								{
-									src: eventImage,
-									alt: 'Rangatahi participating in RoboCup 2025 robotics competition with robots on display',
-									title: 'Technology Competitions',
-								},
-								{
-									src: session1Image,
-									alt: 'Rangatahi engaged in hands-on learning with computers and technology equipment',
-									title: 'Interactive Learning',
-								},
-								{
-									src: pldImage,
-									alt: 'Educators participating in professional development workshop for technology education',
-									title: 'Kaiako Professional Development',
-								},
-							]}
-						/>
-					</div>
+				<div class="slideshow-container relative h-96 w-full overflow-hidden rounded-xl shadow-2xl">
+					<Slideshow
+						images={[
+							{
+								src: techSesssion,
+								alt: 'A tutor delivering content during after-school session',
+								title: 'Community Tech Sessions',
+							},
+							{
+								src: eventImage,
+								alt: 'Rangatahi participating in RoboCup 2025 robotics competition with robots on display',
+								title: 'Technology Competitions',
+							},
+							{
+								src: session1Image,
+								alt: 'Rangatahi engaged in hands-on learning with computers and technology equipment',
+								title: 'Interactive Learning',
+							},
+							{
+								src: pldImage,
+								alt: 'Educators participating in professional development workshop for technology education',
+								title: 'Kaiako Professional Development',
+							},
+						]}
+					/>
 				</div>
+			</div>
 		</div>
 	</div>
 </section>
