@@ -152,8 +152,8 @@ import 'leaflet/dist/leaflet.css';
 						address: '1a Ottawa Road Ngaio Wellington',
 						latlong: [-41.249884, 174.773312],
 						age: 'Years 5-8 (Ages 8-12)',
-						signupLink: 'https://forms.gle/hJiRmvQF6QcjmJjt9',
-						time: 'Tuesday at 3:30 - 5:30pm',
+						signupLink: 'https://forms.gle/CqrwioUQTcudqscJ7',
+						time: 'Tuesday at 3:30 - 5:15pm',
 					},
 					{
 						name: 'South Wellington Intermediate School',
@@ -213,7 +213,7 @@ import 'leaflet/dist/leaflet.css';
 						address: '2 Queens Drive, Lower Hutt 5010',
 						latlong: [-41.211709, 174.900509],
 						age: 'Years 5-8 (Ages 8-12)',
-						signupLink: 'https://forms.gle/hJiRmvQF6QcjmJjt9',
+						signupLink: 'https://forms.gle/hJ3BzwbzghF81u9QA',
 						time: 'Monday at 3:30 - 5:30pm',
 					},
 					{
@@ -222,7 +222,7 @@ import 'leaflet/dist/leaflet.css';
 						latlong: [-41.261747, 174.944866],
 						age: 'Years 5-8 (Ages 8-12)',
 						signupLink: 'https://forms.gle/4Zp5GtAyKhATrk1QA',
-						time: 'Thursday at 3:30 - 5:30pm',
+						time: 'Thursday at 3:30 - 4:45pm',
 					},
 				],
 			},
@@ -243,15 +243,15 @@ import 'leaflet/dist/leaflet.css';
 						latlong: [-41.118168, 174.893439],
 						age: 'Years 5-8 (Ages 8-12)',
 						signupLink: 'https://forms.gle/hJiRmvQF6QcjmJjt9',
-						time: 'Tuesday at 3:30 - 5:30pm',
+						time: 'Tuesday at 3:30 - 4:45pm',
 					},
 					{
 						name: 'Porirua City Centre Library',
-						address: 'Awarua St, Elsdon, Porirua 5022',
-						latlong: [-41.127953, 174.830214],
-						age: 'Years 5-8 (Ages 8-12)',
-						signupLink: 'https://forms.gle/hJiRmvQF6QcjmJjt9',
-						time: 'Thursday at 3:30 - 5:30pm',
+						address: '17 Parumoana Street, Porirua City Centre, Porirua 5022',
+						latlong: [-41.131314736042874, 174.839442197269],
+						age: 'Years 9-13 (Ages 13-18)',
+						signupLink: 'https://forms.gle/Bw5PaiMnPML39Tg68',
+						time: 'Thursday at 3:30 - 5pm',
 					},
 				],
 			},
@@ -387,6 +387,8 @@ import 'leaflet/dist/leaflet.css';
 		const icon = new Icon({
 			iconUrl: '/marker-icon.png',
 			shadowUrl: '/marker-shadow.png',
+			iconSize: [25, 41],
+			iconAnchor: [12, 39],
 		});
 
 		allSessions.forEach((session) => {
