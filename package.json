@@ -25,7 +25,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.5",
-		"@biomejs/biome": "2.3.6",
+		"@biomejs/biome": "2.3.8",
 		"@tailwindcss/vite": "4.1.17",
 		"prettier": "3.6.2",
 		"prettier-plugin-astro": "0.14.1",
