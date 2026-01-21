@@ -234,18 +234,13 @@ import 'leaflet/dist/leaflet.css';
             📍 ${session.locationDetails.address}
           </div>`;
 
-			if (session.signupLink) {
+			{
 				popupContent += `
-          <a href="${session.signupLink}"
+          <a href="https://sessions.tuhuratech.org.nz/sessions/${session.id}"
              style="display: inline-block; background: #059669; color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; margin-top: 8px;"
              target="_blank" rel="noopener noreferrer">
              Join This Session →
           </a>`;
-			} else {
-				popupContent += `
-          <div style="background: #f3f4f6; color: #6b7280; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-top: 8px; border-left: 3px solid #059669;">
-            💡 This is an in-school session. Contact us for similar community sessions.
-          </div>`;
 			}
 			if (session.locationDetails.latlong) {
 				const q = encodeURIComponent(`${session.name}, ${session.locationDetails.address}`);
