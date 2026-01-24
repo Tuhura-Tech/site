@@ -121,7 +121,8 @@ import 'leaflet/dist/leaflet.css';
 				...r,
 				sessions: r.sessions.filter((s) => {
 					const byAge = !age || (age === '5-8' ? s.age.includes('5-8') : s.age.includes('9-13'));
-					const byText = !text || `${s.name} ${s.locationDetails.address}`.toLowerCase().includes(text);
+					const byText =
+						!text || `${s.name} ${s.locationDetails.address}`.toLowerCase().includes(text);
 					const byDay = !day || s.time.toLowerCase().startsWith(day.toLowerCase());
 					return byAge && byText && byDay;
 				}),
@@ -218,9 +219,12 @@ import 'leaflet/dist/leaflet.css';
 		});
 
 		allSessions.forEach((session) => {
-			const marker = new Marker(session.locationDetails.latlong ? [session.locationDetails.latlong.lat, session.locationDetails.latlong.lng] : [0, 0], { icon }).addTo(
-				markerLayerRef,
-			) as unknown as LMarker;
+			const marker = new Marker(
+				session.locationDetails.latlong
+					? [session.locationDetails.latlong.lat, session.locationDetails.latlong.lng]
+					: [0, 0],
+				{ icon },
+			).addTo(markerLayerRef) as unknown as LMarker;
 			let popupContent = `
         <div class="session-popup" style="min-width: 250px; padding: 8px;">
           <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #1f2937;">${session.name}</h3>
