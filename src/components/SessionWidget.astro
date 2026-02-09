@@ -32,7 +32,7 @@ import 'leaflet/dist/leaflet.css';
 </section>
 
 <script>
-	import { Map, TileLayer, Marker, Popup, FeatureGroup, Icon } from 'leaflet';
+	import { Map as LeafletMap, TileLayer, Marker, Popup, FeatureGroup, Icon } from 'leaflet';
 
 	// Extend window interface for openMarker function
 	declare global {
@@ -235,7 +235,12 @@ import 'leaflet/dist/leaflet.css';
 
 	const initializeMap = (regions: Region[]): void => {
 		const allSessions = regions.flatMap((r) => r.sessions);
-		mapRef = new Map('map');
+		const mapContainer = document.getElementById('map');
+		if (!mapContainer) {
+			console.error('Map container not found');
+			return;
+		}
+		mapRef = new LeafletMap(mapContainer);
 		markerLayerRef = new FeatureGroup() as any;
 		const markerOpen: Array<{ title: string; marker: LMarker }> = [];
 
@@ -340,7 +345,18 @@ if (session.location) {
 		try {
 			const regions = await loadRegions();
 			renderSessionList(regions);
-			initializeMap(regions);
+			
+			// Wait a tick to ensure DOM is fully updated
+			await new Promise(resolve => setTimeout(resolve, 0));
+			
+			// Check if map container exists and is visible
+			const mapContainer = document.getElementById('map');
+			if (!mapContainer) {
+				console.warn('Map container not found, skipping map initialization');
+			} else {
+				initializeMap(regions);
+			}
+			
 			populateFilters(regions);
 			// Wire filters
 			const bind = (id: string, evt: string) => {
