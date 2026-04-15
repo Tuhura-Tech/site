@@ -100,7 +100,7 @@ const donationImpact = [
 				<h1 class="mb-6 text-4xl leading-tight font-bold md:text-5xl">
 					<span class="gradient-text">Support Us</span>
 				</h1>
-				<p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
+				<p class="text-xl leading-relaxed text-gray-600 dark:text-slate-400 md:text-2xl">
 					Join our mission to empower the next generation of rangatahi through technology. Every
 					contribution, whether time, resources, or kōha, makes a meaningful difference in breaking
 					down barriers to technology education.
@@ -120,11 +120,11 @@ const donationImpact = [
 	</section>
 
 	<!-- Donation Impact -->
-	<section class="bg-white py-10">
+	<section class="bg-white py-10 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto mb-16 max-w-4xl text-center">
 				<h2 class="mb-6 text-3xl font-bold md:text-4xl">Your Kōha Creates Real Impact</h2>
-				<p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
+				<p class="text-xl leading-relaxed text-gray-600 dark:text-slate-400 md:text-2xl">
 					We offer everything for free to ensure no barriers, but it does cost us to run. See
 					exactly how your donation supports rangatahi.
 				</p>
@@ -134,12 +134,12 @@ const donationImpact = [
 				{
 					donationImpact.map((item, index) => (
 						<div
-							class="rounded-2xl bg-tuhura-gray p-8 text-center"
+							class="rounded-2xl bg-tuhura-gray p-8 text-center dark:bg-slate-800"
 							style={`animation-delay: ${index * 0.1}s`}
 						>
 							<div class="mb-4 text-5xl font-bold text-tuhura-green">{item.amount}</div>
-							<h3 class="mb-4 text-xl font-semibold text-gray-900">{item.impact}</h3>
-							<p class="leading-relaxed text-gray-600">{item.description}</p>
+							<h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">{item.impact}</h3>
+							<p class="leading-relaxed text-gray-600 dark:text-slate-400">{item.description}</p>
 						</div>
 					))
 				}
@@ -154,16 +154,16 @@ const donationImpact = [
 				>
 					Make a Donation Today
 				</a>
-				<p class="mt-4 text-lg text-gray-600">All donations are tax-deductible</p>
+				<p class="mt-4 text-lg text-gray-600 dark:text-slate-400">All donations are tax-deductible</p>
 			</div>
 		</div>
 	</section>
 	<Partners />
-	<section class="bg-gray-50 py-20">
+	<section class="bg-gray-50 py-20 dark:bg-slate-900">
 		<div class="container-custom">
 			<div class="mx-auto mb-16 max-w-4xl text-center">
 				<h2 class="mb-6 text-3xl font-bold md:text-4xl">Ways to Support</h2>
-				<p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
+				<p class="text-xl leading-relaxed text-gray-600 dark:text-slate-400 md:text-2xl">
 					Choose the way that works best for you to help create opportunities for rangatahi.
 				</p>
 			</div>
@@ -182,17 +182,17 @@ const donationImpact = [
 	</section>
 
 	<!-- Detailed Volunteer Information -->
-	<section class="bg-tuhura-gray py-20">
+	<section class="bg-tuhura-gray py-20 dark:bg-slate-900">
 		<div class="container-custom">
 			<div class="mx-auto mb-12 max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Volunteer with Us</h2>
-				<p class="mt-4 text-xl text-gray-600">
+				<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">
 					Your time and expertise make an incredible difference to rangatahi exploring technology.
 				</p>
 			</div>
 
 			<div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2">
-				<div class="rounded-xl bg-white p-8 shadow-sm">
+				<div class="rounded-xl bg-white p-8 shadow-sm dark:bg-slate-800">
 					<h3 class="mb-4 text-2xl font-bold text-tuhura-green">What Volunteers Do</h3>
 					<Checklist
 						items={[
@@ -211,7 +211,7 @@ const donationImpact = [
 					/>
 				</div>
 
-				<div class="rounded-xl bg-white p-8 shadow-sm">
+				<div class="rounded-xl bg-white p-8 shadow-sm dark:bg-slate-800">
 					<h3 class="mb-4 text-2xl font-bold text-tuhura-green">Getting Started</h3>
 					<div class="space-y-6">
 						<div class="flex items-start">
@@ -222,7 +222,7 @@ const donationImpact = [
 							</div>
 							<div>
 								<p class="font-medium">Contact Us</p>
-								<p class="text-sm text-gray-600">
+								<p class="text-sm text-gray-600 dark:text-slate-400">
 									Reach out to discuss your interests and availability
 								</p>
 							</div>
@@ -235,7 +235,7 @@ const donationImpact = [
 							</div>
 							<div>
 								<p class="font-medium">Police Vetting</p>
-								<p class="text-sm text-gray-600">
+								<p class="text-sm text-gray-600 dark:text-slate-400">
 									Complete a police vetting check (we'll help you with this process)
 								</p>
 							</div>
@@ -248,14 +248,14 @@ const donationImpact = [
 							</div>
 							<div>
 								<p class="font-medium">Start Supporting</p>
-								<p class="text-sm text-gray-600">
+								<p class="text-sm text-gray-600 dark:text-slate-400">
 									Join sessions and start making a difference in rangatahi lives
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="mt-8 rounded-lg bg-tuhura-gray p-4">
-						<p class="text-sm text-gray-700">
+					<div class="mt-8 rounded-lg bg-tuhura-gray p-4 dark:bg-slate-700">
+						<p class="text-sm text-gray-700 dark:text-slate-300">
 							<strong>Important:</strong> Our trained kaiako run all sessions - volunteers support and
 							enhance the experience by bringing real-world industry knowledge and additional mentoring
 							opportunities.
@@ -267,11 +267,11 @@ const donationImpact = [
 	</section>
 
 	<!-- Equipment Donations -->
-	<section class="bg-white py-20">
+	<section class="bg-white py-20 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto mb-12 max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Equipment Donations</h2>
-				<p class="mt-4 text-xl text-gray-600">
+				<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">
 					We run entirely on donated equipment! Many whānau don't have laptops, so we provide
 					everything needed for learning.
 				</p>
@@ -281,11 +281,11 @@ const donationImpact = [
 				<Card class="bg-gray-50 p-6">
 					<Icon name="heroicons:computer-desktop" class="mb-4 h-12 w-12 text-tuhura-green" />
 					<h3 class="mb-3 text-xl font-bold">Laptops & Hardware</h3>
-					<p class="mb-4 text-gray-700">
+					<p class="mb-4 text-gray-700 dark:text-slate-300">
 						Donated laptops directly enable us to run more sessions and support more rangatahi.
 						Without them, we simply can't operate.
 					</p>
-					<ul class="space-y-2 text-sm text-gray-600">
+					<ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
 						<li>• Laptops suitable for programming (minimum 8GB RAM preferred)</li>
 						<li>• Tablets for younger rangatahi learning activities</li>
 						<li>• Monitors, keyboards, and peripherals</li>
@@ -295,11 +295,11 @@ const donationImpact = [
 				<Card class="bg-gray-50 p-6">
 					<Icon name="heroicons:cpu-chip" class="mb-4 h-12 w-12 text-tuhura-green" />
 					<h3 class="mb-3 text-xl font-bold">Electronics & Components</h3>
-					<p class="mb-4 text-gray-700">
+					<p class="mb-4 text-gray-700 dark:text-slate-300">
 						Electronics give us amazing things to explore with rangatahi, encouraging curiosity and
 						learning.
 					</p>
-					<ul class="space-y-2 text-sm text-gray-600">
+					<ul class="space-y-2 text-sm text-gray-600 dark:text-slate-400">
 						<li>• Arduino kits, Raspberry Pi computers</li>
 						<li>• Robotics components and sensors</li>
 						<li>• 3D printers and maker equipment</li>
@@ -314,11 +314,11 @@ const donationImpact = [
 	</section>
 
 	<!-- Partnership Section -->
-	<section class="bg-white py-10">
+	<section class="bg-white py-10 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto mb-12 max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Strategic Partnerships</h2>
-				<p class="mt-4 text-xl text-gray-600">
+				<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">
 					Partner with us to collaboratively solve technology education challenges. We're already
 					part of the Wellington Regional Economic Development Plan.
 				</p>
@@ -337,27 +337,27 @@ const donationImpact = [
 	</section>
 
 	<!-- FAQ Section -->
-	<section class="bg-white py-20">
+	<section class="bg-white py-20 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto mb-16 max-w-4xl text-center">
 				<h2 class="mb-6 text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
-				<p class="text-xl leading-relaxed text-gray-600 md:text-2xl">
+				<p class="text-xl leading-relaxed text-gray-600 dark:text-slate-400 md:text-2xl">
 					Have questions about supporting us? Here are some common questions from our community.
 				</p>
 			</div>
 
 			<div class="mx-auto max-w-4xl space-y-6">
 				<Card class="bg-gray-50 p-8">
-					<h3 class="mb-4 text-xl font-semibold text-gray-900">How are donations used?</h3>
-					<p class="text-lg leading-relaxed text-gray-700">
+					<h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">How are donations used?</h3>
+					<p class="text-lg leading-relaxed text-gray-700 dark:text-slate-300">
 						Every kōha goes directly towards keeping our sessions free for rangatahi. We provide
 						quarterly impact reports to all donors.
 					</p>
 				</Card>
 
 				<Card class="bg-gray-50 p-8">
-					<h3 class="mb-4 text-xl font-semibold text-gray-900">What's required to volunteer?</h3>
-					<p class="text-lg leading-relaxed text-gray-700">
+					<h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">What's required to volunteer?</h3>
+					<p class="text-lg leading-relaxed text-gray-700 dark:text-slate-300">
 						Police vetting check required (we help with this process). You don't need teaching
 						experience - our trained kaiako run the sessions, and you support by sharing your
 						industry knowledge.
@@ -365,8 +365,8 @@ const donationImpact = [
 				</Card>
 
 				<Card class="bg-gray-50 p-8">
-					<h3 class="mb-4 text-xl font-semibold text-gray-900">What equipment do you need most?</h3>
-					<p class="text-lg leading-relaxed text-gray-700">
+					<h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">What equipment do you need most?</h3>
+					<p class="text-lg leading-relaxed text-gray-700 dark:text-slate-300">
 						Laptops are our biggest need - many whānau don't have them. We also value electronics
 						components like Arduino kits and sensors that give us amazing things to explore with
 						rangatahi.
@@ -374,8 +374,8 @@ const donationImpact = [
 				</Card>
 
 				<Card class="bg-gray-50 p-8">
-					<h3 class="mb-4 text-xl font-semibold text-gray-900">How does partnership work?</h3>
-					<p class="text-lg leading-relaxed text-gray-700">
+					<h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">How does partnership work?</h3>
+					<p class="text-lg leading-relaxed text-gray-700 dark:text-slate-300">
 						Partnership isn't just financial - it's about collaboration to solve technology
 						education challenges. We're recognized in the Wellington Regional Economic Development
 						Plan as the solution to growing the region's tech workforce.

@@ -25,12 +25,14 @@ const faviconImg = await getImage({
 	width: 32,
 	height: 32,
 });
+
 let shownTitle: string;
 if (title !== siteName) {
 	shownTitle = `${title} | ${siteName}`;
 } else {
 	shownTitle = siteName;
 }
+
 const canonicalUrl = Astro.url?.href || 'https://tuhuratech.org.nz';
 const ogImage = await getImage({ src: heroOg, width: 1200, height: 630, format: 'jpg' });
 const ogImageUrl = new URL(ogImage.src, canonicalUrl).toString();
@@ -46,6 +48,20 @@ const ogImageUrl = new URL(ogImage.src, canonicalUrl).toString();
 		<link rel="canonical" href={canonicalUrl} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{shownTitle}</title>
+
+		<script is:inline>
+			(() => {
+				const storageKey = 'theme';
+				const root = document.documentElement;
+
+				const savedTheme = localStorage.getItem(storageKey);
+				const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+				const theme = savedTheme ?? (systemPrefersDark ? 'dark' : 'light');
+
+				root.classList.toggle('dark', theme === 'dark');
+			})();
+		</script>
 
 		<!-- Structured data -->
 		<script is:inline type="application/ld+json">
@@ -76,10 +92,10 @@ const ogImageUrl = new URL(ogImage.src, canonicalUrl).toString();
 			data-domain="tuhuratech.org.nz"
 			src="https://plausible.tuhuratech.org.nz/js/script.js"></script>
 	</head>
-	<body class="flex min-h-screen flex-col">
+	<body class="flex min-h-screen flex-col bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
 		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<Header />
-		<main id="main-content" class="flex-grow">
+		<main id="main-content" class="flex-grow bg-transparent dark:bg-slate-950">
 			<slot />
 		</main>
 		<Partners />

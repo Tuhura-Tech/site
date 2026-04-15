@@ -26,7 +26,7 @@ const steps = [
 ];
 ---
 
-<section class="relative overflow-hidden bg-tuhura-gray py-20">
+<section class="relative overflow-hidden bg-tuhura-gray py-20 dark:bg-slate-900">
 	<!-- Subtle background pattern -->
 	<div class="absolute inset-0 opacity-5">
 		<div class="absolute inset-0 bg-repeat"></div>
@@ -35,14 +35,14 @@ const steps = [
 	<div class="container-custom relative">
 		<div class="mx-auto max-w-3xl text-center">
 			<h2 class="text-3xl font-bold md:text-4xl">How to Get Started</h2>
-			<p class="mt-4 text-xl text-gray-600">Here's how to get involved with Tūhura Tech.</p>
+			<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">Here's how to get involved with Tūhura Tech.</p>
 		</div>
 
 		<div class="relative mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
 			{
 				steps.map((step, index) => (
 					<a
-						class={`rounded-2xl border border-gray-100 bg-white p-8 shadow-lg delay-${index + 2} group block transition-all hover:-translate-y-3 hover:shadow-2xl`}
+						class={`rounded-2xl border border-gray-100 bg-white p-8 shadow-lg delay-${index + 2} group block transition-all hover:-translate-y-3 hover:shadow-2xl dark:border-slate-700 dark:bg-slate-800`}
 						href={step.link}
 						target={step.link.startsWith('http') ? '_blank' : undefined}
 						rel={step.link.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -58,7 +58,7 @@ const steps = [
 						<h3 class="mb-4 text-2xl font-bold transition-colors group-hover:text-tuhura-green">
 							{step.title}
 						</h3>
-						<p class="mb-4 leading-relaxed text-gray-600">{step.description}</p>
+						<p class="mb-4 leading-relaxed text-gray-600 dark:text-slate-400">{step.description}</p>
 						<div class="font-medium text-tuhura-green group-hover:underline">Get Started →</div>
 					</a>
 				))

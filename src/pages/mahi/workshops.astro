@@ -93,19 +93,19 @@ const workshopTopics = [
 >
 	<!-- Visual Hero Section -->
 	<section
-		class="bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 pt-20 pb-16 md:pt-28 md:pb-24"
+		class="bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 pt-20 pb-16 md:pt-28 md:pb-24 dark:bg-slate-950"
 	>
 		<div class="container-custom">
 			<div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
 				<div class="text-center lg:text-left">
 					<h1 class="text-4xl leading-tight font-bold md:text-5xl">Workshops</h1>
-					<p class="mt-6 text-xl text-gray-600">
+					<p class="mt-6 text-xl text-gray-600 dark:text-slate-400">
 						One-off workshops focused on specific technology topics for rangatahi - from
 						introductory sessions that spark curiosity to deep dives for those ready to explore
 						further.
 					</p>
-					<div class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
-						<p class="text-lg text-gray-700">
+					<div class="mt-8 rounded-xl border border-gray-100 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+						<p class="text-lg text-gray-700 dark:text-slate-300">
 							<strong>Standalone experiences:</strong> Each workshop is a complete learning experience
 							focused on one specific topic or skill.
 						</p>
@@ -203,12 +203,12 @@ const workshopTopics = [
 											<p class="font-medium text-tuhura-green">{format.duration}</p>
 										</div>
 									</div>
-									<p class="mb-6 text-gray-700">{format.description}</p>
+									<p class="mb-6 text-gray-700 dark:text-slate-300">{format.description}</p>
 									<div>
-										<h4 class="mb-3 font-semibold text-gray-900">What's included:</h4>
+										<h4 class="mb-3 font-semibold text-gray-900 dark:text-white">What's included:</h4>
 										<ul class="space-y-2">
 											{format.examples.map((example) => (
-												<li class="flex items-start text-gray-600">
+												<li class="flex items-start text-gray-600 dark:text-slate-400">
 													<Icon
 														name="heroicons:sparkles"
 														class="mt-0.5 mr-2 h-4 w-4 flex-shrink-0 text-tuhura-green"
@@ -227,7 +227,7 @@ const workshopTopics = [
 				<!-- Workshop Topics -->
 				<div class="mx-auto mb-20 max-w-6xl">
 					<h2 class="mb-12 text-center text-3xl font-bold">Topics We Explore</h2>
-					<p class="mx-auto mb-12 max-w-3xl text-center text-xl text-gray-600">
+					<p class="mx-auto mb-12 max-w-3xl text-center text-xl text-gray-600 dark:text-slate-400">
 						Each workshop focuses on one specific topic, offering either an introduction for
 						newcomers or a deep dive for those ready to explore further.
 					</p>
@@ -243,7 +243,7 @@ const workshopTopics = [
 													name="heroicons:check-circle"
 													class="mt-0.5 mr-3 h-5 w-5 flex-shrink-0 text-tuhura-green"
 												/>
-												<span class="text-gray-700">{topic}</span>
+												<span class="text-gray-700 dark:text-slate-300">{topic}</span>
 											</li>
 										))}
 									</ul>
@@ -254,11 +254,11 @@ const workshopTopics = [
 				</div>
 
 				<!-- Visual Impact Section -->
-				<section class="mb-20 rounded-3xl bg-tuhura-gray py-20">
+				<section class="mb-20 rounded-3xl bg-tuhura-gray py-20 dark:bg-slate-900">
 					<div class="mx-auto max-w-6xl">
 						<div class="mb-16 text-center">
 							<h2 class="text-3xl font-bold md:text-4xl">Workshop Experience</h2>
-							<p class="mt-4 text-xl text-gray-600">
+							<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">
 								Focused, hands-on learning sessions designed to spark curiosity and build confidence
 								in specific technology topics
 							</p>
@@ -267,7 +267,7 @@ const workshopTopics = [
 						<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 							<div class="group relative">
 								<div
-									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl dark:bg-slate-800"
 								>
 									<div class="relative mb-6 overflow-hidden rounded-xl">
 										<Image
@@ -279,7 +279,7 @@ const workshopTopics = [
 										/>
 									</div>
 									<h3 class="mb-3 text-xl font-bold">Expert-Led Sessions</h3>
-									<p class="text-gray-600">
+									<p class="text-gray-600 dark:text-slate-400">
 										Professional educators and industry volunteers guide hands-on learning
 										experiences tailored to participant interests.
 									</p>
@@ -292,7 +292,7 @@ const workshopTopics = [
 
 							<div class="group relative">
 								<div
-									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl dark:bg-slate-800"
 								>
 									<div class="relative mb-6 overflow-hidden rounded-xl">
 										<Image
@@ -304,7 +304,7 @@ const workshopTopics = [
 										/>
 									</div>
 									<h3 class="mb-3 text-xl font-bold">Complete Learning Experience</h3>
-									<p class="text-gray-600">
+									<p class="text-gray-600 dark:text-slate-400">
 										Every workshop is a complete standalone experience - participants go from
 										curious to confident in one focused session.
 									</p>
@@ -317,7 +317,7 @@ const workshopTopics = [
 
 							<div class="group relative">
 								<div
-									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl"
+									class="rounded-2xl bg-white p-6 shadow-lg transition-shadow group-hover:shadow-xl dark:bg-slate-800"
 								>
 									<div class="relative mb-6 overflow-hidden rounded-xl">
 										<Image
@@ -329,7 +329,7 @@ const workshopTopics = [
 										/>
 									</div>
 									<h3 class="mb-3 text-xl font-bold">Topic-Focused Learning</h3>
-									<p class="text-gray-600">
+									<p class="text-gray-600 dark:text-slate-400">
 										Each workshop focuses intensively on one specific technology topic, offering
 										either an introduction or advanced exploration.
 									</p>
@@ -343,21 +343,21 @@ const workshopTopics = [
 
 						<div class="mt-12 text-center">
 							<div
-								class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm"
+								class="inline-flex items-center space-x-8 rounded-full bg-white px-8 py-4 shadow-sm dark:bg-slate-800"
 							>
 								<div class="text-center">
 									<div class="text-2xl font-bold text-tuhura-green">2-8</div>
-									<div class="text-sm text-gray-600">Hours per workshop</div>
+									<div class="text-sm text-gray-600 dark:text-slate-400">Hours per workshop</div>
 								</div>
-								<div class="h-8 w-px bg-gray-200"></div>
+								<div class="h-8 w-px bg-gray-200 dark:bg-slate-600"></div>
 								<div class="text-center">
 									<div class="text-2xl font-bold text-tuhura-green">8-15</div>
-									<div class="text-sm text-gray-600">Participants</div>
+									<div class="text-sm text-gray-600 dark:text-slate-400">Participants</div>
 								</div>
-								<div class="h-8 w-px bg-gray-200"></div>
+								<div class="h-8 w-px bg-gray-200 dark:bg-slate-600"></div>
 								<div class="text-center">
 									<div class="text-2xl font-bold text-tuhura-green">100%</div>
-									<div class="text-sm text-gray-600">Free</div>
+									<div class="text-sm text-gray-600 dark:text-slate-400">Free</div>
 								</div>
 							</div>
 						</div>
@@ -366,7 +366,7 @@ const workshopTopics = [
 
 				<!-- How Workshops Work -->
 				<div
-					class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm"
+					class="mx-auto mb-16 max-w-4xl rounded-xl border border-gray-100 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800"
 				>
 					<h2 class="mb-8 text-center text-3xl font-bold">How Workshops Work</h2>
 					<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -392,9 +392,9 @@ const workshopTopics = [
 						</div>
 					</div>
 
-					<div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center">
+					<div class="mt-8 rounded-lg bg-tuhura-gray p-6 text-center dark:bg-slate-700">
 						<h3 class="mb-3 text-xl font-bold">Stay Updated on Workshops</h3>
-						<p class="mb-4 text-gray-700">
+						<p class="mb-4 text-gray-700 dark:text-slate-300">
 							Workshops are announced through our newsletter and community networks. Each workshop
 							is a complete learning experience focused on one specific topic.
 						</p>

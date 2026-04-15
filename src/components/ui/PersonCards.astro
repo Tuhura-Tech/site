@@ -33,7 +33,7 @@ const gridCols = {
 			title && (
 				<div class="mx-auto mb-16 max-w-3xl text-center">
 					<h2 class="text-3xl font-bold md:text-4xl">{title}</h2>
-					{description && <p class="mt-4 text-xl text-gray-600">{description}</p>}
+					{description && <p class="mt-4 text-xl text-gray-600 dark:text-slate-400">{description}</p>}
 				</div>
 			)
 		}
@@ -51,7 +51,7 @@ const gridCols = {
 						</div>
 						<h3 class="text-xl font-semibold">{person.name}</h3>
 						<p class="font-medium text-tuhura-green">{person.role}</p>
-						<p class="mt-3 text-sm text-gray-600">{person.bio}</p>
+						<p class="mt-3 text-sm text-gray-600 dark:text-slate-400">{person.bio}</p>
 						<div class="mt-4 flex justify-center space-x-3">
 							{Object.entries(person.social).map(([, url]) => (
 								<a
