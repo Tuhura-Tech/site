@@ -76,7 +76,6 @@ body {
 	}
 
 	@keyframes gradientX {
-
 		0%,
 		100% {
 			background-position: 0% 50%;
@@ -88,7 +87,6 @@ body {
 	}
 
 	@keyframes pulse {
-
 		0%,
 		100% {
 			opacity: 1;
@@ -100,7 +98,6 @@ body {
 	}
 
 	@keyframes bounce {
-
 		0%,
 		100% {
 			transform: translateY(-25%);
@@ -123,7 +120,6 @@ body {
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
 	*,
 	::after,
 	::before,
