@@ -92,7 +92,8 @@ const navItems: NavItem[] = [
 											href={subItem.href}
 											class={`block px-4 py-3 transition-colors hover:bg-tuhura-green/5 hover:text-tuhura-green dark:hover:bg-tuhura-green/10 ${currentPath === (subItem.href ?? '').replace(/\/$/, '') ? 'font-medium text-tuhura-green' : 'text-gray-700 dark:text-slate-300'}`}
 											aria-current={
-												currentPath === (subItem.href ?? '').replace(/\/$/, '') ? 'page' : undefined }
+												currentPath === (subItem.href ?? '').replace(/\/$/, '') ? 'page' : undefined
+											}
 											target={'external' in subItem ? '_blank' : undefined}
 											rel={'external' in subItem ? 'noopener noreferrer' : undefined}
 										>
