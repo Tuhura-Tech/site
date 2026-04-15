@@ -52,7 +52,9 @@ const paddingClass = compact ? 'py-12 md:py-16' : 'py-16 md:py-24';
 					<Fragment set:html={title} />
 				</h1>
 
-				<p class={`text-gray-600 dark:text-slate-400 mb-8 leading-relaxed ${compact ? 'text-lg' : 'text-xl'}`}>
+				<p
+					class={`text-gray-600 dark:text-slate-400 mb-8 leading-relaxed ${compact ? 'text-lg' : 'text-xl'}`}
+				>
 					{description}
 				</p>
 

@@ -33,7 +33,9 @@ const gridCols = {
 			title && (
 				<div class="mx-auto mb-16 max-w-3xl text-center">
 					<h2 class="text-3xl font-bold md:text-4xl">{title}</h2>
-					{description && <p class="mt-4 text-xl text-gray-600 dark:text-slate-400">{description}</p>}
+					{description && (
+						<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">{description}</p>
+					)}
 				</div>
 			)
 		}

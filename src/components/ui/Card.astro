@@ -8,7 +8,8 @@ interface Props {
 
 const { class: className = '', style = '', variant = 'default', padding = 'md' } = Astro.props;
 
-const baseClasses = 'bg-white rounded-xl border border-gray-100 dark:bg-slate-800 dark:border-slate-700';
+const baseClasses =
+	'bg-white rounded-xl border border-gray-100 dark:bg-slate-800 dark:border-slate-700';
 const variantClasses = {
 	default: 'shadow-sm',
 	hover: 'shadow-lg hover:shadow-xl transition-shadow',
