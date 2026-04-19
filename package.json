@@ -27,7 +27,7 @@
 		"@astrojs/check": "0.9.8",
 		"@biomejs/biome": "2.4.11",
 		"@tailwindcss/vite": "4.2.2",
-		"prettier": "3.8.1",
+		"prettier": "3.8.3",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.7.2",
 		"sharp": "0.34.5",
