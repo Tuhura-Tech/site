@@ -9,7 +9,7 @@
 			data-campaign-path="tuhura-tech"
 			data-profile=""
 			data-width="100%"
-			data-height="700"
+			data-height="430"
 		>
 			<script is:inline src="https://cdn.raisely.com/v3/public/embed.js"></script>
 		</div>
@@ -24,8 +24,8 @@
 		function computePosition() {
 			if (!dlg || !trigger) return;
 			var r = trigger.getBoundingClientRect();
-			var maxWidth = 576; // 36rem
-			var minWidth = 320;
+			var maxWidth = 380;
+			var minWidth = 300;
 			var vw = window.innerWidth;
 			var dlgW = Math.min(Math.max(minWidth, Math.floor(vw * 0.95)), maxWidth);
 			var left;
@@ -122,6 +122,10 @@
 	dialog#donate-popover {
 		border: none;
 		outline: none;
+		padding: 0;
+		overflow: hidden;
+		border-radius: 1rem;
+		max-height: 80vh;
 	}
 	@media (prefers-reduced-motion: no-preference) {
 		dialog#donate-popover {
@@ -135,5 +139,39 @@
 			opacity: 1;
 			transform: translateY(0) scale(1);
 		}
+	}
+</style>
+
+<style is:global>
+	html.dark dialog#donate-popover {
+		background: #1e293b;
+		border: 1px solid #334155;
+		border-radius: 1rem;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+	}
+
+	html.dark #raisely-root {
+		color-scheme: dark;
+		background: #1e293b;
+	}
+
+	html.dark .raisely-donate {
+		background: #1e293b;
+	}
+
+	.raisely-donate {
+		overflow: hidden;
+		max-height: 80vh;
+	}
+
+	.raisely-donate iframe {
+		display: block !important;
+		max-height: 530px !important;
+		height: 530px !important;
+	}
+
+	html.dark .raisely-donate iframe,
+	html.dark #raisely-root iframe {
+		filter: invert(1) hue-rotate(180deg);
 	}
 </style>

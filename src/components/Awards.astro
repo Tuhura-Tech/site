@@ -33,27 +33,31 @@ const awards = [
 ];
 ---
 
-<section class="py-12">
+<section class="py-12 dark:bg-slate-950">
 	<div class="container-custom">
 		<div class="mb-12 text-center">
-			<h1 class="mb-6 text-3xl font-bold tracking-wider text-gray-900">Awards</h1>
+			<h1 class="mb-6 text-3xl font-bold tracking-wider text-gray-900 dark:text-white">Awards</h1>
 		</div>
 
 		<div class="mx-auto grid grid-cols-1 gap-6 sm:grid-cols-4 lg:grid-cols-4">
 			{
 				awards.map((award) => (
 					<div class="group">
-						<div class="flex h-full flex-col items-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md">
-							<h2 class="mb-2 text-center text-2xl font-bold text-gray-900">{award.type}</h2>
+						<div class="flex h-full flex-col items-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700">
+							<h2 class="mb-2 text-center text-2xl font-bold text-gray-900 dark:text-white">
+								{award.type}
+							</h2>
 							<Image
 								src={award.logo}
 								alt={`${award.name} logo`}
 								class="mx-auto mb-4 h-35 w-auto object-contain filter transition-all duration-300"
 							/>
-							<h3 class="mb-2 h-15 text-center text-xl font-bold text-gray-600">
+							<h3 class="mb-2 h-15 text-center text-xl font-bold text-gray-600 dark:text-slate-300">
 								{award.category}
 							</h3>
-							<h4 class="mb-2 text-sm font-medium text-gray-500">{award.name}</h4>
+							<h4 class="mb-2 text-sm font-medium text-gray-500 dark:text-slate-400">
+								{award.name}
+							</h4>
 						</div>
 					</div>
 				))

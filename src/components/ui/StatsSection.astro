@@ -16,13 +16,13 @@ interface Props {
 const { stats, title, description } = Astro.props;
 ---
 
-<section class="mt-10 rounded-2xl bg-tuhura-gray p-8 md:p-12">
+<section class="mt-10 rounded-2xl bg-tuhura-gray p-8 md:p-12 dark:bg-slate-800">
 	<div class="container-custom">
 		{
 			title && (
 				<div class="mx-auto mb-16 max-w-3xl text-center">
 					<h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
-					{description && <p class="text-xl text-gray-600">{description}</p>}
+					{description && <p class="text-xl text-gray-600 dark:text-slate-400">{description}</p>}
 				</div>
 			)
 		}
@@ -33,7 +33,7 @@ const { stats, title, description } = Astro.props;
 					stats.map((stat) => (
 						<div>
 							<div class="mb-2 text-4xl font-bold text-tuhura-green md:text-5xl">{stat.value}</div>
-							<p class="text-lg text-gray-600">{stat.description}</p>
+							<p class="text-lg text-gray-600 dark:text-slate-400">{stat.description}</p>
 						</div>
 					))
 				}
@@ -48,7 +48,7 @@ const { stats, title, description } = Astro.props;
           {impactStats.map((stat) => (
             <div class="text-center">
               <div class="text-4xl md:text-5xl font-bold text-tuhura-green mb-2">{stat.number}</div>
-              <div class="text-gray-600 text-lg">{stat.label}</div>
+              <div class="text-gray-600 dark:text-slate-400 text-lg">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -82,13 +82,6 @@ const collabs: Collab[] = [
 			'International robotics challenge fostering STEM education through competitive robotics',
 	},
 	{
-		logo: partnerMOI,
-		partnerName: 'Ministry of Inspiration',
-		eventName: 'Aquabots Challenge',
-		description:
-			'Underwater robotics competition combining engineering with environmental awareness',
-	},
-	{
 		partnerName: 'NZ Games Festival',
 		eventName: 'Student Game Jam',
 		description:
@@ -128,24 +121,24 @@ const upcomingList: UpcomingItem[] = [
 		description="Showcase skills, connect with peers, and take on real-world challenges."
 		image={robocupImage}
 		imageAlt="RoboCup competition with student participants"
-		backgroundClass="bg-white"
+		backgroundClass="bg-white dark:bg-slate-950"
 		ctaText="Upcoming Events"
 		ctaHref="#upcoming"
 	/>
 
 	<!-- Upcoming Events -->
-	<section id="upcoming" class="scroll-mt-24 bg-tuhura-gray py-16">
+	<section id="upcoming" class="scroll-mt-24 bg-tuhura-gray py-16 dark:bg-slate-900">
 		<div class="container-custom">
 			<div class="mx-auto mb-10 max-w-3xl text-center">
 				<h2 class="mb-3 text-3xl font-bold md:text-4xl">Upcoming Events</h2>
-				<p class="text-lg leading-relaxed text-gray-600">
+				<p class="text-lg leading-relaxed text-gray-600 dark:text-slate-400">
 					Join an event near you. All events are free for our session participants.
 				</p>
 			</div>
 
 			{
 				upcomingList.length === 0 ? (
-					<div class="mx-auto max-w-3xl rounded-xl border border-gray-100 bg-white p-6 text-center text-gray-700">
+					<div class="mx-auto max-w-3xl rounded-xl border border-gray-100 bg-white p-6 text-center text-gray-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
 						<p>
 							No upcoming events right now. Check back soon or{' '}
 							<a href="/contact" class="font-medium text-tuhura-green hover:underline">
@@ -165,7 +158,7 @@ const upcomingList: UpcomingItem[] = [
 							<Card variant="hover" padding="lg">
 								<div class="mb-6 flex items-start">
 									{item.logo ? (
-										<div class="mr-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2 shadow-sm md:h-16 md:w-16">
+										<div class="mr-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2 shadow-sm md:h-16 md:w-16 dark:border-slate-700 dark:bg-slate-700">
 											<Image
 												src={item.logo}
 												alt={`${item.title} logo`}
@@ -208,12 +201,12 @@ const upcomingList: UpcomingItem[] = [
 	<!-- Event Types -->
 	<section
 		id="types"
-		class="scroll-mt-24 bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 py-20"
+		class="scroll-mt-24 bg-gradient-to-br from-tuhura-green/5 to-tuhura-blue/5 py-20 dark:bg-slate-900"
 	>
 		<div class="container-custom">
 			<div class="mx-auto mb-12 max-w-3xl text-center">
 				<h2 class="mb-4 text-3xl font-bold md:text-4xl">Event Types</h2>
-				<p class="text-lg leading-relaxed text-gray-600">
+				<p class="text-lg leading-relaxed text-gray-600 dark:text-slate-400">
 					The kinds of events we run with communities and partners.
 				</p>
 			</div>
@@ -226,7 +219,7 @@ const upcomingList: UpcomingItem[] = [
 									<Icon name={event.icon} class="h-8 w-8 text-white" />
 								</div>
 								<div>
-									<h3 class="text-2xl font-bold text-gray-900">{event.title}</h3>
+									<h3 class="text-2xl font-bold text-gray-900 dark:text-white">{event.title}</h3>
 									<div class="mt-2 flex gap-4 text-xs text-tuhura-green">
 										<span class="font-medium">
 											<Icon name="heroicons:calendar" class="mr-1 inline h-4 w-4" />
@@ -239,7 +232,9 @@ const upcomingList: UpcomingItem[] = [
 									</div>
 								</div>
 							</div>
-							<p class="text-base leading-relaxed text-gray-700">{event.description}</p>
+							<p class="text-base leading-relaxed text-gray-700 dark:text-slate-300">
+								{event.description}
+							</p>
 						</Card>
 					))
 				}
@@ -248,11 +243,11 @@ const upcomingList: UpcomingItem[] = [
 	</section>
 
 	<!-- Partnership Collaborations -->
-	<section id="partners" class="scroll-mt-24 bg-white py-20">
+	<section id="partners" class="scroll-mt-24 bg-white py-20 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto mb-12 max-w-3xl text-center">
 				<h2 class="mb-4 text-3xl font-bold md:text-4xl">Community Partnership Events</h2>
-				<p class="text-lg leading-relaxed text-gray-600">
+				<p class="text-lg leading-relaxed text-gray-600 dark:text-slate-400">
 					Delivered with national and community partners.
 				</p>
 			</div>
@@ -262,7 +257,7 @@ const upcomingList: UpcomingItem[] = [
 						<Card variant="hover" padding="lg">
 							<div class="mb-6 flex items-start">
 								{collab.logo ? (
-									<div class="mr-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2 shadow-sm md:h-16 md:w-16">
+									<div class="mr-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-gray-100 bg-white p-2 shadow-sm md:h-16 md:w-16 dark:border-slate-700 dark:bg-slate-700">
 										<Image
 											src={collab.logo}
 											alt={`${collab.partnerName} logo`}
@@ -275,11 +270,13 @@ const upcomingList: UpcomingItem[] = [
 									</div>
 								)}
 								<div>
-									<h3 class="text-xl font-bold text-gray-900">{collab.eventName}</h3>
+									<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+										{collab.eventName}
+									</h3>
 									<p class="text-sm font-medium text-tuhura-green">Partner: {collab.partnerName}</p>
 								</div>
 							</div>
-							<p class="text-gray-700">{collab.description}</p>
+							<p class="text-gray-700 dark:text-slate-300">{collab.description}</p>
 						</Card>
 					))
 				}
