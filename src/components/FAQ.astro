@@ -59,7 +59,7 @@ const faqs = [
 ];
 ---
 
-<section class="relative overflow-hidden bg-tuhura-gray py-20">
+<section class="relative overflow-hidden bg-tuhura-gray py-20 dark:bg-slate-900">
 	<!-- Subtle background pattern -->
 	<div class="absolute inset-0 opacity-5">
 		<div class="absolute inset-0 bg-repeat"></div>
@@ -68,7 +68,9 @@ const faqs = [
 	<div class="container-custom relative">
 		<div class="mx-auto max-w-3xl text-center">
 			<h2 class="text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
-			<p class="mt-4 text-xl text-gray-600">Everything you need to know about us.</p>
+			<p class="mt-4 text-xl text-gray-600 dark:text-slate-400">
+				Everything you need to know about us.
+			</p>
 		</div>
 
 		<div class="mx-auto mt-12 max-w-6xl">
@@ -76,18 +78,20 @@ const faqs = [
 				{
 					faqs.map((faq, index) => (
 						<details
-							class="group rounded-xl border border-gray-100 bg-white p-4 shadow-sm open:shadow-md"
+							class="group rounded-xl border border-gray-100 bg-white p-4 shadow-sm open:shadow-md dark:border-slate-700 dark:bg-slate-800"
 							style={`animation-delay: ${index * 0.1}s`}
 						>
-							<summary class="flex cursor-pointer list-none items-start justify-between rounded-lg p-4 transition-colors outline-none hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-tuhura-green">
+							<summary class="flex cursor-pointer list-none items-start justify-between rounded-lg p-4 transition-colors outline-none hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-tuhura-green dark:hover:bg-slate-700">
 								<div class="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-tuhura-green/10">
 									<Icon name={faq.icon} class="h-6 w-6 text-tuhura-green" />
 								</div>
 								<div class="flex-1 text-left">
-									<h3 class="text-lg leading-tight font-semibold text-gray-900">{faq.question}</h3>
+									<h3 class="text-lg leading-tight font-semibold text-gray-900 dark:text-white">
+										{faq.question}
+									</h3>
 								</div>
 								<svg
-									class="mt-1 ml-4 h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+									class="mt-1 ml-4 h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180 dark:text-slate-500"
 									viewBox="0 0 20 20"
 									fill="currentColor"
 									aria-hidden="true"
@@ -99,7 +103,7 @@ const faqs = [
 									/>
 								</svg>
 							</summary>
-							<div class="px-4 pb-4 pl-20 text-base leading-relaxed text-gray-600">
+							<div class="px-4 pb-4 pl-20 text-base leading-relaxed text-gray-600 dark:text-slate-400">
 								{faq.answer}
 							</div>
 						</details>

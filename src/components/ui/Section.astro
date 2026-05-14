@@ -8,11 +8,11 @@ interface Props {
 const { background = 'white', padding = 'md', class: className = '' } = Astro.props;
 
 const backgroundClasses = {
-	white: 'bg-white',
-	gray: 'bg-gray-50',
-	'gray-50': 'bg-gray-50',
+	white: 'bg-white dark:bg-slate-950',
+	gray: 'bg-gray-50 dark:bg-slate-900',
+	'gray-50': 'bg-gray-50 dark:bg-slate-900',
 	green: 'bg-tuhura-green',
-	'tuhura-gray': 'bg-tuhura-gray',
+	'tuhura-gray': 'bg-tuhura-gray dark:bg-slate-900',
 };
 
 const paddingClasses = {

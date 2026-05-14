@@ -2,28 +2,28 @@
 import 'leaflet/dist/leaflet.css';
 ---
 
-<section class="bg-gray-50 py-20">
+<section class="bg-gray-50 py-20 dark:bg-slate-900">
 	<div class="container-custom">
 		<div class="mx-auto mb-12 max-w-3xl text-center">
 			<h2 class="mb-4 text-3xl font-bold md:text-4xl">Find Sessions Near You</h2>
-			<p class="text-xl text-gray-600">
+			<p class="text-xl text-gray-600 dark:text-slate-400">
 				We run sessions across the Wellington region. Click on any location to learn more and sign
 				up.
 			</p>
 		</div>
 
-		<div class="overflow-hidden rounded-2xl bg-white shadow-xl">
+		<div class="overflow-hidden rounded-2xl bg-white shadow-xl dark:bg-slate-800">
 			<div class="flex flex-col lg:flex-row" style="min-height: 600px;">
 				<!-- Left: Session List -->
 				<div
-					class="w-full overflow-y-auto bg-gray-50 p-6 lg:w-5/12"
+					class="w-full overflow-y-auto bg-gray-50 p-6 lg:w-5/12 dark:bg-slate-800"
 					style="max-height: 600px;"
 					id="session-list"
 				>
 					<div id="session-results" aria-live="polite"></div>
 				</div>
 				<!-- Right: Map -->
-				<div class="w-full bg-gray-100 lg:w-7/12">
+				<div class="w-full bg-gray-100 lg:w-7/12 dark:bg-slate-700">
 					<div id="map" class="h-full w-full"></div>
 				</div>
 			</div>
@@ -424,7 +424,42 @@ import 'leaflet/dist/leaflet.css';
 	}
 </script>
 
-<style>
+<style is:global>
+	/* Dark mode overrides for dynamically injected session card HTML */
+	html.dark #session-list {
+		color-scheme: dark;
+	}
+	html.dark #session-results h3 {
+		color: #6aa469; /* tuhura-green */
+	}
+	html.dark #session-results .border-gray-200 {
+		border-color: #334155;
+	}
+	html.dark #session-results li {
+		background: #1e293b;
+		border-color: #334155;
+		color: #cbd5e1;
+	}
+	html.dark #session-results h4 {
+		color: #f1f5f9;
+	}
+	html.dark #session-results .text-gray-600,
+	html.dark #session-results .text-gray-500 {
+		color: #94a3b8;
+	}
+	html.dark #session-results .text-gray-400 {
+		color: #64748b;
+	}
+	html.dark #session-results .text-center {
+		color: #94a3b8;
+	}
+	html.dark #session-list select,
+	html.dark #session-list input {
+		background: #1e293b;
+		color: #f1f5f9;
+		border-color: #334155;
+	}
+
 	#map {
 		width: 100%;
 		height: 600px;

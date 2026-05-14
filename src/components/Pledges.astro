@@ -20,10 +20,12 @@ const partners = [
 ];
 ---
 
-<section class="py-12">
+<section class="py-12 dark:bg-slate-950">
 	<div class="container-custom">
 		<div class="mb-12 text-center">
-			<h1 class="mb-6 text-3xl font-bold tracking-wider text-gray-900">Certifications</h1>
+			<h1 class="mb-6 text-3xl font-bold tracking-wider text-gray-900 dark:text-white">
+				Certifications
+			</h1>
 		</div>
 
 		<div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
@@ -34,15 +36,17 @@ const partners = [
 							href={partner.href}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md"
+							class="flex h-full flex-col items-center justify-center rounded-xl border border-gray-100 bg-gray-50 p-6 text-center transition-all duration-300 hover:border-gray-200 hover:bg-white hover:shadow-md dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700"
 						>
-							<h4 class="mb-2 text-xl font-bold text-gray-900">{partner.name}</h4>
+							<h4 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{partner.name}</h4>
 							<Image
 								src={partner.logo}
 								alt={`${partner.name} logo`}
 								class="mx-auto mb-4 h-32 w-auto object-contain filter transition-all duration-300"
 							/>
-							<h4 class="text-l mb-2 font-bold text-gray-600">{partner.description}</h4>
+							<h4 class="text-l mb-2 font-bold text-gray-600 dark:text-slate-300">
+								{partner.description}
+							</h4>
 						</a>
 					</div>
 				))

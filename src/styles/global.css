@@ -1,4 +1,36 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	--bg: #ffffff;
+	--bg-soft: #f8fafc;
+	--text: #0f172a;
+	--text-muted: #475569;
+	--border: #e2e8f0;
+	--card: #ffffff;
+}
+
+html.dark {
+	--bg: #0f172a;
+	--bg-soft: #020617;
+	--text: #f8fafc;
+	--text-muted: #94a3b8;
+	--border: #334155;
+	--card: #1e293b;
+}
+
+html {
+	color-scheme: light;
+}
+
+html.dark {
+	color-scheme: dark;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+}
 
 @theme {
 	--color-tuhura-green: #6aa469;
@@ -111,6 +143,10 @@ body {
 	/* For scroll progress bar */
 }
 
+html.dark body {
+	color: var(--text);
+}
+
 .gradient-text {
 	@apply bg-clip-text text-transparent;
 	background-image: var(--gradient-purple-blue);
@@ -150,6 +186,10 @@ body {
 	@apply border border-gray-200 bg-white text-tuhura-dark hover:bg-gray-50;
 }
 
+html.dark .btn-secondary {
+	@apply border-slate-600 bg-slate-800 text-slate-100 hover:bg-slate-700;
+}
+
 .btn-sm {
 	@apply px-4 py-2 text-sm;
 }
@@ -175,6 +215,11 @@ header {
 
 header.scrolled {
 	@apply bg-white/95 shadow-md;
+	backdrop-filter: blur(8px);
+}
+
+html.dark header.scrolled {
+	@apply bg-slate-900/95 shadow-md;
 	backdrop-filter: blur(8px);
 }
 
@@ -300,6 +345,7 @@ nav a:focus::after {
 dialog#donate-popover {
 	z-index: 1300;
 }
+
 @media (max-width: 480px) {
 	dialog#donate-popover {
 		right: 0.75rem;

@@ -39,7 +39,7 @@ import Card from './Card.astro';
 			title && (
 				<div class="mx-auto mb-16 max-w-3xl text-center">
 					<h2 class="mb-6 text-3xl font-bold md:text-4xl">{title}</h2>
-					{description && <p class="text-xl text-gray-600">{description}</p>}
+					{description && <p class="text-xl text-gray-600 dark:text-slate-400">{description}</p>}
 				</div>
 			)
 		}
@@ -56,7 +56,7 @@ import Card from './Card.astro';
 							)}
 						</div>
 						<h3 class="mb-3 text-xl font-semibold text-tuhura-green">{step.title}</h3>
-						<p class="text-gray-600">{step.description}</p>
+						<p class="text-gray-600 dark:text-slate-400">{step.description}</p>
 					</Card>
 				))
 			}

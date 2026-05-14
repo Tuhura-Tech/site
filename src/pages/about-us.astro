@@ -228,7 +228,7 @@ const timeline = [
 				<p class="mb-4 text-lg font-medium text-tuhura-green">
 					Kia ora koutou katoa! Welcome to our whānau!
 				</p>
-				<p class="mt-6 text-xl text-gray-600">
+				<p class="mt-6 text-xl text-gray-600 dark:text-slate-400">
 					We bring free technology education directly to rangatahi (young people) in their own
 					communities - schools, libraries, community centres, and marae. Each session is tailored
 					to the participants, supported by trained kaiako and industry professionals who share
@@ -245,11 +245,10 @@ const timeline = [
 						width={1200}
 						height={600}
 					/>
-					<!-- TODO: Replace with image showing diverse team of staff, volunteers, and students collaborating -->
 				</div>
 			</div>
 			<div class="mt-12 text-center">
-				<p class="text-xl font-medium text-gray-700">
+				<p class="text-xl font-medium text-gray-700 dark:text-slate-300">
 					As the only Charitable Trust operating in the Greater Wellington Region focused on
 					Technology Education for rangatahi with trained kaiako (staff), we focus on providing
 					high-quality sessions and support. We believe in hands-on, Montessori-inspired ako
@@ -258,10 +257,10 @@ const timeline = [
 			</div>
 
 			<!-- Mission Statement Section -->
-			<div class="mt-16 rounded-xl bg-tuhura-gray p-8">
+			<div class="mt-16 rounded-xl bg-tuhura-gray p-8 dark:bg-slate-800">
 				<div class="text-center">
 					<h2 class="mb-6 text-3xl font-bold">Our Kaupapa (Mission)</h2>
-					<p class="mb-6 text-xl text-gray-700">
+					<p class="mb-6 text-xl text-gray-700 dark:text-slate-300">
 						To remove barriers and provide equitable access to technology education for all
 						rangatahi in Aotearoa New Zealand, regardless of their background, location, or
 						circumstances.
@@ -269,15 +268,15 @@ const timeline = [
 					<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
 						<div class="text-center">
 							<div class="text-3xl font-bold text-tuhura-green">1000+</div>
-							<p class="text-gray-600">Rangatahi engaged annually</p>
+							<p class="text-gray-600 dark:text-slate-400">Rangatahi engaged annually</p>
 						</div>
 						<div class="text-center">
 							<div class="text-3xl font-bold text-tuhura-green">15+</div>
-							<p class="text-gray-600">Community locations</p>
+							<p class="text-gray-600 dark:text-slate-400">Community locations</p>
 						</div>
 						<div class="text-center">
 							<div class="text-3xl font-bold text-tuhura-green">100%</div>
-							<p class="text-gray-600">Free of charge</p>
+							<p class="text-gray-600 dark:text-slate-400">Free of charge</p>
 						</div>
 					</div>
 				</div>
@@ -285,7 +284,7 @@ const timeline = [
 		</div>
 	</section>
 
-	<section class="bg-tuhura-gray py-20">
+	<section class="bg-tuhura-gray py-20 dark:bg-slate-900">
 		<div class="container-custom">
 			<div class="mx-auto mb-16 max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Our Values & Tikanga</h2>
@@ -297,14 +296,14 @@ const timeline = [
 			<IconFeatures features={values} columns="2" iconVariant="default" />
 
 			<!-- Additional Values Section -->
-			<div class="mt-16 rounded-xl bg-white p-8">
+			<div class="mt-16 rounded-xl bg-white p-8 dark:bg-slate-800">
 				<h3 class="mb-8 text-center text-2xl font-bold">Our Commitment to Te Ao Māori</h3>
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div>
 						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
 							Manaakitanga (Care & Hospitality)
 						</h4>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-slate-400">
 							We create welcoming, inclusive spaces where every rangatahi feels valued and
 							supported.
 						</p>
@@ -313,13 +312,13 @@ const timeline = [
 						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
 							Whanaungatanga (Relationships)
 						</h4>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-slate-400">
 							We build strong, lasting connections within our community and with whānau.
 						</p>
 					</div>
 					<div>
 						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">Ako (Reciprocal Learning)</h4>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-slate-400">
 							We learn from each other - kaiako and rangatahi both teach and learn together.
 						</p>
 					</div>
@@ -327,7 +326,7 @@ const timeline = [
 						<h4 class="mb-3 text-lg font-semibold text-tuhura-green">
 							Kaitiakitanga (Guardianship)
 						</h4>
-						<p class="text-gray-600">
+						<p class="text-gray-600 dark:text-slate-400">
 							We are guardians of our rangatahi's learning journey and digital future.
 						</p>
 					</div>
@@ -336,7 +335,7 @@ const timeline = [
 		</div>
 	</section>
 
-	<section class="bg-white py-20">
+	<section class="bg-white py-20 dark:bg-slate-950">
 		<div class="container-custom">
 			<div class="mx-auto max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Our Story</h2>
@@ -351,7 +350,7 @@ const timeline = [
 								<div class="absolute top-2 left-[-4px] h-2 w-2 rounded-full bg-tuhura-green" />
 								<div class="text-sm font-semibold text-tuhura-green">{event.year}</div>
 								<h3 class="mt-2 text-xl font-semibold">{event.title}</h3>
-								<p class="mt-2 text-gray-600">{event.description}</p>
+								<p class="mt-2 text-gray-600 dark:text-slate-400">{event.description}</p>
 							</div>
 						))
 					}
@@ -393,7 +392,7 @@ const timeline = [
 	/>
 
 	<!-- Supporters Section -->
-	<section class="bg-gray-50 py-20">
+	<section class="bg-gray-50 py-20 dark:bg-slate-900">
 		<div class="container-custom">
 			<div class="mx-auto max-w-3xl text-center">
 				<h2 class="text-3xl font-bold md:text-4xl">Our Amazing Supporters</h2>

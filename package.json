@@ -16,12 +16,12 @@
 		"format:check": "prettier --check ."
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^3.5.0",
-		"@iconify-json/heroicons": "^1.2.2",
-		"astro": "^5.13.2",
+		"@astrojs/sitemap": "^3.7.2",
+		"@iconify-json/heroicons": "^1.2.3",
+		"astro": "^5.18.1",
 		"astro-icon": "^1.1.5",
-		"leaflet": "^2.0.0-alpha",
-		"tailwindcss": "^4.1.11"
+		"leaflet": "2.0.0-alpha.1",
+		"tailwindcss": "^4.2.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.8",
