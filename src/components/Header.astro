@@ -22,7 +22,6 @@ const navItems: NavItem[] = [
 	},
 	{ name: 'About Us', href: '/about-us' },
 	{ name: 'Contact', href: '/contact' },
-	{ name: 'Support Us', href: '/support-us' },
 	{
 		name: 'Resources',
 		href: '#',
@@ -141,20 +140,6 @@ const navItems: NavItem[] = [
 		</nav>
 
 		<div class="flex items-center space-x-4">
-			<a
-				href="/mahi"
-				class="btn btn-secondary hidden focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none md:inline-flex"
-			>
-				Join Sessions
-			</a>
-			<button
-				id="donate-trigger"
-				class="btn btn-primary focus:ring-2 focus:ring-tuhura-green focus:ring-offset-2 focus:outline-none"
-				aria-haspopup="dialog"
-				aria-expanded="false"
-				onclick="(function(btn){ if(typeof window.toggleDonatePopover==='function'){ window.toggleDonatePopover(); const dlg=document.getElementById('donate-popover'); if(dlg && dlg instanceof HTMLDialogElement){ btn.setAttribute('aria-expanded', dlg.open ? 'true' : 'false'); } } })(this)"
-				>Donate</button
-			>
 			<!-- Mobile Menu Button -->
 			<button
 				id="menu-toggle"
